@@ -61,11 +61,13 @@ float RecoilSet = 1.050f;
 float Range = 250.0f;
 float Radius = 300.0f;
 float FireSpeed;
-float ReactionDelay = 0.075f;
-float TrackingSpeed = 12.0f;
-float MaxPitchSpeed = 180.0f;
-float MaxYawSpeed = 240.0f;
-float MicroJitter = 0.08f;
+float ReactionDelay = 0.140f;
+float AcquisitionTime = 0.180f;
+float TrackingSpeed = 7.5f;
+float MaxPitchSpeed = 110.0f;
+float MaxYawSpeed = 145.0f;
+float AimDeadzone = 0.08f;
+float MicroJitter = 0.10f;
 float BoneRefreshInterval = 0.08f;
 
 }
@@ -818,6 +820,7 @@ struct AimTargetLock
     ASTExtraPlayerCharacter *player = nullptr;
     const char *bone = "Head";
     float acquiredAt = 0.0f;
+    float activationDelay = 0.0f;
     float nextBoneRefreshAt = 0.0f;
 };
 
@@ -862,6 +865,25 @@ bool IsAimCandidate(const FramePlayerData &candidate, bool retainingLock)
     return true;
 }
 
+void ArmAimTargetLock(ASTExtraPlayerCharacter *player)
+{
+    const float now = GetFrameElapsedSeconds();
+    const uint32_t targetSeed = static_cast<uint32_t>(
+        reinterpret_cast<uintptr_t>(player) >> 4);
+    // Keep reaction timing deterministic for a target lock, but vary it a
+    // little between enemies so the automatic motion does not start identically
+    // after every acquisition.
+    const float variation = Cheat::Aimbot::Humanize
+        ? 0.035f + static_cast<float>(targetSeed % 70) / 1000.0f
+        : 0.0f;
+    aimTargetLock.player = player;
+    aimTargetLock.bone = "Head";
+    aimTargetLock.acquiredAt = now;
+    aimTargetLock.activationDelay = std::max(0.0f,
+        Cheat::Aimbot::ReactionDelay) + variation;
+    aimTargetLock.nextBoneRefreshAt = now;
+}
+
 void ClearAimTargetLock()
 {
     aimTargetLock = {};
@@ -892,12 +914,7 @@ const char *GetAimTargetBone(ASTExtraPlayerCharacter *target)
 
     const float now = GetFrameElapsedSeconds();
     if (aimTargetLock.player != target)
-    {
-        aimTargetLock.player = target;
-        aimTargetLock.acquiredAt = now;
-        aimTargetLock.nextBoneRefreshAt = now;
-        aimTargetLock.bone = "Head";
-    }
+        ArmAimTargetLock(target);
 
     if (now >= aimTargetLock.nextBoneRefreshAt)
     {
@@ -913,6 +930,22 @@ float GetAimTargetLockAge()
     return aimTargetLock.player
         ? std::max(0.0f, GetFrameElapsedSeconds() - aimTargetLock.acquiredAt)
         : 0.0f;
+}
+
+float GetHumanizedAimWarmup()
+{
+    if (!aimTargetLock.player || !Cheat::Aimbot::Humanize)
+        return aimTargetLock.player ? 1.0f : 0.0f;
+
+    const float elapsed = GetAimTargetLockAge() - aimTargetLock.activationDelay;
+    if (elapsed <= 0.0f)
+        return 0.0f;
+
+    const float duration = std::max(Cheat::Aimbot::AcquisitionTime, 0.001f);
+    const float progress = std::min(elapsed / duration, 1.0f);
+    // Smoothstep avoids a sudden first correction when automatic tracking
+    // begins, while still converging reliably on a moving target.
+    return progress * progress * (3.0f - (2.0f * progress));
 }
 
 ASTExtraPlayerCharacter *GetTargetForAimBot()
@@ -959,12 +992,7 @@ ASTExtraPlayerCharacter *GetTargetForAimBot()
     }
 
     if (aimTargetLock.player != best->player)
-    {
-        aimTargetLock.player = best->player;
-        aimTargetLock.bone = "Head";
-        aimTargetLock.acquiredAt = GetFrameElapsedSeconds();
-        aimTargetLock.nextBoneRefreshAt = GetFrameElapsedSeconds();
-    }
+        ArmAimTargetLock(best->player);
     return best->player;
 }
 

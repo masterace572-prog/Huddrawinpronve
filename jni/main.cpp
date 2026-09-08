@@ -364,9 +364,8 @@ void DrawMemory()
             // Automatic mode tracks a valid locked enemy without requiring a
             // firing/ADS state. Disable AutoAim to retain trigger-only use.
             const bool shouldTrack = Cheat::Aimbot::AutoAim || triggerActive;
-            const bool reactionElapsed = GetAimTargetLockAge() >=
-                std::max(0.0f, Cheat::Aimbot::ReactionDelay);
-            if (shouldTrack && reactionElapsed)
+            const float warmup = GetHumanizedAimWarmup();
+            if (shouldTrack && warmup > 0.0f)
             {
                 FVector targetAimPos = target->GetBonePos(GetAimTargetBone(target), {});
                 const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
@@ -427,18 +426,19 @@ void DrawMemory()
                                 Cheat::localPlayer->AimControlRotationAdditive.Yaw);
 
                             const float dt = GetFrameDeltaSeconds();
-                            const float response = Cheat::Aimbot::Humanize
+                            float response = Cheat::Aimbot::Humanize
                                 ? 1.0f - expf(-std::max(1.0f,
                                     Cheat::Aimbot::TrackingSpeed) * dt)
                                 : 1.0f;
+                            response *= warmup;
                             float pitchInput = ClampMagnitude(pitchError * response,
                                 Cheat::Aimbot::MaxPitchSpeed * dt);
                             float yawInput = ClampMagnitude(yawError * response,
                                 Cheat::Aimbot::MaxYawSpeed * dt);
+                            const float remainingError = fabsf(pitchError) + fabsf(yawError);
 
                             if (Cheat::Aimbot::Humanize)
                             {
-                                const float remainingError = fabsf(pitchError) + fabsf(yawError);
                                 const float settleFactor = std::max(0.0f,
                                     1.0f - (remainingError / 12.0f));
                                 const float phase = GetFrameElapsedSeconds() * 7.0f +
@@ -451,8 +451,14 @@ void DrawMemory()
                                     Cheat::Aimbot::MaxYawSpeed * dt);
                             }
 
-                            Cheat::localPlayer->AddControllerPitchInput(pitchInput);
-                            Cheat::localPlayer->AddControllerYawInput(yawInput);
+                            // Leave a tiny deadzone around the target rather
+                            // than issuing a mathematically perfect correction
+                            // every render callback.
+                            if (remainingError > Cheat::Aimbot::AimDeadzone)
+                            {
+                                Cheat::localPlayer->AddControllerPitchInput(pitchInput);
+                                Cheat::localPlayer->AddControllerYawInput(yawInput);
+                            }
                         }
                     }
                 }
@@ -506,11 +512,13 @@ void AutoEspOn()
     Cheat::Aimbot::IgnoreKnock = true;
     Cheat::Aimbot::Range = 250.0f;
     Cheat::Aimbot::Radius = 300.0f;
-    Cheat::Aimbot::ReactionDelay = 0.075f;
-    Cheat::Aimbot::TrackingSpeed = 12.0f;
-    Cheat::Aimbot::MaxPitchSpeed = 180.0f;
-    Cheat::Aimbot::MaxYawSpeed = 240.0f;
-    Cheat::Aimbot::MicroJitter = 0.08f;
+    Cheat::Aimbot::ReactionDelay = 0.140f;
+    Cheat::Aimbot::AcquisitionTime = 0.180f;
+    Cheat::Aimbot::TrackingSpeed = 7.5f;
+    Cheat::Aimbot::MaxPitchSpeed = 110.0f;
+    Cheat::Aimbot::MaxYawSpeed = 145.0f;
+    Cheat::Aimbot::AimDeadzone = 0.08f;
+    Cheat::Aimbot::MicroJitter = 0.10f;
     Cheat::Aimbot::BoneRefreshInterval = 0.08f;
     Cheat::Aimbot::Target = Chest;
 
