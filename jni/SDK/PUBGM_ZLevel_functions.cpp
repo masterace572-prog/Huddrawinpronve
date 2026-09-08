@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,8 +32,8 @@ void AZLevelData::ReBindLevelDataComponent()
 // Function ZLevel.ZLevelData.CheckMonsterSpotIsOnLand
 // (Final, Native, Public)
 // Parameters:
-// class UZMonsterSpot*           MonsterSpot                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UZMonsterSpotGroup*      SpotGroup                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UZMonsterSpot* MonsterSpot (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UZMonsterSpotGroup* SpotGroup (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void AZLevelData::CheckMonsterSpotIsOnLand(class UZMonsterSpot* MonsterSpot, class UZMonsterSpotGroup* SpotGroup)
 {

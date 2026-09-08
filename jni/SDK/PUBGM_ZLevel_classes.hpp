@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,29 +13,28 @@ namespace SDK
 class AZLevelData : public AActor
 {
 public:
-	struct FGameLevelDesc                              LevelDesc;                                                // 0x04B0(0x0018) (Edit)
-	TArray<struct FString>                             TargetClassPaths;                                         // 0x04C8(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     LeveDirectorFilePath;                                     // 0x04D8(0x0010) (Edit, ZeroConstructor)
-	TEnumAsByte<enum ELevelEndCondType>                EndCondType;                                              // 0x04E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x04E9(0x0007) MISSED OFFSET
-	struct FString                                     EndCondPar;                                               // 0x04F0(0x0010) (Edit, ZeroConstructor)
-	bool                                               IsLastLevel;                                              // 0x0500(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0501(0x0003) MISSED OFFSET
-	int                                                DiffcultPerc;                                             // 0x0504(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UZPVECircle*>                         PVECircleConfigs;                                         // 0x0508(0x0010) (Edit, ExportObject, ZeroConstructor)
-	TArray<class UZPVERelifePoint*>                    PVERelifePoints;                                          // 0x0518(0x0010) (Edit, ExportObject, ZeroConstructor)
-	TArray<class UZMonsterSpotGroup*>                  MonsterSpotGroups;                                        // 0x0528(0x0010) (Edit, ExportObject, ZeroConstructor)
-	TArray<struct FVector>                             TaskPointLocations;                                       // 0x0538(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FRelifePoint>                        PVERelifePointsInfo;                                      // 0x0548(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FPVECircle>                          PVECircleInfo;                                            // 0x0558(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FMonsterWave>                        MonsterWaveCfg;                                           // 0x0568(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FLevelData>                          CfgList;                                                  // 0x0578(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FLevelObjets>                        LevelAddObjs;                                             // 0x0588(0x0010) (Edit, ZeroConstructor)
-	int                                                CurComponentNameIndex;                                    // 0x0598(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x059C(0x0004) MISSED OFFSET
+	struct FGameLevelDesc LevelDesc; // 0x04B0(0x0018) (Edit)
+	TArray<struct FString> TargetClassPaths; // 0x04C8(0x0010) (Edit, ZeroConstructor)
+	struct FString LeveDirectorFilePath; // 0x04D8(0x0010) (Edit, ZeroConstructor)
+	TEnumAsByte<enum ELevelEndCondType> EndCondType; // 0x04E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x04E9(0x0007) MISSED OFFSET
+	struct FString EndCondPar; // 0x04F0(0x0010) (Edit, ZeroConstructor)
+	bool IsLastLevel; // 0x0500(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0501(0x0003) MISSED OFFSET
+	int DiffcultPerc; // 0x0504(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UZPVECircle*> PVECircleConfigs; // 0x0508(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UZPVERelifePoint*> PVERelifePoints; // 0x0518(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UZMonsterSpotGroup*> MonsterSpotGroups; // 0x0528(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<struct FVector> TaskPointLocations; // 0x0538(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FRelifePoint> PVERelifePointsInfo; // 0x0548(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FPVECircle> PVECircleInfo; // 0x0558(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FMonsterWave> MonsterWaveCfg; // 0x0568(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FLevelData> CfgList; // 0x0578(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FLevelObjets> LevelAddObjs; // 0x0588(0x0010) (Edit, ZeroConstructor)
+	int CurComponentNameIndex; // 0x0598(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x059C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZLevelData");
@@ -54,8 +53,7 @@ class UZSpotSceneComponent : public USceneComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZSpotSceneComponent");
@@ -70,11 +68,10 @@ public:
 class UZMonsterRoadPoint : public UZSpotSceneComponent
 {
 public:
-	int                                                Radius;                                                   // 0x03A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x03A4(0x000C) MISSED OFFSET
+	int Radius; // 0x03A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xC]; // 0x03A4(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZMonsterRoadPoint");
@@ -89,15 +86,14 @@ public:
 class UZMonsterSpot : public UZSpotSceneComponent
 {
 public:
-	struct FString                                     Desc;                                                     // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      MonsterSpotType;                                          // 0x03B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x03B1(0x0007) MISSED OFFSET
-	TArray<class UZMonsterRoadPoint*>                  RoadPointList;                                            // 0x03B8(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
-	unsigned char                                      SpotRadius;                                               // 0x03C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x03C9(0x0007) MISSED OFFSET
+	struct FString Desc; // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char MonsterSpotType; // 0x03B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x03B1(0x0007) MISSED OFFSET
+	TArray<class UZMonsterRoadPoint*> RoadPointList; // 0x03B8(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
+	unsigned char SpotRadius; // 0x03C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x03C9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZMonsterSpot");
@@ -112,11 +108,10 @@ public:
 class UZMonsterSpotGroup : public USceneComponent
 {
 public:
-	struct FString                                     Desc;                                                     // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UZMonsterSpot*>                       SpotList;                                                 // 0x03B0(0x0010) (Edit, ExportObject, ZeroConstructor)
+	struct FString Desc; // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UZMonsterSpot*> SpotList; // 0x03B0(0x0010) (Edit, ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZMonsterSpotGroup");
@@ -131,14 +126,13 @@ public:
 class UZPVECircle : public UZSpotSceneComponent
 {
 public:
-	struct FVector2D                                   targetPos;                                                // 0x03A0(0x0008) (Edit, IsPlainOldData)
-	float                                              Radius;                                                   // 0x03A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MoveTime;                                                 // 0x03AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Pain;                                                     // 0x03B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x03B4(0x000C) MISSED OFFSET
+	struct FVector2D targetPos; // 0x03A0(0x0008) (Edit, IsPlainOldData)
+	float Radius; // 0x03A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float MoveTime; // 0x03AC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float Pain; // 0x03B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xC]; // 0x03B4(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZPVECircle");
@@ -153,11 +147,10 @@ public:
 class UZPVERelifePoint : public UZSpotSceneComponent
 {
 public:
-	bool                                               IsActivePoint;                                            // 0x03A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x03A1(0x000F) MISSED OFFSET
+	bool IsActivePoint; // 0x03A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xF]; // 0x03A1(0x000F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ZLevel.ZPVERelifePoint");

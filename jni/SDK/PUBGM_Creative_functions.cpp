@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -8,16 +8,47 @@ namespace SDK
 //Functions
 //---------------------By BangJO---------------------------
 
+// Function Creative.AIGCAudioManager.WemCutByAssetKey
+// (Final, Native, Public)
+// Parameters:
+// uint64_t AssetKey (Parm, ZeroConstructor, IsPlainOldData)
+// int StartTime (Parm, ZeroConstructor, IsPlainOldData)
+// int EndTime (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+uint64_t UAIGCAudioManager::WemCutByAssetKey(uint64_t AssetKey, int StartTime, int EndTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.AIGCAudioManager.WemCutByAssetKey");
+
+	UAIGCAudioManager_WemCutByAssetKey_Params params;
+	params.AssetKey = AssetKey;
+	params.StartTime = StartTime;
+	params.EndTime = EndTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.AIGCAudioManager.SeekOnEvent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UAkAudioEvent*           Event                          (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            in_iPosition                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopWhenOwnerDestroyed        (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       AssetKey                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayingID                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* Event (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// int in_iPosition (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenOwnerDestroyed (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t AssetKey (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayingID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAIGCAudioManager::SeekOnEvent(class UAkAudioEvent* Event, class AActor* Actor, int in_iPosition, bool bStopWhenOwnerDestroyed, uint64_t AssetKey, uint32_t* PlayingID)
 {
@@ -50,8 +81,8 @@ uint32_t UAIGCAudioManager::SeekOnEvent(class UAkAudioEvent* Event, class AActor
 // Function Creative.AIGCAudioManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UAIGCAudioManager*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UAIGCAudioManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAIGCAudioManager* UAIGCAudioManager::Get(class UObject* WorldContext)
 {
@@ -67,6 +98,30 @@ class UAIGCAudioManager* UAIGCAudioManager::Get(class UObject* WorldContext)
 
 	static auto defaultObj = StaticClass()->GetDefaultObject();
 	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.AIGCAudioManager.AllocateTempAssetKey
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UAIGCAudioManager::AllocateTempAssetKey()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.AIGCAudioManager.AllocateTempAssetKey");
+
+	UAIGCAudioManager_AllocateTempAssetKey_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
 
@@ -119,9 +174,9 @@ void ACreateBackpackRepActor::CustomItemDataInitComplete()
 // Function Creative.CreativeAbilitySystemComponent.UpdateGridGhostBuildingLocation
 // (Final, Native, Private)
 // Parameters:
-// float                          X                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float X (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Y (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Z (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::UpdateGridGhostBuildingLocation(float X, float Y, float Z)
 {
@@ -168,7 +223,7 @@ void UCreativeAbilitySystemComponent::UpdateGhostBuildingTransform()
 // Function Creative.CreativeAbilitySystemComponent.SetSnapTargetTransform
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// struct FTransform              SnapTargetTransform            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform SnapTargetTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::SetSnapTargetTransform(const struct FTransform& SnapTargetTransform)
 {
@@ -192,8 +247,8 @@ void UCreativeAbilitySystemComponent::SetSnapTargetTransform(const struct FTrans
 // Function Creative.CreativeAbilitySystemComponent.SetOverrideBuild
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rotation                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Position (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Rotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::SetOverrideBuild(const struct FVector& Position, const struct FRotator& Rotation)
 {
@@ -218,9 +273,9 @@ void UCreativeAbilitySystemComponent::SetOverrideBuild(const struct FVector& Pos
 // Function Creative.CreativeAbilitySystemComponent.SetLuaGhostBuildingTransformScale
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::SetLuaGhostBuildingTransformScale(float X, float Y, float Z)
 {
@@ -245,9 +300,9 @@ void UCreativeAbilitySystemComponent::SetLuaGhostBuildingTransformScale(float X,
 // Function Creative.CreativeAbilitySystemComponent.SetLuaGhostBuildingTransformRotation
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Roll                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Roll (Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (Parm, ZeroConstructor, IsPlainOldData)
+// float Pitch (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::SetLuaGhostBuildingTransformRotation(float Roll, float Yaw, float Pitch)
 {
@@ -272,9 +327,9 @@ void UCreativeAbilitySystemComponent::SetLuaGhostBuildingTransformRotation(float
 // Function Creative.CreativeAbilitySystemComponent.SetLuaGhostBuildingTransformLocation
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAbilitySystemComponent::SetLuaGhostBuildingTransformLocation(float X, float Y, float Z)
 {
@@ -319,9 +374,9 @@ void UCreativeAbilitySystemComponent::LuaGhostBuildingInstaUpdate()
 // Function Creative.CreativeAbilitySystemComponent.GetSnappedLocAxisZ
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Loc                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Base                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Loc (Parm, ZeroConstructor, IsPlainOldData)
+// float Base (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeAbilitySystemComponent::GetSnappedLocAxisZ(float Loc, float Base)
 {
@@ -347,9 +402,9 @@ float UCreativeAbilitySystemComponent::GetSnappedLocAxisZ(float Loc, float Base)
 // Function Creative.CreativeAbilitySystemComponent.GetSnappedLocAxis
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AxisType                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// int AxisType (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeAbilitySystemComponent::GetSnappedLocAxis(float Value, int AxisType)
 {
@@ -375,7 +430,7 @@ float UCreativeAbilitySystemComponent::GetSnappedLocAxis(float Value, int AxisTy
 // Function Creative.CreativeAbilitySystemComponent.GetSetupBuildingID
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeAbilitySystemComponent::GetSetupBuildingID()
 {
@@ -399,7 +454,7 @@ int UCreativeAbilitySystemComponent::GetSetupBuildingID()
 // Function Creative.CreativeAbilitySystemComponent.GetPlayerController
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraPlayerController* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraPlayerController* UCreativeAbilitySystemComponent::GetPlayerController()
 {
@@ -424,7 +479,7 @@ class ASTExtraPlayerController* UCreativeAbilitySystemComponent::GetPlayerContro
 // Function Creative.CreativeAbilitySystemComponent.GetLuaSnapTargetTransform
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeAbilitySystemComponent::GetLuaSnapTargetTransform()
 {
@@ -448,7 +503,7 @@ bool UCreativeAbilitySystemComponent::GetLuaSnapTargetTransform()
 // Function Creative.CreativeAbilitySystemComponent.GetLuaInstanceBoundingBox
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeAbilitySystemComponent::GetLuaInstanceBoundingBox()
 {
@@ -472,7 +527,7 @@ float UCreativeAbilitySystemComponent::GetLuaInstanceBoundingBox()
 // Function Creative.CreativeAbilitySystemComponent.GetGhostBuildingTransform
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UCreativeAbilitySystemComponent::GetGhostBuildingTransform()
 {
@@ -497,7 +552,7 @@ struct FTransform UCreativeAbilitySystemComponent::GetGhostBuildingTransform()
 // Function Creative.CreativeAbilitySystemComponent.GetBuildingInstanceID
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeAbilitySystemComponent::GetBuildingInstanceID()
 {
@@ -521,7 +576,7 @@ struct FString UCreativeAbilitySystemComponent::GetBuildingInstanceID()
 // Function Creative.CreativeAbilitySystemComponent.GetBuildDistance
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeAbilitySystemComponent::GetBuildDistance()
 {
@@ -563,6 +618,369 @@ void UCreativeAbilitySystemComponent::ClearOverrideBuild()
 }
 
 
+// Function Creative.CreativeActorDataManager.SetActorDataNodes
+// (Final, Native, Public)
+// Parameters:
+// TArray<struct FCreativeActorDataNode> ActorDataNodes (Parm, ZeroConstructor)
+
+void UCreativeActorDataManager::SetActorDataNodes(TArray<struct FCreativeActorDataNode> ActorDataNodes)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.SetActorDataNodes");
+
+	UCreativeActorDataManager_SetActorDataNodes_Params params;
+	params.ActorDataNodes = ActorDataNodes;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.RemoveActorData
+// (Final, Native, Public)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeActorDataManager::RemoveActorData(uint32_t ID, unsigned char Type)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.RemoveActorData");
+
+	UCreativeActorDataManager_RemoveActorData_Params params;
+	params.ID = ID;
+	params.Type = Type;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.ReceiveOnPostSetLuaEventBridgeInstance
+// (Event, Public, BlueprintEvent)
+
+void UCreativeActorDataManager::ReceiveOnPostSetLuaEventBridgeInstance()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.ReceiveOnPostSetLuaEventBridgeInstance");
+
+	UCreativeActorDataManager_ReceiveOnPostSetLuaEventBridgeInstance_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.ReceiveOnGameStateBeginPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeActorDataManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.ReceiveOnGameStateBeginPlay");
+
+	UCreativeActorDataManager_ReceiveOnGameStateBeginPlay_Params params;
+	params.GameState = GameState;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.OnPostSetLuaEventBridgeInstance
+// (Final, Native, Public)
+
+void UCreativeActorDataManager::OnPostSetLuaEventBridgeInstance()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.OnPostSetLuaEventBridgeInstance");
+
+	UCreativeActorDataManager_OnPostSetLuaEventBridgeInstance_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.OnGameStateBeginPlay
+// (Final, Native, Public)
+// Parameters:
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeActorDataManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.OnGameStateBeginPlay");
+
+	UCreativeActorDataManager_OnGameStateBeginPlay_Params params;
+	params.GameState = GameState;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.GetActorDataNodes
+// (Final, Native, Public)
+// Parameters:
+// TArray<uint32_t> DataHashKeys (Parm, ZeroConstructor)
+// TArray<struct FCreativeActorDataNode> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FCreativeActorDataNode> UCreativeActorDataManager::GetActorDataNodes(TArray<uint32_t> DataHashKeys)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.GetActorDataNodes");
+
+	UCreativeActorDataManager_GetActorDataNodes_Params params;
+	params.DataHashKeys = DataHashKeys;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeActorDataManager.GetActorDataContent
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> OutContent (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeActorDataManager::GetActorDataContent(uint32_t ID, unsigned char Type, TArray<unsigned char>* OutContent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.GetActorDataContent");
+
+	UCreativeActorDataManager_GetActorDataContent_Params params;
+	params.ID = ID;
+	params.Type = Type;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutContent != nullptr)
+		*OutContent = params.OutContent;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeActorDataManager.Get
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeActorDataManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCreativeActorDataManager* UCreativeActorDataManager::Get(class UObject* WorldContext)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.Get");
+
+	UCreativeActorDataManager_Get_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeActorDataManager.ChangeActorData
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeActorDataManager::ChangeActorData(uint32_t ID, unsigned char Type, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.ChangeActorData");
+
+	UCreativeActorDataManager_ChangeActorData_Params params;
+	params.ID = ID;
+	params.Type = Type;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.CallOnReceivePreActorDataRemove
+// (Final, Native, Public)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeActorDataManager::CallOnReceivePreActorDataRemove(uint32_t ID, unsigned char Type)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.CallOnReceivePreActorDataRemove");
+
+	UCreativeActorDataManager_CallOnReceivePreActorDataRemove_Params params;
+	params.ID = ID;
+	params.Type = Type;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.CallOnReceivePostActorDataChange
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeActorDataManager::CallOnReceivePostActorDataChange(uint32_t ID, unsigned char Type, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.CallOnReceivePostActorDataChange");
+
+	UCreativeActorDataManager_CallOnReceivePostActorDataChange_Params params;
+	params.ID = ID;
+	params.Type = Type;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.CallOnReceivePostActorDataAdd
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeActorDataManager::CallOnReceivePostActorDataAdd(uint32_t ID, unsigned char Type, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.CallOnReceivePostActorDataAdd");
+
+	UCreativeActorDataManager_CallOnReceivePostActorDataAdd_Params params;
+	params.ID = ID;
+	params.Type = Type;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeActorDataManager.AddActorData
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeActorDataManager::AddActorData(uint32_t ID, unsigned char Type, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeActorDataManager.AddActorData");
+
+	UCreativeActorDataManager_AddActorData_Params params;
+	params.ID = ID;
+	params.Type = Type;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeActorInteractionComponent.SortCanEditParamsObjs
 // (Event, Protected, BlueprintEvent)
 
@@ -586,7 +1004,7 @@ void UCreativeModeActorInteractionComponent::SortCanEditParamsObjs()
 // Function Creative.CreativeModeActorInteractionComponent.SetCrossHairTransformObjInstanceID
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeModeActorInteractionComponent::SetCrossHairTransformObjInstanceID(const struct FString& InstanceID)
 {
@@ -609,7 +1027,7 @@ void UCreativeModeActorInteractionComponent::SetCrossHairTransformObjInstanceID(
 // Function Creative.CreativeModeActorInteractionComponent.SetCrossHairSelectedObjInstanceID
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeModeActorInteractionComponent::SetCrossHairSelectedObjInstanceID(const struct FString& InstanceID)
 {
@@ -632,7 +1050,7 @@ void UCreativeModeActorInteractionComponent::SetCrossHairSelectedObjInstanceID(c
 // Function Creative.CreativeModeActorInteractionComponent.SetCrossHairPickActor
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  PickActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* PickActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeActorInteractionComponent::SetCrossHairPickActor(class AActor* PickActor)
 {
@@ -652,10 +1070,36 @@ void UCreativeModeActorInteractionComponent::SetCrossHairPickActor(class AActor*
 }
 
 
+// Function Creative.CreativeModeActorInteractionComponent.SectorCheckImplement
+// (Final, Native, Protected)
+// Parameters:
+// float CheckDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float CheckAngle (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeActorInteractionComponent::SectorCheckImplement(float CheckDistance, float CheckAngle)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeActorInteractionComponent.SectorCheckImplement");
+
+	UCreativeModeActorInteractionComponent_SectorCheckImplement_Params params;
+	params.CheckDistance = CheckDistance;
+	params.CheckAngle = CheckAngle;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeActorInteractionComponent.GetSectorCheckIntervalCfg
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetSectorCheckIntervalCfg()
 {
@@ -679,7 +1123,7 @@ float UCreativeModeActorInteractionComponent::GetSectorCheckIntervalCfg()
 // Function Creative.CreativeModeActorInteractionComponent.GetSectorCheckDistance
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetSectorCheckDistance()
 {
@@ -703,7 +1147,7 @@ float UCreativeModeActorInteractionComponent::GetSectorCheckDistance()
 // Function Creative.CreativeModeActorInteractionComponent.GetSectorCheckAngle
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetSectorCheckAngle()
 {
@@ -727,7 +1171,7 @@ float UCreativeModeActorInteractionComponent::GetSectorCheckAngle()
 // Function Creative.CreativeModeActorInteractionComponent.GetPlayerHalfHeight
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetPlayerHalfHeight()
 {
@@ -751,7 +1195,7 @@ float UCreativeModeActorInteractionComponent::GetPlayerHalfHeight()
 // Function Creative.CreativeModeActorInteractionComponent.GetPlayerController
 // (Final, Native, Protected)
 // Parameters:
-// class ASTExtraPlayerController* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraPlayerController* UCreativeModeActorInteractionComponent::GetPlayerController()
 {
@@ -776,7 +1220,7 @@ class ASTExtraPlayerController* UCreativeModeActorInteractionComponent::GetPlaye
 // Function Creative.CreativeModeActorInteractionComponent.GetCrossHairTransformDistanceCfg
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetCrossHairTransformDistanceCfg()
 {
@@ -800,7 +1244,7 @@ float UCreativeModeActorInteractionComponent::GetCrossHairTransformDistanceCfg()
 // Function Creative.CreativeModeActorInteractionComponent.GetCrossHairPickDistanceCfg
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetCrossHairPickDistanceCfg()
 {
@@ -824,7 +1268,7 @@ float UCreativeModeActorInteractionComponent::GetCrossHairPickDistanceCfg()
 // Function Creative.CreativeModeActorInteractionComponent.GetCrossHairCheckIntervalCfg
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetCrossHairCheckIntervalCfg()
 {
@@ -848,7 +1292,7 @@ float UCreativeModeActorInteractionComponent::GetCrossHairCheckIntervalCfg()
 // Function Creative.CreativeModeActorInteractionComponent.GetCrossHairCheckDistanceCfg
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeActorInteractionComponent::GetCrossHairCheckDistanceCfg()
 {
@@ -866,6 +1310,30 @@ float UCreativeModeActorInteractionComponent::GetCrossHairCheckDistanceCfg()
 	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeActorInteractionComponent.CrossHairCheckImplement
+// (Final, Native, Protected)
+// Parameters:
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeActorInteractionComponent::CrossHairCheckImplement(float Distance)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeActorInteractionComponent.CrossHairCheckImplement");
+
+	UCreativeModeActorInteractionComponent_CrossHairCheckImplement_Params params;
+	params.Distance = Distance;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
@@ -892,9 +1360,9 @@ void UCreativeModeActorInteractionComponent::ClearCanEditParamsObjs()
 // Function Creative.CreativeModeActorInteractionComponent.AddCanEditObject
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                 uCanEditObject                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Angle                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* uCanEditObject (Parm, ZeroConstructor, IsPlainOldData)
+// float Angle (Parm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeActorInteractionComponent::AddCanEditObject(class UObject* uCanEditObject, float Angle, float Distance)
 {
@@ -919,7 +1387,7 @@ void UCreativeModeActorInteractionComponent::AddCanEditObject(class UObject* uCa
 // Function Creative.CreativeAdaptiveSchedulManager.SetObjectProfile
 // (Final, Native, Public)
 // Parameters:
-// bool                           bOpen                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::SetObjectProfile(bool bOpen)
 {
@@ -943,7 +1411,7 @@ void UCreativeAdaptiveSchedulManager::SetObjectProfile(bool bOpen)
 // Function Creative.CreativeAdaptiveSchedulManager.SetLuaProfile
 // (Final, Native, Public)
 // Parameters:
-// bool                           bOpen                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::SetLuaProfile(bool bOpen)
 {
@@ -967,9 +1435,9 @@ void UCreativeAdaptiveSchedulManager::SetLuaProfile(bool bOpen)
 // Function Creative.CreativeAdaptiveSchedulManager.RecordFunctionStart
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ClassName                      (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ClassName (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeAdaptiveSchedulManager::RecordFunctionStart(const struct FString& ClassName, const struct FString& FunctionName)
 {
@@ -996,9 +1464,9 @@ int UCreativeAdaptiveSchedulManager::RecordFunctionStart(const struct FString& C
 // Function Creative.CreativeAdaptiveSchedulManager.RecordFunctionEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ClassName                      (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            Cycles                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ClassName (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int Cycles (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::RecordFunctionEnd(const struct FString& ClassName, const struct FString& FunctionName, int Cycles)
 {
@@ -1024,9 +1492,9 @@ void UCreativeAdaptiveSchedulManager::RecordFunctionEnd(const struct FString& Cl
 // Function Creative.CreativeAdaptiveSchedulManager.LuaPath2Tag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 luaPath                        (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString luaPath (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeAdaptiveSchedulManager::LuaPath2Tag(const struct FString& luaPath, const struct FString& FunctionName)
 {
@@ -1053,7 +1521,7 @@ int UCreativeAdaptiveSchedulManager::LuaPath2Tag(const struct FString& luaPath, 
 // Function Creative.CreativeAdaptiveSchedulManager.LogOutputObjectMemoryInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bClear                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClear (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::LogOutputObjectMemoryInfo(bool bClear)
 {
@@ -1077,7 +1545,7 @@ void UCreativeAdaptiveSchedulManager::LogOutputObjectMemoryInfo(bool bClear)
 // Function Creative.CreativeAdaptiveSchedulManager.LogOutputLuaFunctionCallInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bClear                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClear (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::LogOutputLuaFunctionCallInfo(bool bClear)
 {
@@ -1101,7 +1569,7 @@ void UCreativeAdaptiveSchedulManager::LogOutputLuaFunctionCallInfo(bool bClear)
 // Function Creative.CreativeAdaptiveSchedulManager.LogoutLuaRecord
 // (Final, Native, Public)
 // Parameters:
-// TMap<int, int64_t>             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<int, int64_t> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<int, int64_t> UCreativeAdaptiveSchedulManager::LogoutLuaRecord()
 {
@@ -1126,7 +1594,7 @@ TMap<int, int64_t> UCreativeAdaptiveSchedulManager::LogoutLuaRecord()
 // Function Creative.CreativeAdaptiveSchedulManager.LLMEnabled
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeAdaptiveSchedulManager::LLMEnabled()
 {
@@ -1151,8 +1619,8 @@ bool UCreativeAdaptiveSchedulManager::LLMEnabled()
 // Function Creative.CreativeAdaptiveSchedulManager.InitTagIfNotExist
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TagName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeAdaptiveSchedulManager::InitTagIfNotExist(const struct FString& TagName)
 {
@@ -1178,9 +1646,9 @@ int UCreativeAdaptiveSchedulManager::InitTagIfNotExist(const struct FString& Tag
 // Function Creative.CreativeAdaptiveSchedulManager.InitNewLuaPath2Tag
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 luaPath                        (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString luaPath (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeAdaptiveSchedulManager::InitNewLuaPath2Tag(const struct FString& luaPath, const struct FString& FunctionName)
 {
@@ -1207,7 +1675,7 @@ int UCreativeAdaptiveSchedulManager::InitNewLuaPath2Tag(const struct FString& lu
 // Function Creative.CreativeAdaptiveSchedulManager.GetPureLuaUsedBytes
 // (Final, Native, Static, Public)
 // Parameters:
-// uint64_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint64_t UCreativeAdaptiveSchedulManager::GetPureLuaUsedBytes()
 {
@@ -1232,7 +1700,7 @@ uint64_t UCreativeAdaptiveSchedulManager::GetPureLuaUsedBytes()
 // Function Creative.CreativeAdaptiveSchedulManager.GetLuaUsedBytes
 // (Final, Native, Static, Public)
 // Parameters:
-// uint64_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint64_t UCreativeAdaptiveSchedulManager::GetLuaUsedBytes()
 {
@@ -1257,8 +1725,8 @@ uint64_t UCreativeAdaptiveSchedulManager::GetLuaUsedBytes()
 // Function Creative.CreativeAdaptiveSchedulManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeAdaptiveSchedulManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeAdaptiveSchedulManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeAdaptiveSchedulManager* UCreativeAdaptiveSchedulManager::Get(class UObject* WorldContext)
 {
@@ -1284,7 +1752,7 @@ class UCreativeAdaptiveSchedulManager* UCreativeAdaptiveSchedulManager::Get(clas
 // Function Creative.CreativeAdaptiveSchedulManager.AfterDead
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SpecType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int SpecType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAdaptiveSchedulManager::AfterDead(int SpecType)
 {
@@ -1328,7 +1796,7 @@ void UCreativeLuaSignalObjectBase::TryBeginPlay()
 // Function Creative.CreativeLuaSignalObjectBase.SetLuaFilePath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UCreativeLuaSignalObjectBase::SetLuaFilePath(const struct FString& FilePath)
 {
@@ -1352,7 +1820,7 @@ void UCreativeLuaSignalObjectBase::SetLuaFilePath(const struct FString& FilePath
 // Function Creative.CreativeLuaSignalObjectBase.RemoveCommonEvent
 // (Final, Native, Protected)
 // Parameters:
-// int                            EventHandle                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int EventHandle (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaSignalObjectBase::RemoveCommonEvent(int EventHandle)
 {
@@ -1413,6 +1881,27 @@ void UCreativeLuaSignalObjectBase::ReceiveBeginPlay()
 }
 
 
+// Function Creative.CreativeLuaSignalObjectBase.HookObject
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeLuaSignalObjectBase::HookObject()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaSignalObjectBase.HookObject");
+
+	UCreativeLuaSignalObjectBase_HookObject_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeLuaSignalObjectBase.ClearAllCommonEvent
 // (Final, Native, Protected)
 
@@ -1437,9 +1926,9 @@ void UCreativeLuaSignalObjectBase::ClearAllCommonEvent()
 // Function Creative.CreativeLuaSignalObjectBase.AddCommonEvent
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UCreativeLuaSignalObjectBase::AddCommonEvent(const struct FString& EventType, const struct FString& EventID, const struct FString& FunctionName)
 {
@@ -1465,7 +1954,7 @@ void UCreativeLuaSignalObjectBase::AddCommonEvent(const struct FString& EventTyp
 // Function Creative.CreativeApiObject.SetModuleName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 NewName                        (Parm, ZeroConstructor)
+// struct FString NewName (Parm, ZeroConstructor)
 
 void UCreativeApiObject::SetModuleName(const struct FString& NewName)
 {
@@ -1489,7 +1978,7 @@ void UCreativeApiObject::SetModuleName(const struct FString& NewName)
 // Function Creative.CreativeApiObject.GetModuleName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeApiObject::GetModuleName()
 {
@@ -1511,10 +2000,37 @@ struct FString UCreativeApiObject::GetModuleName()
 }
 
 
+// Function Creative.CreativeAssetManager.RemoveAssetInfo
+// (Final, Native, Public)
+// Parameters:
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeAssetManager::RemoveAssetInfo(int AssetId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAssetManager.RemoveAssetInfo");
+
+	UCreativeAssetManager_RemoveAssetInfo_Params params;
+	params.AssetId = AssetId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeAssetManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAssetManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -1537,7 +2053,7 @@ void UCreativeAssetManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* Ga
 // Function Creative.CreativeAssetManager.ReceiveInitAssetInfo
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            AssetId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAssetManager::ReceiveInitAssetInfo(int AssetId)
 {
@@ -1557,10 +2073,33 @@ void UCreativeAssetManager::ReceiveInitAssetInfo(int AssetId)
 }
 
 
+// Function Creative.CreativeAssetManager.ReceiveGetCustomAssetAsyncWithStringForManage
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FString CustomAssetKey (Parm, ZeroConstructor)
+
+void UCreativeAssetManager::ReceiveGetCustomAssetAsyncWithStringForManage(const struct FString& CustomAssetKey)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAssetManager.ReceiveGetCustomAssetAsyncWithStringForManage");
+
+	UCreativeAssetManager_ReceiveGetCustomAssetAsyncWithStringForManage_Params params;
+	params.CustomAssetKey = CustomAssetKey;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeAssetManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeAssetManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -1581,11 +2120,37 @@ void UCreativeAssetManager::OnGameStateBeginPlay(class AGameStateBase* GameState
 }
 
 
+// Function Creative.CreativeAssetManager.OnCustomAssetLoadComplete
+// (Final, Native, Public)
+// Parameters:
+// struct FString CustomAssetKey (Parm, ZeroConstructor)
+// class UObject* LoadObject (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeAssetManager::OnCustomAssetLoadComplete(const struct FString& CustomAssetKey, class UObject* LoadObject)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAssetManager.OnCustomAssetLoadComplete");
+
+	UCreativeAssetManager_OnCustomAssetLoadComplete_Params params;
+	params.CustomAssetKey = CustomAssetKey;
+	params.LoadObject = LoadObject;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeAssetManager.GetObbyMeshPath
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            AssetId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeAssetManager::GetObbyMeshPath(int AssetId)
 {
@@ -1610,8 +2175,8 @@ struct FString UCreativeAssetManager::GetObbyMeshPath(int AssetId)
 // Function Creative.CreativeAssetManager.GetMaterialPath
 // (Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            MaterialID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int MaterialID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeAssetManager::GetMaterialPath(int MaterialID)
 {
@@ -1633,11 +2198,39 @@ struct FString UCreativeAssetManager::GetMaterialPath(int MaterialID)
 }
 
 
+// Function Creative.CreativeAssetManager.GetCustomAssetAsyncWithStringForManage
+// (Final, Native, Public)
+// Parameters:
+// struct FString CustomAssetKey (Parm, ZeroConstructor)
+// struct FString InputString (Parm, ZeroConstructor)
+// struct FScriptDelegate AssetLoadSuccessDelegate (Parm, ZeroConstructor)
+
+void UCreativeAssetManager::GetCustomAssetAsyncWithStringForManage(const struct FString& CustomAssetKey, const struct FString& InputString, const struct FScriptDelegate& AssetLoadSuccessDelegate)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAssetManager.GetCustomAssetAsyncWithStringForManage");
+
+	UCreativeAssetManager_GetCustomAssetAsyncWithStringForManage_Params params;
+	params.CustomAssetKey = CustomAssetKey;
+	params.InputString = InputString;
+	params.AssetLoadSuccessDelegate = AssetLoadSuccessDelegate;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeAssetManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeAssetManager*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeAssetManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeAssetManager* UCreativeAssetManager::Get(class UObject* WorldContext)
 {
@@ -1663,8 +2256,8 @@ class UCreativeAssetManager* UCreativeAssetManager::Get(class UObject* WorldCont
 // Function Creative.CreativeAssetManager.AddAssetInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            AssetId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FCreativeAssetInfo      AssetInfo                      (ConstParm, Parm, OutParm, ReferenceParm)
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeAssetInfo AssetInfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeAssetManager::AddAssetInfo(int AssetId, const struct FCreativeAssetInfo& AssetInfo)
 {
@@ -1686,11 +2279,146 @@ void UCreativeAssetManager::AddAssetInfo(int AssetId, const struct FCreativeAsse
 }
 
 
+// Function Creative.CreativeAudioBlueprintFunctionLibrary.SaveWemToConvert
+// (Final, Native, Static, Public)
+// Parameters:
+// TArray<unsigned char> WemData (Parm, ZeroConstructor)
+// struct FString SavePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeAudioBlueprintFunctionLibrary::SaveWemToConvert(TArray<unsigned char> WemData, const struct FString& SavePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAudioBlueprintFunctionLibrary.SaveWemToConvert");
+
+	UCreativeAudioBlueprintFunctionLibrary_SaveWemToConvert_Params params;
+	params.WemData = WemData;
+	params.SavePath = SavePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeAudioBlueprintFunctionLibrary.RegisterWwiseBaseDir
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString BaseDir (Parm, ZeroConstructor)
+
+void UCreativeAudioBlueprintFunctionLibrary::RegisterWwiseBaseDir(const struct FString& BaseDir)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAudioBlueprintFunctionLibrary.RegisterWwiseBaseDir");
+
+	UCreativeAudioBlueprintFunctionLibrary_RegisterWwiseBaseDir_Params params;
+	params.BaseDir = BaseDir;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeAudioBlueprintFunctionLibrary.GetWavLength
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<unsigned char> WavData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCreativeAudioBlueprintFunctionLibrary::GetWavLength(TArray<unsigned char> WavData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAudioBlueprintFunctionLibrary.GetWavLength");
+
+	UCreativeAudioBlueprintFunctionLibrary_GetWavLength_Params params;
+	params.WavData = WavData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeAudioBlueprintFunctionLibrary.GetMp3Length
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<unsigned char> Mp3Data (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCreativeAudioBlueprintFunctionLibrary::GetMp3Length(TArray<unsigned char> Mp3Data)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAudioBlueprintFunctionLibrary.GetMp3Length");
+
+	UCreativeAudioBlueprintFunctionLibrary_GetMp3Length_Params params;
+	params.Mp3Data = Mp3Data;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeAudioBlueprintFunctionLibrary.GetAudioWaveform
+// (Final, Native, Static, Public)
+// Parameters:
+// uint32_t WemMediaID (Parm, ZeroConstructor, IsPlainOldData)
+// float SampleInterval (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate Callback (Parm, ZeroConstructor)
+
+void UCreativeAudioBlueprintFunctionLibrary::GetAudioWaveform(uint32_t WemMediaID, float SampleInterval, const struct FScriptDelegate& Callback)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeAudioBlueprintFunctionLibrary.GetAudioWaveform");
+
+	UCreativeAudioBlueprintFunctionLibrary_GetAudioWaveform_Params params;
+	params.WemMediaID = WemMediaID;
+	params.SampleInterval = SampleInterval;
+	params.Callback = Callback;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeAutoGenComponent.GetNodeSegmentContent
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCreativeAutoGenItemDataSegment Segment                        (Parm, OutParm)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FCreativeAutoGenItemDataSegment Segment (Parm, OutParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeAutoGenComponent::GetNodeSegmentContent(struct FCreativeAutoGenItemDataSegment* Segment)
 {
@@ -1718,9 +2446,9 @@ TArray<unsigned char> UCreativeAutoGenComponent::GetNodeSegmentContent(struct FC
 // Function Creative.CreativeAutoGenComponent.AddInstanceDataContent
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCreativeAutoGenDataSegment Segment                        (Parm, OutParm)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FCreativeAutoGenDataSegment Segment (Parm, OutParm)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeAutoGenComponent::AddInstanceDataContent(TArray<unsigned char> Content, struct FCreativeAutoGenDataSegment* Segment)
 {
@@ -1749,10 +2477,10 @@ bool UCreativeAutoGenComponent::AddInstanceDataContent(TArray<unsigned char> Con
 // Function Creative.CreativeModeBackpackUtils.ResCanAddToBackpackNum
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBackpackComponent*      BackpackComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            resID                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AddNum                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBackpackComponent* BackpackComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int resID (Parm, ZeroConstructor, IsPlainOldData)
+// int AddNum (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBackpackUtils::ResCanAddToBackpackNum(class UBackpackComponent* BackpackComponent, int resID, int AddNum)
 {
@@ -1780,9 +2508,9 @@ int UCreativeModeBackpackUtils::ResCanAddToBackpackNum(class UBackpackComponent*
 // Function Creative.CreativeModeBackpackUtils.GetItemMaxCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBackpackComponent*      BackpackComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            resID                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBackpackComponent* BackpackComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int resID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBackpackUtils::GetItemMaxCount(class UBackpackComponent* BackpackComponent, int resID)
 {
@@ -1809,11 +2537,11 @@ int UCreativeModeBackpackUtils::GetItemMaxCount(class UBackpackComponent* Backpa
 // Function Creative.CreativeModeBackpackUtils.AddAIAvatarItem
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBackpackComponent*      BackpackComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Color                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Pattern                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UBackpackComponent* BackpackComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int Color (Parm, ZeroConstructor, IsPlainOldData)
+// int Pattern (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBackpackUtils::AddAIAvatarItem(class UBackpackComponent* BackpackComponent, int ID, int Color, int Pattern, int Num)
 {
@@ -1838,10 +2566,251 @@ void UCreativeModeBackpackUtils::AddAIAvatarItem(class UBackpackComponent* Backp
 }
 
 
+// Function Creative.CreativeBaseWidget.StopCustomAnimation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeBaseWidget::StopCustomAnimation(bool bReset)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.StopCustomAnimation");
+
+	UCreativeBaseWidget_StopCustomAnimation_Params params;
+	params.bReset = bReset;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.SetZOrderBatchData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InInstanceID (Parm, ZeroConstructor)
+// int InOriginalLayer (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeBaseWidget::SetZOrderBatchData(const struct FString& InInstanceID, int InOriginalLayer)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.SetZOrderBatchData");
+
+	UCreativeBaseWidget_SetZOrderBatchData_Params params;
+	params.InInstanceID = InInstanceID;
+	params.InOriginalLayer = InOriginalLayer;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.SetEndForceVolatileDelayTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float InDelayTime (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeBaseWidget::SetEndForceVolatileDelayTime(float InDelayTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.SetEndForceVolatileDelayTime");
+
+	UCreativeBaseWidget_SetEndForceVolatileDelayTime_Params params;
+	params.InDelayTime = InDelayTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.SetAnimationForceVolatileEnable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeBaseWidget::SetAnimationForceVolatileEnable(bool bEnable)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.SetAnimationForceVolatileEnable");
+
+	UCreativeBaseWidget_SetAnimationForceVolatileEnable_Params params;
+	params.bEnable = bEnable;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.ResumeCustomAnimation
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeBaseWidget::ResumeCustomAnimation()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.ResumeCustomAnimation");
+
+	UCreativeBaseWidget_ResumeCustomAnimation_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.PlayCustomAnimation
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FCreativeUITweenInfo InTweenInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeUIAnimationGoal InGoal (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UCreativeBaseWidget::PlayCustomAnimation(const struct FCreativeUITweenInfo& InTweenInfo, const struct FCreativeUIAnimationGoal& InGoal)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.PlayCustomAnimation");
+
+	UCreativeBaseWidget_PlayCustomAnimation_Params params;
+	params.InTweenInfo = InTweenInfo;
+	params.InGoal = InGoal;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.PauseCustomAnimation
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeBaseWidget::PauseCustomAnimation()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.PauseCustomAnimation");
+
+	UCreativeBaseWidget_PauseCustomAnimation_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeBaseWidget.IsCustomAnimationPlaying
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeBaseWidget::IsCustomAnimationPlaying()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.IsCustomAnimationPlaying");
+
+	UCreativeBaseWidget_IsCustomAnimationPlaying_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeBaseWidget.IsCustomAnimationPaused
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeBaseWidget::IsCustomAnimationPaused()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.IsCustomAnimationPaused");
+
+	UCreativeBaseWidget_IsCustomAnimationPaused_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeBaseWidget.GetZOrderBatchSize
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector2D UCreativeBaseWidget::GetZOrderBatchSize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBaseWidget.GetZOrderBatchSize");
+
+	UCreativeBaseWidget_GetZOrderBatchSize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeBinaryDataManager.SetInitBinaryDataSize
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       DataSize                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t DataSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBinaryDataManager::SetInitBinaryDataSize(uint32_t DataSize)
 {
@@ -1865,7 +2834,7 @@ void UCreativeBinaryDataManager::SetInitBinaryDataSize(uint32_t DataSize)
 // Function Creative.CreativeBinaryDataManager.ReceiveOnPreLoadMap
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 MapName                        (Parm, ZeroConstructor)
+// struct FString MapName (Parm, ZeroConstructor)
 
 void UCreativeBinaryDataManager::ReceiveOnPreLoadMap(const struct FString& MapName)
 {
@@ -1908,7 +2877,7 @@ void UCreativeBinaryDataManager::ReceiveOnPostSetLuaEventBridgeInstance()
 // Function Creative.CreativeBinaryDataManager.ReceiveOnPostLoadMapWithWorld
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBinaryDataManager::ReceiveOnPostLoadMapWithWorld(class UWorld* World)
 {
@@ -1952,7 +2921,7 @@ void UCreativeBinaryDataManager::OnRep_InitBinaryDataSize()
 // Function Creative.CreativeBinaryDataManager.OnPreLoadMap
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 MapName                        (Parm, ZeroConstructor)
+// struct FString MapName (Parm, ZeroConstructor)
 
 void UCreativeBinaryDataManager::OnPreLoadMap(const struct FString& MapName)
 {
@@ -1997,7 +2966,7 @@ void UCreativeBinaryDataManager::OnPostSetLuaEventBridgeInstance()
 // Function Creative.CreativeBinaryDataManager.OnPostLoadMapWithWorld
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBinaryDataManager::OnPostLoadMapWithWorld(class UWorld* World)
 {
@@ -2021,7 +2990,7 @@ void UCreativeBinaryDataManager::OnPostLoadMapWithWorld(class UWorld* World)
 // Function Creative.CreativeBinaryDataManager.GetInitBinaryDataSize
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeBinaryDataManager::GetInitBinaryDataSize()
 {
@@ -2046,8 +3015,8 @@ uint32_t UCreativeBinaryDataManager::GetInitBinaryDataSize()
 // Function Creative.CreativeBinaryDataManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeBinaryDataManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeBinaryDataManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeBinaryDataManager* UCreativeBinaryDataManager::Get(class UObject* WorldContext)
 {
@@ -2073,7 +3042,7 @@ class UCreativeBinaryDataManager* UCreativeBinaryDataManager::Get(class UObject*
 // Function Creative.CreativeBlockyLuaManager.SetRTLOffsetY
 // (Final, Native, Public)
 // Parameters:
-// float                          Offset                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Offset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::SetRTLOffsetY(float Offset)
 {
@@ -2097,7 +3066,7 @@ void UCreativeBlockyLuaManager::SetRTLOffsetY(float Offset)
 // Function Creative.CreativeBlockyLuaManager.SetLTROffsetY
 // (Final, Native, Public)
 // Parameters:
-// float                          Offset                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Offset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::SetLTROffsetY(float Offset)
 {
@@ -2121,7 +3090,7 @@ void UCreativeBlockyLuaManager::SetLTROffsetY(float Offset)
 // Function Creative.CreativeBlockyLuaManager.SetFontSize
 // (Final, Native, Public)
 // Parameters:
-// int                            FontSize                       (Parm, ZeroConstructor, IsPlainOldData)
+// int FontSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::SetFontSize(int FontSize)
 {
@@ -2145,8 +3114,8 @@ void UCreativeBlockyLuaManager::SetFontSize(int FontSize)
 // Function Creative.CreativeBlockyLuaManager.SetBlockIdFromSlotString
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FBlockySlotString       SlotString                     (Parm, OutParm)
-// struct FString                 blockId                        (Parm, ZeroConstructor)
+// struct FBlockySlotString SlotString (Parm, OutParm)
+// struct FString blockId (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::SetBlockIdFromSlotString(const struct FString& blockId, struct FBlockySlotString* SlotString)
 {
@@ -2173,7 +3142,7 @@ void UCreativeBlockyLuaManager::SetBlockIdFromSlotString(const struct FString& b
 // Function Creative.CreativeBlockyLuaManager.ReturnPresetDescsToCache
 // (Final, Native, Public)
 // Parameters:
-// TArray<class UPresetDesc*>     ReturnDescs                    (Parm, ZeroConstructor)
+// TArray<class UPresetDesc*> ReturnDescs (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::ReturnPresetDescsToCache(TArray<class UPresetDesc*> ReturnDescs)
 {
@@ -2197,8 +3166,8 @@ void UCreativeBlockyLuaManager::ReturnPresetDescsToCache(TArray<class UPresetDes
 // Function Creative.CreativeBlockyLuaManager.ReturnGraphDataObject
 // (Final, Native, Public)
 // Parameters:
-// class UBlockyGraphData*        GraphDataObj                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBlockyGraphData* GraphDataObj (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::ReturnGraphDataObject(class UBlockyGraphData* GraphDataObj)
 {
@@ -2224,7 +3193,7 @@ bool UCreativeBlockyLuaManager::ReturnGraphDataObject(class UBlockyGraphData* Gr
 // Function Creative.CreativeBlockyLuaManager.RemoveDynamicPresetDescs
 // (Final, Native, Public)
 // Parameters:
-// TArray<class UPresetDesc*>     PresetDescs                    (Parm, ZeroConstructor)
+// TArray<class UPresetDesc*> PresetDescs (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::RemoveDynamicPresetDescs(TArray<class UPresetDesc*> PresetDescs)
 {
@@ -2248,7 +3217,7 @@ void UCreativeBlockyLuaManager::RemoveDynamicPresetDescs(TArray<class UPresetDes
 // Function Creative.CreativeBlockyLuaManager.RegisterNameCache
 // (Final, Native, Public)
 // Parameters:
-// class UBlockyGraphData*        GraphData                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraphData* GraphData (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::RegisterNameCache(class UBlockyGraphData* GraphData)
 {
@@ -2272,7 +3241,7 @@ void UCreativeBlockyLuaManager::RegisterNameCache(class UBlockyGraphData* GraphD
 // Function Creative.CreativeBlockyLuaManager.RefreshBlockyFont
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FSlateFontInfo          DefaultFont                    (Parm, OutParm)
+// struct FSlateFontInfo DefaultFont (Parm, OutParm)
 
 void UCreativeBlockyLuaManager::RefreshBlockyFont(struct FSlateFontInfo* DefaultFont)
 {
@@ -2298,7 +3267,7 @@ void UCreativeBlockyLuaManager::RefreshBlockyFont(struct FSlateFontInfo* Default
 // Function Creative.CreativeBlockyLuaManager.ReceivePresetFromCustomSelection
 // (Final, Native, Public)
 // Parameters:
-// class UObjectDesc*             Desc                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UObjectDesc* Desc (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::ReceivePresetFromCustomSelection(class UObjectDesc* Desc)
 {
@@ -2322,8 +3291,8 @@ void UCreativeBlockyLuaManager::ReceivePresetFromCustomSelection(class UObjectDe
 // Function Creative.CreativeBlockyLuaManager.ReceiveOutBlockyluaDownloadImage
 // (Final, Native, Public)
 // Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 IconPath                       (Parm, ZeroConstructor)
+// class UTexture2D* Texture (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString IconPath (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::ReceiveOutBlockyluaDownloadImage(class UTexture2D* Texture, const struct FString& IconPath)
 {
@@ -2368,7 +3337,7 @@ void UCreativeBlockyLuaManager::ReceiveOpenGuide()
 // Function Creative.CreativeBlockyLuaManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -2391,8 +3360,8 @@ void UCreativeBlockyLuaManager::ReceiveOnGameStateBeginPlay(class AGameStateBase
 // Function Creative.CreativeBlockyLuaManager.ReceivedGetLocalizeResStrHandleFailed
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 IdOrStr                        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString IdOrStr (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::ReceivedGetLocalizeResStrHandleFailed(const struct FString& IdOrStr)
 {
@@ -2417,8 +3386,8 @@ struct FString UCreativeBlockyLuaManager::ReceivedGetLocalizeResStrHandleFailed(
 // Function Creative.CreativeBlockyLuaManager.ReceiveCheckStringValidFunction
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 CheckString                    (Parm, ZeroConstructor)
-// struct FCheckStringHandleData  Data                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString CheckString (Parm, ZeroConstructor)
+// struct FCheckStringHandleData Data (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeBlockyLuaManager::ReceiveCheckStringValidFunction(const struct FString& CheckString, const struct FCheckStringHandleData& Data)
 {
@@ -2442,9 +3411,9 @@ void UCreativeBlockyLuaManager::ReceiveCheckStringValidFunction(const struct FSt
 // Function Creative.CreativeBlockyLuaManager.ReceiveCheckStringResult
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// bool                           Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ValidString                    (Parm, ZeroConstructor)
-// struct FCheckStringHandleData  Data                           (ConstParm, Parm, OutParm, ReferenceParm)
+// bool Result (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ValidString (Parm, ZeroConstructor)
+// struct FCheckStringHandleData Data (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeBlockyLuaManager::ReceiveCheckStringResult(bool Result, const struct FString& ValidString, const struct FCheckStringHandleData& Data)
 {
@@ -2470,7 +3439,7 @@ void UCreativeBlockyLuaManager::ReceiveCheckStringResult(bool Result, const stru
 // Function Creative.CreativeBlockyLuaManager.OnReceiveMessageData
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<struct FMessageDataWrapper> MessageDatas                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FMessageDataWrapper> MessageDatas (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeBlockyLuaManager::OnReceiveMessageData(TArray<struct FMessageDataWrapper> MessageDatas)
 {
@@ -2534,8 +3503,8 @@ void UCreativeBlockyLuaManager::OnInitBlockyLuaConfig()
 // Function Creative.CreativeBlockyLuaManager.OnGameTypePreChanged
 // (Final, Native, Public)
 // Parameters:
-// unsigned char                  LastGameType                   (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  CurrentGameType                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char LastGameType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char CurrentGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::OnGameTypePreChanged(unsigned char LastGameType, unsigned char CurrentGameType)
 {
@@ -2560,7 +3529,7 @@ void UCreativeBlockyLuaManager::OnGameTypePreChanged(unsigned char LastGameType,
 // Function Creative.CreativeBlockyLuaManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -2584,7 +3553,7 @@ void UCreativeBlockyLuaManager::OnGameStateBeginPlay(class AGameStateBase* GameS
 // Function Creative.CreativeBlockyLuaManager.IsLTRLanguage
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::IsLTRLanguage()
 {
@@ -2609,7 +3578,7 @@ bool UCreativeBlockyLuaManager::IsLTRLanguage()
 // Function Creative.CreativeBlockyLuaManager.IsLTR
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::IsLTR()
 {
@@ -2634,7 +3603,7 @@ bool UCreativeBlockyLuaManager::IsLTR()
 // Function Creative.CreativeBlockyLuaManager.InitDisableFunction
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         funcs                          (Parm, ZeroConstructor)
+// TArray<struct FString> funcs (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::InitDisableFunction(TArray<struct FString> funcs)
 {
@@ -2658,9 +3627,9 @@ void UCreativeBlockyLuaManager::InitDisableFunction(TArray<struct FString> funcs
 // Function Creative.CreativeBlockyLuaManager.GetPresetDescs
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 TypeName                       (Parm, OutParm, ZeroConstructor)
-// int                            GetCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UPresetDesc*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString TypeName (Parm, OutParm, ZeroConstructor)
+// int GetCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UPresetDesc*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UPresetDesc*> UCreativeBlockyLuaManager::GetPresetDescs(int GetCount, struct FString* TypeName)
 {
@@ -2689,8 +3658,8 @@ TArray<class UPresetDesc*> UCreativeBlockyLuaManager::GetPresetDescs(int GetCoun
 // Function Creative.CreativeBlockyLuaManager.GetPresetDesc
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 TypeName                       (Parm, OutParm, ZeroConstructor)
-// class UPresetDesc*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TypeName (Parm, OutParm, ZeroConstructor)
+// class UPresetDesc* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPresetDesc* UCreativeBlockyLuaManager::GetPresetDesc(struct FString* TypeName)
 {
@@ -2718,10 +3687,10 @@ class UPresetDesc* UCreativeBlockyLuaManager::GetPresetDesc(struct FString* Type
 // Function Creative.CreativeBlockyLuaManager.GetGraphDataObjectFormTemplateContent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          GrapbAstContent                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           CallLoadFinish                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLoadPresetsInGraph           (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockyGraphData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> GrapbAstContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool CallLoadFinish (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLoadPresetsInGraph (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraphData* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockyGraphData* UCreativeBlockyLuaManager::GetGraphDataObjectFormTemplateContent(TArray<unsigned char> GrapbAstContent, bool CallLoadFinish, bool IsLoadPresetsInGraph)
 {
@@ -2749,11 +3718,11 @@ class UBlockyGraphData* UCreativeBlockyLuaManager::GetGraphDataObjectFormTemplat
 // Function Creative.CreativeBlockyLuaManager.GetGraphDataObjectFormContent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          GrapbAstContent                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          GlobalVarAstContent            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           CallLoadFinish                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsSingleton                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockyGraphData*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> GrapbAstContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> GlobalVarAstContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool CallLoadFinish (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsSingleton (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraphData* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockyGraphData* UCreativeBlockyLuaManager::GetGraphDataObjectFormContent(TArray<unsigned char> GrapbAstContent, TArray<unsigned char> GlobalVarAstContent, bool CallLoadFinish, bool IsSingleton)
 {
@@ -2782,8 +3751,8 @@ class UBlockyGraphData* UCreativeBlockyLuaManager::GetGraphDataObjectFormContent
 // Function Creative.CreativeBlockyLuaManager.GetDynamicPresetDescsByKey
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 KeyName                        (Parm, ZeroConstructor)
-// class UPresetDesc*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString KeyName (Parm, ZeroConstructor)
+// class UPresetDesc* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPresetDesc* UCreativeBlockyLuaManager::GetDynamicPresetDescsByKey(const struct FString& KeyName)
 {
@@ -2809,7 +3778,7 @@ class UPresetDesc* UCreativeBlockyLuaManager::GetDynamicPresetDescsByKey(const s
 // Function Creative.CreativeBlockyLuaManager.GetBlockyLuaConfig
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyLuaConfig*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBlockyLuaConfig* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockyLuaConfig* UCreativeBlockyLuaManager::GetBlockyLuaConfig()
 {
@@ -2834,8 +3803,8 @@ class UBlockyLuaConfig* UCreativeBlockyLuaManager::GetBlockyLuaConfig()
 // Function Creative.CreativeBlockyLuaManager.GetBlockNameByStr
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 BlockyId                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString BlockyId (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::GetBlockNameByStr(const struct FString& BlockyId)
 {
@@ -2861,8 +3830,8 @@ struct FString UCreativeBlockyLuaManager::GetBlockNameByStr(const struct FString
 // Function Creative.CreativeBlockyLuaManager.GetBlockIdFromSlotString
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FBlockySlotString       SlotString                     (Parm, OutParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockySlotString SlotString (Parm, OutParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::GetBlockIdFromSlotString(struct FBlockySlotString* SlotString)
 {
@@ -2890,7 +3859,7 @@ struct FString UCreativeBlockyLuaManager::GetBlockIdFromSlotString(struct FBlock
 // Function Creative.CreativeBlockyLuaManager.GetAllDynamicPresetJson
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::GetAllDynamicPresetJson()
 {
@@ -2915,8 +3884,8 @@ struct FString UCreativeBlockyLuaManager::GetAllDynamicPresetJson()
 // Function Creative.CreativeBlockyLuaManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeBlockyLuaManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeBlockyLuaManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeBlockyLuaManager* UCreativeBlockyLuaManager::Get(class UObject* WorldContext)
 {
@@ -2942,10 +3911,10 @@ class UCreativeBlockyLuaManager* UCreativeBlockyLuaManager::Get(class UObject* W
 // Function Creative.CreativeBlockyLuaManager.GenerateLuaCodeFormJson
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 JsonText                       (Parm, ZeroConstructor)
-// struct FString                 GlobalVarJsonText              (Parm, ZeroConstructor)
-// bool                           GenGlobalVarLua                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString JsonText (Parm, ZeroConstructor)
+// struct FString GlobalVarJsonText (Parm, ZeroConstructor)
+// bool GenGlobalVarLua (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeBlockyLuaManager::GenerateLuaCodeFormJson(const struct FString& JsonText, const struct FString& GlobalVarJsonText, bool GenGlobalVarLua)
 {
@@ -2973,9 +3942,9 @@ TArray<struct FString> UCreativeBlockyLuaManager::GenerateLuaCodeFormJson(const 
 // Function Creative.CreativeBlockyLuaManager.GenerateLuaCodeFormGraphDataObject
 // (Final, Native, Public)
 // Parameters:
-// class UBlockyGraphData*        GraphDataObj                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           GenGlobalVarLua                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyGraphData* GraphDataObj (Parm, ZeroConstructor, IsPlainOldData)
+// bool GenGlobalVarLua (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeBlockyLuaManager::GenerateLuaCodeFormGraphDataObject(class UBlockyGraphData* GraphDataObj, bool GenGlobalVarLua)
 {
@@ -3002,11 +3971,11 @@ TArray<struct FString> UCreativeBlockyLuaManager::GenerateLuaCodeFormGraphDataOb
 // Function Creative.CreativeBlockyLuaManager.GenerateLuaCodeFormContent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          GrapbAstContent                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          GlobalVarAstContent            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           GenGlobalVarLua                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CallLoadFinish                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> GrapbAstContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> GlobalVarAstContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool GenGlobalVarLua (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool CallLoadFinish (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeBlockyLuaManager::GenerateLuaCodeFormContent(TArray<unsigned char> GrapbAstContent, TArray<unsigned char> GlobalVarAstContent, bool GenGlobalVarLua, bool CallLoadFinish)
 {
@@ -3056,7 +4025,7 @@ void UCreativeBlockyLuaManager::ClearNameIndexCache()
 // Function Creative.CreativeBlockyLuaManager.ClearDynamicPresetDescs
 // (Final, Native, Public)
 // Parameters:
-// TArray<class UPresetDesc*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UPresetDesc*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UPresetDesc*> UCreativeBlockyLuaManager::ClearDynamicPresetDescs()
 {
@@ -3081,7 +4050,7 @@ TArray<class UPresetDesc*> UCreativeBlockyLuaManager::ClearDynamicPresetDescs()
 // Function Creative.CreativeBlockyLuaManager.ClearCacheObjects
 // (Final, Native, Public)
 // Parameters:
-// bool                           CallBeginDestroy               (Parm, ZeroConstructor, IsPlainOldData)
+// bool CallBeginDestroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::ClearCacheObjects(bool CallBeginDestroy)
 {
@@ -3126,7 +4095,7 @@ void UCreativeBlockyLuaManager::ClearBlockyLuaHotfixUtility()
 // Function Creative.CreativeBlockyLuaManager.BlockyluaShowPresetPanelHandle
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsShow                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::BlockyluaShowPresetPanelHandle(bool IsShow)
 {
@@ -3150,7 +4119,7 @@ void UCreativeBlockyLuaManager::BlockyluaShowPresetPanelHandle(bool IsShow)
 // Function Creative.CreativeBlockyLuaManager.BlockyluaPresetSoundFunctionHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 SoundPath                      (Parm, ZeroConstructor)
+// struct FString SoundPath (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::BlockyluaPresetSoundFunctionHandle(const struct FString& SoundPath)
 {
@@ -3174,8 +4143,8 @@ void UCreativeBlockyLuaManager::BlockyluaPresetSoundFunctionHandle(const struct 
 // Function Creative.CreativeBlockyLuaManager.BlockyluaPresetSelectCheckHandle
 // (Final, Native, Public)
 // Parameters:
-// class UObjectDesc*             Desc                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObjectDesc* Desc (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::BlockyluaPresetSelectCheckHandle(class UObjectDesc* Desc)
 {
@@ -3201,8 +4170,8 @@ struct FString UCreativeBlockyLuaManager::BlockyluaPresetSelectCheckHandle(class
 // Function Creative.CreativeBlockyLuaManager.BlockyluaModifyTipHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FText                   OriginalTip                    (Parm)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FText OriginalTip (Parm)
+// struct FText ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FText UCreativeBlockyLuaManager::BlockyluaModifyTipHandle(const struct FText& OriginalTip)
 {
@@ -3228,7 +4197,7 @@ struct FText UCreativeBlockyLuaManager::BlockyluaModifyTipHandle(const struct FT
 // Function Creative.CreativeBlockyLuaManager.BlockyluaMessageDataHandle
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FMessageDataStruct> MessageDatas                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FMessageDataStruct> MessageDatas (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeBlockyLuaManager::BlockyluaMessageDataHandle(TArray<struct FMessageDataStruct> MessageDatas)
 {
@@ -3252,8 +4221,8 @@ void UCreativeBlockyLuaManager::BlockyluaMessageDataHandle(TArray<struct FMessag
 // Function Creative.CreativeBlockyLuaManager.BlockyluaGetLocalizeResStrHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 IdOrStr                        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString IdOrStr (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeBlockyLuaManager::BlockyluaGetLocalizeResStrHandle(const struct FString& IdOrStr)
 {
@@ -3279,7 +4248,7 @@ struct FString UCreativeBlockyLuaManager::BlockyluaGetLocalizeResStrHandle(const
 // Function Creative.CreativeBlockyLuaManager.BlockyluaDownloadImage
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 IconPath                       (Parm, ZeroConstructor)
+// struct FString IconPath (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::BlockyluaDownloadImage(const struct FString& IconPath)
 {
@@ -3303,9 +4272,9 @@ void UCreativeBlockyLuaManager::BlockyluaDownloadImage(const struct FString& Ico
 // Function Creative.CreativeBlockyLuaManager.BlockyluaCustomInputHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 CustomClickType                (Parm, ZeroConstructor)
-// class UObjectDesc*             Desc                           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UObjectDesc*>     followers                      (Parm, ZeroConstructor)
+// struct FString CustomClickType (Parm, ZeroConstructor)
+// class UObjectDesc* Desc (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UObjectDesc*> followers (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::BlockyluaCustomInputHandle(const struct FString& CustomClickType, class UObjectDesc* Desc, TArray<class UObjectDesc*> followers)
 {
@@ -3331,8 +4300,8 @@ void UCreativeBlockyLuaManager::BlockyluaCustomInputHandle(const struct FString&
 // Function Creative.CreativeBlockyLuaManager.BlockyluaCheckShowPresetFitlerBtnHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TypeName                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TypeName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::BlockyluaCheckShowPresetFitlerBtnHandle(const struct FString& TypeName)
 {
@@ -3358,10 +4327,10 @@ bool UCreativeBlockyLuaManager::BlockyluaCheckShowPresetFitlerBtnHandle(const st
 // Function Creative.CreativeBlockyLuaManager.BlockyluaCheckShowCustomInputHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 CustomClickType                (Parm, ZeroConstructor)
-// class UObjectDesc*             Desc                           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UObjectDesc*>     followers                      (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString CustomClickType (Parm, ZeroConstructor)
+// class UObjectDesc* Desc (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UObjectDesc*> followers (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::BlockyluaCheckShowCustomInputHandle(const struct FString& CustomClickType, class UObjectDesc* Desc, TArray<class UObjectDesc*> followers)
 {
@@ -3389,8 +4358,8 @@ bool UCreativeBlockyLuaManager::BlockyluaCheckShowCustomInputHandle(const struct
 // Function Creative.CreativeBlockyLuaManager.BindSetBlockNewStatusHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// bool                           showstate                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// bool showstate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeBlockyLuaManager::BindSetBlockNewStatusHandle(const struct FString& blockId, bool showstate)
 {
@@ -3412,11 +4381,38 @@ void UCreativeBlockyLuaManager::BindSetBlockNewStatusHandle(const struct FString
 }
 
 
+// Function Creative.CreativeBlockyLuaManager.BindGetPresetValidityDurationHandle
+// (Final, Native, Public)
+// Parameters:
+// class UPresetDesc* PresetDesc (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UCreativeBlockyLuaManager::BindGetPresetValidityDurationHandle(class UPresetDesc* PresetDesc)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeBlockyLuaManager.BindGetPresetValidityDurationHandle");
+
+	UCreativeBlockyLuaManager_BindGetPresetValidityDurationHandle_Params params;
+	params.PresetDesc = PresetDesc;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeBlockyLuaManager.BindGetBlockNewStatusHandle
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeBlockyLuaManager::BindGetBlockNewStatusHandle(const struct FString& blockId)
 {
@@ -3442,8 +4438,8 @@ bool UCreativeBlockyLuaManager::BindGetBlockNewStatusHandle(const struct FString
 // Function Creative.CreativeBlockyLuaManager.BindBlockyLuaStubFunc
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 BindFuncName                   (Parm, ZeroConstructor)
-// struct FString                 OverrdeFuncName                (Parm, ZeroConstructor)
+// struct FString BindFuncName (Parm, ZeroConstructor)
+// struct FString OverrdeFuncName (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::BindBlockyLuaStubFunc(const struct FString& BindFuncName, const struct FString& OverrdeFuncName)
 {
@@ -3468,7 +4464,7 @@ void UCreativeBlockyLuaManager::BindBlockyLuaStubFunc(const struct FString& Bind
 // Function Creative.CreativeBlockyLuaManager.AddDynamicPresetDescs
 // (Final, Native, Public)
 // Parameters:
-// TArray<class UPresetDesc*>     PresetDescs                    (Parm, ZeroConstructor)
+// TArray<class UPresetDesc*> PresetDescs (Parm, ZeroConstructor)
 
 void UCreativeBlockyLuaManager::AddDynamicPresetDescs(TArray<class UPresetDesc*> PresetDescs)
 {
@@ -3492,9 +4488,9 @@ void UCreativeBlockyLuaManager::AddDynamicPresetDescs(TArray<class UPresetDesc*>
 // Function Creative.CreativeModeBlueprintLibrary.ZSTDDecompressData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          CompressedData                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          DecompressedData               (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> CompressedData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> DecompressedData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::ZSTDDecompressData(TArray<unsigned char> CompressedData, TArray<unsigned char>* DecompressedData)
 {
@@ -3523,10 +4519,10 @@ bool UCreativeModeBlueprintLibrary::ZSTDDecompressData(TArray<unsigned char> Com
 // Function Creative.CreativeModeBlueprintLibrary.ZSTDCompressData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          UncompressedData               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          CompressedData                 (Parm, OutParm, ZeroConstructor)
-// int                            CompressionLevel               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> UncompressedData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> CompressedData (Parm, OutParm, ZeroConstructor)
+// int CompressionLevel (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::ZSTDCompressData(TArray<unsigned char> UncompressedData, int CompressionLevel, TArray<unsigned char>* CompressedData)
 {
@@ -3553,12 +4549,68 @@ bool UCreativeModeBlueprintLibrary::ZSTDCompressData(TArray<unsigned char> Uncom
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.WindowsReadFileSummary
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// struct FString FilePath (Parm, ZeroConstructor)
+// TArray<struct FString> Properties (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeModeBlueprintLibrary::WindowsReadFileSummary(const struct FString& FilePath, TArray<struct FString> Properties)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.WindowsReadFileSummary");
+
+	UCreativeModeBlueprintLibrary_WindowsReadFileSummary_Params params;
+	params.FilePath = FilePath;
+	params.Properties = Properties;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.WindowsPickFile
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString filter (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeModeBlueprintLibrary::WindowsPickFile(const struct FString& filter)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.WindowsPickFile");
+
+	UCreativeModeBlueprintLibrary_WindowsPickFile_Params params;
+	params.filter = filter;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.WidgetAbsoluteSizeToLocalSize
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector2D               AbsoluteSize                   (Parm, IsPlainOldData)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector2D AbsoluteSize (Parm, IsPlainOldData)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UCreativeModeBlueprintLibrary::WidgetAbsoluteSizeToLocalSize(class UWidget* Widget, const struct FVector2D& AbsoluteSize)
 {
@@ -3585,7 +4637,7 @@ struct FVector2D UCreativeModeBlueprintLibrary::WidgetAbsoluteSizeToLocalSize(cl
 // Function Creative.CreativeModeBlueprintLibrary.UObjSnapshot
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWorld*                  MyWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* MyWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::UObjSnapshot(class UWorld* MyWorld)
 {
@@ -3609,9 +4661,9 @@ void UCreativeModeBlueprintLibrary::UObjSnapshot(class UWorld* MyWorld)
 // Function Creative.CreativeModeBlueprintLibrary.TransformRevert
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              TransformRelative              (Parm, OutParm, IsPlainOldData)
-// struct FTransform              TransformB                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FTransform TransformRelative (Parm, OutParm, IsPlainOldData)
+// struct FTransform TransformB (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UCreativeModeBlueprintLibrary::TransformRevert(const struct FTransform& TransformB, struct FTransform* TransformRelative)
 {
@@ -3640,8 +4692,8 @@ struct FTransform UCreativeModeBlueprintLibrary::TransformRevert(const struct FT
 // Function Creative.CreativeModeBlueprintLibrary.TransformMultiplyBy
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              Source                         (Parm, OutParm, IsPlainOldData)
-// struct FTransform              M                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform Source (Parm, OutParm, IsPlainOldData)
+// struct FTransform M (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::TransformMultiplyBy(const struct FTransform& M, struct FTransform* Source)
 {
@@ -3668,8 +4720,8 @@ void UCreativeModeBlueprintLibrary::TransformMultiplyBy(const struct FTransform&
 // Function Creative.CreativeModeBlueprintLibrary.TransformBounds
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FBoxSphereBounds        Bounds                         (Parm, OutParm, IsPlainOldData)
-// struct FTransform              M                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FBoxSphereBounds Bounds (Parm, OutParm, IsPlainOldData)
+// struct FTransform M (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::TransformBounds(const struct FTransform& M, struct FBoxSphereBounds* Bounds)
 {
@@ -3696,8 +4748,8 @@ void UCreativeModeBlueprintLibrary::TransformBounds(const struct FTransform& M, 
 // Function Creative.CreativeModeBlueprintLibrary.ToMilliseconds64
 // (Final, Native, Static, Public)
 // Parameters:
-// uint64_t                       Cycles                         (Parm, ZeroConstructor, IsPlainOldData)
-// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t Cycles (Parm, ZeroConstructor, IsPlainOldData)
+// double ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 double UCreativeModeBlueprintLibrary::ToMilliseconds64(uint64_t Cycles)
 {
@@ -3723,8 +4775,8 @@ double UCreativeModeBlueprintLibrary::ToMilliseconds64(uint64_t Cycles)
 // Function Creative.CreativeModeBlueprintLibrary.TextureToPNG
 // (Final, Native, Static, Public)
 // Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UTexture2D* Texture (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeBlueprintLibrary::TextureToPNG(class UTexture2D* Texture)
 {
@@ -3750,8 +4802,8 @@ TArray<unsigned char> UCreativeModeBlueprintLibrary::TextureToPNG(class UTexture
 // Function Creative.CreativeModeBlueprintLibrary.TextureToJPEG
 // (Final, Native, Static, Public)
 // Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UTexture2D* Texture (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeBlueprintLibrary::TextureToJPEG(class UTexture2D* Texture)
 {
@@ -3777,15 +4829,15 @@ TArray<unsigned char> UCreativeModeBlueprintLibrary::TextureToJPEG(class UTextur
 // Function Creative.CreativeModeBlueprintLibrary.TakeSnapshot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 WindowWidget                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            x2                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            y2                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           bUseCrop                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFillRect                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UWidget* WindowWidget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int X1 (Parm, ZeroConstructor, IsPlainOldData)
+// int Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// int x2 (Parm, ZeroConstructor, IsPlainOldData)
+// int y2 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool bUseCrop (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFillRect (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::TakeSnapshot(class UWidget* WindowWidget, int X1, int Y1, int x2, int y2, const struct FString& Filename, bool bUseCrop, bool bFillRect)
 {
@@ -3818,8 +4870,8 @@ struct FString UCreativeModeBlueprintLibrary::TakeSnapshot(class UWidget* Window
 // Function Creative.CreativeModeBlueprintLibrary.SynchronizePropertiesWidget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 TargetWidget                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* TargetWidget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::SynchronizePropertiesWidget(class UWidget* TargetWidget)
 {
@@ -3845,14 +4897,14 @@ bool UCreativeModeBlueprintLibrary::SynchronizePropertiesWidget(class UWidget* T
 // Function Creative.CreativeModeBlueprintLibrary.SphereOverlapComponentsByChannel
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SpherePos                      (Parm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<TEnumAsByte<enum ECollisionChannel>> Channels                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  ComponentClassFilter           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UPrimitiveComponent*> OutComponents                  (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SpherePos (Parm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<TEnumAsByte<enum ECollisionChannel>> Channels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* ComponentClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UPrimitiveComponent*> OutComponents (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::SphereOverlapComponentsByChannel(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TArray<TEnumAsByte<enum ECollisionChannel>> Channels, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
@@ -3886,14 +4938,14 @@ bool UCreativeModeBlueprintLibrary::SphereOverlapComponentsByChannel(class UObje
 // Function Creative.CreativeModeBlueprintLibrary.SphereOverlapActorsByChannel
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SpherePos                      (Parm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<TEnumAsByte<enum ECollisionChannel>> Channels                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  ActorClassFilter               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SpherePos (Parm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<TEnumAsByte<enum ECollisionChannel>> Channels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* ActorClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::SphereOverlapActorsByChannel(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TArray<TEnumAsByte<enum ECollisionChannel>> Channels, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
@@ -3927,8 +4979,8 @@ bool UCreativeModeBlueprintLibrary::SphereOverlapActorsByChannel(class UObject* 
 // Function Creative.CreativeModeBlueprintLibrary.ShouldCreatePhysicsState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPrimitiveComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::ShouldCreatePhysicsState(class UPrimitiveComponent* Component)
 {
@@ -3954,9 +5006,9 @@ bool UCreativeModeBlueprintLibrary::ShouldCreatePhysicsState(class UPrimitiveCom
 // Function Creative.CreativeModeBlueprintLibrary.SetWorldGravityZ
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          GravityZ                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float GravityZ (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeBlueprintLibrary::SetWorldGravityZ(float GravityZ, class UObject* WorldContext)
 {
@@ -3983,8 +5035,8 @@ float UCreativeModeBlueprintLibrary::SetWorldGravityZ(float GravityZ, class UObj
 // Function Creative.CreativeModeBlueprintLibrary.SetWidgetVisiblePass
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bVisiblePass                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bVisiblePass (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetWidgetVisiblePass(class UWidget* Widget, bool bVisiblePass)
 {
@@ -4009,8 +5061,8 @@ void UCreativeModeBlueprintLibrary::SetWidgetVisiblePass(class UWidget* Widget, 
 // Function Creative.CreativeModeBlueprintLibrary.SetStaticMeshMobility
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMeshComponent*    StaticMeshComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EComponentMobility> NewMobility                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMeshComponent* StaticMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EComponentMobility> NewMobility (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetStaticMeshMobility(class UStaticMeshComponent* StaticMeshComponent, TEnumAsByte<enum EComponentMobility> NewMobility)
 {
@@ -4035,7 +5087,7 @@ void UCreativeModeBlueprintLibrary::SetStaticMeshMobility(class UStaticMeshCompo
 // Function Creative.CreativeModeBlueprintLibrary.SetSpeedOverLimit
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetSpeedOverLimit(class AActor* Actor)
 {
@@ -4059,8 +5111,8 @@ void UCreativeModeBlueprintLibrary::SetSpeedOverLimit(class AActor* Actor)
 // Function Creative.CreativeModeBlueprintLibrary.SetRelativeCamRotation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetRelativeCamRotation(class APlayerController* PlayerController, class USceneComponent* Component)
 {
@@ -4085,8 +5137,8 @@ void UCreativeModeBlueprintLibrary::SetRelativeCamRotation(class APlayerControll
 // Function Creative.CreativeModeBlueprintLibrary.SetParticleCullingDistance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UParticleSystemComponent* ParticleSystemComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystemComponent* ParticleSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetParticleCullingDistance(class UParticleSystemComponent* ParticleSystemComponent, float Distance)
 {
@@ -4111,10 +5163,10 @@ void UCreativeModeBlueprintLibrary::SetParticleCullingDistance(class UParticleSy
 // Function Creative.CreativeModeBlueprintLibrary.SetInstanceValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::SetInstanceValue(class UObject* WorldContextObject, const struct FString& InstanceID, const struct FString& Key, const struct FString& Value)
 {
@@ -4138,11 +5190,39 @@ void UCreativeModeBlueprintLibrary::SetInstanceValue(class UObject* WorldContext
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.SetCreativeInstanceDataContent
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// struct FCreativeInstanceDataContent InstanceDataContent (Parm, OutParm)
+// TArray<unsigned char> DataContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeModeBlueprintLibrary::SetCreativeInstanceDataContent(TArray<unsigned char> DataContent, struct FCreativeInstanceDataContent* InstanceDataContent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.SetCreativeInstanceDataContent");
+
+	UCreativeModeBlueprintLibrary_SetCreativeInstanceDataContent_Params params;
+	params.DataContent = DataContent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (InstanceDataContent != nullptr)
+		*InstanceDataContent = params.InstanceDataContent;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.SetCommandLineValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 NewValue                       (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString NewValue (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::SetCommandLineValue(const struct FString& Key, const struct FString& NewValue)
 {
@@ -4167,8 +5247,8 @@ void UCreativeModeBlueprintLibrary::SetCommandLineValue(const struct FString& Ke
 // Function Creative.CreativeModeBlueprintLibrary.SetCollisionMobility
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UShapeComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EComponentMobility> NewMobility                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UShapeComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EComponentMobility> NewMobility (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::SetCollisionMobility(class UShapeComponent* Component, TEnumAsByte<enum EComponentMobility> NewMobility)
 {
@@ -4190,11 +5270,94 @@ void UCreativeModeBlueprintLibrary::SetCollisionMobility(class UShapeComponent* 
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.SetAICrowdSimulationState
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AAIController* AICtrl (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char NewState (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::SetAICrowdSimulationState(class AAIController* AICtrl, unsigned char NewState)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.SetAICrowdSimulationState");
+
+	UCreativeModeBlueprintLibrary_SetAICrowdSimulationState_Params params;
+	params.AICtrl = AICtrl;
+	params.NewState = NewState;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.SetAICrowdObstacleAvoidance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AAIController* AICtrl (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUpdateAgent (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::SetAICrowdObstacleAvoidance(class AAIController* AICtrl, bool bEnable, bool bUpdateAgent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.SetAICrowdObstacleAvoidance");
+
+	UCreativeModeBlueprintLibrary_SetAICrowdObstacleAvoidance_Params params;
+	params.AICtrl = AICtrl;
+	params.bEnable = bEnable;
+	params.bUpdateAgent = bUpdateAgent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.SaveStringToFileByFullPath
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString String (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeModeBlueprintLibrary::SaveStringToFileByFullPath(const struct FString& String, const struct FString& Filename)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.SaveStringToFileByFullPath");
+
+	UCreativeModeBlueprintLibrary_SaveStringToFileByFullPath_Params params;
+	params.String = String;
+	params.Filename = Filename;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.SaveStringToFile
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 String                         (Parm, ZeroConstructor)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString String (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::SaveStringToFile(const struct FString& String, const struct FString& Filename)
 {
@@ -4216,11 +5379,37 @@ void UCreativeModeBlueprintLibrary::SaveStringToFile(const struct FString& Strin
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.SaveRawStringToFile
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString FilePath (Parm, ZeroConstructor)
+
+void UCreativeModeBlueprintLibrary::SaveRawStringToFile(TArray<unsigned char> Content, const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.SaveRawStringToFile");
+
+	UCreativeModeBlueprintLibrary_SaveRawStringToFile_Params params;
+	params.Content = Content;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.SaveAssetStringToFile
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 String                         (Parm, ZeroConstructor)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString String (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::SaveAssetStringToFile(const struct FString& String, const struct FString& Filename)
 {
@@ -4245,9 +5434,9 @@ void UCreativeModeBlueprintLibrary::SaveAssetStringToFile(const struct FString& 
 // Function Creative.CreativeModeBlueprintLibrary.RotatorCrossInverse
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                Rot1                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rot2                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator Rot1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Rot2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UCreativeModeBlueprintLibrary::RotatorCrossInverse(const struct FRotator& Rot1, const struct FRotator& Rot2)
 {
@@ -4274,9 +5463,9 @@ struct FRotator UCreativeModeBlueprintLibrary::RotatorCrossInverse(const struct 
 // Function Creative.CreativeModeBlueprintLibrary.RotatorCross
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                Rot1                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rot2                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator Rot1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Rot2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UCreativeModeBlueprintLibrary::RotatorCross(const struct FRotator& Rot1, const struct FRotator& Rot2)
 {
@@ -4303,9 +5492,9 @@ struct FRotator UCreativeModeBlueprintLibrary::RotatorCross(const struct FRotato
 // Function Creative.CreativeModeBlueprintLibrary.Rotation2Vector
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                Rotator                        (Parm, IsPlainOldData)
-// int                            Axis                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator Rotator (Parm, IsPlainOldData)
+// int Axis (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativeModeBlueprintLibrary::Rotation2Vector(const struct FRotator& Rotator, int Axis)
 {
@@ -4329,11 +5518,67 @@ struct FVector UCreativeModeBlueprintLibrary::Rotation2Vector(const struct FRota
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.RenderTargetToRGB
+// (Final, Native, Static, Public)
+// Parameters:
+// class UTextureRenderTarget2D* RenderTarget (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<unsigned char> UCreativeModeBlueprintLibrary::RenderTargetToRGB(class UTextureRenderTarget2D* RenderTarget)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.RenderTargetToRGB");
+
+	UCreativeModeBlueprintLibrary_RenderTargetToRGB_Params params;
+	params.RenderTarget = RenderTarget;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.RenderTargetToPNG
+// (Final, Native, Static, Public)
+// Parameters:
+// class UTextureRenderTarget2D* RenderTarget (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLinearToGamma (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<unsigned char> UCreativeModeBlueprintLibrary::RenderTargetToPNG(class UTextureRenderTarget2D* RenderTarget, bool bLinearToGamma)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.RenderTargetToPNG");
+
+	UCreativeModeBlueprintLibrary_RenderTargetToPNG_Params params;
+	params.RenderTarget = RenderTarget;
+	params.bLinearToGamma = bLinearToGamma;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.RenameObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 NewName                        (ConstParm, Parm, ZeroConstructor)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString NewName (ConstParm, Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::RenameObject(class UObject* Object, const struct FString& NewName)
 {
@@ -4358,7 +5603,7 @@ void UCreativeModeBlueprintLibrary::RenameObject(class UObject* Object, const st
 // Function Creative.CreativeModeBlueprintLibrary.RecreatePhysicsState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPrimitiveComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::RecreatePhysicsState(class UPrimitiveComponent* Component)
 {
@@ -4382,9 +5627,9 @@ void UCreativeModeBlueprintLibrary::RecreatePhysicsState(class UPrimitiveCompone
 // Function Creative.CreativeModeBlueprintLibrary.QuatCrossInverse
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FQuat                   Quat1                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FQuat                   Quat2                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FQuat Quat1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FQuat Quat2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FQuat ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FQuat UCreativeModeBlueprintLibrary::QuatCrossInverse(const struct FQuat& Quat1, const struct FQuat& Quat2)
 {
@@ -4411,9 +5656,9 @@ struct FQuat UCreativeModeBlueprintLibrary::QuatCrossInverse(const struct FQuat&
 // Function Creative.CreativeModeBlueprintLibrary.QuatCross
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FQuat                   Quat1                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FQuat                   Quat2                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FQuat Quat1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FQuat Quat2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FQuat ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FQuat UCreativeModeBlueprintLibrary::QuatCross(const struct FQuat& Quat1, const struct FQuat& Quat2)
 {
@@ -4440,7 +5685,7 @@ struct FQuat UCreativeModeBlueprintLibrary::QuatCross(const struct FQuat& Quat1,
 // Function Creative.CreativeModeBlueprintLibrary.ProjectSavedDir
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::ProjectSavedDir()
 {
@@ -4465,7 +5710,7 @@ struct FString UCreativeModeBlueprintLibrary::ProjectSavedDir()
 // Function Creative.CreativeModeBlueprintLibrary.ProjectContentDir
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::ProjectContentDir()
 {
@@ -4490,7 +5735,7 @@ struct FString UCreativeModeBlueprintLibrary::ProjectContentDir()
 // Function Creative.CreativeModeBlueprintLibrary.PopulateParticleProperties
 // (Final, Native, Static, Public)
 // Parameters:
-// class UParticleSystemComponent* ParticleSystemComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent* ParticleSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::PopulateParticleProperties(class UParticleSystemComponent* ParticleSystemComponent)
 {
@@ -4514,14 +5759,14 @@ void UCreativeModeBlueprintLibrary::PopulateParticleProperties(class UParticleSy
 // Function Creative.CreativeModeBlueprintLibrary.MoveComponentToNoLatent
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 TargetRelativeLocation         (Parm, IsPlainOldData)
-// struct FRotator                TargetRelativeRotation         (Parm, IsPlainOldData)
-// bool                           bEaseOut                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEaseIn                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OverTime                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForceShortestRotationPath     (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EMoveComponentAction> MoveAction                     (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector TargetRelativeLocation (Parm, IsPlainOldData)
+// struct FRotator TargetRelativeRotation (Parm, IsPlainOldData)
+// bool bEaseOut (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEaseIn (Parm, ZeroConstructor, IsPlainOldData)
+// float OverTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceShortestRotationPath (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EMoveComponentAction> MoveAction (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::MoveComponentToNoLatent(class USceneComponent* Component, const struct FVector& TargetRelativeLocation, const struct FRotator& TargetRelativeRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, TEnumAsByte<enum EMoveComponentAction> MoveAction)
 {
@@ -4552,14 +5797,14 @@ void UCreativeModeBlueprintLibrary::MoveComponentToNoLatent(class USceneComponen
 // Function Creative.CreativeModeBlueprintLibrary.MoveComponentTo
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 WorldLocation                  (Parm, IsPlainOldData)
-// struct FRotator                WorldRotation                  (Parm, IsPlainOldData)
-// bool                           bEaseOut                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEaseIn                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OverTime                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForceShortestRotationPath     (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EMoveComponentAction> MoveAction                     (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector WorldLocation (Parm, IsPlainOldData)
+// struct FRotator WorldRotation (Parm, IsPlainOldData)
+// bool bEaseOut (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEaseIn (Parm, ZeroConstructor, IsPlainOldData)
+// float OverTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceShortestRotationPath (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EMoveComponentAction> MoveAction (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::MoveComponentTo(class USceneComponent* Component, const struct FVector& WorldLocation, const struct FRotator& WorldRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, TEnumAsByte<enum EMoveComponentAction> MoveAction)
 {
@@ -4590,15 +5835,15 @@ void UCreativeModeBlueprintLibrary::MoveComponentTo(class USceneComponent* Compo
 // Function Creative.CreativeModeBlueprintLibrary.MinAreaRectangle
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         InPoints                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 SampleSurfaceNormal            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 OutRectCenter                  (Parm, OutParm, IsPlainOldData)
-// struct FRotator                OutRectRotation                (Parm, OutParm, IsPlainOldData)
-// float                          OutRectLengthX                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutRectLengthY                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bDebugDraw                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    PolyVertIndices                (Parm, OutParm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> InPoints (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector SampleSurfaceNormal (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OutRectCenter (Parm, OutParm, IsPlainOldData)
+// struct FRotator OutRectRotation (Parm, OutParm, IsPlainOldData)
+// float OutRectLengthX (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float OutRectLengthY (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bDebugDraw (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> PolyVertIndices (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::MinAreaRectangle(class UObject* WorldContextObject, TArray<struct FVector> InPoints, const struct FVector& SampleSurfaceNormal, bool bDebugDraw, struct FRotator* OutRectRotation, float* OutRectLengthX, float* OutRectLengthY, struct FVector* OutRectCenter, TArray<int>* PolyVertIndices)
 {
@@ -4636,8 +5881,8 @@ void UCreativeModeBlueprintLibrary::MinAreaRectangle(class UObject* WorldContext
 // Function Creative.CreativeModeBlueprintLibrary.MD5HashByteArray
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          inArray                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> inArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::MD5HashByteArray(TArray<unsigned char> inArray)
 {
@@ -4663,8 +5908,8 @@ struct FString UCreativeModeBlueprintLibrary::MD5HashByteArray(TArray<unsigned c
 // Function Creative.CreativeModeBlueprintLibrary.MD5HashAnsiString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 str                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString str (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::MD5HashAnsiString(const struct FString& str)
 {
@@ -4690,9 +5935,9 @@ struct FString UCreativeModeBlueprintLibrary::MD5HashAnsiString(const struct FSt
 // Function Creative.CreativeModeBlueprintLibrary.Lz4DecompressData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          CompressedData                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          DecompressedData               (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> CompressedData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> DecompressedData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::Lz4DecompressData(TArray<unsigned char> CompressedData, TArray<unsigned char>* DecompressedData)
 {
@@ -4721,9 +5966,9 @@ bool UCreativeModeBlueprintLibrary::Lz4DecompressData(TArray<unsigned char> Comp
 // Function Creative.CreativeModeBlueprintLibrary.Lz4CompressData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          UncompressedData               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          CompressedData                 (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> UncompressedData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> CompressedData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::Lz4CompressData(TArray<unsigned char> UncompressedData, TArray<unsigned char>* CompressedData)
 {
@@ -4749,11 +5994,38 @@ bool UCreativeModeBlueprintLibrary::Lz4CompressData(TArray<unsigned char> Uncomp
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.LoadRawFileToString
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString FilePath (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<unsigned char> UCreativeModeBlueprintLibrary::LoadRawFileToString(const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.LoadRawFileToString");
+
+	UCreativeModeBlueprintLibrary_LoadRawFileToString_Params params;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.LoadFileToStringByFullPath
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 FullPathName                   (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString FullPathName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::LoadFileToStringByFullPath(const struct FString& FullPathName)
 {
@@ -4779,8 +6051,8 @@ struct FString UCreativeModeBlueprintLibrary::LoadFileToStringByFullPath(const s
 // Function Creative.CreativeModeBlueprintLibrary.LoadFileToArrayByFullPath
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 FullPathName                   (Parm, ZeroConstructor)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString FullPathName (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeBlueprintLibrary::LoadFileToArrayByFullPath(const struct FString& FullPathName)
 {
@@ -4806,8 +6078,8 @@ TArray<unsigned char> UCreativeModeBlueprintLibrary::LoadFileToArrayByFullPath(c
 // Function Creative.CreativeModeBlueprintLibrary.LoadAssetFileToString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Filename (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::LoadAssetFileToString(const struct FString& Filename)
 {
@@ -4833,11 +6105,11 @@ struct FString UCreativeModeBlueprintLibrary::LoadAssetFileToString(const struct
 // Function Creative.CreativeModeBlueprintLibrary.LineTraceTouchComponent
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               TouchPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 TouchHitLoc                    (Parm, OutParm, IsPlainOldData)
-// TArray<class AActor*>          IgnoreActors                   (ConstParm, Parm, ZeroConstructor)
-// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FVector2D TouchPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector TouchHitLoc (Parm, OutParm, IsPlainOldData)
+// TArray<class AActor*> IgnoreActors (ConstParm, Parm, ZeroConstructor)
+// class USceneComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USceneComponent* UCreativeModeBlueprintLibrary::LineTraceTouchComponent(const struct FVector2D& TouchPos, class APlayerController* PlayerController, TArray<class AActor*> IgnoreActors, struct FVector* TouchHitLoc)
 {
@@ -4868,11 +6140,11 @@ class USceneComponent* UCreativeModeBlueprintLibrary::LineTraceTouchComponent(co
 // Function Creative.CreativeModeBlueprintLibrary.LineTraceTouchAxis
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               TouchPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 TouchHitLoc                    (Parm, OutParm, IsPlainOldData)
-// TArray<class AActor*>          IgnoreActors                   (ConstParm, Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector2D TouchPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector TouchHitLoc (Parm, OutParm, IsPlainOldData)
+// TArray<class AActor*> IgnoreActors (ConstParm, Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBlueprintLibrary::LineTraceTouchAxis(const struct FVector2D& TouchPos, class APlayerController* PlayerController, TArray<class AActor*> IgnoreActors, struct FVector* TouchHitLoc)
 {
@@ -4903,11 +6175,11 @@ int UCreativeModeBlueprintLibrary::LineTraceTouchAxis(const struct FVector2D& To
 // Function Creative.CreativeModeBlueprintLibrary.LineTraceInstance
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<class AActor*>          IgnoreActors                   (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<class AActor*> IgnoreActors (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::LineTraceInstance(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<class AActor*> IgnoreActors)
 {
@@ -4933,14 +6205,39 @@ struct FString UCreativeModeBlueprintLibrary::LineTraceInstance(class UObject* W
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.IsWindows
+// (Final, Native, Static, Public)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeModeBlueprintLibrary::IsWindows()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.IsWindows");
+
+	UCreativeModeBlueprintLibrary_IsWindows_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.IsPointWithinRotatedBounds
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 BoxCenter                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          YawDegrees                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector BoxCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector BoxExtent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float YawDegrees (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsPointWithinRotatedBounds(const struct FVector& BoxCenter, const struct FVector& BoxExtent, float YawDegrees, const struct FVector& Point)
 {
@@ -4969,9 +6266,9 @@ bool UCreativeModeBlueprintLibrary::IsPointWithinRotatedBounds(const struct FVec
 // Function Creative.CreativeModeBlueprintLibrary.IsPointInVolume
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AVolume*                 Volume                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Position                       (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AVolume* Volume (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Position (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsPointInVolume(class AVolume* Volume, const struct FVector& Position)
 {
@@ -4998,8 +6295,8 @@ bool UCreativeModeBlueprintLibrary::IsPointInVolume(class AVolume* Volume, const
 // Function Creative.CreativeModeBlueprintLibrary.IsPhysicsStateCreated
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPrimitiveComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsPhysicsStateCreated(class UPrimitiveComponent* Component)
 {
@@ -5025,7 +6322,7 @@ bool UCreativeModeBlueprintLibrary::IsPhysicsStateCreated(class UPrimitiveCompon
 // Function Creative.CreativeModeBlueprintLibrary.IsPersistentModeEnabled
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsPersistentModeEnabled()
 {
@@ -5050,7 +6347,7 @@ bool UCreativeModeBlueprintLibrary::IsPersistentModeEnabled()
 // Function Creative.CreativeModeBlueprintLibrary.IsPerformanceSensitive
 // (Final, Native, Static, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsPerformanceSensitive()
 {
@@ -5075,7 +6372,7 @@ bool UCreativeModeBlueprintLibrary::IsPerformanceSensitive()
 // Function Creative.CreativeModeBlueprintLibrary.IsOfflineBuild
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsOfflineBuild()
 {
@@ -5100,7 +6397,7 @@ bool UCreativeModeBlueprintLibrary::IsOfflineBuild()
 // Function Creative.CreativeModeBlueprintLibrary.IsMCPModeEnabled
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsMCPModeEnabled()
 {
@@ -5125,7 +6422,7 @@ bool UCreativeModeBlueprintLibrary::IsMCPModeEnabled()
 // Function Creative.CreativeModeBlueprintLibrary.IsLLMEnabled
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsLLMEnabled()
 {
@@ -5150,8 +6447,8 @@ bool UCreativeModeBlueprintLibrary::IsLLMEnabled()
 // Function Creative.CreativeModeBlueprintLibrary.IsCreativeMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsCreativeMode(class UWorld* World)
 {
@@ -5177,12 +6474,12 @@ bool UCreativeModeBlueprintLibrary::IsCreativeMode(class UWorld* World)
 // Function Creative.CreativeModeBlueprintLibrary.IsBoxOverlapWithRotatedBox
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 StaticBoxCenter                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 StaticBoxExtent                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 RotatedBoxCenter               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 RotatedBoxExtent               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          RotatedBoxYaw                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector StaticBoxCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector StaticBoxExtent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector RotatedBoxCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector RotatedBoxExtent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float RotatedBoxYaw (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::IsBoxOverlapWithRotatedBox(const struct FVector& StaticBoxCenter, const struct FVector& StaticBoxExtent, const struct FVector& RotatedBoxCenter, const struct FVector& RotatedBoxExtent, float RotatedBoxYaw)
 {
@@ -5209,11 +6506,48 @@ bool UCreativeModeBlueprintLibrary::IsBoxOverlapWithRotatedBox(const struct FVec
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.IsAABBVisible
+// (Final, Native, Static, Public, HasOutParms, HasDefaults)
+// Parameters:
+// TArray<struct FBox> TargetBoxs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> InstanceIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector FarPlanePoint (Parm, IsPlainOldData)
+// struct FVector CameraForward (Parm, IsPlainOldData)
+// TArray<float> PlanesParams (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UCreativeModeBlueprintLibrary::IsAABBVisible(TArray<struct FBox> TargetBoxs, TArray<struct FString> InstanceIDs, const struct FVector& FarPlanePoint, const struct FVector& CameraForward, TArray<float>* PlanesParams)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.IsAABBVisible");
+
+	UCreativeModeBlueprintLibrary_IsAABBVisible_Params params;
+	params.TargetBoxs = TargetBoxs;
+	params.InstanceIDs = InstanceIDs;
+	params.FarPlanePoint = FarPlanePoint;
+	params.CameraForward = CameraForward;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (PlanesParams != nullptr)
+		*PlanesParams = params.PlanesParams;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.IgnoreClientMovementErrorChecksAndCorrection
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class ACharacter*              Charcter                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsIgnore                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ACharacter* Charcter (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsIgnore (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::IgnoreClientMovementErrorChecksAndCorrection(class ACharacter* Charcter, bool bIsIgnore)
 {
@@ -5238,12 +6572,12 @@ void UCreativeModeBlueprintLibrary::IgnoreClientMovementErrorChecksAndCorrection
 // Function Creative.CreativeModeBlueprintLibrary.HideEnvironmentalActorsInSceneCapture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class USceneCaptureComponent2D* SceneCapture                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class ADirectionalLight*       LightToKeep                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHideSkyBox                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHideEnvironmentLights         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHideAtmosphere                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USceneCaptureComponent2D* SceneCapture (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class ADirectionalLight* LightToKeep (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHideSkyBox (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHideEnvironmentLights (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHideAtmosphere (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBlueprintLibrary::HideEnvironmentalActorsInSceneCapture(class USceneCaptureComponent2D* SceneCapture, class ADirectionalLight* LightToKeep, bool bHideSkyBox, bool bHideEnvironmentLights, bool bHideAtmosphere)
 {
@@ -5273,11 +6607,11 @@ int UCreativeModeBlueprintLibrary::HideEnvironmentalActorsInSceneCapture(class U
 // Function Creative.CreativeModeBlueprintLibrary.GetWidgetRect
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            X1                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Y1                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            x2                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            y2                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int X1 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Y1 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int x2 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int y2 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::GetWidgetRect(class UWidget* Widget, int* X1, int* Y1, int* x2, int* y2)
 {
@@ -5310,9 +6644,9 @@ void UCreativeModeBlueprintLibrary::GetWidgetRect(class UWidget* Widget, int* X1
 // Function Creative.CreativeModeBlueprintLibrary.GetUrlValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetUrlValue(class UObject* WorldContext, const struct FString& Key)
 {
@@ -5339,8 +6673,8 @@ struct FString UCreativeModeBlueprintLibrary::GetUrlValue(class UObject* WorldCo
 // Function Creative.CreativeModeBlueprintLibrary.GetUObjAssetPath
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* Level (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetUObjAssetPath(class UObject* Level)
 {
@@ -5363,12 +6697,66 @@ struct FString UCreativeModeBlueprintLibrary::GetUObjAssetPath(class UObject* Le
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetUClassName
+// (Final, Native, Static, Public)
+// Parameters:
+// class UClass* UClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeModeBlueprintLibrary::GetUClassName(class UClass* UClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetUClassName");
+
+	UCreativeModeBlueprintLibrary_GetUClassName_Params params;
+	params.UClass = UClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.GetTexture2DFromDiskFile
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FString FilePath (Parm, ZeroConstructor)
+// class UTexture2D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UCreativeModeBlueprintLibrary::GetTexture2DFromDiskFile(const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetTexture2DFromDiskFile");
+
+	UCreativeModeBlueprintLibrary_GetTexture2DFromDiskFile_Params params;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetSyncDataIsEqual
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNetAvatarSyncData      SyncDataFirst                  (Parm, OutParm)
-// struct FNetAvatarSyncData      SyncDataSecond                 (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FNetAvatarSyncData SyncDataFirst (Parm, OutParm)
+// struct FNetAvatarSyncData SyncDataSecond (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::GetSyncDataIsEqual(struct FNetAvatarSyncData* SyncDataFirst, struct FNetAvatarSyncData* SyncDataSecond)
 {
@@ -5395,11 +6783,42 @@ bool UCreativeModeBlueprintLibrary::GetSyncDataIsEqual(struct FNetAvatarSyncData
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetStaticMeshTriangleAndDrawCallCount
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UStaticMesh* StaticMesh (Parm, ZeroConstructor, IsPlainOldData)
+// int TriangleCount (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int DrawCallCount (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::GetStaticMeshTriangleAndDrawCallCount(class UStaticMesh* StaticMesh, int* TriangleCount, int* DrawCallCount)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetStaticMeshTriangleAndDrawCallCount");
+
+	UCreativeModeBlueprintLibrary_GetStaticMeshTriangleAndDrawCallCount_Params params;
+	params.StaticMesh = StaticMesh;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (TriangleCount != nullptr)
+		*TriangleCount = params.TriangleCount;
+	if (DrawCallCount != nullptr)
+		*DrawCallCount = params.DrawCallCount;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetRTValidMaxArea
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTextureRenderTarget2D*  TextureTarget                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UTextureRenderTarget2D* TextureTarget (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBlueprintLibrary::GetRTValidMaxArea(class UTextureRenderTarget2D* TextureTarget)
 {
@@ -5425,10 +6844,10 @@ int UCreativeModeBlueprintLibrary::GetRTValidMaxArea(class UTextureRenderTarget2
 // Function Creative.CreativeModeBlueprintLibrary.GetReplicateAddDataArrayVaildNum
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FReplicateAddDataArray  ReplicateAddDataArray          (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            StartIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FReplicateAddDataArray ReplicateAddDataArray (ConstParm, Parm, OutParm, ReferenceParm)
+// int StartIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBlueprintLibrary::GetReplicateAddDataArrayVaildNum(class UObject* WorldContextObject, const struct FReplicateAddDataArray& ReplicateAddDataArray, int StartIndex)
 {
@@ -5456,9 +6875,9 @@ int UCreativeModeBlueprintLibrary::GetReplicateAddDataArrayVaildNum(class UObjec
 // Function Creative.CreativeModeBlueprintLibrary.GetRelativeTransform
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FTransform              Base                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FTransform              Other                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FTransform Base (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform Other (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UCreativeModeBlueprintLibrary::GetRelativeTransform(const struct FTransform& Base, const struct FTransform& Other)
 {
@@ -5485,7 +6904,7 @@ struct FTransform UCreativeModeBlueprintLibrary::GetRelativeTransform(const stru
 // Function Creative.CreativeModeBlueprintLibrary.GetPlatformSeconds
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeBlueprintLibrary::GetPlatformSeconds()
 {
@@ -5510,11 +6929,12 @@ float UCreativeModeBlueprintLibrary::GetPlatformSeconds()
 // Function Creative.CreativeModeBlueprintLibrary.GetObjectScreenPos
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FVector2D               Pos                            (Parm, OutParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FVector2D Pos (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UCreativeModeBlueprintLibrary::GetObjectScreenPos(class UObject* WorldContextObject, const struct FString& InstanceID, struct FVector2D* Pos)
+bool UCreativeModeBlueprintLibrary::GetObjectScreenPos(class UObject* WorldContextObject, const struct FString& InstanceID, struct FVector2D* Pos)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -5534,14 +6954,16 @@ void UCreativeModeBlueprintLibrary::GetObjectScreenPos(class UObject* WorldConte
 
 	if (Pos != nullptr)
 		*Pos = params.Pos;
+
+	return params.ReturnValue;
 }
 
 
 // Function Creative.CreativeModeBlueprintLibrary.GetObjectMap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// TMap<struct FString, class UObject*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// TMap<struct FString, class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, class UObject*> UCreativeModeBlueprintLibrary::GetObjectMap(class UObject* WorldContextObject)
 {
@@ -5564,14 +6986,41 @@ TMap<struct FString, class UObject*> UCreativeModeBlueprintLibrary::GetObjectMap
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetObjectInheritanceChain
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class UClass*> UCreativeModeBlueprintLibrary::GetObjectInheritanceChain(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetObjectInheritanceChain");
+
+	UCreativeModeBlueprintLibrary_GetObjectInheritanceChain_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetMinFovForAABB
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 CameraLocation                 (Parm, IsPlainOldData)
-// struct FRotator                CameraRotation                 (Parm, IsPlainOldData)
-// TArray<struct FVector>         AABBVertices                   (Parm, ZeroConstructor)
-// float                          AspectRatio                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector CameraLocation (Parm, IsPlainOldData)
+// struct FRotator CameraRotation (Parm, IsPlainOldData)
+// TArray<struct FVector> AABBVertices (Parm, ZeroConstructor)
+// float AspectRatio (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeBlueprintLibrary::GetMinFovForAABB(const struct FVector& CameraLocation, const struct FRotator& CameraRotation, TArray<struct FVector> AABBVertices, float AspectRatio)
 {
@@ -5600,7 +7049,7 @@ float UCreativeModeBlueprintLibrary::GetMinFovForAABB(const struct FVector& Came
 // Function Creative.CreativeModeBlueprintLibrary.GetLastInteractionElapsedTime
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeBlueprintLibrary::GetLastInteractionElapsedTime()
 {
@@ -5625,9 +7074,9 @@ float UCreativeModeBlueprintLibrary::GetLastInteractionElapsedTime()
 // Function Creative.CreativeModeBlueprintLibrary.GetInstanceSpaceBoundingBox
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeAbilitySystemComponent* Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeAbilitySystemComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::GetInstanceSpaceBoundingBox(const struct FString& InstanceID, float Yaw, class UCreativeAbilitySystemComponent* Component)
 {
@@ -5650,14 +7099,70 @@ void UCreativeModeBlueprintLibrary::GetInstanceSpaceBoundingBox(const struct FSt
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetImageSize
+// (Final, Native, Static, Public, HasOutParms, HasDefaults)
+// Parameters:
+// TArray<unsigned char> ImageBuffer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int Format (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector2D UCreativeModeBlueprintLibrary::GetImageSize(TArray<unsigned char> ImageBuffer, int Format)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetImageSize");
+
+	UCreativeModeBlueprintLibrary_GetImageSize_Params params;
+	params.ImageBuffer = ImageBuffer;
+	params.Format = Format;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.GetHashByString
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString str (Parm, ZeroConstructor)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+uint32_t UCreativeModeBlueprintLibrary::GetHashByString(const struct FString& str)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetHashByString");
+
+	UCreativeModeBlueprintLibrary_GetHashByString_Params params;
+	params.str = str;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetGroupInstanceSpaceBoundingBox
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// struct FString                 GroupID                        (Parm, ZeroConstructor)
-// TArray<struct FString>         ChildrenIds                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TMap<struct FString, struct FTransform> ChildrenTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeAbilitySystemComponent* Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString GroupID (Parm, ZeroConstructor)
+// TArray<struct FString> ChildrenIds (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, struct FTransform> ChildrenTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeAbilitySystemComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::GetGroupInstanceSpaceBoundingBox(const struct FString& GroupID, TArray<struct FString> ChildrenIds, TMap<struct FString, struct FTransform> ChildrenTransforms, float Yaw, class UCreativeAbilitySystemComponent* Component)
 {
@@ -5685,8 +7190,8 @@ void UCreativeModeBlueprintLibrary::GetGroupInstanceSpaceBoundingBox(const struc
 // Function Creative.CreativeModeBlueprintLibrary.GetGameWorld
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UCreativeModeBlueprintLibrary::GetGameWorld(class UObject* WorldContextObject)
 {
@@ -5712,8 +7217,8 @@ class UWorld* UCreativeModeBlueprintLibrary::GetGameWorld(class UObject* WorldCo
 // Function Creative.CreativeModeBlueprintLibrary.GetGameTypeAsString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// ECreativeModeGameType          GameType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// ECreativeModeGameType GameType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetGameTypeAsString(ECreativeModeGameType GameType)
 {
@@ -5739,8 +7244,8 @@ struct FString UCreativeModeBlueprintLibrary::GetGameTypeAsString(ECreativeModeG
 // Function Creative.CreativeModeBlueprintLibrary.GetDataConttentByInstanceDataContent
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// struct FCreativeInstanceDataContent InstanceDataContent            (Parm, OutParm)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FCreativeInstanceDataContent InstanceDataContent (Parm, OutParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeBlueprintLibrary::GetDataConttentByInstanceDataContent(struct FCreativeInstanceDataContent* InstanceDataContent)
 {
@@ -5768,9 +7273,9 @@ TArray<unsigned char> UCreativeModeBlueprintLibrary::GetDataConttentByInstanceDa
 // Function Creative.CreativeModeBlueprintLibrary.GetCustomEventHashString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 CustomEventName                (Parm, ZeroConstructor)
-// bool                           isSampleHash                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString CustomEventName (Parm, ZeroConstructor)
+// bool isSampleHash (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetCustomEventHashString(const struct FString& CustomEventName, bool isSampleHash)
 {
@@ -5797,7 +7302,7 @@ struct FString UCreativeModeBlueprintLibrary::GetCustomEventHashString(const str
 // Function Creative.CreativeModeBlueprintLibrary.GetCurFrameNumber
 // (Final, Native, Static, Public)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeModeBlueprintLibrary::GetCurFrameNumber()
 {
@@ -5822,7 +7327,7 @@ uint32_t UCreativeModeBlueprintLibrary::GetCurFrameNumber()
 // Function Creative.CreativeModeBlueprintLibrary.GetCurFrameCounter
 // (Final, Native, Static, Public)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeModeBlueprintLibrary::GetCurFrameCounter()
 {
@@ -5847,12 +7352,12 @@ uint32_t UCreativeModeBlueprintLibrary::GetCurFrameCounter()
 // Function Creative.CreativeModeBlueprintLibrary.GetCubeTouchAxisFace
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector2D               ScreenPosition                 (Parm, OutParm, IsPlainOldData)
-// float                          Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OffsetLocation                 (Parm, OutParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector2D ScreenPosition (Parm, OutParm, IsPlainOldData)
+// float Width (Parm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OffsetLocation (Parm, OutParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeBlueprintLibrary::GetCubeTouchAxisFace(class UWidget* Widget, float Width, float Distance, struct FVector2D* ScreenPosition, struct FVector* OffsetLocation)
 {
@@ -5885,8 +7390,8 @@ int UCreativeModeBlueprintLibrary::GetCubeTouchAxisFace(class UWidget* Widget, f
 // Function Creative.CreativeModeBlueprintLibrary.GetCopiedAvatarSyncData
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FNetAvatarSyncData      SyncData                       (Parm)
-// struct FNetAvatarSyncData      ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FNetAvatarSyncData SyncData (Parm)
+// struct FNetAvatarSyncData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FNetAvatarSyncData UCreativeModeBlueprintLibrary::GetCopiedAvatarSyncData(const struct FNetAvatarSyncData& SyncData)
 {
@@ -5912,10 +7417,10 @@ struct FNetAvatarSyncData UCreativeModeBlueprintLibrary::GetCopiedAvatarSyncData
 // Function Creative.CreativeModeBlueprintLibrary.GetContentPatchData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          OldData                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          DiffData                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          outNewData                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> OldData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> DiffData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> outNewData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::GetContentPatchData(TArray<unsigned char> OldData, TArray<unsigned char> DiffData, TArray<unsigned char>* outNewData)
 {
@@ -5945,10 +7450,10 @@ bool UCreativeModeBlueprintLibrary::GetContentPatchData(TArray<unsigned char> Ol
 // Function Creative.CreativeModeBlueprintLibrary.GetContentDiffData
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          OldData                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          NewData                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          outDiffData                    (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> OldData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> NewData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> outDiffData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::GetContentDiffData(TArray<unsigned char> OldData, TArray<unsigned char> NewData, TArray<unsigned char>* outDiffData)
 {
@@ -5978,8 +7483,8 @@ bool UCreativeModeBlueprintLibrary::GetContentDiffData(TArray<unsigned char> Old
 // Function Creative.CreativeModeBlueprintLibrary.GetCommandLineValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetCommandLineValue(const struct FString& Key)
 {
@@ -6002,12 +7507,39 @@ struct FString UCreativeModeBlueprintLibrary::GetCommandLineValue(const struct F
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetClassInheritanceChain
+// (Final, Native, Static, Public)
+// Parameters:
+// class UClass* UClass (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class UClass*> UCreativeModeBlueprintLibrary::GetClassInheritanceChain(class UClass* UClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetClassInheritanceChain");
+
+	UCreativeModeBlueprintLibrary_GetClassInheritanceChain_Params params;
+	params.UClass = UClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetCharacterSocketPos
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class ACharacter*              Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class ACharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SocketName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativeModeBlueprintLibrary::GetCharacterSocketPos(class ACharacter* Character, const struct FName& SocketName)
 {
@@ -6031,14 +7563,41 @@ struct FVector UCreativeModeBlueprintLibrary::GetCharacterSocketPos(class AChara
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetCameraFrustumPlane
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector4> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FVector4> UCreativeModeBlueprintLibrary::GetCameraFrustumPlane(class UObject* WorldContext)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetCameraFrustumPlane");
+
+	UCreativeModeBlueprintLibrary_GetCameraFrustumPlane_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetBoundingBoxOfInstances
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         Ids                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Center                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, OutParm, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> Ids (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (Parm, OutParm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, OutParm, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::GetBoundingBoxOfInstances(class UObject* WorldContext, TArray<struct FString> Ids, float Yaw, struct FVector* Center, struct FVector* BoxExtent)
 {
@@ -6069,10 +7628,10 @@ void UCreativeModeBlueprintLibrary::GetBoundingBoxOfInstances(class UObject* Wor
 // Function Creative.CreativeModeBlueprintLibrary.GetBoundingBoxOfActors
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// TArray<class AActor*>          Actors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Center                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, OutParm, IsPlainOldData)
+// TArray<class AActor*> Actors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (Parm, OutParm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, OutParm, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::GetBoundingBoxOfActors(TArray<class AActor*> Actors, float Yaw, struct FVector* Center, struct FVector* BoxExtent)
 {
@@ -6102,8 +7661,8 @@ void UCreativeModeBlueprintLibrary::GetBoundingBoxOfActors(TArray<class AActor*>
 // Function Creative.CreativeModeBlueprintLibrary.GetBigUObject
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            MaxN                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int MaxN (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetBigUObject(int MaxN)
 {
@@ -6129,8 +7688,8 @@ struct FString UCreativeModeBlueprintLibrary::GetBigUObject(int MaxN)
 // Function Creative.CreativeModeBlueprintLibrary.GetBigLuaValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GetBigLuaValue(class UObject* WorldContext)
 {
@@ -6156,12 +7715,12 @@ struct FString UCreativeModeBlueprintLibrary::GetBigLuaValue(class UObject* Worl
 // Function Creative.CreativeModeBlueprintLibrary.GetAllInstanceInScreenBox
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector2D               End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            CheckDistance                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            CountLimit                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int CheckDistance (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int CountLimit (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeModeBlueprintLibrary::GetAllInstanceInScreenBox(class UObject* WorldContext, const struct FVector2D& Start, const struct FVector2D& End, int CheckDistance, int CountLimit)
 {
@@ -6191,11 +7750,11 @@ TArray<struct FString> UCreativeModeBlueprintLibrary::GetAllInstanceInScreenBox(
 // Function Creative.CreativeModeBlueprintLibrary.GetAllInstanceInBox
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 Extent                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rotator                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Extent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Rotator (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeModeBlueprintLibrary::GetAllInstanceInBox(class UObject* WorldContext, const struct FVector& Center, const struct FVector& Extent, const struct FRotator& Rotator)
 {
@@ -6221,14 +7780,92 @@ TArray<struct FString> UCreativeModeBlueprintLibrary::GetAllInstanceInBox(class 
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.GetAllFilesInDir
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString Dir (Parm, ZeroConstructor)
+// struct FString Pattern (Parm, ZeroConstructor)
+// bool bRelative (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UCreativeModeBlueprintLibrary::GetAllFilesInDir(const struct FString& Dir, const struct FString& Pattern, bool bRelative)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetAllFilesInDir");
+
+	UCreativeModeBlueprintLibrary_GetAllFilesInDir_Params params;
+	params.Dir = Dir;
+	params.Pattern = Pattern;
+	params.bRelative = bRelative;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.GetActorsInCameraFrustumByLayer
+// (Final, Native, Static, Public, HasOutParms, HasDefaults)
+// Parameters:
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Origin (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator CameraRot (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float MaxDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float AngleWidth (Parm, ZeroConstructor, IsPlainOldData)
+// float AngleHeight (Parm, ZeroConstructor, IsPlainOldData)
+// int NumLayers (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<TEnumAsByte<enum EObjectTypeQuery>> ObjectTypes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bDrawDebug (Parm, ZeroConstructor, IsPlainOldData)
+// struct FColor DebugColor (Parm, IsPlainOldData)
+// float DebugLifeTime (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOverlapResult> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FOverlapResult> UCreativeModeBlueprintLibrary::GetActorsInCameraFrustumByLayer(class UWorld* World, const struct FVector& Origin, const struct FRotator& CameraRot, float MaxDistance, float AngleWidth, float AngleHeight, int NumLayers, TArray<TEnumAsByte<enum EObjectTypeQuery>> ObjectTypes, bool bDrawDebug, const struct FColor& DebugColor, float DebugLifeTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.GetActorsInCameraFrustumByLayer");
+
+	UCreativeModeBlueprintLibrary_GetActorsInCameraFrustumByLayer_Params params;
+	params.World = World;
+	params.Origin = Origin;
+	params.CameraRot = CameraRot;
+	params.MaxDistance = MaxDistance;
+	params.AngleWidth = AngleWidth;
+	params.AngleHeight = AngleHeight;
+	params.NumLayers = NumLayers;
+	params.ObjectTypes = ObjectTypes;
+	params.bDrawDebug = bDrawDebug;
+	params.DebugColor = DebugColor;
+	params.DebugLifeTime = DebugLifeTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.GetActorMeshBoundsByTag
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Origin                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, OutParm, IsPlainOldData)
-// struct FString                 IgnoreTag                      (Parm, ZeroConstructor)
-// struct FString                 IncludeTag                     (Parm, ZeroConstructor)
+// class AActor* Actor (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Origin (Parm, OutParm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, OutParm, IsPlainOldData)
+// struct FString IgnoreTag (Parm, ZeroConstructor)
+// struct FString IncludeTag (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::GetActorMeshBoundsByTag(class AActor* Actor, const struct FString& IgnoreTag, const struct FString& IncludeTag, struct FVector* Origin, struct FVector* BoxExtent)
 {
@@ -6259,7 +7896,7 @@ void UCreativeModeBlueprintLibrary::GetActorMeshBoundsByTag(class AActor* Actor,
 // Function Creative.CreativeModeBlueprintLibrary.GenerateUIntGuid
 // (Final, Native, Static, Public)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeModeBlueprintLibrary::GenerateUIntGuid()
 {
@@ -6284,8 +7921,8 @@ uint32_t UCreativeModeBlueprintLibrary::GenerateUIntGuid()
 // Function Creative.CreativeModeBlueprintLibrary.GenerateMemoryArray
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            SizeInMB                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int SizeInMB (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UCreativeModeBlueprintLibrary::GenerateMemoryArray(int SizeInMB)
 {
@@ -6311,7 +7948,7 @@ TArray<int> UCreativeModeBlueprintLibrary::GenerateMemoryArray(int SizeInMB)
 // Function Creative.CreativeModeBlueprintLibrary.GenerateGuid
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::GenerateGuid()
 {
@@ -6336,9 +7973,9 @@ struct FString UCreativeModeBlueprintLibrary::GenerateGuid()
 // Function Creative.CreativeModeBlueprintLibrary.FindAttachedActorByName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class AActor*                  ParentActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 PartialName                    (Parm, ZeroConstructor)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ParentActor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PartialName (Parm, ZeroConstructor)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeModeBlueprintLibrary::FindAttachedActorByName(class AActor* ParentActor, const struct FString& PartialName)
 {
@@ -6365,9 +8002,9 @@ class AActor* UCreativeModeBlueprintLibrary::FindAttachedActorByName(class AActo
 // Function Creative.CreativeModeBlueprintLibrary.FindActorByName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 PartialName                    (Parm, ZeroConstructor)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PartialName (Parm, ZeroConstructor)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeModeBlueprintLibrary::FindActorByName(class UWorld* World, const struct FString& PartialName)
 {
@@ -6394,8 +8031,8 @@ class AActor* UCreativeModeBlueprintLibrary::FindActorByName(class UWorld* World
 // Function Creative.CreativeModeBlueprintLibrary.EncryptToBase64
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          inArray                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> inArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::EncryptToBase64(TArray<unsigned char> inArray)
 {
@@ -6421,8 +8058,8 @@ struct FString UCreativeModeBlueprintLibrary::EncryptToBase64(TArray<unsigned ch
 // Function Creative.CreativeModeBlueprintLibrary.EditorMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Message                        (Parm, ZeroConstructor)
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Message (Parm, ZeroConstructor)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::EditorMessage(const struct FString& Message, float Time)
 {
@@ -6447,8 +8084,8 @@ void UCreativeModeBlueprintLibrary::EditorMessage(const struct FString& Message,
 // Function Creative.CreativeModeBlueprintLibrary.DumpCurrentWorldObjects
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Suffix                         (Parm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Suffix (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::DumpCurrentWorldObjects(class UObject* WorldContextObject, const struct FString& Suffix)
 {
@@ -6473,8 +8110,8 @@ void UCreativeModeBlueprintLibrary::DumpCurrentWorldObjects(class UObject* World
 // Function Creative.CreativeModeBlueprintLibrary.DumpActorNetReplicate
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::DumpActorNetReplicate(class UObject* WorldContext, const struct FString& Name)
 {
@@ -6499,13 +8136,13 @@ void UCreativeModeBlueprintLibrary::DumpActorNetReplicate(class UObject* WorldCo
 // Function Creative.CreativeModeBlueprintLibrary.DrawLine
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPaintContext           InContext                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector2D               Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector2D               End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FLinearColor            LineColor                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            LayerOffset                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LineThickness                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaintContext InContext (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector2D Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FLinearColor LineColor (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int LayerOffset (Parm, ZeroConstructor, IsPlainOldData)
+// float LineThickness (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAntiAlias (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::DrawLine(const struct FPaintContext& InContext, const struct FVector2D& Start, const struct FVector2D& End, const struct FLinearColor& LineColor, int LayerOffset, float LineThickness, bool bAntiAlias)
 {
@@ -6535,16 +8172,16 @@ void UCreativeModeBlueprintLibrary::DrawLine(const struct FPaintContext& InConte
 // Function Creative.CreativeModeBlueprintLibrary.DrawGrids
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPaintContext           InContext                      (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          CellSize                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CellCountX                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            CellCountY                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosOffsetX                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosOffsetY                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            LineColor                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          LineThickness                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAntiAlias                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerOffset                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaintContext InContext (ConstParm, Parm, OutParm, ReferenceParm)
+// float CellSize (Parm, ZeroConstructor, IsPlainOldData)
+// int CellCountX (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int CellCountY (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float PosOffsetX (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float PosOffsetY (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor LineColor (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float LineThickness (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAntiAlias (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerOffset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::DrawGrids(const struct FPaintContext& InContext, float CellSize, int CellCountX, int CellCountY, float PosOffsetX, float PosOffsetY, const struct FLinearColor& LineColor, float LineThickness, bool bAntiAlias, int LayerOffset)
 {
@@ -6577,14 +8214,14 @@ void UCreativeModeBlueprintLibrary::DrawGrids(const struct FPaintContext& InCont
 // Function Creative.CreativeModeBlueprintLibrary.DrawGridCell
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPaintContext           InContext                      (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          CellSize                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CellIndexX                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            CellIndexY                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosOffsetX                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosOffsetY                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            LineColor                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            LayerOffset                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaintContext InContext (ConstParm, Parm, OutParm, ReferenceParm)
+// float CellSize (Parm, ZeroConstructor, IsPlainOldData)
+// int CellIndexX (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int CellIndexY (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float PosOffsetX (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float PosOffsetY (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor LineColor (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int LayerOffset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::DrawGridCell(const struct FPaintContext& InContext, float CellSize, int CellIndexX, int CellIndexY, float PosOffsetX, float PosOffsetY, const struct FLinearColor& LineColor, int LayerOffset)
 {
@@ -6615,7 +8252,7 @@ void UCreativeModeBlueprintLibrary::DrawGridCell(const struct FPaintContext& InC
 // Function Creative.CreativeModeBlueprintLibrary.DestroyUObject
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::DestroyUObject(class UObject* Object)
 {
@@ -6639,9 +8276,9 @@ void UCreativeModeBlueprintLibrary::DestroyUObject(class UObject* Object)
 // Function Creative.CreativeModeBlueprintLibrary.DestroyInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeBlueprintLibrary::DestroyInstance(class UObject* WorldContextObject, const struct FString& InstanceID)
 {
@@ -6668,8 +8305,8 @@ struct FString UCreativeModeBlueprintLibrary::DestroyInstance(class UObject* Wor
 // Function Creative.CreativeModeBlueprintLibrary.DecryptFromBase64
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 inString                       (Parm, ZeroConstructor)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString inString (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeBlueprintLibrary::DecryptFromBase64(const struct FString& inString)
 {
@@ -6692,11 +8329,45 @@ TArray<unsigned char> UCreativeModeBlueprintLibrary::DecryptFromBase64(const str
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.DarwCameraFrustumDebugLine
+// (Final, Native, Static, Public, HasOutParms, HasDefaults)
+// Parameters:
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector FarPlanePoint (Parm, IsPlainOldData)
+// struct FVector CameraForward (Parm, IsPlainOldData)
+// TArray<float> PlanesParams (Parm, OutParm, ZeroConstructor)
+// float Duration (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::DarwCameraFrustumDebugLine(class UObject* WorldContext, const struct FVector& FarPlanePoint, const struct FVector& CameraForward, float Duration, TArray<float>* PlanesParams)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.DarwCameraFrustumDebugLine");
+
+	UCreativeModeBlueprintLibrary_DarwCameraFrustumDebugLine_Params params;
+	params.WorldContext = WorldContext;
+	params.FarPlanePoint = FarPlanePoint;
+	params.CameraForward = CameraForward;
+	params.Duration = Duration;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (PlanesParams != nullptr)
+		*PlanesParams = params.PlanesParams;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.CreativeInstanceDataContent
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          DataContent                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FCreativeInstanceDataContent ReturnValue                    (Parm, OutParm, ReturnParm)
+// TArray<unsigned char> DataContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FCreativeInstanceDataContent ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCreativeInstanceDataContent UCreativeModeBlueprintLibrary::CreativeInstanceDataContent(TArray<unsigned char> DataContent)
 {
@@ -6719,18 +8390,49 @@ struct FCreativeInstanceDataContent UCreativeModeBlueprintLibrary::CreativeInsta
 }
 
 
-// Function Creative.CreativeModeBlueprintLibrary.CreateCreativeMovingAudio
+// Function Creative.CreativeModeBlueprintLibrary.CreateRGBATexture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Sequence                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowMark                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Duration                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FCreativeMovingAudio    ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Width (Parm, ZeroConstructor, IsPlainOldData)
+// int Height (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSRGB (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FCreativeMovingAudio UCreativeModeBlueprintLibrary::CreateCreativeMovingAudio(class AActor* Actor, int Sequence, int ConfigId, bool bShowMark, int Duration, float Volume)
+class UTexture2D* UCreativeModeBlueprintLibrary::CreateRGBATexture(int Width, int Height, bool bSRGB)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.CreateRGBATexture");
+
+	UCreativeModeBlueprintLibrary_CreateRGBATexture_Params params;
+	params.Width = Width;
+	params.Height = Height;
+	params.bSRGB = bSRGB;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.CreateCreativeMovingAudio
+// (Final, Native, Static, Public)
+// Parameters:
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// int Sequence (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowMark (Parm, ZeroConstructor, IsPlainOldData)
+// int Duration (Parm, ZeroConstructor, IsPlainOldData)
+// float Volume (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeMovingAudio ReturnValue (Parm, OutParm, ReturnParm)
+
+struct FCreativeMovingAudio UCreativeModeBlueprintLibrary::CreateCreativeMovingAudio(class AActor* Actor, int Sequence, uint64_t ConfigId, bool bShowMark, int Duration, float Volume)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -6759,8 +8461,8 @@ struct FCreativeMovingAudio UCreativeModeBlueprintLibrary::CreateCreativeMovingA
 // Function Creative.CreativeModeBlueprintLibrary.ConvertForwardToRotator
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Forward                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector Forward (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UCreativeModeBlueprintLibrary::ConvertForwardToRotator(const struct FVector& Forward)
 {
@@ -6783,13 +8485,93 @@ struct FRotator UCreativeModeBlueprintLibrary::ConvertForwardToRotator(const str
 }
 
 
+// Function Creative.CreativeModeBlueprintLibrary.CombineRGBATexture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D* DstTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* RGSourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* BSourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* ASourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRGSrgb (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBSrgb (Parm, ZeroConstructor, IsPlainOldData)
+// bool bASrgb (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char DefaultR (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char DefaultG (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char DefaultB (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char DefaultA (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::CombineRGBATexture(class UTexture2D* DstTexture, class UTexture2D* RGSourceTexture, class UTexture2D* BSourceTexture, class UTexture2D* ASourceTexture, bool bRGSrgb, bool bBSrgb, bool bASrgb, unsigned char DefaultR, unsigned char DefaultG, unsigned char DefaultB, unsigned char DefaultA)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.CombineRGBATexture");
+
+	UCreativeModeBlueprintLibrary_CombineRGBATexture_Params params;
+	params.DstTexture = DstTexture;
+	params.RGSourceTexture = RGSourceTexture;
+	params.BSourceTexture = BSourceTexture;
+	params.ASourceTexture = ASourceTexture;
+	params.bRGSrgb = bRGSrgb;
+	params.bBSrgb = bBSrgb;
+	params.bASrgb = bASrgb;
+	params.DefaultR = DefaultR;
+	params.DefaultG = DefaultG;
+	params.DefaultB = DefaultB;
+	params.DefaultA = DefaultA;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeModeBlueprintLibrary.CombineChannelsToRGBATexture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UTexture2D* DstTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* RGSourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* BSourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* ASourceTexture (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRGSrgb (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBSrgb (Parm, ZeroConstructor, IsPlainOldData)
+// bool bASrgb (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeModeBlueprintLibrary::CombineChannelsToRGBATexture(class UTexture2D* DstTexture, class UTexture2D* RGSourceTexture, class UTexture2D* BSourceTexture, class UTexture2D* ASourceTexture, bool bRGSrgb, bool bBSrgb, bool bASrgb)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeBlueprintLibrary.CombineChannelsToRGBATexture");
+
+	UCreativeModeBlueprintLibrary_CombineChannelsToRGBATexture_Params params;
+	params.DstTexture = DstTexture;
+	params.RGSourceTexture = RGSourceTexture;
+	params.BSourceTexture = BSourceTexture;
+	params.ASourceTexture = ASourceTexture;
+	params.bRGSrgb = bRGSrgb;
+	params.bBSrgb = bBSrgb;
+	params.bASrgb = bASrgb;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeBlueprintLibrary.ClearGrassByMaskTexture
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UTexture2D*              MaskTexture                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               WorldStart                     (Parm, IsPlainOldData)
-// struct FVector2D               WorldEnd                       (Parm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* MaskTexture (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D WorldStart (Parm, IsPlainOldData)
+// struct FVector2D WorldEnd (Parm, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::ClearGrassByMaskTexture(class UObject* WorldContextObject, class UTexture2D* MaskTexture, const struct FVector2D& WorldStart, const struct FVector2D& WorldEnd)
 {
@@ -6816,9 +8598,9 @@ void UCreativeModeBlueprintLibrary::ClearGrassByMaskTexture(class UObject* World
 // Function Creative.CreativeModeBlueprintLibrary.CheckWidgetsOverlap
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget1                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget*                 Widget2                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* Widget1 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* Widget2 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::CheckWidgetsOverlap(class UWidget* Widget1, class UWidget* Widget2)
 {
@@ -6845,17 +8627,17 @@ bool UCreativeModeBlueprintLibrary::CheckWidgetsOverlap(class UWidget* Widget1, 
 // Function Creative.CreativeModeBlueprintLibrary.CharacterPlayCreativeDynamicMontage
 // (Final, Native, Static, Public)
 // Parameters:
-// class ASTExtraCharacter*       CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimSequenceBase*       Asset                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendInTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendOutTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPlayRate                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsLoop                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InTimeToStartMontageAt         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotNodeName                   (Parm, ZeroConstructor, IsPlainOldData)
+// class ACharacter* CharacterOwner (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimSequenceBase* Asset (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendInTime (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendOutTime (Parm, ZeroConstructor, IsPlainOldData)
+// float InPlayRate (Parm, ZeroConstructor, IsPlainOldData)
+// int LoopCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsLoop (Parm, ZeroConstructor, IsPlainOldData)
+// float InTimeToStartMontageAt (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SlotNodeName (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCreativeModeBlueprintLibrary::CharacterPlayCreativeDynamicMontage(class ASTExtraCharacter* CharacterOwner, class UAnimSequenceBase* Asset, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, bool bIsLoop, float InTimeToStartMontageAt, const struct FName& SlotNodeName)
+void UCreativeModeBlueprintLibrary::CharacterPlayCreativeDynamicMontage(class ACharacter* CharacterOwner, class UAnimSequenceBase* Asset, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, bool bIsLoop, float InTimeToStartMontageAt, const struct FName& SlotNodeName)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -6885,13 +8667,13 @@ void UCreativeModeBlueprintLibrary::CharacterPlayCreativeDynamicMontage(class AS
 // Function Creative.CreativeModeBlueprintLibrary.CaptureWidget
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  WidgetClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Path                           (Parm, OutParm, ZeroConstructor)
-// int                            X                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Y                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           FlipY                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* WidgetClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, OutParm, ZeroConstructor)
+// int X (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Y (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool FlipY (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::CaptureWidget(class UObject* WorldContext, class UClass* WidgetClass, struct FString* Path, int* X, int* Y, bool* FlipY)
 {
@@ -6927,14 +8709,14 @@ bool UCreativeModeBlueprintLibrary::CaptureWidget(class UObject* WorldContext, c
 // Function Creative.CreativeModeBlueprintLibrary.BoxOverlapComponentsByChannel
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 BoxPos                         (Parm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, IsPlainOldData)
-// TArray<TEnumAsByte<enum ECollisionChannel>> Channels                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  ComponentClassFilter           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UPrimitiveComponent*> OutComponents                  (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BoxPos (Parm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, IsPlainOldData)
+// TArray<TEnumAsByte<enum ECollisionChannel>> Channels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* ComponentClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UPrimitiveComponent*> OutComponents (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::BoxOverlapComponentsByChannel(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<TEnumAsByte<enum ECollisionChannel>> Channels, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
@@ -6968,14 +8750,14 @@ bool UCreativeModeBlueprintLibrary::BoxOverlapComponentsByChannel(class UObject*
 // Function Creative.CreativeModeBlueprintLibrary.BoxOverlapComponents
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 BoxPos                         (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, IsPlainOldData)
-// TArray<int>                    ObjectTypes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  CompClassFilter                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UPrimitiveComponent*> OutComps                       (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BoxPos (ConstParm, Parm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, IsPlainOldData)
+// TArray<int> ObjectTypes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* CompClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UPrimitiveComponent*> OutComps (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::BoxOverlapComponents(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<int> ObjectTypes, class UClass* CompClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComps)
 {
@@ -7009,14 +8791,14 @@ bool UCreativeModeBlueprintLibrary::BoxOverlapComponents(class UObject* WorldCon
 // Function Creative.CreativeModeBlueprintLibrary.BoxOverlapActorsByChannel
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 BoxPos                         (Parm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, IsPlainOldData)
-// TArray<TEnumAsByte<enum ECollisionChannel>> Channels                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  ActorClassFilter               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BoxPos (Parm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, IsPlainOldData)
+// TArray<TEnumAsByte<enum ECollisionChannel>> Channels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* ActorClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::BoxOverlapActorsByChannel(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<TEnumAsByte<enum ECollisionChannel>> Channels, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
@@ -7050,14 +8832,14 @@ bool UCreativeModeBlueprintLibrary::BoxOverlapActorsByChannel(class UObject* Wor
 // Function Creative.CreativeModeBlueprintLibrary.BoxOverlapActors
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 BoxPos                         (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (Parm, IsPlainOldData)
-// TArray<int>                    ObjectTypes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UClass*                  ActorClassFilter               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BoxPos (ConstParm, Parm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, IsPlainOldData)
+// TArray<int> ObjectTypes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UClass* ActorClassFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::BoxOverlapActors(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<int> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
@@ -7091,19 +8873,19 @@ bool UCreativeModeBlueprintLibrary::BoxOverlapActors(class UObject* WorldContext
 // Function Creative.CreativeModeBlueprintLibrary.BlueprintSuggestProjectileVelocity
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 TossVelocity                   (Parm, OutParm, IsPlainOldData)
-// struct FVector                 StartLocation                  (Parm, IsPlainOldData)
-// struct FVector                 EndLocation                    (Parm, IsPlainOldData)
-// float                          LaunchSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OverrideGravityZ               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ESuggestProjVelocityTraceOption> TraceOption                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CollisionRadius                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFavorHighArc                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDrawDebug                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Tolerance                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector TossVelocity (Parm, OutParm, IsPlainOldData)
+// struct FVector StartLocation (Parm, IsPlainOldData)
+// struct FVector EndLocation (Parm, IsPlainOldData)
+// float LaunchSpeed (Parm, ZeroConstructor, IsPlainOldData)
+// float OverrideGravityZ (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESuggestProjVelocityTraceOption> TraceOption (Parm, ZeroConstructor, IsPlainOldData)
+// float CollisionRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFavorHighArc (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDrawDebug (Parm, ZeroConstructor, IsPlainOldData)
+// float Tolerance (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::BlueprintSuggestProjectileVelocity(class UObject* WorldContextObject, TArray<class AActor*> ActorsToIgnore, const struct FVector& StartLocation, const struct FVector& EndLocation, float LaunchSpeed, float OverrideGravityZ, TEnumAsByte<enum ESuggestProjVelocityTraceOption> TraceOption, float CollisionRadius, bool bFavorHighArc, bool bDrawDebug, float Tolerance, struct FVector* TossVelocity)
 {
@@ -7142,13 +8924,13 @@ bool UCreativeModeBlueprintLibrary::BlueprintSuggestProjectileVelocity(class UOb
 // Function Creative.CreativeModeBlueprintLibrary.BeginDeferredActorSpawnWithName
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ActorClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              SpawnTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform SpawnTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FName Name (Parm, ZeroConstructor, IsPlainOldData)
+// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Owner (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeModeBlueprintLibrary::BeginDeferredActorSpawnWithName(class UObject* WorldContextObject, class UClass* ActorClass, const struct FTransform& SpawnTransform, const struct FName& Name, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride, class AActor* Owner)
 {
@@ -7179,9 +8961,9 @@ class AActor* UCreativeModeBlueprintLibrary::BeginDeferredActorSpawnWithName(cla
 // Function Creative.CreativeModeBlueprintLibrary.AttachOutlineBox
 // (Final, Native, Static, Public)
 // Parameters:
-// class AActor*                  AttachedActor                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OutlineBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* AttachedActor (Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OutlineBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::AttachOutlineBox(class AActor* AttachedActor, float Yaw, class AActor* OutlineBox)
 {
@@ -7207,10 +8989,10 @@ void UCreativeModeBlueprintLibrary::AttachOutlineBox(class AActor* AttachedActor
 // Function Creative.CreativeModeBlueprintLibrary.AttachInstanceOutlineBox
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 AttachedId                     (Parm, ZeroConstructor)
-// bool                           bGridEnable                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OutlineBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttachedId (Parm, ZeroConstructor)
+// bool bGridEnable (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OutlineBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::AttachInstanceOutlineBox(const struct FString& AttachedId, bool bGridEnable, float Yaw, class AActor* OutlineBox)
 {
@@ -7237,10 +9019,10 @@ void UCreativeModeBlueprintLibrary::AttachInstanceOutlineBox(const struct FStrin
 // Function Creative.CreativeModeBlueprintLibrary.AttachGroupOutlineBox
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// class AActor*                  GroupObject                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          AttachedActors                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OutlineBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* GroupObject (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> AttachedActors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OutlineBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::AttachGroupOutlineBox(class AActor* GroupObject, TArray<class AActor*> AttachedActors, float Yaw, class AActor* OutlineBox)
 {
@@ -7267,12 +9049,12 @@ void UCreativeModeBlueprintLibrary::AttachGroupOutlineBox(class AActor* GroupObj
 // Function Creative.CreativeModeBlueprintLibrary.AttachGroupInstanceOutlineBox
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// struct FString                 GroupID                        (Parm, ZeroConstructor)
-// TArray<struct FString>         ChildrenIds                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TMap<struct FString, struct FTransform> ChildrenTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bGridEnable                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Yaw                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OutlineBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString GroupID (Parm, ZeroConstructor)
+// TArray<struct FString> ChildrenIds (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, struct FTransform> ChildrenTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bGridEnable (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OutlineBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeBlueprintLibrary::AttachGroupInstanceOutlineBox(const struct FString& GroupID, TArray<struct FString> ChildrenIds, TMap<struct FString, struct FTransform> ChildrenTransforms, bool bGridEnable, float Yaw, class AActor* OutlineBox)
 {
@@ -7301,14 +9083,14 @@ void UCreativeModeBlueprintLibrary::AttachGroupInstanceOutlineBox(const struct F
 // Function Creative.CreativeModeBlueprintLibrary.AimSceneCaptureAtPawnSocket
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         SceneCapture                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class APawn*                   TargetPawn                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Offset                         (Parm, IsPlainOldData)
-// float                          PawnHeight                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USceneComponent* SceneCapture (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class APawn* TargetPawn (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SocketName (Parm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+// float FOV (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Offset (Parm, IsPlainOldData)
+// float PawnHeight (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeBlueprintLibrary::AimSceneCaptureAtPawnSocket(class USceneComponent* SceneCapture, class APawn* TargetPawn, const struct FName& SocketName, float Distance, float FOV, const struct FVector& Offset, float PawnHeight)
 {
@@ -7340,7 +9122,7 @@ bool UCreativeModeBlueprintLibrary::AimSceneCaptureAtPawnSocket(class USceneComp
 // Function Creative.CreativeModeBlueprintLibrary.AddOnScreenDebugMessage
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Msg                            (ConstParm, Parm, ZeroConstructor)
+// struct FString Msg (ConstParm, Parm, ZeroConstructor)
 
 void UCreativeModeBlueprintLibrary::AddOnScreenDebugMessage(const struct FString& Msg)
 {
@@ -7385,7 +9167,7 @@ void ACreativeModeLuaSpectatorPawn::UnRegistLuaTick()
 // Function Creative.CreativeModeLuaSpectatorPawn.SetController
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       InController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeLuaSpectatorPawn::SetController(class APlayerController* InController)
 {
@@ -7430,7 +9212,7 @@ void ACreativeModeLuaSpectatorPawn::SetAbilitySystemComponentAvatar()
 // Function Creative.CreativeModeLuaSpectatorPawn.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeLuaSpectatorPawn::RegistLuaTick(float TickInterval)
 {
@@ -7454,7 +9236,7 @@ void ACreativeModeLuaSpectatorPawn::RegistLuaTick(float TickInterval)
 // Function Creative.CreativeModeLuaSpectatorPawn.MoveRight
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeLuaSpectatorPawn::MoveRight(float Val)
 {
@@ -7478,7 +9260,7 @@ void ACreativeModeLuaSpectatorPawn::MoveRight(float Val)
 // Function Creative.CreativeModeLuaSpectatorPawn.MoveForward
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeLuaSpectatorPawn::MoveForward(float Val)
 {
@@ -7502,7 +9284,7 @@ void ACreativeModeLuaSpectatorPawn::MoveForward(float Val)
 // Function Creative.CreativeModeLuaSpectatorPawn.GetActiveSpringArm
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class USpringArmComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USpringArmComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USpringArmComponent* ACreativeModeLuaSpectatorPawn::GetActiveSpringArm()
 {
@@ -7569,8 +9351,8 @@ void ACreativeCameraDeviceActor::UpdateFollowPos()
 // Function Creative.CreativeCameraDeviceActor.RotCamera
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (Parm, ZeroConstructor, IsPlainOldData)
+// float Pitch (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::RotCamera(float Yaw, float Pitch)
 {
@@ -7595,7 +9377,7 @@ void ACreativeCameraDeviceActor::RotCamera(float Yaw, float Pitch)
 // Function Creative.CreativeCameraDeviceActor.OnEndViewTarget
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::OnEndViewTarget(class APlayerController* PC)
 {
@@ -7619,7 +9401,7 @@ void ACreativeCameraDeviceActor::OnEndViewTarget(class APlayerController* PC)
 // Function Creative.CreativeCameraDeviceActor.OnBecomeViewTarget
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::OnBecomeViewTarget(class APlayerController* PC)
 {
@@ -7643,7 +9425,7 @@ void ACreativeCameraDeviceActor::OnBecomeViewTarget(class APlayerController* PC)
 // Function Creative.CreativeCameraDeviceActor.MoveUp
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::MoveUp(float Val)
 {
@@ -7667,7 +9449,7 @@ void ACreativeCameraDeviceActor::MoveUp(float Val)
 // Function Creative.CreativeCameraDeviceActor.MoveRight
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::MoveRight(float Val)
 {
@@ -7691,7 +9473,7 @@ void ACreativeCameraDeviceActor::MoveRight(float Val)
 // Function Creative.CreativeCameraDeviceActor.MoveForward
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::MoveForward(float Val)
 {
@@ -7715,7 +9497,7 @@ void ACreativeCameraDeviceActor::MoveForward(float Val)
 // Function Creative.CreativeCameraDeviceActor.LerpToTarget
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::LerpToTarget(float DeltaSeconds)
 {
@@ -7739,7 +9521,7 @@ void ACreativeCameraDeviceActor::LerpToTarget(float DeltaSeconds)
 // Function Creative.CreativeCameraDeviceActor.LerpActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BlendPct                       (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendPct (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::LerpActor(float BlendPct)
 {
@@ -7763,8 +9545,8 @@ void ACreativeCameraDeviceActor::LerpActor(float BlendPct)
 // Function Creative.CreativeCameraDeviceActor.IsVecInvalid
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Vect                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Vect (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeCameraDeviceActor::IsVecInvalid(const struct FVector& Vect)
 {
@@ -7790,8 +9572,8 @@ bool ACreativeCameraDeviceActor::IsVecInvalid(const struct FVector& Vect)
 // Function Creative.CreativeCameraDeviceActor.IsRotInvalid
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FRotator Rot (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeCameraDeviceActor::IsRotInvalid(const struct FRotator& Rot)
 {
@@ -7817,7 +9599,7 @@ bool ACreativeCameraDeviceActor::IsRotInvalid(const struct FRotator& Rot)
 // Function Creative.CreativeCameraDeviceActor.InterpolateToSpringRotation
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          LerpValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// float LerpValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeCameraDeviceActor::InterpolateToSpringRotation(float LerpValue)
 {
@@ -7841,7 +9623,7 @@ void ACreativeCameraDeviceActor::InterpolateToSpringRotation(float LerpValue)
 // Function Creative.CreativeCameraDeviceActor.InitStartPoint
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeCameraDeviceActor::InitStartPoint()
 {
@@ -7866,8 +9648,8 @@ bool ACreativeCameraDeviceActor::InitStartPoint()
 // Function Creative.CreativeCameraDeviceActor.GetSpringArmForCamera
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCameraComponent*        Camera                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class USpringArmComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UCameraComponent* Camera (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USpringArmComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USpringArmComponent* ACreativeCameraDeviceActor::GetSpringArmForCamera(class UCameraComponent* Camera)
 {
@@ -7893,8 +9675,8 @@ class USpringArmComponent* ACreativeCameraDeviceActor::GetSpringArmForCamera(cla
 // Function Creative.CreativeCameraDeviceActor.GetLerpTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BlendTimeToGo                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float BlendTimeToGo (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ACreativeCameraDeviceActor::GetLerpTime(float BlendTimeToGo)
 {
@@ -7920,7 +9702,7 @@ float ACreativeCameraDeviceActor::GetLerpTime(float BlendTimeToGo)
 // Function Creative.CreativeCameraDeviceActor.GetCameraPointPosition
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector ACreativeCameraDeviceActor::GetCameraPointPosition()
 {
@@ -7945,7 +9727,7 @@ struct FVector ACreativeCameraDeviceActor::GetCameraPointPosition()
 // Function Creative.CreativeCameraDeviceActor.GetActiveCamera
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCameraComponent*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UCameraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UCameraComponent* ACreativeCameraDeviceActor::GetActiveCamera()
 {
@@ -7970,7 +9752,7 @@ class UCameraComponent* ACreativeCameraDeviceActor::GetActiveCamera()
 // Function Creative.CreativeCameraGetter.GetCameraLocation
 // (Native, Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativeCameraGetter::GetCameraLocation()
 {
@@ -7992,10 +9774,644 @@ struct FVector UCreativeCameraGetter::GetCameraLocation()
 }
 
 
+// Function Creative.CreativeComponentBlueprintLibrary.UnregisterComponent
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent* InComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::UnregisterComponent(class UActorComponent* InComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.UnregisterComponent");
+
+	UCreativeComponentBlueprintLibrary_UnregisterComponent_Params params;
+	params.InComponent = InComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.SetWidgetOpacityFromTexture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWidgetComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float Opacity (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::SetWidgetOpacityFromTexture(class UWidgetComponent* InComp, float Opacity)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.SetWidgetOpacityFromTexture");
+
+	UCreativeComponentBlueprintLibrary_SetWidgetOpacityFromTexture_Params params;
+	params.InComp = InComp;
+	params.Opacity = Opacity;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.SetWidgetDrawAtDesiredSize
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWidgetComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bDrawAtDesiredSize (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::SetWidgetDrawAtDesiredSize(class UWidgetComponent* InComp, bool bDrawAtDesiredSize)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.SetWidgetDrawAtDesiredSize");
+
+	UCreativeComponentBlueprintLibrary_SetWidgetDrawAtDesiredSize_Params params;
+	params.InComp = InComp;
+	params.bDrawAtDesiredSize = bDrawAtDesiredSize;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.SetParticleSystemAutoDestroy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UParticleSystemComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bAutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::SetParticleSystemAutoDestroy(class UParticleSystemComponent* InComp, bool bAutoDestroy)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.SetParticleSystemAutoDestroy");
+
+	UCreativeComponentBlueprintLibrary_SetParticleSystemAutoDestroy_Params params;
+	params.InComp = InComp;
+	params.bAutoDestroy = bAutoDestroy;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.SetMobility
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent* InSceneComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EComponentMobility> NewMobility (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::SetMobility(class USceneComponent* InSceneComp, TEnumAsByte<enum EComponentMobility> NewMobility)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.SetMobility");
+
+	UCreativeComponentBlueprintLibrary_SetMobility_Params params;
+	params.InSceneComp = InSceneComp;
+	params.NewMobility = NewMobility;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.ReregisterComponent
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent* InComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::ReregisterComponent(class UActorComponent* InComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.ReregisterComponent");
+
+	UCreativeComponentBlueprintLibrary_ReregisterComponent_Params params;
+	params.InComponent = InComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.RegisterComponent
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent* InComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::RegisterComponent(class UActorComponent* InComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.RegisterComponent");
+
+	UCreativeComponentBlueprintLibrary_RegisterComponent_Params params;
+	params.InComponent = InComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.IsSimulatingPhysics
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeComponentBlueprintLibrary::IsSimulatingPhysics(class UPrimitiveComponent* InComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.IsSimulatingPhysics");
+
+	UCreativeComponentBlueprintLibrary_IsSimulatingPhysics_Params params;
+	params.InComp = InComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.IsComponentRegistered
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UActorComponent* InComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeComponentBlueprintLibrary::IsComponentRegistered(class UActorComponent* InComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.IsComponentRegistered");
+
+	UCreativeComponentBlueprintLibrary_IsComponentRegistered_Params params;
+	params.InComponent = InComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetParticleSystemAutoDestroy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UParticleSystemComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeComponentBlueprintLibrary::GetParticleSystemAutoDestroy(class UParticleSystemComponent* InComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetParticleSystemAutoDestroy");
+
+	UCreativeComponentBlueprintLibrary_GetParticleSystemAutoDestroy_Params params;
+	params.InComp = InComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetFloatParameter
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UParticleSystemComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName InName (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCreativeComponentBlueprintLibrary::GetFloatParameter(class UParticleSystemComponent* InComp, const struct FName& InName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetFloatParameter");
+
+	UCreativeComponentBlueprintLibrary_GetFloatParameter_Params params;
+	params.InComp = InComp;
+	params.InName = InName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetComponentBounds
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent* InSceneComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector Origin (Parm, OutParm, IsPlainOldData)
+// struct FVector BoxExtent (Parm, OutParm, IsPlainOldData)
+// float SphereRadius (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeComponentBlueprintLibrary::GetComponentBounds(class USceneComponent* InSceneComp, struct FVector* Origin, struct FVector* BoxExtent, float* SphereRadius)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetComponentBounds");
+
+	UCreativeComponentBlueprintLibrary_GetComponentBounds_Params params;
+	params.InSceneComp = InSceneComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (Origin != nullptr)
+		*Origin = params.Origin;
+	if (BoxExtent != nullptr)
+		*BoxExtent = params.BoxExtent;
+	if (SphereRadius != nullptr)
+		*SphereRadius = params.SphereRadius;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetCollisionTraceFlag
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPrimitiveComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum ECollisionTraceFlag> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum ECollisionTraceFlag> UCreativeComponentBlueprintLibrary::GetCollisionTraceFlag(class UPrimitiveComponent* InComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetCollisionTraceFlag");
+
+	UCreativeComponentBlueprintLibrary_GetCollisionTraceFlag_Params params;
+	params.InComp = InComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetBoneTransform
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USkinnedMeshComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int BoneIdx (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform LocalToWorld (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform UCreativeComponentBlueprintLibrary::GetBoneTransform(class USkinnedMeshComponent* InComp, int BoneIdx, const struct FTransform& LocalToWorld)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetBoneTransform");
+
+	UCreativeComponentBlueprintLibrary_GetBoneTransform_Params params;
+	params.InComp = InComp;
+	params.BoneIdx = BoneIdx;
+	params.LocalToWorld = LocalToWorld;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeComponentBlueprintLibrary.GetBoneLocation
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USkinnedMeshComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName BoneName (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBoneSpaces> Space (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UCreativeComponentBlueprintLibrary::GetBoneLocation(class USkinnedMeshComponent* InComp, const struct FName& BoneName, TEnumAsByte<enum EBoneSpaces> Space)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeComponentBlueprintLibrary.GetBoneLocation");
+
+	UCreativeComponentBlueprintLibrary_GetBoneLocation_Params params;
+	params.InComp = InComp;
+	params.BoneName = BoneName;
+	params.Space = Space;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.UnhookUserConstructionScript
+// (Final, Native, Protected)
+// Parameters:
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeCustomActorManager::UnhookUserConstructionScript(class AActor* Actor)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.UnhookUserConstructionScript");
+
+	UCreativeCustomActorManager_UnhookUserConstructionScript_Params params;
+	params.Actor = Actor;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.SpawnCustomActor
+// (Final, Native, Public, HasOutParms, HasDefaults)
+// Parameters:
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Transform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* UCreativeCustomActorManager::SpawnCustomActor(class UClass* ActorClass, const struct FTransform& Transform)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.SpawnCustomActor");
+
+	UCreativeCustomActorManager_SpawnCustomActor_Params params;
+	params.ActorClass = ActorClass;
+	params.Transform = Transform;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.ReceiveOnGameStateBeginPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeCustomActorManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.ReceiveOnGameStateBeginPlay");
+
+	UCreativeCustomActorManager_ReceiveOnGameStateBeginPlay_Params params;
+	params.GameState = GameState;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomActorManager.ReceiveClearAllCustomActor
+// (Event, Public, BlueprintEvent)
+
+void UCreativeCustomActorManager::ReceiveClearAllCustomActor()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.ReceiveClearAllCustomActor");
+
+	UCreativeCustomActorManager_ReceiveClearAllCustomActor_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomActorManager.OnGameStateBeginPlay
+// (Final, Native, Public)
+// Parameters:
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeCustomActorManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.OnGameStateBeginPlay");
+
+	UCreativeCustomActorManager_OnGameStateBeginPlay_Params params;
+	params.GameState = GameState;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomActorManager.IsUserConstructionScriptHooked
+// (Final, Native, Public, Const)
+// Parameters:
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeCustomActorManager::IsUserConstructionScriptHooked(class AActor* Actor)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.IsUserConstructionScriptHooked");
+
+	UCreativeCustomActorManager_IsUserConstructionScriptHooked_Params params;
+	params.Actor = Actor;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.HookUserConstructionScript
+// (Final, Native, Protected)
+// Parameters:
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeCustomActorManager::HookUserConstructionScript(class AActor* Actor)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.HookUserConstructionScript");
+
+	UCreativeCustomActorManager_HookUserConstructionScript_Params params;
+	params.Actor = Actor;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.Get
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeCustomActorManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCreativeCustomActorManager* UCreativeCustomActorManager::Get(class UObject* WorldContext)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.Get");
+
+	UCreativeCustomActorManager_Get_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomActorManager.ClearAllCustomActor
+// (Final, Native, Public)
+
+void UCreativeCustomActorManager::ClearAllCustomActor()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomActorManager.ClearAllCustomActor");
+
+	UCreativeCustomActorManager_ClearAllCustomActor_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeCustomCameraComponent.InterpolateToTargetRotation
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          LerpValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// float LerpValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomCameraComponent::InterpolateToTargetRotation(float LerpValue)
 {
@@ -8019,7 +10435,7 @@ void UCreativeCustomCameraComponent::InterpolateToTargetRotation(float LerpValue
 // Function Creative.CreativeCustomCameraComponent.InterpolateToTargetFOV
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          LerpValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// float LerpValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomCameraComponent::InterpolateToTargetFOV(float LerpValue)
 {
@@ -8043,8 +10459,8 @@ void UCreativeCustomCameraComponent::InterpolateToTargetFOV(float LerpValue)
 // Function Creative.CreativeCustomParameterManager.RemoveCustomParameter
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ParameterID                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ParameterID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomParameterManager::RemoveCustomParameter(uint32_t ParameterID, uint32_t PlayerKey)
 {
@@ -8069,7 +10485,7 @@ void UCreativeCustomParameterManager::RemoveCustomParameter(uint32_t ParameterID
 // Function Creative.CreativeCustomParameterManager.ReceiveOnGameStateBeginPlay
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomParameterManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -8092,7 +10508,7 @@ void UCreativeCustomParameterManager::ReceiveOnGameStateBeginPlay(class AGameSta
 // Function Creative.CreativeCustomParameterManager.OnGameStateBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomParameterManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -8116,8 +10532,8 @@ void UCreativeCustomParameterManager::OnGameStateBeginPlay(class AGameStateBase*
 // Function Creative.CreativeCustomParameterManager.GetCustomParameterDataNodes
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       ParameterID                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FCreativeCustomParameterDataNode> OutCustomParameterDataNodes    (Parm, OutParm, ZeroConstructor)
+// uint32_t ParameterID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FCreativeCustomParameterDataNode> OutCustomParameterDataNodes (Parm, OutParm, ZeroConstructor)
 
 void UCreativeCustomParameterManager::GetCustomParameterDataNodes(uint32_t ParameterID, TArray<struct FCreativeCustomParameterDataNode>* OutCustomParameterDataNodes)
 {
@@ -8144,8 +10560,8 @@ void UCreativeCustomParameterManager::GetCustomParameterDataNodes(uint32_t Param
 // Function Creative.CreativeCustomParameterManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeCustomParameterManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeCustomParameterManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeCustomParameterManager* UCreativeCustomParameterManager::Get(class UObject* WorldContext)
 {
@@ -8171,10 +10587,10 @@ class UCreativeCustomParameterManager* UCreativeCustomParameterManager::Get(clas
 // Function Creative.CreativeCustomParameterManager.ChangeCustomParameter
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       ParameterID                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int8_t                         TeamID                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          DataContent                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// uint32_t ParameterID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int8_t TeamID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> DataContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeCustomParameterManager::ChangeCustomParameter(uint32_t ParameterID, uint32_t PlayerKey, int8_t TeamID, TArray<unsigned char> DataContent)
 {
@@ -8201,11 +10617,11 @@ void UCreativeCustomParameterManager::ChangeCustomParameter(uint32_t ParameterID
 // Function Creative.CreativeCustomParameterManager.AddCustomParameter
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       ParameterID                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int8_t                         TeamID                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          DataContent                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bPropagateToChildren           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ParameterID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int8_t TeamID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> DataContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bPropagateToChildren (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeCustomParameterManager::AddCustomParameter(uint32_t ParameterID, uint32_t PlayerKey, int8_t TeamID, TArray<unsigned char> DataContent, bool bPropagateToChildren)
 {
@@ -8233,8 +10649,8 @@ void UCreativeCustomParameterManager::AddCustomParameter(uint32_t ParameterID, u
 // Function Creative.CreativeCustomPrefabComponent.GetNodeSegmentContent
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCreativePrefabDataSegment Segment                        (Parm, OutParm)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FCreativePrefabDataSegment Segment (Parm, OutParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeCustomPrefabComponent::GetNodeSegmentContent(struct FCreativePrefabDataSegment* Segment)
 {
@@ -8262,9 +10678,9 @@ TArray<unsigned char> UCreativeCustomPrefabComponent::GetNodeSegmentContent(stru
 // Function Creative.CreativeCustomPrefabComponent.AddInstanceDataContent
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCreativeCustomPrefabDataSegment Segment                        (Parm, OutParm)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FCreativeCustomPrefabDataSegment Segment (Parm, OutParm)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeCustomPrefabComponent::AddInstanceDataContent(TArray<unsigned char> Content, struct FCreativeCustomPrefabDataSegment* Segment)
 {
@@ -8290,10 +10706,274 @@ bool UCreativeCustomPrefabComponent::AddInstanceDataContent(TArray<unsigned char
 }
 
 
+// Function Creative.CreativeCustomUIDataComponent.SetCustomUIDataFromTransferNodes
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// TArray<struct FCreativeCustomUIDataTransferNode> TransferNodes (Parm, OutParm, ZeroConstructor)
+
+void UCreativeCustomUIDataComponent::SetCustomUIDataFromTransferNodes(TArray<struct FCreativeCustomUIDataTransferNode>* TransferNodes)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.SetCustomUIDataFromTransferNodes");
+
+	UCreativeCustomUIDataComponent_SetCustomUIDataFromTransferNodes_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (TransferNodes != nullptr)
+		*TransferNodes = params.TransferNodes;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.SetCustomUIDataById
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeCustomUIDataComponent::SetCustomUIDataById(uint32_t ID, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.SetCustomUIDataById");
+
+	UCreativeCustomUIDataComponent_SetCustomUIDataById_Params params;
+	params.ID = ID;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.RemoveCustomUI
+// (Final, Native, Public)
+// Parameters:
+// struct FString ID (Parm, ZeroConstructor)
+
+void UCreativeCustomUIDataComponent::RemoveCustomUI(const struct FString& ID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.RemoveCustomUI");
+
+	UCreativeCustomUIDataComponent_RemoveCustomUI_Params params;
+	params.ID = ID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.GetCustomUIDataTransferNodes
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// TArray<uint32_t> IDList (Parm, OutParm, ZeroConstructor)
+// TArray<struct FCreativeCustomUIDataTransferNode> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FCreativeCustomUIDataTransferNode> UCreativeCustomUIDataComponent::GetCustomUIDataTransferNodes(TArray<uint32_t>* IDList)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.GetCustomUIDataTransferNodes");
+
+	UCreativeCustomUIDataComponent_GetCustomUIDataTransferNodes_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (IDList != nullptr)
+		*IDList = params.IDList;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.GetCustomUIContent
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> OutContent (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeCustomUIDataComponent::GetCustomUIContent(const struct FString& ID, TArray<unsigned char>* OutContent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.GetCustomUIContent");
+
+	UCreativeCustomUIDataComponent_GetCustomUIContent_Params params;
+	params.ID = ID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutContent != nullptr)
+		*OutContent = params.OutContent;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.ChangeCustomUI
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeCustomUIDataComponent::ChangeCustomUI(const struct FString& ID, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.ChangeCustomUI");
+
+	UCreativeCustomUIDataComponent_ChangeCustomUI_Params params;
+	params.ID = ID;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.CallOnReceivePreCustomUIDataRemove
+// (Final, Native, Public)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeCustomUIDataComponent::CallOnReceivePreCustomUIDataRemove(uint32_t ID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.CallOnReceivePreCustomUIDataRemove");
+
+	UCreativeCustomUIDataComponent_CallOnReceivePreCustomUIDataRemove_Params params;
+	params.ID = ID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.CallOnReceivePostCustomUIDataChange
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeCustomUIDataComponent::CallOnReceivePostCustomUIDataChange(uint32_t ID, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.CallOnReceivePostCustomUIDataChange");
+
+	UCreativeCustomUIDataComponent_CallOnReceivePostCustomUIDataChange_Params params;
+	params.ID = ID;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.CallOnReceivePostCustomUIDataAdd
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeCustomUIDataComponent::CallOnReceivePostCustomUIDataAdd(uint32_t ID, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.CallOnReceivePostCustomUIDataAdd");
+
+	UCreativeCustomUIDataComponent_CallOnReceivePostCustomUIDataAdd_Params params;
+	params.ID = ID;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeCustomUIDataComponent.AddCustomUI
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCreativeCustomUIDataComponent::AddCustomUI(const struct FString& ID, TArray<unsigned char> Content)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeCustomUIDataComponent.AddCustomUI");
+
+	UCreativeCustomUIDataComponent_AddCustomUI_Params params;
+	params.ID = ID;
+	params.Content = Content;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeDestructibleMeshActor.SetDamageEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeDestructibleMeshActor::SetDamageEnable(bool bEnable)
 {
@@ -8317,10 +10997,10 @@ void ACreativeDestructibleMeshActor::SetDamageEnable(bool bEnable)
 // Function Creative.CreativeDestructibleMeshActor.OnHit
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class AActor*                  SelfActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NormalImpulse                  (Parm, IsPlainOldData)
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* SelfActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector NormalImpulse (Parm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ACreativeDestructibleMeshActor::OnHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
@@ -8347,7 +11027,7 @@ void ACreativeDestructibleMeshActor::OnHit(class AActor* SelfActor, class AActor
 // Function Creative.CreativeDestructibleMeshActor.InitHP
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          fHP                            (Parm, ZeroConstructor, IsPlainOldData)
+// float fHP (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeDestructibleMeshActor::InitHP(float fHP)
 {
@@ -8371,7 +11051,7 @@ void ACreativeDestructibleMeshActor::InitHP(float fHP)
 // Function Creative.CreativeDestructibleMeshActor.GetFracturedComponent
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonDestructibleMeshComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UPhotonDestructibleMeshComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UPhotonDestructibleMeshComponent* ACreativeDestructibleMeshActor::GetFracturedComponent()
 {
@@ -8396,7 +11076,7 @@ class UPhotonDestructibleMeshComponent* ACreativeDestructibleMeshActor::GetFract
 // Function Creative.CreativeDestructibleMeshActor.AddCanDamageWeapon
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Weapon                         (Parm, ZeroConstructor)
+// struct FString Weapon (Parm, ZeroConstructor)
 
 void ACreativeDestructibleMeshActor::AddCanDamageWeapon(const struct FString& Weapon)
 {
@@ -8438,11 +11118,35 @@ void ACreativeDestructibleMeshBatchActor::RemoveAllCacheReplicationData()
 }
 
 
+// Function Creative.CreativeDisableTransformReplicationInterface.SetDisableTransformReplication
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool bInDisable (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeDisableTransformReplicationInterface::SetDisableTransformReplication(bool bInDisable)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDisableTransformReplicationInterface.SetDisableTransformReplication");
+
+	UCreativeDisableTransformReplicationInterface_SetDisableTransformReplication_Params params;
+	params.bInDisable = bInDisable;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeDropItemCurveAnimComponent.StopItemClient
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Group                          (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Group (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Target (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::StopItemClient(int Group, class AActor* Target)
 {
@@ -8467,7 +11171,7 @@ void UCreativeDropItemCurveAnimComponent::StopItemClient(int Group, class AActor
 // Function Creative.CreativeDropItemCurveAnimComponent.OnParticleSystemComponentFinished
 // (Final, Native, Protected)
 // Parameters:
-// class UParticleSystemComponent* PSC                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent* PSC (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::OnParticleSystemComponentFinished(class UParticleSystemComponent* PSC)
 {
@@ -8491,11 +11195,11 @@ void UCreativeDropItemCurveAnimComponent::OnParticleSystemComponentFinished(clas
 // Function Creative.CreativeDropItemCurveAnimComponent.IsInViewport
 // (Native, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ViewportX                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ViewportY                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 CenterPos                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
+// int ViewportX (Parm, ZeroConstructor, IsPlainOldData)
+// int ViewportY (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector CenterPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeDropItemCurveAnimComponent::IsInViewport(class APlayerController* PC, int ViewportX, int ViewportY, const struct FVector& CenterPos)
 {
@@ -8524,8 +11228,8 @@ bool UCreativeDropItemCurveAnimComponent::IsInViewport(class APlayerController* 
 // Function Creative.CreativeDropItemCurveAnimComponent.InitConfig
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FCreativeDropAnimConfig Config                         (Parm, OutParm)
-// int                            BaseConfigID                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeDropAnimConfig Config (Parm, OutParm)
+// int BaseConfigID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::InitConfig(int BaseConfigID, struct FCreativeDropAnimConfig* Config)
 {
@@ -8552,8 +11256,8 @@ void UCreativeDropItemCurveAnimComponent::InitConfig(int BaseConfigID, struct FC
 // Function Creative.CreativeDropItemCurveAnimComponent.DynamicReduceItemGroup
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// int                            CurrentGroup                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int CurrentGroup (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::DynamicReduceItemGroup(int CurrentGroup, int Num)
 {
@@ -8578,9 +11282,9 @@ void UCreativeDropItemCurveAnimComponent::DynamicReduceItemGroup(int CurrentGrou
 // Function Creative.CreativeDropItemCurveAnimComponent.DecodeDropItemGroupID
 // (Native, Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            GroupID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ConfigId                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int GroupID (Parm, ZeroConstructor, IsPlainOldData)
+// int ConfigId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::DecodeDropItemGroupID(int GroupID, int* ConfigId, int* Num)
 {
@@ -8609,10 +11313,10 @@ void UCreativeDropItemCurveAnimComponent::DecodeDropItemGroupID(int GroupID, int
 // Function Creative.CreativeDropItemCurveAnimComponent.AddItemClient
 // (Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            Group                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 InStartPos                     (Parm, IsPlainOldData)
-// struct FVector                 InEndPos                       (Parm, IsPlainOldData)
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Group (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InStartPos (Parm, IsPlainOldData)
+// struct FVector InEndPos (Parm, IsPlainOldData)
+// class AActor* Target (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeDropItemCurveAnimComponent::AddItemClient(int Group, const struct FVector& InStartPos, const struct FVector& InEndPos, class AActor* Target)
 {
@@ -8636,12 +11340,183 @@ void UCreativeDropItemCurveAnimComponent::AddItemClient(int Group, const struct 
 }
 
 
+// Function Creative.CreativeDSLParserLibrary.ParseDSLText
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDSLParser* Parser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Source (Parm, ZeroConstructor)
+// class UDSLParserASTTree* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDSLParserASTTree* UCreativeDSLParserLibrary::ParseDSLText(class UDSLParser* Parser, const struct FString& Source)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.ParseDSLText");
+
+	UCreativeDSLParserLibrary_ParseDSLText_Params params;
+	params.Parser = Parser;
+	params.Source = Source;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeDSLParserLibrary.ParseDSLFile
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDSLParser* Parser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FilePath (Parm, ZeroConstructor)
+// class UDSLParserASTTree* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDSLParserASTTree* UCreativeDSLParserLibrary::ParseDSLFile(class UDSLParser* Parser, const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.ParseDSLFile");
+
+	UCreativeDSLParserLibrary_ParseDSLFile_Params params;
+	params.Parser = Parser;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeDSLParserLibrary.LoadDSLGrammarFromString
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDSLParser* Parser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString GrammarText (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeDSLParserLibrary::LoadDSLGrammarFromString(class UDSLParser* Parser, const struct FString& GrammarText)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.LoadDSLGrammarFromString");
+
+	UCreativeDSLParserLibrary_LoadDSLGrammarFromString_Params params;
+	params.Parser = Parser;
+	params.GrammarText = GrammarText;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeDSLParserLibrary.LoadDSLGrammarFromFile
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDSLParser* Parser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FilePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeDSLParserLibrary::LoadDSLGrammarFromFile(class UDSLParser* Parser, const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.LoadDSLGrammarFromFile");
+
+	UCreativeDSLParserLibrary_LoadDSLGrammarFromFile_Params params;
+	params.Parser = Parser;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeDSLParserLibrary.CreateDSLParser
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UDSLParser* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDSLParser* UCreativeDSLParserLibrary::CreateDSLParser(class UObject* WorldContextObject)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.CreateDSLParser");
+
+	UCreativeDSLParserLibrary_CreateDSLParser_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeDSLParserLibrary.AddDSLGrammarRule
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UDSLParser* Parser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString RuleName (Parm, ZeroConstructor)
+// struct FString RuleBody (Parm, ZeroConstructor)
+
+void UCreativeDSLParserLibrary::AddDSLGrammarRule(class UDSLParser* Parser, const struct FString& RuleName, const struct FString& RuleBody)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeDSLParserLibrary.AddDSLGrammarRule");
+
+	UCreativeDSLParserLibrary_AddDSLGrammarRule_Params params;
+	params.Parser = Parser;
+	params.RuleName = RuleName;
+	params.RuleBody = RuleBody;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeLiteComponent.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeLiteComponent::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -8668,10 +11543,10 @@ bool UCreativeModeLiteComponent::OnReturnToPool(class UObject* NewOuter, uint32_
 // Function Creative.CreativeModeLiteComponent.GetObjectFromPool
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, OutParm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, OutParm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeModeLiteComponent::GetObjectFromPool(int PoolId, class UObject* NewOuter, struct FString* InName)
 {
@@ -8701,7 +11576,7 @@ class UObject* UCreativeModeLiteComponent::GetObjectFromPool(int PoolId, class U
 // Function Creative.CreativeModeGameModeBaseComponent.SetGameStateComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCreativeModeGameStateBaseComponent* NewGameStateComponent          (Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeGameStateBaseComponent* NewGameStateComponent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameModeBaseComponent::SetGameStateComponent(class UCreativeModeGameStateBaseComponent* NewGameStateComponent)
 {
@@ -8745,7 +11620,7 @@ void UCreativeModeGameModeBaseComponent::ReceivePostInitializeComponents()
 // Function Creative.CreativeModeGameModeBaseComponent.GetGameType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ECreativeModeGameType          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModeGameType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeGameType UCreativeModeGameModeBaseComponent::GetGameType()
 {
@@ -8770,7 +11645,7 @@ ECreativeModeGameType UCreativeModeGameModeBaseComponent::GetGameType()
 // Function Creative.CreativeModeGameModeBaseComponent.GetGameMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class ACreativeModeGameMode*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ACreativeModeGameMode* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativeModeGameMode* UCreativeModeGameModeBaseComponent::GetGameMode()
 {
@@ -8795,10 +11670,10 @@ class ACreativeModeGameMode* UCreativeModeGameModeBaseComponent::GetGameMode()
 // Function Creative.CreativeModeGameModeBaseComponent.FindPlayerStartOverride
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AController*             Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 IncomingName                   (Parm, ZeroConstructor)
-// bool                           bIsRevive                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* Player (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString IncomingName (Parm, ZeroConstructor)
+// bool bIsRevive (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeModeGameModeBaseComponent::FindPlayerStartOverride(class AController* Player, const struct FString& IncomingName, bool bIsRevive)
 {
@@ -8825,8 +11700,8 @@ class AActor* UCreativeModeGameModeBaseComponent::FindPlayerStartOverride(class 
 // Function Creative.CreativeModeEditorObject.UnregisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Destroy                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
+// bool Destroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::UnregisterLiteComponent(class ULiteComponent* Component, bool Destroy)
 {
@@ -8851,9 +11726,9 @@ void ACreativeModeEditorObject::UnregisterLiteComponent(class ULiteComponent* Co
 // Function Creative.CreativeModeEditorObject.ShowSelectedEffect
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// bool                           ShowEff                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            OutlineColor                   (Parm, IsPlainOldData)
-// float                          OutlineThickness               (Parm, ZeroConstructor, IsPlainOldData)
+// bool ShowEff (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor OutlineColor (Parm, IsPlainOldData)
+// float OutlineThickness (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::ShowSelectedEffect(bool ShowEff, const struct FLinearColor& OutlineColor, float OutlineThickness)
 {
@@ -8879,9 +11754,9 @@ void ACreativeModeEditorObject::ShowSelectedEffect(bool ShowEff, const struct FL
 // Function Creative.CreativeModeEditorObject.ShowOutlineEffect
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ShowEff                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialInstance*       Material                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 IgnoreTag                      (Parm, ZeroConstructor)
+// bool ShowEff (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInstance* Material (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString IgnoreTag (Parm, ZeroConstructor)
 
 void ACreativeModeEditorObject::ShowOutlineEffect(bool ShowEff, class UMaterialInstance* Material, const struct FString& IgnoreTag)
 {
@@ -8907,7 +11782,7 @@ void ACreativeModeEditorObject::ShowOutlineEffect(bool ShowEff, class UMaterialI
 // Function Creative.CreativeModeEditorObject.SetPhotographyMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bIsCapturing                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsCapturing (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::SetPhotographyMode(bool bIsCapturing)
 {
@@ -8931,7 +11806,7 @@ void ACreativeModeEditorObject::SetPhotographyMode(bool bIsCapturing)
 // Function Creative.CreativeModeEditorObject.SetLiteComponentTickEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::SetLiteComponentTickEnable(bool bEnabled)
 {
@@ -8955,7 +11830,7 @@ void ACreativeModeEditorObject::SetLiteComponentTickEnable(bool bEnabled)
 // Function Creative.CreativeModeEditorObject.SetActorState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ECreativeModeActorState        NewState                       (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeActorState NewState (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::SetActorState(ECreativeModeActorState NewState)
 {
@@ -8979,7 +11854,7 @@ void ACreativeModeEditorObject::SetActorState(ECreativeModeActorState NewState)
 // Function Creative.CreativeModeEditorObject.ReturnObjectToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::ReturnObjectToPool(class UObject* Obj)
 {
@@ -9003,7 +11878,7 @@ void ACreativeModeEditorObject::ReturnObjectToPool(class UObject* Obj)
 // Function Creative.CreativeModeEditorObject.ReturnObjectsToPool
 // (Native, Public)
 // Parameters:
-// TArray<class UObject*>         Objs                           (Parm, ZeroConstructor)
+// TArray<class UObject*> Objs (Parm, ZeroConstructor)
 
 void ACreativeModeEditorObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 {
@@ -9027,7 +11902,7 @@ void ACreativeModeEditorObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 // Function Creative.CreativeModeEditorObject.RegisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::RegisterLiteComponent(class ULiteComponent* Component)
 {
@@ -9071,7 +11946,7 @@ void ACreativeModeEditorObject::ReceivePostBeginPlay()
 // Function Creative.CreativeModeEditorObject.ReceiveIsDedicatedServer
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeEditorObject::ReceiveIsDedicatedServer()
 {
@@ -9136,7 +12011,7 @@ void ACreativeModeEditorObject::ReceiveInitCanEditFlag()
 // Function Creative.CreativeModeEditorObject.ReceiveHasAuthority
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeEditorObject::ReceiveHasAuthority()
 {
@@ -9161,7 +12036,7 @@ bool ACreativeModeEditorObject::ReceiveHasAuthority()
 // Function Creative.CreativeModeEditorObject.OnRepActorStateOverride
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// ECreativeModeActorState        NewState                       (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeActorState NewState (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::OnRepActorStateOverride(ECreativeModeActorState NewState)
 {
@@ -9184,7 +12059,7 @@ void ACreativeModeEditorObject::OnRepActorStateOverride(ECreativeModeActorState 
 // Function Creative.CreativeModeEditorObject.OnRep_ActorState
 // (Final, Native, Public)
 // Parameters:
-// ECreativeModeActorState        LastState                      (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeActorState LastState (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeEditorObject::OnRep_ActorState(ECreativeModeActorState LastState)
 {
@@ -9208,7 +12083,7 @@ void ACreativeModeEditorObject::OnRep_ActorState(ECreativeModeActorState LastSta
 // Function Creative.CreativeModeEditorObject.InCollisionState
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeEditorObject::InCollisionState()
 {
@@ -9233,8 +12108,8 @@ bool ACreativeModeEditorObject::InCollisionState()
 // Function Creative.CreativeModeEditorObject.GetObjectsFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams                   (Parm, OutParm, ZeroConstructor)
-// TArray<class UObject*>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams (Parm, OutParm, ZeroConstructor)
+// TArray<class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UObject*> ACreativeModeEditorObject::GetObjectsFromPool(TArray<struct FCreativePoolGetObjectParamInfo>* ObjectParams)
 {
@@ -9262,10 +12137,10 @@ TArray<class UObject*> ACreativeModeEditorObject::GetObjectsFromPool(TArray<stru
 // Function Creative.CreativeModeEditorObject.GetObjectFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, OutParm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, OutParm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* ACreativeModeEditorObject::GetObjectFromPool(int PoolId, class UObject* NewOuter, struct FString* InName)
 {
@@ -9292,10 +12167,35 @@ class UObject* ACreativeModeEditorObject::GetObjectFromPool(int PoolId, class UO
 }
 
 
+// Function Creative.CreativeModeEditorObject.GetLocationToIgnoreActors
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class AActor*> ACreativeModeEditorObject::GetLocationToIgnoreActors()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeEditorObject.GetLocationToIgnoreActors");
+
+	ACreativeModeEditorObject_GetLocationToIgnoreActors_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeEditorObject.GetActorState
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ECreativeModeActorState        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModeActorState ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeActorState ACreativeModeEditorObject::GetActorState()
 {
@@ -9320,8 +12220,8 @@ ECreativeModeActorState ACreativeModeEditorObject::GetActorState()
 // Function Creative.CreativeModeEditorObject.FindLiteComponentByClass
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  ComponentClass                 (Parm, ZeroConstructor, IsPlainOldData)
-// class ULiteComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* ComponentClass (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULiteComponent* ACreativeModeEditorObject::FindLiteComponentByClass(class UClass* ComponentClass)
 {
@@ -9367,7 +12267,7 @@ void UCreativeModeGameStateBaseComponent::ReceivePostInitializeComponents()
 // Function Creative.CreativeModeGameStateBaseComponent.GetPlayState
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ECreativeModePlayState         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModePlayState ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModePlayState UCreativeModeGameStateBaseComponent::GetPlayState()
 {
@@ -9392,7 +12292,7 @@ ECreativeModePlayState UCreativeModeGameStateBaseComponent::GetPlayState()
 // Function Creative.CreativeModeGameStateBaseComponent.GetGameType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ECreativeModeGameType          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModeGameType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeGameType UCreativeModeGameStateBaseComponent::GetGameType()
 {
@@ -9417,7 +12317,7 @@ ECreativeModeGameType UCreativeModeGameStateBaseComponent::GetGameType()
 // Function Creative.CreativeModeGameStateBaseComponent.GetGameState
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class ACreativeModeGameState*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ACreativeModeGameState* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativeModeGameState* UCreativeModeGameStateBaseComponent::GetGameState()
 {
@@ -9481,14 +12381,261 @@ void UCreativeEventObject::EventObjectConditionalBeginDestroy()
 }
 
 
+// Function Creative.CreativeExportSandboxApiLibrary.IsObjectValid
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeExportSandboxApiLibrary::IsObjectValid(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.IsObjectValid");
+
+	UCreativeExportSandboxApiLibrary_IsObjectValid_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.IsObjectA
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ClassName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeExportSandboxApiLibrary::IsObjectA(class UObject* Object, const struct FString& ClassName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.IsObjectA");
+
+	UCreativeExportSandboxApiLibrary_IsObjectA_Params params;
+	params.Object = Object;
+	params.ClassName = ClassName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectWorld
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UWorld* UCreativeExportSandboxApiLibrary::GetObjectWorld(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectWorld");
+
+	UCreativeExportSandboxApiLibrary_GetObjectWorld_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectPathName
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeExportSandboxApiLibrary::GetObjectPathName(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectPathName");
+
+	UCreativeExportSandboxApiLibrary_GetObjectPathName_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectOuter
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UCreativeExportSandboxApiLibrary::GetObjectOuter(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectOuter");
+
+	UCreativeExportSandboxApiLibrary_GetObjectOuter_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectName
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeExportSandboxApiLibrary::GetObjectName(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectName");
+
+	UCreativeExportSandboxApiLibrary_GetObjectName_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectFullName
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCreativeExportSandboxApiLibrary::GetObjectFullName(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectFullName");
+
+	UCreativeExportSandboxApiLibrary_GetObjectFullName_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.GetObjectClass
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* UCreativeExportSandboxApiLibrary::GetObjectClass(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.GetObjectClass");
+
+	UCreativeExportSandboxApiLibrary_GetObjectClass_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeExportSandboxApiLibrary.FindObjectFunction
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// class UFunction* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFunction* UCreativeExportSandboxApiLibrary::FindObjectFunction(class UObject* Object, const struct FString& FunctionName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeExportSandboxApiLibrary.FindObjectFunction");
+
+	UCreativeExportSandboxApiLibrary_FindObjectFunction_Params params;
+	params.Object = Object;
+	params.FunctionName = FunctionName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeGameAPIObject.GetPlayersInSphere
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 SphereCenter                   (Parm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FilterNonPlayable              (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int64_t>                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector SphereCenter (Parm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// bool FilterNonPlayable (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int64_t> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int64_t> UCreativeGameAPIObject::GetPlayersInSphere(const struct FVector& SphereCenter, float SphereRadius, int TeamID, bool FilterNonPlayable)
 {
@@ -9517,13 +12664,13 @@ TArray<int64_t> UCreativeGameAPIObject::GetPlayersInSphere(const struct FVector&
 // Function Creative.CreativeGameAPIObject.GetPlayersInRectangle
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 RectangleCenter                (Parm, IsPlainOldData)
-// float                          RectangleX                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RectangleY                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RectangleZ                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FilterNonPlayable              (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int64_t>                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector RectangleCenter (Parm, IsPlainOldData)
+// float RectangleX (Parm, ZeroConstructor, IsPlainOldData)
+// float RectangleY (Parm, ZeroConstructor, IsPlainOldData)
+// float RectangleZ (Parm, ZeroConstructor, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// bool FilterNonPlayable (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int64_t> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int64_t> UCreativeGameAPIObject::GetPlayersInRectangle(const struct FVector& RectangleCenter, float RectangleX, float RectangleY, float RectangleZ, int TeamID, bool FilterNonPlayable)
 {
@@ -9554,7 +12701,7 @@ TArray<int64_t> UCreativeGameAPIObject::GetPlayersInRectangle(const struct FVect
 // Function Creative.CreativeModeGameMode.UnregisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::UnregisterLiteComponent(class ULiteComponent* Component)
 {
@@ -9578,7 +12725,7 @@ void ACreativeModeGameMode::UnregisterLiteComponent(class ULiteComponent* Compon
 // Function Creative.CreativeModeGameMode.SetShowDropEffectEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::SetShowDropEffectEnable(bool Enable)
 {
@@ -9602,7 +12749,7 @@ void ACreativeModeGameMode::SetShowDropEffectEnable(bool Enable)
 // Function Creative.CreativeModeGameMode.SetLiteComponentTickEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::SetLiteComponentTickEnable(bool bEnabled)
 {
@@ -9626,7 +12773,7 @@ void ACreativeModeGameMode::SetLiteComponentTickEnable(bool bEnabled)
 // Function Creative.CreativeModeGameMode.SetItemGenerate
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           bIsOpen                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::SetItemGenerate(bool bIsOpen)
 {
@@ -9650,7 +12797,7 @@ void ACreativeModeGameMode::SetItemGenerate(bool bIsOpen)
 // Function Creative.CreativeModeGameMode.SetCurrentGameType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ECreativeModeGameType          NewGameType                    (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeGameType NewGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::SetCurrentGameType(ECreativeModeGameType NewGameType)
 {
@@ -9674,7 +12821,7 @@ void ACreativeModeGameMode::SetCurrentGameType(ECreativeModeGameType NewGameType
 // Function Creative.CreativeModeGameMode.ReInitItemGenerate
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 NewItemClassPath               (Parm, OutParm, ZeroConstructor)
+// struct FString NewItemClassPath (Parm, OutParm, ZeroConstructor)
 
 void ACreativeModeGameMode::ReInitItemGenerate(struct FString* NewItemClassPath)
 {
@@ -9700,7 +12847,7 @@ void ACreativeModeGameMode::ReInitItemGenerate(struct FString* NewItemClassPath)
 // Function Creative.CreativeModeGameMode.RegisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameMode::RegisterLiteComponent(class ULiteComponent* Component)
 {
@@ -9744,7 +12891,7 @@ void ACreativeModeGameMode::ReceiveInitializeLiteComponent()
 // Function Creative.CreativeModeGameMode.IsStandAloneGameMode
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameMode::IsStandAloneGameMode()
 {
@@ -9769,7 +12916,7 @@ bool ACreativeModeGameMode::IsStandAloneGameMode()
 // Function Creative.CreativeModeGameMode.IsRestartPlayerUsePawnRotation
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameMode::IsRestartPlayerUsePawnRotation()
 {
@@ -9794,7 +12941,7 @@ bool ACreativeModeGameMode::IsRestartPlayerUsePawnRotation()
 // Function Creative.CreativeModeGameMode.GetCurrentModeComponent
 // (Final, Native, Public)
 // Parameters:
-// class UCreativeModeGameModeBaseComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCreativeModeGameModeBaseComponent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeGameModeBaseComponent* ACreativeModeGameMode::GetCurrentModeComponent()
 {
@@ -9819,7 +12966,7 @@ class UCreativeModeGameModeBaseComponent* ACreativeModeGameMode::GetCurrentModeC
 // Function Creative.CreativeModeGameMode.GetCreativeModeRealTeamNum
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativeModeGameMode::GetCreativeModeRealTeamNum()
 {
@@ -9844,7 +12991,7 @@ int ACreativeModeGameMode::GetCreativeModeRealTeamNum()
 // Function Creative.CreativeModeGameMode.GetCreativeModeRealTeamIDs
 // (Final, Native, Public)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> ACreativeModeGameMode::GetCreativeModeRealTeamIDs()
 {
@@ -9869,8 +13016,8 @@ TArray<int> ACreativeModeGameMode::GetCreativeModeRealTeamIDs()
 // Function Creative.CreativeModeGameMode.FindLiteComponentByClass
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  ComponentClass                 (Parm, ZeroConstructor, IsPlainOldData)
-// class ULiteComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* ComponentClass (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULiteComponent* ACreativeModeGameMode::FindLiteComponentByClass(class UClass* ComponentClass)
 {
@@ -9896,9 +13043,9 @@ class ULiteComponent* ACreativeModeGameMode::FindLiteComponentByClass(class UCla
 // Function Creative.CreativeModeGameMode.DSPlayerKickOut
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ExitReason                     (Parm, ZeroConstructor)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ExitReason (Parm, ZeroConstructor)
 
 void ACreativeModeGameMode::DSPlayerKickOut(uint64_t UID, const struct FName& PlayerType, const struct FString& ExitReason)
 {
@@ -9924,10 +13071,10 @@ void ACreativeModeGameMode::DSPlayerKickOut(uint64_t UID, const struct FName& Pl
 // Function Creative.CreativeModeGameMode.CreativeModeFindPlayerStart
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AController*             Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 IncomingName                   (Parm, ZeroConstructor)
-// bool                           bIsRevive                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* Player (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString IncomingName (Parm, ZeroConstructor)
+// bool bIsRevive (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* ACreativeModeGameMode::CreativeModeFindPlayerStart(class AController* Player, const struct FString& IncomingName, bool bIsRevive)
 {
@@ -9975,8 +13122,8 @@ void UCreativeModeGameModeComponent::ReceiveCallPlayStateFunction()
 // Function Creative.CreativeModeGameObject.UnregisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Destroy                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
+// bool Destroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameObject::UnregisterLiteComponent(class ULiteComponent* Component, bool Destroy)
 {
@@ -10001,7 +13148,7 @@ void UCreativeModeGameObject::UnregisterLiteComponent(class ULiteComponent* Comp
 // Function Creative.CreativeModeGameObject.ReturnObjectToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameObject::ReturnObjectToPool(class UObject* Obj)
 {
@@ -10025,7 +13172,7 @@ void UCreativeModeGameObject::ReturnObjectToPool(class UObject* Obj)
 // Function Creative.CreativeModeGameObject.ReturnObjectsToPool
 // (Native, Public)
 // Parameters:
-// TArray<class UObject*>         Objs                           (Parm, ZeroConstructor)
+// TArray<class UObject*> Objs (Parm, ZeroConstructor)
 
 void UCreativeModeGameObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 {
@@ -10049,7 +13196,7 @@ void UCreativeModeGameObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 // Function Creative.CreativeModeGameObject.RegisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameObject::RegisterLiteComponent(class ULiteComponent* Component)
 {
@@ -10093,7 +13240,7 @@ void UCreativeModeGameObject::ReceivePostBeginPlay()
 // Function Creative.CreativeModeGameObject.ReceiveIsDedicatedServer
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeGameObject::ReceiveIsDedicatedServer()
 {
@@ -10118,7 +13265,7 @@ bool UCreativeModeGameObject::ReceiveIsDedicatedServer()
 // Function Creative.CreativeModeGameObject.ReceiveHasAuthority
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeGameObject::ReceiveHasAuthority()
 {
@@ -10183,8 +13330,8 @@ void UCreativeModeGameObject::ReceiveBeginPlay()
 // Function Creative.CreativeModeGameObject.GetObjectsFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams                   (Parm, OutParm, ZeroConstructor)
-// TArray<class UObject*>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams (Parm, OutParm, ZeroConstructor)
+// TArray<class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UObject*> UCreativeModeGameObject::GetObjectsFromPool(TArray<struct FCreativePoolGetObjectParamInfo>* ObjectParams)
 {
@@ -10212,10 +13359,10 @@ TArray<class UObject*> UCreativeModeGameObject::GetObjectsFromPool(TArray<struct
 // Function Creative.CreativeModeGameObject.GetObjectFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, OutParm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, OutParm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeModeGameObject::GetObjectFromPool(int PoolId, class UObject* NewOuter, struct FString* InName)
 {
@@ -10245,7 +13392,7 @@ class UObject* UCreativeModeGameObject::GetObjectFromPool(int PoolId, class UObj
 // Function Creative.CreativeGameParameterManager.SetGameParameterResumeNodes
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FCreativeGameParameter> GameParameterNodes             (Parm, ZeroConstructor)
+// TArray<struct FCreativeGameParameter> GameParameterNodes (Parm, ZeroConstructor)
 
 void UCreativeGameParameterManager::SetGameParameterResumeNodes(TArray<struct FCreativeGameParameter> GameParameterNodes)
 {
@@ -10269,8 +13416,8 @@ void UCreativeGameParameterManager::SetGameParameterResumeNodes(TArray<struct FC
 // Function Creative.CreativeGameParameterManager.RemoveGameParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (ConstParm, Parm, ZeroConstructor)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (ConstParm, Parm, ZeroConstructor)
 
 void UCreativeGameParameterManager::RemoveGameParameter(const struct FString& ParameterKey, const struct FString& TemplateID)
 {
@@ -10295,7 +13442,7 @@ void UCreativeGameParameterManager::RemoveGameParameter(const struct FString& Pa
 // Function Creative.CreativeGameParameterManager.ReceiveOnGameStateBeginPlay
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeGameParameterManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -10318,8 +13465,8 @@ void UCreativeGameParameterManager::ReceiveOnGameStateBeginPlay(class AGameState
 // Function Creative.CreativeGameParameterManager.OnReceivePreGameParameterRemove
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (Parm, ZeroConstructor)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (Parm, ZeroConstructor)
 
 void UCreativeGameParameterManager::OnReceivePreGameParameterRemove(const struct FString& ParameterKey, const struct FString& TemplateID)
 {
@@ -10343,9 +13490,9 @@ void UCreativeGameParameterManager::OnReceivePreGameParameterRemove(const struct
 // Function Creative.CreativeGameParameterManager.OnReceivePostGameParameterChange
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeGameParameterManager::OnReceivePostGameParameterChange(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content)
 {
@@ -10370,9 +13517,9 @@ void UCreativeGameParameterManager::OnReceivePostGameParameterChange(const struc
 // Function Creative.CreativeGameParameterManager.OnReceivePostGameParameterAdd
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeGameParameterManager::OnReceivePostGameParameterAdd(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content)
 {
@@ -10397,7 +13544,7 @@ void UCreativeGameParameterManager::OnReceivePostGameParameterAdd(const struct F
 // Function Creative.CreativeGameParameterManager.OnGameStateBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeGameParameterManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -10418,11 +13565,44 @@ void UCreativeGameParameterManager::OnGameStateBeginPlay(class AGameStateBase* G
 }
 
 
+// Function Creative.CreativeGameParameterManager.GetHistoryData
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t HeadHash (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Seq (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> OutContent (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeGameParameterManager::GetHistoryData(uint32_t HeadHash, unsigned char Seq, TArray<unsigned char>* OutContent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeGameParameterManager.GetHistoryData");
+
+	UCreativeGameParameterManager_GetHistoryData_Params params;
+	params.HeadHash = HeadHash;
+	params.Seq = Seq;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutContent != nullptr)
+		*OutContent = params.OutContent;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeGameParameterManager.GetGameParameterResumeNodes
 // (Final, Native, Public)
 // Parameters:
-// TArray<uint32_t>               ParameterHeadHashs             (Parm, ZeroConstructor)
-// TArray<struct FCreativeGameParameter> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<uint32_t> ParameterHeadHashs (Parm, ZeroConstructor)
+// TArray<struct FCreativeGameParameter> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FCreativeGameParameter> UCreativeGameParameterManager::GetGameParameterResumeNodes(TArray<uint32_t> ParameterHeadHashs)
 {
@@ -10448,10 +13628,10 @@ TArray<struct FCreativeGameParameter> UCreativeGameParameterManager::GetGamePara
 // Function Creative.CreativeGameParameterManager.GetGameParameterContent
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (ConstParm, Parm, ZeroConstructor)
-// TArray<unsigned char>          OutContent                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (ConstParm, Parm, ZeroConstructor)
+// TArray<unsigned char> OutContent (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGameParameterManager::GetGameParameterContent(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char>* OutContent)
 {
@@ -10481,8 +13661,8 @@ bool UCreativeGameParameterManager::GetGameParameterContent(const struct FString
 // Function Creative.CreativeGameParameterManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeGameParameterManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeGameParameterManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeGameParameterManager* UCreativeGameParameterManager::Get(class UObject* WorldContext)
 {
@@ -10508,9 +13688,9 @@ class UCreativeGameParameterManager* UCreativeGameParameterManager::Get(class UO
 // Function Creative.CreativeGameParameterManager.ChangeGameParameter
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (ConstParm, Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (ConstParm, Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeGameParameterManager::ChangeGameParameter(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content)
 {
@@ -10536,9 +13716,9 @@ void UCreativeGameParameterManager::ChangeGameParameter(const struct FString& Pa
 // Function Creative.CreativeGameParameterManager.AddGameParameter
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ParameterKey                   (Parm, ZeroConstructor)
-// struct FString                 TemplateID                     (ConstParm, Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ParameterKey (Parm, ZeroConstructor)
+// struct FString TemplateID (ConstParm, Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeGameParameterManager::AddGameParameter(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content)
 {
@@ -10564,7 +13744,7 @@ void UCreativeGameParameterManager::AddGameParameter(const struct FString& Param
 // Function Creative.CreativeModeGameState.UnregisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::UnregisterLiteComponent(class ULiteComponent* Component)
 {
@@ -10588,7 +13768,7 @@ void ACreativeModeGameState::UnregisterLiteComponent(class ULiteComponent* Compo
 // Function Creative.CreativeModeGameState.SetLiteComponentTickEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::SetLiteComponentTickEnable(bool bEnabled)
 {
@@ -10609,10 +13789,34 @@ void ACreativeModeGameState::SetLiteComponentTickEnable(bool bEnabled)
 }
 
 
+// Function Creative.CreativeModeGameState.SetEnvLuaRunning
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool bRunning (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACreativeModeGameState::SetEnvLuaRunning(bool bRunning)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.SetEnvLuaRunning");
+
+	ACreativeModeGameState_SetEnvLuaRunning_Params params;
+	params.bRunning = bRunning;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeGameState.SetCurrentGameType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ECreativeModeGameType          NewGameType                    (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeGameType NewGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::SetCurrentGameType(ECreativeModeGameType NewGameType)
 {
@@ -10636,8 +13840,8 @@ void ACreativeModeGameState::SetCurrentGameType(ECreativeModeGameType NewGameTyp
 // Function Creative.CreativeModeGameState.RPC_Replay_SetInstanceDataContent
 // (Net, NetReliable, Native, Event, Public)
 // Parameters:
-// uint32_t                       InstanceID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FCreativeInstanceDataContent InstanceDataContent            (Parm)
+// uint32_t InstanceID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeInstanceDataContent InstanceDataContent (Parm)
 
 void ACreativeModeGameState::RPC_Replay_SetInstanceDataContent(uint32_t InstanceID, const struct FCreativeInstanceDataContent& InstanceDataContent)
 {
@@ -10662,7 +13866,7 @@ void ACreativeModeGameState::RPC_Replay_SetInstanceDataContent(uint32_t Instance
 // Function Creative.CreativeModeGameState.RPC_Replay_GeneraicUGC_LuaImpl
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void ACreativeModeGameState::RPC_Replay_GeneraicUGC_LuaImpl(TArray<unsigned char> Content)
 {
@@ -10685,7 +13889,7 @@ void ACreativeModeGameState::RPC_Replay_GeneraicUGC_LuaImpl(TArray<unsigned char
 // Function Creative.CreativeModeGameState.RPC_Replay_GeneraicUGC
 // (Net, Native, Event, Public)
 // Parameters:
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void ACreativeModeGameState::RPC_Replay_GeneraicUGC(TArray<unsigned char> Content)
 {
@@ -10709,7 +13913,7 @@ void ACreativeModeGameState::RPC_Replay_GeneraicUGC(TArray<unsigned char> Conten
 // Function Creative.CreativeModeGameState.RegisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::RegisterLiteComponent(class ULiteComponent* Component)
 {
@@ -10770,6 +13974,26 @@ void ACreativeModeGameState::ReceiveCreativeCollectGarbage()
 }
 
 
+// Function Creative.CreativeModeGameState.ReceiveAddEnvLuaRunningToCrashKit
+// (Event, Protected, BlueprintEvent)
+
+void ACreativeModeGameState::ReceiveAddEnvLuaRunningToCrashKit()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.ReceiveAddEnvLuaRunningToCrashKit");
+
+	ACreativeModeGameState_ReceiveAddEnvLuaRunningToCrashKit_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeGameState.ReceiveAddContextDataToCrashKit
 // (Event, Protected, BlueprintEvent)
 
@@ -10793,8 +14017,8 @@ void ACreativeModeGameState::ReceiveAddContextDataToCrashKit()
 // Function Creative.CreativeModeGameState.OnViewportSizeChanged
 // (Final, Native, Protected, HasDefaults)
 // Parameters:
-// struct FVector2D               OldViewportSize                (Parm, IsPlainOldData)
-// struct FVector2D               NewViewportSize                (Parm, IsPlainOldData)
+// struct FVector2D OldViewportSize (Parm, IsPlainOldData)
+// struct FVector2D NewViewportSize (Parm, IsPlainOldData)
 
 void ACreativeModeGameState::OnViewportSizeChanged(const struct FVector2D& OldViewportSize, const struct FVector2D& NewViewportSize)
 {
@@ -10819,7 +14043,7 @@ void ACreativeModeGameState::OnViewportSizeChanged(const struct FVector2D& OldVi
 // Function Creative.CreativeModeGameState.OnRep_InitializeGameType
 // (Final, Native, Protected)
 // Parameters:
-// ECreativeModeGameType          LastInitializeGameType         (Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeGameType LastInitializeGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::OnRep_InitializeGameType(ECreativeModeGameType LastInitializeGameType)
 {
@@ -10840,10 +14064,34 @@ void ACreativeModeGameState::OnRep_InitializeGameType(ECreativeModeGameType Last
 }
 
 
+// Function Creative.CreativeModeGameState.OnRep_EnvLuaRunning
+// (Final, Native, Protected)
+// Parameters:
+// bool OldLuaRunning (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACreativeModeGameState::OnRep_EnvLuaRunning(bool OldLuaRunning)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.OnRep_EnvLuaRunning");
+
+	ACreativeModeGameState_OnRep_EnvLuaRunning_Params params;
+	params.OldLuaRunning = OldLuaRunning;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeGameState.OnRep_CurrentStateComponent
 // (Final, Native, Protected)
 // Parameters:
-// class UCreativeModeGameStateBaseComponent* LastComponent                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeGameStateBaseComponent* LastComponent (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::OnRep_CurrentStateComponent(class UCreativeModeGameStateBaseComponent* LastComponent)
 {
@@ -10864,10 +14112,34 @@ void ACreativeModeGameState::OnRep_CurrentStateComponent(class UCreativeModeGame
 }
 
 
+// Function Creative.CreativeModeGameState.OnRep_CurrentGameTypeReplicated
+// (Final, Native, Protected)
+// Parameters:
+// ECreativeModeGameType LastCurrentGameTypeReplicated (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACreativeModeGameState::OnRep_CurrentGameTypeReplicated(ECreativeModeGameType LastCurrentGameTypeReplicated)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.OnRep_CurrentGameTypeReplicated");
+
+	ACreativeModeGameState_OnRep_CurrentGameTypeReplicated_Params params;
+	params.LastCurrentGameTypeReplicated = LastCurrentGameTypeReplicated;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeGameState.OnRep_CreativeModTemplateId
 // (Final, Native, Protected)
 // Parameters:
-// int                            LastCreativeModTemplateId      (Parm, ZeroConstructor, IsPlainOldData)
+// int LastCreativeModTemplateId (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::OnRep_CreativeModTemplateId(int LastCreativeModTemplateId)
 {
@@ -10891,7 +14163,7 @@ void ACreativeModeGameState::OnRep_CreativeModTemplateId(int LastCreativeModTemp
 // Function Creative.CreativeModeGameState.OnRep_CreativeModID
 // (Final, Native, Protected)
 // Parameters:
-// int                            LastCreativeModID              (Parm, ZeroConstructor, IsPlainOldData)
+// int LastCreativeModID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::OnRep_CreativeModID(int LastCreativeModID)
 {
@@ -10915,7 +14187,7 @@ void ACreativeModeGameState::OnRep_CreativeModID(int LastCreativeModID)
 // Function Creative.CreativeModeGameState.OnRep_BlockySlotStrings
 // (Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<struct FExtendedBlockySlotString> BlockySlotStrings              (Parm, OutParm, ZeroConstructor)
+// TArray<struct FExtendedBlockySlotString> BlockySlotStrings (Parm, OutParm, ZeroConstructor)
 
 void ACreativeModeGameState::OnRep_BlockySlotStrings(TArray<struct FExtendedBlockySlotString>* BlockySlotStrings)
 {
@@ -10937,10 +14209,34 @@ void ACreativeModeGameState::OnRep_BlockySlotStrings(TArray<struct FExtendedBloc
 }
 
 
+// Function Creative.CreativeModeGameState.OnCurrentStateComponentChanged
+// (Final, Native, Protected)
+// Parameters:
+// class UCreativeModeGameStateBaseComponent* LastComponent (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACreativeModeGameState::OnCurrentStateComponentChanged(class UCreativeModeGameStateBaseComponent* LastComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.OnCurrentStateComponentChanged");
+
+	ACreativeModeGameState_OnCurrentStateComponentChanged_Params params;
+	params.LastComponent = LastComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeGameState.OnClientRecordingStateChange
 // (Final, Native, Public)
 // Parameters:
-// EClientRecordingType           Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// EClientRecordingType Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::OnClientRecordingStateChange(EClientRecordingType Type)
 {
@@ -10964,7 +14260,7 @@ void ACreativeModeGameState::OnClientRecordingStateChange(EClientRecordingType T
 // Function Creative.CreativeModeGameState.IsOfficialGame
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsOfficialGame()
 {
@@ -10989,7 +14285,7 @@ bool ACreativeModeGameState::IsOfficialGame()
 // Function Creative.CreativeModeGameState.IsEditorMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsEditorMode()
 {
@@ -11014,7 +14310,7 @@ bool ACreativeModeGameState::IsEditorMode()
 // Function Creative.CreativeModeGameState.IsDemoGame
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsDemoGame()
 {
@@ -11039,7 +14335,7 @@ bool ACreativeModeGameState::IsDemoGame()
 // Function Creative.CreativeModeGameState.IsCreativeMode
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsCreativeMode()
 {
@@ -11064,7 +14360,7 @@ bool ACreativeModeGameState::IsCreativeMode()
 // Function Creative.CreativeModeGameState.IsCreativeEditor
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsCreativeEditor()
 {
@@ -11089,7 +14385,7 @@ bool ACreativeModeGameState::IsCreativeEditor()
 // Function Creative.CreativeModeGameState.IsAIUseDynamicBehaviorTaskNode
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::IsAIUseDynamicBehaviorTaskNode()
 {
@@ -11114,8 +14410,8 @@ bool ACreativeModeGameState::IsAIUseDynamicBehaviorTaskNode()
 // Function Creative.CreativeModeGameState.InitCreativeModID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ModID                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            TemplateID                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ModID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int TemplateID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeGameState::InitCreativeModID(int ModID, int TemplateID)
 {
@@ -11140,7 +14436,7 @@ void ACreativeModeGameState::InitCreativeModID(int ModID, int TemplateID)
 // Function Creative.CreativeModeGameState.GetPlayState
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ECreativeModePlayState         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModePlayState ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModePlayState ACreativeModeGameState::GetPlayState()
 {
@@ -11165,7 +14461,7 @@ ECreativeModePlayState ACreativeModeGameState::GetPlayState()
 // Function Creative.CreativeModeGameState.GetInitializeGameType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ECreativeModeGameType          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModeGameType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeGameType ACreativeModeGameState::GetInitializeGameType()
 {
@@ -11187,16 +14483,41 @@ ECreativeModeGameType ACreativeModeGameState::GetInitializeGameType()
 }
 
 
+// Function Creative.CreativeModeGameState.GetEnvLuaRunning
+// (Native, Public)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ACreativeModeGameState::GetEnvLuaRunning()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.GetEnvLuaRunning");
+
+	ACreativeModeGameState_GetEnvLuaRunning_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeGameState.GetDisableDistanceLevelsOutsideBox
 // (Final, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            W                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            L                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RotationAngle                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseFilter                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// int W (Parm, ZeroConstructor, IsPlainOldData)
+// int L (Parm, ZeroConstructor, IsPlainOldData)
+// float RotationAngle (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseFilter (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> ACreativeModeGameState::GetDisableDistanceLevelsOutsideBox(float X, float Y, int W, int L, float RotationAngle, bool bUseFilter)
 {
@@ -11227,7 +14548,7 @@ TArray<struct FString> ACreativeModeGameState::GetDisableDistanceLevelsOutsideBo
 // Function Creative.CreativeModeGameState.GetCurrentStateComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UCreativeModeGameStateBaseComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCreativeModeGameStateBaseComponent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeGameStateBaseComponent* ACreativeModeGameState::GetCurrentStateComponent()
 {
@@ -11249,10 +14570,35 @@ class UCreativeModeGameStateBaseComponent* ACreativeModeGameState::GetCurrentSta
 }
 
 
+// Function Creative.CreativeModeGameState.GetCurrentGameTypeReplicated
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ECreativeModeGameType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECreativeModeGameType ACreativeModeGameState::GetCurrentGameTypeReplicated()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.GetCurrentGameTypeReplicated");
+
+	ACreativeModeGameState_GetCurrentGameTypeReplicated_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeModeGameState.GetCurrentGameType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ECreativeModeGameType          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModeGameType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeGameType ACreativeModeGameState::GetCurrentGameType()
 {
@@ -11277,7 +14623,7 @@ ECreativeModeGameType ACreativeModeGameState::GetCurrentGameType()
 // Function Creative.CreativeModeGameState.GetCurCreativeType
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativeModeGameState::GetCurCreativeType()
 {
@@ -11302,7 +14648,7 @@ int ACreativeModeGameState::GetCurCreativeType()
 // Function Creative.CreativeModeGameState.GetCurCreativeModResList
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ACreativeModeGameState::GetCurCreativeModResList()
 {
@@ -11326,7 +14672,7 @@ struct FString ACreativeModeGameState::GetCurCreativeModResList()
 // Function Creative.CreativeModeGameState.GetCurCreativeModMapID
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ACreativeModeGameState::GetCurCreativeModMapID()
 {
@@ -11350,7 +14696,7 @@ struct FString ACreativeModeGameState::GetCurCreativeModMapID()
 // Function Creative.CreativeModeGameState.GetCurCreativeModID
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativeModeGameState::GetCurCreativeModID()
 {
@@ -11375,7 +14721,7 @@ int ACreativeModeGameState::GetCurCreativeModID()
 // Function Creative.CreativeModeGameState.GetCreativeModTemplateId
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativeModeGameState::GetCreativeModTemplateId()
 {
@@ -11400,7 +14746,7 @@ int ACreativeModeGameState::GetCreativeModTemplateId()
 // Function Creative.CreativeModeGameState.GetCreativeModID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativeModeGameState::GetCreativeModID()
 {
@@ -11425,8 +14771,8 @@ int ACreativeModeGameState::GetCreativeModID()
 // Function Creative.CreativeModeGameState.FindLiteComponentByClass
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  ComponentClass                 (Parm, ZeroConstructor, IsPlainOldData)
-// class ULiteComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* ComponentClass (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULiteComponent* ACreativeModeGameState::FindLiteComponentByClass(class UClass* ComponentClass)
 {
@@ -11452,8 +14798,8 @@ class ULiteComponent* ACreativeModeGameState::FindLiteComponentByClass(class UCl
 // Function Creative.CreativeModeGameState.FilterLevelByName
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FName                   LevelName                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName LevelName (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::FilterLevelByName(const struct FName& LevelName)
 {
@@ -11473,6 +14819,30 @@ bool ACreativeModeGameState::FilterLevelByName(const struct FName& LevelName)
 	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeModeGameState.ClientSetCurrentStateComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCreativeModeGameStateBaseComponent* CurStateComponent (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACreativeModeGameState::ClientSetCurrentStateComponent(class UCreativeModeGameStateBaseComponent* CurStateComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeGameState.ClientSetCurrentStateComponent");
+
+	ACreativeModeGameState_ClientSetCurrentStateComponent_Params params;
+	params.CurStateComponent = CurStateComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
@@ -11521,8 +14891,8 @@ void ACreativeModeGameState::ClearAndReImportInstance()
 // Function Creative.CreativeModeGameState.CanShowDropEffectByItemID
 // (Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeGameState::CanShowDropEffectByItemID(int ItemId)
 {
@@ -11548,7 +14918,7 @@ bool ACreativeModeGameState::CanShowDropEffectByItemID(int ItemId)
 // Function Creative.CreativeModeGameStateComponent.SetPlayState
 // (Final, Native, Protected)
 // Parameters:
-// ECreativeModePlayState         newPlayState                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModePlayState newPlayState (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameStateComponent::SetPlayState(ECreativeModePlayState newPlayState)
 {
@@ -11635,7 +15005,7 @@ void UCreativeModeGameStateComponent::OnRep_CurPlayState()
 // Function Creative.CreativeModeGameStateComponent.GetPlayState
 // (Native, Protected, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ECreativeModePlayState         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECreativeModePlayState ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModePlayState UCreativeModeGameStateComponent::GetPlayState()
 {
@@ -11660,7 +15030,7 @@ ECreativeModePlayState UCreativeModeGameStateComponent::GetPlayState()
 // Function Creative.CreativeGlobalApiObject.Print
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 LogText                        (Parm, ZeroConstructor)
+// struct FString LogText (Parm, ZeroConstructor)
 
 void UCreativeGlobalApiObject::Print(const struct FString& LogText)
 {
@@ -11684,10 +15054,10 @@ void UCreativeGlobalApiObject::Print(const struct FString& LogText)
 // Function Creative.CreativeGlobalApiObject.CPPExecutionConsumptionTest
 // (Final, Native, Public)
 // Parameters:
-// int                            A                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          B                              (Parm, ZeroConstructor, IsPlainOldData)
-// double                         C                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int A (Parm, ZeroConstructor, IsPlainOldData)
+// float B (Parm, ZeroConstructor, IsPlainOldData)
+// double C (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeGlobalApiObject::CPPExecutionConsumptionTest(int A, float B, double C)
 {
@@ -11715,10 +15085,10 @@ float UCreativeGlobalApiObject::CPPExecutionConsumptionTest(int A, float B, doub
 // Function Creative.CreativeGridLevelsManager.UpdateBatchActorInstances
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// int                            AssetId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaterialID                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReplaceAll                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MaterialID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReplaceAll (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeGridLevelsManager::UpdateBatchActorInstances(const struct FString& GridName, int AssetId, int MaterialID, bool ReplaceAll)
 {
@@ -11745,8 +15115,8 @@ void UCreativeGridLevelsManager::UpdateBatchActorInstances(const struct FString&
 // Function Creative.CreativeGridLevelsManager.UnLoadGridLevelsBatchActor
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeGridLevelsManager::UnLoadGridLevelsBatchActor(const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -11771,7 +15141,7 @@ void UCreativeGridLevelsManager::UnLoadGridLevelsBatchActor(const struct FString
 // Function Creative.CreativeGridLevelsManager.StaticMeshObjectRelieveBatch
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, OutParm, ZeroConstructor)
+// struct FString InstanceID (Parm, OutParm, ZeroConstructor)
 
 void UCreativeGridLevelsManager::StaticMeshObjectRelieveBatch(struct FString* InstanceID)
 {
@@ -11797,7 +15167,7 @@ void UCreativeGridLevelsManager::StaticMeshObjectRelieveBatch(struct FString* In
 // Function Creative.CreativeGridLevelsManager.StaticMeshObjectReBatch
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, OutParm, ZeroConstructor)
+// struct FString InstanceID (Parm, OutParm, ZeroConstructor)
 
 void UCreativeGridLevelsManager::StaticMeshObjectReBatch(struct FString* InstanceID)
 {
@@ -11823,8 +15193,8 @@ void UCreativeGridLevelsManager::StaticMeshObjectReBatch(struct FString* Instanc
 // Function Creative.CreativeGridLevelsManager.RemoveObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::RemoveObject(const struct FString& InstanceID)
 {
@@ -11870,11 +15240,11 @@ void UCreativeGridLevelsManager::ReceiveRegistInstanceValueListener()
 // Function Creative.CreativeGridLevelsManager.ReceiveDelayUpdateBatchActorInstances
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// int                            AssetId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaterialID                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReplaceAll                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MoveForwardTimeStamp           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// int AssetId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MaterialID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReplaceAll (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float MoveForwardTimeStamp (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeGridLevelsManager::ReceiveDelayUpdateBatchActorInstances(const struct FString& GridName, int AssetId, int MaterialID, bool ReplaceAll, float MoveForwardTimeStamp)
 {
@@ -11922,8 +15292,8 @@ void UCreativeGridLevelsManager::ReceiveClearAllData()
 // Function Creative.CreativeGridLevelsManager.ReceiveCheckObjectCanBatch
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ReceiveCheckObjectCanBatch(const struct FString& InstanceID)
 {
@@ -11948,9 +15318,9 @@ bool UCreativeGridLevelsManager::ReceiveCheckObjectCanBatch(const struct FString
 // Function Creative.CreativeGridLevelsManager.ObjectAddToGridCellMap
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              Index                          (ConstParm, Parm, IsPlainOldData)
-// struct FString                 InstanceID                     (ConstParm, Parm, ZeroConstructor)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector Index (ConstParm, Parm, IsPlainOldData)
+// struct FString InstanceID (ConstParm, Parm, ZeroConstructor)
 
 void UCreativeGridLevelsManager::ObjectAddToGridCellMap(const struct FString& GridName, const struct FIntVector& Index, const struct FString& InstanceID)
 {
@@ -11976,8 +15346,8 @@ void UCreativeGridLevelsManager::ObjectAddToGridCellMap(const struct FString& Gr
 // Function Creative.CreativeGridLevelsManager.LoadGridLevelsBatchActor
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeGridLevelsManager::LoadGridLevelsBatchActor(const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -12002,7 +15372,7 @@ void UCreativeGridLevelsManager::LoadGridLevelsBatchActor(const struct FString& 
 // Function Creative.CreativeGridLevelsManager.IsCreativeEidtMode
 // (Final, Native, Private)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::IsCreativeEidtMode()
 {
@@ -12027,9 +15397,9 @@ bool UCreativeGridLevelsManager::IsCreativeEidtMode()
 // Function Creative.CreativeGridLevelsManager.GridCellMapRemoveObject
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              Index                          (ConstParm, Parm, IsPlainOldData)
-// struct FString                 InstanceID                     (ConstParm, Parm, ZeroConstructor)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector Index (ConstParm, Parm, IsPlainOldData)
+// struct FString InstanceID (ConstParm, Parm, ZeroConstructor)
 
 void UCreativeGridLevelsManager::GridCellMapRemoveObject(const struct FString& GridName, const struct FIntVector& Index, const struct FString& InstanceID)
 {
@@ -12055,7 +15425,7 @@ void UCreativeGridLevelsManager::GridCellMapRemoveObject(const struct FString& G
 // Function Creative.CreativeGridLevelsManager.GetStaticMeshBatchActorPath
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeGridLevelsManager::GetStaticMeshBatchActorPath()
 {
@@ -12079,7 +15449,7 @@ struct FString UCreativeGridLevelsManager::GetStaticMeshBatchActorPath()
 // Function Creative.CreativeGridLevelsManager.GetSingleDestructibleMeshBatchActor
 // (Final, Native, Private)
 // Parameters:
-// class ACreativeDestructibleMeshBatchActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ACreativeDestructibleMeshBatchActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativeDestructibleMeshBatchActor* UCreativeGridLevelsManager::GetSingleDestructibleMeshBatchActor()
 {
@@ -12104,8 +15474,8 @@ class ACreativeDestructibleMeshBatchActor* UCreativeGridLevelsManager::GetSingle
 // Function Creative.CreativeGridLevelsManager.GetSingleBatchActor
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// class ACreativeModeStaticMeshBatchActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// class ACreativeModeStaticMeshBatchActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativeModeStaticMeshBatchActor* UCreativeGridLevelsManager::GetSingleBatchActor(const struct FString& GridName)
 {
@@ -12131,7 +15501,7 @@ class ACreativeModeStaticMeshBatchActor* UCreativeGridLevelsManager::GetSingleBa
 // Function Creative.CreativeGridLevelsManager.GetRelieveBatchDistance
 // (Final, Native, Public)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeGridLevelsManager::GetRelieveBatchDistance()
 {
@@ -12156,7 +15526,7 @@ float UCreativeGridLevelsManager::GetRelieveBatchDistance()
 // Function Creative.CreativeGridLevelsManager.GetReBatchDistance
 // (Final, Native, Public)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeGridLevelsManager::GetReBatchDistance()
 {
@@ -12181,9 +15551,9 @@ float UCreativeGridLevelsManager::GetReBatchDistance()
 // Function Creative.CreativeGridLevelsManager.GetOnCellIndex
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FIntVector              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FIntVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FIntVector UCreativeGridLevelsManager::GetOnCellIndex(const struct FString& GridName, const struct FVector& Location)
 {
@@ -12210,8 +15580,8 @@ struct FIntVector UCreativeGridLevelsManager::GetOnCellIndex(const struct FStrin
 // Function Creative.CreativeGridLevelsManager.GetObjectTransform
 // (Final, Native, Private, HasDefaults)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UCreativeGridLevelsManager::GetObjectTransform(const struct FString& ID)
 {
@@ -12237,8 +15607,8 @@ struct FTransform UCreativeGridLevelsManager::GetObjectTransform(const struct FS
 // Function Creative.CreativeGridLevelsManager.GetObjectStreamingType
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// ECreativeModeActorStreamingType ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// ECreativeModeActorStreamingType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeActorStreamingType UCreativeGridLevelsManager::GetObjectStreamingType(const struct FString& ID)
 {
@@ -12264,8 +15634,8 @@ ECreativeModeActorStreamingType UCreativeGridLevelsManager::GetObjectStreamingTy
 // Function Creative.CreativeGridLevelsManager.GetObjectRuntimeGrid
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeGridLevelsManager::GetObjectRuntimeGrid(const struct FString& ID)
 {
@@ -12291,10 +15661,10 @@ struct FString UCreativeGridLevelsManager::GetObjectRuntimeGrid(const struct FSt
 // Function Creative.CreativeGridLevelsManager.GetObjectOnCellIndexByLocation
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FIntVector              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FIntVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FIntVector UCreativeGridLevelsManager::GetObjectOnCellIndexByLocation(const struct FString& InstanceID, const struct FString& GridName, const struct FVector& Location)
 {
@@ -12322,8 +15692,8 @@ struct FIntVector UCreativeGridLevelsManager::GetObjectOnCellIndexByLocation(con
 // Function Creative.CreativeGridLevelsManager.GetObjectOnCellIndex
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FIntVector              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FIntVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FIntVector UCreativeGridLevelsManager::GetObjectOnCellIndex(const struct FString& InstanceID)
 {
@@ -12349,8 +15719,8 @@ struct FIntVector UCreativeGridLevelsManager::GetObjectOnCellIndex(const struct 
 // Function Creative.CreativeGridLevelsManager.GetObjectIsPrefab
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::GetObjectIsPrefab(const struct FString& ID)
 {
@@ -12376,8 +15746,8 @@ bool UCreativeGridLevelsManager::GetObjectIsPrefab(const struct FString& ID)
 // Function Creative.CreativeGridLevelsManager.GetObjectAssetID
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeGridLevelsManager::GetObjectAssetID(const struct FString& ID)
 {
@@ -12403,8 +15773,8 @@ int UCreativeGridLevelsManager::GetObjectAssetID(const struct FString& ID)
 // Function Creative.CreativeGridLevelsManager.GetGridLoadingRange
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeGridLevelsManager::GetGridLoadingRange(const struct FString& GridName)
 {
@@ -12430,7 +15800,7 @@ float UCreativeGridLevelsManager::GetGridLoadingRange(const struct FString& Grid
 // Function Creative.CreativeGridLevelsManager.GetGridList
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeGridLevelsManager::GetGridList()
 {
@@ -12455,7 +15825,7 @@ TArray<struct FString> UCreativeGridLevelsManager::GetGridList()
 // Function Creative.CreativeGridLevelsManager.GetDestructibleMeshBatchActorPath
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeGridLevelsManager::GetDestructibleMeshBatchActorPath()
 {
@@ -12479,7 +15849,7 @@ struct FString UCreativeGridLevelsManager::GetDestructibleMeshBatchActorPath()
 // Function Creative.CreativeGridLevelsManager.GetDefaultGridName
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeGridLevelsManager::GetDefaultGridName()
 {
@@ -12503,8 +15873,8 @@ struct FString UCreativeGridLevelsManager::GetDefaultGridName()
 // Function Creative.CreativeGridLevelsManager.GetCellWidthHeight
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UCreativeGridLevelsManager::GetCellWidthHeight(const struct FString& GridName)
 {
@@ -12530,9 +15900,9 @@ struct FVector2D UCreativeGridLevelsManager::GetCellWidthHeight(const struct FSt
 // Function Creative.CreativeGridLevelsManager.GetCellCenterLocation
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativeGridLevelsManager::GetCellCenterLocation(const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -12559,9 +15929,9 @@ struct FVector UCreativeGridLevelsManager::GetCellCenterLocation(const struct FS
 // Function Creative.CreativeGridLevelsManager.GetAxisIndex
 // (Final, Native, Public, Const)
 // Parameters:
-// float                          Pos                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlockLenght                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Pos (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float BlockLenght (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeGridLevelsManager::GetAxisIndex(float Pos, float BlockLenght)
 {
@@ -12588,8 +15958,8 @@ int UCreativeGridLevelsManager::GetAxisIndex(float Pos, float BlockLenght)
 // Function Creative.CreativeGridLevelsManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeGridLevelsManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeGridLevelsManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeGridLevelsManager* UCreativeGridLevelsManager::Get(class UObject* WorldContext)
 {
@@ -12615,8 +15985,8 @@ class UCreativeGridLevelsManager* UCreativeGridLevelsManager::Get(class UObject*
 // Function Creative.CreativeGridLevelsManager.CheckObjectBeRelieveBatch
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::CheckObjectBeRelieveBatch(const struct FString& ID)
 {
@@ -12642,8 +16012,8 @@ bool UCreativeGridLevelsManager::CheckObjectBeRelieveBatch(const struct FString&
 // Function Creative.CreativeGridLevelsManager.CheckObjectBeBatch
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::CheckObjectBeBatch(const struct FString& ID)
 {
@@ -12669,8 +16039,8 @@ bool UCreativeGridLevelsManager::CheckObjectBeBatch(const struct FString& ID)
 // Function Creative.CreativeGridLevelsManager.CheckAndRemoveObjectForBatchData
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::CheckAndRemoveObjectForBatchData(const struct FString& ID)
 {
@@ -12696,8 +16066,8 @@ bool UCreativeGridLevelsManager::CheckAndRemoveObjectForBatchData(const struct F
 // Function Creative.CreativeGridLevelsManager.CheckAndAddObjectToBatchData
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::CheckAndAddObjectToBatchData(const struct FString& ID)
 {
@@ -12723,8 +16093,8 @@ bool UCreativeGridLevelsManager::CheckAndAddObjectToBatchData(const struct FStri
 // Function Creative.CreativeGridLevelsManager.ChangeObjectTransform
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ChangeObjectTransform(const struct FString& InstanceID)
 {
@@ -12750,9 +16120,9 @@ bool UCreativeGridLevelsManager::ChangeObjectTransform(const struct FString& Ins
 // Function Creative.CreativeGridLevelsManager.ChangeObjectStreamingType
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// ECreativeModeActorStreamingType NewStremaingType               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// ECreativeModeActorStreamingType NewStremaingType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ChangeObjectStreamingType(const struct FString& InstanceID, ECreativeModeActorStreamingType NewStremaingType)
 {
@@ -12779,7 +16149,7 @@ bool UCreativeGridLevelsManager::ChangeObjectStreamingType(const struct FString&
 // Function Creative.CreativeGridLevelsManager.ChangeObjectMaterialIds
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ChangeObjectMaterialIds()
 {
@@ -12804,8 +16174,8 @@ bool UCreativeGridLevelsManager::ChangeObjectMaterialIds()
 // Function Creative.CreativeGridLevelsManager.ChangeObjectMaterialId
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ChangeObjectMaterialId(const struct FString& InstanceID)
 {
@@ -12831,9 +16201,9 @@ bool UCreativeGridLevelsManager::ChangeObjectMaterialId(const struct FString& In
 // Function Creative.CreativeGridLevelsManager.ChangeObjectIsPrefab
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bIsPrefab                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bIsPrefab (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::ChangeObjectIsPrefab(const struct FString& InstanceID, bool bIsPrefab)
 {
@@ -12860,8 +16230,8 @@ bool UCreativeGridLevelsManager::ChangeObjectIsPrefab(const struct FString& Inst
 // Function Creative.CreativeGridLevelsManager.AddObjectToGridLevels
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGridLevelsManager::AddObjectToGridLevels(struct FString* InstanceID)
 {
@@ -12910,8 +16280,8 @@ void UCreativeGridLevelsManager::ActivateAllAlwaysLoadCellIndex()
 // Function Creative.CreativeGroupManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeGroupManager*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeGroupManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeGroupManager* UCreativeGroupManager::Get(class UObject* WorldContext)
 {
@@ -12937,11 +16307,11 @@ class UCreativeGroupManager* UCreativeGroupManager::Get(class UObject* WorldCont
 // Function Creative.CreativeGuideComponent.SweepSingleByChannel
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FHitResult              OutHit                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<class AActor*>          IgnoreActors                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHitResult OutHit (Parm, OutParm, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<class AActor*> IgnoreActors (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGuideComponent::SweepSingleByChannel(const struct FVector& Start, const struct FVector& End, TArray<class AActor*> IgnoreActors, struct FHitResult* OutHit)
 {
@@ -12972,7 +16342,7 @@ bool UCreativeGuideComponent::SweepSingleByChannel(const struct FVector& Start, 
 // Function Creative.CreativeGuideComponent.GenereateSplineMeshes
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         Points                         (Parm, ZeroConstructor)
+// TArray<struct FVector> Points (Parm, ZeroConstructor)
 
 void UCreativeGuideComponent::GenereateSplineMeshes(TArray<struct FVector> Points)
 {
@@ -12996,9 +16366,9 @@ void UCreativeGuideComponent::GenereateSplineMeshes(TArray<struct FVector> Point
 // Function Creative.CreativeGuideMeshComponent.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeGuideMeshComponent::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -13025,8 +16395,8 @@ bool UCreativeGuideMeshComponent::OnReturnToPool(class UObject* NewOuter, uint32
 // Function Creative.CreativeGuideMeshComponent.OnPickFromPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativeGuideMeshComponent::OnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -13051,7 +16421,7 @@ void UCreativeGuideMeshComponent::OnPickFromPool(class UObject* NewOuter, const 
 // Function Creative.CreativeModeInGameManagerCenter.GetIsBeginPlayEnded
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeModeInGameManagerCenter::GetIsBeginPlayEnded()
 {
@@ -13097,7 +16467,7 @@ void UCreativeInstanceManager::UpdateModBinInstanceCount()
 // Function Creative.CreativeInstanceManager.SetModBinInstanceCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::SetModBinInstanceCount(int Count)
 {
@@ -13121,10 +16491,10 @@ void UCreativeInstanceManager::SetModBinInstanceCount(int Count)
 // Function Creative.CreativeInstanceManager.SetInstanceValue
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::SetInstanceValue(const struct FString& InstanceID, const struct FString& Key, const struct FString& Value)
 {
@@ -13151,8 +16521,8 @@ bool UCreativeInstanceManager::SetInstanceValue(const struct FString& InstanceID
 // Function Creative.CreativeInstanceManager.SetInstanceDataContents
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint16_t                       Seq                            (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FCreativeInstanceDataContent> InstanceDataContents           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// uint16_t Seq (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FCreativeInstanceDataContent> InstanceDataContents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeInstanceManager::SetInstanceDataContents(uint16_t Seq, TArray<struct FCreativeInstanceDataContent> InstanceDataContents)
 {
@@ -13177,8 +16547,8 @@ void UCreativeInstanceManager::SetInstanceDataContents(uint16_t Seq, TArray<stru
 // Function Creative.CreativeInstanceManager.SetInstanceContainerContent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          ContainerContent               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// uint32_t                       NewSeq                         (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ContainerContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// uint32_t NewSeq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::SetInstanceContainerContent(TArray<unsigned char> ContainerContent, uint32_t NewSeq)
 {
@@ -13203,7 +16573,7 @@ void UCreativeInstanceManager::SetInstanceContainerContent(TArray<unsigned char>
 // Function Creative.CreativeInstanceManager.SendModBinaryDataToReplay
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InBinaryData                   (Parm, OutParm, ZeroConstructor)
+// TArray<unsigned char> InBinaryData (Parm, OutParm, ZeroConstructor)
 
 void UCreativeInstanceManager::SendModBinaryDataToReplay(TArray<unsigned char>* InBinaryData)
 {
@@ -13250,7 +16620,7 @@ void UCreativeInstanceManager::ReqInstanceContainerContentTimeoutCheck()
 // Function Creative.CreativeInstanceManager.ReqInstanceContainerContentEnd
 // (Final, Native, Protected)
 // Parameters:
-// bool                           IsTimeout                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsTimeout (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::ReqInstanceContainerContentEnd(bool IsTimeout)
 {
@@ -13274,8 +16644,8 @@ void UCreativeInstanceManager::ReqInstanceContainerContentEnd(bool IsTimeout)
 // Function Creative.CreativeInstanceManager.RemoveInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           bSkipCheck                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool bSkipCheck (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::RemoveInstance(const struct FString& ID, bool bSkipCheck)
 {
@@ -13300,8 +16670,8 @@ void UCreativeInstanceManager::RemoveInstance(const struct FString& ID, bool bSk
 // Function Creative.CreativeInstanceManager.RemoveCppInstanceNode
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::RemoveCppInstanceNode(const struct FString& ID)
 {
@@ -13348,7 +16718,7 @@ void UCreativeInstanceManager::RecordAllInstanceDataByRPC()
 // Function Creative.CreativeInstanceManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -13413,8 +16783,8 @@ void UCreativeInstanceManager::OnRep_ModBinInstanceCount()
 // Function Creative.CreativeInstanceManager.OnReceivePreInstanceRemove
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           IsRollback                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool IsRollback (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnReceivePreInstanceRemove(const struct FString& ID, bool IsRollback)
 {
@@ -13438,9 +16808,9 @@ void UCreativeInstanceManager::OnReceivePreInstanceRemove(const struct FString& 
 // Function Creative.CreativeInstanceManager.OnReceivePostInstanceChange
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           IsRollback                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool IsRollback (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnReceivePostInstanceChange(const struct FString& ID, TArray<unsigned char> Content, bool IsRollback)
 {
@@ -13465,9 +16835,9 @@ void UCreativeInstanceManager::OnReceivePostInstanceChange(const struct FString&
 // Function Creative.CreativeInstanceManager.OnReceivePostInstanceAdd
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           IsRollback                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool IsRollback (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnReceivePostInstanceAdd(const struct FString& ID, TArray<unsigned char> Content, bool IsRollback)
 {
@@ -13533,7 +16903,7 @@ void UCreativeInstanceManager::OnReadyToAddInstance()
 // Function Creative.CreativeInstanceManager.OnPlayerControllerBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnPlayerControllerBeginPlay(class APlayerController* PlayerController)
 {
@@ -13557,8 +16927,8 @@ void UCreativeInstanceManager::OnPlayerControllerBeginPlay(class APlayerControll
 // Function Creative.CreativeInstanceManager.OnGameTypeChanged
 // (Final, Native, Public)
 // Parameters:
-// unsigned char                  LastGameType                   (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  CurrentGameType                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char LastGameType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char CurrentGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnGameTypeChanged(unsigned char LastGameType, unsigned char CurrentGameType)
 {
@@ -13583,7 +16953,7 @@ void UCreativeInstanceManager::OnGameTypeChanged(unsigned char LastGameType, uns
 // Function Creative.CreativeInstanceManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -13607,7 +16977,7 @@ void UCreativeInstanceManager::OnGameStateBeginPlay(class AGameStateBase* GameSt
 // Function Creative.CreativeInstanceManager.IsInstanceReplicatTreeReplicateComplete
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::IsInstanceReplicatTreeReplicateComplete()
 {
@@ -13632,7 +17002,7 @@ bool UCreativeInstanceManager::IsInstanceReplicatTreeReplicateComplete()
 // Function Creative.CreativeInstanceManager.IsInstanceDataTreeReplicateComplete
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::IsInstanceDataTreeReplicateComplete()
 {
@@ -13657,8 +17027,8 @@ bool UCreativeInstanceManager::IsInstanceDataTreeReplicateComplete()
 // Function Creative.CreativeInstanceManager.IsAssetRuntimeObjectBox
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::IsAssetRuntimeObjectBox(const struct FString& ID)
 {
@@ -13684,8 +17054,8 @@ bool UCreativeInstanceManager::IsAssetRuntimeObjectBox(const struct FString& ID)
 // Function Creative.CreativeInstanceManager.InitExpiredAndDebugAssetID
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<int>                    ExpiredAssets                  (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    DebugAssets                    (Parm, OutParm, ZeroConstructor)
+// TArray<int> ExpiredAssets (Parm, OutParm, ZeroConstructor)
+// TArray<int> DebugAssets (Parm, OutParm, ZeroConstructor)
 
 void UCreativeInstanceManager::InitExpiredAndDebugAssetID(TArray<int>* ExpiredAssets, TArray<int>* DebugAssets)
 {
@@ -13713,7 +17083,7 @@ void UCreativeInstanceManager::InitExpiredAndDebugAssetID(TArray<int>* ExpiredAs
 // Function Creative.CreativeInstanceManager.HasReadyToAddInstance
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::HasReadyToAddInstance()
 {
@@ -13738,7 +17108,7 @@ bool UCreativeInstanceManager::HasReadyToAddInstance()
 // Function Creative.CreativeInstanceManager.HasAuthorityOrReplay
 // (Final, Native, Private, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::HasAuthorityOrReplay()
 {
@@ -13763,8 +17133,8 @@ bool UCreativeInstanceManager::HasAuthorityOrReplay()
 // Function Creative.CreativeInstanceManager.GetObjectAssetPath
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeInstanceManager::GetObjectAssetPath(const struct FString& ID)
 {
@@ -13790,7 +17160,7 @@ struct FString UCreativeInstanceManager::GetObjectAssetPath(const struct FString
 // Function Creative.CreativeInstanceManager.GetModBinInstanceCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeInstanceManager::GetModBinInstanceCount()
 {
@@ -13815,8 +17185,8 @@ int UCreativeInstanceManager::GetModBinInstanceCount()
 // Function Creative.CreativeInstanceManager.GetModBinaryDataFromReplay
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InBinaryData                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> InBinaryData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::GetModBinaryDataFromReplay(TArray<unsigned char> InBinaryData)
 {
@@ -13842,8 +17212,8 @@ bool UCreativeInstanceManager::GetModBinaryDataFromReplay(TArray<unsigned char> 
 // Function Creative.CreativeInstanceManager.GetInstanceIsDestructible
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::GetInstanceIsDestructible(const struct FString& ID)
 {
@@ -13869,8 +17239,8 @@ bool UCreativeInstanceManager::GetInstanceIsDestructible(const struct FString& I
 // Function Creative.CreativeInstanceManager.GetInstanceIsCustomUI
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceManager::GetInstanceIsCustomUI(const struct FString& ID)
 {
@@ -13896,7 +17266,7 @@ bool UCreativeInstanceManager::GetInstanceIsCustomUI(const struct FString& ID)
 // Function Creative.CreativeInstanceManager.GetInstanceDataTreeCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeInstanceManager::GetInstanceDataTreeCount()
 {
@@ -13921,8 +17291,8 @@ int UCreativeInstanceManager::GetInstanceDataTreeCount()
 // Function Creative.CreativeInstanceManager.GetInstanceDataContents
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<uint32_t>               InstanceIDs                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FCreativeInstanceRespondPullDataSegment> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<uint32_t> InstanceIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FCreativeInstanceRespondPullDataSegment> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FCreativeInstanceRespondPullDataSegment> UCreativeInstanceManager::GetInstanceDataContents(TArray<uint32_t> InstanceIDs)
 {
@@ -13948,8 +17318,8 @@ TArray<struct FCreativeInstanceRespondPullDataSegment> UCreativeInstanceManager:
 // Function Creative.CreativeInstanceManager.GetInstanceDataContent
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeInstanceManager::GetInstanceDataContent(const struct FString& InstanceID)
 {
@@ -13975,7 +17345,7 @@ TArray<unsigned char> UCreativeInstanceManager::GetInstanceDataContent(const str
 // Function Creative.CreativeInstanceManager.GetInstanceContainerCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeInstanceManager::GetInstanceContainerCount()
 {
@@ -14000,9 +17370,9 @@ int UCreativeInstanceManager::GetInstanceContainerCount()
 // Function Creative.CreativeInstanceManager.GetInstanceContainerContent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       BaseSeq                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       OutSeq                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// uint32_t BaseSeq (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t OutSeq (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeInstanceManager::GetInstanceContainerContent(uint32_t BaseSeq, uint32_t* OutSeq)
 {
@@ -14031,8 +17401,8 @@ TArray<unsigned char> UCreativeInstanceManager::GetInstanceContainerContent(uint
 // Function Creative.CreativeInstanceManager.GetInstanceBox
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FBox                    ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FBox ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FBox UCreativeInstanceManager::GetInstanceBox(const struct FString& ID)
 {
@@ -14058,8 +17428,8 @@ struct FBox UCreativeInstanceManager::GetInstanceBox(const struct FString& ID)
 // Function Creative.CreativeInstanceManager.GetCppInstanceNode
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FCreativeInstanceNode   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FCreativeInstanceNode ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCreativeInstanceNode UCreativeInstanceManager::GetCppInstanceNode(const struct FString& ID)
 {
@@ -14085,8 +17455,8 @@ struct FCreativeInstanceNode UCreativeInstanceManager::GetCppInstanceNode(const 
 // Function Creative.CreativeInstanceManager.GetAssetBox
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FBox                    ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FBox ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FBox UCreativeInstanceManager::GetAssetBox(const struct FString& ID)
 {
@@ -14112,8 +17482,8 @@ struct FBox UCreativeInstanceManager::GetAssetBox(const struct FString& ID)
 // Function Creative.CreativeInstanceManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeInstanceManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeInstanceManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeInstanceManager* UCreativeInstanceManager::Get(class UObject* WorldContext)
 {
@@ -14139,8 +17509,8 @@ class UCreativeInstanceManager* UCreativeInstanceManager::Get(class UObject* Wor
 // Function Creative.CreativeInstanceManager.GenerateDestructionUniqueID
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeInstanceManager::GenerateDestructionUniqueID(uint32_t ID)
 {
@@ -14166,8 +17536,8 @@ uint32_t UCreativeInstanceManager::GenerateDestructionUniqueID(uint32_t ID)
 // Function Creative.CreativeInstanceManager.DestroyInstance
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeInstanceManager::DestroyInstance(const struct FString& InstanceID)
 {
@@ -14192,8 +17562,8 @@ struct FString UCreativeInstanceManager::DestroyInstance(const struct FString& I
 // Function Creative.CreativeInstanceManager.ClientPreAddInstance
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeInstanceManager::ClientPreAddInstance(const struct FString& ID, TArray<unsigned char> Content)
 {
@@ -14260,9 +17630,9 @@ void UCreativeInstanceManager::CheckAndReqRPCReplicatedInstanceContainerContent(
 // Function Creative.CreativeInstanceManager.ChangeInstance
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bCallReceiveChange             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bCallReceiveChange (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceManager::ChangeInstance(const struct FString& ID, TArray<unsigned char> Content, bool bCallReceiveChange)
 {
@@ -14288,9 +17658,9 @@ void UCreativeInstanceManager::ChangeInstance(const struct FString& ID, TArray<u
 // Function Creative.CreativeInstanceManager.ChangeCppInstanceNode
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FCreativeInstanceNode   Node                           (Parm, OutParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FCreativeInstanceNode Node (Parm, OutParm)
 
 void UCreativeInstanceManager::ChangeCppInstanceNode(const struct FString& ID, const struct FString& Key, struct FCreativeInstanceNode* Node)
 {
@@ -14318,8 +17688,8 @@ void UCreativeInstanceManager::ChangeCppInstanceNode(const struct FString& ID, c
 // Function Creative.CreativeInstanceManager.AddInstance
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeInstanceManager::AddInstance(const struct FString& ID, TArray<unsigned char> Content)
 {
@@ -14344,8 +17714,8 @@ void UCreativeInstanceManager::AddInstance(const struct FString& ID, TArray<unsi
 // Function Creative.CreativeInstanceManager.AddCppInstanceNode
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FCreativeInstanceNode   Node                           (Parm, OutParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FCreativeInstanceNode Node (Parm, OutParm)
 
 void UCreativeInstanceManager::AddCppInstanceNode(const struct FString& ID, struct FCreativeInstanceNode* Node)
 {
@@ -14372,7 +17742,7 @@ void UCreativeInstanceManager::AddCppInstanceNode(const struct FString& ID, stru
 // Function Creative.CreativeInstanceManager.AddBuildingFlag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
+// struct FString ID (Parm, ZeroConstructor)
 
 void UCreativeInstanceManager::AddBuildingFlag(const struct FString& ID)
 {
@@ -14396,8 +17766,8 @@ void UCreativeInstanceManager::AddBuildingFlag(const struct FString& ID)
 // Function Creative.CreativeInstanceStaticMeshComponent.UpdateAllInstanceByRelativeLocation
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// TArray<struct FVector>         RelativeLocations              (Parm, ZeroConstructor)
-// struct FVector                 Scale                          (Parm, IsPlainOldData)
+// TArray<struct FVector> RelativeLocations (Parm, ZeroConstructor)
+// struct FVector Scale (Parm, IsPlainOldData)
 
 void UCreativeInstanceStaticMeshComponent::UpdateAllInstanceByRelativeLocation(TArray<struct FVector> RelativeLocations, const struct FVector& Scale)
 {
@@ -14443,7 +17813,7 @@ void UCreativeInstanceStaticMeshComponent::UnInitInstancedStaticMeshComponntByGr
 // Function Creative.CreativeInstanceStaticMeshComponent.SetISMMaterial
 // (Final, Native, Public)
 // Parameters:
-// class UMaterialInterface*      NewMaterial                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInterface* NewMaterial (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceStaticMeshComponent::SetISMMaterial(class UMaterialInterface* NewMaterial)
 {
@@ -14467,7 +17837,7 @@ void UCreativeInstanceStaticMeshComponent::SetISMMaterial(class UMaterialInterfa
 // Function Creative.CreativeInstanceStaticMeshComponent.OnStaticMeshAsyncLoaded
 // (Final, Native, Protected, HasDefaults)
 // Parameters:
-// struct FSoftObjectPath         SoftObjectPath                 (Parm)
+// struct FSoftObjectPath SoftObjectPath (Parm)
 
 void UCreativeInstanceStaticMeshComponent::OnStaticMeshAsyncLoaded(const struct FSoftObjectPath& SoftObjectPath)
 {
@@ -14491,9 +17861,9 @@ void UCreativeInstanceStaticMeshComponent::OnStaticMeshAsyncLoaded(const struct 
 // Function Creative.CreativeInstanceStaticMeshComponent.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeInstanceStaticMeshComponent::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -14520,8 +17890,8 @@ bool UCreativeInstanceStaticMeshComponent::OnReturnToPool(class UObject* NewOute
 // Function Creative.CreativeInstanceStaticMeshComponent.OnPickFromPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativeInstanceStaticMeshComponent::OnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -14543,13 +17913,43 @@ void UCreativeInstanceStaticMeshComponent::OnPickFromPool(class UObject* NewOute
 }
 
 
+// Function Creative.CreativeInstanceStaticMeshComponent.InitInstancedStaticMeshComponntByGroupBuildStaticMesh
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// class USceneComponent* Parent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<struct FTransform> InstanceTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UObject* StaticMeshObj (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInterface* Material (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeInstanceStaticMeshComponent::InitInstancedStaticMeshComponntByGroupBuildStaticMesh(class USceneComponent* Parent, TArray<struct FTransform> InstanceTransforms, class UObject* StaticMeshObj, class UMaterialInterface* Material)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeInstanceStaticMeshComponent.InitInstancedStaticMeshComponntByGroupBuildStaticMesh");
+
+	UCreativeInstanceStaticMeshComponent_InitInstancedStaticMeshComponntByGroupBuildStaticMesh_Params params;
+	params.Parent = Parent;
+	params.InstanceTransforms = InstanceTransforms;
+	params.StaticMeshObj = StaticMeshObj;
+	params.Material = Material;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeInstanceStaticMeshComponent.InitInstancedStaticMeshComponntByGroupBuild
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class USceneComponent*         Parent                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TArray<struct FTransform>      InstanceTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 MeshPath                       (Parm, ZeroConstructor)
-// class UMaterialInterface*      Material                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* Parent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<struct FTransform> InstanceTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString MeshPath (Parm, ZeroConstructor)
+// class UMaterialInterface* Material (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeInstanceStaticMeshComponent::InitInstancedStaticMeshComponntByGroupBuild(class USceneComponent* Parent, TArray<struct FTransform> InstanceTransforms, const struct FString& MeshPath, class UMaterialInterface* Material)
 {
@@ -14576,12 +17976,12 @@ void UCreativeInstanceStaticMeshComponent::InitInstancedStaticMeshComponntByGrou
 // Function Creative.CreativeModeIntegralMechanismComponent.SetPlayerIntegral
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 UID                            (Parm, ZeroConstructor)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            curIntegral                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            curStageIntegral               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            integralAddSeq                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UID (Parm, ZeroConstructor)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int curIntegral (Parm, ZeroConstructor, IsPlainOldData)
+// int curStageIntegral (Parm, ZeroConstructor, IsPlainOldData)
+// int integralAddSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeIntegralMechanismComponent::SetPlayerIntegral(const struct FString& UID, int TeamID, int curIntegral, int curStageIntegral, int integralAddSeq)
 {
@@ -14673,13 +18073,13 @@ void UCreativeModeIntegralMechanismComponent::ClearPlayerIntegrals()
 // Function Creative.CreativeModeIntegralMechanismLiteComponent.SetPlayerIntegral
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 UID                            (Parm, ZeroConstructor)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            curIntegral                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            curStageIntegral               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            integralAddSeq                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            curFunctionalIntegral          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UID (Parm, ZeroConstructor)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int curIntegral (Parm, ZeroConstructor, IsPlainOldData)
+// int curStageIntegral (Parm, ZeroConstructor, IsPlainOldData)
+// int integralAddSeq (Parm, ZeroConstructor, IsPlainOldData)
+// int curFunctionalIntegral (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeIntegralMechanismLiteComponent::SetPlayerIntegral(const struct FString& UID, int TeamID, int curIntegral, int curStageIntegral, int integralAddSeq, int curFunctionalIntegral)
 {
@@ -14710,8 +18110,8 @@ bool UCreativeModeIntegralMechanismLiteComponent::SetPlayerIntegral(const struct
 // Function Creative.CreativeModeIntegralMechanismLiteComponent.PlayerIntegralContains
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 UID                            (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeIntegralMechanismLiteComponent::PlayerIntegralContains(const struct FString& UID)
 {
@@ -14757,7 +18157,7 @@ void UCreativeModeIntegralMechanismLiteComponent::OnRepPlayerIntegralsOverride()
 // Function Creative.CreativeModeIntegralMechanismLiteComponent.OnRep_TestIndex
 // (Final, Native, Protected)
 // Parameters:
-// int                            LastIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// int LastIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeIntegralMechanismLiteComponent::OnRep_TestIndex(int LastIndex)
 {
@@ -14823,7 +18223,7 @@ void UCreativeModeIntegralMechanismLiteComponent::ClearPlayerIntegrals()
 // Function Creative.CreativeItemGeneratorComponent.SetWeightMul
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, int>      Weight                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, int> Weight (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeItemGeneratorComponent::SetWeightMul(TMap<struct FString, int> Weight)
 {
@@ -14847,7 +18247,7 @@ void UCreativeItemGeneratorComponent::SetWeightMul(TMap<struct FString, int> Wei
 // Function Creative.CreativeItemGeneratorComponent.SetAddSpotPercentMul
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          percent                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float percent (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeItemGeneratorComponent::SetAddSpotPercentMul(float percent)
 {
@@ -14892,8 +18292,8 @@ void UCreativeItemGeneratorComponent::ClearWeightMul()
 // Function Creative.CreativeLoadManager.UnloadSomeObjects
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         InstanceIDs                    (Parm, ZeroConstructor)
-// bool                           bRemovePhysicsObject           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> InstanceIDs (Parm, ZeroConstructor)
+// bool bRemovePhysicsObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLoadManager::UnloadSomeObjects(TArray<struct FString> InstanceIDs, bool bRemovePhysicsObject)
 {
@@ -14918,8 +18318,8 @@ void UCreativeLoadManager::UnloadSomeObjects(TArray<struct FString> InstanceIDs,
 // Function Creative.CreativeLoadManager.UnloadObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bRemovePhysicsObject           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bRemovePhysicsObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLoadManager::UnloadObject(const struct FString& InstanceID, bool bRemovePhysicsObject)
 {
@@ -14944,8 +18344,8 @@ void UCreativeLoadManager::UnloadObject(const struct FString& InstanceID, bool b
 // Function Creative.CreativeLoadManager.LoadSomeObjects
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         InstanceIDs                    (Parm, ZeroConstructor)
-// bool                           bLoadImmediately               (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> InstanceIDs (Parm, ZeroConstructor)
+// bool bLoadImmediately (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLoadManager::LoadSomeObjects(TArray<struct FString> InstanceIDs, bool bLoadImmediately)
 {
@@ -14970,7 +18370,7 @@ void UCreativeLoadManager::LoadSomeObjects(TArray<struct FString> InstanceIDs, b
 // Function Creative.CreativeLoadManager.LoadObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeLoadManager::LoadObject(const struct FString& InstanceID)
 {
@@ -14991,11 +18391,38 @@ void UCreativeLoadManager::LoadObject(const struct FString& InstanceID)
 }
 
 
+// Function Creative.CreativeLoadManager.LoadCustomUIObject
+// (Final, Native, Public)
+// Parameters:
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UCreativeLoadManager::LoadCustomUIObject(const struct FString& InstanceID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLoadManager.LoadCustomUIObject");
+
+	UCreativeLoadManager_LoadCustomUIObject_Params params;
+	params.InstanceID = InstanceID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeLoadManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLoadManager*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLoadManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLoadManager* UCreativeLoadManager::Get(class UObject* WorldContext)
 {
@@ -15021,8 +18448,8 @@ class UCreativeLoadManager* UCreativeLoadManager::Get(class UObject* WorldContex
 // Function Creative.CreativeLoadManager.AddObject
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FCreativeInstanceNode   InstanceNode                   (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FCreativeInstanceNode InstanceNode (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeLoadManager::AddObject(const struct FString& InstanceID, const struct FCreativeInstanceNode& InstanceNode)
 {
@@ -15044,10 +18471,37 @@ void UCreativeLoadManager::AddObject(const struct FString& InstanceID, const str
 }
 
 
+// Function Creative.CreativeLuaAPIObjectManager.Get
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaAPIObjectManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCreativeLuaAPIObjectManager* UCreativeLuaAPIObjectManager::Get(class UObject* WorldContext)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaAPIObjectManager.Get");
+
+	UCreativeLuaAPIObjectManager_Get_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeLuaCodeManager.ReceiveOnGameStateBeginPlay
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaCodeManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -15112,7 +18566,7 @@ void UCreativeLuaCodeManager::OnPreCreativeLuaVMUnLoad()
 // Function Creative.CreativeLuaCodeManager.OnPlayerControllerBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaCodeManager::OnPlayerControllerBeginPlay(class APlayerController* PlayerController)
 {
@@ -15136,7 +18590,7 @@ void UCreativeLuaCodeManager::OnPlayerControllerBeginPlay(class APlayerControlle
 // Function Creative.CreativeLuaCodeManager.OnGameStateBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaCodeManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -15202,8 +18656,8 @@ void UCreativeLuaCodeManager::MarkReplicatedLuaCodeInfoMapDirty()
 // Function Creative.CreativeLuaCodeManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLuaCodeManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaCodeManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLuaCodeManager* UCreativeLuaCodeManager::Get(class UObject* WorldContext)
 {
@@ -15229,8 +18683,8 @@ class UCreativeLuaCodeManager* UCreativeLuaCodeManager::Get(class UObject* World
 // Function Creative.CreativeLuaEntityManager.UUID2UObject
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeLuaEntityManager::UUID2UObject(int64_t* UUID)
 {
@@ -15258,10 +18712,10 @@ class UObject* UCreativeLuaEntityManager::UUID2UObject(int64_t* UUID)
 // Function Creative.CreativeLuaEntityManager.UUID2Type
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeLuaEntityManager::UUID2Type(int64_t* UUID, EEntityType* Type, unsigned char* SubType)
 {
@@ -15293,8 +18747,8 @@ bool UCreativeLuaEntityManager::UUID2Type(int64_t* UUID, EEntityType* Type, unsi
 // Function Creative.CreativeLuaEntityManager.UUID2Key
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeLuaEntityManager::UUID2Key(int64_t* UUID)
 {
@@ -15314,6 +18768,33 @@ uint32_t UCreativeLuaEntityManager::UUID2Key(int64_t* UUID)
 
 	if (UUID != nullptr)
 		*UUID = params.UUID;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeLuaEntityManager.ResolveUObjectUUID
+// (Final, Native, Public)
+// Parameters:
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int64_t UCreativeLuaEntityManager::ResolveUObjectUUID(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaEntityManager.ResolveUObjectUUID");
+
+	UCreativeLuaEntityManager_ResolveUObjectUUID_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15343,7 +18824,7 @@ void UCreativeLuaEntityManager::ResetAll()
 // Function Creative.CreativeLuaEntityManager.RemoveUUID
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaEntityManager::RemoveUUID(int64_t* UUID)
 {
@@ -15369,8 +18850,8 @@ void UCreativeLuaEntityManager::RemoveUUID(int64_t* UUID)
 // Function Creative.CreativeLuaEntityManager.LuaUUID2UObject
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 UUID                           (Parm, OutParm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UUID (Parm, OutParm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeLuaEntityManager::LuaUUID2UObject(struct FString* UUID)
 {
@@ -15398,10 +18879,10 @@ class UObject* UCreativeLuaEntityManager::LuaUUID2UObject(struct FString* UUID)
 // Function Creative.CreativeLuaEntityManager.LuaUUID2Type
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 UUID                           (Parm, OutParm, ZeroConstructor)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UUID (Parm, OutParm, ZeroConstructor)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeLuaEntityManager::LuaUUID2Type(struct FString* UUID, EEntityType* Type, unsigned char* SubType)
 {
@@ -15433,10 +18914,10 @@ bool UCreativeLuaEntityManager::LuaUUID2Type(struct FString* UUID, EEntityType* 
 // Function Creative.CreativeLuaEntityManager.LuaUUID2Key
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 UUID                           (Parm, OutParm, ZeroConstructor)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString UUID (Parm, OutParm, ZeroConstructor)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeLuaEntityManager::LuaUUID2Key(struct FString* UUID, EEntityType* Type, unsigned char* SubType)
 {
@@ -15468,7 +18949,7 @@ struct FString UCreativeLuaEntityManager::LuaUUID2Key(struct FString* UUID, EEnt
 // Function Creative.CreativeLuaEntityManager.LuaRemoveUUID
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 UUID                           (Parm, OutParm, ZeroConstructor)
+// struct FString UUID (Parm, OutParm, ZeroConstructor)
 
 void UCreativeLuaEntityManager::LuaRemoveUUID(struct FString* UUID)
 {
@@ -15494,10 +18975,10 @@ void UCreativeLuaEntityManager::LuaRemoveUUID(struct FString* UUID)
 // Function Creative.CreativeLuaEntityManager.LuaCreateEntityIfNotExistsFromUObject
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeLuaEntityManager::LuaCreateEntityIfNotExistsFromUObject(class UObject* Object, EEntityType* Type, unsigned char* SubType)
 {
@@ -15528,8 +19009,8 @@ struct FString UCreativeLuaEntityManager::LuaCreateEntityIfNotExistsFromUObject(
 // Function Creative.CreativeLuaEntityManager.GetInstanceObjectUUID
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeLuaEntityManager::GetInstanceObjectUUID(int64_t* UUID)
 {
@@ -15557,8 +19038,8 @@ int64_t UCreativeLuaEntityManager::GetInstanceObjectUUID(int64_t* UUID)
 // Function Creative.CreativeLuaEntityManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLuaEntityManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaEntityManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLuaEntityManager* UCreativeLuaEntityManager::Get(class UObject* WorldContext)
 {
@@ -15584,10 +19065,10 @@ class UCreativeLuaEntityManager* UCreativeLuaEntityManager::Get(class UObject* W
 // Function Creative.CreativeLuaEntityManager.GenUUID
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FString                 Key                            (Parm, OutParm, ZeroConstructor)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, OutParm, ZeroConstructor)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeLuaEntityManager::GenUUID(struct FString* Key, EEntityType* Type, unsigned char* SubType)
 {
@@ -15619,10 +19100,10 @@ int64_t UCreativeLuaEntityManager::GenUUID(struct FString* Key, EEntityType* Typ
 // Function Creative.CreativeLuaEntityManager.CreateEntityIfNotExistsFromUObject
 // (Native, Public, HasOutParms)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeLuaEntityManager::CreateEntityIfNotExistsFromUObject(class UObject* Object, EEntityType* Type, unsigned char* SubType)
 {
@@ -15653,10 +19134,10 @@ int64_t UCreativeLuaEntityManager::CreateEntityIfNotExistsFromUObject(class UObj
 // Function Creative.CreativeLuaEntityManager.CreateEntityIfNotExistsFromKey
 // (Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       Key                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t Key (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeLuaEntityManager::CreateEntityIfNotExistsFromKey(uint32_t* Key, EEntityType* Type, unsigned char* SubType)
 {
@@ -15680,6 +19161,33 @@ int64_t UCreativeLuaEntityManager::CreateEntityIfNotExistsFromKey(uint32_t* Key,
 		*Type = params.Type;
 	if (SubType != nullptr)
 		*SubType = params.SubType;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeLuaEntityManager.ContainsUUID
+// (Final, Native, Public)
+// Parameters:
+// int64_t UUID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeLuaEntityManager::ContainsUUID(int64_t UUID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaEntityManager.ContainsUUID");
+
+	UCreativeLuaEntityManager_ContainsUUID_Params params;
+	params.UUID = UUID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
 }
@@ -15709,7 +19217,7 @@ void UCreativeLuaSignalManager::SpawnApiObjectsByConfig()
 // Function Creative.CreativeLuaSignalManager.RegisterObject
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UCreativeApiObject*      NewObject                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeApiObject* NewObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaSignalManager::RegisterObject(class UCreativeApiObject* NewObject)
 {
@@ -15775,8 +19283,8 @@ void UCreativeLuaSignalManager::OnCreativeLuaVMLoaded()
 // Function Creative.CreativeLuaSignalManager.GetObject
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// class UCreativeApiObject*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// class UCreativeApiObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeApiObject* UCreativeLuaSignalManager::GetObject(const struct FString& ModuleName)
 {
@@ -15802,7 +19310,7 @@ class UCreativeApiObject* UCreativeLuaSignalManager::GetObject(const struct FStr
 // Function Creative.CreativeLuaSignalManager.GetCreativeLuaVM
 // (Final, Native, Protected)
 // Parameters:
-// class UCreativeBridgeLuaVM*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCreativeBridgeLuaVM* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeBridgeLuaVM* UCreativeLuaSignalManager::GetCreativeLuaVM()
 {
@@ -15827,8 +19335,8 @@ class UCreativeBridgeLuaVM* UCreativeLuaSignalManager::GetCreativeLuaVM()
 // Function Creative.CreativeLuaSignalManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLuaSignalManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaSignalManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLuaSignalManager* UCreativeLuaSignalManager::Get(class UObject* WorldContext)
 {
@@ -15854,10 +19362,10 @@ class UCreativeLuaSignalManager* UCreativeLuaSignalManager::Get(class UObject* W
 // Function Creative.CreativeLuaSignalManager.ExecuteAPI
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UCreativeBridgeLuaVM*    VM                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ModuleName                     (Parm, OutParm, ZeroConstructor)
-// struct FString                 FuncName                       (Parm, OutParm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCreativeBridgeLuaVM* VM (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModuleName (Parm, OutParm, ZeroConstructor)
+// struct FString FuncName (Parm, OutParm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeLuaSignalManager::ExecuteAPI(class UCreativeBridgeLuaVM* VM, struct FString* ModuleName, struct FString* FuncName)
 {
@@ -15885,16 +19393,69 @@ int UCreativeLuaSignalManager::ExecuteAPI(class UCreativeBridgeLuaVM* VM, struct
 }
 
 
-// Function Creative.CreativeLuaSignalManager.ClearAllObjects
+// Function Creative.CreativeLuaSignalManager.CGetAPIObject
 // (Final, Native, Public)
+// Parameters:
+// struct FString ModuleName (Parm, ZeroConstructor)
+// class UCreativeApiObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UCreativeLuaSignalManager::ClearAllObjects()
+class UCreativeApiObject* UCreativeLuaSignalManager::CGetAPIObject(const struct FString& ModuleName)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaSignalManager.ClearAllObjects");
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaSignalManager.CGetAPIObject");
 
-	UCreativeLuaSignalManager_ClearAllObjects_Params params;
+	UCreativeLuaSignalManager_CGetAPIObject_Params params;
+	params.ModuleName = ModuleName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeLuaSignalManager.CClearAPIObject
+// (Final, Native, Public)
+
+void UCreativeLuaSignalManager::CClearAPIObject()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaSignalManager.CClearAPIObject");
+
+	UCreativeLuaSignalManager_CClearAPIObject_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeLuaSignalManager.CAddAPIObject
+// (Final, Native, Public)
+// Parameters:
+// struct FString ModuleName (Parm, ZeroConstructor)
+// class UCreativeApiObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeLuaSignalManager::CAddAPIObject(const struct FString& ModuleName, class UCreativeApiObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaSignalManager.CAddAPIObject");
+
+	UCreativeLuaSignalManager_CAddAPIObject_Params params;
+	params.ModuleName = ModuleName;
+	params.Object = Object;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -15909,8 +19470,8 @@ void UCreativeLuaSignalManager::ClearAllObjects()
 // Function Creative.CreativeLuaTraitManager.GetSupportEntitiesByTraits
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<struct FString>         TraitNames                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> TraitNames (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeLuaTraitManager::GetSupportEntitiesByTraits(TArray<struct FString> TraitNames)
 {
@@ -15935,8 +19496,8 @@ TArray<struct FString> UCreativeLuaTraitManager::GetSupportEntitiesByTraits(TArr
 // Function Creative.CreativeLuaTraitManager.GetSupportEntitiesByTrait
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 TraitName                      (Parm, ZeroConstructor)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString TraitName (Parm, ZeroConstructor)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeLuaTraitManager::GetSupportEntitiesByTrait(const struct FString& TraitName)
 {
@@ -15961,8 +19522,8 @@ TArray<struct FString> UCreativeLuaTraitManager::GetSupportEntitiesByTrait(const
 // Function Creative.CreativeLuaTraitManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLuaTraitManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaTraitManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLuaTraitManager* UCreativeLuaTraitManager::Get(class UObject* WorldContext)
 {
@@ -16027,10 +19588,30 @@ void UCreativeLuaVMManager::RegisterGameTypePreChangedDelegate()
 }
 
 
+// Function Creative.CreativeLuaVMManager.ReceiveSluaCustomMemoryOutCallback
+// (Event, Public, BlueprintEvent)
+
+void UCreativeLuaVMManager::ReceiveSluaCustomMemoryOutCallback()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.ReceiveSluaCustomMemoryOutCallback");
+
+	UCreativeLuaVMManager_ReceiveSluaCustomMemoryOutCallback_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeLuaVMManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVMManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -16070,19 +19651,64 @@ void UCreativeLuaVMManager::ReceiveCheckAndLoadLuaVM()
 }
 
 
+// Function Creative.CreativeLuaVMManager.OpenEnvLuaProfile
+// (Final, Native, Public)
+
+void UCreativeLuaVMManager::OpenEnvLuaProfile()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.OpenEnvLuaProfile");
+
+	UCreativeLuaVMManager_OpenEnvLuaProfile_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeLuaVMManager.OpenCustomMemoryLimit
+// (Final, Native, Public)
+// Parameters:
+// int64_t memoryLimit (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCreativeLuaVMManager::OpenCustomMemoryLimit(int64_t memoryLimit)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.OpenCustomMemoryLimit");
+
+	UCreativeLuaVMManager_OpenCustomMemoryLimit_Params params;
+	params.memoryLimit = memoryLimit;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeLuaVMManager.OnLuaVMAtPanic
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ErrMsg                         (Parm, ZeroConstructor)
+// struct FString errMsg (Parm, ZeroConstructor)
 
-void UCreativeLuaVMManager::OnLuaVMAtPanic(const struct FString& ErrMsg)
+void UCreativeLuaVMManager::OnLuaVMAtPanic(const struct FString& errMsg)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.OnLuaVMAtPanic");
 
 	UCreativeLuaVMManager_OnLuaVMAtPanic_Params params;
-	params.ErrMsg = ErrMsg;
+	params.errMsg = errMsg;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -16097,8 +19723,8 @@ void UCreativeLuaVMManager::OnLuaVMAtPanic(const struct FString& ErrMsg)
 // Function Creative.CreativeLuaVMManager.OnGameTypePreChanged
 // (Final, Native, Protected)
 // Parameters:
-// unsigned char                  LastGameType                   (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  CurrentGameType                (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char LastGameType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char CurrentGameType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVMManager::OnGameTypePreChanged(unsigned char LastGameType, unsigned char CurrentGameType)
 {
@@ -16123,7 +19749,7 @@ void UCreativeLuaVMManager::OnGameTypePreChanged(unsigned char LastGameType, uns
 // Function Creative.CreativeLuaVMManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVMManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -16168,7 +19794,7 @@ void UCreativeLuaVMManager::LoadLuaVM()
 // Function Creative.CreativeLuaVMManager.GetCreativeLuaVM
 // (Final, Native, Public)
 // Parameters:
-// class UCreativeBridgeLuaVM*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCreativeBridgeLuaVM* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeBridgeLuaVM* UCreativeLuaVMManager::GetCreativeLuaVM()
 {
@@ -16193,8 +19819,8 @@ class UCreativeBridgeLuaVM* UCreativeLuaVMManager::GetCreativeLuaVM()
 // Function Creative.CreativeLuaVMManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeLuaVMManager*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeLuaVMManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeLuaVMManager* UCreativeLuaVMManager::Get(class UObject* WorldContext)
 {
@@ -16220,7 +19846,7 @@ class UCreativeLuaVMManager* UCreativeLuaVMManager::Get(class UObject* WorldCont
 // Function Creative.CreativeLuaVMManager.CreativeLuaVMLoaded
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeLuaVMManager::CreativeLuaVMLoaded()
 {
@@ -16245,7 +19871,7 @@ bool UCreativeLuaVMManager::CreativeLuaVMLoaded()
 // Function Creative.CreativeLuaVMManager.CreativeLuaInitialized
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeLuaVMManager::CreativeLuaInitialized()
 {
@@ -16264,6 +19890,48 @@ bool UCreativeLuaVMManager::CreativeLuaInitialized()
 	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeLuaVMManager.ClosenEnvLuaProfile
+// (Final, Native, Public)
+
+void UCreativeLuaVMManager::ClosenEnvLuaProfile()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.ClosenEnvLuaProfile");
+
+	UCreativeLuaVMManager_ClosenEnvLuaProfile_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeLuaVMManager.CloseCustomMemoryLimit
+// (Final, Native, Public)
+
+void UCreativeLuaVMManager::CloseCustomMemoryLimit()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeLuaVMManager.CloseCustomMemoryLimit");
+
+	UCreativeLuaVMManager_CloseCustomMemoryLimit_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
@@ -16352,8 +20020,8 @@ void UCreativeModeModDataCheckManager::OnPostAddInstance()
 // Function Creative.CreativeModeModDataCheckManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeModeModDataCheckManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeModDataCheckManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeModDataCheckManager* UCreativeModeModDataCheckManager::Get(class UObject* WorldContext)
 {
@@ -16442,10 +20110,10 @@ void UCreativeModeGlobalManagerCenter::OnCreativeDelegateCreated()
 // Function Creative.CreativeModeStaticMeshBatchActor.SetISMStaticMeshAndMaterials
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UInstancedStaticMeshComponent* InstancedStaticMeshComponent   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            AssetId                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StaticMeshIndex                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaterialID                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UInstancedStaticMeshComponent* InstancedStaticMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int AssetId (Parm, ZeroConstructor, IsPlainOldData)
+// int StaticMeshIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int MaterialID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeModeStaticMeshBatchActor::SetISMStaticMeshAndMaterials(class UInstancedStaticMeshComponent* InstancedStaticMeshComponent, int AssetId, int StaticMeshIndex, int MaterialID)
 {
@@ -16471,9 +20139,9 @@ void ACreativeModeStaticMeshBatchActor::SetISMStaticMeshAndMaterials(class UInst
 // Function Creative.CreativeModeTouchWidget.OnHandleTouchStart
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGeometry               MyGeometry                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FPointerEvent           MouseEvent                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGeometry MyGeometry (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FPointerEvent MouseEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FEventReply ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FEventReply UCreativeModeTouchWidget::OnHandleTouchStart(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -16500,9 +20168,9 @@ struct FEventReply UCreativeModeTouchWidget::OnHandleTouchStart(const struct FGe
 // Function Creative.CreativeModeTouchWidget.OnHandleTouchMove
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGeometry               MyGeometry                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FPointerEvent           MouseEvent                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGeometry MyGeometry (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FPointerEvent MouseEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FEventReply ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FEventReply UCreativeModeTouchWidget::OnHandleTouchMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -16529,9 +20197,9 @@ struct FEventReply UCreativeModeTouchWidget::OnHandleTouchMove(const struct FGeo
 // Function Creative.CreativeModeTouchWidget.OnHandleTouchEnd
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGeometry               MyGeometry                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FPointerEvent           MouseEvent                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGeometry MyGeometry (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FPointerEvent MouseEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FEventReply ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FEventReply UCreativeModeTouchWidget::OnHandleTouchEnd(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -16558,10 +20226,10 @@ struct FEventReply UCreativeModeTouchWidget::OnHandleTouchEnd(const struct FGeom
 // Function Creative.CreativeModeTouchWidget.OnHandleTouch
 // (Native, Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FingerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Pos                            (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// int FingerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Pos (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeTouchWidget::OnHandleTouch(int Type, int FingerIndex, const struct FVector2D& Pos)
 {
@@ -16589,7 +20257,7 @@ bool UCreativeModeTouchWidget::OnHandleTouch(int Type, int FingerIndex, const st
 // Function Creative.TaskProgressItem.Update
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskProgressItem::Update(float DeltaTime)
 {
@@ -16612,7 +20280,7 @@ void UTaskProgressItem::Update(float DeltaTime)
 // Function Creative.TaskProgressItem.SetCurrentProgress
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskProgressItem::SetCurrentProgress(int Value)
 {
@@ -16636,7 +20304,7 @@ void UTaskProgressItem::SetCurrentProgress(int Value)
 // Function Creative.TaskProgressItem.GetTaskInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTaskInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UTaskInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskInstance* UTaskProgressItem::GetTaskInstance()
 {
@@ -16661,7 +20329,7 @@ class UTaskInstance* UTaskProgressItem::GetTaskInstance()
 // Function Creative.TaskProgressItem.GetStageRuntimeState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStageRuntimeState*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStageRuntimeState* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UStageRuntimeState* UTaskProgressItem::GetStageRuntimeState()
 {
@@ -16686,7 +20354,7 @@ class UStageRuntimeState* UTaskProgressItem::GetStageRuntimeState()
 // Function Creative.TaskProgressItem.GetProgressType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTaskProgressItem::GetProgressType()
 {
@@ -16711,7 +20379,7 @@ int UTaskProgressItem::GetProgressType()
 // Function Creative.TaskProgressItem.GetMaxProgress
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTaskProgressItem::GetMaxProgress()
 {
@@ -16736,7 +20404,7 @@ int UTaskProgressItem::GetMaxProgress()
 // Function Creative.TaskProgressItem.GetCurrentProgress
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTaskProgressItem::GetCurrentProgress()
 {
@@ -16781,7 +20449,7 @@ void UTaskProgressItem::Deactivate()
 // Function Creative.TaskProgressItem.AddProgress
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Delta                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Delta (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskProgressItem::AddProgress(int Delta)
 {
@@ -16825,8 +20493,8 @@ void UTaskProgressItem::Activate()
 // Function Creative.StageRuntimeState.Update
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UStageRuntimeState::Update(float DeltaTime)
 {
@@ -16851,7 +20519,7 @@ bool UStageRuntimeState::Update(float DeltaTime)
 // Function Creative.StageRuntimeState.GetStageIdx
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UStageRuntimeState::GetStageIdx()
 {
@@ -16876,7 +20544,7 @@ int UStageRuntimeState::GetStageIdx()
 // Function Creative.StageRuntimeState.GetProgressItems
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class UTaskProgressItem*> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<class UTaskProgressItem*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<class UTaskProgressItem*> UStageRuntimeState::GetProgressItems()
 {
@@ -16901,7 +20569,7 @@ TArray<class UTaskProgressItem*> UStageRuntimeState::GetProgressItems()
 // Function Creative.StageRuntimeState.GetOwnTaskInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTaskInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UTaskInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskInstance* UStageRuntimeState::GetOwnTaskInstance()
 {
@@ -16926,8 +20594,8 @@ class UTaskInstance* UStageRuntimeState::GetOwnTaskInstance()
 // Function Creative.StageRuntimeState.FindProgressItemByConfigIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTaskProgressItem*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// class UTaskProgressItem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskProgressItem* UStageRuntimeState::FindProgressItemByConfigIndex(int Index)
 {
@@ -16973,8 +20641,8 @@ void UStageRuntimeState::Deactivate()
 // Function Creative.StageRuntimeState.AddProgressItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ProgressType                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UTaskProgressItem*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ProgressType (Parm, ZeroConstructor, IsPlainOldData)
+// class UTaskProgressItem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskProgressItem* UStageRuntimeState::AddProgressItem(int ProgressType)
 {
@@ -17020,8 +20688,8 @@ void UStageRuntimeState::Activate()
 // Function Creative.TaskInstance.Update
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTaskInstance::Update(float DeltaTime)
 {
@@ -17046,7 +20714,7 @@ bool UTaskInstance::Update(float DeltaTime)
 // Function Creative.TaskInstance.SetTaskStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ETaskStatus                    StatusVal                      (Parm, ZeroConstructor, IsPlainOldData)
+// ETaskStatus StatusVal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::SetTaskStatus(ETaskStatus StatusVal)
 {
@@ -17070,7 +20738,7 @@ void UTaskInstance::SetTaskStatus(ETaskStatus StatusVal)
 // Function Creative.TaskInstance.SetShouldReplicated
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::SetShouldReplicated(bool Val)
 {
@@ -17094,7 +20762,7 @@ void UTaskInstance::SetShouldReplicated(bool Val)
 // Function Creative.TaskInstance.SetReservedString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Val                            (Parm, ZeroConstructor)
+// struct FString Val (Parm, ZeroConstructor)
 
 void UTaskInstance::SetReservedString(const struct FString& Val)
 {
@@ -17118,7 +20786,7 @@ void UTaskInstance::SetReservedString(const struct FString& Val)
 // Function Creative.TaskInstance.RemovePlayer
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::RemovePlayer(uint32_t PlayerKey)
 {
@@ -17142,8 +20810,8 @@ void UTaskInstance::RemovePlayer(uint32_t PlayerKey)
 // Function Creative.TaskInstance.ReceiveSetTaskStatus
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// ETaskStatus                    PreviousStatusVal              (Parm, ZeroConstructor, IsPlainOldData)
-// ETaskStatus                    NextStatusVal                  (Parm, ZeroConstructor, IsPlainOldData)
+// ETaskStatus PreviousStatusVal (Parm, ZeroConstructor, IsPlainOldData)
+// ETaskStatus NextStatusVal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::ReceiveSetTaskStatus(ETaskStatus PreviousStatusVal, ETaskStatus NextStatusVal)
 {
@@ -17208,8 +20876,8 @@ void UTaskInstance::MarkTaskDirty()
 // Function Creative.TaskInstance.IsRefbyPlayer
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTaskInstance::IsRefbyPlayer(uint32_t PlayerKey)
 {
@@ -17255,7 +20923,7 @@ void UTaskInstance::InitializeStageInfo()
 // Function Creative.TaskInstance.GetTaskTypeID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UTaskInstance::GetTaskTypeID()
 {
@@ -17280,7 +20948,7 @@ struct FString UTaskInstance::GetTaskTypeID()
 // Function Creative.TaskInstance.GetPlayerKeys
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<uint32_t>               ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<uint32_t> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<uint32_t> UTaskInstance::GetPlayerKeys()
 {
@@ -17305,7 +20973,7 @@ TArray<uint32_t> UTaskInstance::GetPlayerKeys()
 // Function Creative.TaskInstance.GetCurrentStage
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UStageRuntimeState*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStageRuntimeState* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UStageRuntimeState* UTaskInstance::GetCurrentStage()
 {
@@ -17330,7 +20998,7 @@ class UStageRuntimeState* UTaskInstance::GetCurrentStage()
 // Function Creative.TaskInstance.AdvanceToNextStage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStageRuntimeState*      NewStageInfo                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UStageRuntimeState* NewStageInfo (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::AdvanceToNextStage(class UStageRuntimeState* NewStageInfo)
 {
@@ -17354,7 +21022,7 @@ void UTaskInstance::AdvanceToNextStage(class UStageRuntimeState* NewStageInfo)
 // Function Creative.TaskInstance.AddPlayer
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTaskInstance::AddPlayer(uint32_t PlayerKey)
 {
@@ -17378,7 +21046,7 @@ void UTaskInstance::AddPlayer(uint32_t PlayerKey)
 // Function Creative.TaskInstance.AddNewStage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStageRuntimeState*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStageRuntimeState* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UStageRuntimeState* UTaskInstance::AddNewStage()
 {
@@ -17424,7 +21092,7 @@ void UCreativeModeGameTaskManager::Reset()
 // Function Creative.CreativeModeGameTaskManager.RemoveTaskInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTaskInstance*           TaskInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UTaskInstance* TaskInstance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeGameTaskManager::RemoveTaskInstance(class UTaskInstance* TaskInstance)
 {
@@ -17448,8 +21116,8 @@ void UCreativeModeGameTaskManager::RemoveTaskInstance(class UTaskInstance* TaskI
 // Function Creative.CreativeModeGameTaskManager.ReceiveGetProgressItemLuaPathByType
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ProgressType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ProgressType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeGameTaskManager::ReceiveGetProgressItemLuaPathByType(int ProgressType)
 {
@@ -17474,7 +21142,7 @@ struct FString UCreativeModeGameTaskManager::ReceiveGetProgressItemLuaPathByType
 // Function Creative.CreativeModeGameTaskManager.GetProgressItemLuaPathByType
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeModeGameTaskManager::GetProgressItemLuaPathByType()
 {
@@ -17499,7 +21167,7 @@ struct FString UCreativeModeGameTaskManager::GetProgressItemLuaPathByType()
 // Function Creative.CreativeModeGameTaskManager.GetAllTaskInstances
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class UTaskInstance*>   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<class UTaskInstance*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<class UTaskInstance*> UCreativeModeGameTaskManager::GetAllTaskInstances()
 {
@@ -17524,8 +21192,8 @@ TArray<class UTaskInstance*> UCreativeModeGameTaskManager::GetAllTaskInstances()
 // Function Creative.CreativeModeGameTaskManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeModeGameTaskManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeGameTaskManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeGameTaskManager* UCreativeModeGameTaskManager::Get(class UObject* WorldContext)
 {
@@ -17551,8 +21219,8 @@ class UCreativeModeGameTaskManager* UCreativeModeGameTaskManager::Get(class UObj
 // Function Creative.CreativeModeGameTaskManager.FindTaskInstanceByType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 TaskTypeID                     (Parm, ZeroConstructor)
-// class UTaskInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskTypeID (Parm, ZeroConstructor)
+// class UTaskInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskInstance* UCreativeModeGameTaskManager::FindTaskInstanceByType(const struct FString& TaskTypeID)
 {
@@ -17578,8 +21246,8 @@ class UTaskInstance* UCreativeModeGameTaskManager::FindTaskInstanceByType(const 
 // Function Creative.CreativeModeGameTaskManager.CreateTaskInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskTypeID                     (Parm, ZeroConstructor)
-// class UTaskInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskTypeID (Parm, ZeroConstructor)
+// class UTaskInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTaskInstance* UCreativeModeGameTaskManager::CreateTaskInstance(const struct FString& TaskTypeID)
 {
@@ -17605,8 +21273,8 @@ class UTaskInstance* UCreativeModeGameTaskManager::CreateTaskInstance(const stru
 // Function Creative.CreativeModeNavigationManager.SetTimeSliceConfig
 // (Final, Native, Public)
 // Parameters:
-// int                            MaxTaskPerSlice                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SliceTimeLen                   (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxTaskPerSlice (Parm, ZeroConstructor, IsPlainOldData)
+// int SliceTimeLen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::SetTimeSliceConfig(int MaxTaskPerSlice, int SliceTimeLen)
 {
@@ -17631,7 +21299,7 @@ void UCreativeModeNavigationManager::SetTimeSliceConfig(int MaxTaskPerSlice, int
 // Function Creative.CreativeModeNavigationManager.SetNavmeshBuildPolicy
 // (Final, Native, Public)
 // Parameters:
-// int                            PolicyVal                      (Parm, ZeroConstructor, IsPlainOldData)
+// int PolicyVal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::SetNavmeshBuildPolicy(int PolicyVal)
 {
@@ -17655,7 +21323,7 @@ void UCreativeModeNavigationManager::SetNavmeshBuildPolicy(int PolicyVal)
 // Function Creative.CreativeModeNavigationManager.SetDynamicModeEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::SetDynamicModeEnable(bool bEnable)
 {
@@ -17679,7 +21347,7 @@ void UCreativeModeNavigationManager::SetDynamicModeEnable(bool bEnable)
 // Function Creative.CreativeModeNavigationManager.SetDebugOutputEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::SetDebugOutputEnable(bool bEnable)
 {
@@ -17703,7 +21371,7 @@ void UCreativeModeNavigationManager::SetDebugOutputEnable(bool bEnable)
 // Function Creative.CreativeModeNavigationManager.SetConcurrentTaskNum
 // (Final, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::SetConcurrentTaskNum(int Num)
 {
@@ -17727,9 +21395,9 @@ void UCreativeModeNavigationManager::SetConcurrentTaskNum(int Num)
 // Function Creative.CreativeModeNavigationManager.SerializeDynamicTileToByteArr
 // (Final, Native, Public)
 // Parameters:
-// int                            MaxFileSize                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxTileToAdd                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int MaxFileSize (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxTileToAdd (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCreativeModeNavigationManager::SerializeDynamicTileToByteArr(int MaxFileSize, int MaxTileToAdd)
 {
@@ -17817,7 +21485,7 @@ void UCreativeModeNavigationManager::ReceiveOnInit()
 // Function Creative.CreativeModeNavigationManager.RebuildDynamicTilesByCoord
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FIntPoint>       DynamicTiles                   (Parm, OutParm, ZeroConstructor)
+// TArray<struct FIntPoint> DynamicTiles (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::RebuildDynamicTilesByCoord(TArray<struct FIntPoint>* DynamicTiles)
 {
@@ -17843,7 +21511,7 @@ void UCreativeModeNavigationManager::RebuildDynamicTilesByCoord(TArray<struct FI
 // Function Creative.CreativeModeNavigationManager.RebuildDynamicTiles
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<class AActor*>          Actors                         (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*> Actors (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::RebuildDynamicTiles(TArray<class AActor*>* Actors)
 {
@@ -17869,7 +21537,7 @@ void UCreativeModeNavigationManager::RebuildDynamicTiles(TArray<class AActor*>* 
 // Function Creative.CreativeModeNavigationManager.IsBuildingInProgress
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeNavigationManager::IsBuildingInProgress()
 {
@@ -17894,7 +21562,7 @@ bool UCreativeModeNavigationManager::IsBuildingInProgress()
 // Function Creative.CreativeModeNavigationManager.ImportDynamicTile
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 Path                           (Parm, OutParm, ZeroConstructor)
+// struct FString Path (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::ImportDynamicTile(struct FString* Path)
 {
@@ -17920,9 +21588,9 @@ void UCreativeModeNavigationManager::ImportDynamicTile(struct FString* Path)
 // Function Creative.CreativeModeNavigationManager.GetWalkableTrianglesInBox
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FBox                    bBox                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<struct FVector>         OutVertices                    (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    OutIndices                     (Parm, OutParm, ZeroConstructor)
+// struct FBox bBox (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<struct FVector> OutVertices (Parm, OutParm, ZeroConstructor)
+// TArray<int> OutIndices (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::GetWalkableTrianglesInBox(const struct FBox& bBox, TArray<struct FVector>* OutVertices, TArray<int>* OutIndices)
 {
@@ -17951,7 +21619,7 @@ void UCreativeModeNavigationManager::GetWalkableTrianglesInBox(const struct FBox
 // Function Creative.CreativeModeNavigationManager.GetDynamicTilesCount
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeModeNavigationManager::GetDynamicTilesCount()
 {
@@ -17976,12 +21644,12 @@ int UCreativeModeNavigationManager::GetDynamicTilesCount()
 // Function Creative.CreativeModeNavigationManager.GetDynamicTileMemCost
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            Total                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            OctTree                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            TileCache                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            DynamicTile                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            DynamicTileCount               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Total (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int OctTree (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int TileCache (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int DynamicTile (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int DynamicTileCount (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeModeNavigationManager::GetDynamicTileMemCost(int* Total, int* OctTree, int* TileCache, int* DynamicTile, int* DynamicTileCount)
 {
@@ -18017,8 +21685,8 @@ bool UCreativeModeNavigationManager::GetDynamicTileMemCost(int* Total, int* OctT
 // Function Creative.CreativeModeNavigationManager.GetDynamicTileCoordByPos
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Pos                            (Parm, IsPlainOldData)
-// struct FIntPoint               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector Pos (Parm, IsPlainOldData)
+// struct FIntPoint ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FIntPoint UCreativeModeNavigationManager::GetDynamicTileCoordByPos(const struct FVector& Pos)
 {
@@ -18044,7 +21712,7 @@ struct FIntPoint UCreativeModeNavigationManager::GetDynamicTileCoordByPos(const 
 // Function Creative.CreativeModeNavigationManager.GetAllAssociateActors
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> UCreativeModeNavigationManager::GetAllAssociateActors()
 {
@@ -18069,8 +21737,8 @@ TArray<class AActor*> UCreativeModeNavigationManager::GetAllAssociateActors()
 // Function Creative.CreativeModeNavigationManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeModeNavigationManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeNavigationManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeNavigationManager* UCreativeModeNavigationManager::Get(class UObject* WorldContext)
 {
@@ -18093,10 +21761,36 @@ class UCreativeModeNavigationManager* UCreativeModeNavigationManager::Get(class 
 }
 
 
+// Function Creative.CreativeModeNavigationManager.ExportDynamicTileStandard
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FString Path (Parm, OutParm, ZeroConstructor)
+
+void UCreativeModeNavigationManager::ExportDynamicTileStandard(struct FString* Path)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeNavigationManager.ExportDynamicTileStandard");
+
+	UCreativeModeNavigationManager_ExportDynamicTileStandard_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (Path != nullptr)
+		*Path = params.Path;
+}
+
+
 // Function Creative.CreativeModeNavigationManager.ExportDynamicTile
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 Path                           (Parm, OutParm, ZeroConstructor)
+// struct FString Path (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::ExportDynamicTile(struct FString* Path)
 {
@@ -18119,10 +21813,31 @@ void UCreativeModeNavigationManager::ExportDynamicTile(struct FString* Path)
 }
 
 
+// Function Creative.CreativeModeNavigationManager.EnsureDynamicBuildCompletion
+// (Final, Native, Public)
+
+void UCreativeModeNavigationManager::EnsureDynamicBuildCompletion()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeModeNavigationManager.EnsureDynamicBuildCompletion");
+
+	UCreativeModeNavigationManager_EnsureDynamicBuildCompletion_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeModeNavigationManager.DeserializeDynamicTileFromByteArr
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          ByteArr                        (Parm, OutParm, ZeroConstructor)
+// TArray<unsigned char> ByteArr (Parm, OutParm, ZeroConstructor)
 
 void UCreativeModeNavigationManager::DeserializeDynamicTileFromByteArr(TArray<unsigned char>* ByteArr)
 {
@@ -18148,8 +21863,8 @@ void UCreativeModeNavigationManager::DeserializeDynamicTileFromByteArr(TArray<un
 // Function Creative.CreativeModeNavigationManager.ComputeTotalWalkableSurfaceAreaInBox
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FBox                    bBox                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBox bBox (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeModeNavigationManager::ComputeTotalWalkableSurfaceAreaInBox(const struct FBox& bBox)
 {
@@ -18259,11 +21974,11 @@ void UCreativeModeNavigationManager::ClearAssociateActors()
 // Function Creative.CreativeModeNavigationManager.CalSamplePointsInBoxLegacy
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 BoxMin                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 BoxMax                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          StepSize                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPoints                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector BoxMin (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector BoxMax (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float StepSize (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPoints (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePointsInBoxLegacy(const struct FVector& BoxMin, const struct FVector& BoxMax, float StepSize, int MaxPoints)
 {
@@ -18292,11 +22007,11 @@ TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePointsInBoxLegac
 // Function Creative.CreativeModeNavigationManager.CalSamplePointsInBox
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 BoxMin                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 BoxMax                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          StepSize                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPoints                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector BoxMin (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector BoxMax (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float StepSize (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPoints (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePointsInBox(const struct FVector& BoxMin, const struct FVector& BoxMax, float StepSize, int MaxPoints)
 {
@@ -18325,10 +22040,10 @@ TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePointsInBox(cons
 // Function Creative.CreativeModeNavigationManager.CalSamplePoints
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 StartPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          StepSize                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPoints                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector StartPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float StepSize (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPoints (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePoints(const struct FVector& StartPos, float StepSize, int MaxPoints)
 {
@@ -18356,7 +22071,7 @@ TArray<struct FVector> UCreativeModeNavigationManager::CalSamplePoints(const str
 // Function Creative.CreativeModeNavigationManager.AddNavAffectedObjects
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<class AActor*>          Actors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class AActor*> Actors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeModeNavigationManager::AddNavAffectedObjects(TArray<class AActor*> Actors)
 {
@@ -18380,7 +22095,7 @@ void UCreativeModeNavigationManager::AddNavAffectedObjects(TArray<class AActor*>
 // Function Creative.CreativeModeNavigationManager.AddNavAffectedObject
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeModeNavigationManager::AddNavAffectedObject(class AActor* Actor)
 {
@@ -18404,9 +22119,9 @@ void UCreativeModeNavigationManager::AddNavAffectedObject(class AActor* Actor)
 // Function Creative.CreativeObjectEditAxisActor.StartEdit
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            Axis                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 HitPos                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int Axis (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector HitPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::StartEdit(int Axis, const struct FVector2D& Pos, const struct FVector& HitPos)
 {
@@ -18432,7 +22147,7 @@ void ACreativeObjectEditAxisActor::StartEdit(int Axis, const struct FVector2D& P
 // Function Creative.CreativeObjectEditAxisActor.SetForceHideAxis
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 State                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector State (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::SetForceHideAxis(const struct FVector& State)
 {
@@ -18456,7 +22171,7 @@ void ACreativeObjectEditAxisActor::SetForceHideAxis(const struct FVector& State)
 // Function Creative.CreativeObjectEditAxisActor.SetFixedAxisSize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          FixedSize                      (Parm, ZeroConstructor, IsPlainOldData)
+// float FixedSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::SetFixedAxisSize(float FixedSize)
 {
@@ -18480,8 +22195,8 @@ void ACreativeObjectEditAxisActor::SetFixedAxisSize(float FixedSize)
 // Function Creative.CreativeObjectEditAxisActor.SetEditType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InEditType                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InEditSubType                  (Parm, ZeroConstructor, IsPlainOldData)
+// int InEditType (Parm, ZeroConstructor, IsPlainOldData)
+// int InEditSubType (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::SetEditType(int InEditType, int InEditSubType)
 {
@@ -18506,8 +22221,8 @@ void ACreativeObjectEditAxisActor::SetEditType(int InEditType, int InEditSubType
 // Function Creative.CreativeObjectEditAxisActor.SetComponentVisible
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         comp                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bVisible                       (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* comp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bVisible (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::SetComponentVisible(class USceneComponent* comp, bool bVisible)
 {
@@ -18532,7 +22247,7 @@ void ACreativeObjectEditAxisActor::SetComponentVisible(class USceneComponent* co
 // Function Creative.CreativeObjectEditAxisActor.SetAxisState
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 State                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector State (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::SetAxisState(const struct FVector& State)
 {
@@ -18556,7 +22271,7 @@ void ACreativeObjectEditAxisActor::SetAxisState(const struct FVector& State)
 // Function Creative.CreativeObjectEditAxisActor.MarkEditing
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bDoing                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDoing (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::MarkEditing(bool bDoing)
 {
@@ -18580,8 +22295,8 @@ void ACreativeObjectEditAxisActor::MarkEditing(bool bDoing)
 // Function Creative.CreativeObjectEditAxisActor.CalScale
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 OutScale                       (Parm, OutParm, IsPlainOldData)
+// struct FVector2D Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OutScale (Parm, OutParm, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::CalScale(const struct FVector2D& Pos, struct FVector* OutScale)
 {
@@ -18608,9 +22323,9 @@ void ACreativeObjectEditAxisActor::CalScale(const struct FVector2D& Pos, struct 
 // Function Creative.CreativeObjectEditAxisActor.CalRotation
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                OutRot                         (Parm, OutParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector2D Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator OutRot (Parm, OutParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ACreativeObjectEditAxisActor::CalRotation(const struct FVector2D& Pos, struct FRotator* OutRot)
 {
@@ -18639,8 +22354,8 @@ float ACreativeObjectEditAxisActor::CalRotation(const struct FVector2D& Pos, str
 // Function Creative.CreativeObjectEditAxisActor.CalLocation
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 OutLoc                         (Parm, OutParm, IsPlainOldData)
+// struct FVector2D Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OutLoc (Parm, OutParm, IsPlainOldData)
 
 void ACreativeObjectEditAxisActor::CalLocation(const struct FVector2D& Pos, struct FVector* OutLoc)
 {
@@ -18667,7 +22382,7 @@ void ACreativeObjectEditAxisActor::CalLocation(const struct FVector2D& Pos, stru
 // Function Creative.CreativeModeObjectInterface.ReceiveOnPostSetInstanceId
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeModeObjectInterface::ReceiveOnPostSetInstanceId(const struct FString& InstanceID)
 {
@@ -18690,8 +22405,8 @@ void UCreativeModeObjectInterface::ReceiveOnPostSetInstanceId(const struct FStri
 // Function Creative.CreativeObjectLocalAxisActor.SetAxisComponents
 // (Final, Native, Public)
 // Parameters:
-// class USceneComponent*         Axis                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class USceneComponent*         Grid                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USceneComponent* Axis (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USceneComponent* Grid (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void ACreativeObjectLocalAxisActor::SetAxisComponents(class USceneComponent* Axis, class USceneComponent* Grid)
 {
@@ -18737,7 +22452,7 @@ void ACreativeObjectLocalAxisActor::NeedUpdate()
 // Function Creative.CreativeObjectManager.SpawnObjectForStreaming
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeObjectManager::SpawnObjectForStreaming(const struct FString& InstanceID)
 {
@@ -18761,10 +22476,10 @@ void UCreativeObjectManager::SpawnObjectForStreaming(const struct FString& Insta
 // Function Creative.CreativeObjectManager.SpawnObject
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// struct FTransform              SpawnTransform                 (Parm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
+// struct FTransform SpawnTransform (Parm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeObjectManager::SpawnObject(const struct FString& InstanceID, const struct FString& Path, const struct FTransform& SpawnTransform)
 {
@@ -18792,9 +22507,9 @@ class UObject* UCreativeObjectManager::SpawnObject(const struct FString& Instanc
 // Function Creative.CreativeObjectManager.SetObjectTempStreamingType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// ECreativeModeActorStreamingType TempStreamingType              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// ECreativeModeActorStreamingType TempStreamingType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::SetObjectTempStreamingType(const struct FString& InstanceID, ECreativeModeActorStreamingType TempStreamingType)
 {
@@ -18821,8 +22536,8 @@ bool UCreativeObjectManager::SetObjectTempStreamingType(const struct FString& In
 // Function Creative.CreativeObjectManager.ResetObjectStreamingType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::ResetObjectStreamingType(const struct FString& InstanceID)
 {
@@ -18848,8 +22563,8 @@ bool UCreativeObjectManager::ResetObjectStreamingType(const struct FString& Inst
 // Function Creative.CreativeObjectManager.RemoveSpawnObjectInfoFormQueue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::RemoveSpawnObjectInfoFormQueue(struct FString* InstanceID)
 {
@@ -18877,7 +22592,7 @@ bool UCreativeObjectManager::RemoveSpawnObjectInfoFormQueue(struct FString* Inst
 // Function Creative.CreativeObjectManager.RemovePhysicsObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeObjectManager::RemovePhysicsObject(const struct FString& InstanceID)
 {
@@ -18901,9 +22616,9 @@ void UCreativeObjectManager::RemovePhysicsObject(const struct FString& InstanceI
 // Function Creative.CreativeObjectManager.RemoveObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bRemovePhysicsObject           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bRemovePhysicsObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::RemoveObject(const struct FString& InstanceID, bool bRemovePhysicsObject)
 {
@@ -18930,8 +22645,8 @@ bool UCreativeObjectManager::RemoveObject(const struct FString& InstanceID, bool
 // Function Creative.CreativeObjectManager.RemoveDestroyObjectInfoFormQueue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::RemoveDestroyObjectInfoFormQueue(struct FString* InstanceID)
 {
@@ -18959,8 +22674,8 @@ bool UCreativeObjectManager::RemoveDestroyObjectInfoFormQueue(struct FString* In
 // Function Creative.CreativeObjectManager.ReceiveUnregisterObject
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UObject*                 NewObject                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UObject* NewObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectManager::ReceiveUnregisterObject(const struct FString& InstanceID, class UObject* NewObject)
 {
@@ -18984,8 +22699,8 @@ void UCreativeObjectManager::ReceiveUnregisterObject(const struct FString& Insta
 // Function Creative.CreativeObjectManager.ReceiveRegisterObject
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UObject*                 NewObject                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UObject* NewObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectManager::ReceiveRegisterObject(const struct FString& InstanceID, class UObject* NewObject)
 {
@@ -19009,7 +22724,7 @@ void UCreativeObjectManager::ReceiveRegisterObject(const struct FString& Instanc
 // Function Creative.CreativeObjectManager.ReceiveOnPostLoadMapWithWorld
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectManager::ReceiveOnPostLoadMapWithWorld(class UWorld* World)
 {
@@ -19052,7 +22767,7 @@ void UCreativeObjectManager::ReceiveClearAllObjects()
 // Function Creative.CreativeObjectManager.OnPostLoadMapWithWorld
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectManager::OnPostLoadMapWithWorld(class UWorld* World)
 {
@@ -19076,7 +22791,7 @@ void UCreativeObjectManager::OnPostLoadMapWithWorld(class UWorld* World)
 // Function Creative.CreativeObjectManager.OnObjectSpawnComplete
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
+// struct FString ID (Parm, ZeroConstructor)
 
 void UCreativeObjectManager::OnObjectSpawnComplete(const struct FString& ID)
 {
@@ -19099,8 +22814,8 @@ void UCreativeObjectManager::OnObjectSpawnComplete(const struct FString& ID)
 // Function Creative.CreativeObjectManager.IsLogicObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::IsLogicObject(const struct FString& ID)
 {
@@ -19126,8 +22841,8 @@ bool UCreativeObjectManager::IsLogicObject(const struct FString& ID)
 // Function Creative.CreativeObjectManager.IsGroupObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::IsGroupObject(const struct FString& ID)
 {
@@ -19153,8 +22868,8 @@ bool UCreativeObjectManager::IsGroupObject(const struct FString& ID)
 // Function Creative.CreativeObjectManager.IsCanBatchObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::IsCanBatchObject(const struct FString& ID)
 {
@@ -19180,8 +22895,8 @@ bool UCreativeObjectManager::IsCanBatchObject(const struct FString& ID)
 // Function Creative.CreativeObjectManager.GetObjectTransform
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UCreativeObjectManager::GetObjectTransform(const struct FString& ID)
 {
@@ -19207,7 +22922,7 @@ struct FTransform UCreativeObjectManager::GetObjectTransform(const struct FStrin
 // Function Creative.CreativeObjectManager.GetObjectNum
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeObjectManager::GetObjectNum()
 {
@@ -19232,8 +22947,8 @@ uint32_t UCreativeObjectManager::GetObjectNum()
 // Function Creative.CreativeObjectManager.GetObjectAssetPath
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ID (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeObjectManager::GetObjectAssetPath(const struct FString& ID)
 {
@@ -19259,8 +22974,8 @@ struct FString UCreativeObjectManager::GetObjectAssetPath(const struct FString& 
 // Function Creative.CreativeObjectManager.GetObjectAssetID
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeObjectManager::GetObjectAssetID(const struct FString& ID)
 {
@@ -19286,8 +23001,8 @@ int UCreativeObjectManager::GetObjectAssetID(const struct FString& ID)
 // Function Creative.CreativeObjectManager.GetObject
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeObjectManager::GetObject(const struct FString& InstanceID)
 {
@@ -19313,7 +23028,7 @@ class UObject* UCreativeObjectManager::GetObject(const struct FString& InstanceI
 // Function Creative.CreativeObjectManager.GetActiveObjectNum
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeObjectManager::GetActiveObjectNum()
 {
@@ -19338,8 +23053,8 @@ uint32_t UCreativeObjectManager::GetActiveObjectNum()
 // Function Creative.CreativeObjectManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeObjectManager*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeObjectManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeObjectManager* UCreativeObjectManager::Get(class UObject* WorldContext)
 {
@@ -19365,7 +23080,7 @@ class UCreativeObjectManager* UCreativeObjectManager::Get(class UObject* WorldCo
 // Function Creative.CreativeObjectManager.DestroyObjectForStreaming
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeObjectManager::DestroyObjectForStreaming(const struct FString& InstanceID)
 {
@@ -19389,8 +23104,8 @@ void UCreativeObjectManager::DestroyObjectForStreaming(const struct FString& Ins
 // Function Creative.CreativeObjectManager.DestroyObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::DestroyObject(const struct FString& InstanceID)
 {
@@ -19416,8 +23131,8 @@ bool UCreativeObjectManager::DestroyObject(const struct FString& InstanceID)
 // Function Creative.CreativeObjectManager.CheckObjectBeBatch
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::CheckObjectBeBatch(const struct FString& ID)
 {
@@ -19443,9 +23158,9 @@ bool UCreativeObjectManager::CheckObjectBeBatch(const struct FString& ID)
 // Function Creative.CreativeObjectManager.ChangeObjectTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::ChangeObjectTransform(const struct FString& InstanceID, const struct FTransform& Transform)
 {
@@ -19472,9 +23187,9 @@ bool UCreativeObjectManager::ChangeObjectTransform(const struct FString& Instanc
 // Function Creative.CreativeObjectManager.AddSpawnObjectToQueue
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// struct FTransform              SpawnTransform                 (Parm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
+// struct FTransform SpawnTransform (Parm, IsPlainOldData)
 
 void UCreativeObjectManager::AddSpawnObjectToQueue(const struct FString& InstanceID, const struct FString& Path, const struct FTransform& SpawnTransform)
 {
@@ -19500,9 +23215,9 @@ void UCreativeObjectManager::AddSpawnObjectToQueue(const struct FString& Instanc
 // Function Creative.CreativeObjectManager.AddObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FCreativeModeStreamingParameters StreamingParameters            (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FCreativeModeStreamingParameters StreamingParameters (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeObjectManager::AddObject(const struct FString& InstanceID, const struct FCreativeModeStreamingParameters& StreamingParameters)
 {
@@ -19529,7 +23244,7 @@ bool UCreativeObjectManager::AddObject(const struct FString& InstanceID, const s
 // Function Creative.CreativeObjectManager.AddDestroyObjectToQueue
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeObjectManager::AddDestroyObjectToQueue(const struct FString& InstanceID)
 {
@@ -19553,7 +23268,7 @@ void UCreativeObjectManager::AddDestroyObjectToQueue(const struct FString& Insta
 // Function Creative.CreativeObjectStateManager.ReceiveOnGameStateBeginPlay
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectStateManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -19576,7 +23291,7 @@ void UCreativeObjectStateManager::ReceiveOnGameStateBeginPlay(class AGameStateBa
 // Function Creative.CreativeObjectStateManager.OnGameStateBeginPlay
 // (Final, Native, Protected)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeObjectStateManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -19600,8 +23315,8 @@ void UCreativeObjectStateManager::OnGameStateBeginPlay(class AGameStateBase* Gam
 // Function Creative.CreativeObjectStateManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeObjectStateManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeObjectStateManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeObjectStateManager* UCreativeObjectStateManager::Get(class UObject* WorldContext)
 {
@@ -19627,10 +23342,10 @@ class UCreativeObjectStateManager* UCreativeObjectStateManager::Get(class UObjec
 // Function Creative.CreativeOctreeSyncManager.ShouldMergeData
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FOctreeData             ExistingData                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FOctreeData             NewData                        (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FOctreeData ExistingData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FOctreeData NewData (ConstParm, Parm, OutParm, ReferenceParm)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeOctreeSyncManager::ShouldMergeData(const struct FOctreeData& ExistingData, const struct FOctreeData& NewData, float Distance)
 {
@@ -19679,10 +23394,10 @@ void UCreativeOctreeSyncManager::ResetTree()
 // Function Creative.CreativeOctreeSyncManager.RemoveDataInBoundsByActorRecursive
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FOctreeNode             Node                           (Parm, OutParm)
-// struct FBox                    BoundingBox                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FOctreeNode Node (Parm, OutParm)
+// struct FBox BoundingBox (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeOctreeSyncManager::RemoveDataInBoundsByActorRecursive(const struct FBox& BoundingBox, class AActor* Actor, struct FOctreeNode* Node)
 {
@@ -19712,8 +23427,8 @@ int UCreativeOctreeSyncManager::RemoveDataInBoundsByActorRecursive(const struct 
 // Function Creative.CreativeOctreeSyncManager.RemoveDataInBoundsByActor
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FBox                    BoundingBox                    (Parm, OutParm, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox BoundingBox (Parm, OutParm, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::RemoveDataInBoundsByActor(class AActor* Actor, struct FBox* BoundingBox)
 {
@@ -19761,7 +23476,7 @@ void UCreativeOctreeSyncManager::RemoveDataByUIDs()
 // Function Creative.CreativeOctreeSyncManager.RemoveDataByUID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            UID                            (Parm, ZeroConstructor, IsPlainOldData)
+// int UID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::RemoveDataByUID(int UID)
 {
@@ -19785,7 +23500,7 @@ void UCreativeOctreeSyncManager::RemoveDataByUID(int UID)
 // Function Creative.CreativeOctreeSyncManager.RemoveDataByPlayerKey
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 PlayerKey                      (Parm, ZeroConstructor)
+// struct FString PlayerKey (Parm, ZeroConstructor)
 
 void UCreativeOctreeSyncManager::RemoveDataByPlayerKey(const struct FString& PlayerKey)
 {
@@ -19809,7 +23524,7 @@ void UCreativeOctreeSyncManager::RemoveDataByPlayerKey(const struct FString& Pla
 // Function Creative.CreativeOctreeSyncManager.InsertData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FOctreeData             InData                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FOctreeData InData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeOctreeSyncManager::InsertData(const struct FOctreeData& InData)
 {
@@ -19833,10 +23548,10 @@ void UCreativeOctreeSyncManager::InsertData(const struct FOctreeData& InData)
 // Function Creative.CreativeOctreeSyncManager.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InCellSize                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InMergeDistance                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InMaxDepth                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InMinCellSize                  (Parm, ZeroConstructor, IsPlainOldData)
+// float InCellSize (Parm, ZeroConstructor, IsPlainOldData)
+// float InMergeDistance (Parm, ZeroConstructor, IsPlainOldData)
+// int InMaxDepth (Parm, ZeroConstructor, IsPlainOldData)
+// float InMinCellSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::Initialize(float InCellSize, float InMergeDistance, int InMaxDepth, float InMinCellSize)
 {
@@ -19863,8 +23578,8 @@ void UCreativeOctreeSyncManager::Initialize(float InCellSize, float InMergeDista
 // Function Creative.CreativeOctreeSyncManager.HookDecalManager
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ACreativeDecalManager*   DecalManager                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRegister                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ACreativeDecalManager* DecalManager (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRegister (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::HookDecalManager(class ACreativeDecalManager* DecalManager, bool bRegister)
 {
@@ -19889,9 +23604,9 @@ void UCreativeOctreeSyncManager::HookDecalManager(class ACreativeDecalManager* D
 // Function Creative.CreativeOctreeSyncManager.HasObstacleBetween
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeOctreeSyncManager::HasObstacleBetween(const struct FVector& Start, const struct FVector& End)
 {
@@ -19918,9 +23633,9 @@ bool UCreativeOctreeSyncManager::HasObstacleBetween(const struct FVector& Start,
 // Function Creative.CreativeOctreeSyncManager.GetOffsetLocationForObstacleCheck
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 Forward                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Forward (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativeOctreeSyncManager::GetOffsetLocationForObstacleCheck(const struct FVector& Location, const struct FVector& Forward)
 {
@@ -19947,8 +23662,8 @@ struct FVector UCreativeOctreeSyncManager::GetOffsetLocationForObstacleCheck(con
 // Function Creative.CreativeOctreeSyncManager.GetNodeData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FOctreeNode             Node                           (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FOctreeData>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FOctreeNode Node (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FOctreeData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetNodeData(const struct FOctreeNode& Node)
 {
@@ -19974,8 +23689,8 @@ TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetNodeData(const struct 
 // Function Creative.CreativeOctreeSyncManager.GetNodeChildren
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FOctreeNode             Node                           (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FOctreeNode>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FOctreeNode Node (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FOctreeNode> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FOctreeNode> UCreativeOctreeSyncManager::GetNodeChildren(const struct FOctreeNode& Node)
 {
@@ -20001,12 +23716,12 @@ TArray<struct FOctreeNode> UCreativeOctreeSyncManager::GetNodeChildren(const str
 // Function Creative.CreativeOctreeSyncManager.GetNearbyDataRecursive
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FOctreeNode             Node                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          SearchRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FOctreeData>     OutData                        (Parm, OutParm, ZeroConstructor)
-// int                            MaxCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bExpandSearch                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FOctreeNode Node (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float SearchRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOctreeData> OutData (Parm, OutParm, ZeroConstructor)
+// int MaxCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bExpandSearch (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::GetNearbyDataRecursive(const struct FOctreeNode& Node, const struct FVector& Location, float SearchRadius, int MaxCount, bool bExpandSearch, TArray<struct FOctreeData>* OutData)
 {
@@ -20037,11 +23752,11 @@ void UCreativeOctreeSyncManager::GetNearbyDataRecursive(const struct FOctreeNode
 // Function Creative.CreativeOctreeSyncManager.GetNearbyData
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            MaxCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSortByDistance                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bExpandSearch                  (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FOctreeData>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int MaxCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSortByDistance (Parm, ZeroConstructor, IsPlainOldData)
+// bool bExpandSearch (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FOctreeData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetNearbyData(const struct FVector& Location, int MaxCount, bool bSortByDistance, bool bExpandSearch)
 {
@@ -20070,7 +23785,7 @@ TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetNearbyData(const struc
 // Function Creative.CreativeOctreeSyncManager.GetAllData
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FOctreeData>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FOctreeData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetAllData()
 {
@@ -20095,8 +23810,8 @@ TArray<struct FOctreeData> UCreativeOctreeSyncManager::GetAllData()
 // Function Creative.CreativeOctreeSyncManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeOctreeSyncManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeOctreeSyncManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeOctreeSyncManager* UCreativeOctreeSyncManager::Get(class UObject* WorldContext)
 {
@@ -20122,7 +23837,7 @@ class UCreativeOctreeSyncManager* UCreativeOctreeSyncManager::Get(class UObject*
 // Function Creative.CreativeOctreeSyncManager.ExpandRootNode
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::ExpandRootNode(const struct FVector& Point)
 {
@@ -20146,7 +23861,7 @@ void UCreativeOctreeSyncManager::ExpandRootNode(const struct FVector& Point)
 // Function Creative.CreativeOctreeSyncManager.EnsureRootContainsPoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativeOctreeSyncManager::EnsureRootContainsPoint(const struct FVector& Point)
 {
@@ -20211,8 +23926,8 @@ void UCreativeOfflineBuildManager::OnPostSetLuaEventBridgeInstance()
 // Function Creative.CreativeOfflineBuildManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeOfflineBuildManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeOfflineBuildManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeOfflineBuildManager* UCreativeOfflineBuildManager::Get(class UObject* WorldContext)
 {
@@ -20259,8 +23974,8 @@ void UCreativeOverlapCheckComponent::StartOverlapCheck()
 // Function Creative.CreativeOverlapCheckComponent.IsOverlapClass
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  OverlapActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* OverlapActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeOverlapCheckComponent::IsOverlapClass(class AActor* OverlapActor)
 {
@@ -20286,7 +24001,7 @@ bool UCreativeOverlapCheckComponent::IsOverlapClass(class AActor* OverlapActor)
 // Function Creative.CreativeOverlapCheckComponent.InitOverlapComponent
 // (Final, Native, Public)
 // Parameters:
-// class UPrimitiveComponent*     Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPrimitiveComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UCreativeOverlapCheckComponent::InitOverlapComponent(class UPrimitiveComponent* Component)
 {
@@ -20352,7 +24067,7 @@ void UCreativeOverlapCheckComponent::CheckOverlapActors()
 // Function Creative.CreativeOverlapCheckComponent.AddOverlapClass
 // (Final, Native, Public)
 // Parameters:
-// class UClass*                  OverlapClass                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* OverlapClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeOverlapCheckComponent::AddOverlapClass(class UClass* OverlapClass)
 {
@@ -20373,10 +24088,37 @@ void UCreativeOverlapCheckComponent::AddOverlapClass(class UClass* OverlapClass)
 }
 
 
+// Function Creative.CreativeParentChildManager.Get
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeParentChildManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UCreativeParentChildManager* UCreativeParentChildManager::Get(class UObject* WorldContext)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeParentChildManager.Get");
+
+	UCreativeParentChildManager_Get_Params params;
+	params.WorldContext = WorldContext;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativePerfManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePerfManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -20399,7 +24141,7 @@ void UCreativePerfManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* Gam
 // Function Creative.CreativePerfManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePerfManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -20423,7 +24165,7 @@ void UCreativePerfManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 // Function Creative.CreativePerfManager.GetUObjectMemoryUsage
 // (Final, Native, Public)
 // Parameters:
-// TMap<struct FName, float>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FName, float> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FName, float> UCreativePerfManager::GetUObjectMemoryUsage()
 {
@@ -20448,7 +24190,7 @@ TMap<struct FName, float> UCreativePerfManager::GetUObjectMemoryUsage()
 // Function Creative.CreativePerfManager.GetResult
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<struct FCreaitvePerfDataMap> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCreaitvePerfDataMap> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FCreaitvePerfDataMap> UCreativePerfManager::GetResult()
 {
@@ -20473,7 +24215,7 @@ TArray<struct FCreaitvePerfDataMap> UCreativePerfManager::GetResult()
 // Function Creative.CreativePerfManager.GetNetData
 // (Final, Native, Public)
 // Parameters:
-// struct FCreativeNetData        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FCreativeNetData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCreativeNetData UCreativePerfManager::GetNetData()
 {
@@ -20498,7 +24240,7 @@ struct FCreativeNetData UCreativePerfManager::GetNetData()
 // Function Creative.CreativePerfManager.GetMemoryData
 // (Final, Native, Public)
 // Parameters:
-// struct FCreativeMemoryData     ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FCreativeMemoryData ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FCreativeMemoryData UCreativePerfManager::GetMemoryData()
 {
@@ -20523,9 +24265,9 @@ struct FCreativeMemoryData UCreativePerfManager::GetMemoryData()
 // Function Creative.CreativePerfManager.GetCPUUsage
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// float                          OutCPUTimePct                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutCPUTimePctRelative          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// float OutCPUTimePct (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float OutCPUTimePctRelative (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePerfManager::GetCPUUsage(int Type, float* OutCPUTimePct, float* OutCPUTimePctRelative)
 {
@@ -20554,8 +24296,8 @@ void UCreativePerfManager::GetCPUUsage(int Type, float* OutCPUTimePct, float* Ou
 // Function Creative.CreativePerfManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativePerfManager*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativePerfManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativePerfManager* UCreativePerfManager::Get(class UObject* WorldContext)
 {
@@ -20623,9 +24365,9 @@ void UCreativePerfManager::BeginSample()
 // Function Creative.CreativePerfManager.AddActorToRecord
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AssetId                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ScopeName                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// int AssetId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ScopeName (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePerfManager::AddActorToRecord(class AActor* Actor, int AssetId, const struct FName& ScopeName)
 {
@@ -20651,7 +24393,7 @@ void UCreativePerfManager::AddActorToRecord(class AActor* Actor, int AssetId, co
 // Function Creative.CreativePhotonDestructibleMeshComponent.SetInstanceActive
 // (Final, Native, Public)
 // Parameters:
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonDestructibleMeshComponent::SetInstanceActive(bool bActive)
 {
@@ -20675,7 +24417,7 @@ void UCreativePhotonDestructibleMeshComponent::SetInstanceActive(bool bActive)
 // Function Creative.CreativePhotonDestructibleMeshComponent.SetDestructionParam
 // (Final, Native, Public)
 // Parameters:
-// struct FPhotonDestructionParam Param                          (Parm)
+// struct FPhotonDestructionParam Param (Parm)
 
 void UCreativePhotonDestructibleMeshComponent::SetDestructionParam(const struct FPhotonDestructionParam& Param)
 {
@@ -20699,7 +24441,7 @@ void UCreativePhotonDestructibleMeshComponent::SetDestructionParam(const struct 
 // Function Creative.CreativePhotonDestructibleMeshComponent.SetCreativeServerDamagedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         del                            (Parm, ZeroConstructor)
+// struct FScriptDelegate del (Parm, ZeroConstructor)
 
 void UCreativePhotonDestructibleMeshComponent::SetCreativeServerDamagedDelegate(const struct FScriptDelegate& del)
 {
@@ -20723,7 +24465,7 @@ void UCreativePhotonDestructibleMeshComponent::SetCreativeServerDamagedDelegate(
 // Function Creative.CreativePhotonDestructibleMeshComponent.SetCreativeClientFragmentStateChangedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         del                            (Parm, ZeroConstructor)
+// struct FScriptDelegate del (Parm, ZeroConstructor)
 
 void UCreativePhotonDestructibleMeshComponent::SetCreativeClientFragmentStateChangedDelegate(const struct FScriptDelegate& del)
 {
@@ -20747,8 +24489,8 @@ void UCreativePhotonDestructibleMeshComponent::SetCreativeClientFragmentStateCha
 // Function Creative.CreativePhotonDestructibleMeshComponent.RebornOneFragment
 // (Final, Native, Public)
 // Parameters:
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonDestructibleMeshComponent::RebornOneFragment(int FragmentIndex)
 {
@@ -20774,7 +24516,7 @@ bool UCreativePhotonDestructibleMeshComponent::RebornOneFragment(int FragmentInd
 // Function Creative.CreativePhotonDestructibleMeshComponent.RebornInstance
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonDestructibleMeshComponent::RebornInstance()
 {
@@ -20799,7 +24541,7 @@ bool UCreativePhotonDestructibleMeshComponent::RebornInstance()
 // Function Creative.CreativePhotonDestructibleMeshComponent.RandomRecoverOneFragment
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonDestructibleMeshComponent::RandomRecoverOneFragment()
 {
@@ -20866,8 +24608,8 @@ void UCreativePhotonDestructibleMeshComponent::DestroyInstance()
 // Function Creative.CreativePhotonDestructibleMeshComponent.CheckFragmentOverlap
 // (Final, Native, Public)
 // Parameters:
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonDestructibleMeshComponent::CheckFragmentOverlap(int FragmentIndex)
 {
@@ -20893,7 +24635,7 @@ bool UCreativePhotonDestructibleMeshComponent::CheckFragmentOverlap(int Fragment
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.SetServerDamagedInstancedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetServerDamagedInstancedDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -20917,8 +24659,8 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetServerDam
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.SetInstanceMaxHp
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxHP                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float MaxHP (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetInstanceMaxHp(int InstanceIndex, float MaxHP)
 {
@@ -20943,8 +24685,8 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetInstanceM
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.SetInstanceActive
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetInstanceActive(const struct FString& InstanceID, bool bActive)
 {
@@ -20969,8 +24711,8 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetInstanceA
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.SetDestructionParam
 // (Final, Native, Public)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (Parm, ZeroConstructor)
-// TArray<struct FPhotonDestructionParam> DestructionParams              (Parm, ZeroConstructor)
+// TArray<int> InstanceIndex (Parm, ZeroConstructor)
+// TArray<struct FPhotonDestructionParam> DestructionParams (Parm, ZeroConstructor)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetDestructionParam(TArray<int> InstanceIndex, TArray<struct FPhotonDestructionParam> DestructionParams)
 {
@@ -20995,9 +24737,9 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::SetDestructi
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.RebornOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RebornOneFragment(const struct FString& InstanceID, int FragmentIndex)
 {
@@ -21024,8 +24766,8 @@ bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RebornOneFra
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.RebornInstance
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RebornInstance(const struct FString& InstanceID)
 {
@@ -21051,8 +24793,8 @@ bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RebornInstan
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.RandomRecoverOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RandomRecoverOneFragment(const struct FString& InstanceID)
 {
@@ -21078,7 +24820,7 @@ bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RandomRecove
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.RandomDestroyOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RandomDestroyOneFragment(const struct FString& InstanceID)
 {
@@ -21102,8 +24844,8 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::RandomDestro
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.OnClientInitial
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ImpactFragmentItemIndex        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ImpactFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::OnClientInitial(int InstanceIndex, TArray<int> ImpactFragmentItemIndex)
 {
@@ -21128,11 +24870,11 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::OnClientInit
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.OnClientDamaged
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ImpactFragmentItemIndex        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 LocalImpactPoint               (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 LocalVelocity                  (ConstParm, Parm, IsPlainOldData)
-// int                            HitType                        (Parm, ZeroConstructor, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ImpactFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector LocalImpactPoint (ConstParm, Parm, IsPlainOldData)
+// struct FVector LocalVelocity (ConstParm, Parm, IsPlainOldData)
+// int HitType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::OnClientDamaged(int InstanceIndex, TArray<int> ImpactFragmentItemIndex, const struct FVector& LocalImpactPoint, const struct FVector& LocalVelocity, int HitType)
 {
@@ -21160,8 +24902,8 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::OnClientDama
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.GetUGCInstanceID
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::GetUGCInstanceID(int InstanceIndex)
 {
@@ -21187,7 +24929,7 @@ struct FString UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::Ge
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.DestroyInstance
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::DestroyInstance(const struct FString& InstanceID)
 {
@@ -21211,9 +24953,9 @@ void UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::DestroyInsta
 // Function Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent.CheckFragmentOverlap
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::CheckFragmentOverlap(int InstanceIndex, int FragmentIndex)
 {
@@ -21240,7 +24982,7 @@ bool UCreativePhotonHierarchicalInstancedDestructibleMeshComponent::CheckFragmen
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.SetServerDamagedInstancedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::SetServerDamagedInstancedDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -21264,8 +25006,8 @@ void UCreativePhotonInstancedDestructibleMeshComponent::SetServerDamagedInstance
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.SetInstanceMaxHp
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxHP                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float MaxHP (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::SetInstanceMaxHp(int InstanceIndex, float MaxHP)
 {
@@ -21290,8 +25032,8 @@ void UCreativePhotonInstancedDestructibleMeshComponent::SetInstanceMaxHp(int Ins
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.SetInstanceActive
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::SetInstanceActive(const struct FString& InstanceID, bool bActive)
 {
@@ -21316,8 +25058,8 @@ void UCreativePhotonInstancedDestructibleMeshComponent::SetInstanceActive(const 
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.SetDestructionParam
 // (Final, Native, Public)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (Parm, ZeroConstructor)
-// TArray<struct FPhotonDestructionParam> DestructionParams              (Parm, ZeroConstructor)
+// TArray<int> InstanceIndex (Parm, ZeroConstructor)
+// TArray<struct FPhotonDestructionParam> DestructionParams (Parm, ZeroConstructor)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::SetDestructionParam(TArray<int> InstanceIndex, TArray<struct FPhotonDestructionParam> DestructionParams)
 {
@@ -21342,9 +25084,9 @@ void UCreativePhotonInstancedDestructibleMeshComponent::SetDestructionParam(TArr
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.RebornOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonInstancedDestructibleMeshComponent::RebornOneFragment(const struct FString& InstanceID, int FragmentIndex)
 {
@@ -21371,8 +25113,8 @@ bool UCreativePhotonInstancedDestructibleMeshComponent::RebornOneFragment(const 
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.RebornInstance
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonInstancedDestructibleMeshComponent::RebornInstance(const struct FString& InstanceID)
 {
@@ -21398,8 +25140,8 @@ bool UCreativePhotonInstancedDestructibleMeshComponent::RebornInstance(const str
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.RandomRecoverOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonInstancedDestructibleMeshComponent::RandomRecoverOneFragment(const struct FString& InstanceID)
 {
@@ -21425,7 +25167,7 @@ bool UCreativePhotonInstancedDestructibleMeshComponent::RandomRecoverOneFragment
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.RandomDestroyOneFragment
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::RandomDestroyOneFragment(const struct FString& InstanceID)
 {
@@ -21449,8 +25191,8 @@ void UCreativePhotonInstancedDestructibleMeshComponent::RandomDestroyOneFragment
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.OnClientInitial
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ImpactFragmentItemIndex        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ImpactFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::OnClientInitial(int InstanceIndex, TArray<int> ImpactFragmentItemIndex)
 {
@@ -21475,11 +25217,11 @@ void UCreativePhotonInstancedDestructibleMeshComponent::OnClientInitial(int Inst
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.OnClientDamaged
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ImpactFragmentItemIndex        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 LocalImpactPoint               (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 LocalVelocity                  (ConstParm, Parm, IsPlainOldData)
-// int                            HitType                        (Parm, ZeroConstructor, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ImpactFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector LocalImpactPoint (ConstParm, Parm, IsPlainOldData)
+// struct FVector LocalVelocity (ConstParm, Parm, IsPlainOldData)
+// int HitType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::OnClientDamaged(int InstanceIndex, TArray<int> ImpactFragmentItemIndex, const struct FVector& LocalImpactPoint, const struct FVector& LocalVelocity, int HitType)
 {
@@ -21507,8 +25249,8 @@ void UCreativePhotonInstancedDestructibleMeshComponent::OnClientDamaged(int Inst
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.GetUGCInstanceID
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativePhotonInstancedDestructibleMeshComponent::GetUGCInstanceID(int InstanceIndex)
 {
@@ -21534,7 +25276,7 @@ struct FString UCreativePhotonInstancedDestructibleMeshComponent::GetUGCInstance
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.DestroyInstance
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativePhotonInstancedDestructibleMeshComponent::DestroyInstance(const struct FString& InstanceID)
 {
@@ -21558,9 +25300,9 @@ void UCreativePhotonInstancedDestructibleMeshComponent::DestroyInstance(const st
 // Function Creative.CreativePhotonInstancedDestructibleMeshComponent.CheckFragmentOverlap
 // (Final, Native, Public)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhotonInstancedDestructibleMeshComponent::CheckFragmentOverlap(int InstanceIndex, int FragmentIndex)
 {
@@ -21587,8 +25329,8 @@ bool UCreativePhotonInstancedDestructibleMeshComponent::CheckFragmentOverlap(int
 // Function Creative.CreativePhysicsBatchActor.UpdatePhysicsComponentMaterial
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ComponentID                    (Parm, OutParm, ZeroConstructor)
-// struct FString                 MaterialPath                   (Parm, OutParm, ZeroConstructor)
+// struct FString ComponentID (Parm, OutParm, ZeroConstructor)
+// struct FString MaterialPath (Parm, OutParm, ZeroConstructor)
 
 void ACreativePhysicsBatchActor::UpdatePhysicsComponentMaterial(struct FString* ComponentID, struct FString* MaterialPath)
 {
@@ -21616,9 +25358,9 @@ void ACreativePhysicsBatchActor::UpdatePhysicsComponentMaterial(struct FString* 
 // Function Creative.CreativePhysicsBatchActor.UpdatePhysicsComponent
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 ComponentID                    (Parm, OutParm, ZeroConstructor)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// TEnumAsByte<enum ECollisionEnabled> CollisionEnabled               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ComponentID (Parm, OutParm, ZeroConstructor)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// TEnumAsByte<enum ECollisionEnabled> CollisionEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativePhysicsBatchActor::UpdatePhysicsComponent(const struct FTransform& Transform, TEnumAsByte<enum ECollisionEnabled> CollisionEnabled, struct FString* ComponentID)
 {
@@ -21646,8 +25388,8 @@ void ACreativePhysicsBatchActor::UpdatePhysicsComponent(const struct FTransform&
 // Function Creative.CreativePhysicsBatchActor.UnRegisterPhysicsComponent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ComponentID                    (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ComponentID (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativePhysicsBatchActor::UnRegisterPhysicsComponent(struct FString* ComponentID)
 {
@@ -21675,8 +25417,8 @@ bool ACreativePhysicsBatchActor::UnRegisterPhysicsComponent(struct FString* Comp
 // Function Creative.CreativePhysicsBatchActor.SetPhysicsComponentEnabled
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ComponentID                    (Parm, OutParm, ZeroConstructor)
-// TEnumAsByte<enum ECollisionEnabled> CollisionEnabled               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ComponentID (Parm, OutParm, ZeroConstructor)
+// TEnumAsByte<enum ECollisionEnabled> CollisionEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativePhysicsBatchActor::SetPhysicsComponentEnabled(TEnumAsByte<enum ECollisionEnabled> CollisionEnabled, struct FString* ComponentID)
 {
@@ -21703,11 +25445,11 @@ void ACreativePhysicsBatchActor::SetPhysicsComponentEnabled(TEnumAsByte<enum ECo
 // Function Creative.CreativePhysicsBatchActor.RegisterPhysicsComponentByMesh
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 ComponentID                    (Parm, ZeroConstructor)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// struct FString                 MeshPath                       (Parm, ZeroConstructor)
-// struct FName                   CollisionProfileName           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString ComponentID (Parm, ZeroConstructor)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// struct FString MeshPath (Parm, ZeroConstructor)
+// struct FName CollisionProfileName (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativePhysicsBatchActor::RegisterPhysicsComponentByMesh(const struct FString& InstanceID, const struct FString& ComponentID, const struct FTransform& Transform, const struct FString& MeshPath, const struct FName& CollisionProfileName)
 {
@@ -21735,8 +25477,8 @@ void ACreativePhysicsBatchActor::RegisterPhysicsComponentByMesh(const struct FSt
 // Function Creative.CreativePhysicsBatchActor.OnLoadMeshSuccessByPath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ComponentID                    (Parm, ZeroConstructor)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ComponentID (Parm, ZeroConstructor)
 
 void ACreativePhysicsBatchActor::OnLoadMeshSuccessByPath(class UObject* Obj, const struct FString& ComponentID)
 {
@@ -21761,8 +25503,8 @@ void ACreativePhysicsBatchActor::OnLoadMeshSuccessByPath(class UObject* Obj, con
 // Function Creative.CreativePhysicsBatchActor.OnLoadMeshSuccess
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ComponentID                    (Parm, ZeroConstructor)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ComponentID (Parm, ZeroConstructor)
 
 void ACreativePhysicsBatchActor::OnLoadMeshSuccess(class UObject* Obj, const struct FString& ComponentID)
 {
@@ -21787,7 +25529,7 @@ void ACreativePhysicsBatchActor::OnLoadMeshSuccess(class UObject* Obj, const str
 // Function Creative.CreativePhysicsBatchActor.IsLoadFinish
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativePhysicsBatchActor::IsLoadFinish()
 {
@@ -21812,7 +25554,7 @@ bool ACreativePhysicsBatchActor::IsLoadFinish()
 // Function Creative.CreativePhysicsBatchActor.GetRegisterNum
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ACreativePhysicsBatchActor::GetRegisterNum()
 {
@@ -21837,8 +25579,8 @@ int ACreativePhysicsBatchActor::GetRegisterNum()
 // Function Creative.CreativePhysicsBatchActor.GetPhysicsComponent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 ComponentID                    (Parm, OutParm, ZeroConstructor)
-// class UCreativePhysicsComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString ComponentID (Parm, OutParm, ZeroConstructor)
+// class UCreativePhysicsComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UCreativePhysicsComponent* ACreativePhysicsBatchActor::GetPhysicsComponent(struct FString* ComponentID)
 {
@@ -21887,7 +25629,7 @@ void ACreativePhysicsBatchActor::ClearAllPhysicsComponent()
 // Function Creative.CreativePhysicsComponent.SetIsReplicatedOnly
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ShouldReplicate                (Parm, ZeroConstructor, IsPlainOldData)
+// bool ShouldReplicate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhysicsComponent::SetIsReplicatedOnly(bool ShouldReplicate)
 {
@@ -21911,8 +25653,8 @@ void UCreativePhysicsComponent::SetIsReplicatedOnly(bool ShouldReplicate)
 // Function Creative.CreativePhysicsComponent.OnLoadMaterialSuccess
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UCreativePhysicsComponent::OnLoadMaterialSuccess(class UObject* Obj, const struct FString& Path)
 {
@@ -21937,9 +25679,9 @@ void UCreativePhysicsComponent::OnLoadMaterialSuccess(class UObject* Obj, const 
 // Function Creative.CreativePhysicsManager.UpdatePhysicsObjectCellInfo
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativePhysicsManager::UpdatePhysicsObjectCellInfo(const struct FString& InstanceID, const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -21965,7 +25707,7 @@ void UCreativePhysicsManager::UpdatePhysicsObjectCellInfo(const struct FString& 
 // Function Creative.CreativePhysicsManager.SetStreamingEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhysicsManager::SetStreamingEnable(bool Enable)
 {
@@ -21989,9 +25731,9 @@ void UCreativePhysicsManager::SetStreamingEnable(bool Enable)
 // Function Creative.CreativePhysicsManager.SetPhysicsActorVisible
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           Visible                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool Visible (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhysicsManager::SetPhysicsActorVisible(const struct FString& GridName, const struct FIntVector& CellIndex, bool Visible)
 {
@@ -22017,7 +25759,7 @@ void UCreativePhysicsManager::SetPhysicsActorVisible(const struct FString& GridN
 // Function Creative.CreativePhysicsManager.RemovePhysicsObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativePhysicsManager::RemovePhysicsObject(const struct FString& InstanceID)
 {
@@ -22041,8 +25783,8 @@ void UCreativePhysicsManager::RemovePhysicsObject(const struct FString& Instance
 // Function Creative.CreativePhysicsManager.PreAddPhysicsObjectCheck
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhysicsManager::PreAddPhysicsObjectCheck(const struct FString& InstanceID)
 {
@@ -22088,9 +25830,9 @@ void UCreativePhysicsManager::OnPhysicsBatchActorLoadFinish()
 // Function Creative.CreativePhysicsManager.IsPhysicsActorVisible
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePhysicsManager::IsPhysicsActorVisible(const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -22117,8 +25859,8 @@ bool UCreativePhysicsManager::IsPhysicsActorVisible(const struct FString& GridNa
 // Function Creative.CreativePhysicsManager.GetPhysicsBatchActorByInstanceID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class ACreativePhysicsBatchActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class ACreativePhysicsBatchActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetPhysicsBatchActorByInstanceID(const struct FString& InstanceID)
 {
@@ -22144,9 +25886,9 @@ class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetPhysicsBatchActorB
 // Function Creative.CreativePhysicsManager.GetPhysicsBatchActor
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              Index                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class ACreativePhysicsBatchActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector Index (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class ACreativePhysicsBatchActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetPhysicsBatchActor(const struct FString& GridName, const struct FIntVector& Index)
 {
@@ -22173,7 +25915,7 @@ class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetPhysicsBatchActor(
 // Function Creative.CreativePhysicsManager.GetGlobalPhysicsBatchActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ACreativePhysicsBatchActor* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ACreativePhysicsBatchActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetGlobalPhysicsBatchActor()
 {
@@ -22198,7 +25940,7 @@ class ACreativePhysicsBatchActor* UCreativePhysicsManager::GetGlobalPhysicsBatch
 // Function Creative.CreativePhysicsManager.GetAllPhysicsActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class ACreativePhysicsBatchActor*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class ACreativePhysicsBatchActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class ACreativePhysicsBatchActor*> UCreativePhysicsManager::GetAllPhysicsActor()
 {
@@ -22223,8 +25965,8 @@ TArray<class ACreativePhysicsBatchActor*> UCreativePhysicsManager::GetAllPhysics
 // Function Creative.CreativePhysicsManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativePhysicsManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativePhysicsManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativePhysicsManager* UCreativePhysicsManager::Get(class UObject* WorldContext)
 {
@@ -22271,8 +26013,8 @@ void UCreativePhysicsManager::ClearAllPhysicsBatchActor()
 // Function Creative.CreativePhysicsManager.ChangePhysicsObjectIsPrefab
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// bool                           bIsPrefab                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// bool bIsPrefab (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePhysicsManager::ChangePhysicsObjectIsPrefab(const struct FString& InstanceID, bool bIsPrefab)
 {
@@ -22297,9 +26039,9 @@ void UCreativePhysicsManager::ChangePhysicsObjectIsPrefab(const struct FString& 
 // Function Creative.CreativePhysicsManager.AddPhysicsObject
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FIntVector              CellIndex                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FIntVector CellIndex (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UCreativePhysicsManager::AddPhysicsObject(const struct FString& InstanceID, const struct FString& GridName, const struct FIntVector& CellIndex)
 {
@@ -22325,9 +26067,9 @@ void UCreativePhysicsManager::AddPhysicsObject(const struct FString& InstanceID,
 // Function Creative.CreativePlayerAPIObject.SetPlayerDirection
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Direction                      (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePlayerAPIObject::SetPlayerDirection(int64_t PlayerUUID, const struct FVector& Direction)
 {
@@ -22354,8 +26096,8 @@ bool UCreativePlayerAPIObject::SetPlayerDirection(int64_t PlayerUUID, const stru
 // Function Creative.CreativePlayerAPIObject.GetPlayerTeamIndex
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativePlayerAPIObject::GetPlayerTeamIndex(int64_t PlayerUUID)
 {
@@ -22381,9 +26123,9 @@ int UCreativePlayerAPIObject::GetPlayerTeamIndex(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.GetPlayerTeamIDAndTeamIndexFromCPP
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutTeamID                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            OutTeamIndex                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// int OutTeamID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int OutTeamIndex (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePlayerAPIObject::GetPlayerTeamIDAndTeamIndexFromCPP(int64_t PlayerUUID, int* OutTeamID, int* OutTeamIndex)
 {
@@ -22412,8 +26154,8 @@ void UCreativePlayerAPIObject::GetPlayerTeamIDAndTeamIndexFromCPP(int64_t Player
 // Function Creative.CreativePlayerAPIObject.GetPlayerTeamID
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativePlayerAPIObject::GetPlayerTeamID(int64_t PlayerUUID)
 {
@@ -22439,8 +26181,8 @@ int UCreativePlayerAPIObject::GetPlayerTeamID(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.GetPlayerMaxHealth
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativePlayerAPIObject::GetPlayerMaxHealth(int64_t PlayerUUID)
 {
@@ -22466,8 +26208,8 @@ float UCreativePlayerAPIObject::GetPlayerMaxHealth(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.GetPlayerLocation
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativePlayerAPIObject::GetPlayerLocation(int64_t PlayerUUID)
 {
@@ -22493,8 +26235,8 @@ struct FVector UCreativePlayerAPIObject::GetPlayerLocation(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.GetPlayerHealth
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativePlayerAPIObject::GetPlayerHealth(int64_t PlayerUUID)
 {
@@ -22520,8 +26262,8 @@ float UCreativePlayerAPIObject::GetPlayerHealth(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.GetPlayerDirection
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UCreativePlayerAPIObject::GetPlayerDirection(int64_t PlayerUUID)
 {
@@ -22547,9 +26289,9 @@ struct FVector UCreativePlayerAPIObject::GetPlayerDirection(int64_t PlayerUUID)
 // Function Creative.CreativePlayerAPIObject.AddPlayerHealth
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        PlayerUUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AddHealth                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t PlayerUUID (Parm, ZeroConstructor, IsPlainOldData)
+// float AddHealth (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativePlayerAPIObject::AddPlayerHealth(int64_t PlayerUUID, float AddHealth)
 {
@@ -22576,7 +26318,7 @@ float UCreativePlayerAPIObject::AddPlayerHealth(int64_t PlayerUUID, float AddHea
 // Function Creative.CreativeModePlayerState.ServerRemoveInstance
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void ACreativeModePlayerState::ServerRemoveInstance(const struct FString& InstanceID)
 {
@@ -22600,9 +26342,9 @@ void ACreativeModePlayerState::ServerRemoveInstance(const struct FString& Instan
 // Function Creative.CreativeModePlayerState.ServerReceiveModifyContent
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// int                            idx                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int idx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> ACreativeModePlayerState::ServerReceiveModifyContent(TArray<unsigned char> Content, int idx)
 {
@@ -22629,9 +26371,9 @@ TArray<unsigned char> ACreativeModePlayerState::ServerReceiveModifyContent(TArra
 // Function Creative.CreativeModePlayerState.ServerAddInstanceAdvance
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// int                            idx                            (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int idx (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
 void ACreativeModePlayerState::ServerAddInstanceAdvance(const struct FString& InstanceID, TArray<unsigned char> Content, int idx)
 {
@@ -22657,8 +26399,8 @@ void ACreativeModePlayerState::ServerAddInstanceAdvance(const struct FString& In
 // Function Creative.CreativeModePlayerState.ServerAddInstance
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void ACreativeModePlayerState::ServerAddInstance(const struct FString& InstanceID, TArray<unsigned char> Content)
 {
@@ -22683,7 +26425,7 @@ void ACreativeModePlayerState::ServerAddInstance(const struct FString& InstanceI
 // Function Creative.CreativePoolInterface.SetRecycleTime
 // (Native, Public)
 // Parameters:
-// float                          RecycleTime                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float RecycleTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolInterface::SetRecycleTime(float RecycleTime)
 {
@@ -22707,7 +26449,7 @@ void UCreativePoolInterface::SetRecycleTime(float RecycleTime)
 // Function Creative.CreativePoolInterface.SetIsRecycled
 // (Native, Public)
 // Parameters:
-// bool                           IsRecycled                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRecycled (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolInterface::SetIsRecycled(bool IsRecycled)
 {
@@ -22731,8 +26473,8 @@ void UCreativePoolInterface::SetIsRecycled(bool IsRecycled)
 // Function Creative.CreativePoolInterface.ReceiveOnReturnToPool
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// int RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolInterface::ReceiveOnReturnToPool(class UObject* NewOuter, int RecycledSeq)
 {
@@ -22756,8 +26498,8 @@ void UCreativePoolInterface::ReceiveOnReturnToPool(class UObject* NewOuter, int 
 // Function Creative.CreativePoolInterface.ReceiveOnPickFromPool
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativePoolInterface::ReceiveOnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -22781,9 +26523,9 @@ void UCreativePoolInterface::ReceiveOnPickFromPool(class UObject* NewOuter, cons
 // Function Creative.CreativePoolInterface.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePoolInterface::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -22810,8 +26552,8 @@ bool UCreativePoolInterface::OnReturnToPool(class UObject* NewOuter, uint32_t Re
 // Function Creative.CreativePoolInterface.OnPickFromPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativePoolInterface::OnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -22836,9 +26578,9 @@ void UCreativePoolInterface::OnPickFromPool(class UObject* NewOuter, const struc
 // Function Creative.CreativePoolInterface.GetUnusedComponentName
 // (Native, Public, HasOutParms)
 // Parameters:
-// class UObject*                 InOuter                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 NamePrefix                     (Parm, OutParm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* InOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString NamePrefix (Parm, OutParm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativePoolInterface::GetUnusedComponentName(class UObject* InOuter, struct FString* NamePrefix)
 {
@@ -22867,7 +26609,7 @@ struct FString UCreativePoolInterface::GetUnusedComponentName(class UObject* InO
 // Function Creative.CreativePoolInterface.GetRecycleTime
 // (Native, Public)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativePoolInterface::GetRecycleTime()
 {
@@ -22892,7 +26634,7 @@ float UCreativePoolInterface::GetRecycleTime()
 // Function Creative.CreativePoolInterface.CheckIsRecycled
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePoolInterface::CheckIsRecycled()
 {
@@ -22917,7 +26659,7 @@ bool UCreativePoolInterface::CheckIsRecycled()
 // Function Creative.CreativePoolManager.SetPoolManagerEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           bPoolManagerEnable             (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPoolManagerEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolManager::SetPoolManagerEnable(bool bPoolManagerEnable)
 {
@@ -22941,8 +26683,8 @@ void UCreativePoolManager::SetPoolManagerEnable(bool bPoolManagerEnable)
 // Function Creative.CreativePoolManager.ReturnObject
 // (Final, Native, Public)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolManager::ReturnObject(int PoolId, class UObject* Obj)
 {
@@ -22967,8 +26709,8 @@ void UCreativePoolManager::ReturnObject(int PoolId, class UObject* Obj)
 // Function Creative.CreativePoolManager.OnReceivePickObjectHandle
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ID                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 InObj                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolManager::OnReceivePickObjectHandle(int ID, class UObject* InObj)
 {
@@ -22992,8 +26734,8 @@ void UCreativePoolManager::OnReceivePickObjectHandle(int ID, class UObject* InOb
 // Function Creative.CreativePoolManager.OnReceiveObjectReturnHandle
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ID                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 InObj                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativePoolManager::OnReceiveObjectReturnHandle(int ID, class UObject* InObj)
 {
@@ -23017,9 +26759,9 @@ void UCreativePoolManager::OnReceiveObjectReturnHandle(int ID, class UObject* In
 // Function Creative.CreativePoolManager.OnReceiveDestroyHandle
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ID                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 InObj                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObj (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePoolManager::OnReceiveDestroyHandle(int ID, class UObject* InObj)
 {
@@ -23045,8 +26787,8 @@ bool UCreativePoolManager::OnReceiveDestroyHandle(int ID, class UObject* InObj)
 // Function Creative.CreativePoolManager.OnReceiveCreateHandle
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ID                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativePoolManager::OnReceiveCreateHandle(int ID)
 {
@@ -23071,10 +26813,10 @@ class UObject* UCreativePoolManager::OnReceiveCreateHandle(int ID)
 // Function Creative.CreativePoolManager.InitPool
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FCreativeObjectPoolClassConfig PoolConfig                     (Parm, OutParm)
-// bool                           bPoolEnable                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeObjectPoolClassConfig PoolConfig (Parm, OutParm)
+// bool bPoolEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativePoolManager::InitPool(int PoolId, bool bPoolEnable, struct FCreativeObjectPoolClassConfig* PoolConfig)
 {
@@ -23104,9 +26846,9 @@ bool UCreativePoolManager::InitPool(int PoolId, bool bPoolEnable, struct FCreati
 // Function Creative.CreativePoolManager.GetUnusedComponentName
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UObject*                 InOuter                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 NamePrefix                     (Parm, OutParm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* InOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString NamePrefix (Parm, OutParm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativePoolManager::GetUnusedComponentName(class UObject* InOuter, struct FString* NamePrefix)
 {
@@ -23135,10 +26877,10 @@ struct FString UCreativePoolManager::GetUnusedComponentName(class UObject* InOut
 // Function Creative.CreativePoolManager.GetObject
 // (Final, Native, Public)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativePoolManager::GetObject(int PoolId, class UObject* NewOuter, const struct FString& InName)
 {
@@ -23166,8 +26908,8 @@ class UObject* UCreativePoolManager::GetObject(int PoolId, class UObject* NewOut
 // Function Creative.CreativePoolManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativePoolManager*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativePoolManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativePoolManager* UCreativePoolManager::Get(class UObject* WorldContext)
 {
@@ -23214,10 +26956,10 @@ void UCreativePoolManager::ClearPoolObject()
 // Function Creative.CreativeRuntimePlayerBattleDataObject.SetTeamGameOutcomeCondition
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimeTeamGameOutcomeConditionInfo TeamGameOutcomeCondition       (Parm, OutParm)
-// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimeTeamGameOutcomeConditionInfo TeamGameOutcomeCondition (Parm, OutParm)
+// bool bPropagateToChildren (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeRuntimePlayerBattleDataObject::SetTeamGameOutcomeCondition(int TeamID, bool bPropagateToChildren, struct FRuntimeTeamGameOutcomeConditionInfo* TeamGameOutcomeCondition)
 {
@@ -23247,11 +26989,11 @@ bool ACreativeRuntimePlayerBattleDataObject::SetTeamGameOutcomeCondition(int Tea
 // Function Creative.CreativeRuntimePlayerBattleDataObject.SetPlayerBattleData
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimePlayerBattleDataInfo PlayerBattleData               (Parm, OutParm)
-// bool                           bPropagateToChildren           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimePlayerBattleDataInfo PlayerBattleData (Parm, OutParm)
+// bool bPropagateToChildren (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeRuntimePlayerBattleDataObject::SetPlayerBattleData(uint64_t UID, uint32_t PlayerKey, bool bPropagateToChildren, struct FRuntimePlayerBattleDataInfo* PlayerBattleData)
 {
@@ -23282,7 +27024,7 @@ bool ACreativeRuntimePlayerBattleDataObject::SetPlayerBattleData(uint64_t UID, u
 // Function Creative.CreativeRuntimePlayerBattleDataObject.ResetCurRoundPlayerBattleDataList
 // (Final, Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ACreativeRuntimePlayerBattleDataObject::ResetCurRoundPlayerBattleDataList()
 {
@@ -23307,7 +27049,7 @@ bool ACreativeRuntimePlayerBattleDataObject::ResetCurRoundPlayerBattleDataList()
 // Function Creative.CreativeRuntimePlayerBattleDataObject.OnRepTeamGameOutcomeConditionInfo
 // (Final, Native, Public)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeRuntimePlayerBattleDataObject::OnRepTeamGameOutcomeConditionInfo(int TeamID)
 {
@@ -23331,9 +27073,9 @@ void ACreativeRuntimePlayerBattleDataObject::OnRepTeamGameOutcomeConditionInfo(i
 // Function Creative.CreativeRuntimePlayerBattleDataObject.OnRepCurRoundPlayerBattleDataInfo
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       PlayerUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ChangeTeamID                   (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// int ChangeTeamID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeRuntimePlayerBattleDataObject::OnRepCurRoundPlayerBattleDataInfo(uint64_t PlayerUID, uint64_t PlayerKey, int ChangeTeamID)
 {
@@ -23359,8 +27101,8 @@ void ACreativeRuntimePlayerBattleDataObject::OnRepCurRoundPlayerBattleDataInfo(u
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetTeamGameOutcomeCondition
 // (Final, Native, Protected)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimeTeamGameOutcomeConditionInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimeTeamGameOutcomeConditionInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FRuntimeTeamGameOutcomeConditionInfo ACreativeRuntimePlayerBattleDataObject::GetTeamGameOutcomeCondition(int TeamID)
 {
@@ -23386,9 +27128,9 @@ struct FRuntimeTeamGameOutcomeConditionInfo ACreativeRuntimePlayerBattleDataObje
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetCurRoundPlayerBattleData
 // (Final, Native, Protected)
 // Parameters:
-// uint64_t                       PlayerUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimePlayerBattleDataInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// uint64_t PlayerUID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimePlayerBattleDataInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetCurRoundPlayerBattleData(uint64_t PlayerUID, uint32_t PlayerKey)
 {
@@ -23415,7 +27157,7 @@ struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetC
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetCurRoundAllPlayerBattleData
 // (Final, Native, Protected)
 // Parameters:
-// TArray<struct FRuntimePlayerBattleDataInfo> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FRuntimePlayerBattleDataInfo> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FRuntimePlayerBattleDataInfo> ACreativeRuntimePlayerBattleDataObject::GetCurRoundAllPlayerBattleData()
 {
@@ -23440,10 +27182,10 @@ TArray<struct FRuntimePlayerBattleDataInfo> ACreativeRuntimePlayerBattleDataObje
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetCacheRoundPlayerBattleData
 // (Final, Native, Protected)
 // Parameters:
-// int                            RoundIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       PlayerUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimePlayerBattleDataInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// int RoundIndex (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimePlayerBattleDataInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetCacheRoundPlayerBattleData(int RoundIndex, uint64_t PlayerUID, uint32_t PlayerKey)
 {
@@ -23471,8 +27213,8 @@ struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetC
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetCacheRoundBattleData
 // (Final, Native, Protected)
 // Parameters:
-// int                            RoundIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimeCacheRoundBattleDataInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// int RoundIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimeCacheRoundBattleDataInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FRuntimeCacheRoundBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetCacheRoundBattleData(int RoundIndex)
 {
@@ -23498,9 +27240,9 @@ struct FRuntimeCacheRoundBattleDataInfo ACreativeRuntimePlayerBattleDataObject::
 // Function Creative.CreativeRuntimePlayerBattleDataObject.GetAllRoundPlayerBattleData
 // (Final, Native, Protected)
 // Parameters:
-// uint64_t                       PlayerUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRuntimePlayerBattleDataInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// uint64_t PlayerUID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRuntimePlayerBattleDataInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetAllRoundPlayerBattleData(uint64_t PlayerUID, uint32_t PlayerKey)
 {
@@ -23527,7 +27269,7 @@ struct FRuntimePlayerBattleDataInfo ACreativeRuntimePlayerBattleDataObject::GetA
 // Function Creative.CreativeRuntimePlayerBattleDataObject.CacheCurRoundBattleData
 // (Final, Native, Protected)
 // Parameters:
-// int                            RoundIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int RoundIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeRuntimePlayerBattleDataObject::CacheCurRoundBattleData(int RoundIndex)
 {
@@ -23548,11 +27290,306 @@ void ACreativeRuntimePlayerBattleDataObject::CacheCurRoundBattleData(int RoundIn
 }
 
 
+// Function Creative.CreativeSceneDetectLib.CreativeGetStackDistanceFromMeshes
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<class UMeshComponent*> MeshComponents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector Direction (Parm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCreativeSceneDetectLib::CreativeGetStackDistanceFromMeshes(TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeGetStackDistanceFromMeshes");
+
+	UCreativeSceneDetectLib_CreativeGetStackDistanceFromMeshes_Params params;
+	params.MeshComponents = MeshComponents;
+	params.Direction = Direction;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeGetStackDistance
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UStaticMesh* Mesh (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// struct FVector Scale (Parm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UCreativeSceneDetectLib::CreativeGetStackDistance(class UStaticMesh* Mesh, const struct FVector& Direction, const struct FVector& Scale)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeGetStackDistance");
+
+	UCreativeSceneDetectLib_CreativeGetStackDistance_Params params;
+	params.Mesh = Mesh;
+	params.Direction = Direction;
+	params.Scale = Scale;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeGetFurthestPointFromMeshes
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<class UMeshComponent*> MeshComponents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector Direction (Parm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UCreativeSceneDetectLib::CreativeGetFurthestPointFromMeshes(TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeGetFurthestPointFromMeshes");
+
+	UCreativeSceneDetectLib_CreativeGetFurthestPointFromMeshes_Params params;
+	params.MeshComponents = MeshComponents;
+	params.Direction = Direction;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeGetFurthestPoint
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor* TargetActor (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* TargetComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UCreativeSceneDetectLib::CreativeGetFurthestPoint(class AActor* TargetActor, class USceneComponent* TargetComp, const struct FVector& Direction)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeGetFurthestPoint");
+
+	UCreativeSceneDetectLib_CreativeGetFurthestPoint_Params params;
+	params.TargetActor = TargetActor;
+	params.TargetComp = TargetComp;
+	params.Direction = Direction;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeFindPlacementPoints
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Start (Parm, IsPlainOldData)
+// struct FVector HalfExtent (Parm, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxDistance (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FVector> UCreativeSceneDetectLib::CreativeFindPlacementPoints(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& HalfExtent, const struct FVector& Direction, int Count, float MaxDistance)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeFindPlacementPoints");
+
+	UCreativeSceneDetectLib_CreativeFindPlacementPoints_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Start = Start;
+	params.HalfExtent = HalfExtent;
+	params.Direction = Direction;
+	params.Count = Count;
+	params.MaxDistance = MaxDistance;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeDetectSpaceAdvanced
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Source (Parm, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// float MaxDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxBoxExtent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeDetectSpaceOptions Options (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeSpaceResult ReturnValue (Parm, OutParm, ReturnParm)
+
+struct FCreativeSpaceResult UCreativeSceneDetectLib::CreativeDetectSpaceAdvanced(class UObject* WorldContextObject, const struct FVector& Source, const struct FVector& Direction, float MaxDistance, float MaxBoxExtent, const struct FCreativeDetectSpaceOptions& Options)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeDetectSpaceAdvanced");
+
+	UCreativeSceneDetectLib_CreativeDetectSpaceAdvanced_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Source = Source;
+	params.Direction = Direction;
+	params.MaxDistance = MaxDistance;
+	params.MaxBoxExtent = MaxBoxExtent;
+	params.Options = Options;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeDetectSpace
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Source (Parm, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// float MaxDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxBoxExtent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FCreativeSpaceResult ReturnValue (Parm, OutParm, ReturnParm)
+
+struct FCreativeSpaceResult UCreativeSceneDetectLib::CreativeDetectSpace(class UObject* WorldContextObject, const struct FVector& Source, const struct FVector& Direction, float MaxDistance, float MaxBoxExtent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeDetectSpace");
+
+	UCreativeSceneDetectLib_CreativeDetectSpace_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.Source = Source;
+	params.Direction = Direction;
+	params.MaxDistance = MaxDistance;
+	params.MaxBoxExtent = MaxBoxExtent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeCalculateSnapLocationFromMeshes
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector Curr (ConstParm, Parm, IsPlainOldData)
+// TArray<class UMeshComponent*> MeshComponents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector Direction (Parm, IsPlainOldData)
+// struct FVector HookPoint (Parm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UCreativeSceneDetectLib::CreativeCalculateSnapLocationFromMeshes(const struct FVector& Curr, TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction, const struct FVector& HookPoint)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeCalculateSnapLocationFromMeshes");
+
+	UCreativeSceneDetectLib_CreativeCalculateSnapLocationFromMeshes_Params params;
+	params.Curr = Curr;
+	params.MeshComponents = MeshComponents;
+	params.Direction = Direction;
+	params.HookPoint = HookPoint;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeSceneDetectLib.CreativeCalculateSnapLocation
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor* TargetActor (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* TargetComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector Direction (Parm, IsPlainOldData)
+// struct FVector HookPoint (Parm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UCreativeSceneDetectLib::CreativeCalculateSnapLocation(class AActor* TargetActor, class USceneComponent* TargetComp, const struct FVector& Direction, const struct FVector& HookPoint)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeSceneDetectLib.CreativeCalculateSnapLocation");
+
+	UCreativeSceneDetectLib_CreativeCalculateSnapLocation_Params params;
+	params.TargetActor = TargetActor;
+	params.TargetComp = TargetComp;
+	params.Direction = Direction;
+	params.HookPoint = HookPoint;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CreativeSceneQueryManager.RemoveReplicateObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSceneQueryManager::RemoveReplicateObject(const struct FString& InstanceID, class UObject* Object)
 {
@@ -23577,7 +27614,7 @@ void UCreativeSceneQueryManager::RemoveReplicateObject(const struct FString& Ins
 // Function Creative.CreativeSceneQueryManager.RemoveReplicateData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
+// struct FString InstanceID (Parm, ZeroConstructor)
 
 void UCreativeSceneQueryManager::RemoveReplicateData(const struct FString& InstanceID)
 {
@@ -23601,7 +27638,7 @@ void UCreativeSceneQueryManager::RemoveReplicateData(const struct FString& Insta
 // Function Creative.CreativeSceneQueryManager.OnReceivePreReplicateDataRemove
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
+// struct FString ID (Parm, ZeroConstructor)
 
 void UCreativeSceneQueryManager::OnReceivePreReplicateDataRemove(const struct FString& ID)
 {
@@ -23624,8 +27661,8 @@ void UCreativeSceneQueryManager::OnReceivePreReplicateDataRemove(const struct FS
 // Function Creative.CreativeSceneQueryManager.OnReceivePostReplicateDataChange
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<class UObject*>         Objects                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<class UObject*> Objects (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeSceneQueryManager::OnReceivePostReplicateDataChange(const struct FString& ID, TArray<class UObject*> Objects)
 {
@@ -23649,8 +27686,8 @@ void UCreativeSceneQueryManager::OnReceivePostReplicateDataChange(const struct F
 // Function Creative.CreativeSceneQueryManager.OnReceivePostReplicateDataAdd
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// TArray<class UObject*>         Objects                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ID (Parm, ZeroConstructor)
+// TArray<class UObject*> Objects (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UCreativeSceneQueryManager::OnReceivePostReplicateDataAdd(const struct FString& ID, TArray<class UObject*> Objects)
 {
@@ -23674,8 +27711,8 @@ void UCreativeSceneQueryManager::OnReceivePostReplicateDataAdd(const struct FStr
 // Function Creative.CreativeSceneQueryManager.GetReplicatedObjects
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// TArray<class UObject*>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// TArray<class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UObject*> UCreativeSceneQueryManager::GetReplicatedObjects(const struct FString& InstanceID)
 {
@@ -23701,8 +27738,8 @@ TArray<class UObject*> UCreativeSceneQueryManager::GetReplicatedObjects(const st
 // Function Creative.CreativeSceneQueryManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeSceneQueryManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeSceneQueryManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeSceneQueryManager* UCreativeSceneQueryManager::Get(class UObject* WorldContext)
 {
@@ -23728,9 +27765,9 @@ class UCreativeSceneQueryManager* UCreativeSceneQueryManager::Get(class UObject*
 // Function Creative.CreativeSceneQueryManager.AddReplicateObjectPostDeferred
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// struct FTransform              SpawnTransform                 (Parm, IsPlainOldData)
-// class UObject*                 ReplicatedObject               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// struct FTransform SpawnTransform (Parm, IsPlainOldData)
+// class UObject* ReplicatedObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSceneQueryManager::AddReplicateObjectPostDeferred(const struct FString& InstanceID, const struct FTransform& SpawnTransform, class UObject* ReplicatedObject)
 {
@@ -23756,12 +27793,12 @@ void UCreativeSceneQueryManager::AddReplicateObjectPostDeferred(const struct FSt
 // Function Creative.CreativeSceneQueryManager.AddReplicateObjectDeferred
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UClass*                  ObjectClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FTransform              SpawnTransform                 (Parm, IsPlainOldData)
-// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride      (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UClass* ObjectClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FTransform SpawnTransform (Parm, IsPlainOldData)
+// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeSceneQueryManager::AddReplicateObjectDeferred(const struct FString& InstanceID, class UClass* ObjectClass, const struct FString& Name, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride)
 {
@@ -23791,12 +27828,12 @@ class UObject* UCreativeSceneQueryManager::AddReplicateObjectDeferred(const stru
 // Function Creative.CreativeSceneQueryManager.AddReplicateObject
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InstanceID                     (Parm, ZeroConstructor)
-// class UClass*                  ObjectClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FTransform              SpawnTransform                 (Parm, IsPlainOldData)
-// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride      (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (Parm, ZeroConstructor)
+// class UClass* ObjectClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FTransform SpawnTransform (Parm, IsPlainOldData)
+// ESpawnActorCollisionHandlingMethod CollisionHandlingOverride (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeSceneQueryManager::AddReplicateObject(const struct FString& InstanceID, class UClass* ObjectClass, const struct FString& Name, const struct FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride)
 {
@@ -23847,8 +27884,8 @@ void UCreativeScreenCaptureWidget::OnPanelInitialized()
 // Function Creative.CreativeModeSoftComponentManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeModeSoftComponentManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeModeSoftComponentManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeModeSoftComponentManager* UCreativeModeSoftComponentManager::Get(class UObject* WorldContext)
 {
@@ -23895,8 +27932,8 @@ void UCreativeModeSoftComponentManager::ClearAllLoading()
 // Function Creative.SoftStaticMeshComponent.SetSoftStaticMeshAsync
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 NewMeshPath                    (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString NewMeshPath (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USoftStaticMeshComponent::SetSoftStaticMeshAsync(struct FString* NewMeshPath)
 {
@@ -23924,9 +27961,9 @@ bool USoftStaticMeshComponent::SetSoftStaticMeshAsync(struct FString* NewMeshPat
 // Function Creative.SoftStaticMeshComponent.SetSoftStaticMesh
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSetStaticMesh                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStaticMesh* NewMesh (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSetStaticMesh (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USoftStaticMeshComponent::SetSoftStaticMesh(class UStaticMesh* NewMesh, bool bSetStaticMesh)
 {
@@ -23953,7 +27990,7 @@ bool USoftStaticMeshComponent::SetSoftStaticMesh(class UStaticMesh* NewMesh, boo
 // Function Creative.SoftStaticMeshComponent.SetComponentOnlyRender
 // (Final, Native, Public)
 // Parameters:
-// bool                           bOnlyRender                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bOnlyRender (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USoftStaticMeshComponent::SetComponentOnlyRender(bool bOnlyRender)
 {
@@ -23977,7 +28014,7 @@ void USoftStaticMeshComponent::SetComponentOnlyRender(bool bOnlyRender)
 // Function Creative.SoftStaticMeshComponent.OnClientAsyncLoaded
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FSoftObjectPath         SoftObjectPath                 (Parm)
+// struct FSoftObjectPath SoftObjectPath (Parm)
 
 void USoftStaticMeshComponent::OnClientAsyncLoaded(const struct FSoftObjectPath& SoftObjectPath)
 {
@@ -24043,9 +28080,9 @@ void USoftStaticMeshComponent::ClearOverrideMaterials()
 // Function Creative.CreativeSoftStaticMeshComponent.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeSoftStaticMeshComponent::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -24072,8 +28109,8 @@ bool UCreativeSoftStaticMeshComponent::OnReturnToPool(class UObject* NewOuter, u
 // Function Creative.CreativeSoftStaticMeshComponent.OnPickFromPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativeSoftStaticMeshComponent::OnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -24098,12 +28135,12 @@ void UCreativeSoftStaticMeshComponent::OnPickFromPool(class UObject* NewOuter, c
 // Function Creative.CreativeSpawnManager.SpawnTower
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Campid                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamsID                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int Campid (Parm, ZeroConstructor, IsPlainOldData)
+// int ParamsID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeSpawnManager::SpawnTower(int ConfigId, const struct FTransform& Transform, int TeamID, int Campid, int ParamsID)
 {
@@ -24133,12 +28170,12 @@ class AActor* UCreativeSpawnManager::SpawnTower(int ConfigId, const struct FTran
 // Function Creative.CreativeSpawnManager.SpawnHumanBot
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Campid                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamsID                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int Campid (Parm, ZeroConstructor, IsPlainOldData)
+// int ParamsID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeSpawnManager::SpawnHumanBot(int ConfigId, const struct FTransform& Transform, int TeamID, int Campid, int ParamsID)
 {
@@ -24168,12 +28205,12 @@ class AActor* UCreativeSpawnManager::SpawnHumanBot(int ConfigId, const struct FT
 // Function Creative.CreativeSpawnManager.SpawnAIPlayer
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Campid                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamsID                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Transform (Parm, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int Campid (Parm, ZeroConstructor, IsPlainOldData)
+// int ParamsID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeSpawnManager::SpawnAIPlayer(int ConfigId, const struct FTransform& Transform, int TeamID, int Campid, int ParamsID)
 {
@@ -24203,8 +28240,8 @@ class AActor* UCreativeSpawnManager::SpawnAIPlayer(int ConfigId, const struct FT
 // Function Creative.CreativeSpawnManager.OnUnitSpawned
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  NewUnit                        (Parm, ZeroConstructor, IsPlainOldData)
-// ESpecType                      SpecType                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* NewUnit (Parm, ZeroConstructor, IsPlainOldData)
+// ESpecType SpecType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::OnUnitSpawned(class AActor* NewUnit, ESpecType SpecType)
 {
@@ -24229,8 +28266,8 @@ void UCreativeSpawnManager::OnUnitSpawned(class AActor* NewUnit, ESpecType SpecT
 // Function Creative.CreativeSpawnManager.OnDeadWithCategory
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// ESpecType                      Category                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DeadCharacter                  (Parm, ZeroConstructor, IsPlainOldData)
+// ESpecType Category (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DeadCharacter (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::OnDeadWithCategory(ESpecType Category, class AActor* DeadCharacter)
 {
@@ -24255,8 +28292,8 @@ void UCreativeSpawnManager::OnDeadWithCategory(ESpecType Category, class AActor*
 // Function Creative.CreativeSpawnManager.HandleTowerDestroyed
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  DestroyedCharacter             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DestroyedCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::HandleTowerDestroyed(class AActor* DestroyedCharacter, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -24281,8 +28318,8 @@ void UCreativeSpawnManager::HandleTowerDestroyed(class AActor* DestroyedCharacte
 // Function Creative.CreativeSpawnManager.HandleMonsterDestroyed
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  DestroyedCharacter             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DestroyedCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::HandleMonsterDestroyed(class AActor* DestroyedCharacter, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -24307,8 +28344,8 @@ void UCreativeSpawnManager::HandleMonsterDestroyed(class AActor* DestroyedCharac
 // Function Creative.CreativeSpawnManager.HandleHumanBotDestroyed
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  DestroyedCharacter             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DestroyedCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::HandleHumanBotDestroyed(class AActor* DestroyedCharacter, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -24333,8 +28370,8 @@ void UCreativeSpawnManager::HandleHumanBotDestroyed(class AActor* DestroyedChara
 // Function Creative.CreativeSpawnManager.HandleAIPlayerDestroyed
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  DestroyedCharacter             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DestroyedCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeSpawnManager::HandleAIPlayerDestroyed(class AActor* DestroyedCharacter, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -24359,8 +28396,8 @@ void UCreativeSpawnManager::HandleAIPlayerDestroyed(class AActor* DestroyedChara
 // Function Creative.CreativeSpawnManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeSpawnManager*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeSpawnManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeSpawnManager* UCreativeSpawnManager::Get(class UObject* WorldContext)
 {
@@ -24386,9 +28423,9 @@ class UCreativeSpawnManager* UCreativeSpawnManager::Get(class UObject* WorldCont
 // Function Creative.CreativeStaticMeshComponent.OnReturnToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       RecycledSeq                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t RecycledSeq (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeStaticMeshComponent::OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq)
 {
@@ -24415,8 +28452,8 @@ bool UCreativeStaticMeshComponent::OnReturnToPool(class UObject* NewOuter, uint3
 // Function Creative.CreativeStaticMeshComponent.OnPickFromPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UCreativeStaticMeshComponent::OnPickFromPool(class UObject* NewOuter, const struct FString& InName)
 {
@@ -24441,7 +28478,7 @@ void UCreativeStaticMeshComponent::OnPickFromPool(class UObject* NewOuter, const
 // Function Creative.CreativeStreamingManager.UnregisterStreamingSource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Source                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Source (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeStreamingManager::UnregisterStreamingSource(class AActor* Source)
 {
@@ -24465,7 +28502,7 @@ void UCreativeStreamingManager::UnregisterStreamingSource(class AActor* Source)
 // Function Creative.CreativeStreamingManager.StreamingManagerEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeStreamingManager::StreamingManagerEnable()
 {
@@ -24490,8 +28527,8 @@ bool UCreativeStreamingManager::StreamingManagerEnable()
 // Function Creative.CreativeStreamingManager.RemoveStreamingObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeStreamingManager::RemoveStreamingObject(const struct FString& InstanceID)
 {
@@ -24517,7 +28554,7 @@ bool UCreativeStreamingManager::RemoveStreamingObject(const struct FString& Inst
 // Function Creative.CreativeStreamingManager.RegisterStreamingSource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Source                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Source (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeStreamingManager::RegisterStreamingSource(class AActor* Source)
 {
@@ -24541,9 +28578,9 @@ void UCreativeStreamingManager::RegisterStreamingSource(class AActor* Source)
 // Function Creative.CreativeStreamingManager.GetOnGridCellIndex
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FIntVector              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FIntVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FIntVector UCreativeStreamingManager::GetOnGridCellIndex(const struct FString& GridName, const struct FVector& Location)
 {
@@ -24570,8 +28607,8 @@ struct FIntVector UCreativeStreamingManager::GetOnGridCellIndex(const struct FSt
 // Function Creative.CreativeStreamingManager.GetGridLoadingRange
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCreativeStreamingManager::GetGridLoadingRange(const struct FString& GridName)
 {
@@ -24597,7 +28634,7 @@ float UCreativeStreamingManager::GetGridLoadingRange(const struct FString& GridN
 // Function Creative.CreativeStreamingManager.GetGridList
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCreativeStreamingManager::GetGridList()
 {
@@ -24622,8 +28659,8 @@ TArray<struct FString> UCreativeStreamingManager::GetGridList()
 // Function Creative.CreativeStreamingManager.GetGridCellWidthHeight
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FString                 GridName                       (Parm, ZeroConstructor)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString GridName (Parm, ZeroConstructor)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UCreativeStreamingManager::GetGridCellWidthHeight(const struct FString& GridName)
 {
@@ -24649,7 +28686,7 @@ struct FVector2D UCreativeStreamingManager::GetGridCellWidthHeight(const struct 
 // Function Creative.CreativeStreamingManager.GetCreativeModeStreamingSourceList
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UCreativeStreamingManager::GetCreativeModeStreamingSourceList()
 {
@@ -24674,8 +28711,8 @@ TArray<struct FVector> UCreativeStreamingManager::GetCreativeModeStreamingSource
 // Function Creative.CreativeStreamingManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeStreamingManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeStreamingManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeStreamingManager* UCreativeStreamingManager::Get(class UObject* WorldContext)
 {
@@ -24701,9 +28738,9 @@ class UCreativeStreamingManager* UCreativeStreamingManager::Get(class UObject* W
 // Function Creative.CreativeStreamingManager.ChangeStreamingObjectStreamingType
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (ConstParm, Parm, ZeroConstructor)
-// ECreativeModeActorStreamingType NewStremaingType               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// ECreativeModeActorStreamingType ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (ConstParm, Parm, ZeroConstructor)
+// ECreativeModeActorStreamingType NewStremaingType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// ECreativeModeActorStreamingType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECreativeModeActorStreamingType UCreativeStreamingManager::ChangeStreamingObjectStreamingType(const struct FString& InstanceID, ECreativeModeActorStreamingType NewStremaingType)
 {
@@ -24730,9 +28767,9 @@ ECreativeModeActorStreamingType UCreativeStreamingManager::ChangeStreamingObject
 // Function Creative.CreativeStreamingManager.AddStreamingObject
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InstanceID                     (ConstParm, Parm, ZeroConstructor)
-// struct FCreativeModeStreamingParameters StreamingParameters            (ConstParm, Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InstanceID (ConstParm, Parm, ZeroConstructor)
+// struct FCreativeModeStreamingParameters StreamingParameters (ConstParm, Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeStreamingManager::AddStreamingObject(const struct FString& InstanceID, const struct FCreativeModeStreamingParameters& StreamingParameters)
 {
@@ -24759,10 +28796,10 @@ bool UCreativeStreamingManager::AddStreamingObject(const struct FString& Instanc
 // Function Creative.CreativeTaskComponent.UpdateTaskProgress
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// int                            NewProgress                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// int NewProgress (Parm, ZeroConstructor, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::UpdateTaskProgress(const struct FString& TaskId, int NewProgress, int idx)
 {
@@ -24790,9 +28827,9 @@ bool UCreativeTaskComponent::UpdateTaskProgress(const struct FString& TaskId, in
 // Function Creative.CreativeTaskComponent.SetTaskVal
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// struct FCreativeTaskViewItem   SetItemValue                   (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// struct FCreativeTaskViewItem SetItemValue (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskVal(const struct FString& TaskId, struct FCreativeTaskViewItem* SetItemValue)
 {
@@ -24821,9 +28858,9 @@ bool UCreativeTaskComponent::SetTaskVal(const struct FString& TaskId, struct FCr
 // Function Creative.CreativeTaskComponent.SetTaskStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// ETaskStatus                    TaskStatusVal                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// ETaskStatus TaskStatusVal (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskStatus(const struct FString& TaskId, ETaskStatus TaskStatusVal)
 {
@@ -24850,9 +28887,9 @@ bool UCreativeTaskComponent::SetTaskStatus(const struct FString& TaskId, ETaskSt
 // Function Creative.CreativeTaskComponent.SetTaskStageReservedField
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// struct FString                 Val                            (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// struct FString Val (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskStageReservedField(const struct FString& TaskId, const struct FString& Val)
 {
@@ -24879,9 +28916,9 @@ bool UCreativeTaskComponent::SetTaskStageReservedField(const struct FString& Tas
 // Function Creative.CreativeTaskComponent.SetTaskStageIdx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// int                            TaskStageIdx                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// int TaskStageIdx (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskStageIdx(const struct FString& TaskId, int TaskStageIdx)
 {
@@ -24908,10 +28945,10 @@ bool UCreativeTaskComponent::SetTaskStageIdx(const struct FString& TaskId, int T
 // Function Creative.CreativeTaskComponent.SetTaskProgressStep
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// struct FCreativeTaskProgressItem NewStep                        (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// struct FCreativeTaskProgressItem NewStep (ConstParm, Parm, OutParm, ReferenceParm)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskProgressStep(const struct FString& TaskId, const struct FCreativeTaskProgressItem& NewStep, int idx)
 {
@@ -24939,10 +28976,10 @@ bool UCreativeTaskComponent::SetTaskProgressStep(const struct FString& TaskId, c
 // Function Creative.CreativeTaskComponent.SetTaskConditionMet
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// bool                           bMet                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// bool bMet (Parm, ZeroConstructor, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetTaskConditionMet(const struct FString& TaskId, bool bMet, int idx)
 {
@@ -24970,9 +29007,9 @@ bool UCreativeTaskComponent::SetTaskConditionMet(const struct FString& TaskId, b
 // Function Creative.CreativeTaskComponent.SetMaxTaskProgressStep
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// int                            MaxStep                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// int MaxStep (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::SetMaxTaskProgressStep(const struct FString& TaskId, int MaxStep)
 {
@@ -24999,8 +29036,8 @@ bool UCreativeTaskComponent::SetMaxTaskProgressStep(const struct FString& TaskId
 // Function Creative.CreativeTaskComponent.RemoveTask
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::RemoveTask(const struct FString& TaskId)
 {
@@ -25047,7 +29084,7 @@ void UCreativeTaskComponent::RemoveAllTask()
 // Function Creative.CreativeTaskComponent.ReceiveOnTaskViewRemoved
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FCreativeTaskViewItem   TaskViewItem                   (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeTaskViewItem TaskViewItem (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeTaskComponent::ReceiveOnTaskViewRemoved(const struct FCreativeTaskViewItem& TaskViewItem)
 {
@@ -25070,7 +29107,7 @@ void UCreativeTaskComponent::ReceiveOnTaskViewRemoved(const struct FCreativeTask
 // Function Creative.CreativeTaskComponent.ReceiveOnTaskViewChanged
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FCreativeTaskViewItem   TaskViewItem                   (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeTaskViewItem TaskViewItem (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeTaskComponent::ReceiveOnTaskViewChanged(const struct FCreativeTaskViewItem& TaskViewItem)
 {
@@ -25093,7 +29130,7 @@ void UCreativeTaskComponent::ReceiveOnTaskViewChanged(const struct FCreativeTask
 // Function Creative.CreativeTaskComponent.ReceiveOnTaskViewAdded
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FCreativeTaskViewItem   TaskViewItem                   (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeTaskViewItem TaskViewItem (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UCreativeTaskComponent::ReceiveOnTaskViewAdded(const struct FCreativeTaskViewItem& TaskViewItem)
 {
@@ -25116,7 +29153,7 @@ void UCreativeTaskComponent::ReceiveOnTaskViewAdded(const struct FCreativeTaskVi
 // Function Creative.CreativeTaskComponent.ReceiveAddTask
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FCreativeTaskViewItem   NewTask                        (Parm, OutParm)
+// struct FCreativeTaskViewItem NewTask (Parm, OutParm)
 
 void UCreativeTaskComponent::ReceiveAddTask(struct FCreativeTaskViewItem* NewTask)
 {
@@ -25141,8 +29178,8 @@ void UCreativeTaskComponent::ReceiveAddTask(struct FCreativeTaskViewItem* NewTas
 // Function Creative.CreativeTaskComponent.MakeDummyProgressStep
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCreativeTaskProgressParams Params                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FCreativeTaskProgressItem ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FCreativeTaskProgressParams Params (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCreativeTaskProgressItem ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCreativeTaskProgressItem UCreativeTaskComponent::MakeDummyProgressStep(const struct FCreativeTaskProgressParams& Params)
 {
@@ -25168,8 +29205,8 @@ struct FCreativeTaskProgressItem UCreativeTaskComponent::MakeDummyProgressStep(c
 // Function Creative.CreativeTaskComponent.IsTaskExists
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::IsTaskExists(const struct FString& TaskId)
 {
@@ -25195,9 +29232,9 @@ bool UCreativeTaskComponent::IsTaskExists(const struct FString& TaskId)
 // Function Creative.CreativeTaskComponent.IsProgressConditionMet
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::IsProgressConditionMet(const struct FString& TaskId, int idx)
 {
@@ -25224,11 +29261,11 @@ bool UCreativeTaskComponent::IsProgressConditionMet(const struct FString& TaskId
 // Function Creative.CreativeTaskComponent.GetTaskProgress
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// int                            OutCurrent                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutMax                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// int OutCurrent (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// int OutMax (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::GetTaskProgress(const struct FString& TaskId, int idx, int* OutCurrent, int* OutMax)
 {
@@ -25260,7 +29297,7 @@ bool UCreativeTaskComponent::GetTaskProgress(const struct FString& TaskId, int i
 // Function Creative.CreativeTaskComponent.GetAllTasks
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FCreativeTaskViewItem> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<struct FCreativeTaskViewItem> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<struct FCreativeTaskViewItem> UCreativeTaskComponent::GetAllTasks()
 {
@@ -25285,8 +29322,8 @@ TArray<struct FCreativeTaskViewItem> UCreativeTaskComponent::GetAllTasks()
 // Function Creative.CreativeTaskComponent.FindTaskByID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// struct FCreativeTaskViewItem   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString TaskId (Parm, ZeroConstructor)
+// struct FCreativeTaskViewItem ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCreativeTaskViewItem UCreativeTaskComponent::FindTaskByID(const struct FString& TaskId)
 {
@@ -25312,8 +29349,8 @@ struct FCreativeTaskViewItem UCreativeTaskComponent::FindTaskByID(const struct F
 // Function Creative.CreativeTaskComponent.AddTask
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TaskId                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TaskId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeTaskComponent::AddTask(const struct FString& TaskId)
 {
@@ -25360,7 +29397,7 @@ void UCreativeTimerApiObject::Clear()
 // Function Creative.CreativeTriggerAreaActor.OnTakeDamage
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
 
 void ACreativeTriggerAreaActor::OnTakeDamage(class AActor* DamageCauser)
 {
@@ -25381,10 +29418,249 @@ void ACreativeTriggerAreaActor::OnTakeDamage(class AActor* DamageCauser)
 }
 
 
+// Function Creative.CreativeUMGCanvasPanel.SwapChildrenByInstanceID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InstanceIDA (Parm, ZeroConstructor)
+// struct FString InstanceIDB (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeUMGCanvasPanel::SwapChildrenByInstanceID(const struct FString& InstanceIDA, const struct FString& InstanceIDB)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasPanel.SwapChildrenByInstanceID");
+
+	UCreativeUMGCanvasPanel_SwapChildrenByInstanceID_Params params;
+	params.InstanceIDA = InstanceIDA;
+	params.InstanceIDB = InstanceIDB;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeUMGCanvasPanel.RequestRecalcZOrder
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeUMGCanvasPanel::RequestRecalcZOrder()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasPanel.RequestRecalcZOrder");
+
+	UCreativeUMGCanvasPanel_RequestRecalcZOrder_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeUMGCanvasPanel.OnNextFrameRecalcTick
+// (Final, Native, Private)
+
+void UCreativeUMGCanvasPanel::OnNextFrameRecalcTick()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasPanel.OnNextFrameRecalcTick");
+
+	UCreativeUMGCanvasPanel_OnNextFrameRecalcTick_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeUMGCanvasPanel.FlushRecalcZOrderNow
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeUMGCanvasPanel::FlushRecalcZOrderNow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasPanel.FlushRecalcZOrderNow");
+
+	UCreativeUMGCanvasPanel_FlushRecalcZOrderNow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeUMGCanvasWidget.SwapChildrenByInstanceID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InstanceIDA (Parm, ZeroConstructor)
+// struct FString InstanceIDB (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeUMGCanvasWidget::SwapChildrenByInstanceID(const struct FString& InstanceIDA, const struct FString& InstanceIDB)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasWidget.SwapChildrenByInstanceID");
+
+	UCreativeUMGCanvasWidget_SwapChildrenByInstanceID_Params params;
+	params.InstanceIDA = InstanceIDA;
+	params.InstanceIDB = InstanceIDB;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeUMGCanvasWidget.RequestRecalcZOrder
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeUMGCanvasWidget::RequestRecalcZOrder()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasWidget.RequestRecalcZOrder");
+
+	UCreativeUMGCanvasWidget_RequestRecalcZOrder_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeUMGCanvasWidget.FlushRecalcZOrderNow
+// (Final, Native, Public, BlueprintCallable)
+
+void UCreativeUMGCanvasWidget::FlushRecalcZOrderNow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUMGCanvasWidget.FlushRecalcZOrderNow");
+
+	UCreativeUMGCanvasWidget_FlushRecalcZOrderNow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CreativeUserParticleSystemComponent.GetEmitterInstanceNum
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UCreativeUserParticleSystemComponent::GetEmitterInstanceNum()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUserParticleSystemComponent.GetEmitterInstanceNum");
+
+	UCreativeUserParticleSystemComponent_GetEmitterInstanceNum_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeUserStaticMeshComponent.SetStaticMeshPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InMeshPath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCreativeUserStaticMeshComponent::SetStaticMeshPath(const struct FString& InMeshPath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUserStaticMeshComponent.SetStaticMeshPath");
+
+	UCreativeUserStaticMeshComponent_SetStaticMeshPath_Params params;
+	params.InMeshPath = InMeshPath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CreativeUserStaticMeshComponent.OnRep_StaticMeshPath
+// (Final, Native, Private)
+// Parameters:
+// struct FString OldPath (Parm, ZeroConstructor)
+
+void UCreativeUserStaticMeshComponent::OnRep_StaticMeshPath(const struct FString& OldPath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CreativeUserStaticMeshComponent.OnRep_StaticMeshPath");
+
+	UCreativeUserStaticMeshComponent_OnRep_StaticMeshPath_Params params;
+	params.OldPath = OldPath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Creative.CreativeWebSocketManager.SendMessage
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Message                        (Parm, ZeroConstructor)
+// struct FString Message (Parm, ZeroConstructor)
 
 void UCreativeWebSocketManager::SendMessage(const struct FString& Message)
 {
@@ -25490,8 +29766,8 @@ void UCreativeWebSocketManager::OnPostSetLuaEventBridgeInstance()
 // Function Creative.CreativeWebSocketManager.OnMessageSent
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Message                        (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Message (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWebSocketManager::OnMessageSent(const struct FString& Message)
 {
@@ -25517,8 +29793,8 @@ bool UCreativeWebSocketManager::OnMessageSent(const struct FString& Message)
 // Function Creative.CreativeWebSocketManager.OnMessageReceived
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 Message                        (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Message (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWebSocketManager::OnMessageReceived(const struct FString& Message)
 {
@@ -25543,7 +29819,7 @@ bool UCreativeWebSocketManager::OnMessageReceived(const struct FString& Message)
 // Function Creative.CreativeWebSocketManager.IsConnected
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWebSocketManager::IsConnected()
 {
@@ -25568,8 +29844,8 @@ bool UCreativeWebSocketManager::IsConnected()
 // Function Creative.CreativeWebSocketManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeWebSocketManager* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeWebSocketManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeWebSocketManager* UCreativeWebSocketManager::Get(class UObject* WorldContext)
 {
@@ -25595,8 +29871,8 @@ class UCreativeWebSocketManager* UCreativeWebSocketManager::Get(class UObject* W
 // Function Creative.CreativeWebSocketManager.ConnectServer
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ServerURL                      (Parm, ZeroConstructor)
-// struct FString                 ServerProtocol                 (Parm, ZeroConstructor)
+// struct FString ServerURL (Parm, ZeroConstructor)
+// struct FString ServerProtocol (Parm, ZeroConstructor)
 
 void UCreativeWebSocketManager::ConnectServer(const struct FString& ServerURL, const struct FString& ServerProtocol)
 {
@@ -25621,8 +29897,8 @@ void UCreativeWebSocketManager::ConnectServer(const struct FString& ServerURL, c
 // Function Creative.CreativeWidgetObject.UnregisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Destroy                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
+// bool Destroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWidgetObject::UnregisterLiteComponent(class ULiteComponent* Component, bool Destroy)
 {
@@ -25647,7 +29923,7 @@ void UCreativeWidgetObject::UnregisterLiteComponent(class ULiteComponent* Compon
 // Function Creative.CreativeWidgetObject.ReturnObjectToPool
 // (Native, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWidgetObject::ReturnObjectToPool(class UObject* Obj)
 {
@@ -25671,7 +29947,7 @@ void UCreativeWidgetObject::ReturnObjectToPool(class UObject* Obj)
 // Function Creative.CreativeWidgetObject.ReturnObjectsToPool
 // (Native, Public)
 // Parameters:
-// TArray<class UObject*>         Objs                           (Parm, ZeroConstructor)
+// TArray<class UObject*> Objs (Parm, ZeroConstructor)
 
 void UCreativeWidgetObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 {
@@ -25695,7 +29971,7 @@ void UCreativeWidgetObject::ReturnObjectsToPool(TArray<class UObject*> Objs)
 // Function Creative.CreativeWidgetObject.RegisterLiteComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULiteComponent*          Component                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ULiteComponent* Component (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWidgetObject::RegisterLiteComponent(class ULiteComponent* Component)
 {
@@ -25739,7 +30015,7 @@ void UCreativeWidgetObject::ReceivePostBeginPlay()
 // Function Creative.CreativeWidgetObject.ReceiveIsDedicatedServer
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWidgetObject::ReceiveIsDedicatedServer()
 {
@@ -25764,7 +30040,7 @@ bool UCreativeWidgetObject::ReceiveIsDedicatedServer()
 // Function Creative.CreativeWidgetObject.ReceiveHasAuthority
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWidgetObject::ReceiveHasAuthority()
 {
@@ -25829,8 +30105,8 @@ void UCreativeWidgetObject::ReceiveBeginPlay()
 // Function Creative.CreativeWidgetObject.GetObjectsFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams                   (Parm, OutParm, ZeroConstructor)
-// TArray<class UObject*>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCreativePoolGetObjectParamInfo> ObjectParams (Parm, OutParm, ZeroConstructor)
+// TArray<class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UObject*> UCreativeWidgetObject::GetObjectsFromPool(TArray<struct FCreativePoolGetObjectParamInfo>* ObjectParams)
 {
@@ -25858,10 +30134,10 @@ TArray<class UObject*> UCreativeWidgetObject::GetObjectsFromPool(TArray<struct F
 // Function Creative.CreativeWidgetObject.GetObjectFromPool
 // (Native, Public, HasOutParms)
 // Parameters:
-// int                            PoolId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NewOuter                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InName                         (Parm, OutParm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PoolId (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* NewOuter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InName (Parm, OutParm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeWidgetObject::GetObjectFromPool(int PoolId, class UObject* NewOuter, struct FString* InName)
 {
@@ -25891,7 +30167,7 @@ class UObject* UCreativeWidgetObject::GetObjectFromPool(int PoolId, class UObjec
 // Function Creative.CreativeWorldSubSystem.GetManagerCenter
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCreativeWorldSubSystem::GetManagerCenter()
 {
@@ -25978,7 +30254,7 @@ void UCreativeWoWInactiveCheckComponent::KickOutPlayer()
 // Function Creative.CreativeWoWInactiveCheckComponent.ClientShowKickOutTip
 // (Net, NetReliable, Native, Event, Public, NetClient, BlueprintCallable)
 // Parameters:
-// float                          RemainTime                     (Parm, ZeroConstructor, IsPlainOldData)
+// float RemainTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWoWInactiveCheckComponent::ClientShowKickOutTip(float RemainTime)
 {
@@ -26023,7 +30299,7 @@ void UCreativeWoWInactiveCheckComponent::ClientCachedActiveState()
 // Function Creative.CreativeWoWInactiveCheckComponent.CheckForMovement
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeWoWInactiveCheckComponent::CheckForMovement()
 {
@@ -26069,7 +30345,7 @@ void UCreativeWoWInactiveCheckComponent::CheckForInactive()
 // Function Creative.CreativeWoWManager.ReceiveOnGameStateBeginPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWoWManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -26092,7 +30368,7 @@ void UCreativeWoWManager::ReceiveOnGameStateBeginPlay(class AGameStateBase* Game
 // Function Creative.CreativeWoWManager.OnGameStateBeginPlay
 // (Final, Native, Public)
 // Parameters:
-// class AGameStateBase*          GameState                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* GameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeWoWManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 {
@@ -26116,8 +30392,8 @@ void UCreativeWoWManager::OnGameStateBeginPlay(class AGameStateBase* GameState)
 // Function Creative.CreativeWoWManager.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UCreativeWoWManager*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCreativeWoWManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreativeWoWManager* UCreativeWoWManager::Get(class UObject* WorldContext)
 {
@@ -26143,9 +30419,9 @@ class UCreativeWoWManager* UCreativeWoWManager::Get(class UObject* WorldContext)
 // Function Creative.CustomAssetUtilityObject.SaveArrayToFile
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetUtilityObject::SaveArrayToFile(TArray<unsigned char> Content, const struct FString& Filename)
 {
@@ -26172,7 +30448,7 @@ bool UCustomAssetUtilityObject::SaveArrayToFile(TArray<unsigned char> Content, c
 // Function Creative.CustomAssetUtilityObject.ReceiveIsDedicatedServer
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetUtilityObject::ReceiveIsDedicatedServer()
 {
@@ -26197,7 +30473,7 @@ bool UCustomAssetUtilityObject::ReceiveIsDedicatedServer()
 // Function Creative.CustomAssetUtilityObject.ReceiveGetCustomAssetMgr
 // (Final, Native, Protected)
 // Parameters:
-// class UCustomAssetManager*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCustomAssetManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCustomAssetManager* UCustomAssetUtilityObject::ReceiveGetCustomAssetMgr()
 {
@@ -26243,8 +30519,8 @@ void UCustomAssetUtilityObject::LuaConditionalBeginDestroy()
 // Function Creative.CustomAssetUtilityObject.LoadFileToArray
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Filename (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UCustomAssetUtilityObject::LoadFileToArray(const struct FString& Filename)
 {
@@ -26270,8 +30546,8 @@ TArray<unsigned char> UCustomAssetUtilityObject::LoadFileToArray(const struct FS
 // Function Creative.CustomAssetUtilityObject.IsFileExistsInSaved
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetUtilityObject::IsFileExistsInSaved(const struct FString& Filename)
 {
@@ -26297,7 +30573,7 @@ bool UCustomAssetUtilityObject::IsFileExistsInSaved(const struct FString& Filena
 // Function Creative.CustomAssetUtilityObject.InitUtilityObject
 // (Final, Native, Public)
 // Parameters:
-// class UCustomAssetManager*     CustomAssetManager             (Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomAssetManager* CustomAssetManager (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomAssetUtilityObject::InitUtilityObject(class UCustomAssetManager* CustomAssetManager)
 {
@@ -26321,7 +30597,7 @@ void UCustomAssetUtilityObject::InitUtilityObject(class UCustomAssetManager* Cus
 // Function Creative.CustomAssetUtilityObject.GetLastError
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCustomAssetUtilityObject::GetLastError()
 {
@@ -26346,8 +30622,8 @@ struct FString UCustomAssetUtilityObject::GetLastError()
 // Function Creative.CustomAssetUtilityObject.GetAllFilesInDirectoryRelative
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 TargetDirectory                (Parm, ZeroConstructor)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString TargetDirectory (Parm, ZeroConstructor)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCustomAssetUtilityObject::GetAllFilesInDirectoryRelative(const struct FString& TargetDirectory)
 {
@@ -26373,8 +30649,8 @@ TArray<struct FString> UCustomAssetUtilityObject::GetAllFilesInDirectoryRelative
 // Function Creative.CustomAssetUtilityObject.DeleteFileInSaved
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetUtilityObject::DeleteFileInSaved(const struct FString& Filename)
 {
@@ -26400,8 +30676,8 @@ bool UCustomAssetUtilityObject::DeleteFileInSaved(const struct FString& Filename
 // Function Creative.CustomAssetUtilityObject.AreFilesExistInSaved
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<struct FString>         FileNameList                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<bool>                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> FileNameList (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<bool> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<bool> UCustomAssetUtilityObject::AreFilesExistInSaved(TArray<struct FString> FileNameList)
 {
@@ -26427,9 +30703,9 @@ TArray<bool> UCustomAssetUtilityObject::AreFilesExistInSaved(TArray<struct FStri
 // DelegateFunction Creative.CustomAssetDeserializer.DeserializeCompletedDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// class UCustomAssetDeserializer* uDeserializer                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 OutAssetBytes                  (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       DeserializeSeq                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomAssetDeserializer* uDeserializer (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* OutAssetBytes (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t DeserializeSeq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomAssetDeserializer::DeserializeCompletedDelegate__DelegateSignature(class UCustomAssetDeserializer* uDeserializer, class UObject* OutAssetBytes, uint64_t DeserializeSeq)
 {
@@ -26454,8 +30730,8 @@ void UCustomAssetDeserializer::DeserializeCompletedDelegate__DelegateSignature(c
 // Function Creative.CustomAssetDeserializer.DeserializeCompleted
 // (Final, Native, Protected)
 // Parameters:
-// uint64_t                       DeserializeSeq                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 OutAsset                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t DeserializeSeq (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* OutAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomAssetDeserializer::DeserializeCompleted(uint64_t DeserializeSeq, class UObject* OutAsset)
 {
@@ -26480,11 +30756,11 @@ void UCustomAssetDeserializer::DeserializeCompleted(uint64_t DeserializeSeq, cla
 // Function Creative.CustomAssetDeserializer.Deserialize
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InBytes                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 SuffixType                     (ConstParm, Parm, ZeroConstructor)
-// uint64_t                       DeserializeSeq                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> InBytes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString SuffixType (ConstParm, Parm, ZeroConstructor)
+// uint64_t DeserializeSeq (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetDeserializer::Deserialize(TArray<unsigned char> InBytes, const struct FString& SuffixType, uint64_t DeserializeSeq, class UObject* Outer)
 {
@@ -26513,8 +30789,8 @@ bool UCustomAssetDeserializer::Deserialize(TArray<unsigned char> InBytes, const 
 // Function Creative.CustomAssetAnimDeserializer.IsValidData
 // (Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          InBytes                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> InBytes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetAnimDeserializer::IsValidData(TArray<unsigned char> InBytes)
 {
@@ -26534,6 +30810,516 @@ bool UCustomAssetAnimDeserializer::IsValidData(TArray<unsigned char> InBytes)
 	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageDeserializer.IsValidData
+// (Native, Protected, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<unsigned char> InBytes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCustomAssetImageDeserializer::IsValidData(TArray<unsigned char> InBytes)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageDeserializer.IsValidData");
+
+	UCustomAssetImageDeserializer_IsValidData_Params params;
+	params.InBytes = InBytes;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomImageDataWrapper.MakeUniqueName
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCustomImageDataWrapper::MakeUniqueName(class UObject* WorldContextObject)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomImageDataWrapper.MakeUniqueName");
+
+	UCustomImageDataWrapper_MakeUniqueName_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomImageDataWrapper.GetImageWrapperOuter
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UCustomImageDataWrapper::GetImageWrapperOuter()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomImageDataWrapper.GetImageWrapperOuter");
+
+	UCustomImageDataWrapper_GetImageWrapperOuter_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.RemoveTextureRef
+// (Final, Native, Public)
+// Parameters:
+// uint64_t HashID (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomAssetImageManager::RemoveTextureRef(uint64_t HashID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.RemoveTextureRef");
+
+	UCustomAssetImageManager_RemoveTextureRef_Params params;
+	params.HashID = HashID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CustomAssetImageManager.ReadPixelFormat
+// (Final, Native, Static, Public)
+// Parameters:
+// class UTexture2D* Target (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPixelFormat> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum EPixelFormat> UCustomAssetImageManager::ReadPixelFormat(class UTexture2D* Target)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.ReadPixelFormat");
+
+	UCustomAssetImageManager_ReadPixelFormat_Params params;
+	params.Target = Target;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.ReadImageSummary
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// TArray<unsigned char> ImageData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FImageSummary ReturnValue (Parm, OutParm, ReturnParm)
+
+struct FImageSummary UCustomAssetImageManager::ReadImageSummary(TArray<unsigned char> ImageData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.ReadImageSummary");
+
+	UCustomAssetImageManager_ReadImageSummary_Params params;
+	params.ImageData = ImageData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.ReadImageRGBA
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// TArray<unsigned char> ImageData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<unsigned char> UCustomAssetImageManager::ReadImageRGBA(TArray<unsigned char> ImageData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.ReadImageRGBA");
+
+	UCustomAssetImageManager_ReadImageRGBA_Params params;
+	params.ImageData = ImageData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.LuaUpdateTextureResource2Png
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// class UTexture2D* Target (Parm, ZeroConstructor, IsPlainOldData)
+// int TexGroup (Parm, ZeroConstructor, IsPlainOldData)
+// int Width (Parm, ZeroConstructor, IsPlainOldData)
+// int Height (Parm, ZeroConstructor, IsPlainOldData)
+// int MipIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> TexData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCustomAssetImageManager::LuaUpdateTextureResource2Png(class UTexture2D* Target, int TexGroup, int Width, int Height, int MipIndex, TArray<unsigned char> TexData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.LuaUpdateTextureResource2Png");
+
+	UCustomAssetImageManager_LuaUpdateTextureResource2Png_Params params;
+	params.Target = Target;
+	params.TexGroup = TexGroup;
+	params.Width = Width;
+	params.Height = Height;
+	params.MipIndex = MipIndex;
+	params.TexData = TexData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CustomAssetImageManager.LuaUpdateTextureResource2
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// class UTexture2D* Target (Parm, ZeroConstructor, IsPlainOldData)
+// int TexGroup (Parm, ZeroConstructor, IsPlainOldData)
+// int Width (Parm, ZeroConstructor, IsPlainOldData)
+// int Height (Parm, ZeroConstructor, IsPlainOldData)
+// int MipIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int PixelFormat (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> TexData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UCustomAssetImageManager::LuaUpdateTextureResource2(class UTexture2D* Target, int TexGroup, int Width, int Height, int MipIndex, int PixelFormat, TArray<unsigned char> TexData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.LuaUpdateTextureResource2");
+
+	UCustomAssetImageManager_LuaUpdateTextureResource2_Params params;
+	params.Target = Target;
+	params.TexGroup = TexGroup;
+	params.Width = Width;
+	params.Height = Height;
+	params.MipIndex = MipIndex;
+	params.PixelFormat = PixelFormat;
+	params.TexData = TexData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CustomAssetImageManager.LuaReserveTexture2
+// (Final, Native, Static, Public)
+// Parameters:
+// int PixelFormat (Parm, ZeroConstructor, IsPlainOldData)
+// int TexGroup (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* OtherTex (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UCustomAssetImageManager::LuaReserveTexture2(int PixelFormat, int TexGroup, class UTexture2D* OtherTex)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.LuaReserveTexture2");
+
+	UCustomAssetImageManager_LuaReserveTexture2_Params params;
+	params.PixelFormat = PixelFormat;
+	params.TexGroup = TexGroup;
+	params.OtherTex = OtherTex;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.LuaReserveTexture
+// (Final, Native, Static, Public)
+// Parameters:
+// int PixelFormat (Parm, ZeroConstructor, IsPlainOldData)
+// int TexGroup (Parm, ZeroConstructor, IsPlainOldData)
+// int Width (Parm, ZeroConstructor, IsPlainOldData)
+// int Height (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTexture2D* UCustomAssetImageManager::LuaReserveTexture(int PixelFormat, int TexGroup, int Width, int Height)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.LuaReserveTexture");
+
+	UCustomAssetImageManager_LuaReserveTexture_Params params;
+	params.PixelFormat = PixelFormat;
+	params.TexGroup = TexGroup;
+	params.Width = Width;
+	params.Height = Height;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.IsValidImageSummary
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// struct FImageSummary Summary (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCustomAssetImageManager::IsValidImageSummary(const struct FImageSummary& Summary)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.IsValidImageSummary");
+
+	UCustomAssetImageManager_IsValidImageSummary_Params params;
+	params.Summary = Summary;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.IsPngImageData
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// TArray<unsigned char> ImageData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCustomAssetImageManager::IsPngImageData(TArray<unsigned char> ImageData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.IsPngImageData");
+
+	UCustomAssetImageManager_IsPngImageData_Params params;
+	params.ImageData = ImageData;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.GetPixelFormat
+// (Final, Native, Static, Public)
+// Parameters:
+// int PixelFormat (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPixelFormat> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum EPixelFormat> UCustomAssetImageManager::GetPixelFormat(int PixelFormat)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.GetPixelFormat");
+
+	UCustomAssetImageManager_GetPixelFormat_Params params;
+	params.PixelFormat = PixelFormat;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.GetPixelBlockSize
+// (Final, Native, Static, Public, HasOutParms)
+// Parameters:
+// int PixelFormat (Parm, ZeroConstructor, IsPlainOldData)
+// int SizeX (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int SizeY (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UCustomAssetImageManager::GetPixelBlockSize(int PixelFormat, int* SizeX, int* SizeY)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.GetPixelBlockSize");
+
+	UCustomAssetImageManager_GetPixelBlockSize_Params params;
+	params.PixelFormat = PixelFormat;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (SizeX != nullptr)
+		*SizeX = params.SizeX;
+	if (SizeY != nullptr)
+		*SizeY = params.SizeY;
+}
+
+
+// Function Creative.CustomAssetImageManager.GetObjectPath
+// (Final, Native, Static, Public)
+// Parameters:
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCustomAssetImageManager::GetObjectPath(class UObject* Object)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.GetObjectPath");
+
+	UCustomAssetImageManager_GetObjectPath_Params params;
+	params.Object = Object;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.GetHeaderSize
+// (Final, Native, Static, Public)
+// Parameters:
+// TEnumAsByte<enum EPixelFormat> Format (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UCustomAssetImageManager::GetHeaderSize(TEnumAsByte<enum EPixelFormat> Format)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.GetHeaderSize");
+
+	UCustomAssetImageManager_GetHeaderSize_Params params;
+	params.Format = Format;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.CustomAssetImageManager.AddTextureRef
+// (Final, Native, Public)
+// Parameters:
+// uint64_t HashID (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* Tex (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomAssetImageManager::AddTextureRef(uint64_t HashID, class UTexture2D* Tex)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetImageManager.AddTextureRef");
+
+	UCustomAssetImageManager_AddTextureRef_Params params;
+	params.HashID = HashID;
+	params.Tex = Tex;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
@@ -26561,7 +31347,7 @@ void UCustomAssetManager::TryBeginPlay()
 // Function Creative.CustomAssetManager.ReceiveIsDedicatedServer
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetManager::ReceiveIsDedicatedServer()
 {
@@ -26607,11 +31393,11 @@ void UCustomAssetManager::PrintAliveCustomAssets()
 // Function Creative.CustomAssetManager.ParseCustomAssetKeyHashID
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// uint64_t                       HashID                         (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  ExpectedHashIDTag              (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  OutCustomAssetType             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       OutUniqueId                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t HashID (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char ExpectedHashIDTag (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char OutCustomAssetType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// uint32_t OutUniqueId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetManager::ParseCustomAssetKeyHashID(uint64_t HashID, unsigned char ExpectedHashIDTag, unsigned char* OutCustomAssetType, uint32_t* OutUniqueId)
 {
@@ -26640,11 +31426,38 @@ bool UCustomAssetManager::ParseCustomAssetKeyHashID(uint64_t HashID, unsigned ch
 }
 
 
+// Function Creative.CustomAssetManager.GetHashByString
+// (Final, Native, Protected)
+// Parameters:
+// struct FString CustomAssetKey (Parm, ZeroConstructor)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+uint32_t UCustomAssetManager::GetHashByString(const struct FString& CustomAssetKey)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetManager.GetHashByString");
+
+	UCustomAssetManager_GetHashByString_Params params;
+	params.CustomAssetKey = CustomAssetKey;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CustomAssetManager.GetCustomAssetPathName
 // (Final, Native, Protected)
 // Parameters:
-// class UObject*                 CustomAsset                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* CustomAsset (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCustomAssetManager::GetCustomAssetPathName(class UObject* CustomAsset)
 {
@@ -26670,7 +31483,7 @@ struct FString UCustomAssetManager::GetCustomAssetPathName(class UObject* Custom
 // Function Creative.CustomAssetManager.GetCustomAssetOuter
 // (Final, Native, Protected)
 // Parameters:
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCustomAssetManager::GetCustomAssetOuter()
 {
@@ -26695,8 +31508,8 @@ class UObject* UCustomAssetManager::GetCustomAssetOuter()
 // Function Creative.CustomAssetManager.GetCustomAssetObjectFromTrackedMap
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 BytesMD5                       (Parm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BytesMD5 (Parm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCustomAssetManager::GetCustomAssetObjectFromTrackedMap(const struct FString& BytesMD5)
 {
@@ -26719,13 +31532,38 @@ class UObject* UCustomAssetManager::GetCustomAssetObjectFromTrackedMap(const str
 }
 
 
+// Function Creative.CustomAssetManager.GetCurPlatformSuffixType
+// (Final, Native, Protected)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UCustomAssetManager::GetCurPlatformSuffixType()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetManager.GetCurPlatformSuffixType");
+
+	UCustomAssetManager_GetCurPlatformSuffixType_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Creative.CustomAssetManager.GenerateHashIDByCustomAssetKey
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 CustomAssetKey                 (Parm, ZeroConstructor)
-// unsigned char                  CustomAssetType                (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  HashIDTag                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString CustomAssetKey (Parm, ZeroConstructor)
+// unsigned char CustomAssetType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char HashIDTag (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint64_t UCustomAssetManager::GenerateHashIDByCustomAssetKey(const struct FString& CustomAssetKey, unsigned char CustomAssetType, unsigned char HashIDTag)
 {
@@ -26816,9 +31654,9 @@ void UCustomAssetManager::CleanupAliveCustomAssetObjects()
 // Function Creative.CustomAssetManager.AddCustomAssetObjectToTrackedMap
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 BytesMD5                       (Parm, ZeroConstructor)
-// class UObject*                 AssetObject                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 LoadStack                      (Parm, ZeroConstructor)
+// struct FString BytesMD5 (Parm, ZeroConstructor)
+// class UObject* AssetObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString LoadStack (Parm, ZeroConstructor)
 
 void UCustomAssetManager::AddCustomAssetObjectToTrackedMap(const struct FString& BytesMD5, class UObject* AssetObject, const struct FString& LoadStack)
 {
@@ -26842,23 +31680,18 @@ void UCustomAssetManager::AddCustomAssetObjectToTrackedMap(const struct FString&
 
 
 // Function Creative.CustomAssetMountStateComponent.RemoveMountStatusInfo
-// (Final, Native, Public)
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// unsigned char                  AssetType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AssetSize                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 SHA256                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AssetKey (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCustomAssetMountStateComponent::RemoveMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256)
+bool UCustomAssetMountStateComponent::RemoveMountStatusInfo(struct FString* AssetKey)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetMountStateComponent.RemoveMountStatusInfo");
 
 	UCustomAssetMountStateComponent_RemoveMountStatusInfo_Params params;
-	params.AssetType = AssetType;
-	params.AssetSize = AssetSize;
-	params.SHA256 = SHA256;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -26868,6 +31701,9 @@ bool UCustomAssetMountStateComponent::RemoveMountStatusInfo(unsigned char AssetT
 
 	pFunc->FunctionFlags = flags;
 
+	if (AssetKey != nullptr)
+		*AssetKey = params.AssetKey;
+
 	return params.ReturnValue;
 }
 
@@ -26875,7 +31711,7 @@ bool UCustomAssetMountStateComponent::RemoveMountStatusInfo(unsigned char AssetT
 // Function Creative.CustomAssetMountStateComponent.ReceiveIsDedicatedServer
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetMountStateComponent::ReceiveIsDedicatedServer()
 {
@@ -26900,7 +31736,7 @@ bool UCustomAssetMountStateComponent::ReceiveIsDedicatedServer()
 // Function Creative.CustomAssetMountStateComponent.ReceiveHasAuthority
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetMountStateComponent::ReceiveHasAuthority()
 {
@@ -26923,25 +31759,20 @@ bool UCustomAssetMountStateComponent::ReceiveHasAuthority()
 
 
 // Function Creative.CustomAssetMountStateComponent.ChangeMountStatusInfo
-// (Final, Native, Public)
+// (Final, Native, Public, HasOutParms)
 // Parameters:
-// unsigned char                  AssetType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AssetSize                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 SHA256                         (Parm, ZeroConstructor)
-// EMountStatus                   MountStatus                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<uint32_t>               MountingPlayerKeys             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AssetKey (Parm, OutParm, ZeroConstructor)
+// EMountStatus MountStatus (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<uint32_t> MountingPlayerKeys (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCustomAssetMountStateComponent::ChangeMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256, EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys)
+bool UCustomAssetMountStateComponent::ChangeMountStatusInfo(EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, struct FString* AssetKey)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetMountStateComponent.ChangeMountStatusInfo");
 
 	UCustomAssetMountStateComponent_ChangeMountStatusInfo_Params params;
-	params.AssetType = AssetType;
-	params.AssetSize = AssetSize;
-	params.SHA256 = SHA256;
 	params.MountStatus = MountStatus;
 	params.MountingPlayerKeys = MountingPlayerKeys;
 
@@ -26953,6 +31784,9 @@ bool UCustomAssetMountStateComponent::ChangeMountStatusInfo(unsigned char AssetT
 
 	pFunc->FunctionFlags = flags;
 
+	if (AssetKey != nullptr)
+		*AssetKey = params.AssetKey;
+
 	return params.ReturnValue;
 }
 
@@ -26960,25 +31794,20 @@ bool UCustomAssetMountStateComponent::ChangeMountStatusInfo(unsigned char AssetT
 // Function Creative.CustomAssetMountStateComponent.AddMountStatusInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// unsigned char                  AssetType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AssetSize                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 SHA256                         (Parm, ZeroConstructor)
-// EMountStatus                   MountStatus                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<uint32_t>               MountingPlayerKeys             (Parm, ZeroConstructor)
-// uint32_t                       MountedByPlayerKey             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          MappingInfoContent             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AssetKey (Parm, OutParm, ZeroConstructor)
+// EMountStatus MountStatus (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<uint32_t> MountingPlayerKeys (Parm, ZeroConstructor)
+// uint32_t MountedByPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> MappingInfoContent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCustomAssetMountStateComponent::AddMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256, EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, uint32_t MountedByPlayerKey, TArray<unsigned char> MappingInfoContent)
+bool UCustomAssetMountStateComponent::AddMountStatusInfo(EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, uint32_t MountedByPlayerKey, TArray<unsigned char> MappingInfoContent, struct FString* AssetKey)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetMountStateComponent.AddMountStatusInfo");
 
 	UCustomAssetMountStateComponent_AddMountStatusInfo_Params params;
-	params.AssetType = AssetType;
-	params.AssetSize = AssetSize;
-	params.SHA256 = SHA256;
 	params.MountStatus = MountStatus;
 	params.MountingPlayerKeys = MountingPlayerKeys;
 	params.MountedByPlayerKey = MountedByPlayerKey;
@@ -26992,6 +31821,9 @@ bool UCustomAssetMountStateComponent::AddMountStatusInfo(unsigned char AssetType
 
 	pFunc->FunctionFlags = flags;
 
+	if (AssetKey != nullptr)
+		*AssetKey = params.AssetKey;
+
 	return params.ReturnValue;
 }
 
@@ -26999,10 +31831,10 @@ bool UCustomAssetMountStateComponent::AddMountStatusInfo(unsigned char AssetType
 // Function Creative.CustomAssetPlatformBuilder.StartBuild
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          SourceBytes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// uint64_t                       CurBuildSeq                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 SourceObject                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> SourceBytes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// uint64_t CurBuildSeq (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* SourceObject (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCustomAssetPlatformBuilder::StartBuild(TArray<unsigned char> SourceBytes, uint64_t CurBuildSeq, class UObject* SourceObject)
 {
@@ -27030,9 +31862,9 @@ bool UCustomAssetPlatformBuilder::StartBuild(TArray<unsigned char> SourceBytes, 
 // DelegateFunction Creative.CustomAssetPlatformBuilder.PlatformBuilderCompletedDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// class UCustomAssetPlatformBuilder* uPlatformBuilder               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FPlatformCustomAssetInfo> PlatformCustomAssetInfoList    (Parm, ZeroConstructor)
-// uint64_t                       BuilderSeq                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomAssetPlatformBuilder* uPlatformBuilder (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPlatformCustomAssetInfo> PlatformCustomAssetInfoList (Parm, ZeroConstructor)
+// uint64_t BuilderSeq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomAssetPlatformBuilder::PlatformBuilderCompletedDelegate__DelegateSignature(class UCustomAssetPlatformBuilder* uPlatformBuilder, TArray<struct FPlatformCustomAssetInfo> PlatformCustomAssetInfoList, uint64_t BuilderSeq)
 {
@@ -27051,6 +31883,33 @@ void UCustomAssetPlatformBuilder::PlatformBuilderCompletedDelegate__DelegateSign
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.CustomAssetStaticMeshDeserializer.IsValidData
+// (Native, Protected, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<unsigned char> InBytes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCustomAssetStaticMeshDeserializer::IsValidData(TArray<unsigned char> InBytes)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.CustomAssetStaticMeshDeserializer.IsValidData");
+
+	UCustomAssetStaticMeshDeserializer_IsValidData_Params params;
+	params.InBytes = InBytes;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -27078,7 +31937,7 @@ void ADancerDeviceActor::OnRep_SyncPlayerCharacter()
 // Function Creative.DataTransferComponent.StartTransfer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UDataTransferComponent::StartTransfer(const struct FString& FilePath)
 {
@@ -27102,7 +31961,7 @@ void UDataTransferComponent::StartTransfer(const struct FString& FilePath)
 // Function Creative.DataTransferComponent.Server_RequestFile
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UDataTransferComponent::Server_RequestFile(const struct FString& FilePath)
 {
@@ -27126,8 +31985,8 @@ void UDataTransferComponent::Server_RequestFile(const struct FString& FilePath)
 // Function Creative.DataTransferComponent.Server_ReceivePacketAck
 // (Net, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// int16_t                        TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int16_t                        Seq                            (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t Seq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDataTransferComponent::Server_ReceivePacketAck(int16_t TaskId, int16_t Seq)
 {
@@ -27152,7 +32011,7 @@ void UDataTransferComponent::Server_ReceivePacketAck(int16_t TaskId, int16_t Seq
 // Function Creative.DataTransferComponent.Server_ReceivePacket
 // (Net, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FDTPacket               Packet                         (ConstParm, Parm, ReferenceParm)
+// struct FDTPacket Packet (ConstParm, Parm, ReferenceParm)
 
 void UDataTransferComponent::Server_ReceivePacket(const struct FDTPacket& Packet)
 {
@@ -27176,17 +32035,17 @@ void UDataTransferComponent::Server_ReceivePacket(const struct FDTPacket& Packet
 // Function Creative.DataTransferComponent.SendData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          FileData                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> fileData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UDataTransferComponent::SendData(TArray<unsigned char> FileData)
+int UDataTransferComponent::SendData(TArray<unsigned char> fileData)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.DataTransferComponent.SendData");
 
 	UDataTransferComponent_SendData_Params params;
-	params.FileData = FileData;
+	params.fileData = fileData;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27203,8 +32062,8 @@ int UDataTransferComponent::SendData(TArray<unsigned char> FileData)
 // Function Creative.DataTransferComponent.ReceivePacketAck
 // (Final, Native, Protected)
 // Parameters:
-// int16_t                        TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int16_t                        Seq                            (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t Seq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDataTransferComponent::ReceivePacketAck(int16_t TaskId, int16_t Seq)
 {
@@ -27229,7 +32088,7 @@ void UDataTransferComponent::ReceivePacketAck(int16_t TaskId, int16_t Seq)
 // Function Creative.DataTransferComponent.ReceivePacket
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FDTPacket               Packet                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FDTPacket Packet (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UDataTransferComponent::ReceivePacket(const struct FDTPacket& Packet)
 {
@@ -27253,7 +32112,7 @@ void UDataTransferComponent::ReceivePacket(const struct FDTPacket& Packet)
 // Function Creative.DataTransferComponent.Init
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UDataTransferComponent::Init()
 {
@@ -27278,7 +32137,7 @@ bool UDataTransferComponent::Init()
 // Function Creative.DataTransferComponent.Client_RequestFile
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UDataTransferComponent::Client_RequestFile(const struct FString& FilePath)
 {
@@ -27302,8 +32161,8 @@ void UDataTransferComponent::Client_RequestFile(const struct FString& FilePath)
 // Function Creative.DataTransferComponent.Client_ReceivePacketAck
 // (Net, Native, Event, Protected, NetClient)
 // Parameters:
-// int16_t                        TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int16_t                        Seq                            (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// int16_t Seq (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDataTransferComponent::Client_ReceivePacketAck(int16_t TaskId, int16_t Seq)
 {
@@ -27328,7 +32187,7 @@ void UDataTransferComponent::Client_ReceivePacketAck(int16_t TaskId, int16_t Seq
 // Function Creative.DataTransferComponent.Client_ReceivePacket
 // (Net, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FDTPacket               Packet                         (ConstParm, Parm, ReferenceParm)
+// struct FDTPacket Packet (ConstParm, Parm, ReferenceParm)
 
 void UDataTransferComponent::Client_ReceivePacket(const struct FDTPacket& Packet)
 {
@@ -27346,6 +32205,525 @@ void UDataTransferComponent::Client_ReceivePacket(const struct FDTPacket& Packet
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.DSLParser.ParseText
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString Source (Parm, ZeroConstructor)
+// class UDSLParserASTTree* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDSLParserASTTree* UDSLParser::ParseText(const struct FString& Source)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.ParseText");
+
+	UDSLParser_ParseText_Params params;
+	params.Source = Source;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.ParseFile
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString FilePath (Parm, ZeroConstructor)
+// class UDSLParserASTTree* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UDSLParserASTTree* UDSLParser::ParseFile(const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.ParseFile");
+
+	UDSLParser_ParseFile_Params params;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.LoadGrammarFromString
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InGrammarText (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UDSLParser::LoadGrammarFromString(const struct FString& InGrammarText)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.LoadGrammarFromString");
+
+	UDSLParser_LoadGrammarFromString_Params params;
+	params.InGrammarText = InGrammarText;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.LoadGrammarFromFile
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString FilePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UDSLParser::LoadGrammarFromFile(const struct FString& FilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.LoadGrammarFromFile");
+
+	UDSLParser_LoadGrammarFromFile_Params params;
+	params.FilePath = FilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.GetLastError
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParser::GetLastError()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.GetLastError");
+
+	UDSLParser_GetLastError_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.GetGrammarText
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParser::GetGrammarText()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.GetGrammarText");
+
+	UDSLParser_GetGrammarText_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.GetGrammarRuleNames
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UDSLParser::GetGrammarRuleNames()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.GetGrammarRuleNames");
+
+	UDSLParser_GetGrammarRuleNames_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParser.ClearGrammar
+// (Final, Native, Public, BlueprintCallable)
+
+void UDSLParser::ClearGrammar()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.ClearGrammar");
+
+	UDSLParser_ClearGrammar_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.DSLParser.AddGrammarRule
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString RuleName (Parm, ZeroConstructor)
+// struct FString RuleBody (Parm, ZeroConstructor)
+
+void UDSLParser::AddGrammarRule(const struct FString& RuleName, const struct FString& RuleBody)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParser.AddGrammarRule");
+
+	UDSLParser_AddGrammarRule_Params params;
+	params.RuleName = RuleName;
+	params.RuleBody = RuleBody;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Creative.DSLParserASTTree.ToJson
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParserASTTree::ToJson()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.ToJson");
+
+	UDSLParserASTTree_ToJson_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.IsValid
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UDSLParserASTTree::IsValid()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.IsValid");
+
+	UDSLParserASTTree_IsValid_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetRootNodeId
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UDSLParserASTTree::GetRootNodeId()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetRootNodeId");
+
+	UDSLParserASTTree_GetRootNodeId_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetPropertyNodeId
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UDSLParserASTTree::GetPropertyNodeId(int NodeId, const struct FString& Key)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetPropertyNodeId");
+
+	UDSLParserASTTree_GetPropertyNodeId_Params params;
+	params.NodeId = NodeId;
+	params.Key = Key;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetPropertyKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UDSLParserASTTree::GetPropertyKeys(int NodeId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetPropertyKeys");
+
+	UDSLParserASTTree_GetPropertyKeys_Params params;
+	params.NodeId = NodeId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetNodeValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParserASTTree::GetNodeValue(int NodeId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetNodeValue");
+
+	UDSLParserASTTree_GetNodeValue_Params params;
+	params.NodeId = NodeId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetNodeName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParserASTTree::GetNodeName(int NodeId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetNodeName");
+
+	UDSLParserASTTree_GetNodeName_Params params;
+	params.NodeId = NodeId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetNodeKind
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParserASTTree::GetNodeKind(int NodeId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetNodeKind");
+
+	UDSLParserASTTree_GetNodeKind_Params params;
+	params.NodeId = NodeId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetNodeCount
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UDSLParserASTTree::GetNodeCount()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetNodeCount");
+
+	UDSLParserASTTree_GetNodeCount_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetError
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UDSLParserASTTree::GetError()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetError");
+
+	UDSLParserASTTree_GetError_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Creative.DSLParserASTTree.GetChildren
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int NodeId (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<int> UDSLParserASTTree::GetChildren(int NodeId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Creative.DSLParserASTTree.GetChildren");
+
+	UDSLParserASTTree_GetChildren_Params params;
+	params.NodeId = NodeId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -27394,8 +32772,8 @@ void UGameModeStateFighting_CreativeMode::PlayersInfoRecord()
 // Function Creative.GameProcessEventObject.ReceivePostEvent
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int                            ProcessType                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Round                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ProcessType (Parm, ZeroConstructor, IsPlainOldData)
+// int Round (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGameProcessEventObject::ReceivePostEvent(int ProcessType, int Round)
 {
@@ -27440,8 +32818,8 @@ void UGameProcessEventObject::OnEnterPlayProcess()
 // Function Creative.PaintScoreManager.WorldToVoxelBP
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 WorldPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FPaintVoxelCoord        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FVector WorldPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FPaintVoxelCoord ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FPaintVoxelCoord APaintScoreManager::WorldToVoxelBP(const struct FVector& WorldPos)
 {
@@ -27467,8 +32845,8 @@ struct FPaintVoxelCoord APaintScoreManager::WorldToVoxelBP(const struct FVector&
 // Function Creative.PaintScoreManager.VoxelToWorldBP
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPaintVoxelCoord        VoxelCoord                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FPaintVoxelCoord VoxelCoord (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector APaintScoreManager::VoxelToWorldBP(const struct FPaintVoxelCoord& VoxelCoord)
 {
@@ -27494,17 +32872,17 @@ struct FVector APaintScoreManager::VoxelToWorldBP(const struct FPaintVoxelCoord&
 // Function Creative.PaintScoreManager.UpdateUserAreaCache
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AreaDelta                      (Parm, ZeroConstructor, IsPlainOldData)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// float AreaDelta (Parm, ZeroConstructor, IsPlainOldData)
 
-void APaintScoreManager::UpdateUserAreaCache(int userID, float AreaDelta)
+void APaintScoreManager::UpdateUserAreaCache(int UserId, float AreaDelta)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Creative.PaintScoreManager.UpdateUserAreaCache");
 
 	APaintScoreManager_UpdateUserAreaCache_Params params;
-	params.userID = userID;
+	params.UserId = UserId;
 	params.AreaDelta = AreaDelta;
 
 	auto flags = pFunc->FunctionFlags;
@@ -27520,10 +32898,10 @@ void APaintScoreManager::UpdateUserAreaCache(int userID, float AreaDelta)
 // Function Creative.PaintScoreManager.TriangleIntersectsSphere
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SphereCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SphereCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::TriangleIntersectsSphere(int TriangleIndex, const struct FVector& SphereCenter, float SphereRadius)
 {
@@ -27551,7 +32929,7 @@ bool APaintScoreManager::TriangleIntersectsSphere(int TriangleIndex, const struc
 // Function Creative.PaintScoreManager.SubdivideOctreeNode
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPaintOctreeNode        Node                           (Parm, OutParm)
+// struct FPaintOctreeNode Node (Parm, OutParm)
 
 void APaintScoreManager::SubdivideOctreeNode(struct FPaintOctreeNode* Node)
 {
@@ -27577,11 +32955,11 @@ void APaintScoreManager::SubdivideOctreeNode(struct FPaintOctreeNode* Node)
 // Function Creative.PaintScoreManager.SetVoxelCellOwner
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPaintVoxelCoord        VoxelCoord                     (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FPaintVoxelCoord VoxelCoord (ConstParm, Parm, OutParm, ReferenceParm)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APaintScoreManager::SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelCoord, int userID)
+bool APaintScoreManager::SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelCoord, int UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27589,7 +32967,7 @@ bool APaintScoreManager::SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelC
 
 	APaintScoreManager_SetVoxelCellOwner_Params params;
 	params.VoxelCoord = VoxelCoord;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27606,11 +32984,11 @@ bool APaintScoreManager::SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelC
 // Function Creative.PaintScoreManager.SetSmallTriangleOwner
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool APaintScoreManager::SetSmallTriangleOwner(int Index, int userID)
+bool APaintScoreManager::SetSmallTriangleOwner(int Index, int UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27618,7 +32996,7 @@ bool APaintScoreManager::SetSmallTriangleOwner(int Index, int userID)
 
 	APaintScoreManager_SetSmallTriangleOwner_Params params;
 	params.Index = Index;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27635,7 +33013,7 @@ bool APaintScoreManager::SetSmallTriangleOwner(int Index, int userID)
 // Function Creative.PaintScoreManager.SetOctreeRoot
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPaintOctreeNode        NewRoot                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FPaintOctreeNode NewRoot (ConstParm, Parm, OutParm, ReferenceParm)
 
 void APaintScoreManager::SetOctreeRoot(const struct FPaintOctreeNode& NewRoot)
 {
@@ -27680,7 +33058,7 @@ void APaintScoreManager::Reset()
 // Function Creative.PaintScoreManager.RemoveUserPaint
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UserName                       (Parm, ZeroConstructor)
+// struct FString UserName (Parm, ZeroConstructor)
 
 void APaintScoreManager::RemoveUserPaint(const struct FString& UserName)
 {
@@ -27704,10 +33082,10 @@ void APaintScoreManager::RemoveUserPaint(const struct FString& UserName)
 // Function Creative.PaintScoreManager.QueryOctree
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FPaintOctreeNode        Node                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 SphereCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    OutTriangleIndices             (Parm, OutParm, ZeroConstructor)
+// struct FPaintOctreeNode Node (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector SphereCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> OutTriangleIndices (Parm, OutParm, ZeroConstructor)
 
 void APaintScoreManager::QueryOctree(const struct FPaintOctreeNode& Node, const struct FVector& SphereCenter, float SphereRadius, TArray<int>* OutTriangleIndices)
 {
@@ -27736,20 +33114,20 @@ void APaintScoreManager::QueryOctree(const struct FPaintOctreeNode& Node, const 
 // Function Creative.PaintScoreManager.ProjectTriangleTo2D
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 A                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 B                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 C                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 SphereCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               OutA2D                         (Parm, OutParm, IsPlainOldData)
-// struct FVector2D               OutB2D                         (Parm, OutParm, IsPlainOldData)
-// struct FVector2D               OutC2D                         (Parm, OutParm, IsPlainOldData)
-// struct FVector2D               OutCenter2D                    (Parm, OutParm, IsPlainOldData)
-// float                          OutRadius2D                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OutE1                          (Parm, OutParm, IsPlainOldData)
-// struct FVector                 OutE2                          (Parm, OutParm, IsPlainOldData)
-// struct FVector                 OutPlaneOrigin                 (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector A (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector B (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector C (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector SphereCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D OutA2D (Parm, OutParm, IsPlainOldData)
+// struct FVector2D OutB2D (Parm, OutParm, IsPlainOldData)
+// struct FVector2D OutC2D (Parm, OutParm, IsPlainOldData)
+// struct FVector2D OutCenter2D (Parm, OutParm, IsPlainOldData)
+// float OutRadius2D (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector OutE1 (Parm, OutParm, IsPlainOldData)
+// struct FVector OutE2 (Parm, OutParm, IsPlainOldData)
+// struct FVector OutPlaneOrigin (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::ProjectTriangleTo2D(const struct FVector& A, const struct FVector& B, const struct FVector& C, const struct FVector& SphereCenter, float SphereRadius, struct FVector2D* OutA2D, struct FVector2D* OutB2D, struct FVector2D* OutC2D, struct FVector2D* OutCenter2D, float* OutRadius2D, struct FVector* OutE1, struct FVector* OutE2, struct FVector* OutPlaneOrigin)
 {
@@ -27796,11 +33174,11 @@ bool APaintScoreManager::ProjectTriangleTo2D(const struct FVector& A, const stru
 // Function Creative.PaintScoreManager.ProcessVoxelOwnershipTransfer
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FPaintVoxelCoord        VoxelCoord                     (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FPaintVoxelCoord VoxelCoord (ConstParm, Parm, OutParm, ReferenceParm)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APaintScoreManager::ProcessVoxelOwnershipTransfer(const struct FPaintVoxelCoord& VoxelCoord, int userID)
+float APaintScoreManager::ProcessVoxelOwnershipTransfer(const struct FPaintVoxelCoord& VoxelCoord, int UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27808,7 +33186,7 @@ float APaintScoreManager::ProcessVoxelOwnershipTransfer(const struct FPaintVoxel
 
 	APaintScoreManager_ProcessVoxelOwnershipTransfer_Params params;
 	params.VoxelCoord = VoxelCoord;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27825,11 +33203,11 @@ float APaintScoreManager::ProcessVoxelOwnershipTransfer(const struct FPaintVoxel
 // Function Creative.PaintScoreManager.ProcessVoxelCellsForPaint
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APaintScoreManager::ProcessVoxelCellsForPaint(const struct FVector& Center, int userID)
+float APaintScoreManager::ProcessVoxelCellsForPaint(const struct FVector& Center, int UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27837,7 +33215,7 @@ float APaintScoreManager::ProcessVoxelCellsForPaint(const struct FVector& Center
 
 	APaintScoreManager_ProcessVoxelCellsForPaint_Params params;
 	params.Center = Center;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27854,10 +33232,10 @@ float APaintScoreManager::ProcessVoxelCellsForPaint(const struct FVector& Center
 // Function Creative.PaintScoreManager.ProcessTriangleWithCoverageMethod
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// unsigned char                  InternalUserID                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UWorld*                  DebugWorld                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// unsigned char InternalUserID (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* DebugWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::ProcessTriangleWithCoverageMethod(int TriangleIndex, const struct FVector& Center, unsigned char InternalUserID, class UWorld* DebugWorld)
 {
@@ -27884,10 +33262,10 @@ void APaintScoreManager::ProcessTriangleWithCoverageMethod(int TriangleIndex, co
 // Function Creative.PaintScoreManager.ProcessTrianglesWithLinearSearch
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  InternalUserID                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UWorld*                  DebugWorld                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char InternalUserID (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* DebugWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::ProcessTrianglesWithLinearSearch(const struct FVector& Center, float Radius, unsigned char InternalUserID, class UWorld* DebugWorld)
 {
@@ -27914,12 +33292,12 @@ void APaintScoreManager::ProcessTrianglesWithLinearSearch(const struct FVector& 
 // Function Creative.PaintScoreManager.ProcessTriangleOwnershipTransfer
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ClippedArea                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// float ClippedArea (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APaintScoreManager::ProcessTriangleOwnershipTransfer(int TriangleIndex, int userID, float ClippedArea)
+float APaintScoreManager::ProcessTriangleOwnershipTransfer(int TriangleIndex, int UserId, float ClippedArea)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27927,7 +33305,7 @@ float APaintScoreManager::ProcessTriangleOwnershipTransfer(int TriangleIndex, in
 
 	APaintScoreManager_ProcessTriangleOwnershipTransfer_Params params;
 	params.TriangleIndex = TriangleIndex;
-	params.userID = userID;
+	params.UserId = UserId;
 	params.ClippedArea = ClippedArea;
 
 	auto flags = pFunc->FunctionFlags;
@@ -27945,12 +33323,12 @@ float APaintScoreManager::ProcessTriangleOwnershipTransfer(int TriangleIndex, in
 // Function Creative.PaintScoreManager.ProcessSmallTrianglesForPaint
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            userID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int UserId (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float APaintScoreManager::ProcessSmallTrianglesForPaint(const struct FVector& Center, float Radius, int userID)
+float APaintScoreManager::ProcessSmallTrianglesForPaint(const struct FVector& Center, float Radius, int UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -27959,7 +33337,7 @@ float APaintScoreManager::ProcessSmallTrianglesForPaint(const struct FVector& Ce
 	APaintScoreManager_ProcessSmallTrianglesForPaint_Params params;
 	params.Center = Center;
 	params.Radius = Radius;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -27976,11 +33354,11 @@ float APaintScoreManager::ProcessSmallTrianglesForPaint(const struct FVector& Ce
 // Function Creative.PaintScoreManager.ProcessSingleTriangleForPaint
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  InternalUserID                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UWorld*                  DebugWorld                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char InternalUserID (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* DebugWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::ProcessSingleTriangleForPaint(int TriangleIndex, const struct FVector& Center, float Radius, unsigned char InternalUserID, class UWorld* DebugWorld)
 {
@@ -28008,12 +33386,12 @@ void APaintScoreManager::ProcessSingleTriangleForPaint(int TriangleIndex, const 
 // Function Creative.PaintScoreManager.PerformTwoPointSplit
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SphereCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          SphereRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  NewOwnerID                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutTransferredArea             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SphereCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float SphereRadius (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char NewOwnerID (Parm, ZeroConstructor, IsPlainOldData)
+// float OutTransferredArea (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::PerformTwoPointSplit(int TriangleIndex, const struct FVector& SphereCenter, float SphereRadius, unsigned char NewOwnerID, float* OutTransferredArea)
 {
@@ -28045,12 +33423,12 @@ bool APaintScoreManager::PerformTwoPointSplit(int TriangleIndex, const struct FV
 // Function Creative.PaintScoreManager.IntersectSegmentCircle2D
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector2D               P0                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector2D               P1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector2D               CircleCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<float>                  OutT                           (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector2D P0 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D P1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D CircleCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<float> OutT (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::IntersectSegmentCircle2D(const struct FVector2D& P0, const struct FVector2D& P1, const struct FVector2D& CircleCenter, float Radius, TArray<float>* OutT)
 {
@@ -28082,8 +33460,8 @@ bool APaintScoreManager::IntersectSegmentCircle2D(const struct FVector2D& P0, co
 // Function Creative.PaintScoreManager.InsertTriangleIntoOctree
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPaintOctreeNode        Node                           (Parm, OutParm)
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaintOctreeNode Node (Parm, OutParm)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::InsertTriangleIntoOctree(int TriangleIndex, struct FPaintOctreeNode* Node)
 {
@@ -28110,8 +33488,8 @@ void APaintScoreManager::InsertTriangleIntoOctree(int TriangleIndex, struct FPai
 // Function Creative.PaintScoreManager.Initialize
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Indices                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Indices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void APaintScoreManager::Initialize(TArray<struct FVector> Vertices, TArray<int> Indices)
 {
@@ -28136,7 +33514,7 @@ void APaintScoreManager::Initialize(TArray<struct FVector> Vertices, TArray<int>
 // Function Creative.PaintScoreManager.InitByNavManager
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FBox                    Area                           (Parm, IsPlainOldData)
+// struct FBox Area (Parm, IsPlainOldData)
 
 void APaintScoreManager::InitByNavManager(const struct FBox& Area)
 {
@@ -28160,9 +33538,9 @@ void APaintScoreManager::InitByNavManager(const struct FBox& Area)
 // Function Creative.PaintScoreManager.GetVoxelCellInfo
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPaintVoxelCoord        VoxelCoord                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FPaintVoxelCell         OutCell                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FPaintVoxelCoord VoxelCoord (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FPaintVoxelCell OutCell (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::GetVoxelCellInfo(const struct FPaintVoxelCoord& VoxelCoord, struct FPaintVoxelCell* OutCell)
 {
@@ -28191,8 +33569,8 @@ bool APaintScoreManager::GetVoxelCellInfo(const struct FPaintVoxelCoord& VoxelCo
 // Function Creative.PaintScoreManager.GetUserScore
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 UserName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString UserName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float APaintScoreManager::GetUserScore(const struct FString& UserName)
 {
@@ -28218,8 +33596,8 @@ float APaintScoreManager::GetUserScore(const struct FString& UserName)
 // Function Creative.PaintScoreManager.GetTriangleCentroid
 // (Final, Native, Private, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector APaintScoreManager::GetTriangleCentroid(int TriangleIndex)
 {
@@ -28245,7 +33623,7 @@ struct FVector APaintScoreManager::GetTriangleCentroid(int TriangleIndex)
 // Function Creative.PaintScoreManager.GetSmallTrianglesCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int APaintScoreManager::GetSmallTrianglesCount()
 {
@@ -28270,9 +33648,9 @@ int APaintScoreManager::GetSmallTrianglesCount()
 // Function Creative.PaintScoreManager.GetSmallTriangleInfo
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPaintTriangleInfo      OutTriangle                    (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaintTriangleInfo OutTriangle (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APaintScoreManager::GetSmallTriangleInfo(int Index, struct FPaintTriangleInfo* OutTriangle)
 {
@@ -28301,7 +33679,7 @@ bool APaintScoreManager::GetSmallTriangleInfo(int Index, struct FPaintTriangleIn
 // Function Creative.PaintScoreManager.GetRegisteredUserCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int APaintScoreManager::GetRegisteredUserCount()
 {
@@ -28326,7 +33704,7 @@ int APaintScoreManager::GetRegisteredUserCount()
 // Function Creative.PaintScoreManager.GetPrecomputedDiskOffsets
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FPaintVoxelCoord> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FPaintVoxelCoord> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FPaintVoxelCoord> APaintScoreManager::GetPrecomputedDiskOffsets()
 {
@@ -28351,7 +33729,7 @@ TArray<struct FPaintVoxelCoord> APaintScoreManager::GetPrecomputedDiskOffsets()
 // Function Creative.PaintScoreManager.GetOctreeRoot
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FPaintOctreeNode        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FPaintOctreeNode ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FPaintOctreeNode APaintScoreManager::GetOctreeRoot()
 {
@@ -28376,7 +33754,7 @@ struct FPaintOctreeNode APaintScoreManager::GetOctreeRoot()
 // Function Creative.PaintScoreManager.GetMemoryUsage
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString APaintScoreManager::GetMemoryUsage()
 {
@@ -28401,8 +33779,8 @@ struct FString APaintScoreManager::GetMemoryUsage()
 // Function Creative.PaintScoreManager.GetAllUserScores
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FString>         OutUsers                       (Parm, OutParm, ZeroConstructor)
-// TArray<float>                  OutScores                      (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> OutUsers (Parm, OutParm, ZeroConstructor)
+// TArray<float> OutScores (Parm, OutParm, ZeroConstructor)
 
 void APaintScoreManager::GetAllUserScores(TArray<struct FString>* OutUsers, TArray<float>* OutScores)
 {
@@ -28430,7 +33808,7 @@ void APaintScoreManager::GetAllUserScores(TArray<struct FString>* OutUsers, TArr
 // Function Creative.PaintScoreManager.DrawVoxelCells
 // (Final, Native, Private, BlueprintCallable)
 // Parameters:
-// unsigned char                  TargetUserID                   (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char TargetUserID (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::DrawVoxelCells(unsigned char TargetUserID)
 {
@@ -28454,7 +33832,7 @@ void APaintScoreManager::DrawVoxelCells(unsigned char TargetUserID)
 // Function Creative.PaintScoreManager.DrawSmallTriangles
 // (Final, Native, Private, BlueprintCallable)
 // Parameters:
-// unsigned char                  TargetUserID                   (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char TargetUserID (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::DrawSmallTriangles(unsigned char TargetUserID)
 {
@@ -28478,7 +33856,7 @@ void APaintScoreManager::DrawSmallTriangles(unsigned char TargetUserID)
 // Function Creative.PaintScoreManager.DebugDrawOccupiedAreasForUserID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// unsigned char                  TargetUserID                   (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char TargetUserID (Parm, ZeroConstructor, IsPlainOldData)
 
 void APaintScoreManager::DebugDrawOccupiedAreasForUserID(unsigned char TargetUserID)
 {
@@ -28502,7 +33880,7 @@ void APaintScoreManager::DebugDrawOccupiedAreasForUserID(unsigned char TargetUse
 // Function Creative.PaintScoreManager.DebugDrawOccupiedAreas
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UserName                       (Parm, ZeroConstructor)
+// struct FString UserName (Parm, ZeroConstructor)
 
 void APaintScoreManager::DebugDrawOccupiedAreas(const struct FString& UserName)
 {
@@ -28526,9 +33904,9 @@ void APaintScoreManager::DebugDrawOccupiedAreas(const struct FString& UserName)
 // Function Creative.PaintScoreManager.ClipTriangleWithSphere
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// int                            TriangleIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SphereCenter                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TriangleIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SphereCenter (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float APaintScoreManager::ClipTriangleWithSphere(int TriangleIndex, const struct FVector& SphereCenter)
 {
@@ -28555,11 +33933,11 @@ float APaintScoreManager::ClipTriangleWithSphere(int TriangleIndex, const struct
 // Function Creative.PaintScoreManager.CalculateTriangleVoxelIntersection
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 V0                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 v1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 v2                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FPaintVoxelCoord        VoxelCoord                     (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector V0 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector v1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector v2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FPaintVoxelCoord VoxelCoord (ConstParm, Parm, OutParm, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float APaintScoreManager::CalculateTriangleVoxelIntersection(const struct FVector& V0, const struct FVector& v1, const struct FVector& v2, const struct FPaintVoxelCoord& VoxelCoord)
 {
@@ -28588,8 +33966,8 @@ float APaintScoreManager::CalculateTriangleVoxelIntersection(const struct FVecto
 // Function Creative.PaintScoreManager.CalculateSmallTrianglesBounds
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 OutMin                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 OutMax                         (Parm, OutParm, IsPlainOldData)
+// struct FVector OutMin (Parm, OutParm, IsPlainOldData)
+// struct FVector OutMax (Parm, OutParm, IsPlainOldData)
 
 void APaintScoreManager::CalculateSmallTrianglesBounds(struct FVector* OutMin, struct FVector* OutMax)
 {
@@ -28638,9 +34016,9 @@ void APaintScoreManager::BuildOctree()
 // Function Creative.PaintScoreManager.AddTriangleToPipeline
 // (Final, Native, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 A                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 B                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 C                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector A (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector B (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector C (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void APaintScoreManager::AddTriangleToPipeline(const struct FVector& A, const struct FVector& B, const struct FVector& C)
 {
@@ -28666,8 +34044,8 @@ void APaintScoreManager::AddTriangleToPipeline(const struct FVector& A, const st
 // Function Creative.PaintScoreManager.AddPaint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FString                 UserName                       (Parm, ZeroConstructor)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString UserName (Parm, ZeroConstructor)
 
 void APaintScoreManager::AddPaint(const struct FVector& Center, const struct FString& UserName)
 {
@@ -28692,8 +34070,8 @@ void APaintScoreManager::AddPaint(const struct FVector& Center, const struct FSt
 // Function Creative.PlayerListenerEventObject.OnCppRemovePlayerListener
 // (Native, Protected)
 // Parameters:
-// class UObject*                 Content                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Content (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerListenerEventObject::OnCppRemovePlayerListener(class UObject* Content, uint32_t PlayerKey)
 {
@@ -28718,8 +34096,8 @@ void UPlayerListenerEventObject::OnCppRemovePlayerListener(class UObject* Conten
 // Function Creative.PlayerListenerEventObject.OnCppAddPlayerListener
 // (Native, Protected)
 // Parameters:
-// class UObject*                 Content                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Content (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerListenerEventObject::OnCppAddPlayerListener(class UObject* Content, uint32_t PlayerKey)
 {
@@ -28744,8 +34122,8 @@ void UPlayerListenerEventObject::OnCppAddPlayerListener(class UObject* Content, 
 // Function Creative.PlayerAttachedToVehicleEventObject.OnOwnerAttachedToVehicle
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraVehicleBase*     InVehicle                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* InVehicle (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerAttachedToVehicleEventObject::OnOwnerAttachedToVehicle(class ASTExtraVehicleBase* InVehicle, uint32_t PlayerKey)
 {
@@ -28770,8 +34148,8 @@ void UPlayerAttachedToVehicleEventObject::OnOwnerAttachedToVehicle(class ASTExtr
 // Function Creative.PlayerAttachedToVehicleEventObject.OnCppRemovePlayerListener
 // (Native, Protected)
 // Parameters:
-// class UObject*                 Content                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Content (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerAttachedToVehicleEventObject::OnCppRemovePlayerListener(class UObject* Content, uint32_t PlayerKey)
 {
@@ -28796,8 +34174,8 @@ void UPlayerAttachedToVehicleEventObject::OnCppRemovePlayerListener(class UObjec
 // Function Creative.PlayerAttachedToVehicleEventObject.OnCppAddPlayerListener
 // (Native, Protected)
 // Parameters:
-// class UObject*                 Content                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Content (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerAttachedToVehicleEventObject::OnCppAddPlayerListener(class UObject* Content, uint32_t PlayerKey)
 {
@@ -28822,7 +34200,7 @@ void UPlayerAttachedToVehicleEventObject::OnCppAddPlayerListener(class UObject* 
 // Function Creative.PlayerAttachedProxy.OnProxyAttachedToVehicle
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraVehicleBase*     InVehicle                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* InVehicle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayerAttachedProxy::OnProxyAttachedToVehicle(class ASTExtraVehicleBase* InVehicle)
 {
@@ -28846,8 +34224,8 @@ void UPlayerAttachedProxy::OnProxyAttachedToVehicle(class ASTExtraVehicleBase* I
 // Function Creative.ShowAllPlayerManagerActor.TriggerRefresh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraBaseCharacter*   Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AShowAllPlayerManagerActor::TriggerRefresh(class ASTExtraBaseCharacter* Character, bool bEnable)
 {
@@ -28956,8 +34334,8 @@ void AShowAllPlayerManagerActor::OnRep_TeamPosData()
 // Function Creative.ShowAllPlayerManagerActor.IsCharacterValidForShow
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class ASTExtraBaseCharacter*   Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraBaseCharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AShowAllPlayerManagerActor::IsCharacterValidForShow(class ASTExtraBaseCharacter* Character)
 {
@@ -28983,8 +34361,8 @@ bool AShowAllPlayerManagerActor::IsCharacterValidForShow(class ASTExtraBaseChara
 // Function Creative.ShowAllPlayerManagerActor.FlushBatchData
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            BatchSize                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurExtraSize                   (Parm, ZeroConstructor, IsPlainOldData)
+// int BatchSize (Parm, ZeroConstructor, IsPlainOldData)
+// int CurExtraSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void AShowAllPlayerManagerActor::FlushBatchData(int BatchSize, int CurExtraSize)
 {
@@ -29009,7 +34387,7 @@ void AShowAllPlayerManagerActor::FlushBatchData(int BatchSize, int CurExtraSize)
 // Function Creative.ShowAllPlayerManagerActor.EnableRefresh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AShowAllPlayerManagerActor::EnableRefresh(bool bEnable)
 {

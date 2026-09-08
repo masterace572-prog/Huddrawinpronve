@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function NiagaraUIRenderer.NiagaraSystemWidget.SetIsActivated
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInIsActive                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInIsActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraSystemWidget::SetIsActivated(bool bInIsActive)
 {
@@ -35,7 +35,7 @@ void UNiagaraSystemWidget::SetIsActivated(bool bInIsActive)
 // Function NiagaraUIRenderer.NiagaraSystemWidget.GetNiagaraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UNiagaraUIComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UNiagaraUIComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UNiagaraUIComponent* UNiagaraSystemWidget::GetNiagaraComponent()
 {
@@ -60,7 +60,7 @@ class UNiagaraUIComponent* UNiagaraSystemWidget::GetNiagaraComponent()
 // Function NiagaraUIRenderer.NiagaraSystemWidget.GetIsActivated
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNiagaraSystemWidget::GetIsActivated()
 {
@@ -106,7 +106,7 @@ void UNiagaraSystemWidget::DeactivateSystem()
 // Function NiagaraUIRenderer.NiagaraSystemWidget.ActivateSystem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Reset                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Reset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraSystemWidget::ActivateSystem(bool Reset)
 {

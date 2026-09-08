@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class UHDmpveNet : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x230];                                     // 0x0028(0x0230) MISSED OFFSET
-	class UHDmpveSDK*                                  _ConnectorInst;                                           // 0x0258(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    StartTickNetPackageDelegate;                              // 0x0260(0x0010) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData01[0x128];                                     // 0x0270(0x0128) MISSED OFFSET
+	unsigned char UnknownData00[0x230]; // 0x0028(0x0230) MISSED OFFSET
+	class UHDmpveSDK* _ConnectorInst; // 0x0258(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate StartTickNetPackageDelegate; // 0x0260(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData01[0x128]; // 0x0270(0x0128) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.HDmpveNet");
@@ -63,12 +62,11 @@ public:
 class UHDmpveSDK : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0028(0x0100) MISSED OFFSET
-	int                                                MaxBufferSize;                                            // 0x0128(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x012C(0x000C) MISSED OFFSET
+	unsigned char UnknownData00[0x100]; // 0x0028(0x0100) MISSED OFFSET
+	int MaxBufferSize; // 0x0128(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0xC]; // 0x012C(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.HDmpveSDK");
@@ -102,28 +100,27 @@ public:
 class UHDmpveSDKDelegates : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    ConnectNotifyDelegate;                                    // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ConnectStateChangedNotifyDelegate;                        // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DisconnectNotifyDelegate;                                 // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ReceiveDataNotifyDelegate;                                // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AccountInitializeNotifyDelegate;                          // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AccountLoginNotifyDelegate;                               // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AccessTokenRefreshedNotifyDelegate;                       // 0x0088(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AccountLogoutNotifyDelegate;                              // 0x0098(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ShareNotifyDelegate;                                      // 0x00A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GroupNotifyDelegate;                                      // 0x00B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    QuickLoginNotifyDelegate;                                 // 0x00C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    QRCodeGenQRImgDelegate;                                   // 0x00D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    QRCodeLaunchDelegate;                                     // 0x00E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    WebviewNotifyDelegate;                                    // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ShortUrlNotifyDelegate;                                   // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnGetTicketNotifyDelegate;                                // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    GameMasterEventDelegate;                                  // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnRequestPermissionResultDelegate;                        // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    TConndAuthFailDelegate;                                   // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate ConnectNotifyDelegate; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate ConnectStateChangedNotifyDelegate; // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate DisconnectNotifyDelegate; // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate ReceiveDataNotifyDelegate; // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AccountInitializeNotifyDelegate; // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AccountLoginNotifyDelegate; // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AccessTokenRefreshedNotifyDelegate; // 0x0088(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AccountLogoutNotifyDelegate; // 0x0098(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate ShareNotifyDelegate; // 0x00A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate GroupNotifyDelegate; // 0x00B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate QuickLoginNotifyDelegate; // 0x00C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate QRCodeGenQRImgDelegate; // 0x00D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate QRCodeLaunchDelegate; // 0x00E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate WebviewNotifyDelegate; // 0x00F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate ShortUrlNotifyDelegate; // 0x0108(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnGetTicketNotifyDelegate; // 0x0118(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate GameMasterEventDelegate; // 0x0128(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnRequestPermissionResultDelegate; // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate TConndAuthFailDelegate; // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.HDmpveSDKDelegates");
@@ -138,57 +135,56 @@ public:
 class UIMSDKConfig : public UObject
 {
 public:
-	struct FString                                     IMSDK_GAME_ID;                                            // 0x0028(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_SDKAPI_RELEASE;                              // 0x0038(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_SDKAPI_BACKUP_RELEASE;                       // 0x0048(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_NOTICE_RELEASE;                              // 0x0058(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_HELP_RELEASE;                                // 0x0068(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_HELP_SCHEME_RELEASE;                         // 0x0078(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_CONFIG_RELEASE;                              // 0x0088(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_LOG_LEVEL_RELEASE;                                  // 0x0098(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_DEBUG_RELEASE;                                      // 0x00A8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_INNER_VOLLEY_DEBUG_RELEASE;                         // 0x00B8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_SDKAPI_TEST;                                 // 0x00C8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_SDKAPI_BACKUP_TEST;                          // 0x00D8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_NOTICE_TEST;                                 // 0x00E8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_HELP_TEST;                                   // 0x00F8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_HELP_SCHEME_TEST;                            // 0x0108(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_CONFIG_TEST;                                 // 0x0118(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_LOG_LEVEL_TEST;                                     // 0x0128(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_DEBUG_TEST;                                         // 0x0138(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_INNER_VOLLEY_DEBUG_TEST;                            // 0x0148(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_UNIFIED_ACCOUNT_RELEASE;                     // 0x0158(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_UNIFIED_ACCOUNT_BACKUP_RELEASE;              // 0x0168(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_APP_ID_RELEASE;                     // 0x0178(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_SDK_KEY_RELEASE;                    // 0x0188(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_TWITTER_WEB_LOGIN_URL_RELEASE;                      // 0x0198(0x0010) (ZeroConstructor, Config)
-	struct FString                                     MIGRATE_WEB_URL_RELEASE;                                  // 0x01A8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_CHECK_PASSWORD;                     // 0x01B8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_PLATFORM_TYPE;                      // 0x01C8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_CHANNEL_ID;                         // 0x01D8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_UNIFIED_ACCOUNT_TEST;                        // 0x01E8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_UNIFIED_ACCOUNT_BACKUP_TEST;                 // 0x01F8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_APP_ID_TEST;                        // 0x0208(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_UNIFIED_ACCOUNT_SDK_KEY_TEST;                       // 0x0218(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_TWITTER_WEB_LOGIN_URL_TEST;                         // 0x0228(0x0010) (ZeroConstructor, Config)
-	struct FString                                     MIGRATE_WEB_URL_TEST;                                     // 0x0238(0x0010) (ZeroConstructor, Config)
-	struct FString                                     MIGRATE_WEB_USER_AGENT_STRING;                            // 0x0248(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_ACCOUNT_CHECK_POPUP_STATUS_ENABLE;                  // 0x0258(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_ACCOUNT_VERIFY_OPT_SID_ENABLE;                      // 0x0268(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_ACCOUNT_SEND_CODE_WEB_VERIFY;                       // 0x0278(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_ADMOB_TEST_DEVICE;                                  // 0x0288(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_ACCOUNT_CAPTCHA_APP_ID_FOR_VERIFY_CODE;             // 0x0298(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_QR_CODE_RELEASE;                             // 0x02A8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_SERVER_QR_CODE_TEST;                                // 0x02B8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_QR_CODE_SDK_KEY;                                    // 0x02C8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_NEW_API_ENABLE_LEVEL_RELEASE;                       // 0x02D8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_NEW_API_ENABLE_LEVEL_TEST;                          // 0x02E8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_LOCAL_LOG_ENABLE;                                   // 0x02F8(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_WEB_LOGIN_BASE_URL_RELEASE;                         // 0x0308(0x0010) (ZeroConstructor, Config)
-	struct FString                                     IMSDK_WEB_LOGIN_BASE_URL_TEST;                            // 0x0318(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_GAME_ID; // 0x0028(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_SDKAPI_RELEASE; // 0x0038(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_SDKAPI_BACKUP_RELEASE; // 0x0048(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_NOTICE_RELEASE; // 0x0058(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_HELP_RELEASE; // 0x0068(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_HELP_SCHEME_RELEASE; // 0x0078(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_CONFIG_RELEASE; // 0x0088(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_LOG_LEVEL_RELEASE; // 0x0098(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_DEBUG_RELEASE; // 0x00A8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_INNER_VOLLEY_DEBUG_RELEASE; // 0x00B8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_SDKAPI_TEST; // 0x00C8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_SDKAPI_BACKUP_TEST; // 0x00D8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_NOTICE_TEST; // 0x00E8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_HELP_TEST; // 0x00F8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_HELP_SCHEME_TEST; // 0x0108(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_CONFIG_TEST; // 0x0118(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_LOG_LEVEL_TEST; // 0x0128(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_DEBUG_TEST; // 0x0138(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_INNER_VOLLEY_DEBUG_TEST; // 0x0148(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_UNIFIED_ACCOUNT_RELEASE; // 0x0158(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_UNIFIED_ACCOUNT_BACKUP_RELEASE; // 0x0168(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_APP_ID_RELEASE; // 0x0178(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_SDK_KEY_RELEASE; // 0x0188(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_TWITTER_WEB_LOGIN_URL_RELEASE; // 0x0198(0x0010) (ZeroConstructor, Config)
+	struct FString MIGRATE_WEB_URL_RELEASE; // 0x01A8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_CHECK_PASSWORD; // 0x01B8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_PLATFORM_TYPE; // 0x01C8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_CHANNEL_ID; // 0x01D8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_UNIFIED_ACCOUNT_TEST; // 0x01E8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_UNIFIED_ACCOUNT_BACKUP_TEST; // 0x01F8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_APP_ID_TEST; // 0x0208(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_UNIFIED_ACCOUNT_SDK_KEY_TEST; // 0x0218(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_TWITTER_WEB_LOGIN_URL_TEST; // 0x0228(0x0010) (ZeroConstructor, Config)
+	struct FString MIGRATE_WEB_URL_TEST; // 0x0238(0x0010) (ZeroConstructor, Config)
+	struct FString MIGRATE_WEB_USER_AGENT_STRING; // 0x0248(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_ACCOUNT_CHECK_POPUP_STATUS_ENABLE; // 0x0258(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_ACCOUNT_VERIFY_OPT_SID_ENABLE; // 0x0268(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_ACCOUNT_SEND_CODE_WEB_VERIFY; // 0x0278(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_ADMOB_TEST_DEVICE; // 0x0288(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_ACCOUNT_CAPTCHA_APP_ID_FOR_VERIFY_CODE; // 0x0298(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_QR_CODE_RELEASE; // 0x02A8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_SERVER_QR_CODE_TEST; // 0x02B8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_QR_CODE_SDK_KEY; // 0x02C8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_NEW_API_ENABLE_LEVEL_RELEASE; // 0x02D8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_NEW_API_ENABLE_LEVEL_TEST; // 0x02E8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_LOCAL_LOG_ENABLE; // 0x02F8(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_WEB_LOGIN_BASE_URL_RELEASE; // 0x0308(0x0010) (ZeroConstructor, Config)
+	struct FString IMSDK_WEB_LOGIN_BASE_URL_TEST; // 0x0318(0x0010) (ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.IMSDKConfig");
@@ -206,18 +202,17 @@ public:
 class UIMSDKHelper : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    WebviewVerifyCallbackDelegate;                            // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnLoadAdvertiseResult;                                    // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnShowAdvertiseResult;                                    // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnGenerateQRCodeNotify;                                   // 0x0058(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnQRCodeStatusNotify;                                     // 0x0068(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnInvalidateQRCodeNotify;                                 // 0x0078(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnLoginCommandDelegate;                                   // 0x0088(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnOpenAppByUrlDelegate;                                   // 0x0098(0x0010) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00A8(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate WebviewVerifyCallbackDelegate; // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnLoadAdvertiseResult; // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnShowAdvertiseResult; // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnGenerateQRCodeNotify; // 0x0058(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnQRCodeStatusNotify; // 0x0068(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnInvalidateQRCodeNotify; // 0x0078(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnLoginCommandDelegate; // 0x0088(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnOpenAppByUrlDelegate; // 0x0098(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData00[0x8]; // 0x00A8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.IMSDKHelper");
@@ -237,8 +232,9 @@ public:
 	void SetLoginType(const struct FString& InIMSDKChannelName);
 	struct FString SetLoginResult(const struct FString& InLoginRetJson);
 	void SetIMSDKEnv(int iEnv);
+	bool SetGameDeviceId(const struct FString& InGameDeviceId);
 	void SetChannel(const struct FString& InIMSDKChannelName);
-	void SetAdvertiseUserID(const struct FString& userID);
+	void SetAdvertiseUserID(const struct FString& UserId);
 	void SetAdvertiseCustomData(const struct FString& InCustomData);
 	void SaveLastIMSDKChannelID(int channelId);
 	void RequestVerifyCode(const struct FString& InPhoneOrEmail, int InAccountType, int InUseForType, const struct FString& InPhoneAreaCode, const struct FString& InLanuageCode, const struct FString& InExtraJson);
@@ -272,23 +268,30 @@ public:
 	bool IsAlreadyBindBgBg();
 	bool IsAlreadyBindApple();
 	void InvalidateQRCode(const struct FString& InCodeId, const struct FString& InRandStr, const struct FString& InExtraJson);
+	void InitAdvertiseSDK_iOS();
 	void InitAdvertiseSDK();
 	struct FString GetVerifyAppId4SendCode();
 	void GetShortUrl(const struct FString& URL, const struct FString& Mask, const struct FString& Extra);
+	struct FString GetSessionId();
 	struct FString GetOpenId();
 	struct FIMSDKLoginResult GetLoginResult();
 	struct FString GetLastLoginResultJson();
 	int GetLastIMSDKChannelID();
 	static class UIMSDKHelper* GetInstance();
+	struct FString GetIMSDKWebLoginParamsLaunchFromWeb(const struct FString& InState, const struct FString& InChallenge);
+	struct FString GetIMSDKWebLoginParams(const struct FString& InURL, const struct FString& InAppId, const struct FString& InVerifier);
+	struct FString GetIMSDKLoginTokenExpireTime();
 	struct FString GetIMSDKLoginToken();
 	struct FString GetIMSDKClientApiParams();
 	int GetHDmpveChannelID();
+	struct FString GetDisplayLoginErrorCode();
 	struct FString GetCurLoginPlatform();
 	struct FString GetChannelNickname();
 	struct FString GetBindRet();
 	void GetBindInfo();
 	int GetBindCount();
 	struct FString GetAllQRCodeLoginResults();
+	struct FString GetAdjustID();
 	struct FString GetAdjustAttr();
 	void GenerateQRCode(const struct FString& InExtraJson);
 	int ConvertTConndChannel2IMSDKChannel(int InTConndChannelId);
@@ -324,51 +327,50 @@ public:
 class UiTOPPrefs : public USaveGame
 {
 public:
-	bool                                               bForceLogin;                                              // 0x0028(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bFirstLoginGuestAfterBindFB;                              // 0x0029(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
-	int                                                nHDmpveChannelID;                                         // 0x002C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                nLastIMSDKChannelID;                                      // 0x0030(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedFBForceLoginForRelationChainError;                   // 0x0034(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
-	int64_t                                            lastTimeSetFBForceLoginForRelationChainError;             // 0x0038(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedWXForceLoginForRelationChainError;                   // 0x0040(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetWXForceLoginForRelationChainError;             // 0x0048(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedVKForceLoginForRelationChainError;                   // 0x0050(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetVKForceLoginForRelationChainError;             // 0x0058(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedLineForceLoginForRelationChainError;                 // 0x0060(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetLineForceLoginForRelationChainError;           // 0x0068(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedBgBgForceLoginForRelationChainError;                 // 0x0070(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetBgBgForceLoginForRelationChainError;           // 0x0078(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedAppleForceLoginForRelationChainError;                // 0x0080(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetAppleForceLoginForRelationChainError;          // 0x0088(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedUnifiedAccountForceLoginForRelationChainError;       // 0x0090(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetUnifiedAccountForceLoginForRelationChainError; // 0x0098(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedHMSForceLoginForRelationChainError;                  // 0x00A0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetHMSForceLoginForRelationChainError;            // 0x00A8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedDiscordForceLoginForRelationChainError;              // 0x00B0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetDiscordForceLoginForRelationChainError;        // 0x00B8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedWhatsAppForceLoginForRelationChainError;             // 0x00C0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetWhatsappForceLoginForRelationChainError;       // 0x00C8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedTikTokForceLoginForRelationChainError;               // 0x00D0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetTikTokForceLoginForRelationChainError;         // 0x00D8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNeedForceLoginForRelationChainError;                     // 0x00E0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData12[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	int64_t                                            lastTimeSetForceLoginForRelationChainError;               // 0x00E8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FString                                     lastLoginArea;                                            // 0x00F0(0x0010) (Edit, ZeroConstructor, EditConst)
+	bool bForceLogin; // 0x0028(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bFirstLoginGuestAfterBindFB; // 0x0029(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x002A(0x0002) MISSED OFFSET
+	int nHDmpveChannelID; // 0x002C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	int nLastIMSDKChannelID; // 0x0030(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedFBForceLoginForRelationChainError; // 0x0034(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0035(0x0003) MISSED OFFSET
+	int64_t lastTimeSetFBForceLoginForRelationChainError; // 0x0038(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedWXForceLoginForRelationChainError; // 0x0040(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x0041(0x0007) MISSED OFFSET
+	int64_t lastTimeSetWXForceLoginForRelationChainError; // 0x0048(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedVKForceLoginForRelationChainError; // 0x0050(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x0051(0x0007) MISSED OFFSET
+	int64_t lastTimeSetVKForceLoginForRelationChainError; // 0x0058(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedLineForceLoginForRelationChainError; // 0x0060(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x0061(0x0007) MISSED OFFSET
+	int64_t lastTimeSetLineForceLoginForRelationChainError; // 0x0068(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedBgBgForceLoginForRelationChainError; // 0x0070(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData05[0x7]; // 0x0071(0x0007) MISSED OFFSET
+	int64_t lastTimeSetBgBgForceLoginForRelationChainError; // 0x0078(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedAppleForceLoginForRelationChainError; // 0x0080(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData06[0x7]; // 0x0081(0x0007) MISSED OFFSET
+	int64_t lastTimeSetAppleForceLoginForRelationChainError; // 0x0088(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedUnifiedAccountForceLoginForRelationChainError; // 0x0090(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData07[0x7]; // 0x0091(0x0007) MISSED OFFSET
+	int64_t lastTimeSetUnifiedAccountForceLoginForRelationChainError; // 0x0098(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedHMSForceLoginForRelationChainError; // 0x00A0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData08[0x7]; // 0x00A1(0x0007) MISSED OFFSET
+	int64_t lastTimeSetHMSForceLoginForRelationChainError; // 0x00A8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedDiscordForceLoginForRelationChainError; // 0x00B0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData09[0x7]; // 0x00B1(0x0007) MISSED OFFSET
+	int64_t lastTimeSetDiscordForceLoginForRelationChainError; // 0x00B8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedWhatsAppForceLoginForRelationChainError; // 0x00C0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData10[0x7]; // 0x00C1(0x0007) MISSED OFFSET
+	int64_t lastTimeSetWhatsappForceLoginForRelationChainError; // 0x00C8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedTikTokForceLoginForRelationChainError; // 0x00D0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData11[0x7]; // 0x00D1(0x0007) MISSED OFFSET
+	int64_t lastTimeSetTikTokForceLoginForRelationChainError; // 0x00D8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool bNeedForceLoginForRelationChainError; // 0x00E0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData12[0x7]; // 0x00E1(0x0007) MISSED OFFSET
+	int64_t lastTimeSetForceLoginForRelationChainError; // 0x00E8(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FString lastLoginArea; // 0x00F0(0x0010) (Edit, ZeroConstructor, EditConst)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.iTOPPrefs");
@@ -383,31 +385,32 @@ public:
 class UMockGameSvrClientNet : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xE0];                                      // 0x0028(0x00E0) MISSED OFFSET
-	struct FString                                     Host;                                                     // 0x0108(0x0010) (ZeroConstructor, Config)
-	int                                                Port;                                                     // 0x0118(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0xE0]; // 0x0028(0x00E0) MISSED OFFSET
+	struct FString Host; // 0x0108(0x0010) (ZeroConstructor, Config)
+	int Port; // 0x0118(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x011C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.MockGameSvrClientNet");
 		return pStaticClass;
 	}
 
+
+	void LoginMockGameSvr(const struct FString& UID, const struct FString& PlayerName, int ModeID);
 };
 
 
 // Class ClientNet.StoreGameHelper
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UStoreGameHelper : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    StoreGameCallback;                                        // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate StoreGameCallback; // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData00[0x8]; // 0x0038(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ClientNet.StoreGameHelper");
@@ -415,12 +418,15 @@ public:
 	}
 
 
+	void UnlockGPAchievement(const struct FString& InAchievement);
 	void UnInitialize();
 	void ShowLeaderboard(const struct FString& InIdentifier, int InTimeScope);
 	void ShowAchievements();
+	void RequestServerAuthCode();
 	void ReportScore(int64_t InScore, const struct FString& InIdentifier);
 	void ReportAchievement1(const struct FString& InIdentifier, double percent);
 	void ReportAchievement(const struct FString& InIdentifier, double percent);
+	void LoginGPManual();
 	void LoadReceivedChallenges();
 	void LoadLeaderboardScores(const struct FString& InIdentifier, int InRangeLocation, int InRangeLength, int InPlayScope, int InTimeScope);
 	void LoadFriends();
@@ -428,6 +434,8 @@ public:
 	void IssueChallengeWithScore(TMap<struct FString, struct FString> InScoreInfo, TMap<struct FString, struct FString> InPlayerInfo, TArray<struct FString> InPlayerIDs, const struct FString& InMessage);
 	void IssueChallengeWithArchivement(TMap<struct FString, struct FString> InAchievementInfo, TArray<struct FString> InPlayerIDs, const struct FString& InMessage);
 	void Initialize();
+	void InitGP();
+	void IncreaseGPAchievement(const struct FString& InAchievement, int InStep);
 	static class UStoreGameHelper* Get();
 	static void Destroy();
 	void AuthenticateLocalPlayer();

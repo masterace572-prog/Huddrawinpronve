@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -22,9 +22,9 @@ enum class EAndroidGraphicsDebugger : uint8_t
 // Enum AndroidRuntimeSettings.EGoogleVRCaps
 enum class EGoogleVRCaps : uint8_t
 {
-	EGoogleVRCaps__Cardboard       = 0,
-	EGoogleVRCaps__Daydream33      = 1,
-	EGoogleVRCaps__Daydream63      = 2,
+	EGoogleVRCaps__Cardboard = 0,
+	EGoogleVRCaps__Daydream33 = 1,
+	EGoogleVRCaps__Daydream63 = 2,
 	EGoogleVRCaps__EGoogleVRCaps_MAX = 3
 };
 
@@ -32,8 +32,8 @@ enum class EGoogleVRCaps : uint8_t
 // Enum AndroidRuntimeSettings.EGoogleVRMode
 enum class EGoogleVRMode : uint8_t
 {
-	EGoogleVRMode__Cardboard       = 0,
-	EGoogleVRMode__Daydream        = 1,
+	EGoogleVRMode__Cardboard = 0,
+	EGoogleVRMode__Daydream = 1,
 	EGoogleVRMode__DaydreamAndCardboard = 2,
 	EGoogleVRMode__EGoogleVRMode_MAX = 3
 };
@@ -42,9 +42,9 @@ enum class EGoogleVRMode : uint8_t
 // Enum AndroidRuntimeSettings.EAndroidAudio
 enum class EAndroidAudio : uint8_t
 {
-	EAndroidAudio__Default         = 0,
-	EAndroidAudio__OGG             = 1,
-	EAndroidAudio__ADPCM           = 2,
+	EAndroidAudio__Default = 0,
+	EAndroidAudio__OGG = 1,
+	EAndroidAudio__ADPCM = 2,
 	EAndroidAudio__EAndroidAudio_MAX = 3
 };
 
@@ -54,7 +54,7 @@ enum class EAndroidInstallLocation : uint8_t
 {
 	EAndroidInstallLocation__InternalOnly = 0,
 	EAndroidInstallLocation__PreferExternal = 1,
-	EAndroidInstallLocation__Auto  = 2,
+	EAndroidInstallLocation__Auto = 2,
 	EAndroidInstallLocation__EAndroidInstallLocation_MAX = 3
 };
 
@@ -88,9 +88,9 @@ enum class EAndroidScreenOrientation : uint8_t
 // Enum AndroidRuntimeSettings.EAndroidAntVerbosity
 enum class EAndroidAntVerbosity : uint8_t
 {
-	EAndroidAntVerbosity__Quiet    = 0,
-	EAndroidAntVerbosity__Normal   = 1,
-	EAndroidAntVerbosity__Verbose  = 2,
+	EAndroidAntVerbosity__Quiet = 0,
+	EAndroidAntVerbosity__Normal = 1,
+	EAndroidAntVerbosity__Verbose = 2,
 	EAndroidAntVerbosity__EAndroidAntVerbosity_MAX = 3
 };
 
@@ -100,20 +100,20 @@ enum class EAndroidAntVerbosity : uint8_t
 //Script Structs
 //---------------------By BangJO---------------------------
 
-// ScriptStruct AndroidRuntimeSettings.GooglePlayAchievementMapping
-// 0x0020
-struct FGooglePlayAchievementMapping
-{
-	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     AchievementID;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
-};
-
 // ScriptStruct AndroidRuntimeSettings.GooglePlayLeaderboardMapping
 // 0x0020
 struct FGooglePlayLeaderboardMapping
 {
-	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     LeaderboardID;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
+	struct FString Name; // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString LeaderboardID; // 0x0010(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct AndroidRuntimeSettings.GooglePlayAchievementMapping
+// 0x0020
+struct FGooglePlayAchievementMapping
+{
+	struct FString Name; // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString AchievementID; // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 }

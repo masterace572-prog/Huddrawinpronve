@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UTemBPLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.TemBPLibrary");
@@ -38,8 +37,7 @@ class ULuaTemBPData : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData");
@@ -54,11 +52,10 @@ public:
 class ULuaTemBPData_bool : public ULuaTemBPData
 {
 public:
-	bool                                               Data;                                                     // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	bool Data; // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData_bool");
@@ -73,11 +70,10 @@ public:
 class ULuaTemBPData_int : public ULuaTemBPData
 {
 public:
-	int                                                Data;                                                     // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	int Data; // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData_int");
@@ -92,11 +88,10 @@ public:
 class ULuaTemBPData_float : public ULuaTemBPData
 {
 public:
-	float                                              Data;                                                     // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	float Data; // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData_float");
@@ -111,10 +106,9 @@ public:
 class ULuaTemBPData_string : public ULuaTemBPData
 {
 public:
-	struct FString                                     Data;                                                     // 0x0028(0x0010) (ZeroConstructor)
+	struct FString Data; // 0x0028(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData_string");
@@ -129,10 +123,9 @@ public:
 class ULuaTemBPData_object : public ULuaTemBPData
 {
 public:
-	class UObject*                                     Data;                                                     // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject* Data; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TemBPNode.LuaTemBPData_object");

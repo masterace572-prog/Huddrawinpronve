@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,11 +11,11 @@ namespace SDK
 // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UStaticMesh*             StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 CenterPosition                 (Parm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* StaticMesh (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector CenterPosition (Parm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 {
@@ -44,10 +44,10 @@ int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContex
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UStaticMesh*             StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FBox                    Box                            (Parm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* StaticMesh (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox Box (Parm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
 {
@@ -75,12 +75,12 @@ int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextOb
 // Function Foliage.InteractiveFoliageActor.CapsuleTouched
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// class UPrimitiveComponent*     OverlappedComp                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent* OverlappedComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Other (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int OtherBodyIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFromSweep (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult OverlapInfo (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
 {
@@ -109,7 +109,7 @@ void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* Overlap
 // Function Foliage.ProceduralFoliageSpawner.Simulate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NumSteps                       (Parm, ZeroConstructor, IsPlainOldData)
+// int NumSteps (Parm, ZeroConstructor, IsPlainOldData)
 
 void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {

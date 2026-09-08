@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function PhysXVehicles.VehicleAnimInstance.GetVehicle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AWheeledVehicle*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AWheeledVehicle* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AWheeledVehicle* UVehicleAnimInstance::GetVehicle()
 {
@@ -34,9 +34,9 @@ class AWheeledVehicle* UVehicleAnimInstance::GetVehicle()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetUseAutoGears
-// (Final, Native, Public, BlueprintCallable)
+// (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bUseAuto                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseAuto (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
 {
@@ -60,7 +60,7 @@ void UWheeledVehicleMovementComponent::SetUseAutoGears(bool bUseAuto)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetThrottleInput
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Throttle                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Throttle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
 {
@@ -82,10 +82,10 @@ void UWheeledVehicleMovementComponent::SetThrottleInput(float Throttle)
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetTargetGear
-// (Final, Native, Public, BlueprintCallable)
+// (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GearNum                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int GearNum (Parm, ZeroConstructor, IsPlainOldData)
+// bool bImmediate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetTargetGear(int GearNum, bool bImmediate)
 {
@@ -110,7 +110,7 @@ void UWheeledVehicleMovementComponent::SetTargetGear(int GearNum, bool bImmediat
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetSteeringInput
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Steering                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Steering (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
 {
@@ -134,7 +134,7 @@ void UWheeledVehicleMovementComponent::SetSteeringInput(float Steering)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetPhysActive
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetPhysActive(bool bActive)
 {
@@ -158,7 +158,7 @@ void UWheeledVehicleMovementComponent::SetPhysActive(bool bActive)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetHandbrakeInput
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewHandbrake                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewHandbrake (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
 {
@@ -182,7 +182,7 @@ void UWheeledVehicleMovementComponent::SetHandbrakeInput(bool bNewHandbrake)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnoreMask
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask GroupMask (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAvoidanceMask& GroupMask)
 {
@@ -206,7 +206,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnoreMask(const struct FNavAv
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToIgnore
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int GroupFlags (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int GroupFlags)
 {
@@ -230,7 +230,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToIgnore(int GroupFlags)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoidMask
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask GroupMask (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvoidanceMask& GroupMask)
 {
@@ -254,7 +254,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoidMask(const struct FNavAvo
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGroupsToAvoid
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int GroupFlags (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int GroupFlags)
 {
@@ -278,7 +278,7 @@ void UWheeledVehicleMovementComponent::SetGroupsToAvoid(int GroupFlags)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearUp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewGearUp                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewGearUp (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
 {
@@ -302,7 +302,7 @@ void UWheeledVehicleMovementComponent::SetGearUp(bool bNewGearUp)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetGearDown
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewGearDown                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewGearDown (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
 {
@@ -326,7 +326,7 @@ void UWheeledVehicleMovementComponent::SetGearDown(bool bNewGearDown)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetBrakeInput
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Brake                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Brake (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
 {
@@ -350,7 +350,7 @@ void UWheeledVehicleMovementComponent::SetBrakeInput(float Brake)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroupMask
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FNavAvoidanceMask       GroupMask                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FNavAvoidanceMask GroupMask (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAvoidanceMask& GroupMask)
 {
@@ -374,7 +374,7 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroupMask(const struct FNavAv
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceGroup
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupFlags                     (Parm, ZeroConstructor, IsPlainOldData)
+// int GroupFlags (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int GroupFlags)
 {
@@ -398,7 +398,7 @@ void UWheeledVehicleMovementComponent::SetAvoidanceGroup(int GroupFlags)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.SetAvoidanceEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
 {
@@ -422,11 +422,11 @@ void UWheeledVehicleMovementComponent::SetAvoidanceEnabled(bool bEnable)
 // Function PhysXVehicles.WheeledVehicleMovementComponent.ServerUpdateState
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// float                          InSteeringInput                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InThrottleInput                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InBrakeInput                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InHandBrakeInput               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurrentGear                    (Parm, ZeroConstructor, IsPlainOldData)
+// float InSteeringInput (Parm, ZeroConstructor, IsPlainOldData)
+// float InThrottleInput (Parm, ZeroConstructor, IsPlainOldData)
+// float InBrakeInput (Parm, ZeroConstructor, IsPlainOldData)
+// float InHandBrakeInput (Parm, ZeroConstructor, IsPlainOldData)
+// int CurrentGear (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, float InThrottleInput, float InBrakeInput, float InHandBrakeInput, int CurrentGear)
 {
@@ -454,7 +454,7 @@ void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.IsSuspensionSweep
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UWheeledVehicleMovementComponent::IsSuspensionSweep()
 {
@@ -479,7 +479,7 @@ bool UWheeledVehicleMovementComponent::IsSuspensionSweep()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetWheelShapeIndices
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    OutWheelShapeIndices           (Parm, OutParm, ZeroConstructor)
+// TArray<int> OutWheelShapeIndices (Parm, OutParm, ZeroConstructor)
 
 void UWheeledVehicleMovementComponent::GetWheelShapeIndices(TArray<int>* OutWheelShapeIndices)
 {
@@ -503,9 +503,9 @@ void UWheeledVehicleMovementComponent::GetWheelShapeIndices(TArray<int>* OutWhee
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetUseAutoGears
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UWheeledVehicleMovementComponent::GetUseAutoGears()
 {
@@ -530,7 +530,7 @@ bool UWheeledVehicleMovementComponent::GetUseAutoGears()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetThrottleInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetThrottleInput()
 {
@@ -553,9 +553,9 @@ float UWheeledVehicleMovementComponent::GetThrottleInput()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetTargetGear
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UWheeledVehicleMovementComponent::GetTargetGear()
 {
@@ -580,7 +580,7 @@ int UWheeledVehicleMovementComponent::GetTargetGear()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetSteeringInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetSteeringInput()
 {
@@ -605,7 +605,7 @@ float UWheeledVehicleMovementComponent::GetSteeringInput()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetHandbrakeInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UWheeledVehicleMovementComponent::GetHandbrakeInput()
 {
@@ -630,7 +630,7 @@ bool UWheeledVehicleMovementComponent::GetHandbrakeInput()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetForwardSpeed
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetForwardSpeed()
 {
@@ -653,9 +653,9 @@ float UWheeledVehicleMovementComponent::GetForwardSpeed()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineRotationSpeed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetEngineRotationSpeed()
 {
@@ -680,7 +680,7 @@ float UWheeledVehicleMovementComponent::GetEngineRotationSpeed()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetEngineMaxRotationSpeed
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed()
 {
@@ -703,9 +703,9 @@ float UWheeledVehicleMovementComponent::GetEngineMaxRotationSpeed()
 
 
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetCurrentGear
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UWheeledVehicleMovementComponent::GetCurrentGear()
 {
@@ -730,7 +730,7 @@ int UWheeledVehicleMovementComponent::GetCurrentGear()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.GetBrakeInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UWheeledVehicleMovementComponent::GetBrakeInput()
 {
@@ -755,8 +755,8 @@ float UWheeledVehicleMovementComponent::GetBrakeInput()
 // Function PhysXVehicles.WheeledVehicleMovementComponent.EnableVehicleWheel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InEnable                       (Parm, ZeroConstructor, IsPlainOldData)
+// int WheelIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool InEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::EnableVehicleWheel(int WheelIndex, bool InEnable)
 {
@@ -781,7 +781,7 @@ void UWheeledVehicleMovementComponent::EnableVehicleWheel(int WheelIndex, bool I
 // Function PhysXVehicles.WheeledVehicleMovementComponent.EnableVehicleSimulation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InEnable                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool InEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UWheeledVehicleMovementComponent::EnableVehicleSimulation(bool InEnable)
 {
@@ -826,7 +826,7 @@ void UWheeledVehicleMovementComponent::ClearAllInput()
 // Function PhysXVehicles.VehicleWheel.IsInAir
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UVehicleWheel::IsInAir()
 {
@@ -851,7 +851,7 @@ bool UVehicleWheel::IsInAir()
 // Function PhysXVehicles.VehicleWheel.GetSuspensionOffset
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UVehicleWheel::GetSuspensionOffset()
 {
@@ -876,7 +876,7 @@ float UVehicleWheel::GetSuspensionOffset()
 // Function PhysXVehicles.VehicleWheel.GetSteerAngle
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UVehicleWheel::GetSteerAngle()
 {
@@ -901,7 +901,7 @@ float UVehicleWheel::GetSteerAngle()
 // Function PhysXVehicles.VehicleWheel.GetRotationAngle
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UVehicleWheel::GetRotationAngle()
 {
@@ -926,7 +926,7 @@ float UVehicleWheel::GetRotationAngle()
 // Function PhysXVehicles.VehicleWheel.GetContactNormal
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UVehicleWheel::GetContactNormal()
 {
@@ -951,8 +951,8 @@ struct FVector UVehicleWheel::GetContactNormal()
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetSteerAngle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          SteerAngle                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float SteerAngle (Parm, ZeroConstructor, IsPlainOldData)
+// int WheelIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int WheelIndex)
 {
@@ -977,8 +977,8 @@ void USimpleWheeledVehicleMovementComponent::SetSteerAngle(float SteerAngle, int
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetDriveTorque
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DriveTorque                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float DriveTorque (Parm, ZeroConstructor, IsPlainOldData)
+// int WheelIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, int WheelIndex)
 {
@@ -1003,8 +1003,8 @@ void USimpleWheeledVehicleMovementComponent::SetDriveTorque(float DriveTorque, i
 // Function PhysXVehicles.SimpleWheeledVehicleMovementComponent.SetBrakeTorque
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BrakeTorque                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WheelIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// float BrakeTorque (Parm, ZeroConstructor, IsPlainOldData)
+// int WheelIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleWheeledVehicleMovementComponent::SetBrakeTorque(float BrakeTorque, int WheelIndex)
 {

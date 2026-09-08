@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function TableResInclude.EvoBaseMapUIMarkTableMap.TraversTable
 // (Final, Native, Public)
 // Parameters:
-// class UUAEDataTable*           TableData                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Key                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEDataTable* TableData (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Key (Parm, ZeroConstructor, IsPlainOldData)
 
 void UEvoBaseMapUIMarkTableMap::TraversTable(class UUAEDataTable* TableData, const struct FName& Key)
 {
@@ -37,8 +37,8 @@ void UEvoBaseMapUIMarkTableMap::TraversTable(class UUAEDataTable* TableData, con
 // Function TableResInclude.EvoBaseModTableTestTableMap.TraversTable
 // (Final, Native, Public)
 // Parameters:
-// class UUAEDataTable*           TableData                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Key                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEDataTable* TableData (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Key (Parm, ZeroConstructor, IsPlainOldData)
 
 void UEvoBaseModTableTestTableMap::TraversTable(class UUAEDataTable* TableData, const struct FName& Key)
 {

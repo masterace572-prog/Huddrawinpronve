@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void UUAEStateMachineComponent::Start()
 // Function UAEStateMachine.UAEStateMachineComponent.SetTag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InTag                          (Parm, ZeroConstructor)
+// struct FString InTag (Parm, ZeroConstructor)
 
 void UUAEStateMachineComponent::SetTag(const struct FString& InTag)
 {
@@ -56,9 +56,9 @@ void UUAEStateMachineComponent::SetTag(const struct FString& InTag)
 // DelegateFunction UAEStateMachine.UAEStateMachineComponent.OnTransientEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// struct FString                 TransientEvent                 (Parm, ZeroConstructor)
-// struct FString                 CurrentState                   (Parm, ZeroConstructor)
-// struct FString                 TransientToState               (Parm, ZeroConstructor)
+// struct FString TransientEvent (Parm, ZeroConstructor)
+// struct FString CurrentState (Parm, ZeroConstructor)
+// struct FString TransientToState (Parm, ZeroConstructor)
 
 void UUAEStateMachineComponent::OnTransientEvent__DelegateSignature(const struct FString& TransientEvent, const struct FString& CurrentState, const struct FString& TransientToState)
 {
@@ -83,8 +83,8 @@ void UUAEStateMachineComponent::OnTransientEvent__DelegateSignature(const struct
 // Function UAEStateMachine.UAEStateMachineComponent.IsInState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 StateName                      (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString StateName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEStateMachineComponent::IsInState(const struct FString& StateName)
 {
@@ -110,7 +110,7 @@ bool UUAEStateMachineComponent::IsInState(const struct FString& StateName)
 // Function UAEStateMachine.UAEStateMachineComponent.GetCurrentState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEState*               ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUAEState* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUAEState* UUAEStateMachineComponent::GetCurrentState()
 {
@@ -135,7 +135,7 @@ class UUAEState* UUAEStateMachineComponent::GetCurrentState()
 // Function UAEStateMachine.UAEStateMachineComponent.ForceDoEvent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 EventName                      (Parm, ZeroConstructor)
+// struct FString EventName (Parm, ZeroConstructor)
 
 void UUAEStateMachineComponent::ForceDoEvent(const struct FString& EventName)
 {
@@ -180,7 +180,7 @@ void UUAEStateMachineComponent::Finish()
 // Function UAEStateMachine.UAEStateMachineComponent.DoEvent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 EventName                      (Parm, ZeroConstructor)
+// struct FString EventName (Parm, ZeroConstructor)
 
 void UUAEStateMachineComponent::DoEvent(const struct FString& EventName)
 {
@@ -204,8 +204,8 @@ void UUAEStateMachineComponent::DoEvent(const struct FString& EventName)
 // Function UAEStateMachine.UAEStateMachineComponent.CanDoEvent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEStateMachineComponent::CanDoEvent(const struct FString& EventName)
 {
@@ -231,7 +231,7 @@ bool UUAEStateMachineComponent::CanDoEvent(const struct FString& EventName)
 // Function UAEStateMachine.UAEState.Update
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEState::Update(float DeltaTime)
 {
@@ -255,7 +255,7 @@ void UUAEState::Update(float DeltaTime)
 // Function UAEStateMachine.UAEState.OnLeave
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UUAEState*               TranitToState                  (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEState* TranitToState (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEState::OnLeave(class UUAEState* TranitToState)
 {
@@ -279,7 +279,7 @@ void UUAEState::OnLeave(class UUAEState* TranitToState)
 // Function UAEStateMachine.UAEState.OnEnter
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UUAEState*               PrevState                      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEState* PrevState (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEState::OnEnter(class UUAEState* PrevState)
 {

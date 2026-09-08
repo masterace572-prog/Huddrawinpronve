@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function Landscape.LandscapeProxy.SetLandScapeRenderMask
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseRenderMask                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  RenderMask                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Index (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseRenderMask (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char RenderMask (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void ALandscapeProxy::SetLandScapeRenderMask(int Index, bool bUseRenderMask, unsigned char RenderMask)
 {
@@ -39,17 +39,17 @@ void ALandscapeProxy::SetLandScapeRenderMask(int Index, bool bUseRenderMask, uns
 // Function Landscape.LandscapeProxy.EditorApplySpline
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USplineComponent*        InSplineComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          StartWidth                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndWidth                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartSideFalloff               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndSideFalloff                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartRoll                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndRoll                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumSubdivisions                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRaiseHeights                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLowerHeights                  (Parm, ZeroConstructor, IsPlainOldData)
-// class ULandscapeLayerInfoObject* PaintLayer                     (Parm, ZeroConstructor, IsPlainOldData)
+// class USplineComponent* InSplineComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float StartWidth (Parm, ZeroConstructor, IsPlainOldData)
+// float EndWidth (Parm, ZeroConstructor, IsPlainOldData)
+// float StartSideFalloff (Parm, ZeroConstructor, IsPlainOldData)
+// float EndSideFalloff (Parm, ZeroConstructor, IsPlainOldData)
+// float StartRoll (Parm, ZeroConstructor, IsPlainOldData)
+// float EndRoll (Parm, ZeroConstructor, IsPlainOldData)
+// int NumSubdivisions (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRaiseHeights (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLowerHeights (Parm, ZeroConstructor, IsPlainOldData)
+// class ULandscapeLayerInfoObject* PaintLayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer)
 {
@@ -104,7 +104,7 @@ void ALandscapeProxy::ChangeLODDistributionSettingConsoleVariable()
 // Function Landscape.LandscapeProxy.ChangeLODDistanceFactor
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InLODDistanceFactor            (Parm, ZeroConstructor, IsPlainOldData)
+// float InLODDistanceFactor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 {
@@ -149,7 +149,7 @@ void ALandscapeProxy::ChangeLOD0DistributionSettingConsoleVariable()
 // Function Landscape.LandscapeProxy.ChangebUseScreenSizeLOD
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InbUseScreenSizeLOD            (Parm, ZeroConstructor, IsPlainOldData)
+// bool InbUseScreenSizeLOD (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALandscapeProxy::ChangebUseScreenSizeLOD(bool InbUseScreenSizeLOD)
 {
@@ -173,7 +173,7 @@ void ALandscapeProxy::ChangebUseScreenSizeLOD(bool InbUseScreenSizeLOD)
 // Function Landscape.IdeaGrassFieldFunctionLibrary.IdeaGrassRenderForceTextureTrample
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FIdeaGrassFieldData     GrassFieldData                 (Parm)
+// struct FIdeaGrassFieldData GrassFieldData (Parm)
 
 void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureTrample(const struct FIdeaGrassFieldData& GrassFieldData)
 {
@@ -197,7 +197,7 @@ void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureTrample(const st
 // Function Landscape.IdeaGrassFieldFunctionLibrary.IdeaGrassRenderForceTextureSkill
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FIdeaGrassFieldData     GrassFieldData                 (Parm)
+// struct FIdeaGrassFieldData GrassFieldData (Parm)
 
 void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureSkill(const struct FIdeaGrassFieldData& GrassFieldData)
 {
@@ -221,7 +221,7 @@ void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureSkill(const stru
 // Function Landscape.IdeaGrassFieldFunctionLibrary.IdeaGrassRenderForceTextureFade
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FIdeaGrassFieldData     GrassFieldData                 (Parm)
+// struct FIdeaGrassFieldData GrassFieldData (Parm)
 
 void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureFade(const struct FIdeaGrassFieldData& GrassFieldData)
 {
@@ -245,7 +245,7 @@ void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTextureFade(const struc
 // Function Landscape.IdeaGrassFieldFunctionLibrary.IdeaGrassRenderForceTexture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FIdeaGrassFieldData     GrassFieldData                 (Parm)
+// struct FIdeaGrassFieldData GrassFieldData (Parm)
 
 void UIdeaGrassFieldFunctionLibrary::IdeaGrassRenderForceTexture(const struct FIdeaGrassFieldData& GrassFieldData)
 {

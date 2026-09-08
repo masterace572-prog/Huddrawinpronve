@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,14 +9,12 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class Creative.AIGCAudioManager
-// 0x0050 (0x01B8 - 0x0168)
+// 0x0000 (0x0168 - 0x0168)
 class UAIGCAudioManager : public USTExtraManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0168(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.AIGCAudioManager");
@@ -24,22 +22,23 @@ public:
 	}
 
 
+	uint64_t WemCutByAssetKey(uint64_t AssetKey, int StartTime, int EndTime);
 	uint32_t SeekOnEvent(class UAkAudioEvent* Event, class AActor* Actor, int in_iPosition, bool bStopWhenOwnerDestroyed, uint64_t AssetKey, uint32_t* PlayingID);
 	static class UAIGCAudioManager* Get(class UObject* WorldContext);
+	int AllocateTempAssetKey();
 };
 
 
 // Class Creative.CameraDeviceSpringArmComponent
-// 0x0010 (0x0D20 - 0x0D10)
+// 0x0010 (0x0DF0 - 0x0DE0)
 class UCameraDeviceSpringArmComponent : public UCustomSpringArmComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0D10(0x0008) MISSED OFFSET
-	float                                              DebugAngle;                                               // 0x0D18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0D1C(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0DE0(0x0008) MISSED OFFSET
+	float DebugAngle; // 0x0DE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0DEC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CameraDeviceSpringArmComponent");
@@ -54,14 +53,13 @@ public:
 class ACreateBackpackRepActor : public ABackpackRepActor
 {
 public:
-	int                                                CustomItemDataInitFlag;                                   // 0x04E8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CustomItemIDMin;                                          // 0x04EC(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CustomItemIDMax;                                          // 0x04F0(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NeedUpdateCustomItemList;                                 // 0x04F4(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04F5(0x0003) MISSED OFFSET
+	int CustomItemDataInitFlag; // 0x04E8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int CustomItemIDMin; // 0x04EC(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int CustomItemIDMax; // 0x04F0(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool NeedUpdateCustomItemList; // 0x04F4(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x04F5(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreateBackpackRepActor");
@@ -79,51 +77,50 @@ public:
 class UCreativeAbilitySystemComponent : public USAbilitySystemComponent
 {
 public:
-	class ASTExtraPlayerController*                    PlayerController;                                         // 0x1218(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ASTExtraPlayerCharacter*                     PlayerCharacter;                                          // 0x1220(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x1228(0x0008) MISSED OFFSET
-	struct FTransform                                  GhostBuildingTransform;                                   // 0x1230(0x0030) (IsPlainOldData)
-	TArray<class AActor*>                              GetLocationActorsToIgnore;                                // 0x1260(0x0010) (ZeroConstructor)
-	float                                              LandOnOffsetZ;                                            // 0x1270(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              LandHitPointZ;                                            // 0x1274(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              LandHitDeltaZ;                                            // 0x1278(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              WaterHeight;                                              // 0x127C(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bForceLandOnGround;                                       // 0x1280(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x1281(0x0003) MISSED OFFSET
-	int                                                LandGroundType;                                           // 0x1284(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseLandOnOffsetZ;                                        // 0x1288(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bSnapTransValid;                                          // 0x1289(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bSnapGridEnable;                                          // 0x128A(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x128B(0x0005) MISSED OFFSET
-	class AActor*                                      SnapGrid;                                                 // 0x1290(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreLandOn;                                            // 0x1298(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreWaterHeightCheck;                                  // 0x1299(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreCameraRotate;                                      // 0x129A(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x129B(0x0001) MISSED OFFSET
-	struct FRotator                                    ModifiedRotation;                                         // 0x129C(0x000C) (IsPlainOldData)
-	struct FVector                                     ModifiedScale;                                            // 0x12A8(0x000C) (IsPlainOldData)
-	struct FRotator                                    RelativeRotation;                                         // 0x12B4(0x000C) (IsPlainOldData)
-	struct FVector                                     RelativeLocation;                                         // 0x12C0(0x000C) (IsPlainOldData)
-	struct FVector                                     RelativeScale;                                            // 0x12CC(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x12D8(0x0008) MISSED OFFSET
-	struct FTransform                                  SnapBaseTransform;                                        // 0x12E0(0x0030) (IsPlainOldData)
-	struct FVector                                     DeviceLocationOffset;                                     // 0x1310(0x000C) (IsPlainOldData)
-	struct FVector                                     InstanceBoxCenter;                                        // 0x131C(0x000C) (IsPlainOldData)
-	struct FVector                                     InstanceBoxExtent;                                        // 0x1328(0x000C) (IsPlainOldData)
-	bool                                               bSpecificPlaceStartEnd;                                   // 0x1334(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x1335(0x0003) MISSED OFFSET
-	struct FVector                                     PlaceRayStart;                                            // 0x1338(0x000C) (IsPlainOldData)
-	struct FVector                                     PlaceRayEnd;                                              // 0x1344(0x000C) (IsPlainOldData)
-	bool                                               bNeedGetBuildDistance;                                    // 0x1350(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bOpenLandPosCheckDebug;                                   // 0x1351(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x2];                                       // 0x1352(0x0002) MISSED OFFSET
-	struct FVector                                     OverridePos;                                              // 0x1354(0x000C) (IsPlainOldData)
-	struct FRotator                                    OverrideRot;                                              // 0x1360(0x000C) (IsPlainOldData)
-	bool                                               bOverrideBuild;                                           // 0x136C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x136D(0x0003) MISSED OFFSET
+	class ASTExtraPlayerController* PlayerController; // 0x1218(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ASTExtraPlayerCharacter* PlayerCharacter; // 0x1220(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x1228(0x0008) MISSED OFFSET
+	struct FTransform GhostBuildingTransform; // 0x1230(0x0030) (IsPlainOldData)
+	TArray<class AActor*> GetLocationActorsToIgnore; // 0x1260(0x0010) (ZeroConstructor)
+	float LandOnOffsetZ; // 0x1270(0x0004) (ZeroConstructor, IsPlainOldData)
+	float LandHitPointZ; // 0x1274(0x0004) (ZeroConstructor, IsPlainOldData)
+	float LandHitDeltaZ; // 0x1278(0x0004) (ZeroConstructor, IsPlainOldData)
+	float WaterHeight; // 0x127C(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bForceLandOnGround; // 0x1280(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x1281(0x0003) MISSED OFFSET
+	int LandGroundType; // 0x1284(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bUseLandOnOffsetZ; // 0x1288(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bSnapTransValid; // 0x1289(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bSnapGridEnable; // 0x128A(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x5]; // 0x128B(0x0005) MISSED OFFSET
+	class AActor* SnapGrid; // 0x1290(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bIgnoreLandOn; // 0x1298(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bIgnoreWaterHeightCheck; // 0x1299(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bIgnoreCameraRotate; // 0x129A(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x1]; // 0x129B(0x0001) MISSED OFFSET
+	struct FRotator ModifiedRotation; // 0x129C(0x000C) (IsPlainOldData)
+	struct FVector ModifiedScale; // 0x12A8(0x000C) (IsPlainOldData)
+	struct FRotator RelativeRotation; // 0x12B4(0x000C) (IsPlainOldData)
+	struct FVector RelativeLocation; // 0x12C0(0x000C) (IsPlainOldData)
+	struct FVector RelativeScale; // 0x12CC(0x000C) (IsPlainOldData)
+	unsigned char UnknownData04[0x8]; // 0x12D8(0x0008) MISSED OFFSET
+	struct FTransform SnapBaseTransform; // 0x12E0(0x0030) (IsPlainOldData)
+	struct FVector DeviceLocationOffset; // 0x1310(0x000C) (IsPlainOldData)
+	struct FVector InstanceBoxCenter; // 0x131C(0x000C) (IsPlainOldData)
+	struct FVector InstanceBoxExtent; // 0x1328(0x000C) (IsPlainOldData)
+	bool bSpecificPlaceStartEnd; // 0x1334(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x3]; // 0x1335(0x0003) MISSED OFFSET
+	struct FVector PlaceRayStart; // 0x1338(0x000C) (IsPlainOldData)
+	struct FVector PlaceRayEnd; // 0x1344(0x000C) (IsPlainOldData)
+	bool bNeedGetBuildDistance; // 0x1350(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bOpenLandPosCheckDebug; // 0x1351(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x2]; // 0x1352(0x0002) MISSED OFFSET
+	struct FVector OverridePos; // 0x1354(0x000C) (IsPlainOldData)
+	struct FRotator OverrideRot; // 0x1360(0x000C) (IsPlainOldData)
+	bool bOverrideBuild; // 0x136C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData07[0x3]; // 0x136D(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAbilitySystemComponent");
@@ -152,31 +149,70 @@ public:
 };
 
 
+// Class Creative.CreativeActorDataManager
+// 0x0148 (0x02B0 - 0x0168)
+class UCreativeActorDataManager : public USTExtraManagerBase
+{
+public:
+	unsigned char UnknownData00[0x4]; // 0x0168(0x0004) MISSED OFFSET
+	int SingleSerializeNum; // 0x016C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FCreativeActorNodeContainer ActorDataContainer; // 0x0170(0x00C8) (Net, Transient)
+	unsigned char UnknownData01[0x64]; // 0x0238(0x0064) MISSED OFFSET
+	float DataNodePullInterval; // 0x029C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int SinglePullDataNodeNum; // 0x02A0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int TotalPullDataNodeNum; // 0x02A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DataNodePullTimeroutInterval; // 0x02A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x02AC(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeActorDataManager");
+		return pStaticClass;
+	}
+
+
+	void SetActorDataNodes(TArray<struct FCreativeActorDataNode> ActorDataNodes);
+	void RemoveActorData(uint32_t ID, unsigned char Type);
+	void ReceiveOnPostSetLuaEventBridgeInstance();
+	void ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState);
+	void OnPostSetLuaEventBridgeInstance();
+	void OnGameStateBeginPlay(class AGameStateBase* GameState);
+	TArray<struct FCreativeActorDataNode> GetActorDataNodes(TArray<uint32_t> DataHashKeys);
+	bool GetActorDataContent(uint32_t ID, unsigned char Type, TArray<unsigned char>* OutContent);
+	static class UCreativeActorDataManager* Get(class UObject* WorldContext);
+	void ChangeActorData(uint32_t ID, unsigned char Type, TArray<unsigned char> Content);
+	void CallOnReceivePreActorDataRemove(uint32_t ID, unsigned char Type);
+	void CallOnReceivePostActorDataChange(uint32_t ID, unsigned char Type, TArray<unsigned char> Content);
+	void CallOnReceivePostActorDataAdd(uint32_t ID, unsigned char Type, TArray<unsigned char> Content);
+	void AddActorData(uint32_t ID, unsigned char Type, TArray<unsigned char> Content);
+};
+
+
 // Class Creative.CreativeModeActorInteractionComponent
 // 0x0088 (0x02C0 - 0x0238)
 class UCreativeModeActorInteractionComponent : public ULuaActorComponent
 {
 public:
-	struct FString                                     HitComponentName;                                         // 0x0238(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bSectorCheckEnabled;                                      // 0x0248(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0249(0x0003) MISSED OFFSET
-	float                                              SectorCheckCD;                                            // 0x024C(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bTransformCrossHairCheckEnabled;                          // 0x0250(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0251(0x0003) MISSED OFFSET
-	float                                              TransformCrossHairCheckCD;                                // 0x0254(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bPickCrossHairCheckEnabled;                               // 0x0258(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0259(0x0003) MISSED OFFSET
-	float                                              PickCrossHairCheckCD;                                     // 0x025C(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0260(0x0010) MISSED OFFSET
-	class APawn*                                       PlayerCharacter;                                          // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ASTExtraPlayerController*                    PlayerController;                                         // 0x0278(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class AActor*>                              CrossHairCheckIgnoreActorArray;                           // 0x0280(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              uTransformCrossHairCheckIgnoreActorArray;                 // 0x0290(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              PickCrossHairCheckIgnoreActorArray;                       // 0x02A0(0x0010) (ZeroConstructor)
-	TArray<class UClass*>                              PickActorClassArray;                                      // 0x02B0(0x0010) (ZeroConstructor)
+	struct FString HitComponentName; // 0x0238(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool bSectorCheckEnabled; // 0x0248(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0249(0x0003) MISSED OFFSET
+	float SectorCheckCD; // 0x024C(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bTransformCrossHairCheckEnabled; // 0x0250(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0251(0x0003) MISSED OFFSET
+	float TransformCrossHairCheckCD; // 0x0254(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bPickCrossHairCheckEnabled; // 0x0258(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0259(0x0003) MISSED OFFSET
+	float PickCrossHairCheckCD; // 0x025C(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x10]; // 0x0260(0x0010) MISSED OFFSET
+	class APawn* PlayerCharacter; // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ASTExtraPlayerController* PlayerController; // 0x0278(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*> CrossHairCheckIgnoreActorArray; // 0x0280(0x0010) (ZeroConstructor)
+	TArray<class AActor*> uTransformCrossHairCheckIgnoreActorArray; // 0x0290(0x0010) (ZeroConstructor)
+	TArray<class AActor*> PickCrossHairCheckIgnoreActorArray; // 0x02A0(0x0010) (ZeroConstructor)
+	TArray<class UClass*> PickActorClassArray; // 0x02B0(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeActorInteractionComponent");
@@ -188,6 +224,7 @@ public:
 	void SetCrossHairTransformObjInstanceID(const struct FString& InstanceID);
 	void SetCrossHairSelectedObjInstanceID(const struct FString& InstanceID);
 	void SetCrossHairPickActor(class AActor* PickActor);
+	void SectorCheckImplement(float CheckDistance, float CheckAngle);
 	float GetSectorCheckIntervalCfg();
 	float GetSectorCheckDistance();
 	float GetSectorCheckAngle();
@@ -197,6 +234,7 @@ public:
 	float GetCrossHairPickDistanceCfg();
 	float GetCrossHairCheckIntervalCfg();
 	float GetCrossHairCheckDistanceCfg();
+	void CrossHairCheckImplement(float Distance);
 	void ClearCanEditParamsObjs();
 	void AddCanEditObject(class UObject* uCanEditObject, float Angle, float Distance);
 };
@@ -208,8 +246,7 @@ class UCreativeModeManagerBase : public USTExtraManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeManagerBase");
@@ -224,16 +261,15 @@ public:
 class UCreativeAdaptiveSchedulManager : public UCreativeModeManagerBase
 {
 public:
-	bool                                               bOpenLuaProfile;                                          // 0x0168(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bOpenProfile;                                             // 0x0169(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bOpenFuncCPUProfile;                                      // 0x016A(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5D];                                      // 0x016B(0x005D) MISSED OFFSET
-	TMap<struct FString, int>                          ProjectTagMap;                                            // 0x01C8(0x0050) (BlueprintVisible, ZeroConstructor)
-	TMap<struct FString, int>                          LuaPathTagMap;                                            // 0x0218(0x0050) (BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0268(0x0008) MISSED OFFSET
+	bool bOpenLuaProfile; // 0x0168(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bOpenProfile; // 0x0169(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bOpenFuncCPUProfile; // 0x016A(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x5D]; // 0x016B(0x005D) MISSED OFFSET
+	TMap<struct FString, int> ProjectTagMap; // 0x01C8(0x0050) (BlueprintVisible, ZeroConstructor)
+	TMap<struct FString, int> LuaPathTagMap; // 0x0218(0x0050) (BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0268(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAdaptiveSchedulManager");
@@ -260,21 +296,23 @@ public:
 
 
 // Class Creative.CreativeAnimInstance
-// 0x0020 (0x0CE0 - 0x0CC0)
+// 0x0030 (0x0CB0 - 0x0C80)
 class UCreativeAnimInstance : public USTExtraAnimInstanceBase
 {
 public:
-	struct FVector                                     C_ActualMoveVelocity;                                     // 0x0CC0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              C_FlyMaxSpeed;                                            // 0x0CCC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               C_SkillFlying;                                            // 0x0CD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0CD1(0x0003) MISSED OFFSET
-	float                                              RootAimYaw;                                               // 0x0CD4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              C_AimOffsetAdditiveAlpha;                                 // 0x0CD8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsProne;                                                 // 0x0CDC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0CDD(0x0003) MISSED OFFSET
+	float MoveVelocityInterpSpeed; // 0x0C80(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bFlyBuilding; // 0x0C84(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0C85(0x0003) MISSED OFFSET
+	struct FVector C_ActualMoveVelocity; // 0x0C88(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	float C_FlyMaxSpeed; // 0x0C94(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool C_SkillFlying; // 0x0C98(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0C99(0x0003) MISSED OFFSET
+	float RootAimYaw; // 0x0C9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float C_AimOffsetAdditiveAlpha; // 0x0CA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsProne; // 0x0CA4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0xB]; // 0x0CA5(0x000B) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAnimInstance");
@@ -289,14 +327,13 @@ public:
 class UCreativeLuaSignalObjectBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0090(0x0008) MISSED OFFSET
-	class UGameLuaAPI*                                 GameLuaAPI;                                               // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	TMap<int, struct FCreativeSignalEventInfo>         SignalEventInfoMap;                                       // 0x00A0(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0090(0x0008) MISSED OFFSET
+	class UGameLuaAPI* GameLuaAPI; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	TMap<int, struct FCreativeSignalEventInfo> SignalEventInfoMap; // 0x00A0(0x0050) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaSignalObjectBase");
@@ -309,6 +346,7 @@ public:
 	void RemoveCommonEvent(int EventHandle);
 	void ReceivePostBeginPlay();
 	void ReceiveBeginPlay();
+	void HookObject();
 	void ClearAllCommonEvent();
 	void AddCommonEvent(const struct FString& EventType, const struct FString& EventID, const struct FString& FunctionName);
 };
@@ -319,16 +357,15 @@ public:
 class UCreativeApiObject : public UCreativeLuaSignalObjectBase
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00F0(0x0050) MISSED OFFSET
-	struct FString                                     ModuleName;                                               // 0x0140(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             CrossVMAPIs;                                              // 0x0150(0x0010) (ZeroConstructor)
-	TArray<struct FString>                             UGCVMAPIs;                                                // 0x0160(0x0010) (ZeroConstructor)
-	struct FString                                     UGCVMAPILuaFilePath;                                      // 0x0170(0x0010) (ZeroConstructor)
-	bool                                               bEnableRegisterCClosureApi;                               // 0x0180(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0181(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x00F0(0x0050) MISSED OFFSET
+	struct FString ModuleName; // 0x0140(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<struct FString> CrossVMAPIs; // 0x0150(0x0010) (ZeroConstructor)
+	TArray<struct FString> UGCVMAPIs; // 0x0160(0x0010) (ZeroConstructor)
+	struct FString UGCVMAPILuaFilePath; // 0x0170(0x0010) (ZeroConstructor)
+	bool bEnableRegisterCClosureApi; // 0x0180(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0181(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeApiObject");
@@ -342,18 +379,17 @@ public:
 
 
 // Class Creative.CreativeAssetManager
-// 0x00C8 (0x0230 - 0x0168)
+// 0x0118 (0x0280 - 0x0168)
 class UCreativeAssetManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0168(0x0001) MISSED OFFSET
-	bool                                               bColorISMEnable;                                          // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x016A(0x0002) MISSED OFFSET
-	int                                                CustomEditMaterialId;                                     // 0x016C(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC0];                                      // 0x0170(0x00C0) MISSED OFFSET
+	unsigned char UnknownData00[0x1]; // 0x0168(0x0001) MISSED OFFSET
+	bool bColorISMEnable; // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x016A(0x0002) MISSED OFFSET
+	int CustomEditMaterialId; // 0x016C(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x110]; // 0x0170(0x0110) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAssetManager");
@@ -361,11 +397,15 @@ public:
 	}
 
 
+	bool RemoveAssetInfo(int AssetId);
 	void ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState);
 	void ReceiveInitAssetInfo(int AssetId);
+	void ReceiveGetCustomAssetAsyncWithStringForManage(const struct FString& CustomAssetKey);
 	void OnGameStateBeginPlay(class AGameStateBase* GameState);
+	void OnCustomAssetLoadComplete(const struct FString& CustomAssetKey, class UObject* LoadObject);
 	struct FString GetObbyMeshPath(int AssetId);
 	struct FString GetMaterialPath(int MaterialID);
+	void GetCustomAssetAsyncWithStringForManage(const struct FString& CustomAssetKey, const struct FString& InputString, const struct FScriptDelegate& AssetLoadSuccessDelegate);
 	static class UCreativeAssetManager* Get(class UObject* WorldContext);
 	void AddAssetInfo(int AssetId, const struct FCreativeAssetInfo& AssetInfo);
 };
@@ -377,8 +417,7 @@ class UCreativeAudioApiObject : public UCreativeApiObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAudioApiObject");
@@ -388,14 +427,35 @@ public:
 };
 
 
+// Class Creative.CreativeAudioBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeAudioBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeAudioBlueprintFunctionLibrary");
+		return pStaticClass;
+	}
+
+
+	static bool SaveWemToConvert(TArray<unsigned char> WemData, const struct FString& SavePath);
+	static void RegisterWwiseBaseDir(const struct FString& BaseDir);
+	static float GetWavLength(TArray<unsigned char> WavData);
+	static float GetMp3Length(TArray<unsigned char> Mp3Data);
+	static void GetAudioWaveform(uint32_t WemMediaID, float SampleInterval, const struct FScriptDelegate& Callback);
+};
+
+
 // Class Creative.CreativeAutoGenComponent
 // 0x0000 (0x0238 - 0x0238)
 class UCreativeAutoGenComponent : public ULuaActorComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeAutoGenComponent");
@@ -414,8 +474,7 @@ class UCreativeModeBackpackUtils : public UBackpackUtilsClassical
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeBackpackUtils");
@@ -430,19 +489,43 @@ public:
 
 
 // Class Creative.CreativeBaseWidget
-// 0x0000 (0x02C8 - 0x02C8)
+// 0x00F8 (0x03C0 - 0x02C8)
 class UCreativeBaseWidget : public ULuaUserWidget
 {
 public:
+	unsigned char UnknownData00[0x8]; // 0x02C8(0x0008) MISSED OFFSET
+	bool bOpenZOrderBatch; // 0x02D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x02D1(0x0007) MISSED OFFSET
+	struct FString ZOrderInstanceID; // 0x02D8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int ZOrderOriginalLayer; // 0x02E8(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bAnimationIsPlaying; // 0x02EC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0xAB]; // 0x02ED(0x00AB) MISSED OFFSET
+	TArray<class UCreativeBaseWidget*> FollowerWidgets; // 0x0398(0x0010) (ExportObject, ZeroConstructor)
+	float TickLimit; // 0x03A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x03AC(0x0004) MISSED OFFSET
+	bool bAnimationForceVolatileEnable; // 0x03B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData04[0x3]; // 0x03B1(0x0003) MISSED OFFSET
+	float EndForceVolatileDelayTime; // 0x03B4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData05[0x8]; // 0x03B8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeBaseWidget");
 		return pStaticClass;
 	}
 
+
+	void StopCustomAnimation(bool bReset);
+	void SetZOrderBatchData(const struct FString& InInstanceID, int InOriginalLayer);
+	void SetEndForceVolatileDelayTime(float InDelayTime);
+	void SetAnimationForceVolatileEnable(bool bEnable);
+	void ResumeCustomAnimation();
+	void PlayCustomAnimation(const struct FCreativeUITweenInfo& InTweenInfo, const struct FCreativeUIAnimationGoal& InGoal);
+	void PauseCustomAnimation();
+	bool IsCustomAnimationPlaying();
+	bool IsCustomAnimationPaused();
+	struct FVector2D GetZOrderBatchSize();
 };
 
 
@@ -451,12 +534,11 @@ public:
 class UCreativeBinaryDataManager : public USTExtraManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0168(0x0018) MISSED OFFSET
-	uint32_t                                           InitBinaryDataSize;                                       // 0x0180(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0184(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0168(0x0018) MISSED OFFSET
+	uint32_t InitBinaryDataSize; // 0x0180(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0184(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeBinaryDataManager");
@@ -482,39 +564,38 @@ public:
 class UCreativeBlockyLuaManager : public UCreativeModeManagerBase
 {
 public:
-	TMap<struct FString, struct FString>               BindStubFuncMap;                                          // 0x0168(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x01B8(0x0001) MISSED OFFSET
-	bool                                               bConfigInited;                                            // 0x01B9(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bDynamicConfigInited;                                     // 0x01BA(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x01BB(0x0005) MISSED OFFSET
-	TArray<class UPresetDesc*>                         DynamicAddPresetDescList;                                 // 0x01C0(0x0010) (ZeroConstructor)
-	TArray<class UPresetDesc*>                         CachePresetDescList;                                      // 0x01D0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x01E0(0x0050) MISSED OFFSET
-	TArray<class UPresetDesc*>                         BatchRemovePresetDescList;                                // 0x0230(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0240(0x0050) MISSED OFFSET
-	TMap<struct FString, int>                          NoneStrToLocalTextWithIDMap;                              // 0x0290(0x0050) (ZeroConstructor)
-	struct FString                                     AllTypesJsonPath;                                         // 0x02E0(0x0010) (ZeroConstructor)
-	struct FString                                     FunctionJsonPath;                                         // 0x02F0(0x0010) (ZeroConstructor)
-	struct FString                                     FunctionFolderPath;                                       // 0x0300(0x0010) (ZeroConstructor)
-	struct FString                                     VariableJsonPath;                                         // 0x0310(0x0010) (ZeroConstructor)
-	struct FString                                     PresetsJsonPath;                                          // 0x0320(0x0010) (ZeroConstructor)
-	struct FString                                     PresetsFolderPath;                                        // 0x0330(0x0010) (ZeroConstructor)
-	struct FString                                     TextrueRectParamJsonPath;                                 // 0x0340(0x0010) (ZeroConstructor)
-	struct FString                                     ProjectTextrueRectParamJsonPath;                          // 0x0350(0x0010) (ZeroConstructor)
-	struct FString                                     ProjectAtlasRectParamJsonPath;                            // 0x0360(0x0010) (ZeroConstructor)
-	struct FString                                     ProjectSyncAtlasRectParamJsonPath;                        // 0x0370(0x0010) (ZeroConstructor)
-	struct FString                                     ProjectBlockyNewJsonPath;                                 // 0x0380(0x0010) (ZeroConstructor)
-	struct FString                                     TipsJsonPath;                                             // 0x0390(0x0010) (ZeroConstructor)
-	struct FString                                     SequenceJsonPath;                                         // 0x03A0(0x0010) (ZeroConstructor)
-	struct FString                                     UAssetConfigDataPath;                                     // 0x03B0(0x0010) (ZeroConstructor)
-	struct FString                                     BlockyLuaTLogJsonPath;                                    // 0x03C0(0x0010) (ZeroConstructor)
-	bool                                               ClearCacheCallBeginDestroy;                               // 0x03D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x03D1(0x0007) MISSED OFFSET
-	class UBlockyGraphData*                            GraphDataObject;                                          // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UBlockyGraphData*>                    GraphDataObjectList;                                      // 0x03E0(0x0010) (ZeroConstructor)
+	TMap<struct FString, struct FString> BindStubFuncMap; // 0x0168(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x1]; // 0x01B8(0x0001) MISSED OFFSET
+	bool bConfigInited; // 0x01B9(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bDynamicConfigInited; // 0x01BA(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x5]; // 0x01BB(0x0005) MISSED OFFSET
+	TArray<class UPresetDesc*> DynamicAddPresetDescList; // 0x01C0(0x0010) (ZeroConstructor)
+	TArray<class UPresetDesc*> CachePresetDescList; // 0x01D0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData02[0x50]; // 0x01E0(0x0050) MISSED OFFSET
+	TArray<class UPresetDesc*> BatchRemovePresetDescList; // 0x0230(0x0010) (ZeroConstructor)
+	unsigned char UnknownData03[0x50]; // 0x0240(0x0050) MISSED OFFSET
+	TMap<struct FString, int> NoneStrToLocalTextWithIDMap; // 0x0290(0x0050) (ZeroConstructor)
+	struct FString AllTypesJsonPath; // 0x02E0(0x0010) (ZeroConstructor)
+	struct FString FunctionJsonPath; // 0x02F0(0x0010) (ZeroConstructor)
+	struct FString FunctionFolderPath; // 0x0300(0x0010) (ZeroConstructor)
+	struct FString VariableJsonPath; // 0x0310(0x0010) (ZeroConstructor)
+	struct FString PresetsJsonPath; // 0x0320(0x0010) (ZeroConstructor)
+	struct FString PresetsFolderPath; // 0x0330(0x0010) (ZeroConstructor)
+	struct FString TextrueRectParamJsonPath; // 0x0340(0x0010) (ZeroConstructor)
+	struct FString ProjectTextrueRectParamJsonPath; // 0x0350(0x0010) (ZeroConstructor)
+	struct FString ProjectAtlasRectParamJsonPath; // 0x0360(0x0010) (ZeroConstructor)
+	struct FString ProjectSyncAtlasRectParamJsonPath; // 0x0370(0x0010) (ZeroConstructor)
+	struct FString ProjectBlockyNewJsonPath; // 0x0380(0x0010) (ZeroConstructor)
+	struct FString TipsJsonPath; // 0x0390(0x0010) (ZeroConstructor)
+	struct FString SequenceJsonPath; // 0x03A0(0x0010) (ZeroConstructor)
+	struct FString UAssetConfigDataPath; // 0x03B0(0x0010) (ZeroConstructor)
+	struct FString BlockyLuaTLogJsonPath; // 0x03C0(0x0010) (ZeroConstructor)
+	bool ClearCacheCallBeginDestroy; // 0x03D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x03D1(0x0007) MISSED OFFSET
+	class UBlockyGraphData* GraphDataObject; // 0x03D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UBlockyGraphData*> GraphDataObjectList; // 0x03E0(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeBlockyLuaManager");
@@ -574,6 +655,7 @@ public:
 	bool BlockyluaCheckShowPresetFitlerBtnHandle(const struct FString& TypeName);
 	bool BlockyluaCheckShowCustomInputHandle(const struct FString& CustomClickType, class UObjectDesc* Desc, TArray<class UObjectDesc*> followers);
 	void BindSetBlockNewStatusHandle(const struct FString& blockId, bool showstate);
+	int BindGetPresetValidityDurationHandle(class UPresetDesc* PresetDesc);
 	bool BindGetBlockNewStatusHandle(const struct FString& blockId);
 	void BindBlockyLuaStubFunc(const struct FString& BindFuncName, const struct FString& OverrdeFuncName);
 	void AddDynamicPresetDescs(TArray<class UPresetDesc*> PresetDescs);
@@ -586,8 +668,7 @@ class UCreativeModeBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeBlueprintLibrary");
@@ -597,6 +678,8 @@ public:
 
 	static bool ZSTDDecompressData(TArray<unsigned char> CompressedData, TArray<unsigned char>* DecompressedData);
 	static bool ZSTDCompressData(TArray<unsigned char> UncompressedData, int CompressionLevel, TArray<unsigned char>* CompressedData);
+	static struct FString WindowsReadFileSummary(const struct FString& FilePath, TArray<struct FString> Properties);
+	static struct FString WindowsPickFile(const struct FString& filter);
 	static struct FVector2D WidgetAbsoluteSizeToLocalSize(class UWidget* Widget, const struct FVector2D& AbsoluteSize);
 	static void UObjSnapshot(class UWorld* MyWorld);
 	static struct FTransform TransformRevert(const struct FTransform& TransformB, struct FTransform* TransformRelative);
@@ -617,13 +700,20 @@ public:
 	static void SetRelativeCamRotation(class APlayerController* PlayerController, class USceneComponent* Component);
 	static void SetParticleCullingDistance(class UParticleSystemComponent* ParticleSystemComponent, float Distance);
 	static void SetInstanceValue(class UObject* WorldContextObject, const struct FString& InstanceID, const struct FString& Key, const struct FString& Value);
+	static void SetCreativeInstanceDataContent(TArray<unsigned char> DataContent, struct FCreativeInstanceDataContent* InstanceDataContent);
 	static void SetCommandLineValue(const struct FString& Key, const struct FString& NewValue);
 	static void SetCollisionMobility(class UShapeComponent* Component, TEnumAsByte<enum EComponentMobility> NewMobility);
+	static void SetAICrowdSimulationState(class AAIController* AICtrl, unsigned char NewState);
+	static void SetAICrowdObstacleAvoidance(class AAIController* AICtrl, bool bEnable, bool bUpdateAgent);
+	static bool SaveStringToFileByFullPath(const struct FString& String, const struct FString& Filename);
 	static void SaveStringToFile(const struct FString& String, const struct FString& Filename);
+	static void SaveRawStringToFile(TArray<unsigned char> Content, const struct FString& FilePath);
 	static void SaveAssetStringToFile(const struct FString& String, const struct FString& Filename);
 	struct FRotator RotatorCrossInverse(const struct FRotator& Rot1, const struct FRotator& Rot2);
 	struct FRotator RotatorCross(const struct FRotator& Rot1, const struct FRotator& Rot2);
 	static struct FVector Rotation2Vector(const struct FRotator& Rotator, int Axis);
+	static TArray<unsigned char> RenderTargetToRGB(class UTextureRenderTarget2D* RenderTarget);
+	static TArray<unsigned char> RenderTargetToPNG(class UTextureRenderTarget2D* RenderTarget, bool bLinearToGamma);
 	void RenameObject(class UObject* Object, const struct FString& NewName);
 	static void RecreatePhysicsState(class UPrimitiveComponent* Component);
 	struct FQuat QuatCrossInverse(const struct FQuat& Quat1, const struct FQuat& Quat2);
@@ -638,12 +728,14 @@ public:
 	static struct FString MD5HashAnsiString(const struct FString& str);
 	static bool Lz4DecompressData(TArray<unsigned char> CompressedData, TArray<unsigned char>* DecompressedData);
 	static bool Lz4CompressData(TArray<unsigned char> UncompressedData, TArray<unsigned char>* CompressedData);
+	static TArray<unsigned char> LoadRawFileToString(const struct FString& FilePath);
 	static struct FString LoadFileToStringByFullPath(const struct FString& FullPathName);
 	static TArray<unsigned char> LoadFileToArrayByFullPath(const struct FString& FullPathName);
 	static struct FString LoadAssetFileToString(const struct FString& Filename);
 	static class USceneComponent* LineTraceTouchComponent(const struct FVector2D& TouchPos, class APlayerController* PlayerController, TArray<class AActor*> IgnoreActors, struct FVector* TouchHitLoc);
 	static int LineTraceTouchAxis(const struct FVector2D& TouchPos, class APlayerController* PlayerController, TArray<class AActor*> IgnoreActors, struct FVector* TouchHitLoc);
 	static struct FString LineTraceInstance(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<class AActor*> IgnoreActors);
+	static bool IsWindows();
 	static bool IsPointWithinRotatedBounds(const struct FVector& BoxCenter, const struct FVector& BoxExtent, float YawDegrees, const struct FVector& Point);
 	static bool IsPointInVolume(class AVolume* Volume, const struct FVector& Position);
 	static bool IsPhysicsStateCreated(class UPrimitiveComponent* Component);
@@ -654,21 +746,28 @@ public:
 	static bool IsLLMEnabled();
 	static bool IsCreativeMode(class UWorld* World);
 	static bool IsBoxOverlapWithRotatedBox(const struct FVector& StaticBoxCenter, const struct FVector& StaticBoxExtent, const struct FVector& RotatedBoxCenter, const struct FVector& RotatedBoxExtent, float RotatedBoxYaw);
+	static TArray<struct FString> IsAABBVisible(TArray<struct FBox> TargetBoxs, TArray<struct FString> InstanceIDs, const struct FVector& FarPlanePoint, const struct FVector& CameraForward, TArray<float>* PlanesParams);
 	static void IgnoreClientMovementErrorChecksAndCorrection(class ACharacter* Charcter, bool bIsIgnore);
 	static int HideEnvironmentalActorsInSceneCapture(class USceneCaptureComponent2D* SceneCapture, class ADirectionalLight* LightToKeep, bool bHideSkyBox, bool bHideEnvironmentLights, bool bHideAtmosphere);
 	void GetWidgetRect(class UWidget* Widget, int* X1, int* Y1, int* x2, int* y2);
 	static struct FString GetUrlValue(class UObject* WorldContext, const struct FString& Key);
 	static struct FString GetUObjAssetPath(class UObject* Level);
+	static struct FString GetUClassName(class UClass* UClass);
+	static class UTexture2D* GetTexture2DFromDiskFile(const struct FString& FilePath);
 	static bool GetSyncDataIsEqual(struct FNetAvatarSyncData* SyncDataFirst, struct FNetAvatarSyncData* SyncDataSecond);
+	static void GetStaticMeshTriangleAndDrawCallCount(class UStaticMesh* StaticMesh, int* TriangleCount, int* DrawCallCount);
 	int GetRTValidMaxArea(class UTextureRenderTarget2D* TextureTarget);
 	static int GetReplicateAddDataArrayVaildNum(class UObject* WorldContextObject, const struct FReplicateAddDataArray& ReplicateAddDataArray, int StartIndex);
 	static struct FTransform GetRelativeTransform(const struct FTransform& Base, const struct FTransform& Other);
 	static float GetPlatformSeconds();
-	static void GetObjectScreenPos(class UObject* WorldContextObject, const struct FString& InstanceID, struct FVector2D* Pos);
+	static bool GetObjectScreenPos(class UObject* WorldContextObject, const struct FString& InstanceID, struct FVector2D* Pos);
 	static TMap<struct FString, class UObject*> GetObjectMap(class UObject* WorldContextObject);
+	static TArray<class UClass*> GetObjectInheritanceChain(class UObject* Object);
 	static float GetMinFovForAABB(const struct FVector& CameraLocation, const struct FRotator& CameraRotation, TArray<struct FVector> AABBVertices, float AspectRatio);
 	static float GetLastInteractionElapsedTime();
 	static void GetInstanceSpaceBoundingBox(const struct FString& InstanceID, float Yaw, class UCreativeAbilitySystemComponent* Component);
+	static struct FVector2D GetImageSize(TArray<unsigned char> ImageBuffer, int Format);
+	static uint32_t GetHashByString(const struct FString& str);
 	static void GetGroupInstanceSpaceBoundingBox(const struct FString& GroupID, TArray<struct FString> ChildrenIds, TMap<struct FString, struct FTransform> ChildrenTransforms, float Yaw, class UCreativeAbilitySystemComponent* Component);
 	static class UWorld* GetGameWorld(class UObject* WorldContextObject);
 	static struct FString GetGameTypeAsString(ECreativeModeGameType GameType);
@@ -681,13 +780,17 @@ public:
 	static bool GetContentPatchData(TArray<unsigned char> OldData, TArray<unsigned char> DiffData, TArray<unsigned char>* outNewData);
 	static bool GetContentDiffData(TArray<unsigned char> OldData, TArray<unsigned char> NewData, TArray<unsigned char>* outDiffData);
 	static struct FString GetCommandLineValue(const struct FString& Key);
+	static TArray<class UClass*> GetClassInheritanceChain(class UClass* UClass);
 	static struct FVector GetCharacterSocketPos(class ACharacter* Character, const struct FName& SocketName);
+	static TArray<struct FVector4> GetCameraFrustumPlane(class UObject* WorldContext);
 	static void GetBoundingBoxOfInstances(class UObject* WorldContext, TArray<struct FString> Ids, float Yaw, struct FVector* Center, struct FVector* BoxExtent);
 	static void GetBoundingBoxOfActors(TArray<class AActor*> Actors, float Yaw, struct FVector* Center, struct FVector* BoxExtent);
 	static struct FString GetBigUObject(int MaxN);
 	struct FString GetBigLuaValue(class UObject* WorldContext);
 	static TArray<struct FString> GetAllInstanceInScreenBox(class UObject* WorldContext, const struct FVector2D& Start, const struct FVector2D& End, int CheckDistance, int CountLimit);
 	static TArray<struct FString> GetAllInstanceInBox(class UObject* WorldContext, const struct FVector& Center, const struct FVector& Extent, const struct FRotator& Rotator);
+	static TArray<struct FString> GetAllFilesInDir(const struct FString& Dir, const struct FString& Pattern, bool bRelative);
+	static TArray<struct FOverlapResult> GetActorsInCameraFrustumByLayer(class UWorld* World, const struct FVector& Origin, const struct FRotator& CameraRot, float MaxDistance, float AngleWidth, float AngleHeight, int NumLayers, TArray<TEnumAsByte<enum EObjectTypeQuery>> ObjectTypes, bool bDrawDebug, const struct FColor& DebugColor, float DebugLifeTime);
 	static void GetActorMeshBoundsByTag(class AActor* Actor, const struct FString& IgnoreTag, const struct FString& IncludeTag, struct FVector* Origin, struct FVector* BoxExtent);
 	static uint32_t GenerateUIntGuid();
 	static TArray<int> GenerateMemoryArray(int SizeInMB);
@@ -704,12 +807,16 @@ public:
 	static void DestroyUObject(class UObject* Object);
 	static struct FString DestroyInstance(class UObject* WorldContextObject, const struct FString& InstanceID);
 	TArray<unsigned char> DecryptFromBase64(const struct FString& inString);
+	static void DarwCameraFrustumDebugLine(class UObject* WorldContext, const struct FVector& FarPlanePoint, const struct FVector& CameraForward, float Duration, TArray<float>* PlanesParams);
 	static struct FCreativeInstanceDataContent CreativeInstanceDataContent(TArray<unsigned char> DataContent);
-	static struct FCreativeMovingAudio CreateCreativeMovingAudio(class AActor* Actor, int Sequence, int ConfigId, bool bShowMark, int Duration, float Volume);
+	static class UTexture2D* CreateRGBATexture(int Width, int Height, bool bSRGB);
+	static struct FCreativeMovingAudio CreateCreativeMovingAudio(class AActor* Actor, int Sequence, uint64_t ConfigId, bool bShowMark, int Duration, float Volume);
 	static struct FRotator ConvertForwardToRotator(const struct FVector& Forward);
+	static void CombineRGBATexture(class UTexture2D* DstTexture, class UTexture2D* RGSourceTexture, class UTexture2D* BSourceTexture, class UTexture2D* ASourceTexture, bool bRGSrgb, bool bBSrgb, bool bASrgb, unsigned char DefaultR, unsigned char DefaultG, unsigned char DefaultB, unsigned char DefaultA);
+	static void CombineChannelsToRGBATexture(class UTexture2D* DstTexture, class UTexture2D* RGSourceTexture, class UTexture2D* BSourceTexture, class UTexture2D* ASourceTexture, bool bRGSrgb, bool bBSrgb, bool bASrgb);
 	void ClearGrassByMaskTexture(class UObject* WorldContextObject, class UTexture2D* MaskTexture, const struct FVector2D& WorldStart, const struct FVector2D& WorldEnd);
 	static bool CheckWidgetsOverlap(class UWidget* Widget1, class UWidget* Widget2);
-	static void CharacterPlayCreativeDynamicMontage(class ASTExtraCharacter* CharacterOwner, class UAnimSequenceBase* Asset, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, bool bIsLoop, float InTimeToStartMontageAt, const struct FName& SlotNodeName);
+	static void CharacterPlayCreativeDynamicMontage(class ACharacter* CharacterOwner, class UAnimSequenceBase* Asset, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, bool bIsLoop, float InTimeToStartMontageAt, const struct FName& SlotNodeName);
 	static bool CaptureWidget(class UObject* WorldContext, class UClass* WidgetClass, struct FString* Path, int* X, int* Y, bool* FlipY);
 	static bool BoxOverlapComponentsByChannel(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<TEnumAsByte<enum ECollisionChannel>> Channels, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents);
 	static bool BoxOverlapComponents(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<int> ObjectTypes, class UClass* CompClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComps);
@@ -731,16 +838,15 @@ public:
 class ACreativeModeLuaSpectatorPawn : public ASpectatorPawn
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0538(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0590(0x0050) (Net)
-	bool                                               IsTopView;                                                // 0x05E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x05E1(0x0003) MISSED OFFSET
-	int                                                TopViewRotateAngle;                                       // 0x05E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	struct FString                                     LuaFilePath;                                              // 0x05E8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x05F8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0538(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0590(0x0050) (Net)
+	bool IsTopView; // 0x05E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x05E1(0x0003) MISSED OFFSET
+	int TopViewRotateAngle; // 0x05E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	struct FString LuaFilePath; // 0x05E8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData02[0x8]; // 0x05F8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeLuaSpectatorPawn");
@@ -763,40 +869,39 @@ public:
 class ACreativeCameraDeviceActor : public ACreativeModeLuaSpectatorPawn
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0600(0x0008) MISSED OFFSET
-	bool                                               bIsFollowing;                                             // 0x0608(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0609(0x0003) MISSED OFFSET
-	int                                                FollowType;                                               // 0x060C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsLerping;                                               // 0x0610(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0611(0x0003) MISSED OFFSET
-	float                                              LerpTime;                                                 // 0x0614(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendExp;                                                 // 0x0618(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendTimeToGo;                                            // 0x061C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              BlendTime;                                                // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SocketOffset;                                             // 0x0624(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    RotatorOffset;                                            // 0x0630(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	TWeakObjectPtr<class AActor>                       FollowTarget;                                             // 0x063C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EViewTargetBlendFunction>         BlendFunction;                                            // 0x0644(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0645(0x0003) MISSED OFFSET
-	struct FRotator                                    ActorStartRot;                                            // 0x0648(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    ActorTargetRot;                                           // 0x0654(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FVector                                     targetPos;                                                // 0x0660(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    TargetRot;                                                // 0x066C(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FVector                                     StartPos;                                                 // 0x0678(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    StartRot;                                                 // 0x0684(0x000C) (BlueprintVisible, IsPlainOldData)
-	float                                              StartFOV;                                                 // 0x0690(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StartArmLength;                                           // 0x0694(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    EndRot;                                                   // 0x0698(0x000C) (BlueprintVisible, IsPlainOldData)
-	float                                              EndFOV;                                                   // 0x06A4(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              EndArmLength;                                             // 0x06A8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x06AC(0x0004) MISSED OFFSET
-	struct FName                                       SocketName;                                               // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MaxPilotDist;                                             // 0x06B8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bPilotPosition;                                           // 0x06BC(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x06BD(0x0003) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0600(0x0008) MISSED OFFSET
+	bool bIsFollowing; // 0x0608(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0609(0x0003) MISSED OFFSET
+	int FollowType; // 0x060C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsLerping; // 0x0610(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0611(0x0003) MISSED OFFSET
+	float LerpTime; // 0x0614(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float BlendExp; // 0x0618(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float BlendTimeToGo; // 0x061C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float BlendTime; // 0x0620(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector SocketOffset; // 0x0624(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FRotator RotatorOffset; // 0x0630(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	TWeakObjectPtr<class AActor> FollowTarget; // 0x063C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EViewTargetBlendFunction> BlendFunction; // 0x0644(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x0645(0x0003) MISSED OFFSET
+	struct FRotator ActorStartRot; // 0x0648(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FRotator ActorTargetRot; // 0x0654(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FVector targetPos; // 0x0660(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FRotator TargetRot; // 0x066C(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FVector StartPos; // 0x0678(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FRotator StartRot; // 0x0684(0x000C) (BlueprintVisible, IsPlainOldData)
+	float StartFOV; // 0x0690(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float StartArmLength; // 0x0694(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRotator EndRot; // 0x0698(0x000C) (BlueprintVisible, IsPlainOldData)
+	float EndFOV; // 0x06A4(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float EndArmLength; // 0x06A8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x06AC(0x0004) MISSED OFFSET
+	struct FName SocketName; // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float MaxPilotDist; // 0x06B8(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bPilotPosition; // 0x06BC(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x3]; // 0x06BD(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeCameraDeviceActor");
@@ -831,8 +936,7 @@ class UCreativeCameraGetter : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeCameraGetter");
@@ -844,18 +948,76 @@ public:
 };
 
 
+// Class Creative.CreativeComponentBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeComponentBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeComponentBlueprintLibrary");
+		return pStaticClass;
+	}
+
+
+	static void UnregisterComponent(class UActorComponent* InComponent);
+	static void SetWidgetOpacityFromTexture(class UWidgetComponent* InComp, float Opacity);
+	static void SetWidgetDrawAtDesiredSize(class UWidgetComponent* InComp, bool bDrawAtDesiredSize);
+	static void SetParticleSystemAutoDestroy(class UParticleSystemComponent* InComp, bool bAutoDestroy);
+	static void SetMobility(class USceneComponent* InSceneComp, TEnumAsByte<enum EComponentMobility> NewMobility);
+	static void ReregisterComponent(class UActorComponent* InComponent);
+	static void RegisterComponent(class UActorComponent* InComponent);
+	static bool IsSimulatingPhysics(class UPrimitiveComponent* InComp);
+	static bool IsComponentRegistered(class UActorComponent* InComponent);
+	static bool GetParticleSystemAutoDestroy(class UParticleSystemComponent* InComp);
+	static float GetFloatParameter(class UParticleSystemComponent* InComp, const struct FName& InName);
+	static void GetComponentBounds(class USceneComponent* InSceneComp, struct FVector* Origin, struct FVector* BoxExtent, float* SphereRadius);
+	static TEnumAsByte<enum ECollisionTraceFlag> GetCollisionTraceFlag(class UPrimitiveComponent* InComp);
+	static struct FTransform GetBoneTransform(class USkinnedMeshComponent* InComp, int BoneIdx, const struct FTransform& LocalToWorld);
+	static struct FVector GetBoneLocation(class USkinnedMeshComponent* InComp, const struct FName& BoneName, TEnumAsByte<enum EBoneSpaces> Space);
+};
+
+
+// Class Creative.CreativeCustomActorManager
+// 0x00A8 (0x0210 - 0x0168)
+class UCreativeCustomActorManager : public UCreativeModeManagerBase
+{
+public:
+	unsigned char UnknownData00[0xA8]; // 0x0168(0x00A8) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeCustomActorManager");
+		return pStaticClass;
+	}
+
+
+	bool UnhookUserConstructionScript(class AActor* Actor);
+	class AActor* SpawnCustomActor(class UClass* ActorClass, const struct FTransform& Transform);
+	void ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState);
+	void ReceiveClearAllCustomActor();
+	void OnGameStateBeginPlay(class AGameStateBase* GameState);
+	bool IsUserConstructionScriptHooked(class AActor* Actor);
+	bool HookUserConstructionScript(class AActor* Actor);
+	static class UCreativeCustomActorManager* Get(class UObject* WorldContext);
+	void ClearAllCustomActor();
+};
+
+
 // Class Creative.CreativeCustomCameraComponent
 // 0x0020 (0x09C0 - 0x09A0)
 class UCreativeCustomCameraComponent : public UCameraComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x09A0(0x0004) MISSED OFFSET
-	float                                              ConfigFOV;                                                // 0x09A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    ConfigRotation;                                           // 0x09A8(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x09B4(0x000C) MISSED OFFSET
+	unsigned char UnknownData00[0x4]; // 0x09A0(0x0004) MISSED OFFSET
+	float ConfigFOV; // 0x09A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FRotator ConfigRotation; // 0x09A8(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData01[0xC]; // 0x09B4(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeCustomCameraComponent");
@@ -873,11 +1035,10 @@ public:
 class UCreativeCustomParameterManager : public UCreativeModeManagerBase
 {
 public:
-	struct FCreativeCustomParameterDataContainer       ReplicatedCustomParameterDataContainer;                   // 0x0168(0x00C8) (Net, Transient)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0230(0x0018) MISSED OFFSET
+	struct FCreativeCustomParameterDataContainer ReplicatedCustomParameterDataContainer; // 0x0168(0x00C8) (Net, Transient)
+	unsigned char UnknownData00[0x18]; // 0x0230(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeCustomParameterManager");
@@ -901,8 +1062,7 @@ class UCreativeCustomPrefabComponent : public ULuaActorComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeCustomPrefabComponent");
@@ -915,15 +1075,49 @@ public:
 };
 
 
+// Class Creative.CreativeCustomUIDataComponent
+// 0x0198 (0x03D0 - 0x0238)
+class UCreativeCustomUIDataComponent : public ULuaActorComponent
+{
+public:
+	struct FCreativeCustomUIContainer CustomUIContainer; // 0x0238(0x00C8) (Net, Transient)
+	int SingleSerializeNum; // 0x0300(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xB8]; // 0x0304(0x00B8) MISSED OFFSET
+	float DataNodePullInterval; // 0x03BC(0x0004) (ZeroConstructor, IsPlainOldData)
+	int SinglePullDataNodeNum; // 0x03C0(0x0004) (ZeroConstructor, IsPlainOldData)
+	int TotalPullDataNodeNum; // 0x03C4(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DataNodePullTimeroutInterval; // 0x03C8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x03CC(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeCustomUIDataComponent");
+		return pStaticClass;
+	}
+
+
+	void SetCustomUIDataFromTransferNodes(TArray<struct FCreativeCustomUIDataTransferNode>* TransferNodes);
+	void SetCustomUIDataById(uint32_t ID, TArray<unsigned char> Content);
+	void RemoveCustomUI(const struct FString& ID);
+	TArray<struct FCreativeCustomUIDataTransferNode> GetCustomUIDataTransferNodes(TArray<uint32_t>* IDList);
+	bool GetCustomUIContent(const struct FString& ID, TArray<unsigned char>* OutContent);
+	void ChangeCustomUI(const struct FString& ID, TArray<unsigned char> Content);
+	void CallOnReceivePreCustomUIDataRemove(uint32_t ID);
+	void CallOnReceivePostCustomUIDataChange(uint32_t ID, TArray<unsigned char> Content);
+	void CallOnReceivePostCustomUIDataAdd(uint32_t ID, TArray<unsigned char> Content);
+	void AddCustomUI(const struct FString& ID, TArray<unsigned char> Content);
+};
+
+
 // Class Creative.CreativeDestructibleMeshActor
 // 0x0010 (0x04D0 - 0x04C0)
 class ACreativeDestructibleMeshActor : public APhotonDestructibleMeshActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x04C0(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeDestructibleMeshActor");
@@ -944,13 +1138,12 @@ public:
 class ACreativeDestructibleMeshBatchActor : public ALuaActor
 {
 public:
-	int                                                AtLeastLengthHISMRequired;                                // 0x0570(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              TickUpdateBatchInterval;                                  // 0x0574(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                CellWidth;                                                // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xE4];                                      // 0x057C(0x00E4) MISSED OFFSET
+	int AtLeastLengthHISMRequired; // 0x0570(0x0004) (ZeroConstructor, IsPlainOldData)
+	float TickUpdateBatchInterval; // 0x0574(0x0004) (ZeroConstructor, IsPlainOldData)
+	int CellWidth; // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xE4]; // 0x057C(0x00E4) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeDestructibleMeshBatchActor");
@@ -962,24 +1155,41 @@ public:
 };
 
 
+// Class Creative.CreativeDisableTransformReplicationInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeDisableTransformReplicationInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeDisableTransformReplicationInterface");
+		return pStaticClass;
+	}
+
+
+	void SetDisableTransformReplication(bool bInDisable);
+};
+
+
 // Class Creative.CreativeDropItemCurveAnimComponent
 // 0x0170 (0x0420 - 0x02B0)
 class UCreativeDropItemCurveAnimComponent : public UDropItemCurveAnimComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x02B0(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0308(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<int, struct FCreativeDropAnimConfig>          DropAnimConfigs;                                          // 0x0318(0x0050) (ZeroConstructor)
-	TMap<int, struct FCreativeDropAnimConfig>          OverrideConfigs;                                          // 0x0368(0x0050) (ZeroConstructor)
-	TMap<int, struct FCreativeDropGroupContainer>      CreativeItemGroupList;                                    // 0x03B8(0x0050) (ZeroConstructor)
-	int                                                MaxCurveAnimItemNum;                                      // 0x0408(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                ContainerRemoveTime;                                      // 0x040C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                PSCPoolLimit;                                             // 0x0410(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxDropAnimConfigCount;                                   // 0x0414(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0418(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x02B0(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0308(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<int, struct FCreativeDropAnimConfig> DropAnimConfigs; // 0x0318(0x0050) (ZeroConstructor)
+	TMap<int, struct FCreativeDropAnimConfig> OverrideConfigs; // 0x0368(0x0050) (ZeroConstructor)
+	TMap<int, struct FCreativeDropGroupContainer> CreativeItemGroupList; // 0x03B8(0x0050) (ZeroConstructor)
+	int MaxCurveAnimItemNum; // 0x0408(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int ContainerRemoveTime; // 0x040C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int PSCPoolLimit; // 0x0410(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int MaxDropAnimConfigCount; // 0x0414(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0418(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeDropItemCurveAnimComponent");
@@ -997,18 +1207,40 @@ public:
 };
 
 
+// Class Creative.CreativeDSLParserLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeDSLParserLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeDSLParserLibrary");
+		return pStaticClass;
+	}
+
+
+	static class UDSLParserASTTree* ParseDSLText(class UDSLParser* Parser, const struct FString& Source);
+	static class UDSLParserASTTree* ParseDSLFile(class UDSLParser* Parser, const struct FString& FilePath);
+	static bool LoadDSLGrammarFromString(class UDSLParser* Parser, const struct FString& GrammarText);
+	static bool LoadDSLGrammarFromFile(class UDSLParser* Parser, const struct FString& FilePath);
+	static class UDSLParser* CreateDSLParser(class UObject* WorldContextObject);
+	static void AddDSLGrammarRule(class UDSLParser* Parser, const struct FString& RuleName, const struct FString& RuleBody);
+};
+
+
 // Class Creative.CreativeModeLiteComponent
 // 0x0118 (0x0158 - 0x0040)
 class UCreativeModeLiteComponent : public ULiteComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0040(0x0068) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x00A8(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x00F8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap;                                      // 0x0108(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x68]; // 0x0040(0x0068) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x00A8(0x0050) (Net)
+	struct FString LuaFilePath; // 0x00F8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap; // 0x0108(0x0050) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeLiteComponent");
@@ -1026,12 +1258,11 @@ public:
 class UCreativeModeGameModeBaseComponent : public UCreativeModeLiteComponent
 {
 public:
-	ECreativeModeGameType                              GameType;                                                 // 0x0158(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0159(0x0007) MISSED OFFSET
-	class UCreativeModeGameStateBaseComponent*         GameStateComponent;                                       // 0x0160(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	ECreativeModeGameType GameType; // 0x0158(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0159(0x0007) MISSED OFFSET
+	class UCreativeModeGameStateBaseComponent* GameStateComponent; // 0x0160(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameModeBaseComponent");
@@ -1053,8 +1284,7 @@ class UCreativeModeEditorModeComponent : public UCreativeModeGameModeBaseCompone
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeEditorModeComponent");
@@ -1065,24 +1295,24 @@ public:
 
 
 // Class Creative.CreativeModeEditorObject
-// 0x01E0 (0x0750 - 0x0570)
+// 0x01F0 (0x0760 - 0x0570)
 class ACreativeModeEditorObject : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x0570(0x00A0) MISSED OFFSET
-	ECreativeModeActorState                            ActorState;                                               // 0x0610(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0611(0x0007) MISSED OFFSET
-	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap;                                      // 0x0618(0x0050) (ZeroConstructor)
-	int8_t                                             CanEditFlag;                                              // 0x0668(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreCollisionCheck;                                    // 0x0669(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x066A(0x0006) MISSED OFFSET
-	TArray<class AActor*>                              IgnoreActors;                                             // 0x0670(0x0010) (ZeroConstructor)
-	struct FEditorObjectLiteComponentTickFunction      LiteComponentActorTick;                                   // 0x0680(0x00B8) (Edit, DisableEditOnInstance)
-	TArray<class ULiteComponent*>                      LiteComponents;                                           // 0x0738(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0748(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0xA0]; // 0x0570(0x00A0) MISSED OFFSET
+	TArray<class AActor*> ToIgnoreActors; // 0x0610(0x0010) (ZeroConstructor)
+	ECreativeModeActorState ActorState; // 0x0620(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0621(0x0007) MISSED OFFSET
+	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap; // 0x0628(0x0050) (ZeroConstructor)
+	int8_t CanEditFlag; // 0x0678(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bIgnoreCollisionCheck; // 0x0679(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x6]; // 0x067A(0x0006) MISSED OFFSET
+	TArray<class AActor*> IgnoreActors; // 0x0680(0x0010) (ZeroConstructor)
+	struct FEditorObjectLiteComponentTickFunction LiteComponentActorTick; // 0x0690(0x00B8) (Edit, DisableEditOnInstance)
+	TArray<class ULiteComponent*> LiteComponents; // 0x0748(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData03[0x8]; // 0x0758(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeEditorObject");
@@ -1109,6 +1339,7 @@ public:
 	bool InCollisionState();
 	TArray<class UObject*> GetObjectsFromPool(TArray<struct FCreativePoolGetObjectParamInfo>* ObjectParams);
 	class UObject* GetObjectFromPool(int PoolId, class UObject* NewOuter, struct FString* InName);
+	TArray<class AActor*> GetLocationToIgnoreActors();
 	ECreativeModeActorState GetActorState();
 	class ULiteComponent* FindLiteComponentByClass(class UClass* ComponentClass);
 };
@@ -1119,11 +1350,10 @@ public:
 class UCreativeModeGameStateBaseComponent : public UCreativeModeLiteComponent
 {
 public:
-	ECreativeModeGameType                              GameType;                                                 // 0x0158(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0159(0x0007) MISSED OFFSET
+	ECreativeModeGameType GameType; // 0x0158(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0159(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameStateBaseComponent");
@@ -1144,8 +1374,7 @@ class UCreativeModeEditorStateComponent : public UCreativeModeGameStateBaseCompo
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeEditorStateComponent");
@@ -1161,8 +1390,7 @@ class UCreativeEventObject : public UCreativeLuaSignalObjectBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeEventObject");
@@ -1175,14 +1403,39 @@ public:
 };
 
 
+// Class Creative.CreativeExportSandboxApiLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeExportSandboxApiLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeExportSandboxApiLibrary");
+		return pStaticClass;
+	}
+
+
+	static bool IsObjectValid(class UObject* Object);
+	static bool IsObjectA(class UObject* Object, const struct FString& ClassName);
+	static class UWorld* GetObjectWorld(class UObject* Object);
+	static struct FString GetObjectPathName(class UObject* Object);
+	static class UObject* GetObjectOuter(class UObject* Object);
+	static struct FString GetObjectName(class UObject* Object);
+	static struct FString GetObjectFullName(class UObject* Object);
+	static class UClass* GetObjectClass(class UObject* Object);
+	static class UFunction* FindObjectFunction(class UObject* Object, const struct FString& FunctionName);
+};
+
+
 // Class Creative.CreativeGameAPIObject
 // 0x0000 (0x0188 - 0x0188)
 class UCreativeGameAPIObject : public UCreativeApiObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGameAPIObject");
@@ -1196,24 +1449,24 @@ public:
 
 
 // Class Creative.CreativeModeGameMode
-// 0x0190 (0x2560 - 0x23D0)
+// 0x0190 (0x2578 - 0x23E8)
 class ACreativeModeGameMode : public ABattleRoyaleGameModeTeam
 {
 public:
-	class UCreativeModeGameModeBaseComponent*          CurrentModeComponent;                                     // 0x23D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UClass*>                              GameModeComponentClassArray;                              // 0x23D8(0x0010) (ZeroConstructor, Transient)
-	class UClass*                                      GameModeComponentClass;                                   // 0x23E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TMap<struct FString, struct FGameModeParam>        MapPlaneRouteConfigs;                                     // 0x23F0(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TMap<struct FString, struct FString>               MapVehicleClassPathConfigs;                               // 0x2440(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
-	ECreativeModeGameType                              EditorStartupGameType;                                    // 0x2490(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x2491(0x0001) MISSED OFFSET
-	bool                                               bIsCreativeWoW;                                           // 0x2492(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x2493(0x0005) MISSED OFFSET
-	struct FGameModeLiteComponentTickFunction          LiteComponentActorTick;                                   // 0x2498(0x00B8) (Edit, DisableEditOnInstance)
-	TArray<class ULiteComponent*>                      LiteComponents;                                           // 0x2550(0x0010) (ZeroConstructor, Transient)
+	class UCreativeModeGameModeBaseComponent* CurrentModeComponent; // 0x23E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UClass*> GameModeComponentClassArray; // 0x23F0(0x0010) (ZeroConstructor, Transient)
+	class UClass* GameModeComponentClass; // 0x2400(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TMap<struct FString, struct FGameModeParam> MapPlaneRouteConfigs; // 0x2408(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TMap<struct FString, struct FString> MapVehicleClassPathConfigs; // 0x2458(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
+	ECreativeModeGameType EditorStartupGameType; // 0x24A8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x1]; // 0x24A9(0x0001) MISSED OFFSET
+	bool bIsCreativeWoW; // 0x24AA(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int8_t FindPlayerStartOverrideFlag; // 0x24AB(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x24AC(0x0004) MISSED OFFSET
+	struct FGameModeLiteComponentTickFunction LiteComponentActorTick; // 0x24B0(0x00B8) (Edit, DisableEditOnInstance)
+	TArray<class ULiteComponent*> LiteComponents; // 0x2568(0x0010) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameMode");
@@ -1245,15 +1498,14 @@ public:
 class UCreativeModeGameModeComponent : public UCreativeModeGameModeBaseComponent
 {
 public:
-	class UClass*                                      RaceCheckPointComponentClass;                             // 0x0168(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCreativeModeRaceCheckPointLiteComponent*    RaceCheckPointComponent;                                  // 0x0170(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UClass*                                      OccupationAreaComponentClass;                             // 0x0178(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCreativeOccupationAreaLiteComponent*        OccupationAreaComponent;                                  // 0x0180(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UClass*                                      TeleporterComponentClass;                                 // 0x0188(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCreativeModeLiteComponent*                  TeleporterComponent;                                      // 0x0190(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UClass* RaceCheckPointComponentClass; // 0x0168(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCreativeModeRaceCheckPointLiteComponent* RaceCheckPointComponent; // 0x0170(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UClass* OccupationAreaComponentClass; // 0x0178(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCreativeOccupationAreaLiteComponent* OccupationAreaComponent; // 0x0180(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UClass* TeleporterComponentClass; // 0x0188(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCreativeModeLiteComponent* TeleporterComponent; // 0x0190(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameModeComponent");
@@ -1270,14 +1522,13 @@ public:
 class UCreativeModeGameObject : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0028(0x0100) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
-	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap;                                      // 0x0140(0x0050) (ZeroConstructor)
-	TArray<class ULiteComponent*>                      LiteComponents;                                           // 0x0190(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData00[0x100]; // 0x0028(0x0100) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0138(0x0008) MISSED OFFSET
+	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap; // 0x0140(0x0050) (ZeroConstructor)
+	TArray<class ULiteComponent*> LiteComponents; // 0x0190(0x0010) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameObject");
@@ -1300,26 +1551,25 @@ public:
 
 
 // Class Creative.CreativeGameParameterManager
-// 0x0218 (0x0380 - 0x0168)
+// 0x02B8 (0x0420 - 0x0168)
 class UCreativeGameParameterManager : public UCreativeModeManagerBase
 {
 public:
-	struct FCreativeGameParameterContainer             GameParameterContainer;                                   // 0x0168(0x00C8) (Net, Transient)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0230(0x0004) MISSED OFFSET
-	int                                                SingleSerializeNum;                                       // 0x0234(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SingleSerializeBytes;                                     // 0x0238(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bGameParameterResumeEnable;                               // 0x023C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x023D(0x0003) MISSED OFFSET
-	struct FCreativeGameParameterResumeContainer       GameParameterResumeContainer;                             // 0x0240(0x00C8) (Net, Transient)
-	unsigned char                                      UnknownData02[0x64];                                      // 0x0308(0x0064) MISSED OFFSET
-	float                                              ResumeNodePullInterval;                                   // 0x036C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SinglePullResumeNodeNum;                                  // 0x0370(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                TotalPullResumeNodeNum;                                   // 0x0374(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ResumeNodePullTimeroutInterval;                           // 0x0378(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x037C(0x0004) MISSED OFFSET
+	struct FCreativeGameParameterContainer GameParameterContainer; // 0x0168(0x00C8) (Net, Transient)
+	unsigned char UnknownData00[0x4]; // 0x0230(0x0004) MISSED OFFSET
+	int SingleSerializeNum; // 0x0234(0x0004) (ZeroConstructor, IsPlainOldData)
+	int SingleSerializeBytes; // 0x0238(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bGameParameterResumeEnable; // 0x023C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x023D(0x0003) MISSED OFFSET
+	struct FCreativeGameParameterResumeContainer GameParameterResumeContainer; // 0x0240(0x0118) (Net, Transient)
+	unsigned char UnknownData02[0xB4]; // 0x0358(0x00B4) MISSED OFFSET
+	float ResumeNodePullInterval; // 0x040C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int SinglePullResumeNodeNum; // 0x0410(0x0004) (ZeroConstructor, IsPlainOldData)
+	int TotalPullResumeNodeNum; // 0x0414(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ResumeNodePullTimeroutInterval; // 0x0418(0x0004) (ZeroConstructor, IsPlainOldData)
+	int HistoryDataMaxCount; // 0x041C(0x0004) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGameParameterManager");
@@ -1334,6 +1584,7 @@ public:
 	void OnReceivePostGameParameterChange(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content);
 	void OnReceivePostGameParameterAdd(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char> Content);
 	void OnGameStateBeginPlay(class AGameStateBase* GameState);
+	bool GetHistoryData(uint32_t HeadHash, unsigned char Seq, TArray<unsigned char>* OutContent);
 	TArray<struct FCreativeGameParameter> GetGameParameterResumeNodes(TArray<uint32_t> ParameterHeadHashs);
 	bool GetGameParameterContent(const struct FString& ParameterKey, const struct FString& TemplateID, TArray<unsigned char>* OutContent);
 	static class UCreativeGameParameterManager* Get(class UObject* WorldContext);
@@ -1343,30 +1594,36 @@ public:
 
 
 // Class Creative.CreativeModeGameState
-// 0x0128 (0x16C8 - 0x15A0)
+// 0x0140 (0x1760 - 0x1620)
 class ACreativeModeGameState : public ASTExtraGameStateBase
 {
 public:
-	unsigned char                                      UnknownData00[0x2];                                       // 0x15A0(0x0002) MISSED OFFSET
-	unsigned char                                      bIsCreativeMode : 1;                                      // 0x15A2(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	ECreativeModeGameType                              CurrentGameType;                                          // 0x15A3(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ECreativeModeGameType                              InitializeGameType;                                       // 0x15A4(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x15A5(0x0003) MISSED OFFSET
-	int                                                CreativeModID;                                            // 0x15A8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                CreativeModTemplateId;                                    // 0x15AC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	class UCreativeModeGameStateBaseComponent*         CurrentStateComponent;                                    // 0x15B0(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	class UCreativeModeGameStateBaseComponent*         LastStateComponent;                                       // 0x15B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UClass*>                              GameStateComponentClassArray;                             // 0x15C0(0x0010) (ZeroConstructor, Transient)
-	class UClass*                                      GameStateComponentClass;                                  // 0x15D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsCreativeWoW;                                           // 0x15D8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bIsAIUseDynamicBehaviorTaskNode;                          // 0x15D9(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x16];                                      // 0x15DA(0x0016) MISSED OFFSET
-	TArray<struct FExtendedBlockySlotString>           BlockySlotStrings;                                        // 0x15F0(0x0010) (Net, ZeroConstructor, Transient)
-	struct FGameStateLiteComponentTickFunction         LiteComponentActorTick;                                   // 0x1600(0x00B8) (Edit, DisableEditOnInstance)
-	TArray<class ULiteComponent*>                      LiteComponents;                                           // 0x16B8(0x0010) (ZeroConstructor, Transient)
+	int EditorBindTemplateID; // 0x1620(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x1624(0x0002) MISSED OFFSET
+	unsigned char bIsCreativeMode : 1; // 0x1626(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	ECreativeModeGameType CurrentGameType; // 0x1627(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ECreativeModeGameType CurrentGameTypeReplicated; // 0x1628(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	ECreativeModeGameType InitializeGameType; // 0x1629(0x0001) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x162A(0x0002) MISSED OFFSET
+	int CreativeModID; // 0x162C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	int CreativeModTemplateId; // 0x1630(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool bEnvLuaRunning; // 0x1634(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x1635(0x0003) MISSED OFFSET
+	class UCreativeModeGameStateBaseComponent* CurrentStateComponent; // 0x1638(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	class UCreativeModeGameStateBaseComponent* WaitCurrentStateComponent; // 0x1640(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool CurrentStateComponentTest; // 0x1648(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x1649(0x0007) MISSED OFFSET
+	class UCreativeModeGameStateBaseComponent* LastStateComponent; // 0x1650(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UClass*> GameStateComponentClassArray; // 0x1658(0x0010) (ZeroConstructor, Transient)
+	class UClass* GameStateComponentClass; // 0x1668(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bIsCreativeWoW; // 0x1670(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bIsAIUseDynamicBehaviorTaskNode; // 0x1671(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData04[0x16]; // 0x1672(0x0016) MISSED OFFSET
+	TArray<struct FExtendedBlockySlotString> BlockySlotStrings; // 0x1688(0x0010) (Net, ZeroConstructor, Transient)
+	struct FGameStateLiteComponentTickFunction LiteComponentActorTick; // 0x1698(0x00B8) (Edit, DisableEditOnInstance)
+	TArray<class ULiteComponent*> LiteComponents; // 0x1750(0x0010) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameState");
@@ -1376,6 +1633,7 @@ public:
 
 	void UnregisterLiteComponent(class ULiteComponent* Component);
 	void SetLiteComponentTickEnable(bool bEnabled);
+	void SetEnvLuaRunning(bool bRunning);
 	void SetCurrentGameType(ECreativeModeGameType NewGameType);
 	void RPC_Replay_SetInstanceDataContent(uint32_t InstanceID, const struct FCreativeInstanceDataContent& InstanceDataContent);
 	void RPC_Replay_GeneraicUGC_LuaImpl(TArray<unsigned char> Content);
@@ -1383,13 +1641,17 @@ public:
 	void RegisterLiteComponent(class ULiteComponent* Component);
 	void ReceiveInitializeLiteComponent();
 	void ReceiveCreativeCollectGarbage();
+	void ReceiveAddEnvLuaRunningToCrashKit();
 	void ReceiveAddContextDataToCrashKit();
 	void OnViewportSizeChanged(const struct FVector2D& OldViewportSize, const struct FVector2D& NewViewportSize);
 	void OnRep_InitializeGameType(ECreativeModeGameType LastInitializeGameType);
+	void OnRep_EnvLuaRunning(bool OldLuaRunning);
 	void OnRep_CurrentStateComponent(class UCreativeModeGameStateBaseComponent* LastComponent);
+	void OnRep_CurrentGameTypeReplicated(ECreativeModeGameType LastCurrentGameTypeReplicated);
 	void OnRep_CreativeModTemplateId(int LastCreativeModTemplateId);
 	void OnRep_CreativeModID(int LastCreativeModID);
 	void OnRep_BlockySlotStrings(TArray<struct FExtendedBlockySlotString>* BlockySlotStrings);
+	void OnCurrentStateComponentChanged(class UCreativeModeGameStateBaseComponent* LastComponent);
 	void OnClientRecordingStateChange(EClientRecordingType Type);
 	bool IsOfficialGame();
 	bool IsEditorMode();
@@ -1400,8 +1662,10 @@ public:
 	void InitCreativeModID(int ModID, int TemplateID);
 	ECreativeModePlayState GetPlayState();
 	ECreativeModeGameType GetInitializeGameType();
+	bool GetEnvLuaRunning();
 	TArray<struct FString> GetDisableDistanceLevelsOutsideBox(float X, float Y, int W, int L, float RotationAngle, bool bUseFilter);
 	class UCreativeModeGameStateBaseComponent* GetCurrentStateComponent();
+	ECreativeModeGameType GetCurrentGameTypeReplicated();
 	ECreativeModeGameType GetCurrentGameType();
 	int GetCurCreativeType();
 	struct FString GetCurCreativeModResList();
@@ -1411,6 +1675,7 @@ public:
 	int GetCreativeModID();
 	class ULiteComponent* FindLiteComponentByClass(class UClass* ComponentClass);
 	bool FilterLevelByName(const struct FName& LevelName);
+	void ClientSetCurrentStateComponent(class UCreativeModeGameStateBaseComponent* CurStateComponent);
 	void ClearInstance();
 	void ClearAndReImportInstance();
 	bool CanShowDropEffectByItemID(int ItemId);
@@ -1422,15 +1687,14 @@ public:
 class UCreativeModeGameStateComponent : public UCreativeModeGameStateBaseComponent
 {
 public:
-	class UClass*                                      IntegralMechanismComponentClass;                          // 0x0160(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCreativeModeIntegralMechanismLiteComponent* IntegralMechanismComponent;                               // 0x0168(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      RuntimePlayerBattleDataObjectClass;                       // 0x0170(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class ACreativeRuntimePlayerBattleDataObject*      RuntimePlayerBattleDataObject;                            // 0x0178(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	ECreativeModePlayState                             CurPlayState;                                             // 0x0180(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0181(0x0007) MISSED OFFSET
+	class UClass* IntegralMechanismComponentClass; // 0x0160(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCreativeModeIntegralMechanismLiteComponent* IntegralMechanismComponent; // 0x0168(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClass* RuntimePlayerBattleDataObjectClass; // 0x0170(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class ACreativeRuntimePlayerBattleDataObject* RuntimePlayerBattleDataObject; // 0x0178(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	ECreativeModePlayState CurPlayState; // 0x0180(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0181(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameStateComponent");
@@ -1452,8 +1716,7 @@ class UCreativeGlobalApiObject : public UCreativeApiObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGlobalApiObject");
@@ -1471,42 +1734,41 @@ public:
 class UCreativeGridLevelsManager : public UCreativeModeManagerBase
 {
 public:
-	bool                                               bDestructibleMeshForceHISM;                               // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bDestructibleMeshEnableBrokenEffect;                      // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2E];                                      // 0x016A(0x002E) MISSED OFFSET
-	TArray<struct FString>                             GridLevelList;                                            // 0x0198(0x0010) (ZeroConstructor)
-	TMap<struct FString, struct FCreativeModeGridLevelConfig> GridLevelConfigs;                                         // 0x01A8(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FCreativeModeGridLevelInfo> GridLevelsMap;                                            // 0x01F8(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FIntVector>            ObjectCellIndexMap;                                       // 0x0248(0x0050) (ZeroConstructor)
-	TArray<struct FString>                             AlwaysLoadLevel;                                          // 0x0298(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x02A8(0x0010) MISSED OFFSET
-	TArray<struct FString>                             RefreshBatchDataInstances;                                // 0x02B8(0x0010) (ZeroConstructor)
-	bool                                               bStaticMeshObjectBatchSwitch;                             // 0x02C8(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bAroundRelieveBatchSwitch;                                // 0x02C9(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x02CA(0x0002) MISSED OFFSET
-	float                                              EditorModeUpdateTime;                                     // 0x02CC(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DelayUpdateBatchTime;                                     // 0x02D0(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              TickUpdateBatchInterval;                                  // 0x02D4(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ReBatchDistance;                                          // 0x02D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              RelieveBatchDistance;                                     // 0x02DC(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRelieveBatchDelayUpdateSwitch;                           // 0x02E0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x02E1(0x0003) MISSED OFFSET
-	float                                              RelieveBatchDelayTime;                                    // 0x02E4(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIncrementalRefreshEnable;                                // 0x02E8(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bHISMBatchForceSwitch;                                    // 0x02E9(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bFineBatchSwitch;                                         // 0x02EA(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bDynamicChangeHISMSwitch;                                 // 0x02EB(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bPostUpdateISMBufferCompleteEventFlag;                    // 0x02EC(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x02ED(0x0003) MISSED OFFSET
-	int                                                UpdateIsmNumPerFrame;                                     // 0x02F0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x18C];                                     // 0x02F4(0x018C) MISSED OFFSET
-	TMap<struct FString, class ACreativeModeStaticMeshBatchActor*> SingleBatchActorMap;                                      // 0x0480(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData06[0xF0];                                      // 0x04D0(0x00F0) MISSED OFFSET
-	TArray<struct FString>                             ChangeMaterialIdInstanceIDs;                              // 0x05C0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData07[0x10];                                      // 0x05D0(0x0010) MISSED OFFSET
+	bool bDestructibleMeshForceHISM; // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bDestructibleMeshEnableBrokenEffect; // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2E]; // 0x016A(0x002E) MISSED OFFSET
+	TArray<struct FString> GridLevelList; // 0x0198(0x0010) (ZeroConstructor)
+	TMap<struct FString, struct FCreativeModeGridLevelConfig> GridLevelConfigs; // 0x01A8(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FCreativeModeGridLevelInfo> GridLevelsMap; // 0x01F8(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FIntVector> ObjectCellIndexMap; // 0x0248(0x0050) (ZeroConstructor)
+	TArray<struct FString> AlwaysLoadLevel; // 0x0298(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x10]; // 0x02A8(0x0010) MISSED OFFSET
+	TArray<struct FString> RefreshBatchDataInstances; // 0x02B8(0x0010) (ZeroConstructor)
+	bool bStaticMeshObjectBatchSwitch; // 0x02C8(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bAroundRelieveBatchSwitch; // 0x02C9(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x2]; // 0x02CA(0x0002) MISSED OFFSET
+	float EditorModeUpdateTime; // 0x02CC(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DelayUpdateBatchTime; // 0x02D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	float TickUpdateBatchInterval; // 0x02D4(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ReBatchDistance; // 0x02D8(0x0004) (ZeroConstructor, IsPlainOldData)
+	float RelieveBatchDistance; // 0x02DC(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bRelieveBatchDelayUpdateSwitch; // 0x02E0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x02E1(0x0003) MISSED OFFSET
+	float RelieveBatchDelayTime; // 0x02E4(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bIncrementalRefreshEnable; // 0x02E8(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bHISMBatchForceSwitch; // 0x02E9(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bFineBatchSwitch; // 0x02EA(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bDynamicChangeHISMSwitch; // 0x02EB(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bPostUpdateISMBufferCompleteEventFlag; // 0x02EC(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x3]; // 0x02ED(0x0003) MISSED OFFSET
+	int UpdateIsmNumPerFrame; // 0x02F0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x18C]; // 0x02F4(0x018C) MISSED OFFSET
+	TMap<struct FString, class ACreativeModeStaticMeshBatchActor*> SingleBatchActorMap; // 0x0480(0x0050) (ZeroConstructor)
+	unsigned char UnknownData06[0xF0]; // 0x04D0(0x00F0) MISSED OFFSET
+	TArray<struct FString> ChangeMaterialIdInstanceIDs; // 0x05C0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData07[0x10]; // 0x05D0(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGridLevelsManager");
@@ -1568,8 +1830,7 @@ class UCreativeGroupManager : public UCreativeModeManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGroupManager");
@@ -1582,16 +1843,15 @@ public:
 
 
 // Class Creative.CreativeGuideComponent
-// 0x0070 (0x0A80 - 0x0A10)
+// 0x0070 (0x0AA0 - 0x0A30)
 class UCreativeGuideComponent : public USplineComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0A10(0x0050) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0A60(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class USplineMeshComponent*>                SplineMeshes;                                             // 0x0A70(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char UnknownData00[0x50]; // 0x0A30(0x0050) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0A80(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class USplineMeshComponent*> SplineMeshes; // 0x0A90(0x0010) (ExportObject, ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGuideComponent");
@@ -1605,14 +1865,13 @@ public:
 
 
 // Class Creative.CreativeGuideMeshComponent
-// 0x0010 (0x0BD0 - 0x0BC0)
+// 0x0010 (0x0BF0 - 0x0BE0)
 class UCreativeGuideMeshComponent : public USplineMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0BC0(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0BE0(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeGuideMeshComponent");
@@ -1630,13 +1889,12 @@ public:
 class ACreativeModeInGameManagerCenter : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04B0(0x0010) MISSED OFFSET
-	TArray<class USTExtraManagerBase*>                 ManagerArray;                                             // 0x04C0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UClass*>                              ManagerClassArray;                                        // 0x04D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x04E0(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x04B0(0x0010) MISSED OFFSET
+	TArray<class USTExtraManagerBase*> ManagerArray; // 0x04C0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UClass*> ManagerClassArray; // 0x04D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char UnknownData01[0x18]; // 0x04E0(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeInGameManagerCenter");
@@ -1653,51 +1911,50 @@ public:
 class UCreativeInstanceManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0168(0x0070) MISSED OFFSET
-	TMap<struct FString, struct FCreativeInstanceDataNode> InstanceTreeData;                                         // 0x01D8(0x0050) (ZeroConstructor)
-	TMap<uint16_t, struct FCreativeBatchPullDataNode>  DataRequestMap;                                           // 0x0228(0x0050) (ZeroConstructor)
-	TArray<struct FCreativePullDataNode>               DataWaitingRquestQueue;                                   // 0x0278(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0288(0x0010) MISSED OFFSET
-	struct FCreativeNodeContainer                      InstanceContainer;                                        // 0x0298(0x0120) (Net, Transient)
-	struct FCreativeNodeContainer                      RPCReplicatedInstanceContainer;                           // 0x03B8(0x0120) (Transient)
-	bool                                               bRPCReplicatInstanceContainerEnable;                      // 0x04D8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x04D9(0x0003) MISSED OFFSET
-	int                                                CacheCacheHistoryContainerMaxCount;                       // 0x04DC(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x04E0(0x0050) MISSED OFFSET
-	int                                                ModBinInstanceCount;                                      // 0x0530(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0534(0x0004) MISSED OFFSET
-	int                                                SingleSerializeNum;                                       // 0x0538(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SinglePullDataNodeNum;                                    // 0x053C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                TotalPullDataNodeNum;                                     // 0x0540(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DataNodePullInterval;                                     // 0x0544(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DataPullTimeroutInterval;                                 // 0x0548(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                FetchesPerFrame;                                          // 0x054C(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              WaitInstanceReplicatTreeTimeout;                          // 0x0550(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              BuildingResTime;                                          // 0x0554(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ClientPreAddBuildingResTime;                              // 0x0558(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              BuildingTimeoutCheckInterval;                             // 0x055C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     DefaultDestructibleMeshObjectPath;                        // 0x0560(0x0010) (ZeroConstructor)
-	struct FString                                     ExpiredAssetEditorPath;                                   // 0x0570(0x0010) (ZeroConstructor)
-	struct FString                                     DebugObjectPath;                                          // 0x0580(0x0010) (ZeroConstructor)
-	float                                              StartDownloadMapTimeStamp;                                // 0x0590(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              CompleteDownloadReplicatTreeTimeStamp;                    // 0x0594(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              CompleteDownloadDataNodeTreeTimeStamp;                    // 0x0598(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x059C(0x0004) MISSED OFFSET
-	TMap<struct FString, struct FCreativeInstanceNode> CppInstanceTree;                                          // 0x05A0(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData06[0x38];                                      // 0x05F0(0x0038) MISSED OFFSET
-	unsigned char                                      UnknownData07[0x50];                                      // 0x05F0(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeInstanceManager.ExpiredAssetID
-	unsigned char                                      UnknownData08[0x50];                                      // 0x0678(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeInstanceManager.DebugAssetID
-	uint32_t                                           RPCReplicatedInstanceContainerSeq;                        // 0x06C8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              ReqInstanceContainerContentTimeoutTimeStamp;              // 0x06CC(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ReqInstanceContainerContentTimeroutInterval;              // 0x06D0(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRPCReplicatInstanceContainerTickCheckEnable;             // 0x06D4(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x06D5(0x0003) MISSED OFFSET
-	float                                              RPCReplicatInstanceContainerTickCheckCD;                  // 0x06D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bRPCReplicatInstanceContainerReqing : 1;                  // 0x06DC(0x0001)
-	unsigned char                                      UnknownData10[0x3];                                       // 0x06DD(0x0003) MISSED OFFSET
+	unsigned char UnknownData00[0x70]; // 0x0168(0x0070) MISSED OFFSET
+	TMap<struct FString, struct FCreativeInstanceDataNode> InstanceTreeData; // 0x01D8(0x0050) (ZeroConstructor)
+	TMap<uint16_t, struct FCreativeBatchPullDataNode> DataRequestMap; // 0x0228(0x0050) (ZeroConstructor)
+	TArray<struct FCreativePullDataNode> DataWaitingRquestQueue; // 0x0278(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x10]; // 0x0288(0x0010) MISSED OFFSET
+	struct FCreativeNodeContainer InstanceContainer; // 0x0298(0x0120) (Net, Transient)
+	struct FCreativeNodeContainer RPCReplicatedInstanceContainer; // 0x03B8(0x0120) (Transient)
+	bool bRPCReplicatInstanceContainerEnable; // 0x04D8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x04D9(0x0003) MISSED OFFSET
+	int CacheCacheHistoryContainerMaxCount; // 0x04DC(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x50]; // 0x04E0(0x0050) MISSED OFFSET
+	int ModBinInstanceCount; // 0x0530(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x0534(0x0004) MISSED OFFSET
+	int SingleSerializeNum; // 0x0538(0x0004) (ZeroConstructor, IsPlainOldData)
+	int SinglePullDataNodeNum; // 0x053C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int TotalPullDataNodeNum; // 0x0540(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DataNodePullInterval; // 0x0544(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DataPullTimeroutInterval; // 0x0548(0x0004) (ZeroConstructor, IsPlainOldData)
+	int FetchesPerFrame; // 0x054C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float WaitInstanceReplicatTreeTimeout; // 0x0550(0x0004) (ZeroConstructor, IsPlainOldData)
+	float BuildingResTime; // 0x0554(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ClientPreAddBuildingResTime; // 0x0558(0x0004) (ZeroConstructor, IsPlainOldData)
+	float BuildingTimeoutCheckInterval; // 0x055C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString DefaultDestructibleMeshObjectPath; // 0x0560(0x0010) (ZeroConstructor)
+	struct FString ExpiredAssetEditorPath; // 0x0570(0x0010) (ZeroConstructor)
+	struct FString DebugObjectPath; // 0x0580(0x0010) (ZeroConstructor)
+	float StartDownloadMapTimeStamp; // 0x0590(0x0004) (ZeroConstructor, IsPlainOldData)
+	float CompleteDownloadReplicatTreeTimeStamp; // 0x0594(0x0004) (ZeroConstructor, IsPlainOldData)
+	float CompleteDownloadDataNodeTreeTimeStamp; // 0x0598(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x4]; // 0x059C(0x0004) MISSED OFFSET
+	TMap<struct FString, struct FCreativeInstanceNode> CppInstanceTree; // 0x05A0(0x0050) (ZeroConstructor)
+	unsigned char UnknownData06[0x38]; // 0x05F0(0x0038) MISSED OFFSET
+	unsigned char UnknownData07[0x50]; // 0x05F0(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeInstanceManager.ExpiredAssetID
+	unsigned char UnknownData08[0x50]; // 0x0678(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeInstanceManager.DebugAssetID
+	uint32_t RPCReplicatedInstanceContainerSeq; // 0x06C8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float ReqInstanceContainerContentTimeoutTimeStamp; // 0x06CC(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ReqInstanceContainerContentTimeroutInterval; // 0x06D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bRPCReplicatInstanceContainerTickCheckEnable; // 0x06D4(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData09[0x3]; // 0x06D5(0x0003) MISSED OFFSET
+	float RPCReplicatInstanceContainerTickCheckCD; // 0x06D8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char bRPCReplicatInstanceContainerReqing : 1; // 0x06DC(0x0001)
+	unsigned char UnknownData10[0x3]; // 0x06DD(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeInstanceManager");
@@ -1761,18 +2018,17 @@ public:
 
 
 // Class Creative.CreativeInstanceStaticMeshComponent
-// 0x0050 (0x0CD0 - 0x0C80)
+// 0x0050 (0x0CF0 - 0x0CA0)
 class UCreativeInstanceStaticMeshComponent : public UInstancedStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0C80(0x0018) MISSED OFFSET
-	struct FSoftObjectPath                             SoftStaticMeshPath;                                       // 0x0C98(0x0018)
-	class UMaterialInterface*                          WaitSetMaterial;                                          // 0x0CB0(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FTransform>                          WaitSetAddInstanceTransforms;                             // 0x0CB8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0CC8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0CA0(0x0018) MISSED OFFSET
+	struct FSoftObjectPath SoftStaticMeshPath; // 0x0CB8(0x0018)
+	class UMaterialInterface* WaitSetMaterial; // 0x0CD0(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FTransform> WaitSetAddInstanceTransforms; // 0x0CD8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0CE8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeInstanceStaticMeshComponent");
@@ -1786,6 +2042,7 @@ public:
 	void OnStaticMeshAsyncLoaded(const struct FSoftObjectPath& SoftObjectPath);
 	bool OnReturnToPool(class UObject* NewOuter, uint32_t RecycledSeq);
 	void OnPickFromPool(class UObject* NewOuter, const struct FString& InName);
+	void InitInstancedStaticMeshComponntByGroupBuildStaticMesh(class USceneComponent* Parent, TArray<struct FTransform> InstanceTransforms, class UObject* StaticMeshObj, class UMaterialInterface* Material);
 	void InitInstancedStaticMeshComponntByGroupBuild(class USceneComponent* Parent, TArray<struct FTransform> InstanceTransforms, const struct FString& MeshPath, class UMaterialInterface* Material);
 };
 
@@ -1795,10 +2052,9 @@ public:
 class UCreativeModeIntegralMechanismComponent : public ULuaActorComponent
 {
 public:
-	TArray<struct FPlayerIntegralInfo>                 PlayerIntegrals;                                          // 0x0238(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
+	TArray<struct FPlayerIntegralInfo> PlayerIntegrals; // 0x0238(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeIntegralMechanismComponent");
@@ -1818,12 +2074,11 @@ public:
 class UCreativeModeIntegralMechanismLiteComponent : public UCreativeModeLiteComponent
 {
 public:
-	TArray<struct FPlayerIntegralInfo>                 PlayerIntegrals;                                          // 0x0158(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
-	int                                                TestIndex;                                                // 0x0168(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x016C(0x0004) MISSED OFFSET
+	TArray<struct FPlayerIntegralInfo> PlayerIntegrals; // 0x0158(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
+	int TestIndex; // 0x0168(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x016C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeIntegralMechanismLiteComponent");
@@ -1845,10 +2100,9 @@ public:
 class UCreativeItemGeneratorComponent : public UItemGeneratorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0A08(0x0058) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0A08(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeItemGeneratorComponent");
@@ -1867,11 +2121,11 @@ public:
 class UCreativeLoadManager : public UCreativeModeManagerBase
 {
 public:
-	uint32_t                                           MaxLoadCountPerFrame;                                     // 0x0168(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x64];                                      // 0x016C(0x0064) MISSED OFFSET
+	uint32_t MaxLoadCountPerFrame; // 0x0168(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bNewCustomUI; // 0x016C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x63]; // 0x016D(0x0063) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLoadManager");
@@ -1883,8 +2137,43 @@ public:
 	void UnloadObject(const struct FString& InstanceID, bool bRemovePhysicsObject);
 	void LoadSomeObjects(TArray<struct FString> InstanceIDs, bool bLoadImmediately);
 	void LoadObject(const struct FString& InstanceID);
+	class UObject* LoadCustomUIObject(const struct FString& InstanceID);
 	static class UCreativeLoadManager* Get(class UObject* WorldContext);
 	void AddObject(const struct FString& InstanceID, const struct FCreativeInstanceNode& InstanceNode);
+};
+
+
+// Class Creative.CreativeLuaAPIObjectManager
+// 0x0000 (0x0168 - 0x0168)
+class UCreativeLuaAPIObjectManager : public UCreativeModeManagerBase
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeLuaAPIObjectManager");
+		return pStaticClass;
+	}
+
+
+	static class UCreativeLuaAPIObjectManager* Get(class UObject* WorldContext);
+};
+
+
+// Class Creative.CreativeLuaBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeLuaBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeLuaBlueprintLibrary");
+		return pStaticClass;
+	}
+
 };
 
 
@@ -1893,12 +2182,11 @@ public:
 class UCreativeLuaCodeManager : public UCreativeModeManagerBase
 {
 public:
-	TMap<unsigned char, struct FString>                CodeMap;                                                  // 0x0168(0x0050) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x01B8(0x0004) MISSED OFFSET
-	uint32_t                                           ReplicatedLuaCodeInfoMapSeq;                              // 0x01BC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	TMap<unsigned char, struct FString> CodeMap; // 0x0168(0x0050) (ZeroConstructor, Transient)
+	unsigned char UnknownData00[0x4]; // 0x01B8(0x0004) MISSED OFFSET
+	uint32_t ReplicatedLuaCodeInfoMapSeq; // 0x01BC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaCodeManager");
@@ -1922,13 +2210,12 @@ public:
 class UCreativeLuaEntityManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0168(0x0008) MISSED OFFSET
-	TMap<int64_t, TWeakObjectPtr<class UObject>>       CacheMap;                                                 // 0x0170(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x01C0(0x0050) MISSED OFFSET
-	unsigned char                                      UnknownData02[0x50];                                      // 0x01C0(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeLuaEntityManager.UsedUUIDSet
+	unsigned char UnknownData00[0x8]; // 0x0168(0x0008) MISSED OFFSET
+	TMap<int64_t, TWeakObjectPtr<class UObject>> CacheMap; // 0x0170(0x0050) (ZeroConstructor)
+	unsigned char UnknownData01[0x50]; // 0x01C0(0x0050) MISSED OFFSET
+	unsigned char UnknownData02[0x50]; // 0x01C0(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeLuaEntityManager.UsedUUIDSet
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaEntityManager");
@@ -1939,6 +2226,7 @@ public:
 	class UObject* UUID2UObject(int64_t* UUID);
 	bool UUID2Type(int64_t* UUID, EEntityType* Type, unsigned char* SubType);
 	uint32_t UUID2Key(int64_t* UUID);
+	int64_t ResolveUObjectUUID(class UObject* Object);
 	void ResetAll();
 	void RemoveUUID(int64_t* UUID);
 	class UObject* LuaUUID2UObject(struct FString* UUID);
@@ -1951,6 +2239,7 @@ public:
 	int64_t GenUUID(struct FString* Key, EEntityType* Type, unsigned char* SubType);
 	int64_t CreateEntityIfNotExistsFromUObject(class UObject* Object, EEntityType* Type, unsigned char* SubType);
 	int64_t CreateEntityIfNotExistsFromKey(uint32_t* Key, EEntityType* Type, unsigned char* SubType);
+	bool ContainsUUID(int64_t UUID);
 };
 
 
@@ -1959,10 +2248,9 @@ public:
 class UCreativeLuaSignalManager : public UCreativeModeManagerBase
 {
 public:
-	TMap<struct FString, class UCreativeApiObject*>    ObjectMap;                                                // 0x0168(0x0050) (ZeroConstructor, Transient)
+	TMap<struct FString, class UCreativeApiObject*> ObjectMap; // 0x0168(0x0050) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaSignalManager");
@@ -1978,7 +2266,9 @@ public:
 	class UCreativeBridgeLuaVM* GetCreativeLuaVM();
 	static class UCreativeLuaSignalManager* Get(class UObject* WorldContext);
 	int ExecuteAPI(class UCreativeBridgeLuaVM* VM, struct FString* ModuleName, struct FString* FuncName);
-	void ClearAllObjects();
+	class UCreativeApiObject* CGetAPIObject(const struct FString& ModuleName);
+	void CClearAPIObject();
+	void CAddAPIObject(const struct FString& ModuleName, class UCreativeApiObject* Object);
 };
 
 
@@ -1988,8 +2278,7 @@ class UCreativeLuaTraitManager : public UCreativeModeManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaTraitManager");
@@ -2004,15 +2293,15 @@ public:
 
 
 // Class Creative.CreativeLuaVMManager
-// 0x0010 (0x0178 - 0x0168)
+// 0x0020 (0x0188 - 0x0168)
 class UCreativeLuaVMManager : public UCreativeModeManagerBase
 {
 public:
-	class UCreativeBridgeLuaVM*                        LuaVM;                                                    // 0x0168(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0170(0x0008) MISSED OFFSET
+	class UCreativeBridgeLuaVM* LuaVM; // 0x0168(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0170(0x0008) MISSED OFFSET
+	TArray<struct FString> EnvLuaCheckPaths; // 0x0178(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeLuaVMManager");
@@ -2022,9 +2311,12 @@ public:
 
 	void UnRegisterGameTypePreChangedDelegate();
 	void RegisterGameTypePreChangedDelegate();
+	void ReceiveSluaCustomMemoryOutCallback();
 	void ReceiveOnGameStateBeginPlay(class AGameStateBase* GameState);
 	void ReceiveCheckAndLoadLuaVM();
-	void OnLuaVMAtPanic(const struct FString& ErrMsg);
+	void OpenEnvLuaProfile();
+	void OpenCustomMemoryLimit(int64_t memoryLimit);
+	void OnLuaVMAtPanic(const struct FString& errMsg);
 	void OnGameTypePreChanged(unsigned char LastGameType, unsigned char CurrentGameType);
 	void OnGameStateBeginPlay(class AGameStateBase* GameState);
 	void LoadLuaVM();
@@ -2032,6 +2324,8 @@ public:
 	static class UCreativeLuaVMManager* Get(class UObject* WorldContext);
 	bool CreativeLuaVMLoaded();
 	bool CreativeLuaInitialized();
+	void ClosenEnvLuaProfile();
+	void CloseCustomMemoryLimit();
 };
 
 
@@ -2041,8 +2335,7 @@ class UCreativeManagerCenterInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeManagerCenterInterface");
@@ -2058,8 +2351,7 @@ class UCreativeModeModDataCheckManager : public UCreativeModeManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeModDataCheckManager");
@@ -2080,17 +2372,16 @@ public:
 class UCreativeModeChatBubbleUI : public UUserWidget
 {
 public:
-	struct FName                                       SocketName;                                               // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bMoveWithPawn;                                            // 0x0268(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0269(0x0003) MISSED OFFSET
-	struct FVector                                     TargetOffset;                                             // 0x026C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	TWeakObjectPtr<class AActor>                       CurTargetActor;                                           // 0x0278(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCanvasPanelSlot*                            ChildSlot;                                                // 0x0280(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0288(0x0004) MISSED OFFSET
-	struct FVector                                     CurrentTargetPosition;                                    // 0x028C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FName SocketName; // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bMoveWithPawn; // 0x0268(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0269(0x0003) MISSED OFFSET
+	struct FVector TargetOffset; // 0x026C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	TWeakObjectPtr<class AActor> CurTargetActor; // 0x0278(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCanvasPanelSlot* ChildSlot; // 0x0280(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0288(0x0004) MISSED OFFSET
+	struct FVector CurrentTargetPosition; // 0x028C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeChatBubbleUI");
@@ -2108,12 +2399,11 @@ public:
 class UCreativeModeGlobalManagerCenter : public UGameInstanceSubsystem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
-	TArray<class USTExtraManagerBase*>                 ManagerArray;                                             // 0x0040(0x0010) (ZeroConstructor, Transient)
-	TArray<class UClass*>                              ManagerClassArray;                                        // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char UnknownData00[0x10]; // 0x0030(0x0010) MISSED OFFSET
+	TArray<class USTExtraManagerBase*> ManagerArray; // 0x0040(0x0010) (ZeroConstructor, Transient)
+	TArray<class UClass*> ManagerClassArray; // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGlobalManagerCenter");
@@ -2130,12 +2420,11 @@ public:
 class ACreativeModeStaticMeshBatchActor : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0570(0x0048) MISSED OFFSET
-	struct FCreativeBatchInstancedStaticMesh           InstancedStaticMeshInfo;                                  // 0x05B8(0x0058)
-	struct FCreativeFineBatchInstancedStaticMesh       BatchInstancedStaticMeshInfo;                             // 0x0610(0x0050)
+	unsigned char UnknownData00[0x48]; // 0x0570(0x0048) MISSED OFFSET
+	struct FCreativeBatchInstancedStaticMesh InstancedStaticMeshInfo; // 0x05B8(0x0058)
+	struct FCreativeFineBatchInstancedStaticMesh BatchInstancedStaticMeshInfo; // 0x0610(0x0050)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeStaticMeshBatchActor");
@@ -2153,8 +2442,7 @@ class UCreativeModeTouchWidget : public ULuaUserWidget
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeTouchWidget");
@@ -2174,14 +2462,13 @@ public:
 class UTaskProgressItem : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	int                                                ConfigIndex;                                              // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ProgressType;                                             // 0x0084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CurrentProgress;                                          // 0x0088(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                MaxProgress;                                              // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	int ConfigIndex; // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ProgressType; // 0x0084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int CurrentProgress; // 0x0088(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int MaxProgress; // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.TaskProgressItem");
@@ -2207,13 +2494,12 @@ public:
 class UStageRuntimeState : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	int                                                StageIdx;                                                 // 0x0080(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
-	TArray<class UTaskProgressItem*>                   ProgressItems;                                            // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	int StageIdx; // 0x0080(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0084(0x0004) MISSED OFFSET
+	TArray<class UTaskProgressItem*> ProgressItems; // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.StageRuntimeState");
@@ -2237,19 +2523,18 @@ public:
 class UTaskInstance : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	struct FString                                     TaskTypeID;                                               // 0x0080(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<uint32_t>                                   PlayerKeys;                                               // 0x0090(0x0010) (ZeroConstructor)
-	class UStageRuntimeState*                          CurrentStage;                                             // 0x00A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ETaskStatus                                        TaskStatus;                                               // 0x00A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
-	TArray<class UStageRuntimeState*>                  StageStates;                                              // 0x00B0(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FString                                     ReservedStr;                                              // 0x00C0(0x0010) (BlueprintVisible, ZeroConstructor)
-	bool                                               bShouldReplicated;                                        // 0x00D0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString TaskTypeID; // 0x0080(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<uint32_t> PlayerKeys; // 0x0090(0x0010) (ZeroConstructor)
+	class UStageRuntimeState* CurrentStage; // 0x00A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ETaskStatus TaskStatus; // 0x00A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x00A9(0x0007) MISSED OFFSET
+	TArray<class UStageRuntimeState*> StageStates; // 0x00B0(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FString ReservedStr; // 0x00C0(0x0010) (BlueprintVisible, ZeroConstructor)
+	bool bShouldReplicated; // 0x00D0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x00D1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.TaskInstance");
@@ -2281,11 +2566,10 @@ public:
 class UCreativeModeGameTaskManager : public UCreativeModeManagerBase
 {
 public:
-	TArray<class UTaskInstance*>                       TaskInstArray;                                            // 0x0168(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0178(0x0008) MISSED OFFSET
+	TArray<class UTaskInstance*> TaskInstArray; // 0x0168(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x0178(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeGameTaskManager");
@@ -2309,10 +2593,9 @@ public:
 class UCreativeModeNavigationManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0168(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeModeNavigationManager.CachedActors
+	unsigned char UnknownData00[0x50]; // 0x0168(0x0050) UNKNOWN PROPERTY: SetProperty Creative.CreativeModeNavigationManager.CachedActors
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeNavigationManager");
@@ -2339,7 +2622,9 @@ public:
 	struct FIntPoint GetDynamicTileCoordByPos(const struct FVector& Pos);
 	TArray<class AActor*> GetAllAssociateActors();
 	static class UCreativeModeNavigationManager* Get(class UObject* WorldContext);
+	void ExportDynamicTileStandard(struct FString* Path);
 	void ExportDynamicTile(struct FString* Path);
+	void EnsureDynamicBuildCompletion();
 	void DeserializeDynamicTileFromByteArr(TArray<unsigned char>* ByteArr);
 	float ComputeTotalWalkableSurfaceAreaInBox(const struct FBox& bBox);
 	void ClearNavCollision();
@@ -2359,15 +2644,14 @@ public:
 class ACreativeObjectEditAxisActor : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0570(0x0018) MISSED OFFSET
-	struct FVector                                     AxisState;                                                // 0x0588(0x000C) (Edit, IsPlainOldData)
-	struct FVector                                     ForceHideAxis;                                            // 0x0594(0x000C) (Edit, IsPlainOldData)
-	struct FTransform                                  WorldBaseTransform;                                       // 0x05A0(0x0030) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x05D0(0x0048) MISSED OFFSET
-	class APlayerCameraManager*                        PlayerCameraManager;                                      // 0x0618(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0570(0x0018) MISSED OFFSET
+	struct FVector AxisState; // 0x0588(0x000C) (Edit, IsPlainOldData)
+	struct FVector ForceHideAxis; // 0x0594(0x000C) (Edit, IsPlainOldData)
+	struct FTransform WorldBaseTransform; // 0x05A0(0x0030) (Edit, IsPlainOldData)
+	unsigned char UnknownData01[0x48]; // 0x05D0(0x0048) MISSED OFFSET
+	class APlayerCameraManager* PlayerCameraManager; // 0x0618(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeObjectEditAxisActor");
@@ -2394,8 +2678,7 @@ class UCreativeModeObjectFuncComponent : public UCreativeModeLiteComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeObjectFuncComponent");
@@ -2411,8 +2694,7 @@ class UCreativeModeObjectInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeObjectInterface");
@@ -2429,26 +2711,25 @@ public:
 class ACreativeObjectLocalAxisActor : public ALuaActor
 {
 public:
-	class AActor*                                      AttachActor;                                              // 0x0570(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              AttachOffsetZ;                                            // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x057C(0x0004) MISSED OFFSET
-	class USceneComponent*                             AxisComponent;                                            // 0x0580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             GridComponent;                                            // 0x0588(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FTransform                                  BaseTransform;                                            // 0x0590(0x0030) (IsPlainOldData)
-	struct FVector                                     Offset;                                                   // 0x05C0(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x05CC(0x0004) MISSED OFFSET
-	struct FTransform                                  AttachTransform;                                          // 0x05D0(0x0030) (IsPlainOldData)
-	bool                                               bAttach;                                                  // 0x0600(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bNoRotate;                                                // 0x0601(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bNoZClamp;                                                // 0x0602(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x0603(0x0001) MISSED OFFSET
-	float                                              SnapUnit;                                                 // 0x0604(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SnapAxisConfig;                                           // 0x0608(0x000C) (IsPlainOldData)
-	float                                              HideDelayInterval;                                        // 0x0614(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0618(0x0008) MISSED OFFSET
+	class AActor* AttachActor; // 0x0570(0x0008) (ZeroConstructor, IsPlainOldData)
+	float AttachOffsetZ; // 0x0578(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x057C(0x0004) MISSED OFFSET
+	class USceneComponent* AxisComponent; // 0x0580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent* GridComponent; // 0x0588(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FTransform BaseTransform; // 0x0590(0x0030) (IsPlainOldData)
+	struct FVector Offset; // 0x05C0(0x000C) (IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x05CC(0x0004) MISSED OFFSET
+	struct FTransform AttachTransform; // 0x05D0(0x0030) (IsPlainOldData)
+	bool bAttach; // 0x0600(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bNoRotate; // 0x0601(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bNoZClamp; // 0x0602(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x1]; // 0x0603(0x0001) MISSED OFFSET
+	float SnapUnit; // 0x0604(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector SnapAxisConfig; // 0x0608(0x000C) (IsPlainOldData)
+	float HideDelayInterval; // 0x0614(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x8]; // 0x0618(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeObjectLocalAxisActor");
@@ -2466,22 +2747,21 @@ public:
 class UCreativeObjectManager : public UCreativeModeManagerBase
 {
 public:
-	TMap<struct FString, class UObject*>               ObjectMap;                                                // 0x0168(0x0050) (ZeroConstructor, Transient)
-	TMap<struct FString, bool>                         ObjectActiveMap;                                          // 0x01B8(0x0050) (ZeroConstructor)
-	bool                                               bContainsSpawnCompleteCallback;                           // 0x0208(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bReordering;                                              // 0x0209(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x020A(0x0002) MISSED OFFSET
-	int                                                Client_FrameSpawnNum;                                     // 0x020C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Ds_FrameSpawnNum;                                         // 0x0210(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bFrameDestroyObjectEnable;                                // 0x0214(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0215(0x0003) MISSED OFFSET
-	int                                                Client_FrameDestroyNum;                                   // 0x0218(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Ds_FrameDestroyNum;                                       // 0x021C(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bPostSpawnCompleteEventFlag;                              // 0x0220(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6F];                                      // 0x0221(0x006F) MISSED OFFSET
+	TMap<struct FString, class UObject*> ObjectMap; // 0x0168(0x0050) (ZeroConstructor, Transient)
+	TMap<struct FString, bool> ObjectActiveMap; // 0x01B8(0x0050) (ZeroConstructor)
+	bool bContainsSpawnCompleteCallback; // 0x0208(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bReordering; // 0x0209(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x020A(0x0002) MISSED OFFSET
+	int Client_FrameSpawnNum; // 0x020C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int Ds_FrameSpawnNum; // 0x0210(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bFrameDestroyObjectEnable; // 0x0214(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0215(0x0003) MISSED OFFSET
+	int Client_FrameDestroyNum; // 0x0218(0x0004) (ZeroConstructor, IsPlainOldData)
+	int Ds_FrameDestroyNum; // 0x021C(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool bPostSpawnCompleteEventFlag; // 0x0220(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x6F]; // 0x0221(0x006F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeObjectManager");
@@ -2528,10 +2808,9 @@ public:
 class UCreativeObjectStateManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0168(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0168(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeObjectStateManager");
@@ -2551,8 +2830,7 @@ class UCreativeOccupationAreaLiteComponent : public UCreativeModeLiteComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeOccupationAreaLiteComponent");
@@ -2567,27 +2845,26 @@ public:
 class UCreativeOctreeSyncManager : public UCreativeModeManagerBase
 {
 public:
-	TEnumAsByte<enum ECollisionChannel>                CollisionChannel;                                         // 0x0168(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0169(0x0003) MISSED OFFSET
-	float                                              BackwardOffset;                                           // 0x016C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRootPositionInitialized;                                 // 0x0170(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0171(0x0003) MISSED OFFSET
-	float                                              MaxSearchRadius;                                          // 0x0174(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ExpandSearchRadius;                                       // 0x0178(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x017C(0x0004) MISSED OFFSET
-	struct FOctreeNode                                 RootNode;                                                 // 0x0180(0x0030) (Edit, BlueprintVisible)
-	float                                              CellSize;                                                 // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MergeDistance;                                            // 0x01B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxDepth;                                                 // 0x01B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MinCellSize;                                              // 0x01BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                SplitThreshold;                                           // 0x01C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bCheckObstacles;                                          // 0x01C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x01C5(0x0003) MISSED OFFSET
-	int                                                DataCount;                                                // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
+	TEnumAsByte<enum ECollisionChannel> CollisionChannel; // 0x0168(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0169(0x0003) MISSED OFFSET
+	float BackwardOffset; // 0x016C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bRootPositionInitialized; // 0x0170(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0171(0x0003) MISSED OFFSET
+	float MaxSearchRadius; // 0x0174(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float ExpandSearchRadius; // 0x0178(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x017C(0x0004) MISSED OFFSET
+	struct FOctreeNode RootNode; // 0x0180(0x0030) (Edit, BlueprintVisible)
+	float CellSize; // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float MergeDistance; // 0x01B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int MaxDepth; // 0x01B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float MinCellSize; // 0x01BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int SplitThreshold; // 0x01C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bCheckObstacles; // 0x01C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x01C5(0x0003) MISSED OFFSET
+	int DataCount; // 0x01C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x01CC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeOctreeSyncManager");
@@ -2624,8 +2901,7 @@ class UCreativeOfflineBuildManager : public USTExtraManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeOfflineBuildManager");
@@ -2644,22 +2920,21 @@ public:
 class UCreativeOverlapCheckComponent : public ULuaActorComponent
 {
 public:
-	struct FScriptDelegate                             OnBeginOverlapDelegate;                                   // 0x0238(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnEndOverlapDelegate;                                     // 0x0248(0x0016) (ZeroConstructor, InstancedReference)
-	TArray<class UClass*>                              OverlapClassFilters;                                      // 0x0258(0x0010) (ZeroConstructor)
-	class UPrimitiveComponent*                         OverlapCheckComponent;                                    // 0x0268(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class AActor*>                              InAreaActors;                                             // 0x0270(0x0010) (ZeroConstructor)
-	int                                                OverlapCheckFrame;                                        // 0x0280(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                OverlapLowCheckFrame;                                     // 0x0284(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              OverlapCheckCD;                                           // 0x0288(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                EmptyCheckNumber;                                         // 0x028C(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               HighPrecisionCheck;                                       // 0x0290(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0291(0x0003) MISSED OFFSET
-	float                                              CheckTickFrame;                                           // 0x0294(0x0004) (ZeroConstructor, IsPlainOldData)
-	class UGameLuaAPI*                                 GameLuaAPI;                                               // 0x0298(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptDelegate OnBeginOverlapDelegate; // 0x0238(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnEndOverlapDelegate; // 0x0248(0x0010) (ZeroConstructor, InstancedReference)
+	TArray<class UClass*> OverlapClassFilters; // 0x0258(0x0010) (ZeroConstructor)
+	class UPrimitiveComponent* OverlapCheckComponent; // 0x0268(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class AActor*> InAreaActors; // 0x0270(0x0010) (ZeroConstructor)
+	int OverlapCheckFrame; // 0x0280(0x0004) (ZeroConstructor, IsPlainOldData)
+	int OverlapLowCheckFrame; // 0x0284(0x0004) (ZeroConstructor, IsPlainOldData)
+	float OverlapCheckCD; // 0x0288(0x0004) (ZeroConstructor, IsPlainOldData)
+	int EmptyCheckNumber; // 0x028C(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool HighPrecisionCheck; // 0x0290(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0291(0x0003) MISSED OFFSET
+	float CheckTickFrame; // 0x0294(0x0004) (ZeroConstructor, IsPlainOldData)
+	class UGameLuaAPI* GameLuaAPI; // 0x0298(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeOverlapCheckComponent");
@@ -2676,18 +2951,35 @@ public:
 };
 
 
+// Class Creative.CreativeParentChildManager
+// 0x0000 (0x0168 - 0x0168)
+class UCreativeParentChildManager : public UCreativeModeManagerBase
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeParentChildManager");
+		return pStaticClass;
+	}
+
+
+	static class UCreativeParentChildManager* Get(class UObject* WorldContext);
+};
+
+
 // Class Creative.CreativePerfManager
 // 0x0078 (0x01E0 - 0x0168)
 class UCreativePerfManager : public UCreativeModeManagerBase
 {
 public:
-	TMap<class AActor*, struct FCreaitvePerfDataMap>   ActorPerfData;                                            // 0x0168(0x0050) (ZeroConstructor)
-	struct FCreativeNetData                            BeginSampleNetData;                                       // 0x01B8(0x0008)
-	float                                              FPSStatInterval;                                          // 0x01C0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x01C4(0x001C) MISSED OFFSET
+	TMap<class AActor*, struct FCreaitvePerfDataMap> ActorPerfData; // 0x0168(0x0050) (ZeroConstructor)
+	struct FCreativeNetData BeginSampleNetData; // 0x01B8(0x0008)
+	float FPSStatInterval; // 0x01C0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1C]; // 0x01C4(0x001C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePerfManager");
@@ -2710,17 +3002,16 @@ public:
 
 
 // Class Creative.CreativePhotonDestructibleMeshComponent
-// 0x0050 (0x0EA0 - 0x0E50)
+// 0x0050 (0x0F10 - 0x0EC0)
 class UCreativePhotonDestructibleMeshComponent : public UPhotonDestructibleMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0E50(0x0020) MISSED OFFSET
-	struct FPhotonDestructionParam                     DestructionParam;                                         // 0x0E70(0x0020)
-	int                                                MaxFXFragmentNumber;                                      // 0x0E90(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0E94(0x000C) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0EC0(0x0020) MISSED OFFSET
+	struct FPhotonDestructionParam DestructionParam; // 0x0EE0(0x0020)
+	int MaxFXFragmentNumber; // 0x0F00(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0xC]; // 0x0F04(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhotonDestructibleMeshComponent");
@@ -2742,20 +3033,19 @@ public:
 
 
 // Class Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent
-// 0x00D0 (0x10E0 - 0x1010)
+// 0x00D0 (0x1100 - 0x1030)
 class UCreativePhotonHierarchicalInstancedDestructibleMeshComponent : public UPhotonHierarchicalInstancedDestructibleMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x1010(0x0008) MISSED OFFSET
-	struct FString                                     MinClusterInstanceID;                                     // 0x1018(0x0010) (ZeroConstructor)
-	TArray<uint32_t>                                   InstanceReplicationIndex;                                 // 0x1028(0x0010) (ZeroConstructor)
-	TMap<int, struct FPhotonDestructionParam>          InstanceToDestructionParams;                              // 0x1038(0x0050) (ZeroConstructor)
-	TMap<struct FString, int>                          UGCInstanceIDToInstanceIndex;                             // 0x1088(0x0050) (ZeroConstructor)
-	int                                                MaxFXFragmentNumber;                                      // 0x10D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x10DC(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x1030(0x0008) MISSED OFFSET
+	struct FString MinClusterInstanceID; // 0x1038(0x0010) (ZeroConstructor)
+	TArray<uint32_t> InstanceReplicationIndex; // 0x1048(0x0010) (ZeroConstructor)
+	TMap<int, struct FPhotonDestructionParam> InstanceToDestructionParams; // 0x1058(0x0050) (ZeroConstructor)
+	TMap<struct FString, int> UGCInstanceIDToInstanceIndex; // 0x10A8(0x0050) (ZeroConstructor)
+	int MaxFXFragmentNumber; // 0x10F8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x10FC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhotonHierarchicalInstancedDestructibleMeshComponent");
@@ -2780,20 +3070,19 @@ public:
 
 
 // Class Creative.CreativePhotonInstancedDestructibleMeshComponent
-// 0x00E0 (0x1010 - 0x0F30)
+// 0x00E0 (0x1030 - 0x0F50)
 class UCreativePhotonInstancedDestructibleMeshComponent : public UPhotonInstancedDestructibleMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0F30(0x0010) MISSED OFFSET
-	struct FString                                     MinClusterInstanceID;                                     // 0x0F40(0x0010) (ZeroConstructor)
-	TArray<uint32_t>                                   InstanceReplicationIndex;                                 // 0x0F50(0x0010) (ZeroConstructor)
-	TMap<int, struct FPhotonDestructionParam>          InstanceToDestructionParams;                              // 0x0F60(0x0050) (ZeroConstructor)
-	TMap<struct FString, int>                          UGCInstanceIDToInstanceIndex;                             // 0x0FB0(0x0050) (ZeroConstructor)
-	int                                                MaxFXFragmentNumber;                                      // 0x1000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x1004(0x000C) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0F50(0x0010) MISSED OFFSET
+	struct FString MinClusterInstanceID; // 0x0F60(0x0010) (ZeroConstructor)
+	TArray<uint32_t> InstanceReplicationIndex; // 0x0F70(0x0010) (ZeroConstructor)
+	TMap<int, struct FPhotonDestructionParam> InstanceToDestructionParams; // 0x0F80(0x0050) (ZeroConstructor)
+	TMap<struct FString, int> UGCInstanceIDToInstanceIndex; // 0x0FD0(0x0050) (ZeroConstructor)
+	int MaxFXFragmentNumber; // 0x1020(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0xC]; // 0x1024(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhotonInstancedDestructibleMeshComponent");
@@ -2818,22 +3107,23 @@ public:
 
 
 // Class Creative.CreativePhysicsBatchActor
-// 0x0150 (0x06C0 - 0x0570)
+// 0x0170 (0x06E0 - 0x0570)
 class ACreativePhysicsBatchActor : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0570(0x0010) MISSED OFFSET
-	TMap<struct FString, class UCreativePhysicsComponent*> InstancePhysicsComponentMap;                              // 0x0580(0x0050) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x6C];                                      // 0x05D0(0x006C) MISSED OFFSET
-	int                                                TickRegisterMaxNum;                                       // 0x063C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             MeshLoadSuccessDelegate;                                  // 0x0640(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             MeshLoadSuccessByPathDelegate;                            // 0x0650(0x0016) (ZeroConstructor, InstancedReference)
-	TMap<struct FString, struct FPhysicsComponentData> ComponentTempData;                                        // 0x0660(0x0050) (ZeroConstructor)
-	int                                                ReplicateLimit;                                           // 0x06B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x06B4(0x000C) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0570(0x0010) MISSED OFFSET
+	TMap<struct FString, class UCreativePhysicsComponent*> InstancePhysicsComponentMap; // 0x0580(0x0050) (ExportObject, ZeroConstructor)
+	unsigned char UnknownData01[0x6C]; // 0x05D0(0x006C) MISSED OFFSET
+	int TickRegisterMaxNum; // 0x063C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FScriptDelegate MeshLoadSuccessDelegate; // 0x0640(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate MeshLoadSuccessByPathDelegate; // 0x0650(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate CustomMeshLoadSuccessDelegate; // 0x0660(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate CustomMeshLoadSuccessByPathDelegate; // 0x0670(0x0010) (ZeroConstructor, InstancedReference)
+	TMap<struct FString, struct FPhysicsComponentData> ComponentTempData; // 0x0680(0x0050) (ZeroConstructor)
+	int ReplicateLimit; // 0x06D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0xC]; // 0x06D4(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhysicsBatchActor");
@@ -2856,20 +3146,19 @@ public:
 
 
 // Class Creative.CreativePhysicsComponent
-// 0x0070 (0x09F0 - 0x0980)
+// 0x0070 (0x0A10 - 0x09A0)
 class UCreativePhysicsComponent : public UMeshComponent
 {
 public:
-	class UBodySetup*                                  BodySetup;                                                // 0x0980(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UStaticMesh*                                 InStaticMesh;                                             // 0x0988(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     InstanceID;                                               // 0x0990(0x0010) (ZeroConstructor)
-	struct FName                                       CollisionProfileName;                                     // 0x09A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x09A8(0x0030) MISSED OFFSET
-	struct FScriptDelegate                             MatLoadSuccessDelegate;                                   // 0x09D8(0x0016) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x09E8(0x0008) MISSED OFFSET
+	class UBodySetup* BodySetup; // 0x09A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UStaticMesh* InStaticMesh; // 0x09A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString InstanceID; // 0x09B0(0x0010) (ZeroConstructor)
+	struct FName CollisionProfileName; // 0x09C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x30]; // 0x09C8(0x0030) MISSED OFFSET
+	struct FScriptDelegate MatLoadSuccessDelegate; // 0x09F8(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData01[0x8]; // 0x0A08(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhysicsComponent");
@@ -2887,19 +3176,18 @@ public:
 class UCreativePhysicsManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0168(0x0018) MISSED OFFSET
-	TMap<struct FString, class UBodySetup*>            BodySetupMap;                                             // 0x0180(0x0050) (ZeroConstructor, Transient)
-	TMap<struct FString, class UMaterialInterface*>    MaterialInterfaceMap;                                     // 0x01D0(0x0050) (ZeroConstructor, Transient)
-	TMap<struct FString, struct FCreativeInstanceGridCellInfo> InstanceCellMap;                                          // 0x0220(0x0050) (ZeroConstructor, Transient)
-	TMap<int, class ACreativePhysicsBatchActor*>       PhysicsBatchActorMap;                                     // 0x0270(0x0050) (ZeroConstructor, Transient)
-	bool                                               StreamingEnable;                                          // 0x02C0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x02C1(0x0007) MISSED OFFSET
-	TMap<struct FIntVector, bool>                      VisiblePhysicsBatchActors;                                // 0x02C8(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x38];                                      // 0x0318(0x0038) MISSED OFFSET
-	TArray<class ACreativePhysicsBatchActor*>          OutAllBatchActorArray;                                    // 0x0350(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x18]; // 0x0168(0x0018) MISSED OFFSET
+	TMap<struct FString, class UBodySetup*> BodySetupMap; // 0x0180(0x0050) (ZeroConstructor, Transient)
+	TMap<struct FString, class UMaterialInterface*> MaterialInterfaceMap; // 0x01D0(0x0050) (ZeroConstructor, Transient)
+	TMap<struct FString, struct FCreativeInstanceGridCellInfo> InstanceCellMap; // 0x0220(0x0050) (ZeroConstructor, Transient)
+	TMap<int, class ACreativePhysicsBatchActor*> PhysicsBatchActorMap; // 0x0270(0x0050) (ZeroConstructor, Transient)
+	bool StreamingEnable; // 0x02C0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x02C1(0x0007) MISSED OFFSET
+	TMap<struct FIntVector, bool> VisiblePhysicsBatchActors; // 0x02C8(0x0050) (ZeroConstructor)
+	unsigned char UnknownData02[0x38]; // 0x0318(0x0038) MISSED OFFSET
+	TArray<class ACreativePhysicsBatchActor*> OutAllBatchActorArray; // 0x0350(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePhysicsManager");
@@ -2931,8 +3219,7 @@ class UCreativePlayerAPIObject : public UCreativeApiObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePlayerAPIObject");
@@ -2953,16 +3240,15 @@ public:
 
 
 // Class Creative.CreativeModePlayerState
-// 0x0010 (0x1CD0 - 0x1CC0)
+// 0x0010 (0x1CD8 - 0x1CC8)
 class ACreativeModePlayerState : public ASTExtraPlayerState
 {
 public:
-	bool                                               bEnableAutoPickUp;                                        // 0x1CC0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x1CC1(0x0007) MISSED OFFSET
-	class UCreativeTaskComponent*                      CreativeTaskComponent;                                    // 0x1CC8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	bool bEnableAutoPickUp; // 0x1CC8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x1CC9(0x0007) MISSED OFFSET
+	class UCreativeTaskComponent* CreativeTaskComponent; // 0x1CD0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModePlayerState");
@@ -2983,8 +3269,7 @@ class UCreativePoolInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePoolInterface");
@@ -3009,12 +3294,11 @@ public:
 class UCreativePoolManager : public UCreativeModeManagerBase
 {
 public:
-	bool                                               bPoolManagerEnable;                                       // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x0169(0x000F) MISSED OFFSET
-	TMap<int, struct FCreativeObjectPool>              CreativePools;                                            // 0x0178(0x0050) (ZeroConstructor, Transient)
+	bool bPoolManagerEnable; // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xF]; // 0x0169(0x000F) MISSED OFFSET
+	TMap<int, struct FCreativeObjectPool> CreativePools; // 0x0178(0x0050) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativePoolManager");
@@ -3042,8 +3326,7 @@ class UCreativeModeRaceCheckPointComponent : public ULuaActorComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeRaceCheckPointComponent");
@@ -3059,8 +3342,7 @@ class UCreativeModeRaceCheckPointLiteComponent : public UCreativeModeLiteCompone
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeRaceCheckPointLiteComponent");
@@ -3071,20 +3353,19 @@ public:
 
 
 // Class Creative.CreativeRuntimePlayerBattleDataObject
-// 0x0300 (0x0870 - 0x0570)
+// 0x0308 (0x0878 - 0x0570)
 class ACreativeRuntimePlayerBattleDataObject : public ALuaActor
 {
 public:
-	struct FRuntimePlayerBattleDataInfo                DefaultPlayerBattleDataInfo;                              // 0x0570(0x0068)
-	struct FRuntimeTeamGameOutcomeConditionInfo        DefaultTeamGameOutcomeCondition;                          // 0x05D8(0x001C)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05F4(0x0004) MISSED OFFSET
-	struct FRuntimeCacheRoundBattleDataInfoContainer   RuntimeOldCacheRoundBattleDataContainer;                  // 0x05F8(0x00C8) (Net, Transient)
-	struct FRuntimeBattleDataInfoContainer             RuntimeCurRoundBattleDataInfoContainer;                   // 0x06C0(0x00C8) (Net, Transient)
-	struct FRuntimeTeamGameOutcomeConditionContainer   RuntimeTeamGameOutcomeConditionContainer;                 // 0x0788(0x00C8) (Net, Transient)
-	struct FRuntimeCacheRoundBattleDataInfo            DefaultCacheRoundBattleDataInfo;                          // 0x0850(0x0020)
+	struct FRuntimePlayerBattleDataInfo DefaultPlayerBattleDataInfo; // 0x0570(0x0070)
+	struct FRuntimeTeamGameOutcomeConditionInfo DefaultTeamGameOutcomeCondition; // 0x05E0(0x001C)
+	unsigned char UnknownData00[0x4]; // 0x05FC(0x0004) MISSED OFFSET
+	struct FRuntimeCacheRoundBattleDataInfoContainer RuntimeOldCacheRoundBattleDataContainer; // 0x0600(0x00C8) (Net, Transient)
+	struct FRuntimeBattleDataInfoContainer RuntimeCurRoundBattleDataInfoContainer; // 0x06C8(0x00C8) (Net, Transient)
+	struct FRuntimeTeamGameOutcomeConditionContainer RuntimeTeamGameOutcomeConditionContainer; // 0x0790(0x00C8) (Net, Transient)
+	struct FRuntimeCacheRoundBattleDataInfo DefaultCacheRoundBattleDataInfo; // 0x0858(0x0020)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeRuntimePlayerBattleDataObject");
@@ -3107,16 +3388,41 @@ public:
 };
 
 
+// Class Creative.CreativeSceneDetectLib
+// 0x0000 (0x0028 - 0x0028)
+class UCreativeSceneDetectLib : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeSceneDetectLib");
+		return pStaticClass;
+	}
+
+
+	static float CreativeGetStackDistanceFromMeshes(TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction);
+	static float CreativeGetStackDistance(class UStaticMesh* Mesh, const struct FVector& Direction, const struct FVector& Scale);
+	static struct FVector CreativeGetFurthestPointFromMeshes(TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction);
+	static struct FVector CreativeGetFurthestPoint(class AActor* TargetActor, class USceneComponent* TargetComp, const struct FVector& Direction);
+	static TArray<struct FVector> CreativeFindPlacementPoints(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& HalfExtent, const struct FVector& Direction, int Count, float MaxDistance);
+	static struct FCreativeSpaceResult CreativeDetectSpaceAdvanced(class UObject* WorldContextObject, const struct FVector& Source, const struct FVector& Direction, float MaxDistance, float MaxBoxExtent, const struct FCreativeDetectSpaceOptions& Options);
+	static struct FCreativeSpaceResult CreativeDetectSpace(class UObject* WorldContextObject, const struct FVector& Source, const struct FVector& Direction, float MaxDistance, float MaxBoxExtent);
+	static struct FVector CreativeCalculateSnapLocationFromMeshes(const struct FVector& Curr, TArray<class UMeshComponent*> MeshComponents, const struct FVector& Direction, const struct FVector& HookPoint);
+	static struct FVector CreativeCalculateSnapLocation(class AActor* TargetActor, class USceneComponent* TargetComp, const struct FVector& Direction, const struct FVector& HookPoint);
+};
+
+
 // Class Creative.CreativeSceneQueryManager
 // 0x0118 (0x0280 - 0x0168)
 class UCreativeSceneQueryManager : public UCreativeModeManagerBase
 {
 public:
-	struct FCreativeReplicatedDataContainer            ReplicatedDataContainer;                                  // 0x0168(0x00C8) (Net, Transient)
-	TMap<struct FString, struct FCreativeReplicatedObjectsInfo> MapReplicatedObjects;                                     // 0x0230(0x0050) (ZeroConstructor, Transient)
+	struct FCreativeReplicatedDataContainer ReplicatedDataContainer; // 0x0168(0x00C8) (Net, Transient)
+	TMap<struct FString, struct FCreativeReplicatedObjectsInfo> MapReplicatedObjects; // 0x0230(0x0050) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeSceneQueryManager");
@@ -3142,10 +3448,9 @@ public:
 class UCreativeScreenCaptureWidget : public ULuaUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x02C8(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x02C8(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeScreenCaptureWidget");
@@ -3162,10 +3467,9 @@ public:
 class UCreativeModeSoftComponentManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0168(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x0168(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeModeSoftComponentManager");
@@ -3179,20 +3483,19 @@ public:
 
 
 // Class Creative.SoftStaticMeshComponent
-// 0x0060 (0x0B90 - 0x0B30)
+// 0x0060 (0x0BB0 - 0x0B50)
 class USoftStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0B30(0x0008) MISSED OFFSET
-	unsigned char                                      bOnlyRender : 1;                                          // 0x0B38(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0B39(0x0007) MISSED OFFSET
-	unsigned char                                      UnknownData02[0x28];                                      // 0x0B39(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Creative.SoftStaticMeshComponent.SoftStaticMesh
-	struct FSoftObjectPath                             SoftStaticMeshPath;                                       // 0x0B68(0x0018)
-	unsigned char                                      bAsyncLoad : 1;                                           // 0x0B80(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData03[0xF];                                       // 0x0B81(0x000F) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0B50(0x0008) MISSED OFFSET
+	unsigned char bOnlyRender : 1; // 0x0B58(0x0001) (Edit)
+	unsigned char UnknownData01[0x7]; // 0x0B59(0x0007) MISSED OFFSET
+	unsigned char UnknownData02[0x28]; // 0x0B59(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Creative.SoftStaticMeshComponent.SoftStaticMesh
+	struct FSoftObjectPath SoftStaticMeshPath; // 0x0B88(0x0018)
+	unsigned char bAsyncLoad : 1; // 0x0BA0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char UnknownData03[0xF]; // 0x0BA1(0x000F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.SoftStaticMeshComponent");
@@ -3210,14 +3513,13 @@ public:
 
 
 // Class Creative.CreativeSoftStaticMeshComponent
-// 0x0010 (0x0BA0 - 0x0B90)
+// 0x0010 (0x0BC0 - 0x0BB0)
 class UCreativeSoftStaticMeshComponent : public USoftStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0B90(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0BB0(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeSoftStaticMeshComponent");
@@ -3236,8 +3538,7 @@ class UCreativeSpawnManager : public UCreativeModeManagerBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeSpawnManager");
@@ -3259,14 +3560,13 @@ public:
 
 
 // Class Creative.CreativeStaticMeshComponent
-// 0x0010 (0x0B40 - 0x0B30)
+// 0x0010 (0x0B60 - 0x0B50)
 class UCreativeStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0B30(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0B50(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeStaticMeshComponent");
@@ -3284,25 +3584,24 @@ public:
 class UCreativeStreamingManager : public UCreativeModeManagerBase
 {
 public:
-	bool                                               bStreamingManagerEnable;                                  // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bStreamingStateCheckStartup;                              // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseChildThreads;                                         // 0x016A(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x016B(0x0001) MISSED OFFSET
-	float                                              StreamingTickFrequency;                                   // 0x016C(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DestroyExtendDistance;                                    // 0x0170(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              DelayDestroyTime;                                         // 0x0174(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              NeedTickStreamingDistanceScale;                           // 0x0178(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               ChildThreadsReduceTickFrequency;                          // 0x017C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2B];                                      // 0x017D(0x002B) MISSED OFFSET
-	TMap<struct FString, struct FCreativeModeStreamingParameters> ObjectStreamingStateMap;                                  // 0x01A8(0x0050) (ZeroConstructor, Transient)
-	TArray<struct FString>                             ObjectStreamingStateKeyList;                              // 0x01F8(0x0010) (ZeroConstructor, Transient)
-	TMap<struct FString, bool>                         ObjectSpawnStateChangeMaps;                               // 0x0208(0x0050) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0258(0x0050) MISSED OFFSET
-	TArray<TWeakObjectPtr<class AActor>>               OuterStreamingSources;                                    // 0x02A8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0xC8];                                      // 0x02B8(0x00C8) MISSED OFFSET
+	bool bStreamingManagerEnable; // 0x0168(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bStreamingStateCheckStartup; // 0x0169(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bUseChildThreads; // 0x016A(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1]; // 0x016B(0x0001) MISSED OFFSET
+	float StreamingTickFrequency; // 0x016C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DestroyExtendDistance; // 0x0170(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DelayDestroyTime; // 0x0174(0x0004) (ZeroConstructor, IsPlainOldData)
+	float NeedTickStreamingDistanceScale; // 0x0178(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool ChildThreadsReduceTickFrequency; // 0x017C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2B]; // 0x017D(0x002B) MISSED OFFSET
+	TMap<struct FString, struct FCreativeModeStreamingParameters> ObjectStreamingStateMap; // 0x01A8(0x0050) (ZeroConstructor, Transient)
+	TArray<struct FString> ObjectStreamingStateKeyList; // 0x01F8(0x0010) (ZeroConstructor, Transient)
+	TMap<struct FString, bool> ObjectSpawnStateChangeMaps; // 0x0208(0x0050) (ZeroConstructor, Transient)
+	unsigned char UnknownData02[0x50]; // 0x0258(0x0050) MISSED OFFSET
+	TArray<TWeakObjectPtr<class AActor>> OuterStreamingSources; // 0x02A8(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData03[0xC8]; // 0x02B8(0x00C8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeStreamingManager");
@@ -3330,10 +3629,9 @@ public:
 class UCreativeTaskComponent : public ULuaActorComponent
 {
 public:
-	struct FCreativeTaskArray                          TaskArray;                                                // 0x0238(0x00C8) (Net)
+	struct FCreativeTaskArray TaskArray; // 0x0238(0x00C8) (Net)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeTaskComponent");
@@ -3370,10 +3668,9 @@ public:
 class UCreativeTimerApiObject : public UCreativeApiObject
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0188(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x0188(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeTimerApiObject");
@@ -3390,10 +3687,9 @@ public:
 class ACreativeTriggerAreaActor : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x70];                                      // 0x0570(0x0070) MISSED OFFSET
+	unsigned char UnknownData00[0x70]; // 0x0570(0x0070) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeTriggerAreaActor");
@@ -3405,19 +3701,261 @@ public:
 };
 
 
+// Class Creative.CreativeUMGCanvasPanel
+// 0x0058 (0x0188 - 0x0130)
+class UCreativeUMGCanvasPanel : public UCanvasPanel
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0130(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUMGCanvasPanel");
+		return pStaticClass;
+	}
+
+
+	bool SwapChildrenByInstanceID(const struct FString& InstanceIDA, const struct FString& InstanceIDB);
+	void RequestRecalcZOrder();
+	void OnNextFrameRecalcTick();
+	void FlushRecalcZOrderNow();
+};
+
+
+// Class Creative.CreativeUMGCanvasWidget
+// 0x0008 (0x02D0 - 0x02C8)
+class UCreativeUMGCanvasWidget : public ULuaUserWidget
+{
+public:
+	class UCreativeUMGCanvasPanel* CanvasPanel_Root; // 0x02C8(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUMGCanvasWidget");
+		return pStaticClass;
+	}
+
+
+	bool SwapChildrenByInstanceID(const struct FString& InstanceIDA, const struct FString& InstanceIDB);
+	void RequestRecalcZOrder();
+	void FlushRecalcZOrderNow();
+};
+
+
+// Class Creative.CreativeUserActorComponent
+// 0x00B8 (0x0230 - 0x0178)
+class UCreativeUserActorComponent : public UActorComponent
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0178(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x01D0(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserActorComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserBoxComponent
+// 0x00C0 (0x0A30 - 0x0970)
+class UCreativeUserBoxComponent : public UBoxComponent
+{
+public:
+	unsigned char UnknownData00[0x60]; // 0x0970(0x0060) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x09D0(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0A20(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserBoxComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserCapsuleComponent
+// 0x00D0 (0x0A50 - 0x0980)
+class UCreativeUserCapsuleComponent : public UCapsuleComponent
+{
+public:
+	unsigned char UnknownData00[0x68]; // 0x0980(0x0068) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x09E8(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0A38(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0A48(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserCapsuleComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserMovementComponent
+// 0x00B8 (0x0270 - 0x01B8)
+class UCreativeUserMovementComponent : public UMovementComponent
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x01B8(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0210(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0260(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserMovementComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserParticleSystemComponent
+// 0x00D0 (0x0D20 - 0x0C50)
+class UCreativeUserParticleSystemComponent : public UParticleSystemComponent
+{
+public:
+	unsigned char UnknownData00[0x68]; // 0x0C50(0x0068) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0CB8(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0D08(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0D18(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserParticleSystemComponent");
+		return pStaticClass;
+	}
+
+
+	int GetEmitterInstanceNum();
+};
+
+
+// Class Creative.CreativeUserSceneComponent
+// 0x00C0 (0x0460 - 0x03A0)
+class UCreativeUserSceneComponent : public USceneComponent
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x03A0(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x03F8(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0448(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0458(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserSceneComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserSkeletalMeshComponent
+// 0x00C0 (0x1380 - 0x12C0)
+class UCreativeUserSkeletalMeshComponent : public USkeletalMeshComponent
+{
+public:
+	unsigned char UnknownData00[0x60]; // 0x12C0(0x0060) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x1320(0x0050) (Net)
+	struct FString LuaFilePath; // 0x1370(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserSkeletalMeshComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserSphereComponent
+// 0x00D0 (0x0A30 - 0x0960)
+class UCreativeUserSphereComponent : public USphereComponent
+{
+public:
+	unsigned char UnknownData00[0x68]; // 0x0960(0x0068) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x09C8(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0A18(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0A28(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserSphereComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserSplineComponent
+// 0x00C0 (0x0AF0 - 0x0A30)
+class UCreativeUserSplineComponent : public USplineComponent
+{
+public:
+	unsigned char UnknownData00[0x60]; // 0x0A30(0x0060) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0A90(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0AE0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserSplineComponent");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Creative.CreativeUserStaticMeshComponent
+// 0x00D0 (0x0C20 - 0x0B50)
+class UCreativeUserStaticMeshComponent : public UStaticMeshComponent
+{
+public:
+	unsigned char UnknownData00[0x60]; // 0x0B50(0x0060) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0BB0(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0C00(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString StaticMeshPath; // 0x0C10(0x0010) (Edit, Net, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CreativeUserStaticMeshComponent");
+		return pStaticClass;
+	}
+
+
+	bool SetStaticMeshPath(const struct FString& InMeshPath);
+	void OnRep_StaticMeshPath(const struct FString& OldPath);
+};
+
+
 // Class Creative.CreativeWebSocketManager
 // 0x0030 (0x0198 - 0x0168)
 class UCreativeWebSocketManager : public USTExtraManagerBase
 {
 public:
-	TArray<struct FString>                             SendList;                                                 // 0x0168(0x0010) (ZeroConstructor)
-	TArray<struct FString>                             ReceivedList;                                             // 0x0178(0x0010) (ZeroConstructor)
-	float                                              LastTickSeconds;                                          // 0x0188(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              MessageTickFrequency;                                     // 0x018C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FTimerHandle                                TickTimerHandle;                                          // 0x0190(0x0008)
+	TArray<struct FString> SendList; // 0x0168(0x0010) (ZeroConstructor)
+	TArray<struct FString> ReceivedList; // 0x0178(0x0010) (ZeroConstructor)
+	float LastTickSeconds; // 0x0188(0x0004) (ZeroConstructor, IsPlainOldData)
+	float MessageTickFrequency; // 0x018C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FTimerHandle TickTimerHandle; // 0x0190(0x0008)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWebSocketManager");
@@ -3439,13 +3977,12 @@ public:
 
 
 // Class Creative.CreativeWidgetComponent
-// 0x0000 (0x0AF0 - 0x0AF0)
+// 0x0000 (0x0B10 - 0x0B10)
 class UCreativeWidgetComponent : public UWidgetComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWidgetComponent");
@@ -3460,14 +3997,13 @@ public:
 class UCreativeWidgetObject : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0028(0x0100) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
-	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap;                                      // 0x0140(0x0050) (ZeroConstructor)
-	TArray<class ULiteComponent*>                      LiteComponents;                                           // 0x0190(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData00[0x100]; // 0x0028(0x0100) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0138(0x0008) MISSED OFFSET
+	TMap<class UObject*, struct FCreativePoolObjectRecordInfo> PoolObjectRecordMap; // 0x0140(0x0050) (ZeroConstructor)
+	TArray<class ULiteComponent*> LiteComponents; // 0x0190(0x0010) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWidgetObject");
@@ -3494,10 +4030,9 @@ public:
 class UCreativeWorldSubSystem : public UWorldSubsystem
 {
 public:
-	class AActor*                                      ManagerCenter;                                            // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor* ManagerCenter; // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWorldSubSystem");
@@ -3514,20 +4049,19 @@ public:
 class UCreativeWoWInactiveCheckComponent : public ULuaActorComponent
 {
 public:
-	float                                              InactivePlayerKickoutTime;                                // 0x0238(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InactiveCheckGap;                                         // 0x023C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              InactiveTimeForTipPreTime;                                // 0x0240(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              PreActiveTime;                                            // 0x0244(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              ClientSendActiveRPCGap;                                   // 0x0248(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsClientActive;                                          // 0x024C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ESCWOWActiveType                                   CWOWActiveType;                                           // 0x024D(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x024E(0x0002) MISSED OFFSET
-	struct FVector                                     PrePawnLoc;                                               // 0x0250(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FRotator                                    PreControllerRotation;                                    // 0x025C(0x000C) (BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0268(0x0008) MISSED OFFSET
+	float InactivePlayerKickoutTime; // 0x0238(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float InactiveCheckGap; // 0x023C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float InactiveTimeForTipPreTime; // 0x0240(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float PreActiveTime; // 0x0244(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float ClientSendActiveRPCGap; // 0x0248(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bIsClientActive; // 0x024C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ESCWOWActiveType CWOWActiveType; // 0x024D(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x024E(0x0002) MISSED OFFSET
+	struct FVector PrePawnLoc; // 0x0250(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FRotator PreControllerRotation; // 0x025C(0x000C) (BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0268(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWoWInactiveCheckComponent");
@@ -3550,10 +4084,9 @@ public:
 class UCreativeWoWManager : public UCreativeModeManagerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0168(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0168(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CreativeWoWManager");
@@ -3572,13 +4105,12 @@ public:
 class UCustomAssetUtilityObject : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UCustomAssetManager*                         CustomAssetMgr;                                           // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     LastError;                                                // 0x00A0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x60]; // 0x0028(0x0060) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UCustomAssetManager* CustomAssetMgr; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString LastError; // 0x00A0(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetUtilityObject");
@@ -3605,14 +4137,13 @@ public:
 class UCustomAssetDeserializer : public UCustomAssetUtilityObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00B0(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    DeserializeCompletedDelegate;                             // 0x00B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x00C8(0x0050) MISSED OFFSET
-	float                                              DeserializeTimeout;                                       // 0x0118(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x00B0(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate DeserializeCompletedDelegate; // 0x00B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData01[0x50]; // 0x00C8(0x0050) MISSED OFFSET
+	float DeserializeTimeout; // 0x0118(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x011C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetDeserializer");
@@ -3632,8 +4163,7 @@ class UCustomAssetAnimDeserializer : public UCustomAssetDeserializer
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetAnimDeserializer");
@@ -3651,8 +4181,7 @@ class UCustomAssetCacheManager : public UCustomAssetUtilityObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetCacheManager");
@@ -3668,8 +4197,7 @@ class UCustomAssetDownloader : public UCustomAssetUtilityObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetDownloader");
@@ -3679,18 +4207,88 @@ public:
 };
 
 
+// Class Creative.CustomAssetImageDeserializer
+// 0x0000 (0x0120 - 0x0120)
+class UCustomAssetImageDeserializer : public UCustomAssetDeserializer
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CustomAssetImageDeserializer");
+		return pStaticClass;
+	}
+
+
+	bool IsValidData(TArray<unsigned char> InBytes);
+};
+
+
+// Class Creative.CustomImageDataWrapper
+// 0x0058 (0x0080 - 0x0028)
+class UCustomImageDataWrapper : public UObject
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CustomImageDataWrapper");
+		return pStaticClass;
+	}
+
+
+	static struct FString MakeUniqueName(class UObject* WorldContextObject);
+	static class UObject* GetImageWrapperOuter();
+};
+
+
+// Class Creative.CustomAssetImageManager
+// 0x0050 (0x0100 - 0x00B0)
+class UCustomAssetImageManager : public UCustomAssetUtilityObject
+{
+public:
+	TMap<uint64_t, class UTexture2D*> TextureRef; // 0x00B0(0x0050) (ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CustomAssetImageManager");
+		return pStaticClass;
+	}
+
+
+	void RemoveTextureRef(uint64_t HashID);
+	static TEnumAsByte<enum EPixelFormat> ReadPixelFormat(class UTexture2D* Target);
+	static struct FImageSummary ReadImageSummary(TArray<unsigned char> ImageData);
+	static TArray<unsigned char> ReadImageRGBA(TArray<unsigned char> ImageData);
+	static void LuaUpdateTextureResource2Png(class UTexture2D* Target, int TexGroup, int Width, int Height, int MipIndex, TArray<unsigned char> TexData);
+	static void LuaUpdateTextureResource2(class UTexture2D* Target, int TexGroup, int Width, int Height, int MipIndex, int PixelFormat, TArray<unsigned char> TexData);
+	static class UTexture2D* LuaReserveTexture2(int PixelFormat, int TexGroup, class UTexture2D* OtherTex);
+	static class UTexture2D* LuaReserveTexture(int PixelFormat, int TexGroup, int Width, int Height);
+	static bool IsValidImageSummary(const struct FImageSummary& Summary);
+	static bool IsPngImageData(TArray<unsigned char> ImageData);
+	static TEnumAsByte<enum EPixelFormat> GetPixelFormat(int PixelFormat);
+	static void GetPixelBlockSize(int PixelFormat, int* SizeX, int* SizeY);
+	static struct FString GetObjectPath(class UObject* Object);
+	static int GetHeaderSize(TEnumAsByte<enum EPixelFormat> Format);
+	void AddTextureRef(uint64_t HashID, class UTexture2D* Tex);
+};
+
+
 // Class Creative.CustomAssetManager
 // 0x00C0 (0x00E8 - 0x0028)
 class UCustomAssetManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	TMap<struct FString, struct FTrackedCustomAsset>   TrackedCustomAssetMap;                                    // 0x0080(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x00D0(0x0008) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	TMap<struct FString, struct FTrackedCustomAsset> TrackedCustomAssetMap; // 0x0080(0x0050) (ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x00D0(0x0008) MISSED OFFSET
+	struct FString LuaFilePath; // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetManager");
@@ -3702,9 +4300,11 @@ public:
 	bool ReceiveIsDedicatedServer();
 	void PrintAliveCustomAssets();
 	bool ParseCustomAssetKeyHashID(uint64_t HashID, unsigned char ExpectedHashIDTag, unsigned char* OutCustomAssetType, uint32_t* OutUniqueId);
+	uint32_t GetHashByString(const struct FString& CustomAssetKey);
 	struct FString GetCustomAssetPathName(class UObject* CustomAsset);
 	class UObject* GetCustomAssetOuter();
 	class UObject* GetCustomAssetObjectFromTrackedMap(const struct FString& BytesMD5);
+	struct FString GetCurPlatformSuffixType();
 	uint64_t GenerateHashIDByCustomAssetKey(const struct FString& CustomAssetKey, unsigned char CustomAssetType, unsigned char HashIDTag);
 	void CustomAssetMgrConditionalBeginDestroy();
 	void CleanupStaleCustomAssets();
@@ -3714,17 +4314,16 @@ public:
 
 
 // Class Creative.CustomAssetMountStateComponent
-// 0x0128 (0x0360 - 0x0238)
+// 0x0120 (0x0358 - 0x0238)
 class UCustomAssetMountStateComponent : public ULuaActorComponent
 {
 public:
-	struct FCustomAssetMountStatusInfoContainer        ReplicatedCustomAssetMountStatusInfoContainer;            // 0x0238(0x00C8) (Net, Transient)
-	int                                                SingleSerializeNum;                                       // 0x0300(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0304(0x0004) MISSED OFFSET
-	struct FCustomAssetMountStatusInfo                 EntryMountStatusInfo;                                     // 0x0308(0x0058)
+	struct FCustomAssetMountStatusInfoContainer ReplicatedCustomAssetMountStatusInfoContainer; // 0x0238(0x00C8) (Net, Transient)
+	int SingleSerializeNum; // 0x0300(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0304(0x0004) MISSED OFFSET
+	struct FCustomAssetMountStatusInfo EntryMountStatusInfo; // 0x0308(0x0050)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetMountStateComponent");
@@ -3732,11 +4331,11 @@ public:
 	}
 
 
-	bool RemoveMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256);
+	bool RemoveMountStatusInfo(struct FString* AssetKey);
 	bool ReceiveIsDedicatedServer();
 	bool ReceiveHasAuthority();
-	bool ChangeMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256, EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys);
-	bool AddMountStatusInfo(unsigned char AssetType, uint32_t AssetSize, const struct FString& SHA256, EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, uint32_t MountedByPlayerKey, TArray<unsigned char> MappingInfoContent);
+	bool ChangeMountStatusInfo(EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, struct FString* AssetKey);
+	bool AddMountStatusInfo(EMountStatus MountStatus, TArray<uint32_t> MountingPlayerKeys, uint32_t MountedByPlayerKey, TArray<unsigned char> MappingInfoContent, struct FString* AssetKey);
 };
 
 
@@ -3745,11 +4344,10 @@ public:
 class UCustomAssetPlatformBuilder : public UCustomAssetUtilityObject
 {
 public:
-	struct FScriptMulticastDelegate                    PlatformBuilderCompletedDelegate;                         // 0x00B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00C0(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate PlatformBuilderCompletedDelegate; // 0x00B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x8]; // 0x00C0(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetPlatformBuilder");
@@ -3762,14 +4360,31 @@ public:
 };
 
 
+// Class Creative.CustomAssetStaticMeshDeserializer
+// 0x0000 (0x0120 - 0x0120)
+class UCustomAssetStaticMeshDeserializer : public UCustomAssetDeserializer
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.CustomAssetStaticMeshDeserializer");
+		return pStaticClass;
+	}
+
+
+	bool IsValidData(TArray<unsigned char> InBytes);
+};
+
+
 // Class Creative.CustomAssetUploader
 // 0x0000 (0x00B0 - 0x00B0)
 class UCustomAssetUploader : public UCustomAssetUtilityObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.CustomAssetUploader");
@@ -3784,11 +4399,10 @@ public:
 class ADancerDeviceActor : public ALuaActor
 {
 public:
-	class APawn*                                       SyncPlayerCharacter;                                      // 0x0570(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        TempAvatarItemIDList;                                     // 0x0578(0x0010) (ZeroConstructor)
+	class APawn* SyncPlayerCharacter; // 0x0570(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<int> TempAvatarItemIDList; // 0x0578(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.DancerDeviceActor");
@@ -3805,11 +4419,10 @@ public:
 class UDTPacketPool : public UObject
 {
 public:
-	int16_t                                            BlockSize;                                                // 0x0028(0x0002) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5E];                                      // 0x002A(0x005E) MISSED OFFSET
+	int16_t BlockSize; // 0x0028(0x0002) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x5E]; // 0x002A(0x005E) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.DTPacketPool");
@@ -3824,29 +4437,28 @@ public:
 class UDataTransferComponent : public ULuaActorComponent
 {
 public:
-	struct FScriptMulticastDelegate                    OnTransferCompleted;                                      // 0x0238(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTransferFailed;                                         // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTransferReceived;                                       // 0x0258(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	bool                                               bUsePacketPool;                                           // 0x0268(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0269(0x0001) MISSED OFFSET
-	int16_t                                            PacketSize;                                               // 0x026A(0x0002) (ZeroConstructor, IsPlainOldData)
-	int                                                SendBytesPerSecond;                                       // 0x026C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int16_t                                            MaxPacketsPerRound;                                       // 0x0270(0x0002) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0272(0x0002) MISSED OFFSET
-	float                                              SendInterval;                                             // 0x0274(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              CheckTaskInterval;                                        // 0x0278(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Timeout;                                                  // 0x027C(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ReReceiveTimeOut;                                         // 0x0280(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              ReuseInterval;                                            // 0x0284(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxPoolSize;                                              // 0x0288(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6C];                                      // 0x028C(0x006C) MISSED OFFSET
-	class UDTPacketPool*                               SendPacketPool;                                           // 0x02F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x68];                                      // 0x0300(0x0068) MISSED OFFSET
-	class UDTPacketPool*                               ReceivePacketPool;                                        // 0x0368(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0370(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate OnTransferCompleted; // 0x0238(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTransferFailed; // 0x0248(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTransferReceived; // 0x0258(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	bool bUsePacketPool; // 0x0268(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1]; // 0x0269(0x0001) MISSED OFFSET
+	int16_t PacketSize; // 0x026A(0x0002) (ZeroConstructor, IsPlainOldData)
+	int SendBytesPerSecond; // 0x026C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int16_t MaxPacketsPerRound; // 0x0270(0x0002) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x0272(0x0002) MISSED OFFSET
+	float SendInterval; // 0x0274(0x0004) (ZeroConstructor, IsPlainOldData)
+	float CheckTaskInterval; // 0x0278(0x0004) (ZeroConstructor, IsPlainOldData)
+	float Timeout; // 0x027C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ReReceiveTimeOut; // 0x0280(0x0004) (ZeroConstructor, IsPlainOldData)
+	float ReuseInterval; // 0x0284(0x0004) (ZeroConstructor, IsPlainOldData)
+	int MaxPoolSize; // 0x0288(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x6C]; // 0x028C(0x006C) MISSED OFFSET
+	class UDTPacketPool* SendPacketPool; // 0x02F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x68]; // 0x0300(0x0068) MISSED OFFSET
+	class UDTPacketPool* ReceivePacketPool; // 0x0368(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x10]; // 0x0370(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.DataTransferComponent");
@@ -3858,7 +4470,7 @@ public:
 	void Server_RequestFile(const struct FString& FilePath);
 	void Server_ReceivePacketAck(int16_t TaskId, int16_t Seq);
 	void Server_ReceivePacket(const struct FDTPacket& Packet);
-	int SendData(TArray<unsigned char> FileData);
+	int SendData(TArray<unsigned char> fileData);
 	void ReceivePacketAck(int16_t TaskId, int16_t Seq);
 	void ReceivePacket(const struct FDTPacket& Packet);
 	bool Init();
@@ -3868,14 +4480,76 @@ public:
 };
 
 
+// Class Creative.DSLParser
+// 0x0070 (0x0098 - 0x0028)
+class UDSLParser : public UObject
+{
+public:
+	unsigned char UnknownData00[0x70]; // 0x0028(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.DSLParser");
+		return pStaticClass;
+	}
+
+
+	class UDSLParserASTTree* ParseText(const struct FString& Source);
+	class UDSLParserASTTree* ParseFile(const struct FString& FilePath);
+	bool LoadGrammarFromString(const struct FString& InGrammarText);
+	bool LoadGrammarFromFile(const struct FString& FilePath);
+	struct FString GetLastError();
+	struct FString GetGrammarText();
+	TArray<struct FString> GetGrammarRuleNames();
+	void ClearGrammar();
+	void AddGrammarRule(const struct FString& RuleName, const struct FString& RuleBody);
+};
+
+
+// Class Creative.DSLParserASTTree
+// 0x0090 (0x00B8 - 0x0028)
+class UDSLParserASTTree : public UObject
+{
+public:
+	bool bValid; // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
+	struct FString Error; // 0x0030(0x0010) (ZeroConstructor)
+	struct FString Json; // 0x0040(0x0010) (ZeroConstructor)
+	int RootNodeId; // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0054(0x0004) MISSED OFFSET
+	TArray<struct FDSLParserNode> Nodes; // 0x0058(0x0010) (ZeroConstructor)
+	TMap<struct FString, int> Statements; // 0x0068(0x0050) (ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.DSLParserASTTree");
+		return pStaticClass;
+	}
+
+
+	struct FString ToJson();
+	bool IsValid();
+	int GetRootNodeId();
+	int GetPropertyNodeId(int NodeId, const struct FString& Key);
+	TArray<struct FString> GetPropertyKeys(int NodeId);
+	struct FString GetNodeValue(int NodeId);
+	struct FString GetNodeName(int NodeId);
+	struct FString GetNodeKind(int NodeId);
+	int GetNodeCount();
+	struct FString GetError();
+	TArray<int> GetChildren(int NodeId);
+};
+
+
 // Class Creative.GameModeStateActive_CreativeMode
-// 0x0000 (0x00C0 - 0x00C0)
+// 0x0000 (0x00C8 - 0x00C8)
 class UGameModeStateActive_CreativeMode : public UGameModeStateActive
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.GameModeStateActive_CreativeMode");
@@ -3886,13 +4560,12 @@ public:
 
 
 // Class Creative.GameModeStateFighting_CreativeMode
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x00D8 - 0x00D8)
 class UGameModeStateFighting_CreativeMode : public UGameModeStateFightingTeam
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.GameModeStateFighting_CreativeMode");
@@ -3906,13 +4579,12 @@ public:
 
 
 // Class Creative.GameModeStateFinished_CreativeMode
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00C0 - 0x00C0)
 class UGameModeStateFinished_CreativeMode : public UGameModeStateFinishedTeam
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.GameModeStateFinished_CreativeMode");
@@ -3923,13 +4595,12 @@ public:
 
 
 // Class Creative.GameModeStateReady_CreativeMode
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0118 - 0x0118)
 class UGameModeStateReady_CreativeMode : public UGameModeStateReady
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.GameModeStateReady_CreativeMode");
@@ -3945,8 +4616,7 @@ class UGameProcessEventObject : public UCreativeEventObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.GameProcessEventObject");
@@ -3964,47 +4634,46 @@ public:
 class APaintScoreManager : public ALuaActor
 {
 public:
-	float                                              VoxelSize;                                                // 0x0570(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              AreaThreshold;                                            // 0x0574(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableDebugLogging;                                      // 0x0578(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0579(0x0003) MISSED OFFSET
-	float                                              OwnershipCoverageThreshold;                               // 0x057C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnoccupiedOwnerID;                                        // 0x0580(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      ReservedOwnerIDStart;                                     // 0x0581(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      ReservedOwnerIDEnd;                                       // 0x0582(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MaxUserCount;                                             // 0x0583(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      StartingUserID;                                           // 0x0584(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0585(0x0003) MISSED OFFSET
-	float                                              DebugColorScale;                                          // 0x0588(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DebugDrawDuration;                                        // 0x058C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DebugLineThickness;                                       // 0x0590(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DebugVoxelBoxSize;                                        // 0x0594(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseOctreeForSmallTriangles;                              // 0x0598(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0599(0x0003) MISSED OFFSET
-	int                                                OctreeMaxDepth;                                           // 0x059C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                OctreeMaxTrianglesPerLeaf;                                // 0x05A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OctreeMinNodeSize;                                        // 0x05A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnablePartialSplit;                                      // 0x05A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x05A9(0x0003) MISSED OFFSET
-	float                                              PartialSplitMinArea;                                      // 0x05AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                PartialSplitMaxDepth;                                     // 0x05B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x05B4(0x0004) MISSED OFFSET
-	TArray<struct FPaintTriangleInfo>                  SmallTriangles;                                           // 0x05B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData05[0x40];                                      // 0x05C8(0x0040) MISSED OFFSET
-	TMap<struct FPaintVoxelCoord, struct FPaintVoxelCell> SparseVoxelHash;                                          // 0x0608(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FPaintVoxelCoord>                    PrecomputedDiskOffsets;                                   // 0x0658(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<unsigned char, float>                         PerUserAreaCache;                                         // 0x0668(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FDeferredPaintOp>                    DeferredOps;                                              // 0x06B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, unsigned char>                UserNameToID;                                             // 0x06C8(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<unsigned char, struct FString>                IDToUserName;                                             // 0x0718(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      NextUserID;                                               // 0x0768(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0769(0x0003) MISSED OFFSET
-	float                                              TotalScore;                                               // 0x076C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bInitialized;                                             // 0x0770(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2F];                                      // 0x0771(0x002F) MISSED OFFSET
+	float VoxelSize; // 0x0570(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float AreaThreshold; // 0x0574(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bEnableDebugLogging; // 0x0578(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0579(0x0003) MISSED OFFSET
+	float OwnershipCoverageThreshold; // 0x057C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnoccupiedOwnerID; // 0x0580(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char ReservedOwnerIDStart; // 0x0581(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char ReservedOwnerIDEnd; // 0x0582(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char MaxUserCount; // 0x0583(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char StartingUserID; // 0x0584(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0585(0x0003) MISSED OFFSET
+	float DebugColorScale; // 0x0588(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float DebugDrawDuration; // 0x058C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float DebugLineThickness; // 0x0590(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float DebugVoxelBoxSize; // 0x0594(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bUseOctreeForSmallTriangles; // 0x0598(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0599(0x0003) MISSED OFFSET
+	int OctreeMaxDepth; // 0x059C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int OctreeMaxTrianglesPerLeaf; // 0x05A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float OctreeMinNodeSize; // 0x05A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bEnablePartialSplit; // 0x05A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x05A9(0x0003) MISSED OFFSET
+	float PartialSplitMinArea; // 0x05AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int PartialSplitMaxDepth; // 0x05B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x05B4(0x0004) MISSED OFFSET
+	TArray<struct FPaintTriangleInfo> SmallTriangles; // 0x05B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData05[0x40]; // 0x05C8(0x0040) MISSED OFFSET
+	TMap<struct FPaintVoxelCoord, struct FPaintVoxelCell> SparseVoxelHash; // 0x0608(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FPaintVoxelCoord> PrecomputedDiskOffsets; // 0x0658(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<unsigned char, float> PerUserAreaCache; // 0x0668(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FDeferredPaintOp> DeferredOps; // 0x06B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, unsigned char> UserNameToID; // 0x06C8(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<unsigned char, struct FString> IDToUserName; // 0x0718(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char NextUserID; // 0x0768(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x3]; // 0x0769(0x0003) MISSED OFFSET
+	float TotalScore; // 0x076C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bInitialized; // 0x0770(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData07[0x2F]; // 0x0771(0x002F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.PaintScoreManager");
@@ -4014,22 +4683,22 @@ public:
 
 	struct FPaintVoxelCoord WorldToVoxelBP(const struct FVector& WorldPos);
 	struct FVector VoxelToWorldBP(const struct FPaintVoxelCoord& VoxelCoord);
-	void UpdateUserAreaCache(int userID, float AreaDelta);
+	void UpdateUserAreaCache(int UserId, float AreaDelta);
 	bool TriangleIntersectsSphere(int TriangleIndex, const struct FVector& SphereCenter, float SphereRadius);
 	void SubdivideOctreeNode(struct FPaintOctreeNode* Node);
-	bool SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelCoord, int userID);
-	bool SetSmallTriangleOwner(int Index, int userID);
+	bool SetVoxelCellOwner(const struct FPaintVoxelCoord& VoxelCoord, int UserId);
+	bool SetSmallTriangleOwner(int Index, int UserId);
 	void SetOctreeRoot(const struct FPaintOctreeNode& NewRoot);
 	void Reset();
 	void RemoveUserPaint(const struct FString& UserName);
 	void QueryOctree(const struct FPaintOctreeNode& Node, const struct FVector& SphereCenter, float SphereRadius, TArray<int>* OutTriangleIndices);
 	bool ProjectTriangleTo2D(const struct FVector& A, const struct FVector& B, const struct FVector& C, const struct FVector& SphereCenter, float SphereRadius, struct FVector2D* OutA2D, struct FVector2D* OutB2D, struct FVector2D* OutC2D, struct FVector2D* OutCenter2D, float* OutRadius2D, struct FVector* OutE1, struct FVector* OutE2, struct FVector* OutPlaneOrigin);
-	float ProcessVoxelOwnershipTransfer(const struct FPaintVoxelCoord& VoxelCoord, int userID);
-	float ProcessVoxelCellsForPaint(const struct FVector& Center, int userID);
+	float ProcessVoxelOwnershipTransfer(const struct FPaintVoxelCoord& VoxelCoord, int UserId);
+	float ProcessVoxelCellsForPaint(const struct FVector& Center, int UserId);
 	void ProcessTriangleWithCoverageMethod(int TriangleIndex, const struct FVector& Center, unsigned char InternalUserID, class UWorld* DebugWorld);
 	void ProcessTrianglesWithLinearSearch(const struct FVector& Center, float Radius, unsigned char InternalUserID, class UWorld* DebugWorld);
-	float ProcessTriangleOwnershipTransfer(int TriangleIndex, int userID, float ClippedArea);
-	float ProcessSmallTrianglesForPaint(const struct FVector& Center, float Radius, int userID);
+	float ProcessTriangleOwnershipTransfer(int TriangleIndex, int UserId, float ClippedArea);
+	float ProcessSmallTrianglesForPaint(const struct FVector& Center, float Radius, int UserId);
 	void ProcessSingleTriangleForPaint(int TriangleIndex, const struct FVector& Center, float Radius, unsigned char InternalUserID, class UWorld* DebugWorld);
 	bool PerformTwoPointSplit(int TriangleIndex, const struct FVector& SphereCenter, float SphereRadius, unsigned char NewOwnerID, float* OutTransferredArea);
 	bool IntersectSegmentCircle2D(const struct FVector2D& P0, const struct FVector2D& P1, const struct FVector2D& CircleCenter, float Radius, TArray<float>* OutT);
@@ -4064,11 +4733,10 @@ public:
 class UPlayerListenerEventObject : public UCreativeEventObject
 {
 public:
-	bool                                               bCppListenerEnable;                                       // 0x00F0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
+	bool bCppListenerEnable; // 0x00F0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x00F1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.PlayerListenerEventObject");
@@ -4086,10 +4754,9 @@ public:
 class UPlayerAttachedToVehicleEventObject : public UPlayerListenerEventObject
 {
 public:
-	TMap<uint32_t, class UPlayerAttachedProxy*>        LambdaDelegateMap;                                        // 0x00F8(0x0050) (ZeroConstructor)
+	TMap<uint32_t, class UPlayerAttachedProxy*> LambdaDelegateMap; // 0x00F8(0x0050) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.PlayerAttachedToVehicleEventObject");
@@ -4108,13 +4775,12 @@ public:
 class UPlayerAttachedProxy : public UObject
 {
 public:
-	uint32_t                                           PlayerKey;                                                // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	class UPlayerAttachedToVehicleEventObject*         Owner;                                                    // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ASTExtraBaseCharacter*                       PlayerCharacter;                                          // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	uint32_t PlayerKey; // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
+	class UPlayerAttachedToVehicleEventObject* Owner; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	class ASTExtraBaseCharacter* PlayerCharacter; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.PlayerAttachedProxy");
@@ -4131,20 +4797,19 @@ public:
 class AShowAllPlayerManagerActor : public ALuaActor
 {
 public:
-	int                                                MapMarkID;                                                // 0x0570(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bEnableRefresh;                                           // 0x0574(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0575(0x0003) MISSED OFFSET
-	int                                                BatchNum;                                                 // 0x0578(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CurBatchID;                                               // 0x057C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                CurBatchNum;                                              // 0x0580(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x24];                                      // 0x0584(0x0024) MISSED OFFSET
-	TArray<struct FVector_NetQuantize>                 TeamPosData;                                              // 0x05A8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x05B8(0x0050) UNKNOWN PROPERTY: SetProperty Creative.ShowAllPlayerManagerActor.TriggerPlayerKeySet
-	TArray<int>                                        MapMarkInstanceIDList;                                    // 0x0608(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0618(0x0008) MISSED OFFSET
+	int MapMarkID; // 0x0570(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bEnableRefresh; // 0x0574(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0575(0x0003) MISSED OFFSET
+	int BatchNum; // 0x0578(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int CurBatchID; // 0x057C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	int CurBatchNum; // 0x0580(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x24]; // 0x0584(0x0024) MISSED OFFSET
+	TArray<struct FVector_NetQuantize> TeamPosData; // 0x05A8(0x0010) (Net, ZeroConstructor)
+	unsigned char UnknownData02[0x50]; // 0x05B8(0x0050) UNKNOWN PROPERTY: SetProperty Creative.ShowAllPlayerManagerActor.TriggerPlayerKeySet
+	TArray<int> MapMarkInstanceIDList; // 0x0608(0x0010) (ZeroConstructor)
+	unsigned char UnknownData03[0x8]; // 0x0618(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Creative.ShowAllPlayerManagerActor");
@@ -4161,6 +4826,25 @@ public:
 	void FlushBatchData(int BatchSize, int CurExtraSize);
 	void EnableRefresh(bool bEnable);
 	void ClearAllMark();
+};
+
+
+// Class Creative.UserCreativeWidgetComponent
+// 0x00C0 (0x0BD0 - 0x0B10)
+class UUserCreativeWidgetComponent : public UWidgetComponent
+{
+public:
+	unsigned char UnknownData00[0x60]; // 0x0B10(0x0060) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0B70(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0BC0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Creative.UserCreativeWidgetComponent");
+		return pStaticClass;
+	}
+
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -27,20 +27,20 @@ enum class EFNiagaraCompileEventSeverity : uint8_t
 // 0x0020
 struct FNiagaraDataInterfaceGPUParamInfo
 {
-	struct FString                                     DataInterfaceHLSLSymbol;                                  // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     DIClassName;                                              // 0x0010(0x0010) (ZeroConstructor)
+	struct FString DataInterfaceHLSLSymbol; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString DIClassName; // 0x0010(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct NiagaraShader.NiagaraCompileEvent
 // 0x0048
 struct FNiagaraCompileEvent
 {
-	EFNiagaraCompileEventSeverity                      Severity;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     Message;                                                  // 0x0008(0x0010) (ZeroConstructor)
-	struct FGuid                                       NodeGuid;                                                 // 0x0018(0x0010) (IsPlainOldData)
-	struct FGuid                                       PinGuid;                                                  // 0x0028(0x0010) (IsPlainOldData)
-	TArray<struct FGuid>                               StackGuids;                                               // 0x0038(0x0010) (ZeroConstructor)
+	EFNiagaraCompileEventSeverity Severity; // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString Message; // 0x0008(0x0010) (ZeroConstructor)
+	struct FGuid NodeGuid; // 0x0018(0x0010) (IsPlainOldData)
+	struct FGuid PinGuid; // 0x0028(0x0010) (IsPlainOldData)
+	TArray<struct FGuid> StackGuids; // 0x0038(0x0010) (ZeroConstructor)
 };
 
 }

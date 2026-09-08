@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function PlanPHRuntime.BinFileHelper.Init
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            z4BufferSize                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            zeroListSize                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int z4BufferSize (Parm, ZeroConstructor, IsPlainOldData)
+// int zeroListSize (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBinFileHelper::Init(int z4BufferSize, int zeroListSize)
 {
@@ -40,7 +40,7 @@ int UBinFileHelper::Init(int z4BufferSize, int zeroListSize)
 // Function PlanPHRuntime.MapBarrierWidget.SetMapStructureData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FStructureData>  InMapStructureData             (ConstParm, Parm, ZeroConstructor)
+// TArray<struct FStructureData> InMapStructureData (ConstParm, Parm, ZeroConstructor)
 
 void UMapBarrierWidget::SetMapStructureData(TArray<struct FStructureData> InMapStructureData)
 {
@@ -64,7 +64,7 @@ void UMapBarrierWidget::SetMapStructureData(TArray<struct FStructureData> InMapS
 // Function PlanPHRuntime.MapBarrierWidget.SetMapMidPoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               InMapMidPoint                  (Parm, OutParm, IsPlainOldData)
+// struct FVector2D InMapMidPoint (Parm, OutParm, IsPlainOldData)
 
 void UMapBarrierWidget::SetMapMidPoint(struct FVector2D* InMapMidPoint)
 {
@@ -90,7 +90,7 @@ void UMapBarrierWidget::SetMapMidPoint(struct FVector2D* InMapMidPoint)
 // Function PlanPHRuntime.MapBarrierWidget.SetLevelBoundExtent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InLevelBoundExtent             (Parm, ZeroConstructor, IsPlainOldData)
+// int InLevelBoundExtent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMapBarrierWidget::SetLevelBoundExtent(int InLevelBoundExtent)
 {
@@ -114,7 +114,7 @@ void UMapBarrierWidget::SetLevelBoundExtent(int InLevelBoundExtent)
 // Function PlanPHRuntime.MapBarrierWidget.SetGridSize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InGridSize                     (Parm, ZeroConstructor, IsPlainOldData)
+// float InGridSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMapBarrierWidget::SetGridSize(float InGridSize)
 {
@@ -138,7 +138,7 @@ void UMapBarrierWidget::SetGridSize(float InGridSize)
 // Function PlanPHRuntime.PlanPH_GameMode.HandleNavigationInfo
 // (Final, Native, Private)
 // Parameters:
-// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* Controller (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPH_GameMode::HandleNavigationInfo(class AController* Controller)
 {
@@ -162,8 +162,8 @@ void APlanPH_GameMode::HandleNavigationInfo(class AController* Controller)
 // Function PlanPHRuntime.PlanPH_GameMode.GetPlayerStart
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            LandId                         (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraPlayerStart*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int LandId (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerStart* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraPlayerStart* APlanPH_GameMode::GetPlayerStart(int LandId)
 {
@@ -188,9 +188,9 @@ class ASTExtraPlayerStart* APlanPH_GameMode::GetPlayerStart(int LandId)
 // Function PlanPHRuntime.PlanPH_GameMode.DSPlayerKickOut
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ExitReason                     (Parm, ZeroConstructor)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ExitReason (Parm, ZeroConstructor)
 
 void APlanPH_GameMode::DSPlayerKickOut(uint64_t UID, const struct FName& PlayerType, const struct FString& ExitReason)
 {
@@ -300,7 +300,7 @@ void APlanPH_GameState::OnRep_PartyDanceLeadInfo_2()
 // Function PlanPHRuntime.PlanPH_GameState.LuaOnRep_PartyDanceLeadInfo
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            LandId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int LandId (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPH_GameState::LuaOnRep_PartyDanceLeadInfo(int LandId)
 {
@@ -323,12 +323,12 @@ void APlanPH_GameState::LuaOnRep_PartyDanceLeadInfo(int LandId)
 // Function PlanPHRuntime.PlanPH_GameState.ChangePartyLeadInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            LandId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOccupied                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BeginTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndTime                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 PlayerUID                      (Parm, ZeroConstructor)
-// bool                           bIsWedding                     (Parm, ZeroConstructor, IsPlainOldData)
+// int LandId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOccupied (Parm, ZeroConstructor, IsPlainOldData)
+// int BeginTime (Parm, ZeroConstructor, IsPlainOldData)
+// int EndTime (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PlayerUID (Parm, ZeroConstructor)
+// bool bIsWedding (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPH_GameState::ChangePartyLeadInfo(int LandId, bool bOccupied, int BeginTime, int EndTime, const struct FString& PlayerUID, bool bIsWedding)
 {
@@ -357,8 +357,8 @@ void APlanPH_GameState::ChangePartyLeadInfo(int LandId, bool bOccupied, int Begi
 // Function PlanPHRuntime.PlanPH_PlayerState.RequestPaintDecal
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            DecalId                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              TargetTransform                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int DecalId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform TargetTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void APlanPH_PlayerState::RequestPaintDecal(int DecalId, const struct FTransform& TargetTransform)
 {
@@ -424,8 +424,8 @@ void APlanPH_PlayerState::InitLandId()
 // Function PlanPHRuntime.PlanPH_PlayerState.CanPaintDecal
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            DecalId                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int DecalId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool APlanPH_PlayerState::CanPaintDecal(int DecalId)
 {
@@ -451,7 +451,7 @@ bool APlanPH_PlayerState::CanPaintDecal(int DecalId)
 // Function PlanPHRuntime.PlanPHCustomStaticMeshComponent.BPPreSetStaticMesh
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* NewMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlanPHCustomStaticMeshComponent::BPPreSetStaticMesh(class UStaticMesh* NewMesh)
 {
@@ -474,7 +474,7 @@ void UPlanPHCustomStaticMeshComponent::BPPreSetStaticMesh(class UStaticMesh* New
 // Function PlanPHRuntime.PlanPHCustomStaticMeshComponent.BPPostSetStaticMesh
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UStaticMesh*             NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* NewMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlanPHCustomStaticMeshComponent::BPPostSetStaticMesh(class UStaticMesh* NewMesh)
 {
@@ -497,8 +497,8 @@ void UPlanPHCustomStaticMeshComponent::BPPostSetStaticMesh(class UStaticMesh* Ne
 // Function PlanPHRuntime.PlanPHDoor.Refresh_DoorCollisionChanel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMeshComponent*    StaticMeshComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bEnableCollision               (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMeshComponent* StaticMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bEnableCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPHDoor::Refresh_DoorCollisionChanel(class UStaticMeshComponent* StaticMeshComponent, bool bEnableCollision)
 {
@@ -523,8 +523,8 @@ void APlanPHDoor::Refresh_DoorCollisionChanel(class UStaticMeshComponent* Static
 // Function PlanPHRuntime.PlanPHDoor.DoorAniFinish
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMeshComponent*    InDoorCheckBox                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           Bright                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMeshComponent* InDoorCheckBox (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool Bright (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPHDoor::DoorAniFinish(class UStaticMeshComponent* InDoorCheckBox, bool Bright)
 {
@@ -549,9 +549,9 @@ void APlanPHDoor::DoorAniFinish(class UStaticMeshComponent* InDoorCheckBox, bool
 // Function PlanPHRuntime.PlanPHGameplayStatics.SpinEvaluate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          S                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          T                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float S (Parm, ZeroConstructor, IsPlainOldData)
+// float T (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPlanPHGameplayStatics::SpinEvaluate(float S, float T)
 {
@@ -578,10 +578,10 @@ float UPlanPHGameplayStatics::SpinEvaluate(float S, float T)
 // Function PlanPHRuntime.PlanPHGameplayStatics.SetPlayerMovementBlendTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraPlayerCharacter* PlayerChar                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            nType                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerCharacter* PlayerChar (Parm, ZeroConstructor, IsPlainOldData)
+// int nType (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPlanPHGameplayStatics::SetPlayerMovementBlendTime(class ASTExtraPlayerCharacter* PlayerChar, int nType, float BlendTime)
 {
@@ -609,8 +609,8 @@ bool UPlanPHGameplayStatics::SetPlayerMovementBlendTime(class ASTExtraPlayerChar
 // Function PlanPHRuntime.PlanPHGameplayStatics.GetActorBound
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Size                           (Parm, OutParm, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Size (Parm, OutParm, IsPlainOldData)
 
 void UPlanPHGameplayStatics::GetActorBound(class AActor* Actor, struct FVector* Size)
 {
@@ -637,8 +637,8 @@ void UPlanPHGameplayStatics::GetActorBound(class AActor* Actor, struct FVector* 
 // Function PlanPHRuntime.PlanPHGameplayStatics.ChangeLightChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InChannelBitMask               (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* InComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InChannelBitMask (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlanPHGameplayStatics::ChangeLightChannel(class UPrimitiveComponent* InComponent, int InChannelBitMask)
 {
@@ -663,8 +663,8 @@ void UPlanPHGameplayStatics::ChangeLightChannel(class UPrimitiveComponent* InCom
 // Function PlanPHRuntime.PlanPHHomeArea.UpdateEditableArea
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FIntVector              InMinGridIndexXYZ              (Parm, IsPlainOldData)
-// struct FIntVector              InMaxGridIndexXYZ              (Parm, IsPlainOldData)
+// struct FIntVector InMinGridIndexXYZ (Parm, IsPlainOldData)
+// struct FIntVector InMaxGridIndexXYZ (Parm, IsPlainOldData)
 
 void APlanPHHomeArea::UpdateEditableArea(const struct FIntVector& InMinGridIndexXYZ, const struct FIntVector& InMaxGridIndexXYZ)
 {
@@ -689,7 +689,7 @@ void APlanPHHomeArea::UpdateEditableArea(const struct FIntVector& InMinGridIndex
 // Function PlanPHRuntime.PlanPHHomeAreaVisualizationComponent.ShowGrids
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InBShow                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool InBShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlanPHHomeAreaVisualizationComponent::ShowGrids(bool InBShow)
 {
@@ -713,8 +713,8 @@ void UPlanPHHomeAreaVisualizationComponent::ShowGrids(bool InBShow)
 // Function PlanPHRuntime.PlanPHMapData.RemovePlayerItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraPlayerCharacter* PlayerCharacterItem            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerCharacter* PlayerCharacterItem (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPlanPHMapData::RemovePlayerItem(class ASTExtraPlayerCharacter* PlayerCharacterItem)
 {
@@ -740,11 +740,11 @@ bool UPlanPHMapData::RemovePlayerItem(class ASTExtraPlayerCharacter* PlayerChara
 // Function PlanPHRuntime.PlanPHMapData.AddPlayerItem
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class ASTExtraPlayerCharacter* PlayerCharacterItem            (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 PlayerInfoBPItem               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UWidget*                 PlayerInfoRotWidgetItem        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 OffsetLocation                 (ConstParm, Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerCharacter* PlayerCharacterItem (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* PlayerInfoBPItem (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* PlayerInfoRotWidgetItem (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector OffsetLocation (ConstParm, Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPlanPHMapData::AddPlayerItem(class ASTExtraPlayerCharacter* PlayerCharacterItem, class UWidget* PlayerInfoBPItem, class UWidget* PlayerInfoRotWidgetItem, const struct FVector& OffsetLocation)
 {
@@ -793,7 +793,7 @@ void APlanPHSpectatorPawn::OnSpectatorRestart()
 // Function PlanPHRuntime.PlanPHSpectatorPawn.MoveRight
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPHSpectatorPawn::MoveRight(float Val)
 {
@@ -817,7 +817,7 @@ void APlanPHSpectatorPawn::MoveRight(float Val)
 // Function PlanPHRuntime.PlanPHSpectatorPawn.MoveForward
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlanPHSpectatorPawn::MoveForward(float Val)
 {
@@ -841,7 +841,7 @@ void APlanPHSpectatorPawn::MoveForward(float Val)
 // Function PlanPHRuntime.PlanPHVisualGridComponent.ShowGrids
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InBShow                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool InBShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlanPHVisualGridComponent::ShowGrids(bool InBShow)
 {

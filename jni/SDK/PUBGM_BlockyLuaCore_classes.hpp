@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,22 +13,21 @@ namespace SDK
 class UBlockBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	class UBlockBase*                                  ParentBlock;                                              // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBlockBase*                                  CommentBlock;                                             // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBlockyGraph*                                HostGraph;                                                // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
-	class UFunctionDesc*                               FunctionDesc;                                             // 0x0088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     DisplayName;                                              // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x148];                                     // 0x00A0(0x0148) MISSED OFFSET
-	struct FString                                     QuoteVariableName;                                        // 0x01E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsDisable;                                               // 0x01F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x01F9(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	class UBlockBase* ParentBlock; // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBlockBase* CommentBlock; // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBlockyGraph* HostGraph; // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x28]; // 0x0048(0x0028) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x0078(0x0010) MISSED OFFSET
+	class UFunctionDesc* FunctionDesc; // 0x0088(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString DisplayName; // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData03[0x148]; // 0x00A0(0x0148) MISSED OFFSET
+	struct FString QuoteVariableName; // 0x01E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bIsDisable; // 0x01F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x01F9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockBase");
@@ -47,13 +46,12 @@ public:
 class UExecuteable : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x1C8];                                     // 0x0200(0x01C8) MISSED OFFSET
-	TMap<struct FString, struct FBlockParam>           BlockParams;                                              // 0x03C8(0x0050) (BlueprintVisible, ZeroConstructor)
-	TArray<class UNamedVar*>                           FuncVars;                                                 // 0x0418(0x0010) (BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x1C8]; // 0x0200(0x01C8) MISSED OFFSET
+	TMap<struct FString, struct FBlockParam> BlockParams; // 0x03C8(0x0050) (BlueprintVisible, ZeroConstructor)
+	TArray<class UNamedVar*> FuncVars; // 0x0418(0x0010) (BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0428(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Executeable");
@@ -73,10 +71,9 @@ public:
 class UAddArrayElement : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x330];                                     // 0x0430(0x0330) MISSED OFFSET
+	unsigned char UnknownData00[0x330]; // 0x0430(0x0330) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.AddArrayElement");
@@ -91,10 +88,9 @@ public:
 class UArithmetic : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x528];                                     // 0x0200(0x0528) MISSED OFFSET
+	unsigned char UnknownData00[0x528]; // 0x0200(0x0528) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Arithmetic");
@@ -109,11 +105,10 @@ public:
 class UArrayLength : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x198];                                     // 0x0200(0x0198) MISSED OFFSET
-	class UBrushData*                                  BrushBGSelected;                                          // 0x0398(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x198]; // 0x0200(0x0198) MISSED OFFSET
+	class UBrushData* BrushBGSelected; // 0x0398(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ArrayLength");
@@ -129,8 +124,7 @@ class UExpressionBase : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ExpressionBase");
@@ -149,8 +143,7 @@ class UArrayLengthExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ArrayLengthExpression");
@@ -170,8 +163,7 @@ class UVarBase : public UBlockBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.VarBase");
@@ -186,30 +178,29 @@ public:
 class UNamedVar : public UVarBase
 {
 public:
-	struct FText                                       Name;                                                     // 0x0200(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0218(0x0008) MISSED OFFSET
-	struct FString                                     NameInCode;                                               // 0x0220(0x0010) (ZeroConstructor)
-	bool                                               IsValueValid;                                             // 0x0230(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsSourceValid;                                            // 0x0231(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsInitColorLoad;                                          // 0x0232(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x0233(0x0005) MISSED OFFSET
-	TArray<class UNamedVar*>                           CopiedChildVarCache;                                      // 0x0238(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x1D8];                                     // 0x0248(0x01D8) MISSED OFFSET
-	bool                                               bIsArray;                                                 // 0x0420(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0421(0x0007) MISSED OFFSET
-	struct FString                                     InitValueString;                                          // 0x0428(0x0010) (ZeroConstructor)
-	class UColorDesc*                                  ColorDesc;                                                // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UColorDesc*>                          ArrayColorDesc;                                           // 0x0440(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                NowColorArrayIdx;                                         // 0x0450(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NowColorIsArray;                                          // 0x0454(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0455(0x0003) MISSED OFFSET
-	class UNamedVar*                                   Source;                                                   // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x40];                                      // 0x0460(0x0040) MISSED OFFSET
-	class UBrushData*                                  CopyBrush;                                                // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x50];                                      // 0x04A8(0x0050) MISSED OFFSET
+	struct FText Name; // 0x0200(0x0018) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0x8]; // 0x0218(0x0008) MISSED OFFSET
+	struct FString NameInCode; // 0x0220(0x0010) (ZeroConstructor)
+	bool IsValueValid; // 0x0230(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsSourceValid; // 0x0231(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsInitColorLoad; // 0x0232(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x5]; // 0x0233(0x0005) MISSED OFFSET
+	TArray<class UNamedVar*> CopiedChildVarCache; // 0x0238(0x0010) (ZeroConstructor)
+	unsigned char UnknownData02[0x1D8]; // 0x0248(0x01D8) MISSED OFFSET
+	bool bIsArray; // 0x0420(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x0421(0x0007) MISSED OFFSET
+	struct FString InitValueString; // 0x0428(0x0010) (ZeroConstructor)
+	class UColorDesc* ColorDesc; // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UColorDesc*> ArrayColorDesc; // 0x0440(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int NowColorArrayIdx; // 0x0450(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool NowColorIsArray; // 0x0454(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x3]; // 0x0455(0x0003) MISSED OFFSET
+	class UNamedVar* Source; // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData05[0x40]; // 0x0460(0x0040) MISSED OFFSET
+	class UBrushData* CopyBrush; // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData06[0x50]; // 0x04A8(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.NamedVar");
@@ -244,8 +235,7 @@ class UArrayNamedVar : public UNamedVar
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ArrayNamedVar");
@@ -261,8 +251,7 @@ class UBinaryOperatorExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BinaryOperatorExpression");
@@ -287,14 +276,13 @@ public:
 class UCategoryDefiner : public UObject
 {
 public:
-	struct FString                                     Type;                                                     // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Menu;                                                     // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TMap<struct FString, struct FString>               ShowNameMap;                                              // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ShowIcon;                                                 // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ShowIconSelected;                                         // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Type; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Menu; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TMap<struct FString, struct FString> ShowNameMap; // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ShowIcon; // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ShowIconSelected; // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CategoryDefiner");
@@ -311,10 +299,9 @@ public:
 class UBlackboardDefiner : public UCategoryDefiner
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00B8(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x00B8(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlackboardDefiner");
@@ -329,10 +316,9 @@ public:
 class UBlockyCommandData : public UObject
 {
 public:
-	class UBlockBase*                                  bLock;                                                    // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockBase* bLock; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyCommandData");
@@ -347,17 +333,16 @@ public:
 class UBlockyAddOrRemoveFromSlotCommandData : public UBlockyCommandData
 {
 public:
-	struct FBlockPoint                                 Position;                                                 // 0x0030(0x0008)
-	class UBlockBase*                                  SlotHostBlock;                                            // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0040(0x0018) MISSED OFFSET
-	class UBlockBase*                                  ConvertBlock;                                             // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0060(0x0018) MISSED OFFSET
-	class UBlockBase*                                  ReplacedBlock;                                            // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlockBase*                                  ReplacedBlockSlotHostBlock;                               // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x68];                                      // 0x0088(0x0068) MISSED OFFSET
+	struct FBlockPoint Position; // 0x0030(0x0008)
+	class UBlockBase* SlotHostBlock; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0040(0x0018) MISSED OFFSET
+	class UBlockBase* ConvertBlock; // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x18]; // 0x0060(0x0018) MISSED OFFSET
+	class UBlockBase* ReplacedBlock; // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockBase* ReplacedBlockSlotHostBlock; // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x68]; // 0x0088(0x0068) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyAddOrRemoveFromSlotCommandData");
@@ -372,15 +357,14 @@ public:
 class UBlockyAddOrRemoveFromTopCommandData : public UBlockyCommandData
 {
 public:
-	class UBlockBase*                                  TouchBlock;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FBlockPoint                                 Position;                                                 // 0x0038(0x0008)
-	class UBlockBase*                                  TouchBlockHostSlotHost;                                   // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
-	class UBlockBase*                                  SlotHostBlock;                                            // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	class UBlockBase* TouchBlock; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FBlockPoint Position; // 0x0038(0x0008)
+	class UBlockBase* TouchBlockHostSlotHost; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0048(0x0018) MISSED OFFSET
+	class UBlockBase* SlotHostBlock; // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x18]; // 0x0068(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyAddOrRemoveFromTopCommandData");
@@ -395,11 +379,10 @@ public:
 class UBlockyBindCommentCommandData : public UBlockyCommandData
 {
 public:
-	struct FBlockPoint                                 Position;                                                 // 0x0030(0x0008)
-	class UCommentBlock*                               CommentBlock;                                             // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FBlockPoint Position; // 0x0030(0x0008)
+	class UCommentBlock* CommentBlock; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyBindCommentCommandData");
@@ -414,24 +397,23 @@ public:
 class UBlockyBlockListItemObject : public UObject
 {
 public:
-	struct FText                                       Name;                                                     // 0x0028(0x0018) (Edit, BlueprintVisible)
-	struct FString                                     KeyName;                                                  // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     SubGraphName;                                             // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     DisplayName;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     NameInCode;                                               // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FBlockPoint                                 Size;                                                     // 0x0080(0x0008) (Edit, BlueprintVisible)
-	struct FBlockPoint                                 TextSize;                                                 // 0x0088(0x0008) (Edit, BlueprintVisible)
-	struct FString                                     BlockClassName;                                           // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00A0(0x0010) MISSED OFFSET
-	bool                                               Visible;                                                  // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               VisibleByTag;                                             // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00B2(0x0006) MISSED OFFSET
-	class UFunctionDesc*                               FunctionDesc;                                             // 0x00B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bCollect;                                                 // 0x00C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1F];                                      // 0x00C1(0x001F) MISSED OFFSET
+	struct FText Name; // 0x0028(0x0018) (Edit, BlueprintVisible)
+	struct FString KeyName; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString SubGraphName; // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString DisplayName; // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString NameInCode; // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FBlockPoint Size; // 0x0080(0x0008) (Edit, BlueprintVisible)
+	struct FBlockPoint TextSize; // 0x0088(0x0008) (Edit, BlueprintVisible)
+	struct FString BlockClassName; // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x00A0(0x0010) MISSED OFFSET
+	bool Visible; // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool VisibleByTag; // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x00B2(0x0006) MISSED OFFSET
+	class UFunctionDesc* FunctionDesc; // 0x00B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bCollect; // 0x00C0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x1F]; // 0x00C1(0x001F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyBlockListItemObject");
@@ -446,10 +428,9 @@ public:
 class UBlockyBlockListItemObject_Custom : public UBlockyBlockListItemObject
 {
 public:
-	class UCustomConfig*                               CustomConfig;                                             // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCustomConfig* CustomConfig; // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyBlockListItemObject_Custom");
@@ -464,11 +445,10 @@ public:
 class UBlockyBlockListItemObject_Preset : public UBlockyBlockListItemObject
 {
 public:
-	class UPresetDesc*                                 SourcePreset;                                             // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C0];                                     // 0x00E8(0x01C0) MISSED OFFSET
+	class UPresetDesc* SourcePreset; // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1C0]; // 0x00E8(0x01C0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyBlockListItemObject_Preset");
@@ -483,10 +463,9 @@ public:
 class UBlockyBlockListItemObject_Variable : public UBlockyBlockListItemObject
 {
 public:
-	class UNamedVar*                                   SourceVar;                                                // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNamedVar* SourceVar; // 0x00E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyBlockListItemObject_Variable");
@@ -501,27 +480,26 @@ public:
 class UBlockyCategoryItemObject : public UObject
 {
 public:
-	struct FText                                       Name;                                                     // 0x0028(0x0018) (Edit, BlueprintVisible)
-	struct FString                                     Type;                                                     // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     MenuType;                                                 // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UBlockyBlockListItemObject*>          Items;                                                    // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UBlockyBlockListItemObject*>          AddItems;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UBlockyBlockListItemObject*>          DelItems;                                                 // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPresetDesc*>                         Presets;                                                  // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               Visible;                                                  // 0x00A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               VisibleByTag;                                             // 0x00A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               ShowNum;                                                  // 0x00A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x00A3(0x0005) MISSED OFFSET
-	class UBrushData*                                  Brush;                                                    // 0x00A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  BrushSelected;                                            // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x00B8(0x0010) MISSED OFFSET
-	class UBlackboardDefiner*                          Blackboard;                                               // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIsPlayerBlackboard;                                      // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bIsShowRedDot;                                            // 0x00D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x16];                                      // 0x00D2(0x0016) MISSED OFFSET
+	struct FText Name; // 0x0028(0x0018) (Edit, BlueprintVisible)
+	struct FString Type; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString MenuType; // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UBlockyBlockListItemObject*> Items; // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UBlockyBlockListItemObject*> AddItems; // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UBlockyBlockListItemObject*> DelItems; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPresetDesc*> Presets; // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool Visible; // 0x00A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool VisibleByTag; // 0x00A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool ShowNum; // 0x00A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x5]; // 0x00A3(0x0005) MISSED OFFSET
+	class UBrushData* Brush; // 0x00A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBrushData* BrushSelected; // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x10]; // 0x00B8(0x0010) MISSED OFFSET
+	class UBlackboardDefiner* Blackboard; // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bIsPlayerBlackboard; // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bIsShowRedDot; // 0x00D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x16]; // 0x00D2(0x0016) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyCategoryItemObject");
@@ -542,15 +520,14 @@ public:
 class UBlockyCommand : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-	class UBlockyCommandData*                          UndoData;                                                 // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlockyCommandData*                          RedoData;                                                 // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlockyGraph*                                Graph;                                                    // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UBlockyCommand*>                      AdditionCommands;                                         // 0x00E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0xA8]; // 0x0028(0x00A8) MISSED OFFSET
+	class UBlockyCommandData* UndoData; // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockyCommandData* RedoData; // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockyGraph* Graph; // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UBlockyCommand*> AdditionCommands; // 0x00E8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x00F8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyCommand");
@@ -565,14 +542,13 @@ public:
 class UBlockyDeleteCommandData : public UBlockyCommandData
 {
 public:
-	struct FBlockPoint                                 Position;                                                 // 0x0030(0x0008)
-	class UBlockBase*                                  NextBlock;                                                // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0040(0x0018) MISSED OFFSET
-	class UBlockBase*                                  HostSlotBlock;                                            // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x70];                                      // 0x0060(0x0070) MISSED OFFSET
+	struct FBlockPoint Position; // 0x0030(0x0008)
+	class UBlockBase* NextBlock; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0040(0x0018) MISSED OFFSET
+	class UBlockBase* HostSlotBlock; // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x70]; // 0x0060(0x0070) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyDeleteCommandData");
@@ -588,8 +564,7 @@ class UBlockyEditorInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyEditorInterface");
@@ -599,36 +574,52 @@ public:
 };
 
 
+// Class BlockyLuaCore.BlockyExporter
+// 0x0000 (0x0028 - 0x0028)
+class UBlockyExporter : public UObject
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyExporter");
+		return pStaticClass;
+	}
+
+};
+
+
 // Class BlockyLuaCore.BlockyGraph
-// 0x0120 (0x0148 - 0x0028)
+// 0x0128 (0x0150 - 0x0028)
 class UBlockyGraph : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	struct FString                                     Name;                                                     // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Type;                                                     // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     DisplayName;                                              // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     TemplateName;                                             // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Description;                                              // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CategoryMode;                                             // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CapturePath;                                              // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     JsonPath;                                                 // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bCanBeDuplicated;                                         // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsDisable;                                               // 0x00B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00BA(0x0006) MISSED OFFSET
-	class UBlockyGraphData*                            HostGraphData;                                            // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UBlockBase*>                          RootBlocks;                                               // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UNamedVar*>                           LocalVars;                                                // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                CurrentVisibleBlockNum;                                   // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x00EC(0x000C) MISSED OFFSET
-	class UCanvasRenderTarget2D*                       RenderTarget;                                             // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ViewPosition;                                             // 0x0100(0x0008) (BlueprintVisible, IsPlainOldData)
-	struct FBlockPoint                                 ViewSize;                                                 // 0x0108(0x0008) (BlueprintVisible)
-	float                                              ViewScale;                                                // 0x0110(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x34];                                      // 0x0114(0x0034) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
+	struct FString Name; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Type; // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString DisplayName; // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString TemplateName; // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Description; // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CategoryMode; // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CapturePath; // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString JsonPath; // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bCanBeDuplicated; // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsDisable; // 0x00B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x00BA(0x0006) MISSED OFFSET
+	class UBlockyGraphData* HostGraphData; // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UBlockBase*> RootBlocks; // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData02[0x8]; // 0x00D8(0x0008) MISSED OFFSET
+	TArray<class UNamedVar*> LocalVars; // 0x00E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int CurrentVisibleBlockNum; // 0x00F0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0xC]; // 0x00F4(0x000C) MISSED OFFSET
+	class UCanvasRenderTarget2D* RenderTarget; // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector2D ViewPosition; // 0x0108(0x0008) (BlueprintVisible, IsPlainOldData)
+	struct FBlockPoint ViewSize; // 0x0110(0x0008) (BlueprintVisible)
+	float ViewScale; // 0x0118(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x34]; // 0x011C(0x0034) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyGraph");
@@ -640,7 +631,8 @@ public:
 	void TryAdjustingBlockIntoView(class UBlockyGraphData* GraphData);
 	void SetIsDisable(bool Disable);
 	void SaveGraphToFile(const struct FString& Filename, bool IsNewFile);
-	bool SaveGraphAsTemplate(TArray<unsigned char>* OutData);
+	bool SaveGraphAsTemplate(class UCustomConfig* CustomConfig, TArray<unsigned char>* OutData);
+	bool SaveCsutomGraphAsTemplate(TArray<unsigned char>* OutData);
 	void LoadGraphFromTemplate(TArray<unsigned char> Data, bool IsLoadPresetsInGraph);
 	bool IsCustomTemplateGraph();
 	bool IsCustomGraph();
@@ -661,8 +653,7 @@ class UBlockyGraphWidgetInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyGraphWidgetInterface");
@@ -677,90 +668,90 @@ public:
 class UBlockyGraphData : public UObject
 {
 public:
-	TScriptInterface<class UBlockyGraphWidgetInterface> GraphWidgetInterface;                                     // 0x0028(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ViewPosition;                                             // 0x0038(0x0008) (BlueprintVisible, IsPlainOldData)
-	struct FBlockPoint                                 ViewSize;                                                 // 0x0040(0x0008) (BlueprintVisible)
-	float                                              ViewScale;                                                // 0x0048(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	struct FVector2D                                   DisplayBlockSize;                                         // 0x0050(0x0008) (IsPlainOldData)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x0058(0x0088) MISSED OFFSET
-	bool                                               bShowDeleteBlockUI;                                       // 0x00E0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	class UNamedVar*                                   EditingVar;                                               // 0x00E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UNamedVar*>                           GlobalVars;                                               // 0x00F0(0x0010) (BlueprintVisible, ZeroConstructor)
-	TMap<struct FString, class UPresetDesc*>           PresetDescMap_Graph;                                      // 0x0100(0x0050) (BlueprintVisible, ZeroConstructor)
-	class UCustomConfig*                               EditingCustomConfig;                                      // 0x0150(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TMap<struct FGuid, class UCustomConfig*>           TemplateCustomConfigs;                                    // 0x0158(0x0050) (ZeroConstructor)
-	TMap<struct FGuid, class UCustomConfig*>           GameEventConfigs;                                         // 0x01A8(0x0050) (BlueprintVisible, ZeroConstructor)
-	class UExecuteable*                                CurrExeBlock;                                             // 0x01F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UExecuteable*                                EditingExeBlock;                                          // 0x0200(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UBlockyGraph*>                        SubBlockyGraphs;                                          // 0x0208(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UBlockyGraph*>                        BlockyGraphsCallStack;                                    // 0x0218(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FString>               CacheData;                                                // 0x0228(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FText                                       Name;                                                     // 0x0278(0x0018)
-	class UBlockBase*                                  CurrentPutSlotHostBlock;                                  // 0x0290(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x0298(0x0018) MISSED OFFSET
-	class UBlockBase*                                  CurrentPutSlotReplacedBlock;                              // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlockBase*                                  CurrentTopPutBlock;                                       // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x02C0(0x0008) MISSED OFFSET
-	class UBlockBase*                                  CurrentSettingBlock;                                      // 0x02C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USelectionData*                              CurrentSelection;                                         // 0x02D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USelectionData*                              CurrentPointAt;                                           // 0x02D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UExecuteablePreview*                         BlockPreview;                                             // 0x02E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnSaveProgress;                                           // 0x02E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	bool                                               IsGraphDirty;                                             // 0x02F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsLoading;                                                // 0x02F9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0xE];                                       // 0x02FA(0x000E) MISSED OFFSET
-	class UBrushData*                                  DefaultRectBrush;                                         // 0x0308(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterial*                                   PreViewMaterial;                                          // 0x0310(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  PreViewBrush;                                             // 0x0318(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  AnimateBrush;                                             // 0x0320(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    DeleteUIDynamicMaterial;                                  // 0x0328(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    DeleteRangeUIDynamicMaterial;                             // 0x0330(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    DeleteUIBgDynamicMaterial;                                // 0x0338(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  DeleteRangeUIDockingBrush;                                // 0x0340(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  DeleteUIDockingBrush;                                     // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  DeleteUIBgBrush;                                          // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x20];                                      // 0x0358(0x0020) MISSED OFFSET
-	class UBlockBase*                                  TouchBlockHostSlotHost;                                   // 0x0378(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0xE8];                                      // 0x0380(0x00E8) MISSED OFFSET
-	struct FScriptDelegate                             OnOpenCustomPanel;                                        // 0x0468(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenCustomPopup;                                        // 0x0478(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenCustomSavePopup;                                    // 0x0488(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCloseCustomPopup;                                       // 0x0498(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenVariablePopup;                                      // 0x04A8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenBlackboardPopup;                                    // 0x04B8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCloseVariablePopup;                                     // 0x04C8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenVariable;                                           // 0x04D8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnUpdateUndoRedoState;                                    // 0x04E8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnShowTips;                                               // 0x04F8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnShowInitUI;                                             // 0x0508(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenVariablePanel;                                      // 0x0518(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenCreateBlackboardPanel;                              // 0x0528(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenEditBlackboardPanel;                                // 0x0538(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenCreateCustomVarPanel;                               // 0x0548(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenEditCustomVarPanel;                                 // 0x0558(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OpenDelCustomVarPanel;                                    // 0x0568(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnQuoteBlock;                                             // 0x0578(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnShowBlockSettingPop;                                    // 0x0588(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenCommentPopup;                                       // 0x0598(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCloseCommentPopup;                                      // 0x05A8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetBlockLogNum;                                         // 0x05B8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetBlockLogTabNum;                                      // 0x05C8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetBlockLogText;                                        // 0x05D8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnClearBlockLog;                                          // 0x05E8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenAnimationPopup;                                     // 0x05F8(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCloseAnimationPopup;                                    // 0x0608(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnShowBlockVariablePopup;                                 // 0x0618(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData08[0x10];                                      // 0x0628(0x0010) MISSED OFFSET
-	TArray<struct FString>                             OpendItemStrings;                                         // 0x0638(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     CurSelectTriggerType;                                     // 0x0648(0x0010) (BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData09[0x1];                                       // 0x0658(0x0001) MISSED OFFSET
-	bool                                               IsOpenedCaption;                                          // 0x0659(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x76];                                      // 0x065A(0x0076) MISSED OFFSET
+	TScriptInterface<class UBlockyGraphWidgetInterface> GraphWidgetInterface; // 0x0028(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FVector2D ViewPosition; // 0x0038(0x0008) (BlueprintVisible, IsPlainOldData)
+	struct FBlockPoint ViewSize; // 0x0040(0x0008) (BlueprintVisible)
+	float ViewScale; // 0x0048(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x004C(0x0004) MISSED OFFSET
+	struct FVector2D DisplayBlockSize; // 0x0050(0x0008) (IsPlainOldData)
+	unsigned char UnknownData01[0x88]; // 0x0058(0x0088) MISSED OFFSET
+	bool bShowDeleteBlockUI; // 0x00E0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x00E1(0x0007) MISSED OFFSET
+	class UNamedVar* EditingVar; // 0x00E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UNamedVar*> GlobalVars; // 0x00F0(0x0010) (BlueprintVisible, ZeroConstructor)
+	TMap<struct FString, class UPresetDesc*> PresetDescMap_Graph; // 0x0100(0x0050) (BlueprintVisible, ZeroConstructor)
+	class UCustomConfig* EditingCustomConfig; // 0x0150(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TMap<struct FGuid, class UCustomConfig*> TemplateCustomConfigs; // 0x0158(0x0050) (ZeroConstructor)
+	TMap<struct FGuid, class UCustomConfig*> GameEventConfigs; // 0x01A8(0x0050) (BlueprintVisible, ZeroConstructor)
+	class UExecuteable* CurrExeBlock; // 0x01F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UExecuteable* EditingExeBlock; // 0x0200(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UBlockyGraph*> SubBlockyGraphs; // 0x0208(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UBlockyGraph*> BlockyGraphsCallStack; // 0x0218(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FString> CacheData; // 0x0228(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FText Name; // 0x0278(0x0018)
+	class UBlockBase* CurrentPutSlotHostBlock; // 0x0290(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x18]; // 0x0298(0x0018) MISSED OFFSET
+	class UBlockBase* CurrentPutSlotReplacedBlock; // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockBase* CurrentTopPutBlock; // 0x02B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x8]; // 0x02C0(0x0008) MISSED OFFSET
+	class UBlockBase* CurrentSettingBlock; // 0x02C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USelectionData* CurrentSelection; // 0x02D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USelectionData* CurrentPointAt; // 0x02D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UExecuteablePreview* BlockPreview; // 0x02E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate OnSaveProgress; // 0x02E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	bool IsGraphDirty; // 0x02F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsLoading; // 0x02F9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0xE]; // 0x02FA(0x000E) MISSED OFFSET
+	class UBrushData* DefaultRectBrush; // 0x0308(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterial* PreViewMaterial; // 0x0310(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* PreViewBrush; // 0x0318(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* AnimateBrush; // 0x0320(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic* DeleteUIDynamicMaterial; // 0x0328(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic* DeleteRangeUIDynamicMaterial; // 0x0330(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic* DeleteUIBgDynamicMaterial; // 0x0338(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* DeleteRangeUIDockingBrush; // 0x0340(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* DeleteUIDockingBrush; // 0x0348(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* DeleteUIBgBrush; // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x20]; // 0x0358(0x0020) MISSED OFFSET
+	class UBlockBase* TouchBlockHostSlotHost; // 0x0378(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData07[0xE8]; // 0x0380(0x00E8) MISSED OFFSET
+	struct FScriptDelegate OnOpenCustomPanel; // 0x0468(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenCustomPopup; // 0x0478(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenCustomSavePopup; // 0x0488(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCloseCustomPopup; // 0x0498(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenVariablePopup; // 0x04A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenBlackboardPopup; // 0x04B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCloseVariablePopup; // 0x04C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenVariable; // 0x04D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnUpdateUndoRedoState; // 0x04E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnShowTips; // 0x04F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnShowInitUI; // 0x0508(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenVariablePanel; // 0x0518(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenCreateBlackboardPanel; // 0x0528(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenEditBlackboardPanel; // 0x0538(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenCreateCustomVarPanel; // 0x0548(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenEditCustomVarPanel; // 0x0558(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OpenDelCustomVarPanel; // 0x0568(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnQuoteBlock; // 0x0578(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnShowBlockSettingPop; // 0x0588(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenCommentPopup; // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCloseCommentPopup; // 0x05A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetBlockLogNum; // 0x05B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetBlockLogTabNum; // 0x05C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetBlockLogText; // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnClearBlockLog; // 0x05E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenAnimationPopup; // 0x05F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCloseAnimationPopup; // 0x0608(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnShowBlockVariablePopup; // 0x0618(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char UnknownData08[0x10]; // 0x0628(0x0010) MISSED OFFSET
+	TArray<struct FString> OpendItemStrings; // 0x0638(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString CurSelectTriggerType; // 0x0648(0x0010) (BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData09[0x1]; // 0x0658(0x0001) MISSED OFFSET
+	bool IsOpenedCaption; // 0x0659(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsFirstFindPresetMap; // 0x065A(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData10[0x75]; // 0x065B(0x0075) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyGraphData");
@@ -822,6 +813,7 @@ public:
 	bool IsFirstGraph();
 	bool IsBlockGuideButton();
 	bool HasExecutableCode();
+	bool GM_LoadGraph_DS_FromFiles(const struct FString& GraphFilePath, const struct FString& GlobalVarsFilePath);
 	void GM_LoadGraph_DS();
 	void GM_GenerateAllBlocks(int CombinedBlocksNum, int GraphBlocksNum);
 	TArray<struct FString> GetTriggerList();
@@ -844,9 +836,11 @@ public:
 	class UBlockyGraph* GetCurrentGraph();
 	int GetCurrentBlockyNumByMune(const struct FString& Menu, const struct FString& Category);
 	TMap<struct FString, struct FString> GetCacheData();
+	void GetBlockyStringDatasInPairWithBlocks(TArray<struct FBlockySlotString>* OutSlotStrings, TArray<class UBlockBase*>* OutBlocks);
 	TArray<struct FBlockySlotString> GetBlockyStringDatasInPair();
 	TArray<class UBlockBase*> GetBlocks();
 	TArray<class UBlockBase*> GetAllBlockyInGraph();
+	TArray<struct FString> GetAllBlockIdStrings();
 	TMap<struct FString, int> GetAllBlockByKeyName();
 	class UBlockBase* FocusToSlotByBlockySlotId(const struct FBlockySlotString& SlotID);
 	void FocusToSlot(class UBlockBase* TargetBlock, const struct FString& TargetSlotIdStr);
@@ -891,278 +885,298 @@ public:
 };
 
 
+// Class BlockyLuaCore.BlockyLuaCommandlet
+// 0x0000 (0x0080 - 0x0080)
+class UBlockyLuaCommandlet : public UCommandlet
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyLuaCommandlet");
+		return pStaticClass;
+	}
+
+};
+
+
 // Class BlockyLuaCore.BlockyLuaConfig
-// 0x1580 (0x15A8 - 0x0028)
+// 0x15A0 (0x15C8 - 0x0028)
 class UBlockyLuaConfig : public UObject
 {
 public:
-	int                                                MaxBlockCount;                                            // 0x0028(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxBlockCountInGraph;                                     // 0x002C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxBlockCountInViewport;                                  // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxBlockCountInOneBlock;                                  // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.DisabledFuncSet
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0088(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.BlockReginsSet
-	bool                                               bShowGuideButton;                                         // 0x00D8(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
-	TMap<struct FString, struct FString>               ReginsGuideUrlSet;                                        // 0x00E0(0x0050) (Edit, ZeroConstructor, Config)
-	float                                              GraphMinScale;                                            // 0x0130(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              GraphMaxScale;                                            // 0x0134(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              DragCheckDelta;                                           // 0x0138(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              EjectOffsetX;                                             // 0x013C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              EjectOffsetY;                                             // 0x0140(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PasteOffsetMaxCount;                                      // 0x0144(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   PasteOffset;                                              // 0x0148(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   ExecuteableSnapPositionOffset;                            // 0x0150(0x0008) (Edit, Config, IsPlainOldData)
-	ESlotClickType                                     DefaultArrayTypeFilterClickType;                          // 0x0158(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0158(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData04[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
-	TArray<struct FString>                             NameInvalidChar;                                          // 0x0160(0x0010) (ZeroConstructor)
-	struct FString                                     InvalidTranslateString;                                   // 0x0170(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     InvalidTranslateMaskString;                               // 0x0180(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ArrayInitStringStart;                                     // 0x0190(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ArrayInitStringEnd;                                       // 0x01A0(0x0010) (Edit, ZeroConstructor, Config)
-	unsigned char                                      ArrangeMaxTimePerFrame;                                   // 0x01B0(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x01B1(0x0007) MISSED OFFSET
-	struct FSoftObjectPath                             FontName;                                                 // 0x01B8(0x0018) (Edit, Config)
-	int                                                FontSize;                                                 // 0x01D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x01D4(0x0004) MISSED OFFSET
-	struct FSlateFontInfo                              CustomDefaultFont;                                        // 0x01D8(0x0058) (Edit, Config)
-	bool                                               UseCustomFont;                                            // 0x0230(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0231(0x0003) MISSED OFFSET
-	float                                              RTLYOffset;                                               // 0x0234(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              LTRYOffset;                                               // 0x0238(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   EmblemOffset;                                             // 0x023C(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              DefaultBlockWidth;                                        // 0x0244(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              DefaultBlockHeight;                                       // 0x0248(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     BlockPadding;                                             // 0x024C(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              BlockIconSize;                                            // 0x025C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     BlockIconBorder;                                          // 0x0260(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              BlockButtonSize;                                          // 0x0270(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockSettingButtonSize;                                   // 0x0274(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockButtonClickSize;                                     // 0x0278(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     BlockButtonBorder;                                        // 0x027C(0x0010) (Edit, Config, IsPlainOldData)
-	struct FMargin                                     BlockTextBorder;                                          // 0x028C(0x0010) (Edit, Config, IsPlainOldData)
-	struct FMargin                                     BlockSlotBorder;                                          // 0x029C(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              CrossDelta;                                               // 0x02AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              CornerDelta;                                              // 0x02B0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              VariableIconSize;                                         // 0x02B4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              VariableIconIndent;                                       // 0x02B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              VariableCopyIconSize;                                     // 0x02BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   StringInputBlockSize;                                     // 0x02C0(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              DefaultSlotWidth;                                         // 0x02C8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              DefaultSlotHeight;                                        // 0x02CC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     SlotPadding;                                              // 0x02D0(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              SlotIconSize;                                             // 0x02E0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     SlotIconBorder;                                           // 0x02E4(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              TriangleIconSize;                                         // 0x02F4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     SlotTriangleBorder;                                       // 0x02F8(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              WarringIconSize;                                          // 0x0308(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              ForbiddenIconSize;                                        // 0x030C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     SlotWarringBorder;                                        // 0x0310(0x0010) (Edit, Config, IsPlainOldData)
-	struct FMargin                                     SlotForbiddenBorder;                                      // 0x0320(0x0010) (Edit, Config, IsPlainOldData)
-	struct FMargin                                     SlotTextBorder;                                           // 0x0330(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              SlotTextSizeRefactor;                                     // 0x0340(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   ColorBrushSize;                                           // 0x0344(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   ColorContentSize;                                         // 0x034C(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              HookupSlotWidth;                                          // 0x0354(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              HookupSlotHeight;                                         // 0x0358(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              HookupChildIndentation;                                   // 0x035C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              HookupLinkWidth;                                          // 0x0360(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   CommentButtonSize;                                        // 0x0364(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   CommentTextSize;                                          // 0x036C(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   CommentFlodSize;                                          // 0x0374(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   CommentTitleSize;                                         // 0x037C(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              CommentLineLen;                                           // 0x0384(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                CommentBlinkCount;                                        // 0x0388(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              CommentBlinkSpeed;                                        // 0x038C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockListWidth;                                           // 0x0390(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FMargin                                     ListBlockSelectedIconPadding;                             // 0x0394(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              ListBlockSelectedIconSize;                                // 0x03A4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              NextCategoryOffset;                                       // 0x03A8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              NextCategoryOffset_Variable;                              // 0x03AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              DeleteBlocksYOffset;                                      // 0x03B0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   DeleteBlocksSize;                                         // 0x03B4(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   CanDeleteSize;                                            // 0x03BC(0x0008) (Edit, Config, IsPlainOldData)
-	struct FVector2D                                   BlockEmblemSize;                                          // 0x03C4(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              DisplayViewMaxBlockWidth;                                 // 0x03CC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FLinearColor                                DefaultBackColor;                                         // 0x03D0(0x0010) (Edit, Config, IsPlainOldData)
-	struct FLinearColor                                DarkBackColor;                                            // 0x03E0(0x0010) (Edit, Config, IsPlainOldData)
-	struct FLinearColor                                KeyWordColor;                                             // 0x03F0(0x0010) (Edit, Config, IsPlainOldData)
-	struct FLinearColor                                IllegalWordColor;                                         // 0x0400(0x0010) (Edit, Config, IsPlainOldData)
-	struct FLinearColor                                FunctionBackColor;                                        // 0x0410(0x0010) (Edit, Config, IsPlainOldData)
-	float                                              BlockSnapAreaLeft;                                        // 0x0420(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockSnapAreaTop;                                         // 0x0424(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockSnapAreaWidth;                                       // 0x0428(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              BlockSnapAreaHeight;                                      // 0x042C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FString                                     PreViewMaterial;                                          // 0x0430(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LocalizationNameSpace;                                    // 0x0440(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     DefaultRect;                                              // 0x0450(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ActionRect;                                               // 0x0460(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ActionRectSelected;                                       // 0x0470(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ValueRect;                                                // 0x0480(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ValueDisableRect;                                         // 0x0490(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ValueSelectDisableRect;                                   // 0x04A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BoolBlock;                                                // 0x04B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BoolBlockEmpty;                                           // 0x04C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BoolBlockSelect;                                          // 0x04D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BoolBlockDisable;                                         // 0x04E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     NumBlockEmpty;                                            // 0x04F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     NumBlockSelect;                                           // 0x0500(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     NumBlockDisable;                                          // 0x0510(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     DeleteBlocksRect;                                         // 0x0520(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SnapShowRect;                                             // 0x0530(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ListItemSelected;                                         // 0x0540(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SingleVarRect;                                            // 0x0550(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ArrayVarRect;                                             // 0x0560(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CallbackVarRect;                                          // 0x0570(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     VarRectDisable;                                           // 0x0580(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     VarOutline;                                               // 0x0590(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     GlobalVarIcon;                                            // 0x05A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CanvasVarIcon;                                            // 0x05B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LocalVarIcon;                                             // 0x05C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CallbackVarIcon;                                          // 0x05D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomIcon;                                               // 0x05E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomActionBG;                                           // 0x05F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomActionBG_Selected;                                  // 0x0600(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomActionBG_Gray;                                      // 0x0610(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomActionBG_Gray_Selected;                             // 0x0620(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomValueBG;                                            // 0x0630(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomValueBG_Selected;                                   // 0x0640(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomValueBG_Gray;                                       // 0x0650(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomValueBG_Gray_Selected;                              // 0x0660(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomEventBG;                                            // 0x0670(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomEventBG_Selected;                                   // 0x0680(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomEventBG_Gray;                                       // 0x0690(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomEventBG_Gray_Selected;                              // 0x06A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomBlock_Emblem;                                       // 0x06B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomBlock_Emblem_Selected;                              // 0x06C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomBlock_Emblem_Disable;                               // 0x06D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CustomBlock_Emblem_DisableSelected;                       // 0x06E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     EventBlock_Emblem;                                        // 0x06F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     EventBlock_Emblem_Selected;                               // 0x0700(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     EventBlock_Emblem_Disable;                                // 0x0710(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     EventBlock_Emblem_DisableSelected;                        // 0x0720(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicUp;                                                  // 0x0730(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicUpSelected;                                          // 0x0740(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicUpGray;                                              // 0x0750(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicUpSelectedGray;                                      // 0x0760(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicMiddle;                                              // 0x0770(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicMiddleSelected;                                      // 0x0780(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicBottom;                                              // 0x0790(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicBottomGray;                                          // 0x07A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicBottomSelected;                                      // 0x07B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicBottomSelectedGray;                                  // 0x07C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicSlot;                                                // 0x07D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicSlotGray;                                            // 0x07E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicSlotSelected;                                        // 0x07F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     LogicSlotSelectedGray;                                    // 0x0800(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     HookupSlot;                                               // 0x0810(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ButtonWithTextBg_Enable;                                  // 0x0820(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ButtonWithTextBg_Selected;                                // 0x0830(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ButtonWithTextBg_Disable;                                 // 0x0840(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ButtonWithTextBg_DisableSelected;                         // 0x0850(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SlotTriangle;                                             // 0x0860(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SlotWarring;                                              // 0x0870(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SlotForbidden;                                            // 0x0880(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SlotIllegalInput;                                         // 0x0890(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     FunctionIcon;                                             // 0x08A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SettingIcon;                                              // 0x08B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     ColorIcon;                                                // 0x08C0(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FLinearColor>                        DefaultHSVs;                                              // 0x08D0(0x0010) (ZeroConstructor)
-	struct FString                                     CopyIcon;                                                 // 0x08E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     CommentIcon;                                              // 0x08F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     FlodIcon;                                                 // 0x0900(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     UnbindIcon;                                               // 0x0910(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SeparatorIcon;                                            // 0x0920(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     NoneIcon;                                                 // 0x0930(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     DefaultCategoryIcon;                                      // 0x0940(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     DefaultCategorySelectedIcon;                              // 0x0950(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BlockyGlobalVarPath;                                      // 0x0960(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BlockyGraphPath;                                          // 0x0970(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     GenerateCodePath;                                         // 0x0980(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     AssetPackageName;                                         // 0x0990(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     TextrueRectParamPath;                                     // 0x09A0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     FunctionPath;                                             // 0x09B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     FunctionFolderPath;                                       // 0x09C0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     VariablePath;                                             // 0x09D0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     PresetsPath;                                              // 0x09E0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     PresetsFolderPath;                                        // 0x09F0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     AllTypesPath;                                             // 0x0A00(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     TranslateStringPath;                                      // 0x0A10(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     BlockyNewStringPath;                                      // 0x0A20(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     SequencePath;                                             // 0x0A30(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     TLogParamPath;                                            // 0x0A40(0x0010) (Edit, ZeroConstructor, Config)
-	int                                                UndoMaxSteps;                                             // 0x0A50(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxStoredNumOfSearchHistory;                              // 0x0A54(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               SearchUseCase;                                            // 0x0A58(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0A59(0x0003) MISSED OFFSET
-	struct FLinearColor                                SearchedKeyWordColor;                                     // 0x0A5C(0x0010) (Edit, Config, IsPlainOldData)
-	int                                                MaxTemplateDescriptionLen;                                // 0x0A6C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              SaveCooldownDuration;                                     // 0x0A70(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x4];                                       // 0x0A74(0x0004) MISSED OFFSET
-	TMap<struct FString, class UBrushData*>            BlockyBrushDatas;                                         // 0x0A78(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FBlockyBrushInfo>      BlockyBrushInfos;                                         // 0x0AC8(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FString>               RTLBrushMap;                                              // 0x0B18(0x0050) (ZeroConstructor)
-	TArray<struct FString>                             BlockyBrushNames;                                         // 0x0B68(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData10[0xA0];                                      // 0x0B78(0x00A0) MISSED OFFSET
-	TMap<struct FString, class UFunctionDesc*>         Functions;                                                // 0x0C18(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UFunctionDesc*>         FuncTemplates;                                            // 0x0C68(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UFunctionDesc*>         TypeFilterFunctions;                                      // 0x0CB8(0x0050) (ZeroConstructor)
-	TArray<class UBlackboardDefiner*>                  BlackboardDefiners;                                       // 0x0D08(0x0010) (ZeroConstructor)
-	TMap<struct FString, class UVarDefiner*>           VarDefiners;                                              // 0x0D18(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UCustomDefiner*>        CustomDefiners;                                           // 0x0D68(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UCategoryDefiner*>      CategoryDefiners;                                         // 0x0DB8(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UEnumDesc*>             Enums;                                                    // 0x0E08(0x0050) (ZeroConstructor)
-	TArray<class UBlockyMenuItemObject*>               MenuItems;                                                // 0x0E58(0x0010) (ZeroConstructor)
-	TMap<struct FString, class UTypeConvertDesc*>      TypeConverts;                                             // 0x0E68(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UPresetDesc*>           PresetDescMap;                                            // 0x0EB8(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UPresetDesc*>           CodeNameAndTypeKeyPresetDescMap;                          // 0x0F08(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FPresetTypeData>       TypeNameKeyPresetDescMap;                                 // 0x0F58(0x0050) (ZeroConstructor)
-	TArray<class UBlockyMenuItemObject*>               PresetMenuItems;                                          // 0x0FA8(0x0010) (ZeroConstructor)
-	TArray<class UBlockyGraph*>                        TemplateGraphs;                                           // 0x0FB8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData11[0x50];                                      // 0x0FC8(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.AllTypes
-	unsigned char                                      UnknownData12[0x50];                                      // 0x1018(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.CustomVarTypes
-	TMap<struct FString, struct FString>               TipsMap;                                                  // 0x1068(0x0050) (ZeroConstructor)
-	TMap<struct FString, bool>                         BlockyNewsMap;                                            // 0x10B8(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FString>               TLogParamsMap;                                            // 0x1108(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FString>               TLogParamsTypeMap;                                        // 0x1158(0x0050) (ZeroConstructor)
-	TArray<struct FString>                             MenuSequence;                                             // 0x11A8(0x0010) (ZeroConstructor)
-	TMap<struct FString, struct FSequence>             CategorySequence;                                         // 0x11B8(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FSequence>             ItemSequence;                                             // 0x1208(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData13[0x18];                                      // 0x1258(0x0018) MISSED OFFSET
-	struct FSlateFontInfo                              FontInfo;                                                 // 0x1270(0x0058)
-	unsigned char                                      UnknownData14[0x8];                                       // 0x12C8(0x0008) MISSED OFFSET
-	TMap<struct FString, class UVarDefiner*>           AllTypesMap;                                              // 0x12D0(0x0050) (ZeroConstructor)
-	TMap<struct FGuid, struct FScriptDelegate>         OnReceiveCheckStringResults;                              // 0x1320(0x0050) (ZeroConstructor)
-	struct FScriptDelegate                             OnGetLocaleString;                                        // 0x1370(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCallCustomSelectObject;                                 // 0x1380(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnReceiveCustomSelectObject;                              // 0x1390(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCheckShowCustomSelection;                               // 0x13A0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnShowPresetPanelHandler;                                 // 0x13B0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCheckShowPresetFilterBtn;                               // 0x13C0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnModifyTip;                                              // 0x13D0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnAddBlockyLog;                                           // 0x13E0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnGetValidString;                                         // 0x13F0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCheckStringValid;                                       // 0x1400(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnMessageData;                                            // 0x1410(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnIsCurrentCultureLTR;                                    // 0x1420(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnGetTextLen;                                             // 0x1430(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnPlayPresetSound;                                        // 0x1440(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnOpenGuide;                                              // 0x1450(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetGraphSetting;                                        // 0x1460(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnGetBlockNewState;                                       // 0x1470(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetBlockNewState;                                       // 0x1480(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnGetSearchHistorys;                                      // 0x1490(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnSetSearchHistorys;                                      // 0x14A0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnGetUrlIconAsset;                                        // 0x14B0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCallUrlIconAssetToLoad;                                 // 0x14C0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             OnCallPresetSelectedCode;                                 // 0x14D0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData15[0x70];                                      // 0x14E0(0x0070) MISSED OFFSET
-	class UHotfixUtility*                              HotfixUtility;                                            // 0x1550(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData16[0x50];                                      // 0x1558(0x0050) MISSED OFFSET
+	int MaxBlockCount; // 0x0028(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxBlockCountInGraph; // 0x002C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxBlockCountInViewport; // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxBlockCountInOneBlock; // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockOffsetFromBin_X; // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockOffsetFromBin_Y; // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x50]; // 0x0040(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.DisabledFuncSet
+	unsigned char UnknownData01[0x50]; // 0x0090(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.BlockReginsSet
+	bool bShowGuideButton; // 0x00E0(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x00E1(0x0007) MISSED OFFSET
+	TMap<struct FString, struct FString> ReginsGuideUrlSet; // 0x00E8(0x0050) (Edit, ZeroConstructor, Config)
+	float GraphMinScale; // 0x0138(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float GraphMaxScale; // 0x013C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float DragCheckDelta; // 0x0140(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float EjectOffsetX; // 0x0144(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float EjectOffsetY; // 0x0148(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float PasteOffsetMaxCount; // 0x014C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D PasteOffset; // 0x0150(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D ExecuteableSnapPositionOffset; // 0x0158(0x0008) (Edit, Config, IsPlainOldData)
+	ESlotClickType DefaultArrayTypeFilterClickType; // 0x0160(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x0160(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char UnknownData04[0x4]; // 0x0164(0x0004) MISSED OFFSET
+	TArray<struct FString> NameInvalidChar; // 0x0168(0x0010) (ZeroConstructor)
+	struct FString InvalidTranslateString; // 0x0178(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString InvalidTranslateMaskString; // 0x0188(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ArrayInitStringStart; // 0x0198(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ArrayInitStringEnd; // 0x01A8(0x0010) (Edit, ZeroConstructor, Config)
+	unsigned char ArrangeMaxTimePerFrame; // 0x01B8(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData05[0x7]; // 0x01B9(0x0007) MISSED OFFSET
+	struct FSoftObjectPath FontName; // 0x01C0(0x0018) (Edit, Config)
+	int FontSize; // 0x01D8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData06[0x4]; // 0x01DC(0x0004) MISSED OFFSET
+	struct FSlateFontInfo CustomDefaultFont; // 0x01E0(0x0058) (Edit, Config)
+	bool UseCustomFont; // 0x0238(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData07[0x3]; // 0x0239(0x0003) MISSED OFFSET
+	float RTLYOffset; // 0x023C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float LTRYOffset; // 0x0240(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D EmblemOffset; // 0x0244(0x0008) (Edit, Config, IsPlainOldData)
+	float DefaultBlockWidth; // 0x024C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float DefaultBlockHeight; // 0x0250(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin BlockPadding; // 0x0254(0x0010) (Edit, Config, IsPlainOldData)
+	float BlockIconSize; // 0x0264(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin BlockIconBorder; // 0x0268(0x0010) (Edit, Config, IsPlainOldData)
+	float BlockButtonSize; // 0x0278(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockSettingButtonSize; // 0x027C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockButtonClickSize; // 0x0280(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin BlockButtonBorder; // 0x0284(0x0010) (Edit, Config, IsPlainOldData)
+	struct FMargin BlockTextBorder; // 0x0294(0x0010) (Edit, Config, IsPlainOldData)
+	struct FMargin BlockSlotBorder; // 0x02A4(0x0010) (Edit, Config, IsPlainOldData)
+	float CrossDelta; // 0x02B4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float CornerDelta; // 0x02B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float VariableIconSize; // 0x02BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float VariableIconIndent; // 0x02C0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float VariableCopyIconSize; // 0x02C4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D StringInputBlockSize; // 0x02C8(0x0008) (Edit, Config, IsPlainOldData)
+	float DefaultSlotWidth; // 0x02D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float DefaultSlotHeight; // 0x02D4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin SlotPadding; // 0x02D8(0x0010) (Edit, Config, IsPlainOldData)
+	float SlotIconSize; // 0x02E8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin SlotIconBorder; // 0x02EC(0x0010) (Edit, Config, IsPlainOldData)
+	float TriangleIconSize; // 0x02FC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin SlotTriangleBorder; // 0x0300(0x0010) (Edit, Config, IsPlainOldData)
+	float WarringIconSize; // 0x0310(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float ForbiddenIconSize; // 0x0314(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin SlotWarringBorder; // 0x0318(0x0010) (Edit, Config, IsPlainOldData)
+	struct FMargin SlotForbiddenBorder; // 0x0328(0x0010) (Edit, Config, IsPlainOldData)
+	struct FMargin SlotTextBorder; // 0x0338(0x0010) (Edit, Config, IsPlainOldData)
+	float SlotTextSizeRefactor; // 0x0348(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D ColorBrushSize; // 0x034C(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D ColorContentSize; // 0x0354(0x0008) (Edit, Config, IsPlainOldData)
+	float HookupSlotWidth; // 0x035C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float HookupSlotHeight; // 0x0360(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float HookupChildIndentation; // 0x0364(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float HookupLinkWidth; // 0x0368(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D CommentButtonSize; // 0x036C(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D CommentTextSize; // 0x0374(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D CommentFlodSize; // 0x037C(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D CommentTitleSize; // 0x0384(0x0008) (Edit, Config, IsPlainOldData)
+	float CommentLineLen; // 0x038C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int CommentBlinkCount; // 0x0390(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float CommentBlinkSpeed; // 0x0394(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockListWidth; // 0x0398(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FMargin ListBlockSelectedIconPadding; // 0x039C(0x0010) (Edit, Config, IsPlainOldData)
+	float ListBlockSelectedIconSize; // 0x03AC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float NextCategoryOffset; // 0x03B0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float NextCategoryOffset_Variable; // 0x03B4(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float VarListXOffset; // 0x03B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float DeleteBlocksYOffset; // 0x03BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D DeleteBlocksSize; // 0x03C0(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D CanDeleteSize; // 0x03C8(0x0008) (Edit, Config, IsPlainOldData)
+	struct FVector2D BlockEmblemSize; // 0x03D0(0x0008) (Edit, Config, IsPlainOldData)
+	float DisplayViewMaxBlockWidth; // 0x03D8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FLinearColor DefaultBackColor; // 0x03DC(0x0010) (Edit, Config, IsPlainOldData)
+	struct FLinearColor DarkBackColor; // 0x03EC(0x0010) (Edit, Config, IsPlainOldData)
+	struct FLinearColor KeyWordColor; // 0x03FC(0x0010) (Edit, Config, IsPlainOldData)
+	struct FLinearColor IllegalWordColor; // 0x040C(0x0010) (Edit, Config, IsPlainOldData)
+	struct FLinearColor FunctionBackColor; // 0x041C(0x0010) (Edit, Config, IsPlainOldData)
+	float BlockSnapAreaLeft; // 0x042C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockSnapAreaTop; // 0x0430(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockSnapAreaWidth; // 0x0434(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float BlockSnapAreaHeight; // 0x0438(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData08[0x4]; // 0x043C(0x0004) MISSED OFFSET
+	struct FString PreViewMaterial; // 0x0440(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LocalizationNameSpace; // 0x0450(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString DefaultRect; // 0x0460(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ActionRect; // 0x0470(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ActionRectSelected; // 0x0480(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ValueRect; // 0x0490(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ValueDisableRect; // 0x04A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ValueSelectDisableRect; // 0x04B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BoolBlock; // 0x04C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BoolBlockEmpty; // 0x04D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BoolBlockSelect; // 0x04E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BoolBlockDisable; // 0x04F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString NumBlockEmpty; // 0x0500(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString NumBlockSelect; // 0x0510(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString NumBlockDisable; // 0x0520(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString DeleteBlocksRect; // 0x0530(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SnapShowRect; // 0x0540(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ListItemSelected; // 0x0550(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SingleVarRect; // 0x0560(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ArrayVarRect; // 0x0570(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CallbackVarRect; // 0x0580(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString VarRectDisable; // 0x0590(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString VarOutline; // 0x05A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString GlobalVarIcon; // 0x05B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CanvasVarIcon; // 0x05C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LocalVarIcon; // 0x05D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CallbackVarIcon; // 0x05E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomIcon; // 0x05F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomActionBG; // 0x0600(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomActionBG_Selected; // 0x0610(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomActionBG_Gray; // 0x0620(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomActionBG_Gray_Selected; // 0x0630(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomValueBG; // 0x0640(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomValueBG_Selected; // 0x0650(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomValueBG_Gray; // 0x0660(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomValueBG_Gray_Selected; // 0x0670(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomEventBG; // 0x0680(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomEventBG_Selected; // 0x0690(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomEventBG_Gray; // 0x06A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomEventBG_Gray_Selected; // 0x06B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomBlock_Emblem; // 0x06C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomBlock_Emblem_Selected; // 0x06D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomBlock_Emblem_Disable; // 0x06E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CustomBlock_Emblem_DisableSelected; // 0x06F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString EventBlock_Emblem; // 0x0700(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString EventBlock_Emblem_Selected; // 0x0710(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString EventBlock_Emblem_Disable; // 0x0720(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString EventBlock_Emblem_DisableSelected; // 0x0730(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicUp; // 0x0740(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicUpSelected; // 0x0750(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicUpGray; // 0x0760(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicUpSelectedGray; // 0x0770(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicMiddle; // 0x0780(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicMiddleSelected; // 0x0790(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicBottom; // 0x07A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicBottomGray; // 0x07B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicBottomSelected; // 0x07C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicBottomSelectedGray; // 0x07D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicSlot; // 0x07E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicSlotGray; // 0x07F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicSlotSelected; // 0x0800(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString LogicSlotSelectedGray; // 0x0810(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString HookupSlot; // 0x0820(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ButtonWithTextBg_Enable; // 0x0830(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ButtonWithTextBg_Selected; // 0x0840(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ButtonWithTextBg_Disable; // 0x0850(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ButtonWithTextBg_DisableSelected; // 0x0860(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SlotTriangle; // 0x0870(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SlotWarring; // 0x0880(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SlotForbidden; // 0x0890(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SlotIllegalInput; // 0x08A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString FunctionIcon; // 0x08B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SettingIcon; // 0x08C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ColorIcon; // 0x08D0(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FLinearColor> DefaultHSVs; // 0x08E0(0x0010) (ZeroConstructor)
+	struct FString CopyIcon; // 0x08F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString CommentIcon; // 0x0900(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString FlodIcon; // 0x0910(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString UnbindIcon; // 0x0920(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SeparatorIcon; // 0x0930(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString NoneIcon; // 0x0940(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString DefaultCategoryIcon; // 0x0950(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString DefaultCategorySelectedIcon; // 0x0960(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BlockyGlobalVarPath; // 0x0970(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BlockyGraphPath; // 0x0980(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString GenerateCodePath; // 0x0990(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString AssetPackageName; // 0x09A0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString TextrueRectParamPath; // 0x09B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString FunctionPath; // 0x09C0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString FunctionFolderPath; // 0x09D0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString VariablePath; // 0x09E0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString PresetsPath; // 0x09F0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString PresetsFolderPath; // 0x0A00(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString AllTypesPath; // 0x0A10(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString TranslateStringPath; // 0x0A20(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString BlockyNewStringPath; // 0x0A30(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString SequencePath; // 0x0A40(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString TLogParamPath; // 0x0A50(0x0010) (Edit, ZeroConstructor, Config)
+	int UndoMaxSteps; // 0x0A60(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxStoredNumOfSearchHistory; // 0x0A64(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool SearchUseCase; // 0x0A68(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData09[0x3]; // 0x0A69(0x0003) MISSED OFFSET
+	struct FLinearColor SearchedKeyWordColor; // 0x0A6C(0x0010) (Edit, Config, IsPlainOldData)
+	int MaxTemplateDescriptionLen; // 0x0A7C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float SaveCooldownDuration; // 0x0A80(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData10[0x4]; // 0x0A84(0x0004) MISSED OFFSET
+	TMap<struct FString, class UBrushData*> BlockyBrushDatas; // 0x0A88(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FBlockyBrushInfo> BlockyBrushInfos; // 0x0AD8(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString> RTLBrushMap; // 0x0B28(0x0050) (ZeroConstructor)
+	TArray<struct FString> BlockyBrushNames; // 0x0B78(0x0010) (ZeroConstructor)
+	unsigned char UnknownData11[0xA0]; // 0x0B88(0x00A0) MISSED OFFSET
+	TMap<struct FString, class UFunctionDesc*> Functions; // 0x0C28(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UFunctionDesc*> FuncTemplates; // 0x0C78(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UFunctionDesc*> TypeFilterFunctions; // 0x0CC8(0x0050) (ZeroConstructor)
+	TArray<class UBlackboardDefiner*> BlackboardDefiners; // 0x0D18(0x0010) (ZeroConstructor)
+	TMap<struct FString, class UVarDefiner*> VarDefiners; // 0x0D28(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UCustomDefiner*> CustomDefiners; // 0x0D78(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UCategoryDefiner*> CategoryDefiners; // 0x0DC8(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UEnumDesc*> Enums; // 0x0E18(0x0050) (ZeroConstructor)
+	TArray<class UBlockyMenuItemObject*> MenuItems; // 0x0E68(0x0010) (ZeroConstructor)
+	TMap<struct FString, class UTypeConvertDesc*> TypeConverts; // 0x0E78(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UPresetDesc*> PresetDescMap; // 0x0EC8(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UPresetDesc*> CodeNameAndTypeKeyPresetDescMap; // 0x0F18(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FPresetTypeData> TypeNameKeyPresetDescMap; // 0x0F68(0x0050) (ZeroConstructor)
+	TArray<class UBlockyMenuItemObject*> PresetMenuItems; // 0x0FB8(0x0010) (ZeroConstructor)
+	TArray<class UBlockyGraph*> TemplateGraphs; // 0x0FC8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData12[0x50]; // 0x0FD8(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.AllTypes
+	unsigned char UnknownData13[0x50]; // 0x1028(0x0050) UNKNOWN PROPERTY: SetProperty BlockyLuaCore.BlockyLuaConfig.CustomVarTypes
+	TMap<struct FString, struct FString> TipsMap; // 0x1078(0x0050) (ZeroConstructor)
+	TMap<struct FString, bool> BlockyNewsMap; // 0x10C8(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString> TLogParamsMap; // 0x1118(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString> TLogParamsTypeMap; // 0x1168(0x0050) (ZeroConstructor)
+	TArray<struct FString> MenuSequence; // 0x11B8(0x0010) (ZeroConstructor)
+	TMap<struct FString, struct FSequence> CategorySequence; // 0x11C8(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FSequence> ItemSequence; // 0x1218(0x0050) (ZeroConstructor)
+	unsigned char UnknownData14[0x18]; // 0x1268(0x0018) MISSED OFFSET
+	struct FSlateFontInfo FontInfo; // 0x1280(0x0058)
+	unsigned char UnknownData15[0x8]; // 0x12D8(0x0008) MISSED OFFSET
+	TMap<struct FString, class UVarDefiner*> AllTypesMap; // 0x12E0(0x0050) (ZeroConstructor)
+	TMap<struct FGuid, struct FScriptDelegate> OnReceiveCheckStringResults; // 0x1330(0x0050) (ZeroConstructor)
+	struct FScriptDelegate OnGetLocaleString; // 0x1380(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCallCustomSelectObject; // 0x1390(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnReceiveCustomSelectObject; // 0x13A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCheckShowCustomSelection; // 0x13B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnShowPresetPanelHandler; // 0x13C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCheckShowPresetFilterBtn; // 0x13D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnModifyTip; // 0x13E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnAddBlockyLog; // 0x13F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetValidString; // 0x1400(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCheckStringValid; // 0x1410(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnMessageData; // 0x1420(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnIsCurrentCultureLTR; // 0x1430(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetTextLen; // 0x1440(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnPlayPresetSound; // 0x1450(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnOpenGuide; // 0x1460(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetGraphSetting; // 0x1470(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetBlockNewState; // 0x1480(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetBlockNewState; // 0x1490(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetSearchHistorys; // 0x14A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnSetSearchHistorys; // 0x14B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetUrlIconAsset; // 0x14C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCallUrlIconAssetToLoad; // 0x14D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnCallPresetSelectedCode; // 0x14E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	struct FScriptDelegate OnGetPresetValidityDuration; // 0x14F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char UnknownData16[0x70]; // 0x1500(0x0070) MISSED OFFSET
+	class UHotfixUtility* HotfixUtility; // 0x1570(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData17[0x50]; // 0x1578(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyLuaConfig");
@@ -1186,14 +1200,29 @@ public:
 };
 
 
+// Class BlockyLuaCore.BlockyLuaGameInstance
+// 0x0000 (0x02E8 - 0x02E8)
+class UBlockyLuaGameInstance : public UGameInstance
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyLuaGameInstance");
+		return pStaticClass;
+	}
+
+};
+
+
 // Class BlockyLuaCore.BlockyLuaUtility
 // 0x0000 (0x0028 - 0x0028)
 class UBlockyLuaUtility : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyLuaUtility");
@@ -1241,39 +1270,38 @@ public:
 class UBlockyMenuItemObject : public UObject
 {
 public:
-	struct FText                                       Name;                                                     // 0x0028(0x0018) (Edit, BlueprintVisible)
-	TArray<class UBlockyCategoryItemObject*>           Categories;                                               // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                CurrentCategoryIndex;                                     // 0x0050(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
-	struct FString                                     DrawType;                                                 // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                DrawTopDelta;                                             // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                DrawBottomDelta;                                          // 0x006C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     IconType;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Type;                                                     // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               Visible;                                                  // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               VisibleByTag;                                             // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0092(0x0002) MISSED OFFSET
-	float                                              ItemInterval;                                             // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LineInterval;                                             // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              VariableItemInterval;                                     // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PaddingLeft;                                              // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                CategoryStringColor;                                      // 0x00A4(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x00B4(0x0010) MISSED OFFSET
-	float                                              CategoryHeight;                                           // 0x00C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              VariableCategoryHeight;                                   // 0x00C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                ItemStringColor;                                          // 0x00CC(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
-	class UBlockyGraphData*                            GraphData;                                                // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bShowRedDot;                                              // 0x00E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
-	class UBrushData*                                  DefaultRectBrush;                                         // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  CurrentItemBrush;                                         // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  CurrentIconBrush;                                         // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBrushData*                                  SelectedIconBrush;                                        // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x18];                                      // 0x0110(0x0018) MISSED OFFSET
+	struct FText Name; // 0x0028(0x0018) (Edit, BlueprintVisible)
+	TArray<class UBlockyCategoryItemObject*> Categories; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int CurrentCategoryIndex; // 0x0050(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0054(0x0004) MISSED OFFSET
+	struct FString DrawType; // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int DrawTopDelta; // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int DrawBottomDelta; // 0x006C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString IconType; // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Type; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool Visible; // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool VisibleByTag; // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x0092(0x0002) MISSED OFFSET
+	float ItemInterval; // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float LineInterval; // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float VariableItemInterval; // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float PaddingLeft; // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor CategoryStringColor; // 0x00A4(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x00B4(0x0010) MISSED OFFSET
+	float CategoryHeight; // 0x00C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float VariableCategoryHeight; // 0x00C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor ItemStringColor; // 0x00CC(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x00DC(0x0004) MISSED OFFSET
+	class UBlockyGraphData* GraphData; // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bShowRedDot; // 0x00E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x00E9(0x0007) MISSED OFFSET
+	class UBrushData* DefaultRectBrush; // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* CurrentItemBrush; // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* CurrentIconBrush; // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBrushData* SelectedIconBrush; // 0x0108(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x18]; // 0x0110(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject");
@@ -1291,12 +1319,11 @@ public:
 class UBlockyMenuItemObject_BP : public UBlockyMenuItemObject
 {
 public:
-	class UUserWidget*                                 WidgetBP;                                                 // 0x0128(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bHideCategory;                                            // 0x0130(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0131(0x0007) MISSED OFFSET
+	class UUserWidget* WidgetBP; // 0x0128(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bHideCategory; // 0x0130(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0131(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject_BP");
@@ -1311,10 +1338,9 @@ public:
 class UBlockyMenuItemObject_Custom : public UBlockyMenuItemObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0128(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject_Custom");
@@ -1334,11 +1360,10 @@ public:
 class UBlockyMenuItemObject_Search : public UBlockyMenuItemObject
 {
 public:
-	struct FString                                     SearchStr;                                                // 0x0128(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0138(0x0058) MISSED OFFSET
+	struct FString SearchStr; // 0x0128(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0138(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject_Search");
@@ -1354,8 +1379,7 @@ class UBlockyMenuItemObject_TypeFilter : public UBlockyMenuItemObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject_TypeFilter");
@@ -1366,18 +1390,20 @@ public:
 
 
 // Class BlockyLuaCore.BlockyMenuItemObject_Variable
-// 0x0028 (0x0150 - 0x0128)
+// 0x0038 (0x0160 - 0x0128)
 class UBlockyMenuItemObject_Variable : public UBlockyMenuItemObject
 {
 public:
-	TEnumAsByte<enum EBlockyAccessType>                Access;                                                   // 0x0128(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsCustomVar;                                              // 0x0129(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x012A(0x0002) MISSED OFFSET
-	int                                                TopCategory;                                              // 0x012C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0130(0x0020) MISSED OFFSET
+	TEnumAsByte<enum EBlockyAccessType> Access; // 0x0128(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBlockyAccessType> CurSelectAccess; // 0x0129(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsCustomVar; // 0x012A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBlockListShowType> ShowType; // 0x012B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int TopCategory; // 0x012C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0130(0x0010) MISSED OFFSET
+	bool IsShowAllVariableItem; // 0x0140(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x1F]; // 0x0141(0x001F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMenuItemObject_Variable");
@@ -1386,6 +1412,7 @@ public:
 
 
 	void NewVariable();
+	void NewCustomVariable();
 	bool IsSlotCustomVarToShow();
 	bool IsPlayerBlackboard();
 	bool IsCurrentCategoryEmpty();
@@ -1401,10 +1428,9 @@ public:
 class UBlockyMoveCommandData : public UBlockyCommandData
 {
 public:
-	struct FBlockPoint                                 Position;                                                 // 0x0030(0x0008)
+	struct FBlockPoint Position; // 0x0030(0x0008)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyMoveCommandData");
@@ -1419,12 +1445,11 @@ public:
 class UExeSequencerBase : public UExecuteable
 {
 public:
-	class UBrushData*                                  SlotBrush;                                                // 0x0430(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  TailBrush;                                                // 0x0438(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1F8];                                     // 0x0440(0x01F8) MISSED OFFSET
+	class UBrushData* SlotBrush; // 0x0430(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* TailBrush; // 0x0438(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x1F8]; // 0x0440(0x01F8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ExeSequencerBase");
@@ -1439,11 +1464,10 @@ public:
 class UBlockyTimer : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x800];                                     // 0x0638(0x0800) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0E38(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x800]; // 0x0638(0x0800) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0E38(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyTimer");
@@ -1458,10 +1482,9 @@ public:
 class UBlockyTimerParam : public UBlockBase
 {
 public:
-	class UBlockyTimer*                                HostTimer;                                                // 0x0200(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBlockyTimer* HostTimer; // 0x0200(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BlockyTimerParam");
@@ -1477,8 +1500,7 @@ class UBreak : public UExecuteable
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Break");
@@ -1493,15 +1515,14 @@ public:
 class UBrushData : public UObject
 {
 public:
-	struct FSlateBrush                                 Brush;                                                    // 0x0028(0x00B8)
-	class UTexture2D*                                  Texture;                                                  // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Angle;                                                    // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   RectSize;                                                 // 0x00EC(0x0008) (IsPlainOldData)
-	int                                                CrossDelta;                                               // 0x00F4(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00F8(0x0010) MISSED OFFSET
+	struct FSlateBrush Brush; // 0x0028(0x00B8)
+	class UTexture2D* Texture; // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	float Angle; // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector2D RectSize; // 0x00EC(0x0008) (IsPlainOldData)
+	int CrossDelta; // 0x00F4(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x00F8(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BrushData");
@@ -1516,13 +1537,12 @@ public:
 class UCallFunction : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0430(0x0020) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0450(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  SelectionBG;                                              // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x268];                                     // 0x0460(0x0268) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0430(0x0020) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0450(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* SelectionBG; // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x268]; // 0x0460(0x0268) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CallFunction");
@@ -1538,8 +1558,7 @@ class UCastExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CastExpression");
@@ -1562,8 +1581,7 @@ class UClassReferenceExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ClassReferenceExpression");
@@ -1583,8 +1601,7 @@ class UObjectDesc : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ObjectDesc");
@@ -1599,21 +1616,20 @@ public:
 class UColorDesc : public UObjectDesc
 {
 public:
-	struct FString                                     KeyName;                                                  // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Name;                                                     // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CodeName;                                                 // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FText                                       Menu;                                                     // 0x0058(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       Category;                                                 // 0x0070(0x0018) (Edit, BlueprintVisible)
-	struct FLinearColor                                Color;                                                    // 0x0088(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               IsSelected;                                               // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x17];                                      // 0x0099(0x0017) MISSED OFFSET
-	bool                                               Visible;                                                  // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Removed;                                                  // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Localed;                                                  // 0x00B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1CD];                                     // 0x00B3(0x01CD) MISSED OFFSET
+	struct FString KeyName; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Name; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CodeName; // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FText Menu; // 0x0058(0x0018) (Edit, BlueprintVisible)
+	struct FText Category; // 0x0070(0x0018) (Edit, BlueprintVisible)
+	struct FLinearColor Color; // 0x0088(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	bool IsSelected; // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x17]; // 0x0099(0x0017) MISSED OFFSET
+	bool Visible; // 0x00B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool Removed; // 0x00B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool Localed; // 0x00B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x1CD]; // 0x00B3(0x01CD) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ColorDesc");
@@ -1636,12 +1652,11 @@ public:
 class UCommentBlock : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0xF0];                                      // 0x0430(0x00F0) MISSED OFFSET
-	class UBlockBase*                                  CandidateParentBlock;                                     // 0x0520(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0528(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0xF0]; // 0x0430(0x00F0) MISSED OFFSET
+	class UBlockBase* CandidateParentBlock; // 0x0520(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x10]; // 0x0528(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CommentBlock");
@@ -1657,8 +1672,7 @@ class UCommonUIFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CommonUIFunctionLibrary");
@@ -1698,21 +1712,20 @@ public:
 class UConfigDataAsset : public UDataAsset
 {
 public:
-	struct FString                                     AllType;                                                  // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     TextureRectParam;                                         // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     Function;                                                 // 0x0050(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<struct FString>                             FunctionList;                                             // 0x0060(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     Variable;                                                 // 0x0070(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     Sequence;                                                 // 0x0080(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     Preset;                                                   // 0x0090(0x0010) (Edit, ZeroConstructor, EditConst)
-	TMap<struct FString, struct FString>               PresetMap;                                                // 0x00A0(0x0050) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     TranslateString;                                          // 0x00F0(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<struct FString>                             ModeList;                                                 // 0x0100(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     BlockyNew;                                                // 0x0110(0x0010) (Edit, ZeroConstructor, EditConst)
-	struct FString                                     TLogParams;                                               // 0x0120(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString AllType; // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString TextureRectParam; // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString Function; // 0x0050(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<struct FString> FunctionList; // 0x0060(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString Variable; // 0x0070(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString Sequence; // 0x0080(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString Preset; // 0x0090(0x0010) (Edit, ZeroConstructor, EditConst)
+	TMap<struct FString, struct FString> PresetMap; // 0x00A0(0x0050) (Edit, ZeroConstructor, EditConst)
+	struct FString TranslateString; // 0x00F0(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<struct FString> ModeList; // 0x0100(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString BlockyNew; // 0x0110(0x0010) (Edit, ZeroConstructor, EditConst)
+	struct FString TLogParams; // 0x0120(0x0010) (Edit, ZeroConstructor, EditConst)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ConfigDataAsset");
@@ -1730,8 +1743,7 @@ class UContinue : public UExecuteable
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Continue");
@@ -1746,10 +1758,9 @@ public:
 class UCreateFunction : public UCallFunction
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x06C8(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x06C8(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CreateFunction");
@@ -1765,8 +1776,7 @@ class UCreateObjectExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CreateObjectExpression");
@@ -1787,11 +1797,10 @@ public:
 class UCreateSubDefineFunction : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x360];                                     // 0x0638(0x0360) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0998(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x360]; // 0x0638(0x0360) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0998(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CreateSubDefineFunction");
@@ -1806,16 +1815,15 @@ public:
 class UCustomAction : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
-	class UCustomConfig*                               Config;                                                   // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ConfigName;                                               // 0x0440(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	class UBrushData*                                  BrushBGSelected;                                          // 0x0450(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  IconBrush;                                                // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  BrushBG;                                                  // 0x0460(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0468(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0430(0x0008) MISSED OFFSET
+	class UCustomConfig* Config; // 0x0438(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGuid ConfigName; // 0x0440(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	class UBrushData* BrushBGSelected; // 0x0450(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* IconBrush; // 0x0458(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBG; // 0x0460(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x20]; // 0x0468(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomAction");
@@ -1830,14 +1838,13 @@ public:
 class UCustomActionImp : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0638(0x0018) MISSED OFFSET
-	class UCustomConfig*                               Config;                                                   // 0x0650(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ConfigName;                                               // 0x0658(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	class UBrushData*                                  IconBrush;                                                // 0x0668(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  BrushBG;                                                  // 0x0670(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0638(0x0018) MISSED OFFSET
+	class UCustomConfig* Config; // 0x0650(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGuid ConfigName; // 0x0658(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	class UBrushData* IconBrush; // 0x0668(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBG; // 0x0670(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomActionImp");
@@ -1852,15 +1859,14 @@ public:
 class UCustomParam : public UObject
 {
 public:
-	struct FString                                     Name;                                                     // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Description;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsArray;                                                 // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-	class UVarDefiner*                                 Definer;                                                  // 0x0050(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0058(0x0018) MISSED OFFSET
+	struct FString Name; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Description; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bIsArray; // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0049(0x0007) MISSED OFFSET
+	class UVarDefiner* Definer; // 0x0050(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x18]; // 0x0058(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomParam");
@@ -1877,19 +1883,18 @@ public:
 class UCustomConfig : public UObject
 {
 public:
-	struct FGuid                                       Name;                                                     // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FString                                     DisplayName;                                              // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TEnumAsByte<enum ECustomBlockType>                 Type;                                                     // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-	struct FString                                     Description;                                              // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UCustomParam*>                        Params;                                                   // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UCustomParam*                                Return;                                                   // 0x0070(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UFunctionDesc*                               CustomDesc;                                               // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UFunctionDesc*                               CustomImplDesc;                                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0088(0x0018) MISSED OFFSET
+	struct FGuid Name; // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FString DisplayName; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TEnumAsByte<enum ECustomBlockType> Type; // 0x0048(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0049(0x0007) MISSED OFFSET
+	struct FString Description; // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UCustomParam*> Params; // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UCustomParam* Return; // 0x0070(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UFunctionDesc* CustomDesc; // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UFunctionDesc* CustomImplDesc; // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x18]; // 0x0088(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomConfig");
@@ -1913,8 +1918,7 @@ class UCustomInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomInterface");
@@ -1929,12 +1933,11 @@ public:
 class UCustomDefiner : public UCategoryDefiner
 {
 public:
-	struct FString                                     HotfixUserData;                                           // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     TemplateFunc;                                             // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     TemplateImplFunc;                                         // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString HotfixUserData; // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString TemplateFunc; // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString TemplateImplFunc; // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomDefiner");
@@ -1949,11 +1952,10 @@ public:
 class UDefineFunction : public UExecuteable
 {
 public:
-	struct FText                                       Name;                                                     // 0x0430(0x0018)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0448(0x0038) MISSED OFFSET
+	struct FText Name; // 0x0430(0x0018)
+	unsigned char UnknownData00[0x38]; // 0x0448(0x0038) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.DefineFunction");
@@ -1968,15 +1970,14 @@ public:
 class UCustomEvent : public UDefineFunction
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
-	class UCustomConfig*                               Config;                                                   // 0x0488(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ConfigName;                                               // 0x0490(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	class UBrushData*                                  IconBrush;                                                // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  BrushBG;                                                  // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x04B0(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0480(0x0008) MISSED OFFSET
+	class UCustomConfig* Config; // 0x0488(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGuid ConfigName; // 0x0490(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	class UBrushData* IconBrush; // 0x04A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBG; // 0x04A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x50]; // 0x04B0(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomEvent");
@@ -1992,8 +1993,7 @@ class UCustomImpInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomImpInterface");
@@ -2008,15 +2008,14 @@ public:
 class UCustomValue : public UVarBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0200(0x0008) MISSED OFFSET
-	class UCustomConfig*                               Config;                                                   // 0x0208(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ConfigName;                                               // 0x0210(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	class UBrushData*                                  BrushBGSelected;                                          // 0x0220(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  BrushBG;                                                  // 0x0228(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0230(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0200(0x0008) MISSED OFFSET
+	class UCustomConfig* Config; // 0x0208(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGuid ConfigName; // 0x0210(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	class UBrushData* BrushBGSelected; // 0x0220(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBG; // 0x0228(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x20]; // 0x0230(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomValue");
@@ -2031,14 +2030,13 @@ public:
 class UCustomValueImp : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x1B0];                                     // 0x0638(0x01B0) MISSED OFFSET
-	class UCustomConfig*                               Config;                                                   // 0x07E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       ConfigName;                                               // 0x07F0(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	class UBrushData*                                  IconBrush;                                                // 0x0800(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  BrushBG;                                                  // 0x0808(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x1B0]; // 0x0638(0x01B0) MISSED OFFSET
+	class UCustomConfig* Config; // 0x07E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGuid ConfigName; // 0x07F0(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	class UBrushData* IconBrush; // 0x0800(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBG; // 0x0808(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CustomValueImp");
@@ -2053,10 +2051,9 @@ public:
 class UDefaultValueCommandData : public UBlockyCommandData
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0030(0x0058) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0030(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.DefaultValueCommandData");
@@ -2072,8 +2069,7 @@ class UDefaultValueExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.DefaultValueExpression");
@@ -2093,11 +2089,10 @@ public:
 class UDoNum : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x330];                                     // 0x0638(0x0330) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0968(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x330]; // 0x0638(0x0330) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0968(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.DoNum");
@@ -2112,12 +2107,11 @@ public:
 class UEnumDesc : public UObject
 {
 public:
-	struct FString                                     HotfixUserData;                                           // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UEnum*                                       EnumPtr;                                                  // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x60];                                      // 0x0040(0x0060) MISSED OFFSET
+	struct FString HotfixUserData; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UEnum* EnumPtr; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x60]; // 0x0040(0x0060) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.EnumDesc");
@@ -2132,12 +2126,11 @@ public:
 class UExecuteablePreview : public UExecuteable
 {
 public:
-	TArray<struct FBlockPreviewBrush>                  Rects;                                                    // 0x0430(0x0010) (ZeroConstructor)
-	class UBrushData*                                  DisableIconBrush;                                         // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0448(0x0018) MISSED OFFSET
+	TArray<struct FBlockPreviewBrush> Rects; // 0x0430(0x0010) (ZeroConstructor)
+	class UBrushData* DisableIconBrush; // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0448(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ExecuteablePreview");
@@ -2152,11 +2145,10 @@ public:
 class UForEach : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x4E8];                                     // 0x0638(0x04E8) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0B20(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x4E8]; // 0x0638(0x04E8) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0B20(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ForEach");
@@ -2167,26 +2159,25 @@ public:
 
 
 // Class BlockyLuaCore.FunctionDesc
-// 0x0218 (0x0240 - 0x0028)
+// 0x0220 (0x0248 - 0x0028)
 class UFunctionDesc : public UObject
 {
 public:
-	struct FString                                     HotfixUserData;                                           // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     KeyName;                                                  // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CodeName;                                                 // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0058(0x0058) MISSED OFFSET
-	struct FString                                     Host;                                                     // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Description;                                              // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x68];                                      // 0x00D0(0x0068) MISSED OFFSET
-	class UClass*                                      BlockClass;                                               // 0x0138(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
-	TArray<struct FFunctionParameter>                  Parameters;                                               // 0x0150(0x0010) (ZeroConstructor)
-	TArray<struct FFunctionParameter>                  AddEventParameters;                                       // 0x0160(0x0010) (ZeroConstructor)
-	TMap<struct FString, struct FString>               ModuleRequires;                                           // 0x0170(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x80];                                      // 0x01C0(0x0080) MISSED OFFSET
+	struct FString HotfixUserData; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString KeyName; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CodeName; // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0058(0x0058) MISSED OFFSET
+	struct FString Host; // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Description; // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x70]; // 0x00D0(0x0070) MISSED OFFSET
+	class UClass* BlockClass; // 0x0140(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x0148(0x0010) MISSED OFFSET
+	TArray<struct FFunctionParameter> Parameters; // 0x0158(0x0010) (ZeroConstructor)
+	TArray<struct FFunctionParameter> AddEventParameters; // 0x0168(0x0010) (ZeroConstructor)
+	TMap<struct FString, struct FString> ModuleRequires; // 0x0178(0x0050) (ZeroConstructor)
+	unsigned char UnknownData03[0x80]; // 0x01C8(0x0080) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.FunctionDesc");
@@ -2202,8 +2193,7 @@ class UFunctionInvokeArgumentExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.FunctionInvokeArgumentExpression");
@@ -2227,8 +2217,7 @@ class UFunctionInvokeExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.FunctionInvokeExpression");
@@ -2255,11 +2244,10 @@ public:
 class UGetArrayElement : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x1A8];                                     // 0x0200(0x01A8) MISSED OFFSET
-	class UBrushData*                                  BrushBGSelected;                                          // 0x03A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x1A8]; // 0x0200(0x01A8) MISSED OFFSET
+	class UBrushData* BrushBGSelected; // 0x03A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.GetArrayElement");
@@ -2274,10 +2262,9 @@ public:
 class UHotfixUtility : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.HotfixUtility");
@@ -2374,12 +2361,11 @@ public:
 class UIfElse : public UExecuteable
 {
 public:
-	class UIfElseCondition*                            IfCondition;                                              // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UIfElseCondition*>                    ElseConditions;                                           // 0x0438(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0448(0x0010) MISSED OFFSET
+	class UIfElseCondition* IfCondition; // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UIfElseCondition*> ElseConditions; // 0x0438(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0448(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.IfElse");
@@ -2394,11 +2380,10 @@ public:
 class UIfElseCondition : public UExeSequencerBase
 {
 public:
-	class UIfElse*                                     ParentIfElse;                                             // 0x0638(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1F0];                                     // 0x0640(0x01F0) MISSED OFFSET
+	class UIfElse* ParentIfElse; // 0x0638(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x1F0]; // 0x0640(0x01F0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.IfElseCondition");
@@ -2414,8 +2399,7 @@ class UIndexerOperatorExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.IndexerOperatorExpression");
@@ -2436,10 +2420,9 @@ public:
 class UInsertArrayElement : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x340];                                     // 0x0430(0x0340) MISSED OFFSET
+	unsigned char UnknownData00[0x340]; // 0x0430(0x0340) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.InsertArrayElement");
@@ -2455,8 +2438,7 @@ class UJsonSerializable : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.JsonSerializable");
@@ -2471,10 +2453,9 @@ public:
 class ULogicBase : public UBlockBase
 {
 public:
-	class UBrushData*                                  BrushBGSelected;                                          // 0x0200(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* BrushBGSelected; // 0x0200(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.LogicBase");
@@ -2489,10 +2470,9 @@ public:
 class ULogicAnd : public ULogicBase
 {
 public:
-	unsigned char                                      UnknownData00[0x340];                                     // 0x0208(0x0340) MISSED OFFSET
+	unsigned char UnknownData00[0x340]; // 0x0208(0x0340) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.LogicAnd");
@@ -2507,10 +2487,9 @@ public:
 class ULogicCompare : public ULogicBase
 {
 public:
-	unsigned char                                      UnknownData00[0x4C8];                                     // 0x0208(0x04C8) MISSED OFFSET
+	unsigned char UnknownData00[0x4C8]; // 0x0208(0x04C8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.LogicCompare");
@@ -2525,10 +2504,9 @@ public:
 class ULogicNot : public ULogicBase
 {
 public:
-	unsigned char                                      UnknownData00[0x198];                                     // 0x0208(0x0198) MISSED OFFSET
+	unsigned char UnknownData00[0x198]; // 0x0208(0x0198) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.LogicNot");
@@ -2543,10 +2521,9 @@ public:
 class ULogicOr : public ULogicBase
 {
 public:
-	unsigned char                                      UnknownData00[0x340];                                     // 0x0208(0x0340) MISSED OFFSET
+	unsigned char UnknownData00[0x340]; // 0x0208(0x0340) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.LogicOr");
@@ -2561,10 +2538,9 @@ public:
 class UMember : public ULogicBase
 {
 public:
-	unsigned char                                      UnknownData00[0x1A8];                                     // 0x0208(0x01A8) MISSED OFFSET
+	unsigned char UnknownData00[0x1A8]; // 0x0208(0x01A8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Member");
@@ -2580,8 +2556,7 @@ class UNullExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.NullExpression");
@@ -2598,12 +2573,11 @@ public:
 class UNumFromTo : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x808];                                     // 0x0638(0x0808) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0E40(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1C0];                                     // 0x0E48(0x01C0) MISSED OFFSET
+	unsigned char UnknownData00[0x808]; // 0x0638(0x0808) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0E40(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x1C0]; // 0x0E48(0x01C0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.NumFromTo");
@@ -2618,10 +2592,9 @@ public:
 class UPostCustomEvent : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x1C0];                                     // 0x0430(0x01C0) MISSED OFFSET
+	unsigned char UnknownData00[0x1C0]; // 0x0430(0x01C0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.PostCustomEvent");
@@ -2632,41 +2605,44 @@ public:
 
 
 // Class BlockyLuaCore.PresetDesc
-// 0x02F0 (0x0318 - 0x0028)
+// 0x0308 (0x0330 - 0x0028)
 class UPresetDesc : public UObjectDesc
 {
 public:
-	struct FString                                     HotfixUserData;                                           // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     KeyName;                                                  // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Name;                                                     // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CodeName;                                                 // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<int>                                        Tag;                                                      // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Icon;                                                     // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FText                                       Menu;                                                     // 0x0088(0x0018) (Edit, BlueprintVisible)
-	struct FText                                       Category;                                                 // 0x00A0(0x0018) (Edit, BlueprintVisible)
-	struct FString                                     AnimationPath;                                            // 0x00B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     SoundPath;                                                // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               IsSelected;                                               // 0x00D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x17];                                      // 0x00D9(0x0017) MISSED OFFSET
-	bool                                               Visible;                                                  // 0x00F0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Removed;                                                  // 0x00F1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Localed;                                                  // 0x00F2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsCustomVar;                                              // 0x00F3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsCustomVarArray;                                         // 0x00F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               isNeedSelectCheck;                                        // 0x00F5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x00F6(0x0002) MISSED OFFSET
-	struct FDependResInfo                              ResInfo;                                                  // 0x00F8(0x0020) (Edit, BlueprintVisible)
-	struct FString                                     CustomVarType;                                            // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<unsigned char>                              CustomExtraData;                                          // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      DynamicType;                                              // 0x0138(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               Exclude;                                                  // 0x0139(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x013A(0x0002) MISSED OFFSET
-	int                                                SortOrder;                                                // 0x013C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FString>                             ReferencedByBlockIDs;                                     // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x1C8];                                     // 0x0150(0x01C8) MISSED OFFSET
+	struct FString HotfixUserData; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString KeyName; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Name; // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CodeName; // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<int> Tag; // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Icon; // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FText Menu; // 0x0088(0x0018) (Edit, BlueprintVisible)
+	struct FText Category; // 0x00A0(0x0018) (Edit, BlueprintVisible)
+	bool isValidityPreset; // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x00B9(0x0003) MISSED OFFSET
+	int PresetValidityDuration; // 0x00BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString AnimationPath; // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString SoundPath; // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool IsSelected; // 0x00E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsDSNeedSave; // 0x00E1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x16]; // 0x00E2(0x0016) MISSED OFFSET
+	bool Visible; // 0x00F8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool Removed; // 0x00F9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool Localed; // 0x00FA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsCustomVar; // 0x00FB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsCustomVarArray; // 0x00FC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool isNeedSelectCheck; // 0x00FD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x2]; // 0x00FE(0x0002) MISSED OFFSET
+	struct FDependResInfo ResInfo; // 0x0100(0x0030) (Edit, BlueprintVisible)
+	struct FString CustomVarType; // 0x0130(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<unsigned char> CustomExtraData; // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char DynamicType; // 0x0150(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool Exclude; // 0x0151(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x2]; // 0x0152(0x0002) MISSED OFFSET
+	int SortOrder; // 0x0154(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FString> ReferencedByBlockIDs; // 0x0158(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData04[0x1C8]; // 0x0168(0x01C8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.PresetDesc");
@@ -2679,6 +2655,7 @@ public:
 	bool IsCodeNameEmpty();
 	bool HasIcon();
 	struct FType GetType();
+	int GetPresetValidityDurationValue();
 	struct FString GetLocaleName();
 };
 
@@ -2689,8 +2666,7 @@ class UPrimitiveExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.PrimitiveExpression");
@@ -2717,14 +2693,13 @@ public:
 
 
 // Class BlockyLuaCore.RepeatFunction
-// 0x0090 (0x0758 - 0x06C8)
+// 0x00A0 (0x0768 - 0x06C8)
 class URepeatFunction : public UCallFunction
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x06C8(0x0090) MISSED OFFSET
+	unsigned char UnknownData00[0xA0]; // 0x06C8(0x00A0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.RepeatFunction");
@@ -2740,8 +2715,7 @@ class UReturn : public UExecuteable
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.Return");
@@ -2756,12 +2730,11 @@ public:
 class USelectionData : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
-	class UBlockBase*                                  bLock;                                                    // 0x0040(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0028(0x0018) MISSED OFFSET
+	class UBlockBase* bLock; // 0x0040(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0048(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SelectionData");
@@ -2779,8 +2752,7 @@ class USelfReferenceExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SelfReferenceExpression");
@@ -2797,10 +2769,9 @@ public:
 class USetArrayElement : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x340];                                     // 0x0430(0x0340) MISSED OFFSET
+	unsigned char UnknownData00[0x340]; // 0x0430(0x0340) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SetArrayElement");
@@ -2815,12 +2786,11 @@ public:
 class USetVar : public UExecuteable
 {
 public:
-	unsigned char                                      UnknownData00[0x330];                                     // 0x0430(0x0330) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x0760(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrushData*                                  SelectionBG;                                              // 0x0768(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x330]; // 0x0430(0x0330) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x0760(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrushData* SelectionBG; // 0x0768(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SetVar");
@@ -2836,8 +2806,7 @@ class USnippetExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SnippetExpression");
@@ -2857,8 +2826,7 @@ class UStatementBase : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.StatementBase");
@@ -2879,8 +2847,7 @@ class UVariableDeclaration : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.VariableDeclaration");
@@ -2906,8 +2873,7 @@ class UAssignOperatorStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.AssignOperatorStatement");
@@ -2915,8 +2881,8 @@ public:
 	}
 
 
-	static void SetTo(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& to);
-	static void SetFrom(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& from);
+	static void SetTo(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& To);
+	static void SetFrom(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& From);
 	static struct FBlockyLuaHandle GetTo(const struct FBlockyLuaHandle& ptr);
 	static struct FBlockyLuaHandle GetFrom(const struct FBlockyLuaHandle& ptr);
 	static struct FBlockyLuaHandle CreateAssignOperatorStatement();
@@ -2929,8 +2895,7 @@ class UExecuteSequenceStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ExecuteSequenceStatement");
@@ -2950,8 +2915,7 @@ class UReturnStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ReturnStatement");
@@ -2969,8 +2933,7 @@ class UIfStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.IfStatement");
@@ -2996,8 +2959,7 @@ class UForLoopStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ForLoopStatement");
@@ -3025,8 +2987,7 @@ class UForeachLoopStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ForeachLoopStatement");
@@ -3052,8 +3013,7 @@ class UWhileLoopStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.WhileLoopStatement");
@@ -3075,8 +3035,7 @@ class UContinueStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ContinueStatement");
@@ -3094,8 +3053,7 @@ class UBreakStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.BreakStatement");
@@ -3113,8 +3071,7 @@ class UCommentStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.CommentStatement");
@@ -3136,8 +3093,7 @@ class UExpressionStatement : public UStatementBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.ExpressionStatement");
@@ -3159,8 +3115,7 @@ class UStatementsData : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.StatementsData");
@@ -3175,10 +3130,9 @@ public:
 class UStringAppend : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x340];                                     // 0x0200(0x0340) MISSED OFFSET
+	unsigned char UnknownData00[0x340]; // 0x0200(0x0340) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.StringAppend");
@@ -3194,8 +3148,7 @@ class UStringAppendExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.StringAppendExpression");
@@ -3218,17 +3171,16 @@ public:
 class USubGraphCommandData : public UBlockyCommandData
 {
 public:
-	struct FString                                     Name;                                                     // 0x0030(0x0010) (ZeroConstructor)
-	struct FString                                     Type;                                                     // 0x0040(0x0010) (ZeroConstructor)
-	struct FString                                     SrcName;                                                  // 0x0050(0x0010) (ZeroConstructor)
-	TArray<int>                                        InCallStackPos;                                           // 0x0060(0x0010) (ZeroConstructor)
-	int                                                IdxInSubBLocky;                                           // 0x0070(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
-	class UBlockyGraph*                                OpGraph;                                                  // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     SavedName;                                                // 0x0080(0x0010) (ZeroConstructor)
+	struct FString Name; // 0x0030(0x0010) (ZeroConstructor)
+	struct FString Type; // 0x0040(0x0010) (ZeroConstructor)
+	struct FString SrcName; // 0x0050(0x0010) (ZeroConstructor)
+	TArray<int> InCallStackPos; // 0x0060(0x0010) (ZeroConstructor)
+	int IdxInSubBLocky; // 0x0070(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0074(0x0004) MISSED OFFSET
+	class UBlockyGraph* OpGraph; // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString SavedName; // 0x0080(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.SubGraphCommandData");
@@ -3243,12 +3195,11 @@ public:
 class UTemplateCommandData : public UBlockyCommandData
 {
 public:
-	class UBlockyGraph*                                Template;                                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     CreatedGraphName;                                         // 0x0038(0x0010) (ZeroConstructor)
-	struct FString                                     CreatedGraphType;                                         // 0x0048(0x0010) (ZeroConstructor)
+	class UBlockyGraph* Template; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString CreatedGraphName; // 0x0038(0x0010) (ZeroConstructor)
+	struct FString CreatedGraphType; // 0x0048(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.TemplateCommandData");
@@ -3263,13 +3214,12 @@ public:
 class UTypeConvertDesc : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FString                                     HotfixUserData;                                           // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) MISSED OFFSET
-	class UFunctionDesc*                               FunctionDesc;                                             // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	struct FString HotfixUserData; // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x20]; // 0x0040(0x0020) MISSED OFFSET
+	class UFunctionDesc* FunctionDesc; // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.TypeConvertDesc");
@@ -3284,10 +3234,9 @@ public:
 class UTypeFilter : public UBlockBase
 {
 public:
-	unsigned char                                      UnknownData00[0x198];                                     // 0x0200(0x0198) MISSED OFFSET
+	unsigned char UnknownData00[0x198]; // 0x0200(0x0198) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.TypeFilter");
@@ -3303,8 +3252,7 @@ class UTypeReference : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.TypeReference");
@@ -3328,8 +3276,7 @@ class UTypeString : public UBlockBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.TypeString");
@@ -3345,8 +3292,7 @@ class UUnaryOperatorExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.UnaryOperatorExpression");
@@ -3367,22 +3313,21 @@ public:
 class UVarDefiner : public UObject
 {
 public:
-	struct FType                                       BPType;                                                   // 0x0028(0x0070) (Edit, BlueprintVisible)
-	struct FString                                     HotfixUserData;                                           // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00A8(0x0010) MISSED OFFSET
-	TMap<struct FString, struct FString>               ShowNameMap;                                              // 0x00B8(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ShowIcon;                                                 // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ShowIconSelected;                                         // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     DefaultValueString;                                       // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bHideInCustom;                                            // 0x0138(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBlockyVarInitType>               InitType;                                                 // 0x0139(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x013A(0x0006) MISSED OFFSET
-	TArray<struct FString>                             ExcludePresetCategories;                                  // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             ExcludePresetCodeNames;                                   // 0x0150(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x28];                                      // 0x0160(0x0028) MISSED OFFSET
+	struct FType BPType; // 0x0028(0x0070) (Edit, BlueprintVisible)
+	struct FString HotfixUserData; // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x00A8(0x0010) MISSED OFFSET
+	TMap<struct FString, struct FString> ShowNameMap; // 0x00B8(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ShowIcon; // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ShowIconSelected; // 0x0118(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString DefaultValueString; // 0x0128(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bHideInCustom; // 0x0138(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBlockyVarInitType> InitType; // 0x0139(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x013A(0x0006) MISSED OFFSET
+	TArray<struct FString> ExcludePresetCategories; // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FString> ExcludePresetCodeNames; // 0x0150(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData02[0x28]; // 0x0160(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.VarDefiner");
@@ -3405,8 +3350,7 @@ class UVariableReferenceExpression : public UExpressionBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.VariableReferenceExpression");
@@ -3428,11 +3372,10 @@ public:
 class UWhile : public UExeSequencerBase
 {
 public:
-	unsigned char                                      UnknownData00[0x198];                                     // 0x0638(0x0198) MISSED OFFSET
-	class UBrushData*                                  IconBrush;                                                // 0x07D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x198]; // 0x0638(0x0198) MISSED OFFSET
+	class UBrushData* IconBrush; // 0x07D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLuaCore.While");

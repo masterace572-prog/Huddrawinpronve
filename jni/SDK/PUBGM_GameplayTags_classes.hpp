@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UBlueprintGameplayTagLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.BlueprintGameplayTagLibrary");
@@ -61,8 +60,7 @@ class UGameplayTagAssetInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
@@ -82,13 +80,12 @@ public:
 class UEditableGameplayTagQuery : public UObject
 {
 public:
-	struct FString                                     UserDescription;                                          // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
-	class UEditableGameplayTagQueryExpression*         RootExpression;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FGameplayTagQuery                           TagQueryExportText_Helper;                                // 0x0050(0x0048)
+	struct FString UserDescription; // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char UnknownData00[0x10]; // 0x0038(0x0010) MISSED OFFSET
+	class UEditableGameplayTagQueryExpression* RootExpression; // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FGameplayTagQuery TagQueryExportText_Helper; // 0x0050(0x0048)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQuery");
@@ -104,8 +101,7 @@ class UEditableGameplayTagQueryExpression : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
@@ -120,10 +116,9 @@ public:
 class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer Tags; // 0x0028(0x0020) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
@@ -138,10 +133,9 @@ public:
 class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer Tags; // 0x0028(0x0020) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
@@ -156,10 +150,9 @@ public:
 class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (Edit, DisableEditOnInstance)
+	struct FGameplayTagContainer Tags; // 0x0028(0x0020) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch");
@@ -174,10 +167,9 @@ public:
 class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions; // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
@@ -192,10 +184,9 @@ public:
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions; // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
@@ -210,10 +201,9 @@ public:
 class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions; // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
@@ -228,14 +218,13 @@ public:
 class UGameplayTagsManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
-	TArray<struct FGameplayTagSource>                  TagSources;                                               // 0x00A8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x68];                                      // 0x00B8(0x0068) MISSED OFFSET
-	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0120(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0130(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x80]; // 0x0028(0x0080) MISSED OFFSET
+	TArray<struct FGameplayTagSource> TagSources; // 0x00A8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x68]; // 0x00B8(0x0068) MISSED OFFSET
+	TArray<class UDataTable*> GameplayTagTables; // 0x0120(0x0010) (ZeroConstructor)
+	unsigned char UnknownData02[0x50]; // 0x0130(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.GameplayTagsManager");
@@ -250,11 +239,10 @@ public:
 class UGameplayTagsList : public UObject
 {
 public:
-	struct FString                                     ConfigFileName;                                           // 0x0028(0x0010) (ZeroConstructor)
-	TArray<struct FGameplayTagTableRow>                GameplayTagList;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString ConfigFileName; // 0x0028(0x0010) (ZeroConstructor)
+	TArray<struct FGameplayTagTableRow> GameplayTagList; // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.GameplayTagsList");
@@ -269,20 +257,19 @@ public:
 class UGameplayTagsSettings : public UGameplayTagsList
 {
 public:
-	bool                                               ImportTagsFromConfig;                                     // 0x0048(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               WarnOnInvalidTags;                                        // 0x0049(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x004A(0x0006) MISSED OFFSET
-	TArray<struct FGameplayTagCategoryRemap>           CategoryRemapping;                                        // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
-	bool                                               FastReplication;                                          // 0x0060(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-	TArray<struct FSoftObjectPath>                     GameplayTagTableList;                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FGameplayTagRedirect>                GameplayTagRedirects;                                     // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FName>                               CommonlyReplicatedTags;                                   // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
-	int                                                NumBitsForContainerSize;                                  // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                NetIndexFirstBitSegment;                                  // 0x009C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool ImportTagsFromConfig; // 0x0048(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool WarnOnInvalidTags; // 0x0049(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x004A(0x0006) MISSED OFFSET
+	TArray<struct FGameplayTagCategoryRemap> CategoryRemapping; // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
+	bool FastReplication; // 0x0060(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0061(0x0007) MISSED OFFSET
+	TArray<struct FSoftObjectPath> GameplayTagTableList; // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FGameplayTagRedirect> GameplayTagRedirects; // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FName> CommonlyReplicatedTags; // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
+	int NumBitsForContainerSize; // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int NetIndexFirstBitSegment; // 0x009C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.GameplayTagsSettings");
@@ -297,10 +284,9 @@ public:
 class UGameplayTagsDeveloperSettings : public UObject
 {
 public:
-	struct FString                                     DeveloperConfigName;                                      // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString DeveloperConfigName; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTags.GameplayTagsDeveloperSettings");

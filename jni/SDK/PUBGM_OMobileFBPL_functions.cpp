@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function OMobileFBPL.OMobileFBPL.IsRunningOnBattery
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UOMobileFBPL::IsRunningOnBattery()
 {
@@ -36,7 +36,7 @@ bool UOMobileFBPL::IsRunningOnBattery()
 // Function OMobileFBPL.OMobileFBPL.IsBatteryStateCharging
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UOMobileFBPL::IsBatteryStateCharging()
 {
@@ -61,7 +61,7 @@ bool UOMobileFBPL::IsBatteryStateCharging()
 // Function OMobileFBPL.OMobileFBPL.GetVolumeState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UOMobileFBPL::GetVolumeState()
 {
@@ -86,7 +86,7 @@ int UOMobileFBPL::GetVolumeState()
 // Function OMobileFBPL.OMobileFBPL.GetDeviceName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UOMobileFBPL::GetDeviceName()
 {
@@ -111,7 +111,7 @@ struct FString UOMobileFBPL::GetDeviceName()
 // Function OMobileFBPL.OMobileFBPL.GetBatteryTemperature
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UOMobileFBPL::GetBatteryTemperature()
 {
@@ -136,7 +136,7 @@ float UOMobileFBPL::GetBatteryTemperature()
 // Function OMobileFBPL.OMobileFBPL.GetBatteryLevel
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UOMobileFBPL::GetBatteryLevel()
 {
@@ -161,7 +161,7 @@ int UOMobileFBPL::GetBatteryLevel()
 // Function OMobileFBPL.OMobileFBPL.AreHeadphonesPluggedIn
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UOMobileFBPL::AreHeadphonesPluggedIn()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UAutoRobotModule : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0028(0x0038) MISSED OFFSET
+	unsigned char UnknownData00[0x38]; // 0x0028(0x0038) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.AutoRobotModule");
@@ -32,8 +31,7 @@ class UAutoRobotSceneTool : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.AutoRobotSceneTool");
@@ -48,11 +46,10 @@ public:
 class AAutoRunPlayerTestActor : public AActor
 {
 public:
-	TArray<struct FVector>                             PortalLoctions;                                           // 0x04B0(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x04C0(0x0010) MISSED OFFSET
+	TArray<struct FVector> PortalLoctions; // 0x04B0(0x0010) (Edit, ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x04C0(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.AutoRunPlayerTestActor");
@@ -67,10 +64,9 @@ public:
 class UAutoTestInterface : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0178(0x0080) MISSED OFFSET
+	unsigned char UnknownData00[0x80]; // 0x0178(0x0080) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.AutoTestInterface");
@@ -87,16 +83,15 @@ public:
 class UAutoTestSubsystem : public UGameInstanceSubsystem
 {
 public:
-	class URemoteControlManager*                       RemoteControlManager;                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UAutoRobotModule*                            AutoModule;                                               // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     AutoTestMissionType;                                      // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CustomLineStr;                                            // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	EGamePlayMode                                      GamePlayMode;                                             // 0x0060(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0060(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	class URemoteControlManager* RemoteControlManager; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UAutoRobotModule* AutoModule; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString AutoTestMissionType; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CustomLineStr; // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EGamePlayMode GamePlayMode; // 0x0060(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0060(0x0003) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char UnknownData01[0x4]; // 0x0064(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.AutoTestSubsystem");
@@ -232,13 +227,12 @@ public:
 class UPubgmAutoRun : public UActorComponent
 {
 public:
-	struct FScriptMulticastDelegate                    PubgmAutoRunSimulateAction;                               // 0x0178(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	bool                                               bRoutePointInited;                                        // 0x0188(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0189(0x0007) MISSED OFFSET
-	TArray<class AXTPoint*>                            RoutePoints;                                              // 0x0190(0x0010) (ZeroConstructor)
+	struct FScriptMulticastDelegate PubgmAutoRunSimulateAction; // 0x0178(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	bool bRoutePointInited; // 0x0188(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0189(0x0007) MISSED OFFSET
+	TArray<class AXTPoint*> RoutePoints; // 0x0190(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.PubgmAutoRun");
@@ -267,15 +261,14 @@ public:
 class UPVEAutoRunTest : public UActorComponent
 {
 public:
-	TArray<struct FVector>                             DstPointArray;                                            // 0x0178(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                MaxMoveTime;                                              // 0x0188(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxDstStayTime;                                           // 0x018C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                KillAllTime;                                              // 0x0190(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                StatRecordTime;                                           // 0x0194(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0198(0x0028) MISSED OFFSET
+	TArray<struct FVector> DstPointArray; // 0x0178(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int MaxMoveTime; // 0x0188(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int MaxDstStayTime; // 0x018C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int KillAllTime; // 0x0190(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int StatRecordTime; // 0x0194(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x28]; // 0x0198(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.PVEAutoRunTest");
@@ -291,8 +284,7 @@ class URemoteControlHelper : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.RemoteControlHelper");
@@ -312,8 +304,7 @@ class URemoteControlManager : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.RemoteControlManager");
@@ -333,10 +324,9 @@ public:
 class UShootWeaponAutoTestHandle : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.ShootWeaponAutoTestHandle");
@@ -352,15 +342,14 @@ public:
 
 
 // Class AutoRobot.TestAIController
-// 0x0010 (0x1128 - 0x1118)
+// 0x0010 (0x1130 - 0x1120)
 class ATestAIController : public ABaseAIController
 {
 public:
-	class UClass*                                      EquipedWeaponClass;                                       // 0x1118(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CharacterClass;                                           // 0x1120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* EquipedWeaponClass; // 0x1120(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* CharacterClass; // 0x1128(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AutoRobot.TestAIController");

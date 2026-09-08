@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void UActorSequenceComponent::StopPlay()
 // Function ActorSequence.ActorSequenceComponent.StartPlay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          StartTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float StartTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UActorSequenceComponent::StartPlay(float StartTime)
 {
@@ -77,7 +77,7 @@ void UActorSequenceComponent::OnStopOrFinsh()
 // Function ActorSequence.ActorSequenceComponent.GetLength
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UActorSequenceComponent::GetLength()
 {

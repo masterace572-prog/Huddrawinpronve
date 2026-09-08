@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -8,16 +8,188 @@ namespace SDK
 //Classes
 //---------------------By BangJO---------------------------
 
+// Class Development.ActorClickPickerWidget
+// 0x0018 (0x0430 - 0x0418)
+class UActorClickPickerWidget : public UUAEUserWidget
+{
+public:
+	TWeakObjectPtr<class UActorInspectorTab> OwnerTab; // 0x0418(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bPickerEnabled; // 0x0420(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0421(0x0003) MISSED OFFSET
+	float TraceDistance; // 0x0424(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bPrioritizePawns; // 0x0428(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0429(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ActorClickPickerWidget");
+		return pStaticClass;
+	}
+
+
+	void SetPickerEnabled(bool bEnable);
+	void SetOwnerTab(class UActorInspectorTab* InOwnerTab);
+	bool IsPickerEnabled();
+};
+
+
+// Class Development.ImGuiTabBase
+// 0x0098 (0x00C0 - 0x0028)
+class UImGuiTabBase : public UObject
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString TabName; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName TabID; // 0x0090(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsVisible; // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsEnabled; // 0x0099(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x009A(0x0002) MISSED OFFSET
+	int TabPriority; // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString LuaFilePath; // 0x00A0(0x0010) (ZeroConstructor)
+	bool bIsLuaInitialized; // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x00B1(0x0003) MISSED OFFSET
+	TWeakObjectPtr<class AImGuiWindowBase> OwnerWindow; // 0x00B4(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bIsActive; // 0x00BC(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bIsInitialized; // 0x00BD(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x2]; // 0x00BE(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ImGuiTabBase");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Development.ActorInspectorTab
+// 0x0870 (0x0930 - 0x00C0)
+class UActorInspectorTab : public UImGuiTabBase
+{
+public:
+	TWeakObjectPtr<class UWorld> SelectedWorld; // 0x00C0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x13C]; // 0x00C8(0x013C) MISSED OFFSET
+	TWeakObjectPtr<class UObject> SelectedObject; // 0x0204(0x0008) (ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class AActor> SelectedActor; // 0x020C(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x18]; // 0x0214(0x0018) MISSED OFFSET
+	TWeakObjectPtr<class UActorComponent> SelectedComponent; // 0x022C(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData02[0x6DC]; // 0x0234(0x06DC) MISSED OFFSET
+	bool bClickListenerEnabled; // 0x0910(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x1F]; // 0x0911(0x001F) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ActorInspectorTab");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Development.ActorPropertyMonitorWidget
+// 0x0190 (0x05A8 - 0x0418)
+class UActorPropertyMonitorWidget : public UUAEUserWidget
+{
+public:
+	float PropertyFontSize; // 0x0418(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bUpdatePropertyValueEveryFrame; // 0x041C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x041D(0x0003) MISSED OFFSET
+	class UCanvasPanel* MainCanvasPanel; // 0x0420(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UScrollBox* PropertyScrollBox; // 0x0428(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UVerticalBox* PropertyContainer; // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USlider* OpacitySlider; // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USlider* ScaleSlider; // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UEditableTextBox* SearchTextBox; // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UButton* DragHandleButton; // 0x0450(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UComboBoxString* ComponentComboBox; // 0x0458(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UComboBoxString* AttachedActorComboBox; // 0x0460(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UButton* ClickListenerButton; // 0x0468(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTextBlock* ClickListenerButtonText; // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTextBlock* TargetActorName; // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UObject* TargetObject; // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor* TargetActor; // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FString> PropertyNamesToDisplay; // 0x0490(0x0010) (ZeroConstructor)
+	TMap<struct FString, struct FPropertyItemData> PropertyItems; // 0x04A0(0x0050) (ZeroConstructor)
+	unsigned char UnknownData01[0x40]; // 0x04F0(0x0040) MISSED OFFSET
+	class UObject* CachedPropertyNamesObject; // 0x0530(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x0538(0x0010) MISSED OFFSET
+	class UActorComponent* SelectedComponent; // 0x0548(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TMap<struct FString, class AActor*> AttachedActorsMap; // 0x0550(0x0050) (ZeroConstructor)
+	unsigned char UnknownData03[0x8]; // 0x05A0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ActorPropertyMonitorWidget");
+		return pStaticClass;
+	}
+
+
+	void SetTargetObject(class UObject* InObject);
+	void SetTargetActor(class AActor* InActor);
+	void SetPropertyNames(TArray<struct FString> PropertyNames);
+	void SearchProperties(const struct FString& SearchKeyword);
+	void RefreshPropertyValues();
+	void OnSearchTextChanged(const struct FText& Text);
+	void OnScaleChanged(float Value);
+	void OnPropertyValueCommittedInternal(const struct FText& Text, TEnumAsByte<enum ETextCommit> CommitMethod);
+	void OnPropertyValueCommitted(const struct FText& Text, TEnumAsByte<enum ETextCommit> CommitMethod, const struct FString& PropertyName);
+	void OnPropertyNameButtonClicked();
+	void OnOpacityChanged(float Value);
+	void OnDragButtonReleased();
+	void OnDragButtonPressed();
+	void OnComponentSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<enum ESelectInfo> SelectionType);
+	void OnClickListenerButtonClicked();
+	void OnAttachedActorSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<enum ESelectInfo> SelectionType);
+};
+
+
+// Class Development.BuffTableListPanel
+// 0x0240 (0x0300 - 0x00C0)
+class UBuffTableListPanel : public UImGuiTabBase
+{
+public:
+	unsigned char UnknownData00[0x240]; // 0x00C0(0x0240) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.BuffTableListPanel");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class Development.ClientReportDataTab
+// 0x0200 (0x02C0 - 0x00C0)
+class UClientReportDataTab : public UImGuiTabBase
+{
+public:
+	unsigned char UnknownData00[0x200]; // 0x00C0(0x0200) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ClientReportDataTab");
+		return pStaticClass;
+	}
+
+};
+
+
 // Class Development.CloudGMHandle
 // 0x0008 (0x0030 - 0x0028)
 class UCloudGMHandle : public UObject
 {
 public:
-	bool                                               bEnableCloudGM;                                           // 0x0028(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	bool bEnableCloudGM; // 0x0028(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.CloudGMHandle");
@@ -30,16 +202,75 @@ public:
 };
 
 
+// Class Development.ImGuiFeatureWidget
+// 0x0098 (0x00C0 - 0x0028)
+class UImGuiFeatureWidget : public UObject
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString FeatureName; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName FeatureID; // 0x0090(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsVisible; // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsEnabled; // 0x0099(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x009A(0x0002) MISSED OFFSET
+	int FeaturePriority; // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString LuaFilePath; // 0x00A0(0x0010) (ZeroConstructor)
+	bool bIsLuaInitialized; // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x00B1(0x0003) MISSED OFFSET
+	TWeakObjectPtr<class UObject> Owner; // 0x00B4(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bIsInitialized; // 0x00BC(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x00BD(0x0003) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ImGuiFeatureWidget");
+		return pStaticClass;
+	}
+
+
+	void SetFeatureVisible(bool bVisible);
+	void SetFeatureEnabled(bool bEnabled);
+	bool IsFeatureVisible();
+	bool IsFeatureEnabled();
+	class AImGuiWindowBase* GetOwnerWindow();
+	class UImGuiTabBase* GetOwnerTab();
+	class UObject* GetOwner();
+	struct FString GetFeatureName();
+	struct FName GetFeatureID();
+};
+
+
+// Class Development.DebugNameDisplayFeature
+// 0x0018 (0x00D8 - 0x00C0)
+class UDebugNameDisplayFeature : public UImGuiFeatureWidget
+{
+public:
+	float NearbyActorDistance; // 0x00C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float ShowDebugNameDuration; // 0x00C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*> ExcludedActorClasses; // 0x00C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.DebugNameDisplayFeature");
+		return pStaticClass;
+	}
+
+
+	void AddExcludedActorClass(class UClass* ActorClass);
+};
+
+
 // Class Development.DevConsole
 // 0x0068 (0x0198 - 0x0130)
 class UDevConsole : public UConsole
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0130(0x0058) MISSED OFFSET
-	TArray<struct FString>                             LuaCommandList;                                           // 0x0188(0x0010) (BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0130(0x0058) MISSED OFFSET
+	TArray<struct FString> LuaCommandList; // 0x0188(0x0010) (BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.DevConsole");
@@ -54,10 +285,9 @@ public:
 class UGMCheatSystem : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatSystem");
@@ -73,8 +303,7 @@ class UGMCheatAI : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatAI");
@@ -90,6 +319,7 @@ public:
 	void MoveToAIWithClassName(const struct FString& AIClassName, float XOffset, float YOffset, float ZOffset);
 	void MoveToAIByDropItem(int ItemId);
 	void MoveToAI();
+	void MobAIIgnorePlayers();
 	void LogAIItemCount(int ItemId, float Distance);
 	void FindAIDropItem(int ItemId);
 	void ChangeAIBehaviorTree(int TreeIndex);
@@ -103,8 +333,7 @@ class UGMCheatAnimation : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatAnimation");
@@ -123,8 +352,7 @@ class UGMCheatAvatar : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatAvatar");
@@ -172,8 +400,7 @@ class UGMCheatBackpack : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatBackpack");
@@ -186,6 +413,7 @@ public:
 	void DropItemsWithType(int TypeItem);
 	void DropItem(int ID);
 	void DropAllItem();
+	void DestroyPickUpActors();
 	void ClearBackpack();
 	void BatchAddItemsString(TArray<struct FString> ItemDetailArray, bool bClearBackpack);
 	void BatchAddItemsFromFile(const struct FString& Filename, bool bClearBackpack);
@@ -202,8 +430,7 @@ class UGMCheatCharacter : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatCharacter");
@@ -259,7 +486,6 @@ public:
 	void KillSomeOne(const struct FString& InPlayerName);
 	void KillAll();
 	void Kill(int GivenNumber);
-	void GMTestZengzuo();
 	void GMSetCampId(int CamID);
 	void GetGameScreenSize();
 	void ExecFollowTeammate(const struct FString& Name);
@@ -274,8 +500,7 @@ class UGMCheatDump : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatDump");
@@ -299,15 +524,17 @@ public:
 	void DumpPlayerCameraManagerToFile(const struct FString& Filename);
 	void DumpObservingCharacterToFile(const struct FString& Filename);
 	void DumpObservingCharacter();
+	void DumpObjectPropertiesRecursive(const struct FString& ObjectName, int Depth, bool bPrintFunc);
 	void DumpObjectProperties(const struct FString& ObjectName);
 	void DumpCharacterToFile(const struct FString& Filename);
 	void DumpCharacterAnimInstanceToFile(const struct FString& Filename);
 	void DumpCharacterAnimInstance();
 	void DumpCharacter();
+	void DumpBatchManager();
 	void DumpAllVehiclesToFile(const struct FString& Filename);
 	void DumpAllVehicles();
-	void DumpAllSkillActorsInfoToFile(const struct FString& Filename);
-	void DumpAllSkillActorsInfo();
+	void DumpAllSkillActorsInfoToFile(const struct FString& Filename, int Depth);
+	void DumpAllSkillActorsInfo(int Depth);
 	void DumpAllPlayerControllerToFile(const struct FString& Filename);
 	void DumpAllPlayerController();
 	void DumpAllCustomActorsInfoToFile(class UClass* DesiredClass, const struct FString& Filename);
@@ -323,8 +550,7 @@ class UGMCheatGameFlow : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatGameFlow");
@@ -347,10 +573,9 @@ public:
 class UGMCheatHiggs : public UGMCheatSystem
 {
 public:
-	unsigned char                                      UnknownData00[0xD8];                                      // 0x0080(0x00D8) MISSED OFFSET
+	unsigned char UnknownData00[0xD8]; // 0x0080(0x00D8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatHiggs");
@@ -378,8 +603,7 @@ class UGMCheatHUD : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatHUD");
@@ -400,8 +624,7 @@ class UGMCheatLevel : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatLevel");
@@ -443,14 +666,13 @@ public:
 class UGMCheatManager : public UCheatManager
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0078(0x0058) MISSED OFFSET
-	TArray<class UGMCheatSystem*>                      GMCheatSystems;                                           // 0x00D0(0x0010) (ZeroConstructor)
-	class AActor*                                      PVETestMonster;                                           // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x00E8(0x0030) MISSED OFFSET
-	TArray<class ASkeletalMeshActor*>                  SkeletalMeshActorPool;                                    // 0x0118(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0078(0x0058) MISSED OFFSET
+	TArray<class UGMCheatSystem*> GMCheatSystems; // 0x00D0(0x0010) (ZeroConstructor)
+	class AActor* PVETestMonster; // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x30]; // 0x00E8(0x0030) MISSED OFFSET
+	TArray<class ASkeletalMeshActor*> SkeletalMeshActorPool; // 0x0118(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatManager");
@@ -558,6 +780,7 @@ public:
 	void PVEMonsterRemoveBuffByID(int BuffID, int LayerCount, int CauserSkillID, bool CauseByPlayer);
 	void PVEMonsterAddBuffByID(int BuffID, int LayerCount, int CauserSkillID, bool CauseByPlayer);
 	void PVECloseMonsterLimit(bool bCloseMonsterLimit);
+	void PVEClearTestMonster();
 	void PrintScreenDebug(int Key, float TimeToDisplay, const struct FString& DebugMessage);
 	void PrintRegionObjectList();
 	void PrintPool();
@@ -570,6 +793,7 @@ public:
 	void PacketSimulationLag(int InSimulationLag);
 	void OpenHitTest();
 	void OpenFixationFreeFallVelocity(float X, float Y, float Z);
+	void OpenAllCharacterHitBodyCollison(float Time);
 	void NotifyGameModeParamsChanged(int NewDuration);
 	void NativeSimulateAction(int SimActionType);
 	void MoveSnake(bool bEnable, float moveInternal, float ForwardRate, float RightRate);
@@ -597,7 +821,6 @@ public:
 	void GMSuicideCurVehicle();
 	void GMSuicide();
 	void GMStopAI(bool bStop, uint32_t InPlayerKey);
-	void GMSpeedUp();
 	void GMSpawnSociallandSubVehicle01();
 	void GMSpawnSocialLandPlayerAIAroundPointWithAvatarList(uint32_t DataOffset, uint32_t AINum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon, struct FString* AvatarList);
 	void GMSpawnSocialLandPlayerAIAroundPoint(uint32_t DataOffset, uint32_t AINum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon);
@@ -678,6 +901,7 @@ public:
 	void DumpObjectNetProperties(class UObject* InObj);
 	void DumpMoveLog(bool bDump);
 	void DumpLevels();
+	void DumpLegacyObjectPoolInfo();
 	void DumpDSNetConsiderList();
 	void DumpCharacterRelevant();
 	void DumpAnimLayer();
@@ -752,8 +976,7 @@ class UGMCheatMod : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatMod");
@@ -783,8 +1006,7 @@ class UGMCheatOther : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatOther");
@@ -824,8 +1046,7 @@ class UGMCheatSkill : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatSkill");
@@ -866,8 +1087,7 @@ class UGMCheatVehicle : public UGMCheatSystem
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatVehicle");
@@ -903,10 +1123,9 @@ public:
 class UGMCheatWeapon : public UGMCheatSystem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0080(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0080(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.GMCheatWeapon");
@@ -941,14 +1160,98 @@ public:
 };
 
 
+// Class Development.ImGuiWindowBase
+// 0x0058 (0x05C8 - 0x0570)
+class AImGuiWindowBase : public ALuaActor
+{
+public:
+	struct FString WindowTitle; // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FVector2D WindowSize; // 0x0580(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	int WindowFlags; // 0x0588(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EImGuiWindowDisplayMode DisplayMode; // 0x058C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsWindowVisible; // 0x058D(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x058E(0x0002) MISSED OFFSET
+	float WindowAlpha; // 0x0590(0x0004) (ZeroConstructor, IsPlainOldData)
+	int ImGuiWindowIndex; // 0x0594(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<class UImGuiTabBase*> Tabs; // 0x0598(0x0010) (ZeroConstructor)
+	int ActiveTabIndex; // 0x05A8(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x05AC(0x0004) MISSED OFFSET
+	TArray<class UImGuiFeatureWidget*> Features; // 0x05B0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData02[0x8]; // 0x05C0(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ImGuiWindowBase");
+		return pStaticClass;
+	}
+
+
+	void ToggleWindow();
+	void ToggleDisplayMode();
+	void ShowWindowWithTabs(TArray<class UClass*> TabClasses);
+	void ShowWindow();
+	void SetWindowAlpha(float Alpha);
+	void SetDisplayMode(EImGuiWindowDisplayMode NewMode);
+	void RemoveTab(const struct FName& TabID);
+	void RemoveFeature(const struct FName& FeatureID);
+	bool IsWindowVisible();
+	void HideWindow();
+	float GetWindowAlpha();
+	class UImGuiTabBase* GetTabByID(const struct FName& TabID);
+	class UImGuiFeatureWidget* GetFeatureByID(const struct FName& FeatureID);
+	EImGuiWindowDisplayMode GetDisplayMode();
+	TArray<class UImGuiTabBase*> GetAllTabs();
+	TArray<class UImGuiFeatureWidget*> GetAllFeatures();
+	class UImGuiTabBase* GetActiveTab();
+	class UImGuiTabBase* AddTabWithLuaPath(class UClass* TabClass, const struct FString& InLuaFilePath);
+	void AddTabInstance(class UImGuiTabBase* Tab, const struct FString& InLuaFilePath);
+	class UImGuiTabBase* AddTab(class UClass* TabClass);
+	class UImGuiTabBase* AddLuaTab(const struct FString& InLuaFilePath);
+	class UImGuiFeatureWidget* AddLuaFeature(const struct FString& InLuaFilePath);
+	class UImGuiFeatureWidget* AddFeatureWithLuaPath(class UClass* FeatureClass, const struct FString& InLuaFilePath);
+	void AddFeatureInstance(class UImGuiFeatureWidget* Feature, const struct FString& InLuaFilePath);
+	class UImGuiFeatureWidget* AddFeature(class UClass* FeatureClass);
+	void ActivateTab(const struct FName& TabID);
+};
+
+
+// Class Development.ImGuiWindowManager
+// 0x0050 (0x0080 - 0x0030)
+class UImGuiWindowManager : public UGameInstanceSubsystem
+{
+public:
+	TMap<class UClass*, class AImGuiWindowBase*> WindowCache; // 0x0030(0x0050) (ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ImGuiWindowManager");
+		return pStaticClass;
+	}
+
+
+	void ToggleWindow(class UClass* WindowClass);
+	void ShowWindowWithTabs(class UClass* WindowClass, TArray<class UClass*> TabClasses);
+	void ShowWindow(class UClass* WindowClass);
+	void HideWindow(class UClass* WindowClass);
+	void HideAllWindows();
+	bool HasWindow(class UClass* WindowClass);
+	class AImGuiWindowBase* GetWindow(class UClass* WindowClass);
+	class AImGuiWindowBase* GetOrCreateWindow(class UClass* WindowClass);
+	TArray<class AImGuiWindowBase*> GetAllWindows();
+	static class UImGuiWindowManager* Get(class UObject* WorldContextObject);
+	void DestroyAllWindows();
+};
+
+
 // Class Development.MemLeakTestGameMode
 // 0x0000 (0x0540 - 0x0540)
 class AMemLeakTestGameMode : public AGameModeBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.MemLeakTestGameMode");
@@ -966,8 +1269,7 @@ class UQPSBPLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Development.QPSBPLibrary");
@@ -981,6 +1283,23 @@ public:
 	static bool IsPublishVersion();
 	static int GetHZBValue();
 	static float GetDistanceCullingFactor();
+};
+
+
+// Class Development.ReplayRecordersDataTab
+// 0x0050 (0x0110 - 0x00C0)
+class UReplayRecordersDataTab : public UImGuiTabBase
+{
+public:
+	unsigned char UnknownData00[0x50]; // 0x00C0(0x0050) MISSED OFFSET
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class Development.ReplayRecordersDataTab");
+		return pStaticClass;
+	}
+
 };
 
 

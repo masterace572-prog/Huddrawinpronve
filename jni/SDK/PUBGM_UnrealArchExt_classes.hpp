@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,43 +13,42 @@ namespace SDK
 class UUAEUserWidget : public UUserWidget
 {
 public:
-	class UFrontendHUD*                                OwningFrontendHUD;                                        // 0x0260(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class ULogicManagerBase*                           OwningLogicManager;                                       // 0x0268(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UUAEWidgetContainer*                         OwningWidgetContainer;                                    // 0x0270(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UUAEUserWidget*                              ParentWidget;                                             // 0x0278(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x0280(0x00A0) MISSED OFFSET
-	TArray<class UProperty*>                           Params;                                                   // 0x0320(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
-	struct FScriptMulticastDelegate                    widgetSizeNofity;                                         // 0x0340(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FUserWidgetState                            DefaultUserWidgetState;                                   // 0x0350(0x0028) (Edit)
-	struct FUserWidgetState                            CurrentUserWidgetState;                                   // 0x0378(0x0028) (BlueprintVisible)
-	float                                              TickRate;                                                 // 0x03A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bReceiveOnClickedEvent;                                   // 0x03A4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bReceiveOnRightClickedEvent;                              // 0x03A5(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bReceiveOnDoubleClickedEvent;                             // 0x03A6(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bAutoSetScreenPosOnMouseEnter;                            // 0x03A7(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ScreenPos;                                                // 0x03A8(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FVector2D                                   LastMouseEventScreenPos;                                  // 0x03B0(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x03B8(0x0008) MISSED OFFSET
-	EUserWidgetFadingStatus                            FadingStatus;                                             // 0x03C0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x03C1(0x0003) MISSED OFFSET
-	float                                              CurrentOpacity;                                           // 0x03C4(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FadingInTime;                                             // 0x03C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              FadingOutTime;                                            // 0x03CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bNoFadeIn;                                                // 0x03D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bNoFadeOut;                                               // 0x03D1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bShouldCollapse;                                          // 0x03D2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bRegistUIMsg;                                             // 0x03D3(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x03D4(0x0004) MISSED OFFSET
-	struct FString                                     UIMsgPrefix;                                              // 0x03D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FString>                             UIMsgFunctionList;                                        // 0x03E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	bool                                               bRegistedUIMsgToMoudle;                                   // 0x03F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x03F9(0x0007) MISSED OFFSET
-	struct FString                                     MoudleToRegisted;                                         // 0x0400(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      UnknownData06[0x8];                                       // 0x0410(0x0008) MISSED OFFSET
+	class UFrontendHUD* OwningFrontendHUD; // 0x0260(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class ULogicManagerBase* OwningLogicManager; // 0x0268(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UUAEWidgetContainer* OwningWidgetContainer; // 0x0270(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UUAEUserWidget* ParentWidget; // 0x0278(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0xA0]; // 0x0280(0x00A0) MISSED OFFSET
+	TArray<class UProperty*> Params; // 0x0320(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x10]; // 0x0330(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate widgetSizeNofity; // 0x0340(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FUserWidgetState DefaultUserWidgetState; // 0x0350(0x0028) (Edit)
+	struct FUserWidgetState CurrentUserWidgetState; // 0x0378(0x0028) (BlueprintVisible)
+	float TickRate; // 0x03A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	bool bReceiveOnClickedEvent; // 0x03A4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bReceiveOnRightClickedEvent; // 0x03A5(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bReceiveOnDoubleClickedEvent; // 0x03A6(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bAutoSetScreenPosOnMouseEnter; // 0x03A7(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D ScreenPos; // 0x03A8(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FVector2D LastMouseEventScreenPos; // 0x03B0(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	unsigned char UnknownData02[0x8]; // 0x03B8(0x0008) MISSED OFFSET
+	EUserWidgetFadingStatus FadingStatus; // 0x03C0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x03C1(0x0003) MISSED OFFSET
+	float CurrentOpacity; // 0x03C4(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float FadingInTime; // 0x03C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float FadingOutTime; // 0x03CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bNoFadeIn; // 0x03D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bNoFadeOut; // 0x03D1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bShouldCollapse; // 0x03D2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bRegistUIMsg; // 0x03D3(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x03D4(0x0004) MISSED OFFSET
+	struct FString UIMsgPrefix; // 0x03D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FString> UIMsgFunctionList; // 0x03E8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	bool bRegistedUIMsgToMoudle; // 0x03F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x7]; // 0x03F9(0x0007) MISSED OFFSET
+	struct FString MoudleToRegisted; // 0x0400(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char UnknownData06[0x8]; // 0x0410(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAEUserWidget");
@@ -116,13 +115,12 @@ public:
 class ULuaUAEUserWidget : public UUAEUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0418(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0470(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bEnableBlueprintTick;                                     // 0x0480(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0481(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0418(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0470(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool bEnableBlueprintTick; // 0x0480(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0481(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.LuaUAEUserWidget");
@@ -138,8 +136,7 @@ class UUAECanvasPanel : public UCanvasPanel
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAECanvasPanel");
@@ -156,10 +153,9 @@ public:
 class UBackendUtils : public UObject
 {
 public:
-	class UBackendHUD*                                 OwningBackendHUD;                                         // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBackendHUD* OwningBackendHUD; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.BackendUtils");
@@ -174,15 +170,14 @@ public:
 class UBackendHUD : public UObject
 {
 public:
-	class UEngine*                                     Engine;                                                   // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     BackendUtilsClassName;                                    // 0x0030(0x0010) (ZeroConstructor, Config)
-	class UBackendUtils*                               Utils;                                                    // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UFrontendHUD*>                        FrontendHUDList;                                          // 0x0048(0x0010) (ZeroConstructor)
-	TMap<uint32_t, TWeakObjectPtr<class UFrontendHUD>> FrontendHUDMap;                                           // 0x0058(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00A8(0x0008) MISSED OFFSET
+	class UEngine* Engine; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString BackendUtilsClassName; // 0x0030(0x0010) (ZeroConstructor, Config)
+	class UBackendUtils* Utils; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UFrontendHUD*> FrontendHUDList; // 0x0048(0x0010) (ZeroConstructor)
+	TMap<uint32_t, TWeakObjectPtr<class UFrontendHUD>> FrontendHUDMap; // 0x0058(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x00A8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.BackendHUD");
@@ -200,26 +195,25 @@ public:
 class ULogicManagerBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	class UFrontendHUD*                                OwningFrontendHUD;                                        // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
-	bool                                               bPersistentUI;                                            // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bDynamicWidget;                                           // 0x0051(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bKeepDynamicWidget;                                       // 0x0052(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseNewHandleUIMessage;                                   // 0x0053(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	int                                                iUIControlState;                                          // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                DefaultSceneCameraIndex;                                  // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x14];                                      // 0x005C(0x0014) MISSED OFFSET
-	TArray<struct FName>                               GameStatusList;                                           // 0x0070(0x0010) (ZeroConstructor)
-	TArray<struct FString>                             InvalidWorldNameList;                                     // 0x0080(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0090(0x0030) MISSED OFFSET
-	TArray<class UClass*>                              WidgetUClassList;                                         // 0x00C0(0x0010) (ZeroConstructor)
-	TArray<class UUAEUserWidget*>                      WidgetList;                                               // 0x00D0(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x18];                                      // 0x00E0(0x0018) MISSED OFFSET
-	TArray<class UObject*>                             DelayMessage_Obj;                                         // 0x00F8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
+	class UFrontendHUD* OwningFrontendHUD; // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x10]; // 0x0040(0x0010) MISSED OFFSET
+	bool bPersistentUI; // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bDynamicWidget; // 0x0051(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bKeepDynamicWidget; // 0x0052(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bUseNewHandleUIMessage; // 0x0053(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	int iUIControlState; // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
+	int DefaultSceneCameraIndex; // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x14]; // 0x005C(0x0014) MISSED OFFSET
+	TArray<struct FName> GameStatusList; // 0x0070(0x0010) (ZeroConstructor)
+	TArray<struct FString> InvalidWorldNameList; // 0x0080(0x0010) (ZeroConstructor)
+	unsigned char UnknownData03[0x30]; // 0x0090(0x0030) MISSED OFFSET
+	TArray<class UClass*> WidgetUClassList; // 0x00C0(0x0010) (ZeroConstructor)
+	TArray<class UUAEUserWidget*> WidgetList; // 0x00D0(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char UnknownData04[0x18]; // 0x00E0(0x0018) MISSED OFFSET
+	TArray<class UObject*> DelayMessage_Obj; // 0x00F8(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.LogicManagerBase");
@@ -229,6 +223,7 @@ public:
 
 	void SetEnableRemoveDynamicWidgets(bool bEnable);
 	void MarkWidgetClassPendingKill(class UUAEUserWidget* Widget);
+	static bool IsNeedClear(float MaxLowLevelMemorySize, float MaxMiddleMemorySize, float MaxGCArrayObjectSize);
 	bool IsEnableRemoveDynamicWidgets();
 	TArray<class UUAEUserWidget*> GetWidgetList();
 	class UUAEUserWidget* GetWidgetByName(const struct FString& InName);
@@ -244,44 +239,43 @@ public:
 class UFrontendHUD : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
-	class UGameInstance*                               GameInstance;                                             // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-	struct FString                                     FrontendUtilsClassName;                                   // 0x0050(0x0010) (ZeroConstructor, Config)
-	class UFrontendUtils*                              Utils;                                                    // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class ULogicManagerBase*>                   LogicManagerList;                                         // 0x0068(0x0010) (ZeroConstructor)
-	TMap<struct FString, TWeakObjectPtr<class ULogicManagerBase>> LogicManagerMap;                                          // 0x0078(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
-	int                                                UnusedWidgetMinCount;                                     // 0x00D8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	int                                                UnusedWidgetMaxCount;                                     // 0x00DC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	int                                                UnusedWidgetKeepTime;                                     // 0x00E0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              MaxLowLevelMemoryLimit;                                   // 0x00E4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              MaxMiddleMemoryLimit;                                     // 0x00E8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	float                                              MaxGCArrayObjectSize;                                     // 0x00EC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	struct FString                                     CurrentGameStatus;                                        // 0x00F0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     LastGameStatus;                                           // 0x0100(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               InComBatStatus;                                           // 0x0110(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
-	struct FString                                     PendingGameStatus;                                        // 0x0118(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     LatestGameStatusURL;                                      // 0x0128(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnPreSwitchLobbyEntry;                                    // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPostSwitchLobbyEntry;                                   // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPostSwitchGameStatusStartEvent;                         // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPostSwitchGameStatusEvent;                              // 0x0168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPreSwitchGameStatusEvent;                               // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0188(0x0010) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnGameStatusSwitchTerminate;                              // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPreSwitchGameStatusEndEvent;                            // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnCreateLogicManagerListEvent;                            // 0x01B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnSetGameStatusEvent;                                     // 0x01C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnAddLuaLogicManagerEvent;                                // 0x01D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnRemoveLuaLogicManagerEvent;                             // 0x01E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnRenderQualityChangedEvent;                              // 0x01F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UWorld*                                      CurrentGameStatusWorld;                                   // 0x0208(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x8];                                       // 0x0210(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0028(0x0018) MISSED OFFSET
+	class UGameInstance* GameInstance; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0048(0x0008) MISSED OFFSET
+	struct FString FrontendUtilsClassName; // 0x0050(0x0010) (ZeroConstructor, Config)
+	class UFrontendUtils* Utils; // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class ULogicManagerBase*> LogicManagerList; // 0x0068(0x0010) (ZeroConstructor)
+	TMap<struct FString, TWeakObjectPtr<class ULogicManagerBase>> LogicManagerMap; // 0x0078(0x0050) (ZeroConstructor)
+	unsigned char UnknownData02[0x10]; // 0x00C8(0x0010) MISSED OFFSET
+	int UnusedWidgetMinCount; // 0x00D8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	int UnusedWidgetMaxCount; // 0x00DC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	int UnusedWidgetKeepTime; // 0x00E0(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float MaxLowLevelMemoryLimit; // 0x00E4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float MaxMiddleMemoryLimit; // 0x00E8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	float MaxGCArrayObjectSize; // 0x00EC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	struct FString CurrentGameStatus; // 0x00F0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString LastGameStatus; // 0x0100(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool InComBatStatus; // 0x0110(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x0111(0x0007) MISSED OFFSET
+	struct FString PendingGameStatus; // 0x0118(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString LatestGameStatusURL; // 0x0128(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FScriptMulticastDelegate OnPreSwitchLobbyEntry; // 0x0138(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnPostSwitchLobbyEntry; // 0x0148(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnPostSwitchGameStatusStartEvent; // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnPostSwitchGameStatusEvent; // 0x0168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnPreSwitchGameStatusEvent; // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData04[0x10]; // 0x0188(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate OnGameStatusSwitchTerminate; // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnPreSwitchGameStatusEndEvent; // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnCreateLogicManagerListEvent; // 0x01B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnSetGameStatusEvent; // 0x01C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnAddLuaLogicManagerEvent; // 0x01D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnRemoveLuaLogicManagerEvent; // 0x01E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnRenderQualityChangedEvent; // 0x01F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UWorld* CurrentGameStatusWorld; // 0x0208(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x8]; // 0x0210(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.FrontendHUD");
@@ -317,27 +311,26 @@ public:
 class UFrontendUtils : public UObject
 {
 public:
-	class UFrontendHUD*                                OwningFrontendHUD;                                        // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    SceneCameraSwitchedDelegate;                              // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FName                                       CurrentSceneCameraName;                                   // 0x0040(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<class ACameraActor*>                        SceneCameraList;                                          // 0x0048(0x0010) (ZeroConstructor)
-	TMap<struct FName, TWeakObjectPtr<class ACameraActor>> SceneCameraMap;                                           // 0x0058(0x0050) (ZeroConstructor)
-	TArray<class ADirectionalLight*>                   SceneDirectionalLightList;                                // 0x00A8(0x0010) (ZeroConstructor)
-	TMap<struct FName, TWeakObjectPtr<class ADirectionalLight>> SceneDirectionalLightMap;                                 // 0x00B8(0x0050) (ZeroConstructor)
-	TArray<class APointLight*>                         ScenePointLightList;                                      // 0x0108(0x0010) (ZeroConstructor)
-	TMap<struct FName, TWeakObjectPtr<class APointLight>> ScenePointLightMap;                                       // 0x0118(0x0050) (ZeroConstructor)
-	TMap<struct FName, TWeakObjectPtr<class ASkyLight>> SceneSkyLightMap;                                         // 0x0168(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x01B8(0x0068) MISSED OFFSET
-	struct FString                                     GlobalUIContainerClassName;                               // 0x0220(0x0010) (ZeroConstructor, Config)
-	TArray<struct FName>                               GlobalUIContainerNames;                                   // 0x0230(0x0010) (ZeroConstructor, Config)
-	TMap<struct FName, class UUAEWidgetContainer*>     GlobalUIContainers;                                       // 0x0240(0x0050) (ExportObject, ZeroConstructor)
-	TArray<class UUAEWidgetContainer*>                 GlobalPushUIContainers;                                   // 0x0290(0x0010) (ExportObject, ZeroConstructor)
-	TMap<struct FName, class UUAEWidgetContainer*>     GlobalPushUIRelations;                                    // 0x02A0(0x0050) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x38];                                      // 0x02F0(0x0038) MISSED OFFSET
-	TMap<class UUAEWidgetContainer*, bool>             UIShowStatusMap;                                          // 0x0328(0x0050) (ZeroConstructor)
+	class UFrontendHUD* OwningFrontendHUD; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate SceneCameraSwitchedDelegate; // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FName CurrentSceneCameraName; // 0x0040(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<class ACameraActor*> SceneCameraList; // 0x0048(0x0010) (ZeroConstructor)
+	TMap<struct FName, TWeakObjectPtr<class ACameraActor>> SceneCameraMap; // 0x0058(0x0050) (ZeroConstructor)
+	TArray<class ADirectionalLight*> SceneDirectionalLightList; // 0x00A8(0x0010) (ZeroConstructor)
+	TMap<struct FName, TWeakObjectPtr<class ADirectionalLight>> SceneDirectionalLightMap; // 0x00B8(0x0050) (ZeroConstructor)
+	TArray<class APointLight*> ScenePointLightList; // 0x0108(0x0010) (ZeroConstructor)
+	TMap<struct FName, TWeakObjectPtr<class APointLight>> ScenePointLightMap; // 0x0118(0x0050) (ZeroConstructor)
+	TMap<struct FName, TWeakObjectPtr<class ASkyLight>> SceneSkyLightMap; // 0x0168(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x68]; // 0x01B8(0x0068) MISSED OFFSET
+	struct FString GlobalUIContainerClassName; // 0x0220(0x0010) (ZeroConstructor, Config)
+	TArray<struct FName> GlobalUIContainerNames; // 0x0230(0x0010) (ZeroConstructor, Config)
+	TMap<struct FName, class UUAEWidgetContainer*> GlobalUIContainers; // 0x0240(0x0050) (ExportObject, ZeroConstructor)
+	TArray<class UUAEWidgetContainer*> GlobalPushUIContainers; // 0x0290(0x0010) (ExportObject, ZeroConstructor)
+	TMap<struct FName, class UUAEWidgetContainer*> GlobalPushUIRelations; // 0x02A0(0x0050) (ExportObject, ZeroConstructor)
+	unsigned char UnknownData01[0x38]; // 0x02F0(0x0038) MISSED OFFSET
+	TMap<class UUAEWidgetContainer*, bool> UIShowStatusMap; // 0x0328(0x0050) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.FrontendUtils");
@@ -362,6 +355,7 @@ public:
 	struct FString GetUIStackTopSrcTag();
 	struct FString GetUIStackTopDstTag();
 	struct FString GetUIStackTop();
+	class UCameraComponent* GetSceneCameraComponent();
 	class ACameraActor* GetSceneCamera();
 	class UFrontendHUD* GetOwningFrontendHUD();
 	class UUAEWidgetContainer* GetGlobalUIContainer(const struct FName& ContainerName);
@@ -377,8 +371,7 @@ class UTableTraver : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.TableTraver");
@@ -393,12 +386,11 @@ public:
 class UUAEDataTable : public UDataTable
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0088(0x0038) MISSED OFFSET
-	TMap<struct FString, class UProperty*>             NameToProperty;                                           // 0x00C0(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0110(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x38]; // 0x0088(0x0038) MISSED OFFSET
+	TMap<struct FString, class UProperty*> NameToProperty; // 0x00C0(0x0050) (ZeroConstructor)
+	unsigned char UnknownData01[0x10]; // 0x0110(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAEDataTable");
@@ -421,8 +413,7 @@ class UUAEDataTableInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAEDataTableInterface");
@@ -437,19 +428,18 @@ public:
 class UUAEUserWidgetForDrag : public UUAEUserWidget
 {
 public:
-	struct FName                                       WidgetName;                                               // 0x0418(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DefaultDragVisualClass;                                   // 0x0420(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	EDragPivot                                         Pivot;                                                    // 0x0428(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0429(0x0003) MISSED OFFSET
-	struct FVector2D                                   Offset;                                                   // 0x042C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0434(0x0004) MISSED OFFSET
-	class UDragDropOperation*                          DragDropOperation;                                        // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FScriptDelegate                             OnOnDragDetectedDel;                                      // 0x0440(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnDragEnterDel;                                           // 0x0450(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnDragCancelledDel;                                       // 0x0460(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FName WidgetName; // 0x0418(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UClass* DefaultDragVisualClass; // 0x0420(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	EDragPivot Pivot; // 0x0428(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0429(0x0003) MISSED OFFSET
+	struct FVector2D Offset; // 0x042C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0434(0x0004) MISSED OFFSET
+	class UDragDropOperation* DragDropOperation; // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FScriptDelegate OnOnDragDetectedDel; // 0x0440(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnDragEnterDel; // 0x0450(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnDragCancelledDel; // 0x0460(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAEUserWidgetForDrag");
@@ -466,11 +456,10 @@ public:
 class UUAEWidgetContainer : public UUAEUserWidget
 {
 public:
-	TArray<class UWidget*>                             WidgetList;                                               // 0x0418(0x0010) (ExportObject, ZeroConstructor)
-	class UCanvasPanel*                                ContainerCache;                                           // 0x0428(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UWidget*> WidgetList; // 0x0418(0x0010) (ExportObject, ZeroConstructor)
+	class UCanvasPanel* ContainerCache; // 0x0428(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UnrealArchExt.UAEWidgetContainer");

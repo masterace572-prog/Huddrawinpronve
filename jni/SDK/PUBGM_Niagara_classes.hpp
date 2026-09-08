@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,33 +9,32 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class Niagara.NiagaraComponent
-// 0x01D0 (0x0AF0 - 0x0920)
+// 0x01D0 (0x0B10 - 0x0940)
 class UNiagaraComponent : public UFXSystemComponent
 {
 public:
-	class UNiagaraSystem*                              Asset;                                                    // 0x0920(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNiagaraUserRedirectionParameterStore       OverrideParameters;                                       // 0x0928(0x0138) (Edit)
-	unsigned char                                      bForceSolo : 1;                                           // 0x0A60(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x24];                                      // 0x0A61(0x0024) MISSED OFFSET
-	unsigned char                                      bAutoDestroy : 1;                                         // 0x0A85(0x0001)
-	unsigned char                                      bRenderingEnabled : 1;                                    // 0x0A85(0x0001)
-	unsigned char                                      bAutoManageAttachment : 1;                                // 0x0A85(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0A86(0x0002) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnSystemFinished;                                         // 0x0A88(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TWeakObjectPtr<class USceneComponent>              AutoAttachParent;                                         // 0x0A98(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData)
-	struct FName                                       AutoAttachSocketName;                                     // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AutoAttachLocationRule;                                   // 0x0AA8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AutoAttachRotationRule;                                   // 0x0AA9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EAttachmentRule                                    AutoAttachScaleRule;                                      // 0x0AAA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x0AAB(0x0001) MISSED OFFSET
-	int                                                PreviewDetailLevel;                                       // 0x0AAC(0x0004) (Edit, ZeroConstructor, Transient, IsPlainOldData)
-	float                                              PreviewLODDistance;                                       // 0x0AB0(0x0004) (Edit, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      bEnablePreviewDetailLevel : 1;                            // 0x0AB4(0x0001) (Edit, Transient)
-	unsigned char                                      bEnablePreviewLODDistance : 1;                            // 0x0AB4(0x0001) (Edit, Transient)
-	unsigned char                                      UnknownData03[0x3B];                                      // 0x0AB5(0x003B) MISSED OFFSET
+	class UNiagaraSystem* Asset; // 0x0940(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FNiagaraUserRedirectionParameterStore OverrideParameters; // 0x0948(0x0138) (Edit)
+	unsigned char bForceSolo : 1; // 0x0A80(0x0001) (Edit)
+	unsigned char UnknownData00[0x24]; // 0x0A81(0x0024) MISSED OFFSET
+	unsigned char bAutoDestroy : 1; // 0x0AA5(0x0001)
+	unsigned char bRenderingEnabled : 1; // 0x0AA5(0x0001)
+	unsigned char bAutoManageAttachment : 1; // 0x0AA5(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char UnknownData01[0x2]; // 0x0AA6(0x0002) MISSED OFFSET
+	struct FScriptMulticastDelegate OnSystemFinished; // 0x0AA8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TWeakObjectPtr<class USceneComponent> AutoAttachParent; // 0x0AB8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnTemplate, EditConst, InstancedReference, IsPlainOldData)
+	struct FName AutoAttachSocketName; // 0x0AC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule AutoAttachLocationRule; // 0x0AC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule AutoAttachRotationRule; // 0x0AC9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EAttachmentRule AutoAttachScaleRule; // 0x0ACA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x1]; // 0x0ACB(0x0001) MISSED OFFSET
+	int PreviewDetailLevel; // 0x0ACC(0x0004) (Edit, ZeroConstructor, Transient, IsPlainOldData)
+	float PreviewLODDistance; // 0x0AD0(0x0004) (Edit, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char bEnablePreviewDetailLevel : 1; // 0x0AD4(0x0001) (Edit, Transient)
+	unsigned char bEnablePreviewLODDistance : 1; // 0x0AD4(0x0001) (Edit, Transient)
+	unsigned char UnknownData03[0x3B]; // 0x0AD5(0x003B) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraComponent");
@@ -89,10 +88,9 @@ public:
 class UMovieSceneNiagaraTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UMovieSceneSection*> Sections; // 0x0058(0x0010) (ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraTrack");
@@ -107,10 +105,9 @@ public:
 class UMovieSceneNiagaraParameterTrack : public UMovieSceneNiagaraTrack
 {
 public:
-	struct FNiagaraVariable                            Parameter;                                                // 0x0068(0x0030)
+	struct FNiagaraVariable Parameter; // 0x0068(0x0030)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraParameterTrack");
@@ -126,8 +123,7 @@ class UMovieSceneNiagaraBoolParameterTrack : public UMovieSceneNiagaraParameterT
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraBoolParameterTrack");
@@ -143,8 +139,7 @@ class UMovieSceneNiagaraColorParameterTrack : public UMovieSceneNiagaraParameter
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraColorParameterTrack");
@@ -160,8 +155,7 @@ class UMovieSceneNiagaraFloatParameterTrack : public UMovieSceneNiagaraParameter
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraFloatParameterTrack");
@@ -177,8 +171,7 @@ class UMovieSceneNiagaraIntegerParameterTrack : public UMovieSceneNiagaraParamet
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraIntegerParameterTrack");
@@ -194,8 +187,7 @@ class UMovieSceneNiagaraSystemSpawnSection : public UMovieSceneSection
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemSpawnSection");
@@ -211,8 +203,7 @@ class UMovieSceneNiagaraSystemTrack : public UMovieSceneNiagaraTrack
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraSystemTrack");
@@ -227,11 +218,10 @@ public:
 class UMovieSceneNiagaraVectorParameterTrack : public UMovieSceneNiagaraParameterTrack
 {
 public:
-	int                                                ChannelsUsed;                                             // 0x0098(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	int ChannelsUsed; // 0x0098(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x009C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.MovieSceneNiagaraVectorParameterTrack");
@@ -246,10 +236,9 @@ public:
 class ANiagaraActor : public AActor
 {
 public:
-	class UNiagaraComponent*                           NiagaraComponent;                                         // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UNiagaraComponent* NiagaraComponent; // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraActor");
@@ -264,10 +253,9 @@ public:
 class UNiagaraDataInterface : public UNiagaraDataInterfaceBase
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterface");
@@ -282,15 +270,14 @@ public:
 class UNiagaraDataInterfaceCurveBase : public UNiagaraDataInterface
 {
 public:
-	TArray<float>                                      ShaderLUT;                                                // 0x0038(0x0010) (ZeroConstructor)
-	float                                              LUTMinTime;                                               // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              LUTMaxTime;                                               // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              LUTInvTimeRange;                                          // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseLUT : 1;                                              // 0x0054(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
+	TArray<float> ShaderLUT; // 0x0038(0x0010) (ZeroConstructor)
+	float LUTMinTime; // 0x0048(0x0004) (ZeroConstructor, IsPlainOldData)
+	float LUTMaxTime; // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
+	float LUTInvTimeRange; // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char bUseLUT : 1; // 0x0054(0x0001) (Edit)
+	unsigned char UnknownData00[0x3]; // 0x0055(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurveBase");
@@ -305,10 +292,9 @@ public:
 class UNiagaraDataInterfaceCollisionQuery : public UNiagaraDataInterface
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0038(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCollisionQuery");
@@ -323,13 +309,12 @@ public:
 class UNiagaraDataInterfaceColorCurve : public UNiagaraDataInterfaceCurveBase
 {
 public:
-	struct FRichCurve                                  RedCurve;                                                 // 0x0058(0x0070) (Edit)
-	struct FRichCurve                                  GreenCurve;                                               // 0x00C8(0x0070) (Edit)
-	struct FRichCurve                                  BlueCurve;                                                // 0x0138(0x0070) (Edit)
-	struct FRichCurve                                  AlphaCurve;                                               // 0x01A8(0x0070) (Edit)
+	struct FRichCurve RedCurve; // 0x0058(0x0070) (Edit)
+	struct FRichCurve GreenCurve; // 0x00C8(0x0070) (Edit)
+	struct FRichCurve BlueCurve; // 0x0138(0x0070) (Edit)
+	struct FRichCurve AlphaCurve; // 0x01A8(0x0070) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceColorCurve");
@@ -344,11 +329,10 @@ public:
 class UNiagaraDataInterfaceCurlNoise : public UNiagaraDataInterface
 {
 public:
-	uint32_t                                           Seed;                                                     // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x003C(0x000C) MISSED OFFSET
+	uint32_t Seed; // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xC]; // 0x003C(0x000C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurlNoise");
@@ -363,10 +347,9 @@ public:
 class UNiagaraDataInterfaceCurve : public UNiagaraDataInterfaceCurveBase
 {
 public:
-	struct FRichCurve                                  Curve;                                                    // 0x0058(0x0070) (Edit)
+	struct FRichCurve Curve; // 0x0058(0x0070) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceCurve");
@@ -381,10 +364,9 @@ public:
 class UNiagaraDataInterfaceParticleRead : public UNiagaraDataInterface
 {
 public:
-	struct FString                                     EmitterName;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	struct FString EmitterName; // 0x0038(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceParticleRead");
@@ -399,12 +381,11 @@ public:
 class UNiagaraDataInterfaceRWBase : public UNiagaraDataInterface
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) UNKNOWN PROPERTY: SetProperty Niagara.NiagaraDataInterfaceRWBase.OutputShaderStages
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0088(0x0050) UNKNOWN PROPERTY: SetProperty Niagara.NiagaraDataInterfaceRWBase.IterationShaderStages
-	unsigned char                                      UnknownData02[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x0038(0x0050) UNKNOWN PROPERTY: SetProperty Niagara.NiagaraDataInterfaceRWBase.OutputShaderStages
+	unsigned char UnknownData01[0x50]; // 0x0088(0x0050) UNKNOWN PROPERTY: SetProperty Niagara.NiagaraDataInterfaceRWBase.IterationShaderStages
+	unsigned char UnknownData02[0x8]; // 0x00D8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceRWBase");
@@ -420,8 +401,7 @@ class UNiagaraDataInterfaceSimpleCounter : public UNiagaraDataInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSimpleCounter");
@@ -436,26 +416,25 @@ public:
 class UNiagaraDataInterfaceSkeletalMesh : public UNiagaraDataInterface
 {
 public:
-	class USkeletalMesh*                               DefaultMesh;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Source;                                                   // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SourceComponent;                                          // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	ENDISkeletalMesh_SkinningMode                      SkinningMode;                                             // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
-	TArray<struct FName>                               SamplingRegions;                                          // 0x0058(0x0010) (Edit, ZeroConstructor)
-	int                                                WholeMeshLOD;                                             // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
-	TArray<struct FName>                               SpecificBones;                                            // 0x0070(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FName>                               SpecificSockets;                                          // 0x0080(0x0010) (Edit, ZeroConstructor)
-	bool                                               bUseTriangleSampling;                                     // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseVertexSampling;                                       // 0x0091(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bUseSkeletonSampling;                                     // 0x0092(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x5];                                       // 0x0093(0x0005) MISSED OFFSET
-	struct FString                                     SourceComponentKeyWord;                                   // 0x0098(0x0010) (Edit, ZeroConstructor)
-	bool                                               bForceUseDefaultMesh;                                     // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	class USkeletalMesh* DefaultMesh; // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AActor* Source; // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent* SourceComponent; // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	ENDISkeletalMesh_SkinningMode SkinningMode; // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0051(0x0007) MISSED OFFSET
+	TArray<struct FName> SamplingRegions; // 0x0058(0x0010) (Edit, ZeroConstructor)
+	int WholeMeshLOD; // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x006C(0x0004) MISSED OFFSET
+	TArray<struct FName> SpecificBones; // 0x0070(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FName> SpecificSockets; // 0x0080(0x0010) (Edit, ZeroConstructor)
+	bool bUseTriangleSampling; // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bUseVertexSampling; // 0x0091(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bUseSkeletonSampling; // 0x0092(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x5]; // 0x0093(0x0005) MISSED OFFSET
+	struct FString SourceComponentKeyWord; // 0x0098(0x0010) (Edit, ZeroConstructor)
+	bool bForceUseDefaultMesh; // 0x00A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x00A9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSkeletalMesh");
@@ -466,14 +445,14 @@ public:
 
 
 // Class Niagara.NiagaraDataInterfaceSpline
-// 0x0008 (0x0040 - 0x0038)
+// 0x0018 (0x0050 - 0x0038)
 class UNiagaraDataInterfaceSpline : public UNiagaraDataInterface
 {
 public:
-	class AActor*                                      Source;                                                   // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AActor* Source; // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector> SplineKeyframePoints; // 0x0040(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceSpline");
@@ -488,14 +467,13 @@ public:
 class UNiagaraDataInterfaceStaticMesh : public UNiagaraDataInterface
 {
 public:
-	class UStaticMesh*                                 DefaultMesh;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Source;                                                   // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        SourceComponent;                                          // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	struct FNDIStaticMeshSectionFilter                 SectionFilter;                                            // 0x0050(0x0010) (Edit)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
+	class UStaticMesh* DefaultMesh; // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AActor* Source; // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent* SourceComponent; // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	struct FNDIStaticMeshSectionFilter SectionFilter; // 0x0050(0x0010) (Edit)
+	unsigned char UnknownData00[0x8]; // 0x0060(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceStaticMesh");
@@ -510,10 +488,9 @@ public:
 class UNiagaraDataInterfaceTexture : public UNiagaraDataInterface
 {
 public:
-	class UTexture*                                    Texture;                                                  // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UTexture* Texture; // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceTexture");
@@ -528,11 +505,10 @@ public:
 class UNiagaraDataInterfaceVector2DCurve : public UNiagaraDataInterfaceCurveBase
 {
 public:
-	struct FRichCurve                                  XCurve;                                                   // 0x0058(0x0070) (Edit)
-	struct FRichCurve                                  YCurve;                                                   // 0x00C8(0x0070) (Edit)
+	struct FRichCurve XCurve; // 0x0058(0x0070) (Edit)
+	struct FRichCurve YCurve; // 0x00C8(0x0070) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector2DCurve");
@@ -547,13 +523,12 @@ public:
 class UNiagaraDataInterfaceVector4Curve : public UNiagaraDataInterfaceCurveBase
 {
 public:
-	struct FRichCurve                                  XCurve;                                                   // 0x0058(0x0070) (Edit)
-	struct FRichCurve                                  YCurve;                                                   // 0x00C8(0x0070) (Edit)
-	struct FRichCurve                                  ZCurve;                                                   // 0x0138(0x0070) (Edit)
-	struct FRichCurve                                  WCurve;                                                   // 0x01A8(0x0070) (Edit)
+	struct FRichCurve XCurve; // 0x0058(0x0070) (Edit)
+	struct FRichCurve YCurve; // 0x00C8(0x0070) (Edit)
+	struct FRichCurve ZCurve; // 0x0138(0x0070) (Edit)
+	struct FRichCurve WCurve; // 0x01A8(0x0070) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVector4Curve");
@@ -568,12 +543,11 @@ public:
 class UNiagaraDataInterfaceVectorCurve : public UNiagaraDataInterfaceCurveBase
 {
 public:
-	struct FRichCurve                                  XCurve;                                                   // 0x0058(0x0070) (Edit)
-	struct FRichCurve                                  YCurve;                                                   // 0x00C8(0x0070) (Edit)
-	struct FRichCurve                                  ZCurve;                                                   // 0x0138(0x0070) (Edit)
+	struct FRichCurve XCurve; // 0x0058(0x0070) (Edit)
+	struct FRichCurve YCurve; // 0x00C8(0x0070) (Edit)
+	struct FRichCurve ZCurve; // 0x0138(0x0070) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorCurve");
@@ -588,14 +562,13 @@ public:
 class UNiagaraDataInterfaceVectorField : public UNiagaraDataInterface
 {
 public:
-	class UVectorField*                                Field;                                                    // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bTileX;                                                   // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bTileY;                                                   // 0x0041(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bTileZ;                                                   // 0x0042(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x0043(0x0005) MISSED OFFSET
+	class UVectorField* Field; // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bTileX; // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bTileY; // 0x0041(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bTileZ; // 0x0042(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x5]; // 0x0043(0x0005) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDataInterfaceVectorField");
@@ -610,12 +583,11 @@ public:
 class UNiagaraRendererProperties : public UNiagaraMergeable
 {
 public:
-	int                                                SortOrderHint;                                            // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsEnabled;                                               // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	int SortOrderHint; // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bIsEnabled; // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x002D(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraRendererProperties");
@@ -630,18 +602,17 @@ public:
 class UNiagaraDecalRendererProperties : public UNiagaraRendererProperties
 {
 public:
-	class UMaterialInterface*                          Material;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DecalScreenSizeFade;                                      // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FNiagaraVariableAttributeBinding            PositionBinding;                                          // 0x0040(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DecalOrientationBinding;                                  // 0x00D0(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DecalSizeBinding;                                         // 0x0160(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DecalFadeBinding;                                         // 0x01F0(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DecalSortOrderBinding;                                    // 0x0280(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DecalVisibleBinding;                                      // 0x0310(0x0090) (Edit)
+	class UMaterialInterface* Material; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float DecalScreenSizeFade; // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x003C(0x0004) MISSED OFFSET
+	struct FNiagaraVariableAttributeBinding PositionBinding; // 0x0040(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DecalOrientationBinding; // 0x00D0(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DecalSizeBinding; // 0x0160(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DecalFadeBinding; // 0x01F0(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DecalSortOrderBinding; // 0x0280(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DecalVisibleBinding; // 0x0310(0x0090) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraDecalRendererProperties");
@@ -657,8 +628,7 @@ class UNiagaraEditorDataBase : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraEditorDataBase");
@@ -673,44 +643,43 @@ public:
 class UNiagaraEmitter : public UObject
 {
 public:
-	bool                                               bLocalSpace;                                              // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bBoneSpace;                                               // 0x0029(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDeterminism;                                             // 0x002A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x002B(0x0001) MISSED OFFSET
-	int                                                RandomSeed;                                               // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNiagaraEmitterScriptProperties             UpdateScriptProps;                                        // 0x0030(0x0028)
-	struct FNiagaraEmitterScriptProperties             SpawnScriptProps;                                         // 0x0058(0x0028)
-	struct FNiagaraEmitterScriptProperties             EmitterSpawnScriptProps;                                  // 0x0080(0x0028)
-	struct FNiagaraEmitterScriptProperties             EmitterUpdateScriptProps;                                 // 0x00A8(0x0028)
-	unsigned char                                      bHasPendingFallbackEmitterChange : 1;                     // 0x00D0(0x0001)
-	unsigned char                                      bIsFallbackEmitter : 1;                                   // 0x00D0(0x0001)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
-	class UNiagaraEmitter*                             CPUFallbackEmitter;                                       // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
-	ENiagaraSimTarget                                  SimTarget;                                                // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseFallbackEmitter : 1;                                  // 0x00E1(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x00E2(0x0002) MISSED OFFSET
-	struct FBox                                        FixedBounds;                                              // 0x00E4(0x001C) (Edit, IsPlainOldData)
-	int                                                MinDetailLevel;                                           // 0x0100(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MaxDetailLevel;                                           // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bInterpolatedSpawning : 1;                                // 0x0108(0x0001) (Edit)
-	unsigned char                                      bFixedBounds : 1;                                         // 0x0108(0x0001) (Edit)
-	unsigned char                                      bUseMinDetailLevel : 1;                                   // 0x0108(0x0001) (Edit)
-	unsigned char                                      bUseMaxDetailLevel : 1;                                   // 0x0108(0x0001) (Edit)
-	unsigned char                                      bRequiresPersistentIDs : 1;                               // 0x0108(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0109(0x0003) MISSED OFFSET
-	float                                              MaxDeltaTimePerTick;                                      // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bLimitDeltaTime : 1;                                      // 0x0110(0x0001) (Edit)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
-	struct FString                                     UniqueEmitterName;                                        // 0x0118(0x0010) (ZeroConstructor)
-	TArray<class UNiagaraRendererProperties*>          RendererProperties;                                       // 0x0128(0x0010) (ZeroConstructor)
-	TArray<struct FNiagaraEventScriptProperties>       EventHandlerScriptProps;                                  // 0x0138(0x0010) (Edit, ZeroConstructor)
-	class UNiagaraScript*                              GPUComputeScript;                                         // 0x0148(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FName>                               SharedEventGeneratorIds;                                  // 0x0150(0x0010) (ZeroConstructor)
-	class UNiagaraEmitter*                             Parent;                                                   // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UNiagaraEmitter*                             ParentAtLastMerge;                                        // 0x0168(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool bLocalSpace; // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bBoneSpace; // 0x0029(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bDeterminism; // 0x002A(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1]; // 0x002B(0x0001) MISSED OFFSET
+	int RandomSeed; // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FNiagaraEmitterScriptProperties UpdateScriptProps; // 0x0030(0x0028)
+	struct FNiagaraEmitterScriptProperties SpawnScriptProps; // 0x0058(0x0028)
+	struct FNiagaraEmitterScriptProperties EmitterSpawnScriptProps; // 0x0080(0x0028)
+	struct FNiagaraEmitterScriptProperties EmitterUpdateScriptProps; // 0x00A8(0x0028)
+	unsigned char bHasPendingFallbackEmitterChange : 1; // 0x00D0(0x0001)
+	unsigned char bIsFallbackEmitter : 1; // 0x00D0(0x0001)
+	unsigned char UnknownData01[0x7]; // 0x00D1(0x0007) MISSED OFFSET
+	class UNiagaraEmitter* CPUFallbackEmitter; // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	ENiagaraSimTarget SimTarget; // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bUseFallbackEmitter : 1; // 0x00E1(0x0001) (Edit)
+	unsigned char UnknownData02[0x2]; // 0x00E2(0x0002) MISSED OFFSET
+	struct FBox FixedBounds; // 0x00E4(0x001C) (Edit, IsPlainOldData)
+	int MinDetailLevel; // 0x0100(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int MaxDetailLevel; // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bInterpolatedSpawning : 1; // 0x0108(0x0001) (Edit)
+	unsigned char bFixedBounds : 1; // 0x0108(0x0001) (Edit)
+	unsigned char bUseMinDetailLevel : 1; // 0x0108(0x0001) (Edit)
+	unsigned char bUseMaxDetailLevel : 1; // 0x0108(0x0001) (Edit)
+	unsigned char bRequiresPersistentIDs : 1; // 0x0108(0x0001) (Edit)
+	unsigned char UnknownData03[0x3]; // 0x0109(0x0003) MISSED OFFSET
+	float MaxDeltaTimePerTick; // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bLimitDeltaTime : 1; // 0x0110(0x0001) (Edit)
+	unsigned char UnknownData04[0x7]; // 0x0111(0x0007) MISSED OFFSET
+	struct FString UniqueEmitterName; // 0x0118(0x0010) (ZeroConstructor)
+	TArray<class UNiagaraRendererProperties*> RendererProperties; // 0x0128(0x0010) (ZeroConstructor)
+	TArray<struct FNiagaraEventScriptProperties> EventHandlerScriptProps; // 0x0138(0x0010) (Edit, ZeroConstructor)
+	class UNiagaraScript* GPUComputeScript; // 0x0148(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FName> SharedEventGeneratorIds; // 0x0150(0x0010) (ZeroConstructor)
+	class UNiagaraEmitter* Parent; // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UNiagaraEmitter* ParentAtLastMerge; // 0x0168(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraEmitter");
@@ -726,8 +695,7 @@ class UNiagaraEventReceiverEmitterAction : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction");
@@ -742,11 +710,10 @@ public:
 class UNiagaraEventReceiverEmitterAction_SpawnParticles : public UNiagaraEventReceiverEmitterAction
 {
 public:
-	uint32_t                                           NumParticles;                                             // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	uint32_t NumParticles; // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles");
@@ -762,8 +729,7 @@ class UNiagaraFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraFunctionLibrary");
@@ -791,17 +757,16 @@ public:
 class UNiagaraLightRendererProperties : public UNiagaraRendererProperties
 {
 public:
-	float                                              RadiusScale;                                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ColorAdd;                                                 // 0x0034(0x000C) (Edit, IsPlainOldData)
-	struct FNiagaraVariableAttributeBinding            LightRenderingEnabledBinding;                             // 0x0040(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            LightExponentBinding;                                     // 0x00D0(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            PositionBinding;                                          // 0x0160(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            ColorBinding;                                             // 0x01F0(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RadiusBinding;                                            // 0x0280(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            VolumetricScatteringBinding;                              // 0x0310(0x0090) (Edit)
+	float RadiusScale; // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector ColorAdd; // 0x0034(0x000C) (Edit, IsPlainOldData)
+	struct FNiagaraVariableAttributeBinding LightRenderingEnabledBinding; // 0x0040(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding LightExponentBinding; // 0x00D0(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding PositionBinding; // 0x0160(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding ColorBinding; // 0x01F0(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RadiusBinding; // 0x0280(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding VolumetricScatteringBinding; // 0x0310(0x0090) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraLightRendererProperties");
@@ -816,29 +781,28 @@ public:
 class UNiagaraMeshRendererProperties : public UNiagaraRendererProperties
 {
 public:
-	class UStaticMesh*                                 ParticleMesh;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraSortMode                                   SortMode;                                                 // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bOverrideMaterials : 1;                                   // 0x0039(0x0001) (Edit)
-	unsigned char                                      bSortOnlyWhenTranslucent : 1;                             // 0x0039(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
-	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x0040(0x0010) (Edit, ZeroConstructor)
-	ENiagaraMeshFacingMode                             FacingMode;                                               // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
-	struct FNiagaraVariableAttributeBinding            PositionBinding;                                          // 0x0058(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            ColorBinding;                                             // 0x00E8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            VelocityBinding;                                          // 0x0178(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            MeshOrientationBinding;                                   // 0x0208(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            ScaleBinding;                                             // 0x0298(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterialBinding;                                   // 0x0328(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial1Binding;                                  // 0x03B8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial2Binding;                                  // 0x0448(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial3Binding;                                  // 0x04D8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            MaterialRandomBinding;                                    // 0x0568(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            CustomSortingBinding;                                     // 0x05F8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            NormalizedAgeBinding;                                     // 0x0688(0x0090) (Edit)
+	class UStaticMesh* ParticleMesh; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraSortMode SortMode; // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bOverrideMaterials : 1; // 0x0039(0x0001) (Edit)
+	unsigned char bSortOnlyWhenTranslucent : 1; // 0x0039(0x0001) (Edit)
+	unsigned char UnknownData00[0x6]; // 0x003A(0x0006) MISSED OFFSET
+	TArray<class UMaterialInterface*> OverrideMaterials; // 0x0040(0x0010) (Edit, ZeroConstructor)
+	ENiagaraMeshFacingMode FacingMode; // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0051(0x0007) MISSED OFFSET
+	struct FNiagaraVariableAttributeBinding PositionBinding; // 0x0058(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding ColorBinding; // 0x00E8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding VelocityBinding; // 0x0178(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding MeshOrientationBinding; // 0x0208(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding ScaleBinding; // 0x0298(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterialBinding; // 0x0328(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial1Binding; // 0x03B8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial2Binding; // 0x0448(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial3Binding; // 0x04D8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding MaterialRandomBinding; // 0x0568(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding CustomSortingBinding; // 0x05F8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding NormalizedAgeBinding; // 0x0688(0x0090) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraMeshRendererProperties");
@@ -853,12 +817,11 @@ public:
 class UNiagaraParameterCollectionInstance : public UObject
 {
 public:
-	class UNiagaraParameterCollection*                 Collection;                                               // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FNiagaraVariable>                    OverridenParameters;                                      // 0x0030(0x0010) (ZeroConstructor)
-	struct FNiagaraParameterStore                      ParameterStorage;                                         // 0x0040(0x00E8)
+	class UNiagaraParameterCollection* Collection; // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FNiagaraVariable> OverridenParameters; // 0x0030(0x0010) (ZeroConstructor)
+	struct FNiagaraParameterStore ParameterStorage; // 0x0040(0x00E8)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraParameterCollectionInstance");
@@ -890,13 +853,12 @@ public:
 class UNiagaraParameterCollection : public UObject
 {
 public:
-	struct FName                                       Namespace;                                                // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FNiagaraVariable>                    Parameters;                                               // 0x0030(0x0010) (ZeroConstructor)
-	class UNiagaraParameterCollectionInstance*         DefaultInstance;                                          // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CompileId;                                                // 0x0048(0x0010) (IsPlainOldData)
+	struct FName Namespace; // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FNiagaraVariable> Parameters; // 0x0030(0x0010) (ZeroConstructor)
+	class UNiagaraParameterCollectionInstance* DefaultInstance; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid CompileId; // 0x0048(0x0010) (IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraParameterCollection");
@@ -912,8 +874,7 @@ class ANiagaraPreviewBase : public AActor
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewBase");
@@ -932,8 +893,7 @@ class UNiagaraPreviewAxis : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis");
@@ -951,12 +911,11 @@ public:
 class UNiagaraPreviewAxis_InterpParamBase : public UNiagaraPreviewAxis
 {
 public:
-	struct FString                                     Param;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
-	int                                                Count;                                                    // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	struct FString Param; // 0x0028(0x0010) (Edit, ZeroConstructor)
+	int Count; // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x003C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamBase");
@@ -971,11 +930,10 @@ public:
 class UNiagaraPreviewAxis_InterpParamInt32 : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	int                                                Max;                                                      // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	int Max; // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0044(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamInt32");
@@ -990,11 +948,10 @@ public:
 class UNiagaraPreviewAxis_InterpParamFloat : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	float                                              Max;                                                      // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	float Max; // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0044(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamFloat");
@@ -1009,12 +966,11 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector2D : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0040(0x0004) MISSED OFFSET
-	struct FVector2D                                   Max;                                                      // 0x0044(0x0008) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x4]; // 0x0040(0x0004) MISSED OFFSET
+	struct FVector2D Max; // 0x0044(0x0008) (Edit, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x004C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector2D");
@@ -1029,12 +985,11 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
-	struct FVector                                     Max;                                                      // 0x0048(0x000C) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0040(0x0008) MISSED OFFSET
+	struct FVector Max; // 0x0048(0x000C) (Edit, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0054(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector");
@@ -1049,11 +1004,10 @@ public:
 class UNiagaraPreviewAxis_InterpParamVector4 : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	struct FVector4                                    Min;                                                      // 0x0040(0x0010) (Edit, IsPlainOldData)
-	struct FVector4                                    Max;                                                      // 0x0050(0x0010) (Edit, IsPlainOldData)
+	struct FVector4 Min; // 0x0040(0x0010) (Edit, IsPlainOldData)
+	struct FVector4 Max; // 0x0050(0x0010) (Edit, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamVector4");
@@ -1068,12 +1022,11 @@ public:
 class UNiagaraPreviewAxis_InterpParamLinearColor : public UNiagaraPreviewAxis_InterpParamBase
 {
 public:
-	unsigned char                                      UnknownData00[0xC];                                       // 0x0040(0x000C) MISSED OFFSET
-	struct FLinearColor                                Max;                                                      // 0x004C(0x0010) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0xC]; // 0x0040(0x000C) MISSED OFFSET
+	struct FLinearColor Max; // 0x004C(0x0010) (Edit, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x005C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewAxis_InterpParamLinearColor");
@@ -1088,21 +1041,20 @@ public:
 class ANiagaraPreviewGrid : public AActor
 {
 public:
-	class UNiagaraSystem*                              System;                                                   // 0x04B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraPreviewGridResetMode                       ResetMode;                                                // 0x04B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x04B9(0x0007) MISSED OFFSET
-	class UNiagaraPreviewAxis*                         PreviewAxisX;                                             // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UNiagaraPreviewAxis*                         PreviewAxisY;                                             // 0x04C8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      PreviewClass;                                             // 0x04D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SpacingX;                                                 // 0x04D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              SpacingY;                                                 // 0x04DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                NumX;                                                     // 0x04E0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                NumY;                                                     // 0x04E4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UChildActorComponent*>                PreviewComponents;                                        // 0x04E8(0x0010) (ExportObject, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x04F8(0x0008) MISSED OFFSET
+	class UNiagaraSystem* System; // 0x04B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraPreviewGridResetMode ResetMode; // 0x04B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x04B9(0x0007) MISSED OFFSET
+	class UNiagaraPreviewAxis* PreviewAxisX; // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UNiagaraPreviewAxis* PreviewAxisY; // 0x04C8(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass* PreviewClass; // 0x04D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float SpacingX; // 0x04D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float SpacingY; // 0x04DC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int NumX; // 0x04E0(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	int NumY; // 0x04E4(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UChildActorComponent*> PreviewComponents; // 0x04E8(0x0010) (ExportObject, ZeroConstructor, Transient)
+	unsigned char UnknownData01[0x8]; // 0x04F8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraPreviewGrid");
@@ -1120,46 +1072,45 @@ public:
 class UNiagaraRibbonRendererProperties : public UNiagaraRendererProperties
 {
 public:
-	class UMaterialInterface*                          Material;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraRibbonFacingMode                           FacingMode;                                               // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	float                                              UV0TilingDistance;                                        // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   UV0Scale;                                                 // 0x0040(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   UV0Offset;                                                // 0x0048(0x0008) (Edit, IsPlainOldData)
-	ENiagaraRibbonAgeOffsetMode                        UV0AgeOffsetMode;                                         // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
-	float                                              UV1TilingDistance;                                        // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   UV1Scale;                                                 // 0x0058(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   UV1Offset;                                                // 0x0060(0x0008) (Edit, IsPlainOldData)
-	ENiagaraRibbonAgeOffsetMode                        UV1AgeOffsetMode;                                         // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraRibbonDrawDirection                        DrawDirection;                                            // 0x0069(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x006A(0x0002) MISSED OFFSET
-	float                                              CurveTension;                                             // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraRibbonTessellationMode                     TessellationMode;                                         // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0071(0x0003) MISSED OFFSET
-	int                                                TessellationFactor;                                       // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseConstantFactor;                                       // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
-	float                                              TessellationAngle;                                        // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bScreenSpaceTessellation;                                 // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
-	struct FNiagaraVariableAttributeBinding            PositionBinding;                                          // 0x0088(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            ColorBinding;                                             // 0x0118(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            VelocityBinding;                                          // 0x01A8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            NormalizedAgeBinding;                                     // 0x0238(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RibbonTwistBinding;                                       // 0x02C8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RibbonWidthBinding;                                       // 0x0358(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RibbonFacingBinding;                                      // 0x03E8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RibbonIdBinding;                                          // 0x0478(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            RibbonLinkOrderBinding;                                   // 0x0508(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            MaterialRandomBinding;                                    // 0x0598(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterialBinding;                                   // 0x0628(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial1Binding;                                  // 0x06B8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial2Binding;                                  // 0x0748(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial3Binding;                                  // 0x07D8(0x0090) (Edit)
+	class UMaterialInterface* Material; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraRibbonFacingMode FacingMode; // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0039(0x0003) MISSED OFFSET
+	float UV0TilingDistance; // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D UV0Scale; // 0x0040(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D UV0Offset; // 0x0048(0x0008) (Edit, IsPlainOldData)
+	ENiagaraRibbonAgeOffsetMode UV0AgeOffsetMode; // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0051(0x0003) MISSED OFFSET
+	float UV1TilingDistance; // 0x0054(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector2D UV1Scale; // 0x0058(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D UV1Offset; // 0x0060(0x0008) (Edit, IsPlainOldData)
+	ENiagaraRibbonAgeOffsetMode UV1AgeOffsetMode; // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraRibbonDrawDirection DrawDirection; // 0x0069(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x2]; // 0x006A(0x0002) MISSED OFFSET
+	float CurveTension; // 0x006C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraRibbonTessellationMode TessellationMode; // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x0071(0x0003) MISSED OFFSET
+	int TessellationFactor; // 0x0074(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bUseConstantFactor; // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x3]; // 0x0079(0x0003) MISSED OFFSET
+	float TessellationAngle; // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bScreenSpaceTessellation; // 0x0080(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x7]; // 0x0081(0x0007) MISSED OFFSET
+	struct FNiagaraVariableAttributeBinding PositionBinding; // 0x0088(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding ColorBinding; // 0x0118(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding VelocityBinding; // 0x01A8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding NormalizedAgeBinding; // 0x0238(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RibbonTwistBinding; // 0x02C8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RibbonWidthBinding; // 0x0358(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RibbonFacingBinding; // 0x03E8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RibbonIdBinding; // 0x0478(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding RibbonLinkOrderBinding; // 0x0508(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding MaterialRandomBinding; // 0x0598(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterialBinding; // 0x0628(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial1Binding; // 0x06B8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial2Binding; // 0x0748(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial3Binding; // 0x07D8(0x0090) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraRibbonRendererProperties");
@@ -1174,22 +1125,21 @@ public:
 class UNiagaraScript : public UObject
 {
 public:
-	ENiagaraScriptUsage                                Usage;                                                    // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
-	int                                                UsageIndex;                                               // 0x002C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	struct FGuid                                       UsageId;                                                  // 0x0030(0x0010) (IsPlainOldData)
-	struct FNiagaraParameterStore                      RapidIterationParameters;                                 // 0x0040(0x00E8)
-	struct FNiagaraScriptExecutionParameterStore       ScriptExecutionParamStoreCPU;                             // 0x0128(0x0108) (Transient)
-	struct FNiagaraScriptExecutionParameterStore       ScriptExecutionParamStoreGPU;                             // 0x0230(0x0108) (Transient)
-	struct FNiagaraVMExecutableDataId                  CachedScriptVMId;                                         // 0x0338(0x0050)
-	struct FNiagaraVMExecutableDataId                  LastGeneratedVMId;                                        // 0x0388(0x0050)
-	unsigned char                                      UnknownData01[0x180];                                     // 0x03D8(0x0180) MISSED OFFSET
-	struct FNiagaraVMExecutableData                    CachedScriptVM;                                           // 0x0558(0x0108)
-	TArray<class UNiagaraParameterCollection*>         CachedParameterCollectionReferences;                      // 0x0660(0x0010) (ZeroConstructor)
-	TArray<struct FNiagaraScriptDataInterfaceInfo>     CachedDefaultDataInterfaces;                              // 0x0670(0x0010) (ZeroConstructor)
+	ENiagaraScriptUsage Usage; // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0029(0x0003) MISSED OFFSET
+	int UsageIndex; // 0x002C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	struct FGuid UsageId; // 0x0030(0x0010) (IsPlainOldData)
+	struct FNiagaraParameterStore RapidIterationParameters; // 0x0040(0x00E8)
+	struct FNiagaraScriptExecutionParameterStore ScriptExecutionParamStoreCPU; // 0x0128(0x0108) (Transient)
+	struct FNiagaraScriptExecutionParameterStore ScriptExecutionParamStoreGPU; // 0x0230(0x0108) (Transient)
+	struct FNiagaraVMExecutableDataId CachedScriptVMId; // 0x0338(0x0050)
+	struct FNiagaraVMExecutableDataId LastGeneratedVMId; // 0x0388(0x0050)
+	unsigned char UnknownData01[0x180]; // 0x03D8(0x0180) MISSED OFFSET
+	struct FNiagaraVMExecutableData CachedScriptVM; // 0x0558(0x0108)
+	TArray<class UNiagaraParameterCollection*> CachedParameterCollectionReferences; // 0x0660(0x0010) (ZeroConstructor)
+	TArray<struct FNiagaraScriptDataInterfaceInfo> CachedDefaultDataInterfaces; // 0x0670(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraScript");
@@ -1206,10 +1156,9 @@ public:
 class UNiagaraScriptSourceBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0028(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraScriptSourceBase");
@@ -1224,12 +1173,11 @@ public:
 class UNiagaraSettings : public UDeveloperSettings
 {
 public:
-	TArray<struct FSoftObjectPath>                     AdditionalParameterTypes;                                 // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FSoftObjectPath>                     AdditionalPayloadTypes;                                   // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FSoftObjectPath>                     AdditionalParameterEnums;                                 // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FSoftObjectPath> AdditionalParameterTypes; // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FSoftObjectPath> AdditionalPayloadTypes; // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FSoftObjectPath> AdditionalParameterEnums; // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraSettings");
@@ -1244,42 +1192,41 @@ public:
 class UNiagaraSpriteRendererProperties : public UNiagaraRendererProperties
 {
 public:
-	class UMaterialInterface*                          Material;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraSpriteAlignment                            Alignment;                                                // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	ENiagaraSpriteFacingMode                           FacingMode;                                               // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x003A(0x0002) MISSED OFFSET
-	struct FVector                                     CustomFacingVectorMask;                                   // 0x003C(0x000C) (Edit, IsPlainOldData)
-	struct FVector2D                                   PivotInUVSpace;                                           // 0x0048(0x0008) (Edit, IsPlainOldData)
-	ENiagaraSortMode                                   SortMode;                                                 // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
-	struct FVector2D                                   SubImageSize;                                             // 0x0054(0x0008) (Edit, IsPlainOldData)
-	unsigned char                                      bSubImageBlend : 1;                                       // 0x005C(0x0001) (Edit)
-	unsigned char                                      bRemoveHMDRollInVR : 1;                                   // 0x005C(0x0001) (Edit)
-	unsigned char                                      bSortOnlyWhenTranslucent : 1;                             // 0x005C(0x0001) (Edit)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
-	float                                              MinFacingCameraBlendDistance;                             // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxFacingCameraBlendDistance;                             // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FNiagaraVariableAttributeBinding            PositionBinding;                                          // 0x0068(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            ColorBinding;                                             // 0x00F8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            VelocityBinding;                                          // 0x0188(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            SpriteRotationBinding;                                    // 0x0218(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            SpriteSizeBinding;                                        // 0x02A8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            SpriteFacingBinding;                                      // 0x0338(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            SpriteAlignmentBinding;                                   // 0x03C8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            SubImageIndexBinding;                                     // 0x0458(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterialBinding;                                   // 0x04E8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial1Binding;                                  // 0x0578(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial2Binding;                                  // 0x0608(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            DynamicMaterial3Binding;                                  // 0x0698(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            CameraOffsetBinding;                                      // 0x0728(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            UVScaleBinding;                                           // 0x07B8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            MaterialRandomBinding;                                    // 0x0848(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            CustomSortingBinding;                                     // 0x08D8(0x0090) (Edit)
-	struct FNiagaraVariableAttributeBinding            NormalizedAgeBinding;                                     // 0x0968(0x0090) (Edit)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x09F8(0x0010) MISSED OFFSET
+	class UMaterialInterface* Material; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraSpriteAlignment Alignment; // 0x0038(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	ENiagaraSpriteFacingMode FacingMode; // 0x0039(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x003A(0x0002) MISSED OFFSET
+	struct FVector CustomFacingVectorMask; // 0x003C(0x000C) (Edit, IsPlainOldData)
+	struct FVector2D PivotInUVSpace; // 0x0048(0x0008) (Edit, IsPlainOldData)
+	ENiagaraSortMode SortMode; // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0051(0x0003) MISSED OFFSET
+	struct FVector2D SubImageSize; // 0x0054(0x0008) (Edit, IsPlainOldData)
+	unsigned char bSubImageBlend : 1; // 0x005C(0x0001) (Edit)
+	unsigned char bRemoveHMDRollInVR : 1; // 0x005C(0x0001) (Edit)
+	unsigned char bSortOnlyWhenTranslucent : 1; // 0x005C(0x0001) (Edit)
+	unsigned char UnknownData02[0x3]; // 0x005D(0x0003) MISSED OFFSET
+	float MinFacingCameraBlendDistance; // 0x0060(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float MaxFacingCameraBlendDistance; // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FNiagaraVariableAttributeBinding PositionBinding; // 0x0068(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding ColorBinding; // 0x00F8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding VelocityBinding; // 0x0188(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding SpriteRotationBinding; // 0x0218(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding SpriteSizeBinding; // 0x02A8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding SpriteFacingBinding; // 0x0338(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding SpriteAlignmentBinding; // 0x03C8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding SubImageIndexBinding; // 0x0458(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterialBinding; // 0x04E8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial1Binding; // 0x0578(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial2Binding; // 0x0608(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding DynamicMaterial3Binding; // 0x0698(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding CameraOffsetBinding; // 0x0728(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding UVScaleBinding; // 0x07B8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding MaterialRandomBinding; // 0x0848(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding CustomSortingBinding; // 0x08D8(0x0090) (Edit)
+	struct FNiagaraVariableAttributeBinding NormalizedAgeBinding; // 0x0968(0x0090) (Edit)
+	unsigned char UnknownData03[0x10]; // 0x09F8(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraSpriteRendererProperties");
@@ -1294,28 +1241,27 @@ public:
 class UNiagaraSystem : public UFXSystemAsset
 {
 public:
-	bool                                               bDumpDebugSystemInfo;                                     // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDumpDebugEmitterInfo;                                    // 0x0029(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bFixedBounds : 1;                                         // 0x002A(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x002B(0x0005) MISSED OFFSET
-	TArray<struct FNiagaraEmitterHandle>               EmitterHandles;                                           // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides;                             // 0x0040(0x0010) (Edit, ZeroConstructor)
-	class UNiagaraScript*                              SystemSpawnScript;                                        // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UNiagaraScript*                              SystemUpdateScript;                                       // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FNiagaraEmitterSpawnAttributes>      EmitterSpawnAttributes;                                   // 0x0060(0x0010) (ZeroConstructor)
-	struct FNiagaraUserRedirectionParameterStore       ExposedParameters;                                        // 0x0070(0x0138)
-	struct FBox                                        FixedBounds;                                              // 0x01A8(0x001C) (Edit, IsPlainOldData)
-	bool                                               bAutoDeactivate;                                          // 0x01C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x01C5(0x0003) MISSED OFFSET
-	float                                              WarmupTime;                                               // 0x01C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                WarmupTickCount;                                          // 0x01CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WarmupTickDelta;                                          // 0x01D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bHasSystemScriptDIsWithPerInstanceData;                   // 0x01D4(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x01D5(0x0003) MISSED OFFSET
-	TArray<struct FName>                               UserDINamesReadInSystemScripts;                           // 0x01D8(0x0010) (ZeroConstructor)
+	bool bDumpDebugSystemInfo; // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bDumpDebugEmitterInfo; // 0x0029(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bFixedBounds : 1; // 0x002A(0x0001) (Edit)
+	unsigned char UnknownData00[0x5]; // 0x002B(0x0005) MISSED OFFSET
+	TArray<struct FNiagaraEmitterHandle> EmitterHandles; // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<class UNiagaraParameterCollectionInstance*> ParameterCollectionOverrides; // 0x0040(0x0010) (Edit, ZeroConstructor)
+	class UNiagaraScript* SystemSpawnScript; // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UNiagaraScript* SystemUpdateScript; // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FNiagaraEmitterSpawnAttributes> EmitterSpawnAttributes; // 0x0060(0x0010) (ZeroConstructor)
+	struct FNiagaraUserRedirectionParameterStore ExposedParameters; // 0x0070(0x0138)
+	struct FBox FixedBounds; // 0x01A8(0x001C) (Edit, IsPlainOldData)
+	bool bAutoDeactivate; // 0x01C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x01C5(0x0003) MISSED OFFSET
+	float WarmupTime; // 0x01C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int WarmupTickCount; // 0x01CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float WarmupTickDelta; // 0x01D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bHasSystemScriptDIsWithPerInstanceData; // 0x01D4(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x01D5(0x0003) MISSED OFFSET
+	TArray<struct FName> UserDINamesReadInSystemScripts; // 0x01D8(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Niagara.NiagaraSystem");

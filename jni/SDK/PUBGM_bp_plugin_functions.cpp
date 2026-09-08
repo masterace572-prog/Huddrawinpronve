@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function bp_plugin.bp_pluginBPLibrary.bp_pluginSendEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 jsonEventCmd                   (Parm, ZeroConstructor)
+// struct FString jsonEventCmd (Parm, ZeroConstructor)
 
 void Ubp_pluginBPLibrary::bp_pluginSendEvent(const struct FString& jsonEventCmd)
 {
@@ -35,9 +35,9 @@ void Ubp_pluginBPLibrary::bp_pluginSendEvent(const struct FString& jsonEventCmd)
 // Function bp_plugin.bp_pluginBPLibrary.bp_pluginRequestInstallWidget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            wigetType                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 authInfo                       (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int wigetType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString authInfo (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int Ubp_pluginBPLibrary::bp_pluginRequestInstallWidget(int wigetType, const struct FString& authInfo)
 {
@@ -64,8 +64,8 @@ int Ubp_pluginBPLibrary::bp_pluginRequestInstallWidget(int wigetType, const stru
 // Function bp_plugin.bp_pluginBPLibrary.bp_pluginLaunchMeemoFunction
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Param                          (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Param (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float Ubp_pluginBPLibrary::bp_pluginLaunchMeemoFunction(const struct FString& Param)
 {
@@ -91,7 +91,7 @@ float Ubp_pluginBPLibrary::bp_pluginLaunchMeemoFunction(const struct FString& Pa
 // Function bp_plugin.bp_pluginBPLibrary.bp_pluginIsInForeground
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool Ubp_pluginBPLibrary::bp_pluginIsInForeground()
 {
@@ -116,7 +116,7 @@ bool Ubp_pluginBPLibrary::bp_pluginIsInForeground()
 // Function bp_plugin.bp_pluginBPLibrary.bp_pluginGetInstalledWidgetType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int Ubp_pluginBPLibrary::bp_pluginGetInstalledWidgetType()
 {

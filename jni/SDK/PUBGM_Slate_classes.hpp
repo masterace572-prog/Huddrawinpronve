@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FButtonStyle                                ButtonStyle;                                              // 0x0030(0x0338) (Edit, BlueprintVisible)
+	struct FButtonStyle ButtonStyle; // 0x0030(0x0338) (Edit, BlueprintVisible)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ButtonWidgetStyle");
@@ -31,10 +30,9 @@ public:
 class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0030(0x0730) (Edit)
+	struct FCheckBoxStyle CheckBoxStyle; // 0x0030(0x0730) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
@@ -49,10 +47,9 @@ public:
 class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboBoxStyle                              ComboBoxStyle;                                            // 0x0030(0x0508) (Edit)
+	struct FComboBoxStyle ComboBoxStyle; // 0x0030(0x0508) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
@@ -67,10 +64,9 @@ public:
 class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboButtonStyle                           ComboButtonStyle;                                         // 0x0030(0x04D0) (Edit)
+	struct FComboButtonStyle ComboButtonStyle; // 0x0030(0x04D0) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
@@ -85,10 +81,9 @@ public:
 class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x0A68) (Edit)
+	struct FEditableTextBoxStyle EditableTextBoxStyle; // 0x0030(0x0A68) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
@@ -103,10 +98,9 @@ public:
 class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x02B0) (Edit)
+	struct FEditableTextStyle EditableTextStyle; // 0x0030(0x02B0) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
@@ -121,10 +115,9 @@ public:
 class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FProgressBarStyle                           ProgressBarStyle;                                         // 0x0030(0x0230) (Edit, BlueprintVisible)
+	struct FProgressBarStyle ProgressBarStyle; // 0x0030(0x0230) (Edit, BlueprintVisible)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ProgressWidgetStyle");
@@ -139,10 +132,9 @@ public:
 class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBarStyle                             ScrollBarStyle;                                           // 0x0030(0x0680) (Edit)
+	struct FScrollBarStyle ScrollBarStyle; // 0x0030(0x0680) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
@@ -157,10 +149,9 @@ public:
 class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x02E8) (Edit)
+	struct FScrollBoxStyle ScrollBoxStyle; // 0x0030(0x02E8) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
@@ -175,11 +166,10 @@ public:
 class USlateSettings : public UObject
 {
 public:
-	bool                                               bExplicitCanvasChildZOrder;                               // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	bool bExplicitCanvasChildZOrder; // 0x0028(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.SlateSettings");
@@ -194,10 +184,9 @@ public:
 class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FSpinBoxStyle                               SpinBoxStyle;                                             // 0x0030(0x03D8) (Edit)
+	struct FSpinBoxStyle SpinBoxStyle; // 0x0030(0x03D8) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
@@ -212,10 +201,9 @@ public:
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FTextBlockStyle                             TextBlockStyle;                                           // 0x0030(0x0250) (Edit)
+	struct FTextBlockStyle TextBlockStyle; // 0x0030(0x0250) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Slate.TextBlockWidgetStyle");

@@ -1,5 +1,4 @@
-enum EAimTrigger 
-{
+enum EAimTrigger {
     None = 0,
     Shooting = 1,
     Scoping = 2,
@@ -7,21 +6,22 @@ enum EAimTrigger
     Any = 4
 };
 
+enum EAimTarget
+{
+    Head = 0,
+    Chest = 1
+};
+
 namespace Cheat 
 {
     uintptr_t libUE4Base;
-    uintptr_t GName_Offest = 0x8103904;
-    uintptr_t GUObject_Offset = 0xDD91FA0;
-    uintptr_t GNativeAndroidApp_Offset = 0xDAD0280;
-    uintptr_t ActorArray_Offest = 0x9E70E64;
+    uintptr_t GName_Offest = 0x86CA71C;
+    uintptr_t GUObject_Offset = 0xE6D36F0;
+    uintptr_t GNativeAndroidApp_Offset = 0xE40B6A8;
+    uintptr_t ActorArray_Offest = 0xA45A314;
+    uintptr_t ProcessEvent;
     SDK::ASTExtraPlayerCharacter *localPlayer = nullptr;
     SDK::ASTExtraPlayerController *localController = nullptr;
-
-    enum EAimTarget 
-    {
-        Head = 0,
-        Chest = 1
-    };
 
     namespace Esp 
     {
@@ -45,23 +45,21 @@ namespace Cheat
         }
     }
 
-    namespace Aimbot 
-    {
-        bool Enable;
-        bool VisCheck = true;
-        bool IgnoreKnock = true;
-        bool IgnoreBot;
-        bool AimPrediction;
-        EAimTarget Target;
-        EAimTrigger Trigger;
-        bool RecoilControl;
-        bool Position;
+    namespace Aimbot {
+bool Enable;
+bool VisCheck;
+bool IgnoreKnock;
+bool IgnoreBot;
+bool AimPrediction;
+EAimTrigger Trigger;
+EAimTarget Target;
+float RecoilControl;
+float RecoilSet = 1.050f;
+float Range = 150.0f;
+float Radius = 300.0f;
+float FireSpeed;
 
-        float Recoil = 1.0f;
-        float Range = 500.0f;
-        float Fov = 250.0f;
-        float FireSpeed;
-    }
+}
 
     namespace BulletTrack 
     {
@@ -82,6 +80,7 @@ namespace Cheat
         bool Wide = false;
         bool Small = false;
         bool Magic = false;
+        bool XHitEffect = false;
         
         float Size = 10000.0f;
     }
@@ -154,7 +153,52 @@ std::string Floating;
 std::string Setting;
 pthread_t t;
 
+uintptr_t ProcessEvent;
+
 using namespace SDK;
+
+
+
+FLinearColor RandomColor() {
+    static float x = 0, y = 0;
+
+    constexpr float colorSwitchInterval = 255.0f;
+    constexpr float maxColorValue = 255.0f;
+
+    float r = 0, g = 0, b = 0;
+
+    if (y < colorSwitchInterval) {
+        r = rand() % static_cast<int>(maxColorValue + 1);
+        b = x;
+    } else if (y < 2 * colorSwitchInterval) {
+        r = rand() % static_cast<int>(maxColorValue + 1) - x;
+        b = rand() % static_cast<int>(maxColorValue + 1);
+    } else if (y < 3 * colorSwitchInterval) {
+        g = x;
+        b = rand() % static_cast<int>(maxColorValue + 1);
+    } else if (y < 4 * colorSwitchInterval) {
+        g = rand() % static_cast<int>(maxColorValue + 1);
+        b = rand() % static_cast<int>(maxColorValue + 1) - x;
+    } else if (y < 5 * colorSwitchInterval) {
+        r = x;
+        g = rand() % static_cast<int>(maxColorValue + 1);
+    } else {
+        r = rand() % static_cast<int>(maxColorValue + 1);
+        g = rand() % static_cast<int>(maxColorValue + 1) - x;
+    }
+
+    x += 10.0f; // Increase this value to switch colors faster
+    if (x >= maxColorValue)
+        x = 0.0f;
+
+    y += 10.0f; // Increase this value to switch colors faster
+    if (y > 6 * colorSwitchInterval)
+        y = 0.0f;
+
+    return {r, g, b, maxColorValue};
+}
+
+
 
 void NekoHook(FRotator &angles) 
 {
@@ -615,77 +659,277 @@ bool isInsideFOVs(int x, int y) {
     return (x - circle_x) * (x - circle_x) + (y - circle_y) * (y - circle_y) <= rad * rad;
 }
 
-auto GetTargetForAimBot()
-{
+static int 算法 = 0;
+static bool is头, is脖子, is盆骨, is左上臂, is左小臂, is左手, is左大腿, is左小腿, is左脚, is右上臂, is右小臂, is右手, is右大腿, is右小腿, is右脚, is脊柱1, is脊柱2, is脊柱3, is锁骨左, is锁骨右, is左手持物, is右手持物, is左肩,is右肩;
+
+
+auto GetTargetForAimBot() {
     ASTExtraPlayerCharacter *result = nullptr;
     float max = std::numeric_limits<float>::infinity();
     auto Actors = GetActors();
-    if (Cheat::localPlayer)
-    {
-        for (int i = 0; i < Actors.size(); i++)
-        {
+    auto localPlayer = Cheat::localPlayer;
+    auto localController = Cheat::localController;
+
+    if (localPlayer) {
+        for (int i = 0; i < Actors.size(); i++) {
             auto Actor = Actors[i];
             if (isObjectInvalid(Actor))
                 continue;
 
-            if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
-            {
+            if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass())) {
                 auto Player = (ASTExtraPlayerCharacter *)Actor;
+                auto Target = (ASTExtraPlayerCharacter *)Actor;
 
-                float dist = Cheat::localPlayer->GetDistanceTo(Player) / 100.0f;
-                if (dist > 500.0f)
-                    continue;
+               
 
-                if (Player->PlayerKey == Cheat::localController->PlayerKey)
+                if (Player->PlayerKey == localPlayer->PlayerKey)
                     continue;
-                if (Player->TeamID == Cheat::localController->TeamID)
+                if (Player->TeamID == localPlayer->TeamID)
                     continue;
                 if (Player->bDead)
                     continue;
 
-                if (Cheat::Aimbot::IgnoreKnock)
-                {
+                if (Cheat::Aimbot::IgnoreKnock) {
                     if (Player->Health == 0.0f)
                         continue;
                 }
 
-                if (Cheat::Aimbot::VisCheck)
-                {
-                    if (!Cheat::localController->LineOfSightTo(Cheat::localController->PlayerCameraManager, Player->GetBonePos("Head", {}), true))
+                if (Cheat::Aimbot::VisCheck) {
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("Head", {0, 0, 0}), false))//头
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("neck_01", {0, 0, 0}), false))//脖子
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("upperarm_r", {0, 0, 0}), false))//上面的肩膀右
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("upperarm_l", {0, 0, 0}), false))//上面的肩膀左
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("lowerarm_r", {0, 0, 0}), false))//上面的手臂右
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("lowerarm_l", {0, 0, 0}), false))//上面的手臂左
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_03", {0, 0, 0}), false))//脊柱3
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_02", {0, 0, 0}), false))//脊柱2
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_01", {0, 0, 0}), false))//脊柱2
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("pelvis", {0, 0, 0}), false))//骨盆
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("thigh_l", {0, 0, 0}), false))//大腿左
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("thigh_r", {0, 0, 0}), false))//大腿右
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("calf_l", {0, 0, 0}), false))//小腿左
+if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("calf_r", {0, 0, 0}), false))//小腿右
+continue;
+}
+
+static bool 已选择 = false;
+算法 = 0;
+已选择 = false;
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("Head", {0, 0, 0}),  false)) {//头
+is头 = false;
+}else{
+is头 = true;
+}
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("pelvis", {0, 0, 0}),  false))
+{//骨盆
+is盆骨 = false;
+}else{
+is盆骨 = true;
+}
+
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("neck_01", {0, 0, 0}),  false))
+{//脖子
+is脖子 = false;
+}else{
+is脖子 = true;
+}
+
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("hand_l", {0, 0, 0}),  false))
+{//左手
+is左手 = false;
+}else{
+is左手 = true;
+}
+
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("hand_r", {0, 0, 0}),  false))
+{//右手
+is右手 = false;
+}else{
+is右手 = true;
+}
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("foot_l", {0, 0, 0}),  false))
+{//左脚
+is左脚 = false;
+}else{
+is左脚 = true;
+}
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("foot_r", {0, 0, 0}),  false))
+{//右脚
+is右脚 = false;
+}else{
+is右脚 = true;
+}
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("calf_l", {0, 0, 0}),  false))
+{//左小腿
+is左小腿 = false;
+}else{
+is左小腿 = true;
+}
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("calf_r", {0, 0, 0}),  false))
+{//右小腿
+is右小腿 = false;
+}else{
+is右小腿 = true;
+}
+
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("lowerarm_l", {0, 0, 0}),  false))
+{//左小臂
+is左小臂 = false;
+}else{
+is左小臂 = true;
+}
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("lowerarm_r", {0, 0, 0}),  false))
+{//右小臂
+is右小臂 = false;
+}else{
+is右小臂 = true;
+}
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("thigh_l", {0, 0, 0}),  false))
+{//左上臂
+is左大腿 = false;
+}else{
+is左大腿 = true;
+}
+if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("thigh_r", {0, 0, 0}),  false))
+{//左上臂
+is右大腿 = false;
+}else{
+is右大腿 = true;
+}
+if (!已选择)
+if(is头) {
+算法 = 1;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is盆骨)
+{
+算法 = 2;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is左小腿)
+{
+算法 = 3;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is右小腿)
+{
+算法 = 4;   
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is左小臂)
+{
+算法 = 5;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is右小臂)
+{
+算法 = 6;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is左上臂)
+{
+算法 = 7;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is右上臂)
+{
+算法 = 8;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is左大腿)
+{
+算法 = 9;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is右大腿)
+{
+算法 = 10;
+已选择 = true;
+}else{//Config
+已选择 = false;
+}
+if (!已选择)
+if(is左脚)
+{
+算法 = 11;
+已选择 = true;
+}else{
+已选择 = false;
+}
+if (!已选择)
+if(is右脚)
+{
+算法 = 12;
+已选择 = true;
+}else{
+已选择 = false;
+}
+                if (Cheat::Aimbot::IgnoreBot) {
+                    if (Player->bIsAI)
                         continue;
                 }
 
                 auto Root = Player->GetBonePos("Root", {});
                 auto Head = Player->GetBonePos("Head", {});
-
                 FVector2D RootSc, HeadSc;
-                if (W2S(Root, &RootSc) && W2S(Head, &HeadSc))
-                {
+                if (W2S(Root, &RootSc) && W2S(Head, &HeadSc)) {
                     float height = abs(HeadSc.Y - RootSc.Y);
                     float width = height * 0.20f;
 
                     FVector middlePoint = {HeadSc.X + (width / 2), HeadSc.Y + (height / 2), 0};
                     if ((middlePoint.X >= 0 && middlePoint.X <= glWidth) &&
-                        (middlePoint.Y >= 0 && middlePoint.Y <= glHeight))
-                    {
+                            (middlePoint.Y >= 0 && middlePoint.Y <= glHeight)) {
                         FVector2D v2Middle = FVector2D((float)(glWidth / 2), (float)(glHeight / 2));
                         FVector2D v2Loc = FVector2D(middlePoint.X, middlePoint.Y);
 
-                        if (isInsideFOVs((int)middlePoint.X, (int)middlePoint.Y))
-                        {
+                     //   if (isInsideFOVs((int)middlePoint.X, (int)middlePoint.Y)) {
                             float dist = FVector2D::Distance(v2Middle, v2Loc);
 
-                            if (dist < max)
-                            {
+                            if (dist < max) {
                                 max = dist;
                                 result = Player;
                             }
-                        }
+                       // }
                     }
                 }
             }
         }
     }
+
     return result;
 }
 
@@ -874,22 +1118,6 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     ASTExtraPlayerController* localPlayerController = nullptr;
     glWidth = ScreenWidth;
     glHeight = ScreenHeight;
-    
-    // Target ESP line drawing
-    if (Cheat::Esp::Target)
-    {
-        auto Target = GetTargetByPussy();
-        if (Target)
-        {
-            auto targetHead = Target->GetBonePos("Head", {});
-            auto targetFeet = Target->GetBonePos("Head", {}); // (This looks like it should be "Foot_L" or similar, but I kept as your code)
-            FVector2D targetSC, footPos;
-            if (W2S(targetHead, &targetSC) && W2S(targetHead, &footPos))
-            {
-                HUD->DrawLine((float)glWidth / 2, 716, footPos.X - 2, footPos.Y, COLOR_RED, 1.0f);
-            }
-        }
-    }
 	
     // Canvas handling
     UCanvas* Canvas = HUD->Canvas;
@@ -906,7 +1134,7 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
         if (!tslFont || !robotoTinyFont) return;
 		
         tslFont->LegacyFontSize = 25;
-        DrawOutlinedText(HUD, FString("SANKE - AIM"), {glWidth / 2.0f, 65}, COLOR_RED, COLOR_BLACK, true);
+        DrawOutlinedText(HUD, FString("A N O N Y"), {glWidth / 2.0f, 65}, COLOR_RED, COLOR_BLACK, true);
         tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
 
         // Get Local Player & Controller

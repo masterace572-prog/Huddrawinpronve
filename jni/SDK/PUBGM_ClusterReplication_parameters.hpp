@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,13 +13,13 @@ namespace SDK
 // Function ClusterReplication.ClusterReplicationSubsystem.SetAutoClearCache
 struct UClusterReplicationSubsystem_SetAutoClearCache_Params
 {
-	bool                                               Val;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool Val; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ClusterReplication.ClusterReplicationSubsystem.SetAutoCache
 struct UClusterReplicationSubsystem_SetAutoCache_Params
 {
-	bool                                               Val;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	bool Val; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function ClusterReplication.ClusterReplicationSubsystem.RemoveAllCachedObjectData

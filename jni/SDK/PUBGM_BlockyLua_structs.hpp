@@ -1,12 +1,31 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
 //---------------------By BangJO---------------------------
 //Enums
 //---------------------By BangJO---------------------------
+
+// Enum BlockyLua.EBlockyEditorShortcutKey
+enum class EBlockyEditorShortcutKey : uint8_t
+{
+	EBlockyEditorShortcutKey__None = 0,
+	EBlockyEditorShortcutKey__Clone = 1,
+	EBlockyEditorShortcutKey__Copy = 2,
+	EBlockyEditorShortcutKey__Cut = 3,
+	EBlockyEditorShortcutKey__Paste = 4,
+	EBlockyEditorShortcutKey__Undo = 5,
+	EBlockyEditorShortcutKey__Redo = 6,
+	EBlockyEditorShortcutKey__Delete = 7,
+	EBlockyEditorShortcutKey__Search = 8,
+	EBlockyEditorShortcutKey__Save = 9,
+	EBlockyEditorShortcutKey__Log = 10,
+	EBlockyEditorShortcutKey__Escape = 11,
+	EBlockyEditorShortcutKey__EBlockyEditorShortcutKey_MAX = 12
+};
+
 
 // Enum BlockyLua.ESearchResultVisibleType
 enum class ESearchResultVisibleType : uint8_t
@@ -37,15 +56,15 @@ enum class EBLOCKYLUA_AUTO_SCROLL_TYPE : uint8_t
 // 0x0010
 struct FIntArrayWrapper
 {
-	TArray<int>                                        Values;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<int> Values; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct BlockyLua.SlotData
 // 0x0020
 struct FSlotData
 {
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
+	class UBlockBase* LinkedSlotHost; // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0008(0x0018) MISSED OFFSET
 };
 
 }

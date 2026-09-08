@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -11,10 +11,10 @@ namespace SDK
 // Enum MoviePlayer.EMoviePlaybackType
 enum class EMoviePlaybackType : uint8_t
 {
-	MT_Normal                      = 0,
-	MT_Looped                      = 1,
-	MT_LoadingLoop                 = 2,
-	MT_MAX                         = 3
+	MT_Normal = 0,
+	MT_Looped = 1,
+	MT_LoadingLoop = 2,
+	MT_MAX = 3
 };
 
 

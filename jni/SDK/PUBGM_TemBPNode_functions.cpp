@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,10 +11,10 @@ namespace SDK
 // Function TemBPNode.TemBPLibrary.TempUIMsgInvokeRef
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 ObjContext                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MsgName                        (Parm, ZeroConstructor)
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// TArray<struct FTemBPDataAddr>  ParamArray                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UObject* ObjContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MsgName (Parm, ZeroConstructor)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// TArray<struct FTemBPDataAddr> ParamArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTemBPLibrary::TempUIMsgInvokeRef(class UObject* ObjContext, const struct FString& MsgName, const struct FString& ModuleName, TArray<struct FTemBPDataAddr> ParamArray)
 {
@@ -41,10 +41,10 @@ void UTemBPLibrary::TempUIMsgInvokeRef(class UObject* ObjContext, const struct F
 // Function TemBPNode.TemBPLibrary.TempBridgeEventInvokeRef
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 ObjContext                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// TArray<struct FTemBPDataAddr>  ParamArray                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UObject* ObjContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// TArray<struct FTemBPDataAddr> ParamArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTemBPLibrary::TempBridgeEventInvokeRef(class UObject* ObjContext, const struct FString& EventType, const struct FString& EventID, TArray<struct FTemBPDataAddr> ParamArray)
 {
@@ -71,9 +71,9 @@ void UTemBPLibrary::TempBridgeEventInvokeRef(class UObject* ObjContext, const st
 // Function TemBPNode.TemBPLibrary.AddrFromWild
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 DataType                       (Parm, ZeroConstructor)
-// struct FTemBPDataAddr          InAny                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FTemBPDataAddr          ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString DataType (Parm, ZeroConstructor)
+// struct FTemBPDataAddr InAny (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FTemBPDataAddr ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FTemBPDataAddr UTemBPLibrary::AddrFromWild(const struct FString& DataType, const struct FTemBPDataAddr& InAny)
 {
@@ -100,8 +100,8 @@ struct FTemBPDataAddr UTemBPLibrary::AddrFromWild(const struct FString& DataType
 // Function TemBPNode.TemBPLibrary.AddrFromSet
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 DataType                       (Parm, ZeroConstructor)
-// struct FTemBPDataAddr          ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString DataType (Parm, ZeroConstructor)
+// struct FTemBPDataAddr ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FTemBPDataAddr UTemBPLibrary::AddrFromSet(const struct FString& DataType)
 {
@@ -127,9 +127,9 @@ struct FTemBPDataAddr UTemBPLibrary::AddrFromSet(const struct FString& DataType)
 // Function TemBPNode.TemBPLibrary.AddrFromMap
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 DataType                       (Parm, ZeroConstructor)
-// TMap<int, int>                 InAny                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FTemBPDataAddr          ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString DataType (Parm, ZeroConstructor)
+// TMap<int, int> InAny (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FTemBPDataAddr ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FTemBPDataAddr UTemBPLibrary::AddrFromMap(const struct FString& DataType, TMap<int, int> InAny)
 {
@@ -156,9 +156,9 @@ struct FTemBPDataAddr UTemBPLibrary::AddrFromMap(const struct FString& DataType,
 // Function TemBPNode.TemBPLibrary.AddrFromArray
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 DataType                       (Parm, ZeroConstructor)
-// TArray<int>                    InAny                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FTemBPDataAddr          ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString DataType (Parm, ZeroConstructor)
+// TArray<int> InAny (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FTemBPDataAddr ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FTemBPDataAddr UTemBPLibrary::AddrFromArray(const struct FString& DataType, TArray<int> InAny)
 {

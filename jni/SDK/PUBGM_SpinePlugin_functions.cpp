@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function SpinePlugin.SpineBoneDriverComponent.BeforeUpdateWorldTransform
 // (Final, Native, Protected)
 // Parameters:
-// class USpineSkeletonComponent* Skeleton                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USpineSkeletonComponent* Skeleton (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void USpineBoneDriverComponent::BeforeUpdateWorldTransform(class USpineSkeletonComponent* Skeleton)
 {
@@ -35,7 +35,7 @@ void USpineBoneDriverComponent::BeforeUpdateWorldTransform(class USpineSkeletonC
 // Function SpinePlugin.TrackEntry.SetTrackTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          trackTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float trackTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetTrackTime(float trackTime)
 {
@@ -59,7 +59,7 @@ void UTrackEntry::SetTrackTime(float trackTime)
 // Function SpinePlugin.TrackEntry.SetTrackEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          trackEnd                       (Parm, ZeroConstructor, IsPlainOldData)
+// float trackEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetTrackEnd(float trackEnd)
 {
@@ -83,7 +83,7 @@ void UTrackEntry::SetTrackEnd(float trackEnd)
 // Function SpinePlugin.TrackEntry.SetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TimeScale                      (Parm, ZeroConstructor, IsPlainOldData)
+// float TimeScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetTimeScale(float TimeScale)
 {
@@ -107,7 +107,7 @@ void UTrackEntry::SetTimeScale(float TimeScale)
 // Function SpinePlugin.TrackEntry.SetMixTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          mixTime                        (Parm, ZeroConstructor, IsPlainOldData)
+// float mixTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetMixTime(float mixTime)
 {
@@ -131,7 +131,7 @@ void UTrackEntry::SetMixTime(float mixTime)
 // Function SpinePlugin.TrackEntry.SetMixDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          mixDuration                    (Parm, ZeroConstructor, IsPlainOldData)
+// float mixDuration (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetMixDuration(float mixDuration)
 {
@@ -155,7 +155,7 @@ void UTrackEntry::SetMixDuration(float mixDuration)
 // Function SpinePlugin.TrackEntry.SetLoop
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Loop                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool Loop (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetLoop(bool Loop)
 {
@@ -179,7 +179,7 @@ void UTrackEntry::SetLoop(bool Loop)
 // Function SpinePlugin.TrackEntry.SetEventThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          eventThreshold                 (Parm, ZeroConstructor, IsPlainOldData)
+// float eventThreshold (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetEventThreshold(float eventThreshold)
 {
@@ -203,7 +203,7 @@ void UTrackEntry::SetEventThreshold(float eventThreshold)
 // Function SpinePlugin.TrackEntry.SetDrawOrderThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          drawOrderThreshold             (Parm, ZeroConstructor, IsPlainOldData)
+// float drawOrderThreshold (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetDrawOrderThreshold(float drawOrderThreshold)
 {
@@ -227,7 +227,7 @@ void UTrackEntry::SetDrawOrderThreshold(float drawOrderThreshold)
 // Function SpinePlugin.TrackEntry.SetDelay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetDelay(float Delay)
 {
@@ -251,7 +251,7 @@ void UTrackEntry::SetDelay(float Delay)
 // Function SpinePlugin.TrackEntry.SetAttachmentThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          attachmentThreshold            (Parm, ZeroConstructor, IsPlainOldData)
+// float attachmentThreshold (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetAttachmentThreshold(float attachmentThreshold)
 {
@@ -275,7 +275,7 @@ void UTrackEntry::SetAttachmentThreshold(float attachmentThreshold)
 // Function SpinePlugin.TrackEntry.SetAnimationStart
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          animationStart                 (Parm, ZeroConstructor, IsPlainOldData)
+// float animationStart (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetAnimationStart(float animationStart)
 {
@@ -299,7 +299,7 @@ void UTrackEntry::SetAnimationStart(float animationStart)
 // Function SpinePlugin.TrackEntry.SetAnimationLast
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          animationLast                  (Parm, ZeroConstructor, IsPlainOldData)
+// float animationLast (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetAnimationLast(float animationLast)
 {
@@ -323,7 +323,7 @@ void UTrackEntry::SetAnimationLast(float animationLast)
 // Function SpinePlugin.TrackEntry.SetAnimationEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          animationEnd                   (Parm, ZeroConstructor, IsPlainOldData)
+// float animationEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetAnimationEnd(float animationEnd)
 {
@@ -347,7 +347,7 @@ void UTrackEntry::SetAnimationEnd(float animationEnd)
 // Function SpinePlugin.TrackEntry.SetAlpha
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Alpha                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Alpha (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTrackEntry::SetAlpha(float Alpha)
 {
@@ -371,7 +371,7 @@ void UTrackEntry::SetAlpha(float Alpha)
 // Function SpinePlugin.TrackEntry.isValidAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTrackEntry::isValidAnimation()
 {
@@ -396,7 +396,7 @@ bool UTrackEntry::isValidAnimation()
 // Function SpinePlugin.TrackEntry.GetTrackTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetTrackTime()
 {
@@ -421,7 +421,7 @@ float UTrackEntry::GetTrackTime()
 // Function SpinePlugin.TrackEntry.GetTrackIndex
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTrackEntry::GetTrackIndex()
 {
@@ -446,7 +446,7 @@ int UTrackEntry::GetTrackIndex()
 // Function SpinePlugin.TrackEntry.GetTrackEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetTrackEnd()
 {
@@ -471,7 +471,7 @@ float UTrackEntry::GetTrackEnd()
 // Function SpinePlugin.TrackEntry.GetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetTimeScale()
 {
@@ -496,7 +496,7 @@ float UTrackEntry::GetTimeScale()
 // Function SpinePlugin.TrackEntry.GetMixTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetMixTime()
 {
@@ -521,7 +521,7 @@ float UTrackEntry::GetMixTime()
 // Function SpinePlugin.TrackEntry.GetMixDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetMixDuration()
 {
@@ -546,7 +546,7 @@ float UTrackEntry::GetMixDuration()
 // Function SpinePlugin.TrackEntry.GetLoop
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTrackEntry::GetLoop()
 {
@@ -571,7 +571,7 @@ bool UTrackEntry::GetLoop()
 // Function SpinePlugin.TrackEntry.GetEventThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetEventThreshold()
 {
@@ -596,7 +596,7 @@ float UTrackEntry::GetEventThreshold()
 // Function SpinePlugin.TrackEntry.GetDrawOrderThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetDrawOrderThreshold()
 {
@@ -621,7 +621,7 @@ float UTrackEntry::GetDrawOrderThreshold()
 // Function SpinePlugin.TrackEntry.GetDelay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetDelay()
 {
@@ -646,7 +646,7 @@ float UTrackEntry::GetDelay()
 // Function SpinePlugin.TrackEntry.GetAttachmentThreshold
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetAttachmentThreshold()
 {
@@ -671,7 +671,7 @@ float UTrackEntry::GetAttachmentThreshold()
 // Function SpinePlugin.TrackEntry.GetAnimationStart
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetAnimationStart()
 {
@@ -696,7 +696,7 @@ float UTrackEntry::GetAnimationStart()
 // Function SpinePlugin.TrackEntry.getAnimationName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UTrackEntry::getAnimationName()
 {
@@ -721,7 +721,7 @@ struct FString UTrackEntry::getAnimationName()
 // Function SpinePlugin.TrackEntry.GetAnimationLast
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetAnimationLast()
 {
@@ -746,7 +746,7 @@ float UTrackEntry::GetAnimationLast()
 // Function SpinePlugin.TrackEntry.GetAnimationEnd
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetAnimationEnd()
 {
@@ -771,7 +771,7 @@ float UTrackEntry::GetAnimationEnd()
 // Function SpinePlugin.TrackEntry.getAnimationDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::getAnimationDuration()
 {
@@ -796,7 +796,7 @@ float UTrackEntry::getAnimationDuration()
 // Function SpinePlugin.TrackEntry.GetAlpha
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTrackEntry::GetAlpha()
 {
@@ -884,8 +884,8 @@ void USpineSkeletonComponent::SetSlotsToSetupPose()
 // Function SpinePlugin.SpineSkeletonComponent.SetSlotColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 SlotName                       (ConstParm, Parm, ZeroConstructor)
-// struct FColor                  Color                          (ConstParm, Parm, IsPlainOldData)
+// struct FString SlotName (ConstParm, Parm, ZeroConstructor)
+// struct FColor Color (ConstParm, Parm, IsPlainOldData)
 
 void USpineSkeletonComponent::SetSlotColor(const struct FString& SlotName, const struct FColor& Color)
 {
@@ -910,8 +910,8 @@ void USpineSkeletonComponent::SetSlotColor(const struct FString& SlotName, const
 // Function SpinePlugin.SpineSkeletonComponent.SetSkins
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         SkinNames                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> SkinNames (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::SetSkins(TArray<struct FString>* SkinNames)
 {
@@ -939,8 +939,8 @@ bool USpineSkeletonComponent::SetSkins(TArray<struct FString>* SkinNames)
 // Function SpinePlugin.SpineSkeletonComponent.SetSkin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SkinName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkinName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::SetSkin(const struct FString& SkinName)
 {
@@ -966,7 +966,7 @@ bool USpineSkeletonComponent::SetSkin(const struct FString& SkinName)
 // Function SpinePlugin.SpineSkeletonComponent.SetScaleY
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ScaleY                         (Parm, ZeroConstructor, IsPlainOldData)
+// float ScaleY (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonComponent::SetScaleY(float ScaleY)
 {
@@ -990,7 +990,7 @@ void USpineSkeletonComponent::SetScaleY(float ScaleY)
 // Function SpinePlugin.SpineSkeletonComponent.SetScaleX
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ScaleX                         (Parm, ZeroConstructor, IsPlainOldData)
+// float ScaleX (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonComponent::SetScaleX(float ScaleX)
 {
@@ -1014,8 +1014,8 @@ void USpineSkeletonComponent::SetScaleX(float ScaleX)
 // Function SpinePlugin.SpineSkeletonComponent.SetBoneWorldPosition
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 BoneName                       (Parm, ZeroConstructor)
-// struct FVector                 Position                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString BoneName (Parm, ZeroConstructor)
+// struct FVector Position (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void USpineSkeletonComponent::SetBoneWorldPosition(const struct FString& BoneName, const struct FVector& Position)
 {
@@ -1061,9 +1061,9 @@ void USpineSkeletonComponent::SetBonesToSetupPose()
 // Function SpinePlugin.SpineSkeletonComponent.SetAttachment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SlotName                       (ConstParm, Parm, ZeroConstructor)
-// struct FString                 AttachmentName                 (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SlotName (ConstParm, Parm, ZeroConstructor)
+// struct FString AttachmentName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::SetAttachment(const struct FString& SlotName, const struct FString& AttachmentName)
 {
@@ -1090,8 +1090,8 @@ bool USpineSkeletonComponent::SetAttachment(const struct FString& SlotName, cons
 // Function SpinePlugin.SpineSkeletonComponent.HasSlot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SlotName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SlotName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::HasSlot(const struct FString& SlotName)
 {
@@ -1117,8 +1117,8 @@ bool USpineSkeletonComponent::HasSlot(const struct FString& SlotName)
 // Function SpinePlugin.SpineSkeletonComponent.HasSkin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SkinName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkinName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::HasSkin(const struct FString& SkinName)
 {
@@ -1144,8 +1144,8 @@ bool USpineSkeletonComponent::HasSkin(const struct FString& SkinName)
 // Function SpinePlugin.SpineSkeletonComponent.HasBone
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BoneName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BoneName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::HasBone(const struct FString& BoneName)
 {
@@ -1171,8 +1171,8 @@ bool USpineSkeletonComponent::HasBone(const struct FString& BoneName)
 // Function SpinePlugin.SpineSkeletonComponent.HasAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineSkeletonComponent::HasAnimation(const struct FString& AnimationName)
 {
@@ -1198,7 +1198,7 @@ bool USpineSkeletonComponent::HasAnimation(const struct FString& AnimationName)
 // Function SpinePlugin.SpineSkeletonComponent.GetSlots
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Slots                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Slots (Parm, OutParm, ZeroConstructor)
 
 void USpineSkeletonComponent::GetSlots(TArray<struct FString>* Slots)
 {
@@ -1224,7 +1224,7 @@ void USpineSkeletonComponent::GetSlots(TArray<struct FString>* Slots)
 // Function SpinePlugin.SpineSkeletonComponent.GetSkins
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Skins                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Skins (Parm, OutParm, ZeroConstructor)
 
 void USpineSkeletonComponent::GetSkins(TArray<struct FString>* Skins)
 {
@@ -1250,7 +1250,7 @@ void USpineSkeletonComponent::GetSkins(TArray<struct FString>* Skins)
 // Function SpinePlugin.SpineSkeletonComponent.GetScaleY
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineSkeletonComponent::GetScaleY()
 {
@@ -1275,7 +1275,7 @@ float USpineSkeletonComponent::GetScaleY()
 // Function SpinePlugin.SpineSkeletonComponent.GetScaleX
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineSkeletonComponent::GetScaleX()
 {
@@ -1300,8 +1300,8 @@ float USpineSkeletonComponent::GetScaleX()
 // Function SpinePlugin.SpineSkeletonComponent.GetBoneWorldTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 BoneName                       (Parm, ZeroConstructor)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString BoneName (Parm, ZeroConstructor)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform USpineSkeletonComponent::GetBoneWorldTransform(const struct FString& BoneName)
 {
@@ -1327,7 +1327,7 @@ struct FTransform USpineSkeletonComponent::GetBoneWorldTransform(const struct FS
 // Function SpinePlugin.SpineSkeletonComponent.GetBones
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Bones                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Bones (Parm, OutParm, ZeroConstructor)
 
 void USpineSkeletonComponent::GetBones(TArray<struct FString>* Bones)
 {
@@ -1353,7 +1353,7 @@ void USpineSkeletonComponent::GetBones(TArray<struct FString>* Bones)
 // Function SpinePlugin.SpineSkeletonComponent.GetAnimations
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Animations                     (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Animations (Parm, OutParm, ZeroConstructor)
 
 void USpineSkeletonComponent::GetAnimations(TArray<struct FString>* Animations)
 {
@@ -1379,8 +1379,8 @@ void USpineSkeletonComponent::GetAnimations(TArray<struct FString>* Animations)
 // Function SpinePlugin.SpineSkeletonComponent.getAnimationDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineSkeletonComponent::getAnimationDuration(const struct FString& AnimationName)
 {
@@ -1406,7 +1406,7 @@ float USpineSkeletonComponent::getAnimationDuration(const struct FString& Animat
 // Function SpinePlugin.SpineSkeletonAnimationComponent.SetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TimeScale                      (Parm, ZeroConstructor, IsPlainOldData)
+// float TimeScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonAnimationComponent::SetTimeScale(float TimeScale)
 {
@@ -1430,8 +1430,8 @@ void USpineSkeletonAnimationComponent::SetTimeScale(float TimeScale)
 // Function SpinePlugin.SpineSkeletonAnimationComponent.SetPlaybackTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InPlaybackTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCallDelegates                 (Parm, ZeroConstructor, IsPlainOldData)
+// float InPlaybackTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCallDelegates (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonAnimationComponent::SetPlaybackTime(float InPlaybackTime, bool bCallDelegates)
 {
@@ -1456,9 +1456,9 @@ void USpineSkeletonAnimationComponent::SetPlaybackTime(float InPlaybackTime, boo
 // Function SpinePlugin.SpineSkeletonAnimationComponent.SetEmptyAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          mixDuration                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float mixDuration (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineSkeletonAnimationComponent::SetEmptyAnimation(int TrackIndex, float mixDuration)
 {
@@ -1485,7 +1485,7 @@ class UTrackEntry* USpineSkeletonAnimationComponent::SetEmptyAnimation(int Track
 // Function SpinePlugin.SpineSkeletonAnimationComponent.SetAutoPlay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAutoPlays                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoPlays (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonAnimationComponent::SetAutoPlay(bool bInAutoPlays)
 {
@@ -1509,10 +1509,10 @@ void USpineSkeletonAnimationComponent::SetAutoPlay(bool bInAutoPlays)
 // Function SpinePlugin.SpineSkeletonAnimationComponent.SetAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           Loop                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool Loop (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineSkeletonAnimationComponent::SetAnimation(int TrackIndex, const struct FString& AnimationName, bool Loop)
 {
@@ -1540,7 +1540,7 @@ class UTrackEntry* USpineSkeletonAnimationComponent::SetAnimation(int TrackIndex
 // Function SpinePlugin.SpineSkeletonAnimationComponent.GetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineSkeletonAnimationComponent::GetTimeScale()
 {
@@ -1565,8 +1565,8 @@ float USpineSkeletonAnimationComponent::GetTimeScale()
 // Function SpinePlugin.SpineSkeletonAnimationComponent.GetCurrent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineSkeletonAnimationComponent::GetCurrent(int TrackIndex)
 {
@@ -1613,7 +1613,7 @@ void USpineSkeletonAnimationComponent::ClearTracks()
 // Function SpinePlugin.SpineSkeletonAnimationComponent.ClearTrack
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineSkeletonAnimationComponent::ClearTrack(int TrackIndex)
 {
@@ -1637,10 +1637,10 @@ void USpineSkeletonAnimationComponent::ClearTrack(int TrackIndex)
 // Function SpinePlugin.SpineSkeletonAnimationComponent.AddEmptyAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          mixDuration                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float mixDuration (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineSkeletonAnimationComponent::AddEmptyAnimation(int TrackIndex, float mixDuration, float Delay)
 {
@@ -1668,11 +1668,11 @@ class UTrackEntry* USpineSkeletonAnimationComponent::AddEmptyAnimation(int Track
 // Function SpinePlugin.SpineSkeletonAnimationComponent.AddAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           Loop                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool Loop (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineSkeletonAnimationComponent::AddAnimation(int TrackIndex, const struct FString& AnimationName, bool Loop, float Delay)
 {
@@ -1722,8 +1722,8 @@ void USpineWidget::UpdateWorldTransform()
 // Function SpinePlugin.SpineWidget.Tick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CallDelegates                  (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool CallDelegates (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::Tick(float DeltaTime, bool CallDelegates)
 {
@@ -1769,7 +1769,7 @@ void USpineWidget::SetToSetupPose()
 // Function SpinePlugin.SpineWidget.SetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TimeScale                      (Parm, ZeroConstructor, IsPlainOldData)
+// float TimeScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetTimeScale(float TimeScale)
 {
@@ -1814,8 +1814,8 @@ void USpineWidget::SetSlotsToSetupPose()
 // Function SpinePlugin.SpineWidget.SetSkins
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         SkinNames                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> SkinNames (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::SetSkins(TArray<struct FString>* SkinNames)
 {
@@ -1843,8 +1843,8 @@ bool USpineWidget::SetSkins(TArray<struct FString>* SkinNames)
 // Function SpinePlugin.SpineWidget.SetSkin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SkinName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkinName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::SetSkin(const struct FString& SkinName)
 {
@@ -1870,7 +1870,7 @@ bool USpineWidget::SetSkin(const struct FString& SkinName)
 // Function SpinePlugin.SpineWidget.SetScaleY
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ScaleY                         (Parm, ZeroConstructor, IsPlainOldData)
+// float ScaleY (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetScaleY(float ScaleY)
 {
@@ -1894,7 +1894,7 @@ void USpineWidget::SetScaleY(float ScaleY)
 // Function SpinePlugin.SpineWidget.SetScaleX
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ScaleX                         (Parm, ZeroConstructor, IsPlainOldData)
+// float ScaleX (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetScaleX(float ScaleX)
 {
@@ -1918,7 +1918,7 @@ void USpineWidget::SetScaleX(float ScaleX)
 // Function SpinePlugin.SpineWidget.SetScale
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// float                          inScale                        (Parm, ZeroConstructor, IsPlainOldData)
+// float inScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetScale(float inScale)
 {
@@ -1942,8 +1942,8 @@ void USpineWidget::SetScale(float inScale)
 // Function SpinePlugin.SpineWidget.SetPlaybackTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InPlaybackTime                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCallDelegates                 (Parm, ZeroConstructor, IsPlainOldData)
+// float InPlaybackTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCallDelegates (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetPlaybackTime(float InPlaybackTime, bool bCallDelegates)
 {
@@ -1968,9 +1968,9 @@ void USpineWidget::SetPlaybackTime(float InPlaybackTime, bool bCallDelegates)
 // Function SpinePlugin.SpineWidget.SetEmptyAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          mixDuration                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float mixDuration (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineWidget::SetEmptyAnimation(int TrackIndex, float mixDuration)
 {
@@ -1997,7 +1997,7 @@ class UTrackEntry* USpineWidget::SetEmptyAnimation(int TrackIndex, float mixDura
 // Function SpinePlugin.SpineWidget.SetColor
 // (Native, Protected, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InColor                        (Parm, IsPlainOldData)
+// struct FLinearColor InColor (Parm, IsPlainOldData)
 
 void USpineWidget::SetColor(const struct FLinearColor& InColor)
 {
@@ -2042,7 +2042,7 @@ void USpineWidget::SetBonesToSetupPose()
 // Function SpinePlugin.SpineWidget.SetAutoPlay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAutoPlays                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoPlays (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::SetAutoPlay(bool bInAutoPlays)
 {
@@ -2066,9 +2066,9 @@ void USpineWidget::SetAutoPlay(bool bInAutoPlays)
 // Function SpinePlugin.SpineWidget.SetAttachment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SlotName                       (ConstParm, Parm, ZeroConstructor)
-// struct FString                 AttachmentName                 (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SlotName (ConstParm, Parm, ZeroConstructor)
+// struct FString AttachmentName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::SetAttachment(const struct FString& SlotName, const struct FString& AttachmentName)
 {
@@ -2095,10 +2095,10 @@ bool USpineWidget::SetAttachment(const struct FString& SlotName, const struct FS
 // Function SpinePlugin.SpineWidget.SetAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           Loop                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool Loop (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineWidget::SetAnimation(int TrackIndex, const struct FString& AnimationName, bool Loop)
 {
@@ -2126,8 +2126,8 @@ class UTrackEntry* USpineWidget::SetAnimation(int TrackIndex, const struct FStri
 // Function SpinePlugin.SpineWidget.HasSlot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SlotName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SlotName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::HasSlot(const struct FString& SlotName)
 {
@@ -2153,8 +2153,8 @@ bool USpineWidget::HasSlot(const struct FString& SlotName)
 // Function SpinePlugin.SpineWidget.HasSkin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SkinName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkinName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::HasSkin(const struct FString& SkinName)
 {
@@ -2180,8 +2180,8 @@ bool USpineWidget::HasSkin(const struct FString& SkinName)
 // Function SpinePlugin.SpineWidget.HasBone
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BoneName                       (ConstParm, Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BoneName (ConstParm, Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::HasBone(const struct FString& BoneName)
 {
@@ -2207,8 +2207,8 @@ bool USpineWidget::HasBone(const struct FString& BoneName)
 // Function SpinePlugin.SpineWidget.HasAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpineWidget::HasAnimation(const struct FString& AnimationName)
 {
@@ -2234,7 +2234,7 @@ bool USpineWidget::HasAnimation(const struct FString& AnimationName)
 // Function SpinePlugin.SpineWidget.GetTimeScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineWidget::GetTimeScale()
 {
@@ -2259,7 +2259,7 @@ float USpineWidget::GetTimeScale()
 // Function SpinePlugin.SpineWidget.GetSlots
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Slots                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Slots (Parm, OutParm, ZeroConstructor)
 
 void USpineWidget::GetSlots(TArray<struct FString>* Slots)
 {
@@ -2285,7 +2285,7 @@ void USpineWidget::GetSlots(TArray<struct FString>* Slots)
 // Function SpinePlugin.SpineWidget.GetSkins
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Skins                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Skins (Parm, OutParm, ZeroConstructor)
 
 void USpineWidget::GetSkins(TArray<struct FString>* Skins)
 {
@@ -2311,7 +2311,7 @@ void USpineWidget::GetSkins(TArray<struct FString>* Skins)
 // Function SpinePlugin.SpineWidget.GetScaleY
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineWidget::GetScaleY()
 {
@@ -2336,7 +2336,7 @@ float USpineWidget::GetScaleY()
 // Function SpinePlugin.SpineWidget.GetScaleX
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineWidget::GetScaleX()
 {
@@ -2361,7 +2361,7 @@ float USpineWidget::GetScaleX()
 // Function SpinePlugin.SpineWidget.GetScale
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineWidget::GetScale()
 {
@@ -2386,8 +2386,8 @@ float USpineWidget::GetScale()
 // Function SpinePlugin.SpineWidget.GetCurrent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineWidget::GetCurrent(int TrackIndex)
 {
@@ -2413,7 +2413,7 @@ class UTrackEntry* USpineWidget::GetCurrent(int TrackIndex)
 // Function SpinePlugin.SpineWidget.GetColor
 // (Final, Native, Protected, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor USpineWidget::GetColor()
 {
@@ -2438,7 +2438,7 @@ struct FLinearColor USpineWidget::GetColor()
 // Function SpinePlugin.SpineWidget.GetBones
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Bones                          (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Bones (Parm, OutParm, ZeroConstructor)
 
 void USpineWidget::GetBones(TArray<struct FString>* Bones)
 {
@@ -2464,7 +2464,7 @@ void USpineWidget::GetBones(TArray<struct FString>* Bones)
 // Function SpinePlugin.SpineWidget.GetAnimations
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         Animations                     (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> Animations (Parm, OutParm, ZeroConstructor)
 
 void USpineWidget::GetAnimations(TArray<struct FString>* Animations)
 {
@@ -2490,8 +2490,8 @@ void USpineWidget::GetAnimations(TArray<struct FString>* Animations)
 // Function SpinePlugin.SpineWidget.getAnimationDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USpineWidget::getAnimationDuration(const struct FString& AnimationName)
 {
@@ -2538,7 +2538,7 @@ void USpineWidget::ClearTracks()
 // Function SpinePlugin.SpineWidget.ClearTrack
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpineWidget::ClearTrack(int TrackIndex)
 {
@@ -2562,10 +2562,10 @@ void USpineWidget::ClearTrack(int TrackIndex)
 // Function SpinePlugin.SpineWidget.AddEmptyAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          mixDuration                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float mixDuration (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineWidget::AddEmptyAnimation(int TrackIndex, float mixDuration, float Delay)
 {
@@ -2593,11 +2593,11 @@ class UTrackEntry* USpineWidget::AddEmptyAnimation(int TrackIndex, float mixDura
 // Function SpinePlugin.SpineWidget.AddAnimation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AnimationName                  (Parm, ZeroConstructor)
-// bool                           Loop                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UTrackEntry*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AnimationName (Parm, ZeroConstructor)
+// bool Loop (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
+// class UTrackEntry* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTrackEntry* USpineWidget::AddAnimation(int TrackIndex, const struct FString& AnimationName, bool Loop, float Delay)
 {

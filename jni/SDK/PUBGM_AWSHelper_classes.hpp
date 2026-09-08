@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class UAWSHelper : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-	TMap<struct FString, struct FString>               DownloadFilePaths;                                        // 0x00D0(0x0050) (ZeroConstructor)
-	float                                              Timeout;                                                  // 0x0120(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x54];                                      // 0x0124(0x0054) MISSED OFFSET
+	unsigned char UnknownData00[0xA8]; // 0x0028(0x00A8) MISSED OFFSET
+	TMap<struct FString, struct FString> DownloadFilePaths; // 0x00D0(0x0050) (ZeroConstructor)
+	float Timeout; // 0x0120(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x54]; // 0x0124(0x0054) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AWSHelper.AWSHelper");
@@ -35,8 +34,7 @@ class UAWSHelperBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AWSHelper.AWSHelperBlueprintLibrary");
@@ -58,10 +56,9 @@ public:
 class UAWSResponse : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0028(0x0048) MISSED OFFSET
+	unsigned char UnknownData00[0x48]; // 0x0028(0x0048) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AWSHelper.AWSResponse");

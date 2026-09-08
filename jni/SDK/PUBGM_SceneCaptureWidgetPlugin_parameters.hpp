@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,7 +13,7 @@ namespace SDK
 // Function SceneCaptureWidgetPlugin.SceneCaptureWidget.SetSceneCaptureCameraActor
 struct USceneCaptureWidget_SetSceneCaptureCameraActor_Params
 {
-	class ASceneCaptureCameraActor*                    InSceneCaptureCameraActor;                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class ASceneCaptureCameraActor* InSceneCaptureCameraActor; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

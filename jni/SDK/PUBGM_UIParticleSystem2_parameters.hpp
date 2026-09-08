@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,31 +13,31 @@ namespace SDK
 // Function UIParticleSystem2.ParticleSystemWidget2.SetParticleSystem
 struct UParticleSystemWidget2_SetParticleSystem_Params
 {
-	class UParticleSystem*                             ParticleSystem;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class UParticleSystem* ParticleSystem; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UIParticleSystem2.ParticleSystemWidget2.SetNiagaraSystem
 struct UParticleSystemWidget2_SetNiagaraSystem_Params
 {
-	class UNiagaraSystem*                              ParticleSystem;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	class UNiagaraSystem* ParticleSystem; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UIParticleSystem2.ParticleSystemWidget2.SetActivate
 struct UParticleSystemWidget2_SetActivate_Params
 {
-	bool                                               bIsActivate;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool bIsActivate; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function UIParticleSystem2.ParticleSystemWidget2.GetParticleComponent
 struct UParticleSystemWidget2_GetParticleComponent_Params
 {
-	class UParticleSystemComponent*                    ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent* ReturnValue; // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function UIParticleSystem2.ParticleSystemWidget2.GetNiagaraComponent
 struct UParticleSystemWidget2_GetNiagaraComponent_Params
 {
-	class UNiagaraComponent*                           ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UNiagaraComponent* ReturnValue; // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 }

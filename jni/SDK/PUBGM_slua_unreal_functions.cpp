@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void ULuaActorComponent::UnRegistLuaTick()
 // Function slua_unreal.LuaActorComponent.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaActorComponent::RegistLuaTick(float TickInterval)
 {
@@ -77,7 +77,7 @@ void ULuaInstancedActorComponent::UnRegistLuaTick()
 // Function slua_unreal.LuaInstancedActorComponent.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaInstancedActorComponent::RegistLuaTick(float TickInterval)
 {
@@ -122,7 +122,7 @@ void ALuaActor::UnRegistLuaTick()
 // Function slua_unreal.LuaActor.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALuaActor::RegistLuaTick(float TickInterval)
 {
@@ -146,7 +146,7 @@ void ALuaActor::RegistLuaTick(float TickInterval)
 // Function slua_unreal.LuaOverriderInterface.GetLuaFilePath
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ULuaOverriderInterface::GetLuaFilePath()
 {
@@ -171,7 +171,7 @@ struct FString ULuaOverriderInterface::GetLuaFilePath()
 // Function slua_unreal.LatentDelegate.OnLatentCallback
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            threadRef                      (Parm, ZeroConstructor, IsPlainOldData)
+// int threadRef (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULatentDelegate::OnLatentCallback(int threadRef)
 {
@@ -237,7 +237,7 @@ void ALuaLevelScriptActor::UnRegistLuaTick()
 // Function slua_unreal.LuaLevelScriptActor.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALuaLevelScriptActor::RegistLuaTick(float TickInterval)
 {
@@ -281,7 +281,7 @@ void ULuaOverrider::TriggerAnimNotify()
 // Function slua_unreal.LuaOverrider.InputVectorAxis
 // (Native, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 AxisValue                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector AxisValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ULuaOverrider::InputVectorAxis(const struct FVector& AxisValue)
 {
@@ -305,8 +305,8 @@ void ULuaOverrider::InputVectorAxis(const struct FVector& AxisValue)
 // Function slua_unreal.LuaOverrider.InputTouch
 // (Native, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// TEnumAsByte<enum ETouchIndex>  FingerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<enum ETouchIndex> FingerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ULuaOverrider::InputTouch(TEnumAsByte<enum ETouchIndex> FingerIndex, const struct FVector& Location)
 {
@@ -331,7 +331,7 @@ void ULuaOverrider::InputTouch(TEnumAsByte<enum ETouchIndex> FingerIndex, const 
 // Function slua_unreal.LuaOverrider.InputGesture
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaOverrider::InputGesture(float Value)
 {
@@ -355,7 +355,7 @@ void ULuaOverrider::InputGesture(float Value)
 // Function slua_unreal.LuaOverrider.InputAxis
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          AxisValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// float AxisValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaOverrider::InputAxis(float AxisValue)
 {
@@ -379,7 +379,7 @@ void ULuaOverrider::InputAxis(float AxisValue)
 // Function slua_unreal.LuaOverrider.InputAction
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FKey                    Key                            (Parm)
+// struct FKey Key (Parm)
 
 void ULuaOverrider::InputAction(const struct FKey& Key)
 {
@@ -403,9 +403,9 @@ void ULuaOverrider::InputAction(const struct FKey& Key)
 // Function slua_unreal.SluaBlueprintLibrary.GetStringFromVar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FSluaBPVar              Value                          (Parm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FSluaBPVar Value (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString USluaBlueprintLibrary::GetStringFromVar(const struct FSluaBPVar& Value, int Index)
 {
@@ -432,9 +432,9 @@ struct FString USluaBlueprintLibrary::GetStringFromVar(const struct FSluaBPVar& 
 // Function slua_unreal.SluaBlueprintLibrary.GetObjectFromVar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FSluaBPVar              Value                          (Parm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSluaBPVar Value (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* USluaBlueprintLibrary::GetObjectFromVar(const struct FSluaBPVar& Value, int Index)
 {
@@ -461,9 +461,9 @@ class UObject* USluaBlueprintLibrary::GetObjectFromVar(const struct FSluaBPVar& 
 // Function slua_unreal.SluaBlueprintLibrary.GetNumberFromVar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FSluaBPVar              Value                          (Parm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSluaBPVar Value (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USluaBlueprintLibrary::GetNumberFromVar(const struct FSluaBPVar& Value, int Index)
 {
@@ -490,9 +490,9 @@ float USluaBlueprintLibrary::GetNumberFromVar(const struct FSluaBPVar& Value, in
 // Function slua_unreal.SluaBlueprintLibrary.GetIntFromVar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FSluaBPVar              Value                          (Parm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSluaBPVar Value (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USluaBlueprintLibrary::GetIntFromVar(const struct FSluaBPVar& Value, int Index)
 {
@@ -519,9 +519,9 @@ int USluaBlueprintLibrary::GetIntFromVar(const struct FSluaBPVar& Value, int Ind
 // Function slua_unreal.SluaBlueprintLibrary.GetBoolFromVar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FSluaBPVar              Value                          (Parm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSluaBPVar Value (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USluaBlueprintLibrary::GetBoolFromVar(const struct FSluaBPVar& Value, int Index)
 {
@@ -548,8 +548,8 @@ bool USluaBlueprintLibrary::GetBoolFromVar(const struct FSluaBPVar& Value, int I
 // Function slua_unreal.SluaBlueprintLibrary.CreateVarFromString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Value (Parm, ZeroConstructor)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromString(const struct FString& Value)
 {
@@ -575,9 +575,9 @@ struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromString(const struct FStrin
 // Function slua_unreal.SluaBlueprintLibrary.CreateVarFromObject
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromObject(class UObject* WorldContextObject, class UObject* Value)
 {
@@ -604,8 +604,8 @@ struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromObject(class UObject* Worl
 // Function slua_unreal.SluaBlueprintLibrary.CreateVarFromNumber
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromNumber(float Value)
 {
@@ -631,8 +631,8 @@ struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromNumber(float Value)
 // Function slua_unreal.SluaBlueprintLibrary.CreateVarFromInt
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromInt(int Value)
 {
@@ -658,8 +658,8 @@ struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromInt(int Value)
 // Function slua_unreal.SluaBlueprintLibrary.CreateVarFromBool
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromBool(bool Value)
 {
@@ -685,11 +685,11 @@ struct FSluaBPVar USluaBlueprintLibrary::CreateVarFromBool(bool Value)
 // Function slua_unreal.SluaBlueprintLibrary.CallToLuaWithArgs
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// TArray<struct FSluaBPVar>      Args                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 StateName                      (Parm, ZeroConstructor)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// TArray<struct FSluaBPVar> Args (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString StateName (Parm, ZeroConstructor)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CallToLuaWithArgs(class UObject* WorldContextObject, const struct FString& FunctionName, TArray<struct FSluaBPVar> Args, const struct FString& StateName)
 {
@@ -718,10 +718,10 @@ struct FSluaBPVar USluaBlueprintLibrary::CallToLuaWithArgs(class UObject* WorldC
 // Function slua_unreal.SluaBlueprintLibrary.CallToLua
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// struct FString                 StateName                      (Parm, ZeroConstructor)
-// struct FSluaBPVar              ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// struct FString StateName (Parm, ZeroConstructor)
+// struct FSluaBPVar ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSluaBPVar USluaBlueprintLibrary::CallToLua(class UObject* WorldContextObject, const struct FString& FunctionName, const struct FString& StateName)
 {

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function Skill.UTSkill.VerifyServerSkillData
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> InEventType                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> InEventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUTSkill::VerifyServerSkillData(class UUTSkillManagerComponent* SkillManagerComponent, TEnumAsByte<enum EUTSkillEventType> InEventType)
 {
@@ -40,8 +40,8 @@ bool AUTSkill::VerifyServerSkillData(class UUTSkillManagerComponent* SkillManage
 // Function Skill.UTSkill.StopSkillCoolDown
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUTSkill::StopSkillCoolDown(class UUTSkillManagerComponent* SkillManagerComponent, int CoolDownIndex)
 {
@@ -66,8 +66,8 @@ void AUTSkill::StopSkillCoolDown(class UUTSkillManagerComponent* SkillManagerCom
 // Function Skill.UTSkill.ResetSkillCoolDown
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUTSkill::ResetSkillCoolDown(class UUTSkillManagerComponent* SkillManagerComponent, int CoolDownIndex)
 {
@@ -92,10 +92,10 @@ void AUTSkill::ResetSkillCoolDown(class UUTSkillManagerComponent* SkillManagerCo
 // Function Skill.UTSkill.OnEvent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> TheEventType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PhaseIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> TheEventType (Parm, ZeroConstructor, IsPlainOldData)
+// int PhaseIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUTSkill::OnEvent(class UUTSkillManagerComponent* SkillManagerComponent, TEnumAsByte<enum EUTSkillEventType> TheEventType, int PhaseIndex)
 {
@@ -123,9 +123,9 @@ bool AUTSkill::OnEvent(class UUTSkillManagerComponent* SkillManagerComponent, TE
 // Function Skill.UTSkill.JumpToPhase
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            PhaseId                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int PhaseId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUTSkill::JumpToPhase(class UUTSkillManagerComponent* SkillManagerComponent, int PhaseId)
 {
@@ -152,8 +152,8 @@ bool AUTSkill::JumpToPhase(class UUTSkillManagerComponent* SkillManagerComponent
 // Function Skill.UTSkill.IsEnableSkillCoolDown
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUTSkill::IsEnableSkillCoolDown(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -179,9 +179,9 @@ bool AUTSkill::IsEnableSkillCoolDown(class UUTSkillManagerComponent* SkillManage
 // Function Skill.UTSkill.IsCDOK
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUTSkill::IsCDOK(class UUTSkillManagerComponent* SkillManagerComponent, int CoolDownIndex)
 {
@@ -208,8 +208,8 @@ bool AUTSkill::IsCDOK(class UUTSkillManagerComponent* SkillManagerComponent, int
 // Function Skill.UTSkill.HandleVerifyServerSkillDataFail
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> InEventType                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> InEventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUTSkill::HandleVerifyServerSkillDataFail(class UUTSkillManagerComponent* SkillManagerComponent, TEnumAsByte<enum EUTSkillEventType> InEventType)
 {
@@ -234,7 +234,7 @@ void AUTSkill::HandleVerifyServerSkillDataFail(class UUTSkillManagerComponent* S
 // Function Skill.UTSkill.GetSpecificSkillManager
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UUTSkillManagerComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUTSkillManagerComponent* AUTSkill::GetSpecificSkillManager()
 {
@@ -259,7 +259,7 @@ class UUTSkillManagerComponent* AUTSkill::GetSpecificSkillManager()
 // Function Skill.UTSkill.GetSpecificBlackboard
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* AUTSkill::GetSpecificBlackboard()
 {
@@ -284,8 +284,8 @@ class UUAEBlackboard* AUTSkill::GetSpecificBlackboard()
 // Function Skill.UTSkill.GetSkillPhaseByName
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 PhaseName                      (Parm, ZeroConstructor)
-// class UUTSkillPhase*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString PhaseName (Parm, ZeroConstructor)
+// class UUTSkillPhase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillPhase* AUTSkill::GetSkillPhaseByName(const struct FString& PhaseName)
 {
@@ -311,8 +311,8 @@ class UUTSkillPhase* AUTSkill::GetSkillPhaseByName(const struct FString& PhaseNa
 // Function Skill.UTSkill.GetSkillPhase
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PhaseIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UUTSkillPhase*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PhaseIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillPhase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillPhase* AUTSkill::GetSkillPhase(int PhaseIndex)
 {
@@ -338,7 +338,7 @@ class UUTSkillPhase* AUTSkill::GetSkillPhase(int PhaseIndex)
 // Function Skill.UTSkill.GetSkillID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUTSkill::GetSkillID()
 {
@@ -363,9 +363,9 @@ int AUTSkill::GetSkillID()
 // Function Skill.UTSkill.GetSkillEffectByPhaseName
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 PhaseName                      (Parm, ZeroConstructor)
-// struct FString                 EffectName                     (Parm, ZeroConstructor)
-// class UUTSkillBaseWidget*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString PhaseName (Parm, ZeroConstructor)
+// struct FString EffectName (Parm, ZeroConstructor)
+// class UUTSkillBaseWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillBaseWidget* AUTSkill::GetSkillEffectByPhaseName(const struct FString& PhaseName, const struct FString& EffectName)
 {
@@ -392,9 +392,9 @@ class UUTSkillBaseWidget* AUTSkill::GetSkillEffectByPhaseName(const struct FStri
 // Function Skill.UTSkill.GetSkillEffectByPhaseIndex
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            PhaseIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EffectName                     (Parm, ZeroConstructor)
-// class UUTSkillBaseWidget*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PhaseIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EffectName (Parm, ZeroConstructor)
+// class UUTSkillBaseWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillBaseWidget* AUTSkill::GetSkillEffectByPhaseIndex(int PhaseIndex, const struct FString& EffectName)
 {
@@ -421,8 +421,8 @@ class UUTSkillBaseWidget* AUTSkill::GetSkillEffectByPhaseIndex(int PhaseIndex, c
 // Function Skill.UTSkill.GetSkillDurationScale
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUTSkill::GetSkillDurationScale(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -448,8 +448,8 @@ float AUTSkill::GetSkillDurationScale(class UUTSkillManagerComponent* SkillManag
 // Function Skill.UTSkill.GetCurSkillPhaseIndex
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUTSkill::GetCurSkillPhaseIndex(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -475,8 +475,8 @@ int AUTSkill::GetCurSkillPhaseIndex(class UUTSkillManagerComponent* SkillManager
 // Function Skill.UTSkill.GetCurSkillPhase
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UUTSkillPhase*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillPhase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillPhase* AUTSkill::GetCurSkillPhase(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -502,9 +502,9 @@ class UUTSkillPhase* AUTSkill::GetCurSkillPhase(class UUTSkillManagerComponent* 
 // Function Skill.UTSkill.GetCoolDownTime
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUTSkill::GetCoolDownTime(class UUTSkillManagerComponent* SkillManagerComponent, int CoolDownIndex)
 {
@@ -531,8 +531,8 @@ float AUTSkill::GetCoolDownTime(class UUTSkillManagerComponent* SkillManagerComp
 // Function Skill.UTSkill.DoSkillCoolDown
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUTSkill::DoSkillCoolDown(class UUTSkillManagerComponent* SkillManagerComponent, int CoolDownIndex)
 {
@@ -557,8 +557,8 @@ void AUTSkill::DoSkillCoolDown(class UUTSkillManagerComponent* SkillManagerCompo
 // Function Skill.UTSkill.CanBePlayed
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// ESkillCanBePlayedResult        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// ESkillCanBePlayedResult ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ESkillCanBePlayedResult AUTSkill::CanBePlayed(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -584,7 +584,7 @@ ESkillCanBePlayedResult AUTSkill::CanBePlayed(class UUTSkillManagerComponent* Sk
 // Function Skill.UTSkillManagerComponent.UpdateSyncSkillCDData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::UpdateSyncSkillCDData(int SkillID)
 {
@@ -608,7 +608,7 @@ void UUTSkillManagerComponent::UpdateSyncSkillCDData(int SkillID)
 // Function Skill.UTSkillManagerComponent.UnRegisterActorBlackBorad
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::UnRegisterActorBlackBorad(class AActor* InActor)
 {
@@ -632,9 +632,9 @@ void UUTSkillManagerComponent::UnRegisterActorBlackBorad(class AActor* InActor)
 // Function Skill.UTSkillManagerComponent.TryDeleteOneSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsImmediately                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bResetCD                       (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsImmediately (Parm, ZeroConstructor, IsPlainOldData)
+// bool bResetCD (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::TryDeleteOneSkill(int SkillID, bool IsImmediately, bool bResetCD)
 {
@@ -660,9 +660,9 @@ void UUTSkillManagerComponent::TryDeleteOneSkill(int SkillID, bool IsImmediately
 // Function Skill.UTSkillManagerComponent.TryAddOneSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ButtonSlot                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
+// int ButtonSlot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::TryAddOneSkill(int SkillID, bool bActive, int ButtonSlot)
 {
@@ -688,10 +688,10 @@ void UUTSkillManagerComponent::TryAddOneSkill(int SkillID, bool bActive, int But
 // Function Skill.UTSkillManagerComponent.TriggerSkillWithParams
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         InKeyStrings                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> InKeyStrings (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::TriggerSkillWithParams(int SkillID, TArray<struct FString> InKeyStrings, bool bEnable)
 {
@@ -719,9 +719,9 @@ bool UUTSkillManagerComponent::TriggerSkillWithParams(int SkillID, TArray<struct
 // Function Skill.UTSkillManagerComponent.TriggerSkillWithID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::TriggerSkillWithID(int SkillID, bool bEnable)
 {
@@ -748,9 +748,9 @@ bool UUTSkillManagerComponent::TriggerSkillWithID(int SkillID, bool bEnable)
 // Function Skill.UTSkillManagerComponent.TriggerLocalEventWithID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EUTSkillEventType> SkillEventType                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> SkillEventType (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::TriggerLocalEventWithID(TEnumAsByte<enum EUTSkillEventType> SkillEventType, int SkillID)
 {
@@ -777,9 +777,9 @@ bool UUTSkillManagerComponent::TriggerLocalEventWithID(TEnumAsByte<enum EUTSkill
 // Function Skill.UTSkillManagerComponent.TriggerEventWithID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EUTSkillEventType> SkillEventType                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> SkillEventType (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::TriggerEventWithID(TEnumAsByte<enum EUTSkillEventType> SkillEventType, int SkillID)
 {
@@ -806,8 +806,8 @@ bool UUTSkillManagerComponent::TriggerEventWithID(TEnumAsByte<enum EUTSkillEvent
 // Function Skill.UTSkillManagerComponent.TriggerEvent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::TriggerEvent(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType)
 {
@@ -832,12 +832,12 @@ void UUTSkillManagerComponent::TriggerEvent(int SkillID, TEnumAsByte<enum EUTSki
 // Function Skill.UTSkillManagerComponent.TraceTarget
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 StartTrace                     (Parm, IsPlainOldData)
-// struct FVector                 EndTrace                       (Parm, IsPlainOldData)
-// EUTPickerTargetType            TargetType                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  TargetActor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector StartTrace (Parm, IsPlainOldData)
+// struct FVector EndTrace (Parm, IsPlainOldData)
+// EUTPickerTargetType TargetType (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* TargetActor (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::TraceTarget(const struct FVector& StartTrace, const struct FVector& EndTrace, EUTPickerTargetType TargetType, float Radius, class AActor** TargetActor)
 {
@@ -869,9 +869,9 @@ bool UUTSkillManagerComponent::TraceTarget(const struct FVector& StartTrace, con
 // Function Skill.UTSkillManagerComponent.SyncOneSkillState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           RepSkillCD                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           RepSkillActiveState            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RequestID                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool RepSkillCD (Parm, ZeroConstructor, IsPlainOldData)
+// bool RepSkillActiveState (Parm, ZeroConstructor, IsPlainOldData)
+// int RequestID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SyncOneSkillState(bool RepSkillCD, bool RepSkillActiveState, int RequestID)
 {
@@ -897,7 +897,7 @@ void UUTSkillManagerComponent::SyncOneSkillState(bool RepSkillCD, bool RepSkillA
 // Function Skill.UTSkillManagerComponent.StopSkillAll
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::StopSkillAll(EUTSkillStopReason StopReason)
 {
@@ -921,8 +921,8 @@ void UUTSkillManagerComponent::StopSkillAll(EUTSkillStopReason StopReason)
 // Function Skill.UTSkillManagerComponent.StopSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::StopSkill(int SkillID, EUTSkillStopReason StopReason)
 {
@@ -947,7 +947,7 @@ void UUTSkillManagerComponent::StopSkill(int SkillID, EUTSkillStopReason StopRea
 // Function Skill.UTSkillManagerComponent.StopCurSkill
 // (Final, Native, Public)
 // Parameters:
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::StopCurSkill(EUTSkillStopReason StopReason)
 {
@@ -968,10 +968,34 @@ void UUTSkillManagerComponent::StopCurSkill(EUTSkillStopReason StopReason)
 }
 
 
+// Function Skill.UTSkillManagerComponent.StopAllMonopolizeSkill
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUTSkillManagerComponent::StopAllMonopolizeSkill(EUTSkillStopReason StopReason)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.StopAllMonopolizeSkill");
+
+	UUTSkillManagerComponent_StopAllMonopolizeSkill_Params params;
+	params.StopReason = StopReason;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Skill.UTSkillManagerComponent.SetupOwnerAndSystem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::SetupOwnerAndSystem()
 {
@@ -996,9 +1020,9 @@ bool UUTSkillManagerComponent::SetupOwnerAndSystem()
 // Function Skill.UTSkillManagerComponent.SetSkillTagsLimit
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    SkillTags                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bLimit                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 TriggerKey                     (Parm, ZeroConstructor)
+// TArray<int> SkillTags (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bLimit (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString TriggerKey (Parm, ZeroConstructor)
 
 void UUTSkillManagerComponent::SetSkillTagsLimit(TArray<int> SkillTags, bool bLimit, const struct FString& TriggerKey)
 {
@@ -1024,9 +1048,9 @@ void UUTSkillManagerComponent::SetSkillTagsLimit(TArray<int> SkillTags, bool bLi
 // Function Skill.UTSkillManagerComponent.SetSkillTagsDisable
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    SkillTags                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDisable                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 TriggerKey                     (Parm, ZeroConstructor)
+// TArray<int> SkillTags (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bDisable (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString TriggerKey (Parm, ZeroConstructor)
 
 void UUTSkillManagerComponent::SetSkillTagsDisable(TArray<int> SkillTags, bool bDisable, const struct FString& TriggerKey)
 {
@@ -1052,9 +1076,9 @@ void UUTSkillManagerComponent::SetSkillTagsDisable(TArray<int> SkillTags, bool b
 // Function Skill.UTSkillManagerComponent.SetSkillSkinID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InSkillSkinID                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillSkinID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::SetSkillSkinID(int SkillID, int InSkillSkinID)
 {
@@ -1078,39 +1102,10 @@ bool UUTSkillManagerComponent::SetSkillSkinID(int SkillID, int InSkillSkinID)
 }
 
 
-// Function Skill.UTSkillManagerComponent.SetSkillSelect
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSelect                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUTSkillManagerComponent::SetSkillSelect(int SkillID, bool bSelect)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.SetSkillSelect");
-
-	UUTSkillManagerComponent_SetSkillSelect_Params params;
-	params.SkillID = SkillID;
-	params.bSelect = bSelect;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Skill.UTSkillManagerComponent.SetSkillOwner
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  tempActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* tempActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SetSkillOwner(class AActor* tempActor)
 {
@@ -1134,9 +1129,9 @@ void UUTSkillManagerComponent::SetSkillOwner(class AActor* tempActor)
 // Function Skill.UTSkillManagerComponent.SetSkillLevel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillLevel                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillLevel (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::SetSkillLevel(int SkillID, int SkillLevel)
 {
@@ -1163,9 +1158,9 @@ bool UUTSkillManagerComponent::SetSkillLevel(int SkillID, int SkillLevel)
 // Function Skill.UTSkillManagerComponent.SetSkillIDsLimit
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    SkillIDs                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bLimit                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 TriggerKey                     (Parm, ZeroConstructor)
+// TArray<int> SkillIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bLimit (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString TriggerKey (Parm, ZeroConstructor)
 
 void UUTSkillManagerComponent::SetSkillIDsLimit(TArray<int> SkillIDs, bool bLimit, const struct FString& TriggerKey)
 {
@@ -1191,9 +1186,9 @@ void UUTSkillManagerComponent::SetSkillIDsLimit(TArray<int> SkillIDs, bool bLimi
 // Function Skill.UTSkillManagerComponent.SetSkillIDsDisable
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    SkillIDs                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bDisable                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 TriggerKey                     (Parm, ZeroConstructor)
+// TArray<int> SkillIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bDisable (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString TriggerKey (Parm, ZeroConstructor)
 
 void UUTSkillManagerComponent::SetSkillIDsDisable(TArray<int> SkillIDs, bool bDisable, const struct FString& TriggerKey)
 {
@@ -1219,9 +1214,9 @@ void UUTSkillManagerComponent::SetSkillIDsDisable(TArray<int> SkillIDs, bool bDi
 // Function Skill.UTSkillManagerComponent.SetSkillCDTimeScale
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScaleType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
+// int ScaleType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SetSkillCDTimeScale(int SkillID, float Scale, int ScaleType)
 {
@@ -1246,10 +1241,10 @@ void UUTSkillManagerComponent::SetSkillCDTimeScale(int SkillID, float Scale, int
 // Function Skill.UTSkillManagerComponent.SetSkillCDIndexTimeScale
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillCDIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScaleType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillCDIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
+// int ScaleType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SetSkillCDIndexTimeScale(int SkillID, int SkillCDIndex, float Scale, int ScaleType)
 {
@@ -1275,11 +1270,11 @@ void UUTSkillManagerComponent::SetSkillCDIndexTimeScale(int SkillID, int SkillCD
 // Function Skill.UTSkillManagerComponent.SetSkillActive
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForceSet                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ButtonSlot                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceSet (Parm, ZeroConstructor, IsPlainOldData)
+// int ButtonSlot (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::SetSkillActive(int SkillID, bool bActive, bool bForceSet, int ButtonSlot)
 {
@@ -1308,7 +1303,7 @@ bool UUTSkillManagerComponent::SetSkillActive(int SkillID, bool bActive, bool bF
 // Function Skill.UTSkillManagerComponent.SetAutoSkillID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SetAutoSkillID(int InSkillID)
 {
@@ -1332,7 +1327,7 @@ void UUTSkillManagerComponent::SetAutoSkillID(int InSkillID)
 // Function Skill.UTSkillManagerComponent.SetAllSkillCDTimeScale
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::SetAllSkillCDTimeScale(float Scale)
 {
@@ -1355,12 +1350,12 @@ void UUTSkillManagerComponent::SetAllSkillCDTimeScale(float Scale)
 // Function Skill.UTSkillManagerComponent.ServerTriggerEvent_WithParamsAndTssData
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          TssData                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> TssData (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerTriggerEvent_WithParamsAndTssData(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, TArray<unsigned char> Content, TArray<unsigned char> TssData, uint64_t PackageIndex)
 {
@@ -1389,11 +1384,11 @@ void UUTSkillManagerComponent::ServerTriggerEvent_WithParamsAndTssData(int Skill
 // Function Skill.UTSkillManagerComponent.ServerTriggerEvent_WithParams
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerTriggerEvent_WithParams(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, TArray<unsigned char> Content, uint64_t PackageIndex)
 {
@@ -1421,11 +1416,11 @@ void UUTSkillManagerComponent::ServerTriggerEvent_WithParams(int SkillID, TEnumA
 // Function Skill.UTSkillManagerComponent.ServerTriggerEvent_WithIDAndTssData
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          TssData                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> TssData (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerTriggerEvent_WithIDAndTssData(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, TArray<unsigned char> TssData, uint64_t PackageIndex)
 {
@@ -1453,10 +1448,10 @@ void UUTSkillManagerComponent::ServerTriggerEvent_WithIDAndTssData(int SkillID, 
 // Function Skill.UTSkillManagerComponent.ServerTriggerEvent_WithID
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerTriggerEvent_WithID(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, uint64_t PackageIndex)
 {
@@ -1483,8 +1478,8 @@ void UUTSkillManagerComponent::ServerTriggerEvent_WithID(int SkillID, TEnumAsByt
 // Function Skill.UTSkillManagerComponent.ServerTriggerEvent
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerTriggerEvent(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType)
 {
@@ -1506,11 +1501,35 @@ void UUTSkillManagerComponent::ServerTriggerEvent(int SkillID, TEnumAsByte<enum 
 }
 
 
+// Function Skill.UTSkillManagerComponent.ServerStopSkillCombo
+// (Net, NetReliable, Native, Event, Public, NetServer)
+// Parameters:
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUTSkillManagerComponent::ServerStopSkillCombo(int SkillID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.ServerStopSkillCombo");
+
+	UUTSkillManagerComponent_ServerStopSkillCombo_Params params;
+	params.SkillID = SkillID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Skill.UTSkillManagerComponent.ServerStopSkill
 // (Net, NetReliable, Native, Event, Public, NetServer)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerStopSkill(int SkillID, EUTSkillStopReason StopReason)
 {
@@ -1535,7 +1554,7 @@ void UUTSkillManagerComponent::ServerStopSkill(int SkillID, EUTSkillStopReason S
 // Function Skill.UTSkillManagerComponent.ServerStopAllSkill
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerStopAllSkill(EUTSkillStopReason StopReason)
 {
@@ -1556,12 +1575,36 @@ void UUTSkillManagerComponent::ServerStopAllSkill(EUTSkillStopReason StopReason)
 }
 
 
+// Function Skill.UTSkillManagerComponent.ServerStopAllMonopolizeSkill
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
+
+void UUTSkillManagerComponent::ServerStopAllMonopolizeSkill(EUTSkillStopReason StopReason)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.ServerStopAllMonopolizeSkill");
+
+	UUTSkillManagerComponent_ServerStopAllMonopolizeSkill_Params params;
+	params.StopReason = StopReason;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Skill.UTSkillManagerComponent.ServerStartSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoCast                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAutoCast (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::ServerStartSkill(int SkillID, bool bAutoCast)
 {
@@ -1588,7 +1631,7 @@ bool UUTSkillManagerComponent::ServerStartSkill(int SkillID, bool bAutoCast)
 // Function Skill.UTSkillManagerComponent.ServerNotifyRandomSeed
 // (Net, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Seed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ServerNotifyRandomSeed(int Seed)
 {
@@ -1633,8 +1676,8 @@ void UUTSkillManagerComponent::ResetTeammateSkillCDData()
 // Function Skill.UTSkillManagerComponent.ResetSkillCoolDown
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CDIndex                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int CDIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ResetSkillCoolDown(int SkillID, int CDIndex)
 {
@@ -1680,8 +1723,8 @@ void UUTSkillManagerComponent::ResetAllSkillCoolDown()
 // Function Skill.UTSkillManagerComponent.RequestSkillStates
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// bool                           RepSkillCD                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           RepSkillActiveState            (Parm, ZeroConstructor, IsPlainOldData)
+// bool RepSkillCD (Parm, ZeroConstructor, IsPlainOldData)
+// bool RepSkillActiveState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::RequestSkillStates(bool RepSkillCD, bool RepSkillActiveState)
 {
@@ -1748,8 +1791,8 @@ void UUTSkillManagerComponent::RepLastCastTime()
 // Function Skill.UTSkillManagerComponent.ReplaceSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            OldSkillID                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewSkillID                     (Parm, ZeroConstructor, IsPlainOldData)
+// int OldSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int NewSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ReplaceSkill(int OldSkillID, int NewSkillID)
 {
@@ -1774,7 +1817,7 @@ void UUTSkillManagerComponent::ReplaceSkill(int OldSkillID, int NewSkillID)
 // Function Skill.UTSkillManagerComponent.RemoveReplacedSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            OldSkillID                     (Parm, ZeroConstructor, IsPlainOldData)
+// int OldSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::RemoveReplacedSkill(int OldSkillID)
 {
@@ -1819,8 +1862,8 @@ void UUTSkillManagerComponent::RemoveAllSkillUIWidget()
 // Function Skill.UTSkillManagerComponent.RegisterActorBlackBorad
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEBlackboard*          RegisterBlackboard             (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEBlackboard* RegisterBlackboard (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::RegisterActorBlackBorad(class AActor* InActor, class UUAEBlackboard* RegisterBlackboard)
 {
@@ -1866,11 +1909,11 @@ void UUTSkillManagerComponent::RefreshSkillRepData()
 // Function Skill.UTSkillManagerComponent.RecordSkillException
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ENetRole>     InRole                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InNetMode                      (Parm, ZeroConstructor)
-// struct FString                 InFuncName                     (Parm, ZeroConstructor)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ENetRole> InRole (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InNetMode (Parm, ZeroConstructor)
+// struct FString InFuncName (Parm, ZeroConstructor)
 
 void UUTSkillManagerComponent::RecordSkillException(class AActor* InActor, int InSkillID, TEnumAsByte<enum ENetRole> InRole, const struct FString& InNetMode, const struct FString& InFuncName)
 {
@@ -1898,9 +1941,9 @@ void UUTSkillManagerComponent::RecordSkillException(class AActor* InActor, int I
 // Function Skill.UTSkillManagerComponent.RandRangeSyn
 // (Final, Native, Public)
 // Parameters:
-// int                            StartIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int StartIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int EndIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::RandRangeSyn(int StartIndex, int EndIndex)
 {
@@ -1927,8 +1970,8 @@ int UUTSkillManagerComponent::RandRangeSyn(int StartIndex, int EndIndex)
 // Function Skill.UTSkillManagerComponent.QuerySkill
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::QuerySkill(int SkillID)
 {
@@ -1954,8 +1997,8 @@ class AUTSkill* UUTSkillManagerComponent::QuerySkill(int SkillID)
 // Function Skill.UTSkillManagerComponent.QueryOrNewSkill
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::QueryOrNewSkill(int SkillID)
 {
@@ -1981,7 +2024,7 @@ class AUTSkill* UUTSkillManagerComponent::QueryOrNewSkill(int SkillID)
 // Function Skill.UTSkillManagerComponent.PreTriggerSkillEvent
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::PreTriggerSkillEvent(int InSkillID)
 {
@@ -2005,7 +2048,7 @@ void UUTSkillManagerComponent::PreTriggerSkillEvent(int InSkillID)
 // Function Skill.UTSkillManagerComponent.PostTriggerSkillEvent
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::PostTriggerSkillEvent(int InSkillID)
 {
@@ -2029,7 +2072,7 @@ void UUTSkillManagerComponent::PostTriggerSkillEvent(int InSkillID)
 // Function Skill.UTSkillManagerComponent.PlayHurtSkillEffect
 // (Native, Public)
 // Parameters:
-// struct FUTSkillHitInfo         TheSkillHitInfo                (Parm)
+// struct FUTSkillHitInfo TheSkillHitInfo (Parm)
 
 void UUTSkillManagerComponent::PlayHurtSkillEffect(const struct FUTSkillHitInfo& TheSkillHitInfo)
 {
@@ -2053,8 +2096,8 @@ void UUTSkillManagerComponent::PlayHurtSkillEffect(const struct FUTSkillHitInfo&
 // Function Skill.UTSkillManagerComponent.OnStopSkill
 // (Native, Public)
 // Parameters:
-// class AUTSkill*                Skill                          (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* Skill (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::OnStopSkill(class AUTSkill* Skill, EUTSkillStopReason StopReason)
 {
@@ -2328,6 +2371,27 @@ void UUTSkillManagerComponent::OnRep_DynamicRepData()
 }
 
 
+// Function Skill.UTSkillManagerComponent.OnRep_AsyncSkillComboSkillID
+// (Final, Native, Public)
+
+void UUTSkillManagerComponent::OnRep_AsyncSkillComboSkillID()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.OnRep_AsyncSkillComboSkillID");
+
+	UUTSkillManagerComponent_OnRep_AsyncSkillComboSkillID_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Skill.UTSkillManagerComponent.OnRecycled
 // (Native, Public)
 
@@ -2352,8 +2416,8 @@ void UUTSkillManagerComponent::OnRecycled()
 // Function Skill.UTSkillManagerComponent.OnInterruptSkill
 // (Native, Public)
 // Parameters:
-// class AUTSkill*                Skill                          (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* Skill (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::OnInterruptSkill(class AUTSkill* Skill, EUTSkillStopReason StopReason)
 {
@@ -2378,7 +2442,7 @@ void UUTSkillManagerComponent::OnInterruptSkill(class AUTSkill* Skill, EUTSkillS
 // Function Skill.UTSkillManagerComponent.NewUAEBlackboard
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::NewUAEBlackboard(int SkillID)
 {
@@ -2402,8 +2466,8 @@ void UUTSkillManagerComponent::NewUAEBlackboard(int SkillID)
 // Function Skill.UTSkillManagerComponent.NeedSimulateStoppedNewSkill
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::NeedSimulateStoppedNewSkill(int InSkillID)
 {
@@ -2429,8 +2493,8 @@ bool UUTSkillManagerComponent::NeedSimulateStoppedNewSkill(int InSkillID)
 // Function Skill.UTSkillManagerComponent.LocalTriggerNewSkillFail
 // (Final, Native, Public)
 // Parameters:
-// class AUTSkill*                InNewSkill                     (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* InNewSkill (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::LocalTriggerNewSkillFail(class AUTSkill* InNewSkill, uint64_t InstID)
 {
@@ -2455,8 +2519,8 @@ void UUTSkillManagerComponent::LocalTriggerNewSkillFail(class AUTSkill* InNewSki
 // Function Skill.UTSkillManagerComponent.LocalStopSkillAllWithExcludeArray
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InExcludeArry                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> InExcludeArry (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::LocalStopSkillAllWithExcludeArray(TArray<int> InExcludeArry, EUTSkillStopReason StopReason)
 {
@@ -2478,38 +2542,11 @@ void UUTSkillManagerComponent::LocalStopSkillAllWithExcludeArray(TArray<int> InE
 }
 
 
-// Function Skill.UTSkillManagerComponent.IsSkillSelect
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUTSkillManagerComponent::IsSkillSelect(int SkillID)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.IsSkillSelect");
-
-	UUTSkillManagerComponent_IsSkillSelect_Params params;
-	params.SkillID = SkillID;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Skill.UTSkillManagerComponent.IsSkillNeedPackageVerify
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsSkillNeedPackageVerify(int SkillID)
 {
@@ -2535,8 +2572,8 @@ bool UUTSkillManagerComponent::IsSkillNeedPackageVerify(int SkillID)
 // Function Skill.UTSkillManagerComponent.IsSkillInit
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsSkillInit(int InSkillID)
 {
@@ -2562,8 +2599,8 @@ bool UUTSkillManagerComponent::IsSkillInit(int InSkillID)
 // Function Skill.UTSkillManagerComponent.IsSkillIDDisable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsSkillIDDisable(int InSkillID)
 {
@@ -2589,7 +2626,7 @@ bool UUTSkillManagerComponent::IsSkillIDDisable(int InSkillID)
 // Function Skill.UTSkillManagerComponent.IsSkillCanUse
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsSkillCanUse()
 {
@@ -2614,8 +2651,8 @@ bool UUTSkillManagerComponent::IsSkillCanUse()
 // Function Skill.UTSkillManagerComponent.IsSkillActived
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsSkillActived(int SkillID)
 {
@@ -2641,8 +2678,8 @@ bool UUTSkillManagerComponent::IsSkillActived(int SkillID)
 // Function Skill.UTSkillManagerComponent.IsReadyToCastSkill
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsReadyToCastSkill(int SkillID)
 {
@@ -2668,8 +2705,8 @@ bool UUTSkillManagerComponent::IsReadyToCastSkill(int SkillID)
 // Function Skill.UTSkillManagerComponent.IsPendingCastSkillID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsPendingCastSkillID(int InSkillID)
 {
@@ -2695,7 +2732,7 @@ bool UUTSkillManagerComponent::IsPendingCastSkillID(int InSkillID)
 // Function Skill.UTSkillManagerComponent.IsPendingCastSkill
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsPendingCastSkill()
 {
@@ -2720,7 +2757,7 @@ bool UUTSkillManagerComponent::IsPendingCastSkill()
 // Function Skill.UTSkillManagerComponent.IsEnableSkillCoolDown
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsEnableSkillCoolDown()
 {
@@ -2745,8 +2782,8 @@ bool UUTSkillManagerComponent::IsEnableSkillCoolDown()
 // Function Skill.UTSkillManagerComponent.IsCurrentUseSkillID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsCurrentUseSkillID(int InSkillID)
 {
@@ -2772,8 +2809,8 @@ bool UUTSkillManagerComponent::IsCurrentUseSkillID(int InSkillID)
 // Function Skill.UTSkillManagerComponent.IsCastingSkillTag
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InSkillTag                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillTag (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsCastingSkillTag(int InSkillTag)
 {
@@ -2799,8 +2836,8 @@ bool UUTSkillManagerComponent::IsCastingSkillTag(int InSkillTag)
 // Function Skill.UTSkillManagerComponent.IsCastingSkillID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsCastingSkillID(int InSkillID)
 {
@@ -2826,7 +2863,7 @@ bool UUTSkillManagerComponent::IsCastingSkillID(int InSkillID)
 // Function Skill.UTSkillManagerComponent.IsCastingSkill
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::IsCastingSkill()
 {
@@ -2848,11 +2885,40 @@ bool UUTSkillManagerComponent::IsCastingSkill()
 }
 
 
+// Function Skill.UTSkillManagerComponent.HasSkillEventFromLastCast
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UUTSkillManagerComponent::HasSkillEventFromLastCast(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.HasSkillEventFromLastCast");
+
+	UUTSkillManagerComponent_HasSkillEventFromLastCast_Params params;
+	params.SkillID = SkillID;
+	params.EventType = EventType;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Skill.UTSkillManagerComponent.HandleTriggerParamsEventFail
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::HandleTriggerParamsEventFail(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType)
 {
@@ -2876,9 +2942,9 @@ void UUTSkillManagerComponent::HandleTriggerParamsEventFail(int SkillID, TEnumAs
 // Function Skill.UTSkillManagerComponent.HandleTriggerParamsEvent
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::HandleTriggerParamsEvent(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType)
 {
@@ -2904,9 +2970,9 @@ bool UUTSkillManagerComponent::HandleTriggerParamsEvent(int SkillID, TEnumAsByte
 // Function Skill.UTSkillManagerComponent.HandleSkillStop
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                InSkill                        (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* InSkill (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::HandleSkillStop(int SkillID, class AUTSkill* InSkill, EUTSkillStopReason StopReason)
 {
@@ -2932,8 +2998,8 @@ void UUTSkillManagerComponent::HandleSkillStop(int SkillID, class AUTSkill* InSk
 // Function Skill.UTSkillManagerComponent.HandleSkillStart
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                InSkill                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* InSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::HandleSkillStart(int SkillID, class AUTSkill* InSkill)
 {
@@ -2958,9 +3024,9 @@ void UUTSkillManagerComponent::HandleSkillStart(int SkillID, class AUTSkill* InS
 // Function Skill.UTSkillManagerComponent.HandleGMDirectTriggerSkillEvent
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillPlayRet                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillPlayRet (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::HandleGMDirectTriggerSkillEvent(int SkillID, int SkillPlayRet)
 {
@@ -2986,8 +3052,8 @@ bool UUTSkillManagerComponent::HandleGMDirectTriggerSkillEvent(int SkillID, int 
 // Function Skill.UTSkillManagerComponent.GetUAEBlackboardBySkillID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* UUTSkillManagerComponent::GetUAEBlackboardBySkillID(int SkillID)
 {
@@ -3013,8 +3079,8 @@ class UUAEBlackboard* UUTSkillManagerComponent::GetUAEBlackboardBySkillID(int Sk
 // Function Skill.UTSkillManagerComponent.GetUAEBlackboard
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AUTSkill*                InSkill                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* InSkill (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* UUTSkillManagerComponent::GetUAEBlackboard(class AUTSkill* InSkill)
 {
@@ -3040,8 +3106,8 @@ class UUAEBlackboard* UUTSkillManagerComponent::GetUAEBlackboard(class AUTSkill*
 // Function Skill.UTSkillManagerComponent.GetSkillWidget
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUTSkillWidget*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUTSkillWidget* UUTSkillManagerComponent::GetSkillWidget(int SkillID)
 {
@@ -3067,9 +3133,9 @@ class UUTSkillWidget* UUTSkillManagerComponent::GetSkillWidget(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetSkillSynDataString
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 PrefixText                     (Parm, ZeroConstructor)
-// bool                           bWithLastData                  (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString PrefixText (Parm, ZeroConstructor)
+// bool bWithLastData (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UUTSkillManagerComponent::GetSkillSynDataString(const struct FString& PrefixText, bool bWithLastData)
 {
@@ -3096,8 +3162,8 @@ TArray<struct FString> UUTSkillManagerComponent::GetSkillSynDataString(const str
 // Function Skill.UTSkillManagerComponent.GetSkillSlotBySkillID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillSlotBySkillID(int SkillID)
 {
@@ -3123,8 +3189,8 @@ int UUTSkillManagerComponent::GetSkillSlotBySkillID(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetSkillSlotBySkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AUTSkill*                Skill                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* Skill (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillSlotBySkill(class AUTSkill* Skill)
 {
@@ -3150,8 +3216,8 @@ int UUTSkillManagerComponent::GetSkillSlotBySkill(class AUTSkill* Skill)
 // Function Skill.UTSkillManagerComponent.GetSkillSkinID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillSkinID(int SkillID)
 {
@@ -3177,9 +3243,9 @@ int UUTSkillManagerComponent::GetSkillSkinID(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetSkillSinglePhaseDataString
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 PrefixText                     (Parm, ZeroConstructor)
-// bool                           bWithLastData                  (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString PrefixText (Parm, ZeroConstructor)
+// bool bWithLastData (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UUTSkillManagerComponent::GetSkillSinglePhaseDataString(const struct FString& PrefixText, bool bWithLastData)
 {
@@ -3206,8 +3272,8 @@ TArray<struct FString> UUTSkillManagerComponent::GetSkillSinglePhaseDataString(c
 // Function Skill.UTSkillManagerComponent.GetSkillsByGroup
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   SkillGroup                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AUTSkill*>        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FName SkillGroup (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AUTSkill*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AUTSkill*> UUTSkillManagerComponent::GetSkillsByGroup(const struct FName& SkillGroup)
 {
@@ -3233,8 +3299,8 @@ TArray<class AUTSkill*> UUTSkillManagerComponent::GetSkillsByGroup(const struct 
 // Function Skill.UTSkillManagerComponent.GetSkillLevel
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillLevel(int SkillID)
 {
@@ -3260,8 +3326,8 @@ int UUTSkillManagerComponent::GetSkillLevel(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetSkillIDByClass
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  SkillClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* SkillClass (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillIDByClass(class UClass* SkillClass)
 {
@@ -3287,7 +3353,7 @@ int UUTSkillManagerComponent::GetSkillIDByClass(class UClass* SkillClass)
 // Function Skill.UTSkillManagerComponent.GetSkillExecString
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UUTSkillManagerComponent::GetSkillExecString()
 {
@@ -3309,11 +3375,44 @@ TArray<struct FString> UUTSkillManagerComponent::GetSkillExecString()
 }
 
 
+// Function Skill.UTSkillManagerComponent.GetSkillEventTimestamp
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// float OutTimestamp (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UUTSkillManagerComponent::GetSkillEventTimestamp(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, float* OutTimestamp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillManagerComponent.GetSkillEventTimestamp");
+
+	UUTSkillManagerComponent_GetSkillEventTimestamp_Params params;
+	params.SkillID = SkillID;
+	params.EventType = EventType;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutTimestamp != nullptr)
+		*OutTimestamp = params.OutTimestamp;
+
+	return params.ReturnValue;
+}
+
+
 // Function Skill.UTSkillManagerComponent.GetSkillCurPhase
 // (Final, Native, Public)
 // Parameters:
-// class AUTSkill*                Skill                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* Skill (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillCurPhase(class AUTSkill* Skill)
 {
@@ -3339,8 +3438,8 @@ int UUTSkillManagerComponent::GetSkillCurPhase(class AUTSkill* Skill)
 // Function Skill.UTSkillManagerComponent.GetSkillByName
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 SkillName                      (Parm, ZeroConstructor)
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkillName (Parm, ZeroConstructor)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::GetSkillByName(const struct FString& SkillName)
 {
@@ -3366,8 +3465,8 @@ class AUTSkill* UUTSkillManagerComponent::GetSkillByName(const struct FString& S
 // Function Skill.UTSkillManagerComponent.GetSkillByClassName
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 SkillClassName                 (Parm, ZeroConstructor)
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SkillClassName (Parm, ZeroConstructor)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::GetSkillByClassName(const struct FString& SkillClassName)
 {
@@ -3393,8 +3492,8 @@ class AUTSkill* UUTSkillManagerComponent::GetSkillByClassName(const struct FStri
 // Function Skill.UTSkillManagerComponent.GetSkillButtonSlot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetSkillButtonSlot(int SkillID)
 {
@@ -3420,8 +3519,8 @@ int UUTSkillManagerComponent::GetSkillButtonSlot(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetSkillBaseData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FUTSkillRuntimeData     ReturnValue                    (Parm, OutParm, ReturnParm)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FUTSkillRuntimeData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FUTSkillRuntimeData UUTSkillManagerComponent::GetSkillBaseData(int SkillID)
 {
@@ -3447,8 +3546,8 @@ struct FUTSkillRuntimeData UUTSkillManagerComponent::GetSkillBaseData(int SkillI
 // Function Skill.UTSkillManagerComponent.GetSkill
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::GetSkill(int SkillID)
 {
@@ -3474,8 +3573,8 @@ class AUTSkill* UUTSkillManagerComponent::GetSkill(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetReplacedSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            OldSkillID                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int OldSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetReplacedSkill(int OldSkillID)
 {
@@ -3501,7 +3600,7 @@ int UUTSkillManagerComponent::GetReplacedSkill(int OldSkillID)
 // Function Skill.UTSkillManagerComponent.GetRealOwnerRoleSafety
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum ENetRole>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum ENetRole> UUTSkillManagerComponent::GetRealOwnerRoleSafety()
 {
@@ -3526,9 +3625,9 @@ TEnumAsByte<enum ENetRole> UUTSkillManagerComponent::GetRealOwnerRoleSafety()
 // Function Skill.UTSkillManagerComponent.GetMutexRelation
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AUTSkill*                CurSkill                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AUTSkill*                NewSkill                       (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ESkillMutexType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* CurSkill (Parm, ZeroConstructor, IsPlainOldData)
+// class AUTSkill* NewSkill (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESkillMutexType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum ESkillMutexType> UUTSkillManagerComponent::GetMutexRelation(class AUTSkill* CurSkill, class AUTSkill* NewSkill)
 {
@@ -3555,8 +3654,8 @@ TEnumAsByte<enum ESkillMutexType> UUTSkillManagerComponent::GetMutexRelation(cla
 // Function Skill.UTSkillManagerComponent.GetLastCastTime
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUTSkillManagerComponent::GetLastCastTime(int SkillID)
 {
@@ -3582,8 +3681,8 @@ float UUTSkillManagerComponent::GetLastCastTime(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetLastCastFinishTime
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUTSkillManagerComponent::GetLastCastFinishTime(int SkillID)
 {
@@ -3609,7 +3708,7 @@ float UUTSkillManagerComponent::GetLastCastFinishTime(int SkillID)
 // Function Skill.UTSkillManagerComponent.GetCurSkills
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AUTSkill*>        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AUTSkill*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AUTSkill*> UUTSkillManagerComponent::GetCurSkills()
 {
@@ -3634,7 +3733,7 @@ TArray<class AUTSkill*> UUTSkillManagerComponent::GetCurSkills()
 // Function Skill.UTSkillManagerComponent.GetCurSkillPhase
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillPhase*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillPhase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillPhase* UUTSkillManagerComponent::GetCurSkillPhase()
 {
@@ -3659,8 +3758,8 @@ class UUTSkillPhase* UUTSkillManagerComponent::GetCurSkillPhase()
 // Function Skill.UTSkillManagerComponent.GetCurSkillID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AUTSkill*                Skill                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* Skill (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetCurSkillID(class AUTSkill* Skill)
 {
@@ -3686,7 +3785,7 @@ int UUTSkillManagerComponent::GetCurSkillID(class AUTSkill* Skill)
 // Function Skill.UTSkillManagerComponent.GetCurSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::GetCurSkill()
 {
@@ -3711,7 +3810,7 @@ class AUTSkill* UUTSkillManagerComponent::GetCurSkill()
 // Function Skill.UTSkillManagerComponent.GetCurMonopolizeSkills
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UUTSkillManagerComponent::GetCurMonopolizeSkills()
 {
@@ -3736,7 +3835,7 @@ TArray<int> UUTSkillManagerComponent::GetCurMonopolizeSkills()
 // Function Skill.UTSkillManagerComponent.GetCurMonopolizedSkillPhase
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillPhase*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillPhase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUTSkillPhase* UUTSkillManagerComponent::GetCurMonopolizedSkillPhase()
 {
@@ -3761,7 +3860,7 @@ class UUTSkillPhase* UUTSkillManagerComponent::GetCurMonopolizedSkillPhase()
 // Function Skill.UTSkillManagerComponent.GetCurMonopolizedSkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillManagerComponent::GetCurMonopolizedSkill()
 {
@@ -3786,7 +3885,7 @@ class AUTSkill* UUTSkillManagerComponent::GetCurMonopolizedSkill()
 // Function Skill.UTSkillManagerComponent.GetCurAllSkillIDs
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UUTSkillManagerComponent::GetCurAllSkillIDs()
 {
@@ -3811,9 +3910,9 @@ TArray<int> UUTSkillManagerComponent::GetCurAllSkillIDs()
 // Function Skill.UTSkillManagerComponent.GetCoolDownTime
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUTSkillManagerComponent::GetCoolDownTime(int SkillID, int CoolDownIndex)
 {
@@ -3840,7 +3939,7 @@ float UUTSkillManagerComponent::GetCoolDownTime(int SkillID, int CoolDownIndex)
 // Function Skill.UTSkillManagerComponent.GetCastingSkillIDs
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UUTSkillManagerComponent::GetCastingSkillIDs()
 {
@@ -3865,8 +3964,8 @@ TArray<int> UUTSkillManagerComponent::GetCastingSkillIDs()
 // Function Skill.UTSkillManagerComponent.GetButtonSlotSkillID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ButtonSlot                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ButtonSlot (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillManagerComponent::GetButtonSlotSkillID(int ButtonSlot)
 {
@@ -3892,7 +3991,7 @@ int UUTSkillManagerComponent::GetButtonSlotSkillID(int ButtonSlot)
 // Function Skill.UTSkillManagerComponent.DynamicRemoveSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::DynamicRemoveSkill(int InSkillID)
 {
@@ -3916,7 +4015,7 @@ void UUTSkillManagerComponent::DynamicRemoveSkill(int InSkillID)
 // Function Skill.UTSkillManagerComponent.DynamicAddSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::DynamicAddSkill(int InSkillID)
 {
@@ -3940,8 +4039,8 @@ void UUTSkillManagerComponent::DynamicAddSkill(int InSkillID)
 // Function Skill.UTSkillManagerComponent.ClientTriggerEventSuccess_WithID
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClientTriggerEventSuccess_WithID(int SkillID, uint64_t PackageIndex)
 {
@@ -3966,9 +4065,9 @@ void UUTSkillManagerComponent::ClientTriggerEventSuccess_WithID(int SkillID, uin
 // Function Skill.UTSkillManagerComponent.ClientTriggerEventFailed_WithID
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// ETriggerSkillFailed            FailedReason                   (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       PackageIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// ETriggerSkillFailed FailedReason (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PackageIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClientTriggerEventFailed_WithID(int SkillID, ETriggerSkillFailed FailedReason, uint64_t PackageIndex)
 {
@@ -3994,8 +4093,8 @@ void UUTSkillManagerComponent::ClientTriggerEventFailed_WithID(int SkillID, ETri
 // Function Skill.UTSkillManagerComponent.ClientStopPreActionSkill
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClientStopPreActionSkill(int SkillID, uint64_t InstID)
 {
@@ -4020,10 +4119,11 @@ void UUTSkillManagerComponent::ClientStopPreActionSkill(int SkillID, uint64_t In
 // Function Skill.UTSkillManagerComponent.ClientStopOneSkill
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSinglePhaseRep                (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSinglePhaseRep (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
-void UUTSkillManagerComponent::ClientStopOneSkill(uint64_t InstID, bool bSinglePhaseRep)
+void UUTSkillManagerComponent::ClientStopOneSkill(uint64_t InstID, bool bSinglePhaseRep, EUTSkillStopReason StopReason)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -4032,6 +4132,7 @@ void UUTSkillManagerComponent::ClientStopOneSkill(uint64_t InstID, bool bSingleP
 	UUTSkillManagerComponent_ClientStopOneSkill_Params params;
 	params.InstID = InstID;
 	params.bSinglePhaseRep = bSinglePhaseRep;
+	params.StopReason = StopReason;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -4046,8 +4147,8 @@ void UUTSkillManagerComponent::ClientStopOneSkill(uint64_t InstID, bool bSingleP
 // Function Skill.UTSkillManagerComponent.ClientStartSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoCast                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAutoCast (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClientStartSkill(int SkillID, bool bAutoCast)
 {
@@ -4072,10 +4173,10 @@ void UUTSkillManagerComponent::ClientStartSkill(int SkillID, bool bAutoCast)
 // Function Skill.UTSkillManagerComponent.ClientSimulateOneSkill
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PhaseIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSinglePhaseRep                (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int PhaseIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSinglePhaseRep (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClientSimulateOneSkill(uint64_t InstID, int SkillID, int PhaseIndex, bool bSinglePhaseRep)
 {
@@ -4102,9 +4203,9 @@ void UUTSkillManagerComponent::ClientSimulateOneSkill(uint64_t InstID, int Skill
 // Function Skill.UTSkillManagerComponent.ClearSkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bStopAllSkill                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDeactivateAllSkill            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bResetSkillCD                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopAllSkill (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDeactivateAllSkill (Parm, ZeroConstructor, IsPlainOldData)
+// bool bResetSkillCD (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::ClearSkill(bool bStopAllSkill, bool bDeactivateAllSkill, bool bResetSkillCD)
 {
@@ -4172,9 +4273,9 @@ void UUTSkillManagerComponent::ClearInitParams()
 // Function Skill.UTSkillManagerComponent.CheckAIIsCDOKBySkillID
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CoolDownIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int CoolDownIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillManagerComponent::CheckAIIsCDOKBySkillID(int SkillID, int CoolDownIndex)
 {
@@ -4201,8 +4302,8 @@ bool UUTSkillManagerComponent::CheckAIIsCDOKBySkillID(int SkillID, int CoolDownI
 // Function Skill.UTSkillManagerComponent.CacheSkillWidget
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUTSkillWidget*          Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillManagerComponent::CacheSkillWidget(int SkillID, class UUTSkillWidget* Widget)
 {
@@ -4227,9 +4328,9 @@ void UUTSkillManagerComponent::CacheSkillWidget(int SkillID, class UUTSkillWidge
 // Function Skill.UTSkillManagerComponent.AddOrRemoveIngoreSkillIDWhenStopAllSkills
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EUTSkillStopReason             InStopReason                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAdd                           (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason InStopReason (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAdd (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillManagerComponent::AddOrRemoveIngoreSkillIDWhenStopAllSkills(EUTSkillStopReason InStopReason, int InSkillID, bool bAdd)
 {
@@ -4255,8 +4356,8 @@ void UUTSkillManagerComponent::AddOrRemoveIngoreSkillIDWhenStopAllSkills(EUTSkil
 // Function Skill.UTSkillBaseWidget.IsSetValueAsNewDataWhenNotExist
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBaseWidget::IsSetValueAsNewDataWhenNotExist(const struct FName& KeyName)
 {
@@ -4282,7 +4383,7 @@ bool UUTSkillBaseWidget::IsSetValueAsNewDataWhenNotExist(const struct FName& Key
 // Function Skill.UTSkillBaseWidget.GetUAEBlackboard
 // (Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* UUTSkillBaseWidget::GetUAEBlackboard()
 {
@@ -4307,7 +4408,7 @@ class UUAEBlackboard* UUTSkillBaseWidget::GetUAEBlackboard()
 // Function Skill.UTSkillBaseWidget.GetOwnerSkillManager
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UUTSkillManagerComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUTSkillManagerComponent* UUTSkillBaseWidget::GetOwnerSkillManager()
 {
@@ -4329,10 +4430,35 @@ class UUTSkillManagerComponent* UUTSkillBaseWidget::GetOwnerSkillManager()
 }
 
 
+// Function Skill.UTSkillBaseWidget.GetOwnerSkillID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UUTSkillBaseWidget::GetOwnerSkillID()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillBaseWidget.GetOwnerSkillID");
+
+	UUTSkillBaseWidget_GetOwnerSkillID_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Skill.UTSkillBaseWidget.GetOwnerPawn
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUTSkillBaseWidget::GetOwnerPawn()
 {
@@ -4357,8 +4483,8 @@ class AActor* UUTSkillBaseWidget::GetOwnerPawn()
 // Function Skill.UTSkillEffect.UpdateAction
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillEffect::UpdateAction(class UUTSkillManagerComponent* SkillManagerComponent, float DeltaSeconds)
 {
@@ -4383,7 +4509,7 @@ void UUTSkillEffect::UpdateAction(class UUTSkillManagerComponent* SkillManagerCo
 // Function Skill.UTSkillEffect.UndoAction
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillEffect::UndoAction(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -4407,8 +4533,8 @@ void UUTSkillEffect::UndoAction(class UUTSkillManagerComponent* SkillManagerComp
 // Function Skill.UTSkillEffect.PreCloseSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillEffect::PreCloseSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -4433,8 +4559,8 @@ void UUTSkillEffect::PreCloseSkill(class UUTSkillManagerComponent* SkillManagerC
 // Function Skill.UTSkillEffect.PostInitSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillEffect::PostInitSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -4459,8 +4585,8 @@ void UUTSkillEffect::PostInitSkill(class UUTSkillManagerComponent* SkillManagerC
 // Function Skill.UTSkillEffect.PostActiveSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillEffect::PostActiveSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -4506,7 +4632,7 @@ void UUTSkillEffect::OnAsyncLoadSoftPathDone()
 // Function Skill.UTSkillEffect.GetOwnerSkill
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillEffect::GetOwnerSkill()
 {
@@ -4531,8 +4657,8 @@ class AUTSkill* UUTSkillEffect::GetOwnerSkill()
 // Function Skill.UTSkillEffect.DoHurtAppearance
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillEffect::DoHurtAppearance(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -4557,9 +4683,9 @@ void UUTSkillEffect::DoHurtAppearance(class UUTSkillManagerComponent* SkillManag
 // Function Skill.UTSkillEffect.DoAction
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bCheckSkillStopped             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bCheckSkillStopped (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillEffect::DoAction(class UUTSkillManagerComponent* SkillManagerComponent, bool bCheckSkillStopped)
 {
@@ -4586,7 +4712,7 @@ bool UUTSkillEffect::DoAction(class UUTSkillManagerComponent* SkillManagerCompon
 // Function Skill.UTSkillAction.UpdateAction_Internal
 // (Native, Public)
 // Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::UpdateAction_Internal(float DeltaSeconds)
 {
@@ -4610,8 +4736,8 @@ void UUTSkillAction::UpdateAction_Internal(float DeltaSeconds)
 // Function Skill.UTSkillAction.UpdateAction
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::UpdateAction(class UUTSkillManagerComponent* SkillManagerComponent, float DeltaSeconds)
 {
@@ -4657,7 +4783,7 @@ void UUTSkillAction::UndoAction_Internal()
 // Function Skill.UTSkillAction.UndoAction
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillAction::UndoAction(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -4681,8 +4807,8 @@ void UUTSkillAction::UndoAction(class UUTSkillManagerComponent* SkillManagerComp
 // Function Skill.UTSkillAction.TimerRealDoAction
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bCheckSkillStopped             (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bCheckSkillStopped (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::TimerRealDoAction(class UUTSkillManagerComponent* SkillManagerComponent, bool bCheckSkillStopped)
 {
@@ -4728,7 +4854,7 @@ void UUTSkillAction::Reset_Internal()
 // Function Skill.UTSkillAction.Reset
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillAction::Reset(class UActorComponent* SkillManagerComponent)
 {
@@ -4752,8 +4878,8 @@ void UUTSkillAction::Reset(class UActorComponent* SkillManagerComponent)
 // Function Skill.UTSkillAction.RealDoHurtAppearance_Internal
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::RealDoHurtAppearance_Internal(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -4778,8 +4904,8 @@ void UUTSkillAction::RealDoHurtAppearance_Internal(class UUTSkillManagerComponen
 // Function Skill.UTSkillAction.RealDoHurtAppearance
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::RealDoHurtAppearance(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -4804,7 +4930,7 @@ void UUTSkillAction::RealDoHurtAppearance(class UUTSkillManagerComponent* SkillM
 // Function Skill.UTSkillAction.RealDoAction_Internal
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillAction::RealDoAction_Internal()
 {
@@ -4829,9 +4955,9 @@ bool UUTSkillAction::RealDoAction_Internal()
 // Function Skill.UTSkillAction.RealDoAction
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bCheckSkillStopped             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bCheckSkillStopped (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillAction::RealDoAction(class UUTSkillManagerComponent* SkillManagerComponent, bool bCheckSkillStopped)
 {
@@ -4858,9 +4984,9 @@ bool UUTSkillAction::RealDoAction(class UUTSkillManagerComponent* SkillManagerCo
 // Function Skill.UTSkillAction.OnAsyncLoadAssetDone
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  SkillAppearanceVictim          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSkillAppearance               (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* SkillAppearanceVictim (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSkillAppearance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::OnAsyncLoadAssetDone(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* SkillAppearanceVictim, bool bSkillAppearance)
 {
@@ -4886,7 +5012,7 @@ void UUTSkillAction::OnAsyncLoadAssetDone(class UUTSkillManagerComponent* SkillM
 // Function Skill.UTSkillAction.JudgeNeedPhaseWait
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillAction::JudgeNeedPhaseWait()
 {
@@ -4911,8 +5037,8 @@ bool UUTSkillAction::JudgeNeedPhaseWait()
 // Function Skill.UTSkillAction.DoHurtAppearance
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction::DoHurtAppearance(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -4937,9 +5063,9 @@ void UUTSkillAction::DoHurtAppearance(class UUTSkillManagerComponent* SkillManag
 // Function Skill.UTSkillAction.DoAction
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bCheckSkillStopped             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bCheckSkillStopped (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillAction::DoAction(class UUTSkillManagerComponent* SkillManagerComponent, bool bCheckSkillStopped)
 {
@@ -4966,8 +5092,8 @@ bool UUTSkillAction::DoAction(class UUTSkillManagerComponent* SkillManagerCompon
 // Function Skill.UTSkillCondition.PreCloseSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillCondition::PreCloseSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -4992,8 +5118,8 @@ void UUTSkillCondition::PreCloseSkill(class UUTSkillManagerComponent* SkillManag
 // Function Skill.UTSkillCondition.PostInitSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillCondition::PostInitSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -5018,8 +5144,8 @@ void UUTSkillCondition::PostInitSkill(class UUTSkillManagerComponent* SkillManag
 // Function Skill.UTSkillCondition.PostActiveSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillCondition::PostActiveSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -5044,9 +5170,9 @@ void UUTSkillCondition::PostActiveSkill(class UUTSkillManagerComponent* SkillMan
 // Function Skill.UTSkillCondition.IsTargetOK
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Target (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillCondition::IsTargetOK(class UActorComponent* SkillManagerComponent, class AActor* Target)
 {
@@ -5073,7 +5199,7 @@ bool UUTSkillCondition::IsTargetOK(class UActorComponent* SkillManagerComponent,
 // Function Skill.UTSkillCondition.IsOK_Internal
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillCondition::IsOK_Internal()
 {
@@ -5098,8 +5224,8 @@ bool UUTSkillCondition::IsOK_Internal()
 // Function Skill.UTSkillCondition.IsOK
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillCondition::IsOK(class UActorComponent* SkillManagerComponent)
 {
@@ -5125,7 +5251,7 @@ bool UUTSkillCondition::IsOK(class UActorComponent* SkillManagerComponent)
 // Function Skill.UTSkillCondition.GetOwnerSkill
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillCondition::GetOwnerSkill()
 {
@@ -5147,11 +5273,36 @@ class AUTSkill* UUTSkillCondition::GetOwnerSkill()
 }
 
 
+// Function Skill.UTSkillInterface.IsNeedCheckAutoSkill
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UUTSkillInterface::IsNeedCheckAutoSkill()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillInterface.IsNeedCheckAutoSkill");
+
+	UUTSkillInterface_IsNeedCheckAutoSkill_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Skill.UTSkillInterface.HasSkillToken
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillInterface::HasSkillToken(int SkillID)
 {
@@ -5177,7 +5328,7 @@ bool UUTSkillInterface::HasSkillToken(int SkillID)
 // Function Skill.UTSkillInterface.HandleSkillStart
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillInterface::HandleSkillStart(int SkillID)
 {
@@ -5201,8 +5352,8 @@ void UUTSkillInterface::HandleSkillStart(int SkillID)
 // Function Skill.UTSkillInterface.HandleSkillEnd
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// EUTSkillStopReason             Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// EUTSkillStopReason Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillInterface::HandleSkillEnd(int SkillID, EUTSkillStopReason Reason)
 {
@@ -5227,7 +5378,7 @@ void UUTSkillInterface::HandleSkillEnd(int SkillID, EUTSkillStopReason Reason)
 // Function Skill.UTSkillInterface.GetSkillManager
 // (Native, Public, Const)
 // Parameters:
-// class UUTSkillManagerComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUTSkillManagerComponent* UUTSkillInterface::GetSkillManager()
 {
@@ -5252,7 +5403,7 @@ class UUTSkillManagerComponent* UUTSkillInterface::GetSkillManager()
 // Function Skill.UTSkillInterface.ClearSkillToken
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillInterface::ClearSkillToken(int SkillID)
 {
@@ -5297,7 +5448,7 @@ void UUTSkillInterface::ClearAllSkillToken()
 // Function Skill.UTSkillInterface.AddSkillToken
 // (Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillInterface::AddSkillToken(int SkillID)
 {
@@ -5321,9 +5472,9 @@ void UUTSkillInterface::AddSkillToken(int SkillID)
 // Function Skill.UTSkillPhase.TryJumpToPhase
 // (Final, Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            PhaseId                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int PhaseId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::TryJumpToPhase(class UUTSkillManagerComponent* SkillManagerComponent, int PhaseId)
 {
@@ -5350,7 +5501,7 @@ bool UUTSkillPhase::TryJumpToPhase(class UUTSkillManagerComponent* SkillManagerC
 // Function Skill.UTSkillPhase.StopPhase
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillPhase::StopPhase(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -5374,7 +5525,7 @@ void UUTSkillPhase::StopPhase(class UUTSkillManagerComponent* SkillManagerCompon
 // Function Skill.UTSkillPhase.StartPhase
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillPhase::StartPhase(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -5398,7 +5549,7 @@ void UUTSkillPhase::StartPhase(class UUTSkillManagerComponent* SkillManagerCompo
 // Function Skill.UTSkillPhase.RepeatPhase
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillPhase::RepeatPhase(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -5422,9 +5573,9 @@ void UUTSkillPhase::RepeatPhase(class UUTSkillManagerComponent* SkillManagerComp
 // Function Skill.UTSkillPhase.PlaySkillHurtEffect
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::PlaySkillHurtEffect(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -5451,9 +5602,9 @@ bool UUTSkillPhase::PlaySkillHurtEffect(class UUTSkillManagerComponent* SkillMan
 // Function Skill.UTSkillPhase.PlaySkillHurtAppearances
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::PlaySkillHurtAppearances(class UUTSkillManagerComponent* SkillManagerComponent, class AActor* Victim)
 {
@@ -5480,7 +5631,7 @@ bool UUTSkillPhase::PlaySkillHurtAppearances(class UUTSkillManagerComponent* Ski
 // Function Skill.UTSkillPhase.PickTargets
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillPhase::PickTargets(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -5504,9 +5655,9 @@ void UUTSkillPhase::PickTargets(class UUTSkillManagerComponent* SkillManagerComp
 // Function Skill.UTSkillPhase.OnEvent
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> TheEventType                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> TheEventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::OnEvent(class UUTSkillManagerComponent* SkillManagerComponent, TEnumAsByte<enum EUTSkillEventType> TheEventType)
 {
@@ -5533,9 +5684,9 @@ bool UUTSkillPhase::OnEvent(class UUTSkillManagerComponent* SkillManagerComponen
 // Function Skill.UTSkillPhase.OnCustomEvent
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TEnumAsByte<enum EUTSkillEventType> TheEventType                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> TheEventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::OnCustomEvent(class UUTSkillManagerComponent* SkillManagerComponent, TEnumAsByte<enum EUTSkillEventType> TheEventType)
 {
@@ -5562,8 +5713,8 @@ bool UUTSkillPhase::OnCustomEvent(class UUTSkillManagerComponent* SkillManagerCo
 // Function Skill.UTSkillPhase.ForceStopPhase
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::ForceStopPhase(class UUTSkillManagerComponent* SkillManagerComponent)
 {
@@ -5589,7 +5740,7 @@ bool UUTSkillPhase::ForceStopPhase(class UUTSkillManagerComponent* SkillManagerC
 // Function Skill.UTSkillPhase.ClearAttachments
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPhase::ClearAttachments()
 {
@@ -5614,8 +5765,8 @@ bool UUTSkillPhase::ClearAttachments()
 // Function Skill.UTSkillPicker.PickTargetsInner
 // (Native, Protected, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 OriginPoint                    (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector OriginPoint (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPicker::PickTargetsInner(const struct FVector& OriginPoint)
 {
@@ -5641,8 +5792,8 @@ bool UUTSkillPicker::PickTargetsInner(const struct FVector& OriginPoint)
 // Function Skill.UTSkillPicker.PickTargets
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 OriginPoint                    (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector OriginPoint (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPicker::PickTargets(const struct FVector& OriginPoint)
 {
@@ -5668,9 +5819,9 @@ bool UUTSkillPicker::PickTargets(const struct FVector& OriginPoint)
 // Function Skill.UTSkillPickerFilter.IsValidFilterActor
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Owner (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillPickerFilter::IsValidFilterActor(class AActor* InActor, class AActor* Owner)
 {
@@ -5697,8 +5848,8 @@ bool UUTSkillPickerFilter::IsValidFilterActor(class AActor* InActor, class AActo
 // Function Skill.UTSkillPickerFilter.HandleFilterArray
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<struct FUTSkillPickedTarget> inArray                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class AActor*                  Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUTSkillPickedTarget> inArray (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class AActor* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillPickerFilter::HandleFilterArray(class AActor* Owner, TArray<struct FUTSkillPickedTarget>* inArray)
 {
@@ -5725,7 +5876,7 @@ void UUTSkillPickerFilter::HandleFilterArray(class AActor* Owner, TArray<struct 
 // Function Skill.UTSkillWidget.SetSkillManager
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* Manager                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* Manager (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillWidget::SetSkillManager(class UUTSkillManagerComponent* Manager)
 {
@@ -5749,7 +5900,7 @@ void UUTSkillWidget::SetSkillManager(class UUTSkillManagerComponent* Manager)
 // Function Skill.UTSkillWidget.SetSkillID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSkillID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillWidget::SetSkillID(int InSkillID)
 {
@@ -5794,7 +5945,7 @@ void UUTSkillWidget::RemoveSelf()
 // Function Skill.UTSkillWidget.GetSkillManager
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUTSkillManagerComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUTSkillManagerComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUTSkillManagerComponent* UUTSkillWidget::GetSkillManager()
 {
@@ -5819,7 +5970,7 @@ class UUTSkillManagerComponent* UUTSkillWidget::GetSkillManager()
 // Function Skill.UTSkillWidget.GetSkillID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillWidget::GetSkillID()
 {
@@ -5844,7 +5995,7 @@ int UUTSkillWidget::GetSkillID()
 // Function Skill.UTSkillWidget.GetSkillCDBases
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UUTSkillCDBase*>  ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<class UUTSkillCDBase*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<class UUTSkillCDBase*> UUTSkillWidget::GetSkillCDBases()
 {
@@ -5869,7 +6020,7 @@ TArray<class UUTSkillCDBase*> UUTSkillWidget::GetSkillCDBases()
 // Function Skill.UTSkillWidget.GetSkill
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AUTSkill*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUTSkill* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUTSkill* UUTSkillWidget::GetSkill()
 {
@@ -5894,7 +6045,7 @@ class AUTSkill* UUTSkillWidget::GetSkill()
 // Function Skill.UTSkillWidget.GetLocalPlayerController
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* UUTSkillWidget::GetLocalPlayerController()
 {
@@ -5919,7 +6070,7 @@ class APlayerController* UUTSkillWidget::GetLocalPlayerController()
 // Function Skill.UTSkillWidget.BindLua
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 luaPath                        (Parm, ZeroConstructor)
+// struct FString luaPath (Parm, ZeroConstructor)
 
 void UUTSkillWidget::BindLua(const struct FString& luaPath)
 {
@@ -5943,7 +6094,7 @@ void UUTSkillWidget::BindLua(const struct FString& luaPath)
 // Function Skill.PrivateNodeLuaInterface.SetPrivateUniqueKey
 // (Native, Public)
 // Parameters:
-// struct FString                 NewKey                         (Parm, ZeroConstructor)
+// struct FString NewKey (Parm, ZeroConstructor)
 
 void UPrivateNodeLuaInterface::SetPrivateUniqueKey(const struct FString& NewKey)
 {
@@ -5967,7 +6118,7 @@ void UPrivateNodeLuaInterface::SetPrivateUniqueKey(const struct FString& NewKey)
 // Function Skill.PrivateNodeLuaInterface.GetPrivateUniqueKey
 // (Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UPrivateNodeLuaInterface::GetPrivateUniqueKey()
 {
@@ -6013,7 +6164,7 @@ void USharedDelegate::EventTrigger()
 // Function Skill.SkillTriggerData.GetSkillEventType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EUTSkillEventType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EUTSkillEventType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EUTSkillEventType> USkillTriggerData::GetSkillEventType()
 {
@@ -6038,8 +6189,8 @@ TEnumAsByte<enum EUTSkillEventType> USkillTriggerData::GetSkillEventType()
 // Function Skill.UTSkillAction_LuaContainer.UpdateActionInContainer
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillAction_LuaContainer::UpdateActionInContainer(class UActorComponent* SkillManagerComponent, float DeltaSeconds)
 {
@@ -6064,7 +6215,7 @@ void UUTSkillAction_LuaContainer::UpdateActionInContainer(class UActorComponent*
 // Function Skill.UTSkillAction_LuaContainer.UndoActionInContainer
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillAction_LuaContainer::UndoActionInContainer(class UActorComponent* SkillManagerComponent)
 {
@@ -6088,7 +6239,7 @@ void UUTSkillAction_LuaContainer::UndoActionInContainer(class UActorComponent* S
 // Function Skill.UTSkillAction_LuaContainer.ResetActionInContainer
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUTSkillAction_LuaContainer::ResetActionInContainer(class UActorComponent* SkillManagerComponent)
 {
@@ -6112,8 +6263,8 @@ void UUTSkillAction_LuaContainer::ResetActionInContainer(class UActorComponent* 
 // Function Skill.UTSkillAction_LuaContainer.RealDoActionInContainer
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UActorComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillAction_LuaContainer::RealDoActionInContainer(class UActorComponent* SkillManagerComponent)
 {
@@ -6139,9 +6290,9 @@ bool UUTSkillAction_LuaContainer::RealDoActionInContainer(class UActorComponent*
 // Function Skill.UTSkillBlackboardInterface.SetValueAsWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsWeakObject(int SkillID, const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -6167,9 +6318,9 @@ void UUTSkillBlackboardInterface::SetValueAsWeakObject(int SkillID, const struct
 // Function Skill.UTSkillBlackboardInterface.SetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 VectorValue                    (Parm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector VectorValue (Parm, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsVector(int SkillID, const struct FName& KeyName, const struct FVector& VectorValue)
 {
@@ -6195,9 +6346,9 @@ void UUTSkillBlackboardInterface::SetValueAsVector(int SkillID, const struct FNa
 // Function Skill.UTSkillBlackboardInterface.SetValueAsUInt
 // (Native, Public, HasOutParms)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// uint32_t                       UIntValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// uint32_t UIntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsUInt(int SkillID, const struct FName& KeyName, uint32_t UIntValue)
 {
@@ -6223,9 +6374,9 @@ void UUTSkillBlackboardInterface::SetValueAsUInt(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.SetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 StringValue                    (Parm, ZeroConstructor)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString StringValue (Parm, ZeroConstructor)
 
 void UUTSkillBlackboardInterface::SetValueAsString(int SkillID, const struct FName& KeyName, const struct FString& StringValue)
 {
@@ -6251,9 +6402,9 @@ void UUTSkillBlackboardInterface::SetValueAsString(int SkillID, const struct FNa
 // Function Skill.UTSkillBlackboardInterface.SetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                VectorValue                    (Parm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator VectorValue (Parm, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsRotator(int SkillID, const struct FName& KeyName, const struct FRotator& VectorValue)
 {
@@ -6279,9 +6430,9 @@ void UUTSkillBlackboardInterface::SetValueAsRotator(int SkillID, const struct FN
 // Function Skill.UTSkillBlackboardInterface.SetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsObject(int SkillID, const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -6307,9 +6458,9 @@ void UUTSkillBlackboardInterface::SetValueAsObject(int SkillID, const struct FNa
 // Function Skill.UTSkillBlackboardInterface.SetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   NameValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName NameValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsName(int SkillID, const struct FName& KeyName, const struct FName& NameValue)
 {
@@ -6335,9 +6486,9 @@ void UUTSkillBlackboardInterface::SetValueAsName(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.SetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            IntValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int IntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsInt(int SkillID, const struct FName& KeyName, int IntValue)
 {
@@ -6363,9 +6514,9 @@ void UUTSkillBlackboardInterface::SetValueAsInt(int SkillID, const struct FName&
 // Function Skill.UTSkillBlackboardInterface.SetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          FloatValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float FloatValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsFloat(int SkillID, const struct FName& KeyName, float FloatValue)
 {
@@ -6391,9 +6542,9 @@ void UUTSkillBlackboardInterface::SetValueAsFloat(int SkillID, const struct FNam
 // Function Skill.UTSkillBlackboardInterface.SetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  EnumValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char EnumValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsEnum(int SkillID, const struct FName& KeyName, unsigned char EnumValue)
 {
@@ -6419,9 +6570,9 @@ void UUTSkillBlackboardInterface::SetValueAsEnum(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.SetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ClassValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ClassValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsClass(int SkillID, const struct FName& KeyName, class UClass* ClassValue)
 {
@@ -6447,9 +6598,9 @@ void UUTSkillBlackboardInterface::SetValueAsClass(int SkillID, const struct FNam
 // Function Skill.UTSkillBlackboardInterface.SetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           BoolValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool BoolValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillBlackboardInterface::SetValueAsBool(int SkillID, const struct FName& KeyName, bool BoolValue)
 {
@@ -6475,9 +6626,9 @@ void UUTSkillBlackboardInterface::SetValueAsBool(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.IsExistWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistWeakObject(int SkillID, const struct FName& KeyName)
 {
@@ -6504,9 +6655,9 @@ bool UUTSkillBlackboardInterface::IsExistWeakObject(int SkillID, const struct FN
 // Function Skill.UTSkillBlackboardInterface.IsExistVector
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistVector(int SkillID, const struct FName& KeyName)
 {
@@ -6533,9 +6684,9 @@ bool UUTSkillBlackboardInterface::IsExistVector(int SkillID, const struct FName&
 // Function Skill.UTSkillBlackboardInterface.IsExistUInt
 // (Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistUInt(int SkillID, const struct FName& KeyName)
 {
@@ -6562,9 +6713,9 @@ bool UUTSkillBlackboardInterface::IsExistUInt(int SkillID, const struct FName& K
 // Function Skill.UTSkillBlackboardInterface.IsExistString
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistString(int SkillID, const struct FName& KeyName)
 {
@@ -6591,9 +6742,9 @@ bool UUTSkillBlackboardInterface::IsExistString(int SkillID, const struct FName&
 // Function Skill.UTSkillBlackboardInterface.IsExistRotator
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistRotator(int SkillID, const struct FName& KeyName)
 {
@@ -6620,9 +6771,9 @@ bool UUTSkillBlackboardInterface::IsExistRotator(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.IsExistObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistObject(int SkillID, const struct FName& KeyName)
 {
@@ -6649,9 +6800,9 @@ bool UUTSkillBlackboardInterface::IsExistObject(int SkillID, const struct FName&
 // Function Skill.UTSkillBlackboardInterface.IsExistName
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistName(int SkillID, const struct FName& KeyName)
 {
@@ -6678,9 +6829,9 @@ bool UUTSkillBlackboardInterface::IsExistName(int SkillID, const struct FName& K
 // Function Skill.UTSkillBlackboardInterface.IsExistInt
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistInt(int SkillID, const struct FName& KeyName)
 {
@@ -6707,9 +6858,9 @@ bool UUTSkillBlackboardInterface::IsExistInt(int SkillID, const struct FName& Ke
 // Function Skill.UTSkillBlackboardInterface.IsExistFloat
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistFloat(int SkillID, const struct FName& KeyName)
 {
@@ -6736,9 +6887,9 @@ bool UUTSkillBlackboardInterface::IsExistFloat(int SkillID, const struct FName& 
 // Function Skill.UTSkillBlackboardInterface.IsExistEnum
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistEnum(int SkillID, const struct FName& KeyName)
 {
@@ -6765,9 +6916,9 @@ bool UUTSkillBlackboardInterface::IsExistEnum(int SkillID, const struct FName& K
 // Function Skill.UTSkillBlackboardInterface.IsExistClass
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistClass(int SkillID, const struct FName& KeyName)
 {
@@ -6794,9 +6945,9 @@ bool UUTSkillBlackboardInterface::IsExistClass(int SkillID, const struct FName& 
 // Function Skill.UTSkillBlackboardInterface.IsExistBool
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::IsExistBool(int SkillID, const struct FName& KeyName)
 {
@@ -6823,9 +6974,9 @@ bool UUTSkillBlackboardInterface::IsExistBool(int SkillID, const struct FName& K
 // Function Skill.UTSkillBlackboardInterface.GetValueAsWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UUTSkillBlackboardInterface::GetValueAsWeakObject(int SkillID, const struct FName& KeyName)
 {
@@ -6852,9 +7003,9 @@ class UObject* UUTSkillBlackboardInterface::GetValueAsWeakObject(int SkillID, co
 // Function Skill.UTSkillBlackboardInterface.GetValueAsWeakActor
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUTSkillBlackboardInterface::GetValueAsWeakActor(int SkillID, const struct FName& KeyName)
 {
@@ -6881,9 +7032,9 @@ class AActor* UUTSkillBlackboardInterface::GetValueAsWeakActor(int SkillID, cons
 // Function Skill.UTSkillBlackboardInterface.GetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UUTSkillBlackboardInterface::GetValueAsVector(int SkillID, const struct FName& KeyName)
 {
@@ -6910,9 +7061,9 @@ struct FVector UUTSkillBlackboardInterface::GetValueAsVector(int SkillID, const 
 // Function Skill.UTSkillBlackboardInterface.GetValueAsUInt
 // (Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UUTSkillBlackboardInterface::GetValueAsUInt(int SkillID, const struct FName& KeyName)
 {
@@ -6939,9 +7090,9 @@ uint32_t UUTSkillBlackboardInterface::GetValueAsUInt(int SkillID, const struct F
 // Function Skill.UTSkillBlackboardInterface.GetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUTSkillBlackboardInterface::GetValueAsString(int SkillID, const struct FName& KeyName)
 {
@@ -6968,9 +7119,9 @@ struct FString UUTSkillBlackboardInterface::GetValueAsString(int SkillID, const 
 // Function Skill.UTSkillBlackboardInterface.GetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UUTSkillBlackboardInterface::GetValueAsRotator(int SkillID, const struct FName& KeyName)
 {
@@ -6997,9 +7148,9 @@ struct FRotator UUTSkillBlackboardInterface::GetValueAsRotator(int SkillID, cons
 // Function Skill.UTSkillBlackboardInterface.GetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UUTSkillBlackboardInterface::GetValueAsObject(int SkillID, const struct FName& KeyName)
 {
@@ -7026,9 +7177,9 @@ class UObject* UUTSkillBlackboardInterface::GetValueAsObject(int SkillID, const 
 // Function Skill.UTSkillBlackboardInterface.GetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UUTSkillBlackboardInterface::GetValueAsName(int SkillID, const struct FName& KeyName)
 {
@@ -7055,9 +7206,9 @@ struct FName UUTSkillBlackboardInterface::GetValueAsName(int SkillID, const stru
 // Function Skill.UTSkillBlackboardInterface.GetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillBlackboardInterface::GetValueAsInt(int SkillID, const struct FName& KeyName)
 {
@@ -7084,9 +7235,9 @@ int UUTSkillBlackboardInterface::GetValueAsInt(int SkillID, const struct FName& 
 // Function Skill.UTSkillBlackboardInterface.GetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUTSkillBlackboardInterface::GetValueAsFloat(int SkillID, const struct FName& KeyName)
 {
@@ -7113,9 +7264,9 @@ float UUTSkillBlackboardInterface::GetValueAsFloat(int SkillID, const struct FNa
 // Function Skill.UTSkillBlackboardInterface.GetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char UUTSkillBlackboardInterface::GetValueAsEnum(int SkillID, const struct FName& KeyName)
 {
@@ -7142,9 +7293,9 @@ unsigned char UUTSkillBlackboardInterface::GetValueAsEnum(int SkillID, const str
 // Function Skill.UTSkillBlackboardInterface.GetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUTSkillBlackboardInterface::GetValueAsClass(int SkillID, const struct FName& KeyName)
 {
@@ -7171,9 +7322,9 @@ class UClass* UUTSkillBlackboardInterface::GetValueAsClass(int SkillID, const st
 // Function Skill.UTSkillBlackboardInterface.GetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillBlackboardInterface::GetValueAsBool(int SkillID, const struct FName& KeyName)
 {
@@ -7200,9 +7351,9 @@ bool UUTSkillBlackboardInterface::GetValueAsBool(int SkillID, const struct FName
 // Function Skill.UTSkillBlackboardInterface.GetValueAsActor
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUTSkillBlackboardInterface::GetValueAsActor(int SkillID, const struct FName& KeyName)
 {
@@ -7229,8 +7380,8 @@ class AActor* UUTSkillBlackboardInterface::GetValueAsActor(int SkillID, const st
 // Function Skill.UTSkillBlackboardInterface.GetUAEBlackboardBySkillID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* UUTSkillBlackboardInterface::GetUAEBlackboardBySkillID(int SkillID)
 {
@@ -7256,7 +7407,7 @@ class UUAEBlackboard* UUTSkillBlackboardInterface::GetUAEBlackboardBySkillID(int
 // Function Skill.UTSkillCDBase.BindLua
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 luaPath                        (Parm, ZeroConstructor)
+// struct FString luaPath (Parm, ZeroConstructor)
 
 void UUTSkillCDBase::BindLua(const struct FString& luaPath)
 {
@@ -7277,11 +7428,32 @@ void UUTSkillCDBase::BindLua(const struct FString& luaPath)
 }
 
 
+// Function Skill.UTSkillInstancedNodeInterface.PostOverrideLua
+// (Native, Public)
+
+void UUTSkillInstancedNodeInterface::PostOverrideLua()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Skill.UTSkillInstancedNodeInterface.PostOverrideLua");
+
+	UUTSkillInstancedNodeInterface_PostOverrideLua_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsWeakObject(const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -7306,8 +7478,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsWeakObject(const struct FName& K
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 VectorValue                    (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector VectorValue (Parm, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsVector(const struct FName& KeyName, const struct FVector& VectorValue)
 {
@@ -7332,8 +7504,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsVector(const struct FName& KeyNa
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsUInt
 // (Native, Public, HasOutParms)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// uint32_t                       UIntValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// uint32_t UIntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsUInt(const struct FName& KeyName, uint32_t UIntValue)
 {
@@ -7358,8 +7530,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsUInt(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 StringValue                    (Parm, ZeroConstructor)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString StringValue (Parm, ZeroConstructor)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsString(const struct FName& KeyName, const struct FString& StringValue)
 {
@@ -7384,8 +7556,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsString(const struct FName& KeyNa
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                VectorValue                    (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator VectorValue (Parm, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsRotator(const struct FName& KeyName, const struct FRotator& VectorValue)
 {
@@ -7410,8 +7582,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsRotator(const struct FName& KeyN
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsObject(const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -7436,8 +7608,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsObject(const struct FName& KeyNa
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   NameValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName NameValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsName(const struct FName& KeyName, const struct FName& NameValue)
 {
@@ -7462,8 +7634,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsName(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            IntValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int IntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsInt(const struct FName& KeyName, int IntValue)
 {
@@ -7488,8 +7660,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsInt(const struct FName& KeyName,
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          FloatValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float FloatValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsFloat(const struct FName& KeyName, float FloatValue)
 {
@@ -7514,8 +7686,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsFloat(const struct FName& KeyNam
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  EnumValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char EnumValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsEnum(const struct FName& KeyName, unsigned char EnumValue)
 {
@@ -7540,8 +7712,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsEnum(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ClassValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ClassValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsClass(const struct FName& KeyName, class UClass* ClassValue)
 {
@@ -7566,8 +7738,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsClass(const struct FName& KeyNam
 // Function Skill.UTSkillNodeBlackboardInterface.SetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           BoolValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool BoolValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::SetValueAsBool(const struct FName& KeyName, bool BoolValue)
 {
@@ -7592,8 +7764,8 @@ void UUTSkillNodeBlackboardInterface::SetValueAsBool(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.IsSetValueAsNewDataWhenNotExist
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsSetValueAsNewDataWhenNotExist(const struct FName& KeyName)
 {
@@ -7619,8 +7791,8 @@ bool UUTSkillNodeBlackboardInterface::IsSetValueAsNewDataWhenNotExist(const stru
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistWeakObject(const struct FName& KeyName)
 {
@@ -7646,8 +7818,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistWeakObject(const struct FName& KeyN
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistVector
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistVector(const struct FName& KeyName)
 {
@@ -7673,8 +7845,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistVector(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistUInt
 // (Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistUInt(const struct FName& KeyName)
 {
@@ -7700,8 +7872,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistUInt(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistString
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistString(const struct FName& KeyName)
 {
@@ -7727,8 +7899,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistString(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistRotator
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistRotator(const struct FName& KeyName)
 {
@@ -7754,8 +7926,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistRotator(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistObject(const struct FName& KeyName)
 {
@@ -7781,8 +7953,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistObject(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistName
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistName(const struct FName& KeyName)
 {
@@ -7808,8 +7980,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistName(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistInt
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistInt(const struct FName& KeyName)
 {
@@ -7835,8 +8007,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistInt(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistFloat
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistFloat(const struct FName& KeyName)
 {
@@ -7862,8 +8034,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistFloat(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistEnum
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistEnum(const struct FName& KeyName)
 {
@@ -7889,8 +8061,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistEnum(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistClass
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistClass(const struct FName& KeyName)
 {
@@ -7916,8 +8088,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistClass(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.IsExistBool
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::IsExistBool(const struct FName& KeyName)
 {
@@ -7943,8 +8115,8 @@ bool UUTSkillNodeBlackboardInterface::IsExistBool(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsWeakObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UUTSkillNodeBlackboardInterface::GetValueAsWeakObject(const struct FName& KeyName)
 {
@@ -7970,8 +8142,8 @@ class UObject* UUTSkillNodeBlackboardInterface::GetValueAsWeakObject(const struc
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsWeakActor
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUTSkillNodeBlackboardInterface::GetValueAsWeakActor(const struct FName& KeyName)
 {
@@ -7997,8 +8169,8 @@ class AActor* UUTSkillNodeBlackboardInterface::GetValueAsWeakActor(const struct 
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UUTSkillNodeBlackboardInterface::GetValueAsVector(const struct FName& KeyName)
 {
@@ -8024,8 +8196,8 @@ struct FVector UUTSkillNodeBlackboardInterface::GetValueAsVector(const struct FN
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsUInt
 // (Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UUTSkillNodeBlackboardInterface::GetValueAsUInt(const struct FName& KeyName)
 {
@@ -8051,8 +8223,8 @@ uint32_t UUTSkillNodeBlackboardInterface::GetValueAsUInt(const struct FName& Key
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUTSkillNodeBlackboardInterface::GetValueAsString(const struct FName& KeyName)
 {
@@ -8078,8 +8250,8 @@ struct FString UUTSkillNodeBlackboardInterface::GetValueAsString(const struct FN
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UUTSkillNodeBlackboardInterface::GetValueAsRotator(const struct FName& KeyName)
 {
@@ -8105,8 +8277,8 @@ struct FRotator UUTSkillNodeBlackboardInterface::GetValueAsRotator(const struct 
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UUTSkillNodeBlackboardInterface::GetValueAsObject(const struct FName& KeyName)
 {
@@ -8132,8 +8304,8 @@ class UObject* UUTSkillNodeBlackboardInterface::GetValueAsObject(const struct FN
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UUTSkillNodeBlackboardInterface::GetValueAsName(const struct FName& KeyName)
 {
@@ -8159,8 +8331,8 @@ struct FName UUTSkillNodeBlackboardInterface::GetValueAsName(const struct FName&
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUTSkillNodeBlackboardInterface::GetValueAsInt(const struct FName& KeyName)
 {
@@ -8186,8 +8358,8 @@ int UUTSkillNodeBlackboardInterface::GetValueAsInt(const struct FName& KeyName)
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUTSkillNodeBlackboardInterface::GetValueAsFloat(const struct FName& KeyName)
 {
@@ -8213,8 +8385,8 @@ float UUTSkillNodeBlackboardInterface::GetValueAsFloat(const struct FName& KeyNa
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char UUTSkillNodeBlackboardInterface::GetValueAsEnum(const struct FName& KeyName)
 {
@@ -8240,8 +8412,8 @@ unsigned char UUTSkillNodeBlackboardInterface::GetValueAsEnum(const struct FName
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUTSkillNodeBlackboardInterface::GetValueAsClass(const struct FName& KeyName)
 {
@@ -8267,8 +8439,8 @@ class UClass* UUTSkillNodeBlackboardInterface::GetValueAsClass(const struct FNam
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillNodeBlackboardInterface::GetValueAsBool(const struct FName& KeyName)
 {
@@ -8294,8 +8466,8 @@ bool UUTSkillNodeBlackboardInterface::GetValueAsBool(const struct FName& KeyName
 // Function Skill.UTSkillNodeBlackboardInterface.GetValueAsActor
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUTSkillNodeBlackboardInterface::GetValueAsActor(const struct FName& KeyName)
 {
@@ -8321,7 +8493,7 @@ class AActor* UUTSkillNodeBlackboardInterface::GetValueAsActor(const struct FNam
 // Function Skill.UTSkillNodeBlackboardInterface.GetUAEBlackboard
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UUAEBlackboard*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUAEBlackboard* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEBlackboard* UUTSkillNodeBlackboardInterface::GetUAEBlackboard()
 {
@@ -8346,8 +8518,8 @@ class UUAEBlackboard* UUTSkillNodeBlackboardInterface::GetUAEBlackboard()
 // Function Skill.UTSkillNodeBlackboardInterface.AddValueByKeySelector
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EUAEBlackboardType> BBType                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FUAEBlackboardKeySelector Key                            (ConstParm, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<enum EUAEBlackboardType> BBType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FUAEBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UUTSkillNodeBlackboardInterface::AddValueByKeySelector(TEnumAsByte<enum EUAEBlackboardType> BBType, const struct FUAEBlackboardKeySelector& Key)
 {
@@ -8372,8 +8544,8 @@ void UUTSkillNodeBlackboardInterface::AddValueByKeySelector(TEnumAsByte<enum EUA
 // Function Skill.UTSkillNodeBlackboardInterface.AddValueByKeName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EUAEBlackboardType> BBType                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TEnumAsByte<enum EUAEBlackboardType> BBType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
 void UUTSkillNodeBlackboardInterface::AddValueByKeName(TEnumAsByte<enum EUAEBlackboardType> BBType, const struct FName& KeyName)
 {
@@ -8398,7 +8570,7 @@ void UUTSkillNodeBlackboardInterface::AddValueByKeName(TEnumAsByte<enum EUAEBlac
 // Function Skill.UTSkillSpecificAction.UpdateAction_Internal
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillSpecificAction::UpdateAction_Internal(float DeltaSeconds)
 {
@@ -8464,7 +8636,7 @@ void UUTSkillSpecificAction::Reset_Internal()
 // Function Skill.UTSkillSpecificAction.RealDoAction_Internal
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUTSkillSpecificAction::RealDoAction_Internal()
 {
@@ -8489,8 +8661,8 @@ bool UUTSkillSpecificAction::RealDoAction_Internal()
 // Function Skill.UTSkillSpecificAction.PreCloseSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillSpecificAction::PreCloseSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -8515,8 +8687,8 @@ void UUTSkillSpecificAction::PreCloseSkill(class UUTSkillManagerComponent* Skill
 // Function Skill.UTSkillSpecificAction.PostInitSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillSpecificAction::PostInitSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {
@@ -8541,8 +8713,8 @@ void UUTSkillSpecificAction::PostInitSkill(class UUTSkillManagerComponent* Skill
 // Function Skill.UTSkillSpecificAction.PostActiveSkill
 // (Native, Public)
 // Parameters:
-// class UUTSkillManagerComponent* SkillManagerComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AUTSkill*                CurOwnerSkill                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UUTSkillManagerComponent* SkillManagerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AUTSkill* CurOwnerSkill (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUTSkillSpecificAction::PostActiveSkill(class UUTSkillManagerComponent* SkillManagerComponent, class AUTSkill* CurOwnerSkill)
 {

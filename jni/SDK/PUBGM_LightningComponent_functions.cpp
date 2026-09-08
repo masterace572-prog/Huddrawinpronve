@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function LightningComponent.LightningComponent.SetWidthDecay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InDecay                        (Parm, ZeroConstructor, IsPlainOldData)
+// float InDecay (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetWidthDecay(float InDecay)
 {
@@ -35,7 +35,7 @@ void ULightningComponent::SetWidthDecay(float InDecay)
 // Function LightningComponent.LightningComponent.SetShrinkWidth
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InBool                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool InBool (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetShrinkWidth(bool InBool)
 {
@@ -59,7 +59,7 @@ void ULightningComponent::SetShrinkWidth(bool InBool)
 // Function LightningComponent.LightningComponent.SetPatternMask
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InPatternMask                  (Parm, ZeroConstructor, IsPlainOldData)
+// int InPatternMask (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetPatternMask(int InPatternMask)
 {
@@ -83,7 +83,7 @@ void ULightningComponent::SetPatternMask(int InPatternMask)
 // Function LightningComponent.LightningComponent.SetMaxFractalTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InMaxFractalTime               (Parm, ZeroConstructor, IsPlainOldData)
+// int InMaxFractalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetMaxFractalTime(int InMaxFractalTime)
 {
@@ -107,7 +107,7 @@ void ULightningComponent::SetMaxFractalTime(int InMaxFractalTime)
 // Function LightningComponent.LightningComponent.SetLightningWidth
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InWidth                        (Parm, ZeroConstructor, IsPlainOldData)
+// float InWidth (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetLightningWidth(float InWidth)
 {
@@ -131,7 +131,7 @@ void ULightningComponent::SetLightningWidth(float InWidth)
 // Function LightningComponent.LightningComponent.SetBrightnessDecay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InDecay                        (Parm, ZeroConstructor, IsPlainOldData)
+// float InDecay (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetBrightnessDecay(float InDecay)
 {
@@ -155,7 +155,7 @@ void ULightningComponent::SetBrightnessDecay(float InDecay)
 // Function LightningComponent.LightningComponent.SetAtlasNum
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InVal                          (Parm, ZeroConstructor, IsPlainOldData)
+// int InVal (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULightningComponent::SetAtlasNum(int InVal)
 {
@@ -200,7 +200,7 @@ void ULightningComponent::RefreshLightningMesh()
 // Function LightningComponent.LightningComponent.IsShrinkWidth
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULightningComponent::IsShrinkWidth()
 {
@@ -225,7 +225,7 @@ bool ULightningComponent::IsShrinkWidth()
 // Function LightningComponent.LightningComponent.GetWidthDecay
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ULightningComponent::GetWidthDecay()
 {
@@ -250,7 +250,7 @@ float ULightningComponent::GetWidthDecay()
 // Function LightningComponent.LightningComponent.GetPatternMask
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULightningComponent::GetPatternMask()
 {
@@ -275,7 +275,7 @@ int ULightningComponent::GetPatternMask()
 // Function LightningComponent.LightningComponent.GetMaxFractalTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULightningComponent::GetMaxFractalTime()
 {
@@ -300,7 +300,7 @@ int ULightningComponent::GetMaxFractalTime()
 // Function LightningComponent.LightningComponent.GetLightningWidth
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ULightningComponent::GetLightningWidth()
 {
@@ -325,7 +325,7 @@ float ULightningComponent::GetLightningWidth()
 // Function LightningComponent.LightningComponent.GetBrightnessDecay
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ULightningComponent::GetBrightnessDecay()
 {
@@ -350,7 +350,7 @@ float ULightningComponent::GetBrightnessDecay()
 // Function LightningComponent.LightningComponent.GetAtlasNum
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ULightningComponent::GetAtlasNum()
 {

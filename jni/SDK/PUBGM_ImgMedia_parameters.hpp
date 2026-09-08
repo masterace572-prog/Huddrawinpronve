@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,19 +13,19 @@ namespace SDK
 // Function ImgMedia.ImgMediaSource.SetSequencePath
 struct UImgMediaSource_SetSequencePath_Params
 {
-	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
+	struct FString Path; // (Parm, ZeroConstructor)
 };
 
 // Function ImgMedia.ImgMediaSource.GetSequencePath
 struct UImgMediaSource_GetSequencePath_Params
 {
-	struct FString                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
+	struct FString ReturnValue; // (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function ImgMedia.ImgMediaSource.GetProxies
 struct UImgMediaSource_GetProxies_Params
 {
-	TArray<struct FString>                             OutProxies;                                               // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FString> OutProxies; // (Parm, OutParm, ZeroConstructor)
 };
 
 }

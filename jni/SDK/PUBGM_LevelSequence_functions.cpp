@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function LevelSequence.LevelSequenceActor.SetSequence
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULevelSequence*          InSequence                     (Parm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequence* InSequence (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 {
@@ -35,7 +35,7 @@ void ALevelSequenceActor::SetSequence(class ULevelSequence* InSequence)
 // Function LevelSequence.LevelSequenceActor.SetEventReceivers
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>          AdditionalReceivers            (Parm, ZeroConstructor)
+// TArray<class AActor*> AdditionalReceivers (Parm, ZeroConstructor)
 
 void ALevelSequenceActor::SetEventReceivers(TArray<class AActor*> AdditionalReceivers)
 {
@@ -59,9 +59,9 @@ void ALevelSequenceActor::SetEventReceivers(TArray<class AActor*> AdditionalRece
 // Function LevelSequence.LevelSequenceActor.SetBinding
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// TArray<class AActor*>          Actors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bAllowBindingsFromAsset        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// TArray<class AActor*> Actors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bAllowBindingsFromAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALevelSequenceActor::SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset)
 {
@@ -129,7 +129,7 @@ void ALevelSequenceActor::ResetBindings()
 // Function LevelSequence.LevelSequenceActor.ResetBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
+// struct FMovieSceneObjectBindingID Binding (Parm)
 
 void ALevelSequenceActor::ResetBinding(const struct FMovieSceneObjectBindingID& Binding)
 {
@@ -153,8 +153,8 @@ void ALevelSequenceActor::ResetBinding(const struct FMovieSceneObjectBindingID& 
 // Function LevelSequence.LevelSequenceActor.RemoveBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALevelSequenceActor::RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor)
 {
@@ -199,9 +199,9 @@ void ALevelSequenceActor::ReceiveInitailizePlayer()
 // Function LevelSequence.LevelSequenceActor.GetSequence
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           bLoad                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInitializePlayer              (Parm, ZeroConstructor, IsPlainOldData)
-// class ULevelSequence*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bLoad (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInitializePlayer (Parm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequence* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULevelSequence* ALevelSequenceActor::GetSequence(bool bLoad, bool bInitializePlayer)
 {
@@ -228,8 +228,8 @@ class ULevelSequence* ALevelSequenceActor::GetSequence(bool bLoad, bool bInitial
 // Function LevelSequence.LevelSequenceActor.GetPossessableByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 NameKeyString                  (Parm, ZeroConstructor)
-// struct FMovieSceneObjectBindingID ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString NameKeyString (Parm, ZeroConstructor)
+// struct FMovieSceneObjectBindingID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FMovieSceneObjectBindingID ALevelSequenceActor::GetPossessableByName(const struct FString& NameKeyString)
 {
@@ -255,9 +255,9 @@ struct FMovieSceneObjectBindingID ALevelSequenceActor::GetPossessableByName(cons
 // Function LevelSequence.LevelSequenceActor.AddBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowBindingsFromAsset        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllowBindingsFromAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset)
 {
@@ -283,7 +283,7 @@ void ALevelSequenceActor::AddBinding(const struct FMovieSceneObjectBindingID& Bi
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UObject*                 InSettings                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InSettings (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
 {
@@ -306,7 +306,7 @@ void ULevelSequenceBurnIn::SetSettings(class UObject* InSettings)
 // Function LevelSequence.LevelSequenceBurnIn.GetSettingsClass
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 {
@@ -331,7 +331,7 @@ class UClass* ULevelSequenceBurnIn::GetSettingsClass()
 // Function LevelSequence.LevelSequencePlayer.SetCanUpdateCameraCut
 // (Final, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULevelSequencePlayer::SetCanUpdateCameraCut(bool bEnable)
 {
@@ -352,14 +352,83 @@ void ULevelSequencePlayer::SetCanUpdateCameraCut(bool bEnable)
 }
 
 
+// Function LevelSequence.LevelSequencePlayer.IsActorBoundToSequence
+// (Final, Native, Protected, Const)
+// Parameters:
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ULevelSequencePlayer::IsActorBoundToSequence(class AActor* InActor)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.IsActorBoundToSequence");
+
+	ULevelSequencePlayer_IsActorBoundToSequence_Params params;
+	params.InActor = InActor;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function LevelSequence.LevelSequencePlayer.EnablePrimitiveComponentTracking
+// (Final, Native, Public)
+
+void ULevelSequencePlayer::EnablePrimitiveComponentTracking()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.EnablePrimitiveComponentTracking");
+
+	ULevelSequencePlayer_EnablePrimitiveComponentTracking_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function LevelSequence.LevelSequencePlayer.DisablePrimitiveComponentTracking
+// (Final, Native, Public)
+
+void ULevelSequencePlayer::DisablePrimitiveComponentTracking()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function LevelSequence.LevelSequencePlayer.DisablePrimitiveComponentTracking");
+
+	ULevelSequencePlayer_DisablePrimitiveComponentTracking_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class ULevelSequence*          LevelSequence                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FMovieSceneSequencePlaybackSettings Settings                       (Parm)
-// class ALevelSequenceActor*     OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class ULevelSequencePlayer*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequence* LevelSequence (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneSequencePlaybackSettings Settings (Parm)
+// class ALevelSequenceActor* OutActor (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequencePlayer* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULevelSequencePlayer* ULevelSequencePlayer::CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor)
 {

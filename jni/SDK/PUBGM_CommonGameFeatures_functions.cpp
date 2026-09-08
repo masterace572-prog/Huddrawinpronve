@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function CommonGameFeatures.ActorRepControlComponent.ToggleGroupedRepControlByUID
 // (Native, Public)
 // Parameters:
-// int64_t                        UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ControlMark                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RepControlGroup                (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// int ControlMark (Parm, ZeroConstructor, IsPlainOldData)
+// int RepControlGroup (Parm, ZeroConstructor, IsPlainOldData)
 
 void UActorRepControlComponent::ToggleGroupedRepControlByUID(int64_t UID, int ControlMark, int RepControlGroup)
 {
@@ -39,9 +39,9 @@ void UActorRepControlComponent::ToggleGroupedRepControlByUID(int64_t UID, int Co
 // Function CommonGameFeatures.ActorRepControlComponent.ShouldBlockRepByUID
 // (Native, Public, Const)
 // Parameters:
-// int64_t                        UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RepControlGroup                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// int RepControlGroup (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UActorRepControlComponent::ShouldBlockRepByUID(int64_t UID, int RepControlGroup)
 {
@@ -68,9 +68,9 @@ bool UActorRepControlComponent::ShouldBlockRepByUID(int64_t UID, int RepControlG
 // Function CommonGameFeatures.ActorRepControlComponent.GetControlGroupData
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            RepControlGroup                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRepControlGroupData    OutData                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int RepControlGroup (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRepControlGroupData OutData (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UActorRepControlComponent::GetControlGroupData(int RepControlGroup, struct FRepControlGroupData* OutData)
 {
@@ -99,10 +99,10 @@ bool UActorRepControlComponent::GetControlGroupData(int RepControlGroup, struct 
 // Function CommonGameFeatures.RepControlActorBase.IsNetRelevantForCustomCheck
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// class AActor*                  RealViewer                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ViewTarget                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SrcLocation                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* RealViewer (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ViewTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SrcLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ARepControlActorBase::IsNetRelevantForCustomCheck(class AActor* RealViewer, class AActor* ViewTarget, const struct FVector& SrcLocation)
 {

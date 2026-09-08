@@ -1,0 +1,20 @@
+#pragma once
+
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+
+namespace SDK
+{
+//---------------------By BangJO---------------------------
+//Script Structs
+//---------------------By BangJO---------------------------
+
+// UserDefinedStruct BP_STRUCT_VehicleAppliqueCfg_type.BP_STRUCT_VehicleAppliqueCfg_type
+// 0x0014
+struct FBP_STRUCT_VehicleAppliqueCfg_type
+{
+	struct FString AppliquePath_0_0938DD407E5DB90108E0280F0F1CFE48; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int ID_1_452ECD00502AA09A7D0AB5B901E7E7F4; // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+}
+

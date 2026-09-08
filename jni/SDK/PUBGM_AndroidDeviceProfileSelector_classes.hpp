@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class UAndroidCommonDeviceProfileGradeScore : public UObject
 {
 public:
-	int                                                MaxScore;                                                 // 0x0028(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FGradeScoreProfileName>              GradeScoreProfileName;                                    // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<float>                                      GradeScoreTypePercentage;                                 // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	int MaxScore; // 0x0028(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
+	TArray<struct FGradeScoreProfileName> GradeScoreProfileName; // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<float> GradeScoreTypePercentage; // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidCommonDeviceProfileGradeScore");
@@ -34,10 +33,9 @@ public:
 class UAndroidCommonDeviceProfileMatchingRules : public UObject
 {
 public:
-	TArray<struct FGradeProfileMatch>                  GradeMatchProfile;                                        // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FGradeProfileMatch> GradeMatchProfile; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidCommonDeviceProfileMatchingRules");
@@ -52,10 +50,9 @@ public:
 class UAndroidCommonDeviceProfileVulkanBlackList : public UObject
 {
 public:
-	TArray<struct FProfileMatch>                       VulkanList;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FProfileMatch> VulkanList; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidCommonDeviceProfileVulkanBlackList");
@@ -70,10 +67,9 @@ public:
 class UAndroidCommonDeviceProfileVulkanWhiteList : public UObject
 {
 public:
-	TArray<struct FProfileMatch>                       VulkanList;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FProfileMatch> VulkanList; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidCommonDeviceProfileVulkanWhiteList");
@@ -88,10 +84,9 @@ public:
 class UAndroidCommonDeviceProfileWhiteList : public UObject
 {
 public:
-	TArray<struct FProfileMatch>                       GradeMatchProfileWhiteList;                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FProfileMatch> GradeMatchProfileWhiteList; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidCommonDeviceProfileWhiteList");
@@ -106,10 +101,9 @@ public:
 class UAndroidDeviceProfileMatchingRules : public UObject
 {
 public:
-	TArray<struct FProfileMatch>                       MatchProfile;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FProfileMatch> MatchProfile; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidDeviceProfileMatchingRules");
@@ -124,10 +118,9 @@ public:
 class UAndroidJavaSurfaceViewDevices : public UObject
 {
 public:
-	TArray<struct FJavaSurfaceViewDevice>              SurfaceViewDevices;                                       // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FJavaSurfaceViewDevice> SurfaceViewDevices; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidJavaSurfaceViewDevices");
@@ -142,10 +135,9 @@ public:
 class UAndroidProjectDeviceProfileWhiteList : public UObject
 {
 public:
-	TArray<struct FProfileMatch>                       GradeMatchProfileWhiteList;                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FProfileMatch> GradeMatchProfileWhiteList; // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AndroidDeviceProfileSelector.AndroidProjectDeviceProfileWhiteList");

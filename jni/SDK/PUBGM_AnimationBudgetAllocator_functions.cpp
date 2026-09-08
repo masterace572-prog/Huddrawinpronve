@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function AnimationBudgetAllocator.SkeletalMeshComponentBudgeted.SetAutoRegisterWithBudgetAllocator
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAutoRegisterWithBudgetAllocator (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoRegisterWithBudgetAllocator (Parm, ZeroConstructor, IsPlainOldData)
 
 void USkeletalMeshComponentBudgeted::SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator)
 {
@@ -35,8 +35,8 @@ void USkeletalMeshComponentBudgeted::SetAutoRegisterWithBudgetAllocator(bool bIn
 // Function AnimationBudgetAllocator.AnimationBudgetBlueprintLibrary.SetAnimationBudgetParameters
 // (Final, Native, Static, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAnimationBudgetAllocatorParameters InParameters                   (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAnimationBudgetAllocatorParameters InParameters (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UAnimationBudgetBlueprintLibrary::SetAnimationBudgetParameters(class UObject* WorldContextObject, const struct FAnimationBudgetAllocatorParameters& InParameters)
 {
@@ -61,8 +61,8 @@ void UAnimationBudgetBlueprintLibrary::SetAnimationBudgetParameters(class UObjec
 // Function AnimationBudgetAllocator.AnimationBudgetBlueprintLibrary.EnableAnimationBudget
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAnimationBudgetBlueprintLibrary::EnableAnimationBudget(class UObject* WorldContextObject, bool bEnabled)
 {

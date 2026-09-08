@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,12 +13,11 @@ namespace SDK
 class UMovieSceneXTEventSection : public UMovieSceneSection
 {
 public:
-	struct FNameCurve                                  Events;                                                   // 0x00B0(0x0068) (Deprecated)
-	struct FMovieSceneXTEventSectionData               EventData;                                                // 0x0118(0x0020)
-	unsigned char                                      UnknownData00[0x88];                                      // 0x0138(0x0088) MISSED OFFSET
+	struct FNameCurve Events; // 0x00B0(0x0068) (Deprecated)
+	struct FMovieSceneXTEventSectionData EventData; // 0x0118(0x0020)
+	unsigned char UnknownData00[0x88]; // 0x0138(0x0088) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class EventTrackEx.MovieSceneXTEventSection");
@@ -33,11 +32,10 @@ public:
 class UMovieSceneXTEventTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<struct FMovieSceneObjectBindingID>          EventReceivers;                                           // 0x0058(0x0010) (Edit, ZeroConstructor)
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0068(0x0010) (ExportObject, ZeroConstructor)
+	TArray<struct FMovieSceneObjectBindingID> EventReceivers; // 0x0058(0x0010) (Edit, ZeroConstructor)
+	TArray<class UMovieSceneSection*> Sections; // 0x0068(0x0010) (ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class EventTrackEx.MovieSceneXTEventTrack");
@@ -52,13 +50,12 @@ public:
 class UMovieSceneXTQTESection : public UMovieSceneSection
 {
 public:
-	struct FString                                     MsgName;                                                  // 0x00B0(0x0010) (Edit, ZeroConstructor)
-	TArray<float>                                      Times;                                                    // 0x00C0(0x0010) (Edit, ZeroConstructor)
-	EXTQTEOperationArea                                OperationArea;                                            // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+	struct FString MsgName; // 0x00B0(0x0010) (Edit, ZeroConstructor)
+	TArray<float> Times; // 0x00C0(0x0010) (Edit, ZeroConstructor)
+	EXTQTEOperationArea OperationArea; // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x00D1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class EventTrackEx.MovieSceneXTQTESection");
@@ -73,10 +70,9 @@ public:
 class UMovieSceneXTQTETrack : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UMovieSceneSection*> Sections; // 0x0058(0x0010) (ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class EventTrackEx.MovieSceneXTQTETrack");

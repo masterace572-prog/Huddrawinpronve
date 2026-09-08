@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,11 +13,10 @@ namespace SDK
 class UBaseTableResMap : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	class UScriptStruct*                               DataStruct;                                               // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	class UScriptStruct* DataStruct; // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TableResInclude.BaseTableResMap");
@@ -33,8 +32,7 @@ class UEvoBaseMapUIMarkTableMap : public UBaseTableResMap
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TableResInclude.EvoBaseMapUIMarkTableMap");
@@ -52,8 +50,7 @@ class UEvoBaseModTableTestTableMap : public UBaseTableResMap
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class TableResInclude.EvoBaseModTableTestTableMap");

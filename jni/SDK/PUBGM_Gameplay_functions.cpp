@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function Gameplay.UAECharacter.SetNetCullDistanceSquared
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          fNetCullDistanceSquared        (Parm, ZeroConstructor, IsPlainOldData)
+// float fNetCullDistanceSquared (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAECharacter::SetNetCullDistanceSquared(float fNetCullDistanceSquared)
 {
@@ -35,7 +35,7 @@ void AUAECharacter::SetNetCullDistanceSquared(float fNetCullDistanceSquared)
 // Function Gameplay.UAECharacter.SetMEnsure
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bMValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAECharacter::SetMEnsure(bool bMValue)
 {
@@ -59,7 +59,7 @@ void AUAECharacter::SetMEnsure(bool bMValue)
 // Function Gameplay.UAECharacter.SetEnsure
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bValue                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAECharacter::SetEnsure(bool bValue)
 {
@@ -83,8 +83,8 @@ void AUAECharacter::SetEnsure(bool bValue)
 // Function Gameplay.UAECharacter.SendLuaDSToClient
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAECharacter::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -109,8 +109,8 @@ void AUAECharacter::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 // Function Gameplay.UAECharacter.RPC_LuaDSToClient
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAECharacter::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -282,7 +282,7 @@ void AUAECharacter::OnRep_CampID()
 // Function Gameplay.UAECharacter.IsDefaultCharType
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAECharacter::IsDefaultCharType()
 {
@@ -307,7 +307,7 @@ bool AUAECharacter::IsDefaultCharType()
 // Function Gameplay.UAECharacter.GetTeamId
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAECharacter::GetTeamId()
 {
@@ -332,7 +332,7 @@ int AUAECharacter::GetTeamId()
 // Function Gameplay.UAECharacter.GetRepMEnsure
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAECharacter::GetRepMEnsure()
 {
@@ -357,7 +357,7 @@ bool AUAECharacter::GetRepMEnsure()
 // Function Gameplay.UAECharacter.GetRepEnsure
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAECharacter::GetRepEnsure()
 {
@@ -382,7 +382,7 @@ bool AUAECharacter::GetRepEnsure()
 // Function Gameplay.UAECharacter.GetPlayerKey
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString AUAECharacter::GetPlayerKey()
 {
@@ -407,7 +407,7 @@ struct FString AUAECharacter::GetPlayerKey()
 // Function Gameplay.UAECharacter.GetPhysicsType
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAECharacter::GetPhysicsType()
 {
@@ -432,7 +432,7 @@ int AUAECharacter::GetPhysicsType()
 // Function Gameplay.UAECharacter.GetNonSimulatedComponents_OnFighting
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UActorComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UActorComponent*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_OnFighting()
 {
@@ -457,7 +457,7 @@ TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_OnFighti
 // Function Gameplay.UAECharacter.GetNonSimulatedComponents_NonTeammates
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UActorComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UActorComponent*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_NonTeammates()
 {
@@ -482,7 +482,7 @@ TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents_NonTeamm
 // Function Gameplay.UAECharacter.GetNonSimulatedComponents
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UActorComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UActorComponent*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents()
 {
@@ -507,7 +507,7 @@ TArray<class UActorComponent*> AUAECharacter::GetNonSimulatedComponents()
 // Function Gameplay.UAECharacter.GetNonDedicatedComponents
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UActorComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UActorComponent*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UActorComponent*> AUAECharacter::GetNonDedicatedComponents()
 {
@@ -532,7 +532,7 @@ TArray<class UActorComponent*> AUAECharacter::GetNonDedicatedComponents()
 // Function Gameplay.UAECharacter.GetMovementBaseComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPrimitiveComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UPrimitiveComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UPrimitiveComponent* AUAECharacter::GetMovementBaseComponent()
 {
@@ -557,7 +557,7 @@ class UPrimitiveComponent* AUAECharacter::GetMovementBaseComponent()
 // Function Gameplay.UAECharacter.GetMEnsure
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAECharacter::GetMEnsure()
 {
@@ -582,7 +582,7 @@ bool AUAECharacter::GetMEnsure()
 // Function Gameplay.UAECharacter.GetEnsure
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAECharacter::GetEnsure()
 {
@@ -607,7 +607,7 @@ bool AUAECharacter::GetEnsure()
 // Function Gameplay.UAECharacter.GetCampId
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAECharacter::GetCampId()
 {
@@ -632,7 +632,7 @@ int AUAECharacter::GetCampId()
 // Function Gameplay.UAECharacter.ClientAcknowledgeReconnection_3
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// uint32_t                       Token                          (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Token (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAECharacter::ClientAcknowledgeReconnection_3(uint32_t Token)
 {
@@ -698,7 +698,7 @@ void AUAEGameMode::SyncPlayerNames()
 // Function Gameplay.UAEGameMode.SyncNewCorpsData
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FDSCorpsInfo>    OutCorpsData                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FDSCorpsInfo> OutCorpsData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEGameMode::SyncNewCorpsData(TArray<struct FDSCorpsInfo> OutCorpsData)
 {
@@ -722,9 +722,9 @@ void AUAEGameMode::SyncNewCorpsData(TArray<struct FDSCorpsInfo> OutCorpsData)
 // Function Gameplay.UAEGameMode.SpawnUAEPawnFor
 // (Native, Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// class AController*             NewPlayer                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Trans                          (Parm, IsPlainOldData)
-// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* NewPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Trans (Parm, IsPlainOldData)
+// class APawn* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APawn* AUAEGameMode::SpawnUAEPawnFor(class AController* NewPlayer, const struct FTransform& Trans)
 {
@@ -751,8 +751,8 @@ class APawn* AUAEGameMode::SpawnUAEPawnFor(class AController* NewPlayer, const s
 // Function Gameplay.UAEGameMode.SetVehicleReportEntry
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InUniqueID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVehicleReportEntry     InEntry                        (Parm)
+// uint32_t InUniqueID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVehicleReportEntry InEntry (Parm)
 
 void AUAEGameMode::SetVehicleReportEntry(uint32_t InUniqueID, const struct FVehicleReportEntry& InEntry)
 {
@@ -777,8 +777,8 @@ void AUAEGameMode::SetVehicleReportEntry(uint32_t InUniqueID, const struct FVehi
 // Function Gameplay.UAEGameMode.SetPlayerOpenId
 // (Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InPlayerOpenID                 (Parm, ZeroConstructor)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPlayerOpenID (Parm, ZeroConstructor)
 
 void AUAEGameMode::SetPlayerOpenId(uint32_t InPlayerKey, const struct FString& InPlayerOpenID)
 {
@@ -803,7 +803,7 @@ void AUAEGameMode::SetPlayerOpenId(uint32_t InPlayerKey, const struct FString& I
 // Function Gameplay.UAEGameMode.SetMaxWeaponReportNum
 // (Final, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::SetMaxWeaponReportNum(int Num)
 {
@@ -827,8 +827,8 @@ void AUAEGameMode::SetMaxWeaponReportNum(int Num)
 // Function Gameplay.UAEGameMode.SetKillerPlayerKey
 // (Native, Public)
 // Parameters:
-// class AController*             VictimPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       KillerPlayerKey                (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* VictimPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t KillerPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::SetKillerPlayerKey(class AController* VictimPlayer, uint32_t KillerPlayerKey)
 {
@@ -874,8 +874,8 @@ void AUAEGameMode::SetGameEndReportData()
 // Function Gameplay.UAEGameMode.RetrieveTeamBattleResultData
 // (Native, Public)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameModeTeamBattleResultData ReturnValue                    (Parm, OutParm, ReturnParm)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameModeTeamBattleResultData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameModeTeamBattleResultData AUAEGameMode::RetrieveTeamBattleResultData(int TeamID)
 {
@@ -901,7 +901,7 @@ struct FGameModeTeamBattleResultData AUAEGameMode::RetrieveTeamBattleResultData(
 // Function Gameplay.UAEGameMode.RetrieveBattleData
 // (Native, Public, HasOutParms)
 // Parameters:
-// struct FBattleData             OutBattleData                  (Parm, OutParm)
+// struct FBattleData OutBattleData (Parm, OutParm)
 
 void AUAEGameMode::RetrieveBattleData(struct FBattleData* OutBattleData)
 {
@@ -927,8 +927,8 @@ void AUAEGameMode::RetrieveBattleData(struct FBattleData* OutBattleData)
 // Function Gameplay.UAEGameMode.RestartPlayerAtPlayerStart
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class AController*             NewPlayer                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  StartSpot                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* NewPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* StartSpot (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::RestartPlayerAtPlayerStart(class AController* NewPlayer, class AActor* StartSpot)
 {
@@ -974,8 +974,8 @@ void AUAEGameMode::ResetGameParamsFromGameMode()
 // Function Gameplay.UAEGameMode.Rescue
 // (Native, Public)
 // Parameters:
-// class APawn*                   RescueWho                      (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   Hero                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* RescueWho (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Hero (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::Rescue(class APawn* RescueWho, class APawn* Hero)
 {
@@ -1000,8 +1000,8 @@ void AUAEGameMode::Rescue(class APawn* RescueWho, class APawn* Hero)
 // Function Gameplay.UAEGameMode.RegisterItemGroupSpotsByTag
 // (Native, Public)
 // Parameters:
-// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
-// class UGroupSpotSceneComponent* GroupSpotComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName Tag (Parm, ZeroConstructor, IsPlainOldData)
+// class UGroupSpotSceneComponent* GroupSpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void AUAEGameMode::RegisterItemGroupSpotsByTag(const struct FName& Tag, class UGroupSpotSceneComponent* GroupSpotComponent)
 {
@@ -1026,7 +1026,7 @@ void AUAEGameMode::RegisterItemGroupSpotsByTag(const struct FName& Tag, class UG
 // Function Gameplay.UAEGameMode.RegisterItemGroupSpots
 // (Native, Public)
 // Parameters:
-// class UGroupSpotSceneComponent* GroupSpotComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UGroupSpotSceneComponent* GroupSpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void AUAEGameMode::RegisterItemGroupSpots(class UGroupSpotSceneComponent* GroupSpotComponent)
 {
@@ -1071,8 +1071,8 @@ void AUAEGameMode::RefreshWorldActiveRange()
 // Function Gameplay.UAEGameMode.RefreshWatchTeammates
 // (Native, Public)
 // Parameters:
-// class AUAEPlayerController*    InController                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InTeamID                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
+// int InTeamID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::RefreshWatchTeammates(class AUAEPlayerController* InController, int InTeamID)
 {
@@ -1097,12 +1097,12 @@ void AUAEGameMode::RefreshWatchTeammates(class AUAEPlayerController* InControlle
 // Function Gameplay.UAEGameMode.RefreshPlayerNames
 // (Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InPlayerName                   (Parm, ZeroConstructor)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLogin                        (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IdxInTeam                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPlayerName (Parm, ZeroConstructor)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLogin (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// int IdxInTeam (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::RefreshPlayerNames(uint32_t InPlayerKey, const struct FString& InPlayerName, int TeamID, bool IsLogin, uint64_t UID, int IdxInTeam)
 {
@@ -1131,7 +1131,7 @@ void AUAEGameMode::RefreshPlayerNames(uint32_t InPlayerKey, const struct FString
 // Function Gameplay.UAEGameMode.RecoardAlivePlayerNum
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEGameMode::RecoardAlivePlayerNum()
 {
@@ -1156,8 +1156,8 @@ int AUAEGameMode::RecoardAlivePlayerNum()
 // Function Gameplay.UAEGameMode.PreCreatePlayerController
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* AUAEGameMode::PreCreatePlayerController(uint32_t PlayerKey)
 {
@@ -1225,7 +1225,7 @@ void AUAEGameMode::OnReportNetworkData()
 // Function Gameplay.UAEGameMode.OnPlayerFiring
 // (Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnPlayerFiring(uint32_t InPlayerKey)
 {
@@ -1249,7 +1249,7 @@ void AUAEGameMode::OnPlayerFiring(uint32_t InPlayerKey)
 // Function Gameplay.UAEGameMode.OnPlayerControlDestroyEnd
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnPlayerControlDestroyEnd(uint32_t PlayerKey)
 {
@@ -1273,8 +1273,8 @@ void AUAEGameMode::OnPlayerControlDestroyEnd(uint32_t PlayerKey)
 // Function Gameplay.UAEGameMode.OnPlayerBreathChange
 // (Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InBreath                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// float InBreath (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnPlayerBreathChange(uint32_t InPlayerKey, float InBreath)
 {
@@ -1299,7 +1299,7 @@ void AUAEGameMode::OnPlayerBreathChange(uint32_t InPlayerKey, float InBreath)
 // Function Gameplay.UAEGameMode.OnObserverLogout
 // (Native, Protected)
 // Parameters:
-// class AUAEPlayerController*    InController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnObserverLogout(class AUAEPlayerController* InController)
 {
@@ -1323,7 +1323,7 @@ void AUAEGameMode::OnObserverLogout(class AUAEPlayerController* InController)
 // Function Gameplay.UAEGameMode.OnObserverLogin
 // (Native, Protected)
 // Parameters:
-// class AUAEPlayerController*    InController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnObserverLogin(class AUAEPlayerController* InController)
 {
@@ -1347,7 +1347,7 @@ void AUAEGameMode::OnObserverLogin(class AUAEPlayerController* InController)
 // Function Gameplay.UAEGameMode.OnMsg
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Msg                            (Parm, ZeroConstructor)
+// struct FString Msg (Parm, ZeroConstructor)
 
 void AUAEGameMode::OnMsg(const struct FString& Msg)
 {
@@ -1371,8 +1371,8 @@ void AUAEGameMode::OnMsg(const struct FString& Msg)
 // Function Gameplay.UAEGameMode.OnAirDropBoxLanded
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            boxId                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int boxId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AUAEGameMode::OnAirDropBoxLanded(int boxId, const struct FVector& Pos)
 {
@@ -1397,7 +1397,7 @@ void AUAEGameMode::OnAirDropBoxLanded(int boxId, const struct FVector& Pos)
 // Function Gameplay.UAEGameMode.OnAirDropBoxEmpty
 // (Native, Public)
 // Parameters:
-// int                            boxId                          (Parm, ZeroConstructor, IsPlainOldData)
+// int boxId (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::OnAirDropBoxEmpty(int boxId)
 {
@@ -1421,9 +1421,9 @@ void AUAEGameMode::OnAirDropBoxEmpty(int boxId)
 // Function Gameplay.UAEGameMode.NotifyPlayerExitWhenNotStarted
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Reason                         (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Reason (Parm, ZeroConstructor)
 
 void AUAEGameMode::NotifyPlayerExitWhenNotStarted(uint32_t PlayerKey, const struct FName& PlayerType, const struct FString& Reason)
 {
@@ -1449,14 +1449,14 @@ void AUAEGameMode::NotifyPlayerExitWhenNotStarted(uint32_t PlayerKey, const stru
 // Function Gameplay.UAEGameMode.NotifyPlayerExit
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDestroyPlayerController       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDestroyCharacter              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSendFailure                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FailureMessage                 (Parm, ZeroConstructor)
-// struct FName                   ParamState                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ParamReason                    (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDestroyPlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDestroyCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSendFailure (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FailureMessage (Parm, ZeroConstructor)
+// struct FName ParamState (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ParamReason (Parm, ZeroConstructor)
 
 void AUAEGameMode::NotifyPlayerExit(uint32_t PlayerKey, const struct FName& PlayerType, bool bDestroyPlayerController, bool bDestroyCharacter, bool bSendFailure, const struct FString& FailureMessage, const struct FName& ParamState, const struct FString& ParamReason)
 {
@@ -1487,8 +1487,8 @@ void AUAEGameMode::NotifyPlayerExit(uint32_t PlayerKey, const struct FName& Play
 // Function Gameplay.UAEGameMode.NotifyPlayerAbleToExitSafely
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::NotifyPlayerAbleToExitSafely(uint32_t PlayerKey, const struct FName& PlayerType)
 {
@@ -1513,7 +1513,7 @@ void AUAEGameMode::NotifyPlayerAbleToExitSafely(uint32_t PlayerKey, const struct
 // Function Gameplay.UAEGameMode.NotifyGameModeParamsChanged
 // (Native, Public, HasOutParms)
 // Parameters:
-// struct FGameModeParams         GameModeParams                 (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameModeParams GameModeParams (ConstParm, Parm, OutParm, ReferenceParm)
 
 void AUAEGameMode::NotifyGameModeParamsChanged(const struct FGameModeParams& GameModeParams)
 {
@@ -1537,8 +1537,8 @@ void AUAEGameMode::NotifyGameModeParamsChanged(const struct FGameModeParams& Gam
 // Function Gameplay.UAEGameMode.NotifyGameModeLuckmate
 // (Native, Public)
 // Parameters:
-// int64_t                        MyUID                          (Parm, ZeroConstructor, IsPlainOldData)
-// int64_t                        LuckmateUID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t MyUID (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t LuckmateUID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::NotifyGameModeLuckmate(int64_t MyUID, int64_t LuckmateUID)
 {
@@ -1584,7 +1584,7 @@ void AUAEGameMode::NotifyGameModeInit()
 // Function Gameplay.UAEGameMode.NotifyExistPlayerReEnter
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::NotifyExistPlayerReEnter(uint32_t PlayerKey)
 {
@@ -1608,9 +1608,9 @@ void AUAEGameMode::NotifyExistPlayerReEnter(uint32_t PlayerKey)
 // Function Gameplay.UAEGameMode.NotifyAIPlayerEnter
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsMLAI                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTeammateAI                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsMLAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool bTeammateAI (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::NotifyAIPlayerEnter(uint32_t PlayerKey, bool IsMLAI, bool bTeammateAI)
 {
@@ -1636,8 +1636,8 @@ void AUAEGameMode::NotifyAIPlayerEnter(uint32_t PlayerKey, bool IsMLAI, bool bTe
 // Function Gameplay.UAEGameMode.NotifyAIDropInfo
 // (Native, Public, HasOutParms)
 // Parameters:
-// int                            NewAI                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDSAIDropInfo           Info                           (ConstParm, Parm, OutParm, ReferenceParm)
+// int NewAI (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDSAIDropInfo Info (ConstParm, Parm, OutParm, ReferenceParm)
 
 void AUAEGameMode::NotifyAIDropInfo(int NewAI, const struct FDSAIDropInfo& Info)
 {
@@ -1662,12 +1662,12 @@ void AUAEGameMode::NotifyAIDropInfo(int NewAI, const struct FDSAIDropInfo& Info)
 // Function Gameplay.UAEGameMode.ModifyVehicleDamage
 // (Native, Public, HasOutParms)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  VictimVehicle                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// class AController* EventInstigator (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* VictimVehicle (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUAEGameMode::ModifyVehicleDamage(float Damage, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* VictimVehicle, class AActor* DamageCauser)
 {
@@ -1697,12 +1697,12 @@ float AUAEGameMode::ModifyVehicleDamage(float Damage, const struct FDamageEvent&
 // Function Gameplay.UAEGameMode.ModifyDamage
 // (Native, Public, HasOutParms)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             VictimController               (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// class AController* EventInstigator (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* VictimController (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUAEGameMode::ModifyDamage(float Damage, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AController* VictimController, class AActor* DamageCauser)
 {
@@ -1732,11 +1732,11 @@ float AUAEGameMode::ModifyDamage(float Damage, const struct FDamageEvent& Damage
 // Function Gameplay.UAEGameMode.Killed
 // (Native, Public, HasOutParms)
 // Parameters:
-// class AController*             Killer                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             VictimPlayer                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   VictimPawn                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
+// class AController* Killer (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* VictimPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* VictimPawn (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
 
 void AUAEGameMode::Killed(class AController* Killer, class AController* VictimPlayer, class AActor* DamageCauser, class APawn* VictimPawn, const struct FDamageEvent& DamageEvent)
 {
@@ -1764,7 +1764,7 @@ void AUAEGameMode::Killed(class AController* Killer, class AController* VictimPl
 // Function Gameplay.UAEGameMode.IsStandAloneGameMode
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameMode::IsStandAloneGameMode()
 {
@@ -1789,8 +1789,8 @@ bool AUAEGameMode::IsStandAloneGameMode()
 // Function Gameplay.UAEGameMode.IsSatisfyGeneratorArea
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameMode::IsSatisfyGeneratorArea(const struct FVector& Location)
 {
@@ -1816,7 +1816,7 @@ bool AUAEGameMode::IsSatisfyGeneratorArea(const struct FVector& Location)
 // Function Gameplay.UAEGameMode.IsCollectingOBData
 // (Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameMode::IsCollectingOBData()
 {
@@ -2030,8 +2030,8 @@ void AUAEGameMode::Heartbeat()
 // Function Gameplay.UAEGameMode.HasVehicleReportEntry
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InUniqueID                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t InUniqueID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameMode::HasVehicleReportEntry(uint32_t InUniqueID)
 {
@@ -2057,7 +2057,7 @@ bool AUAEGameMode::HasVehicleReportEntry(uint32_t InUniqueID)
 // Function Gameplay.UAEGameMode.HasDynamicBuildingGroup
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameMode::HasDynamicBuildingGroup()
 {
@@ -2082,11 +2082,11 @@ bool AUAEGameMode::HasDynamicBuildingGroup()
 // Function Gameplay.UAEGameMode.HandlePlayerPaintDecalResponse
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DecalId                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
+// int DecalId (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::HandlePlayerPaintDecalResponse(uint32_t PlayerKey, const struct FName& PlayerType, int Result, int DecalId, int Count)
 {
@@ -2114,8 +2114,8 @@ void AUAEGameMode::HandlePlayerPaintDecalResponse(uint32_t PlayerKey, const stru
 // Function Gameplay.UAEGameMode.GotoNearDeath
 // (Native, Public)
 // Parameters:
-// class AController*             DamageInstigator               (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   VictimPawn                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* DamageInstigator (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* VictimPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::GotoNearDeath(class AController* DamageInstigator, class APawn* VictimPawn)
 {
@@ -2140,8 +2140,8 @@ void AUAEGameMode::GotoNearDeath(class AController* DamageInstigator, class APaw
 // Function Gameplay.UAEGameMode.GetWeaponReportByWeaponRecord
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 PlayerKey                      (Parm, ZeroConstructor)
-// struct FOnePlayerWeapon        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString PlayerKey (Parm, ZeroConstructor)
+// struct FOnePlayerWeapon ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FOnePlayerWeapon AUAEGameMode::GetWeaponReportByWeaponRecord(const struct FString& PlayerKey)
 {
@@ -2166,9 +2166,9 @@ struct FOnePlayerWeapon AUAEGameMode::GetWeaponReportByWeaponRecord(const struct
 // Function Gameplay.UAEGameMode.GetWeaponDamageFromRecord
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 PlayerKey                      (Parm, ZeroConstructor)
-// int                            TargetWeaponType               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString PlayerKey (Parm, ZeroConstructor)
+// int TargetWeaponType (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUAEGameMode::GetWeaponDamageFromRecord(const struct FString& PlayerKey, int TargetWeaponType)
 {
@@ -2194,8 +2194,8 @@ float AUAEGameMode::GetWeaponDamageFromRecord(const struct FString& PlayerKey, i
 // Function Gameplay.UAEGameMode.GetVehicleReportEntry
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InUniqueID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVehicleReportEntry     ReturnValue                    (Parm, OutParm, ReturnParm)
+// uint32_t InUniqueID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVehicleReportEntry ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleReportEntry AUAEGameMode::GetVehicleReportEntry(uint32_t InUniqueID)
 {
@@ -2221,7 +2221,7 @@ struct FVehicleReportEntry AUAEGameMode::GetVehicleReportEntry(uint32_t InUnique
 // Function Gameplay.UAEGameMode.GetSurvivingTeamCount
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEGameMode::GetSurvivingTeamCount()
 {
@@ -2246,7 +2246,7 @@ int AUAEGameMode::GetSurvivingTeamCount()
 // Function Gameplay.UAEGameMode.GetSurvivingCharacterCount
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEGameMode::GetSurvivingCharacterCount()
 {
@@ -2271,9 +2271,9 @@ int AUAEGameMode::GetSurvivingCharacterCount()
 // Function Gameplay.UAEGameMode.GetRescueDuration
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  WhoRescue                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  RescueWho                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* WhoRescue (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* RescueWho (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUAEGameMode::GetRescueDuration(class AActor* WhoRescue, class AActor* RescueWho)
 {
@@ -2300,8 +2300,8 @@ float AUAEGameMode::GetRescueDuration(class AActor* WhoRescue, class AActor* Res
 // Function Gameplay.UAEGameMode.GetPlayerTotalShootNum
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 PlayerKey                      (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString PlayerKey (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEGameMode::GetPlayerTotalShootNum(const struct FString& PlayerKey)
 {
@@ -2326,9 +2326,9 @@ int AUAEGameMode::GetPlayerTotalShootNum(const struct FString& PlayerKey)
 // Function Gameplay.UAEGameMode.GetPlayerStateListWithTeamID
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AUAEPlayerState*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AUAEPlayerState*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AUAEPlayerState*> AUAEGameMode::GetPlayerStateListWithTeamID(int TeamID, const struct FName& PlayerType)
 {
@@ -2355,8 +2355,8 @@ TArray<class AUAEPlayerState*> AUAEGameMode::GetPlayerStateListWithTeamID(int Te
 // Function Gameplay.UAEGameMode.GetPlayerRealtimeVerifyInfo
 // (Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRealtimeVerifyInfo     RealtimeVerifyInfo             (Parm, OutParm)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRealtimeVerifyInfo RealtimeVerifyInfo (Parm, OutParm)
 
 void AUAEGameMode::GetPlayerRealtimeVerifyInfo(uint32_t PlayerKey, struct FRealtimeVerifyInfo* RealtimeVerifyInfo)
 {
@@ -2383,8 +2383,8 @@ void AUAEGameMode::GetPlayerRealtimeVerifyInfo(uint32_t PlayerKey, struct FRealt
 // Function Gameplay.UAEGameMode.GetPlayerControllerWithUID
 // (Final, Native, Public, Const)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// class AUAEPlayerController*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUAEPlayerController* AUAEGameMode::GetPlayerControllerWithUID(uint64_t UID)
 {
@@ -2410,9 +2410,9 @@ class AUAEPlayerController* AUAEGameMode::GetPlayerControllerWithUID(uint64_t UI
 // Function Gameplay.UAEGameMode.GetPlayerControllerListWithTeamID
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AUAEPlayerController*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AUAEPlayerController*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AUAEPlayerController*> AUAEGameMode::GetPlayerControllerListWithTeamID(int TeamID, const struct FName& PlayerType)
 {
@@ -2439,7 +2439,7 @@ TArray<class AUAEPlayerController*> AUAEGameMode::GetPlayerControllerListWithTea
 // Function Gameplay.UAEGameMode.GetPlayerAndRealAiNum
 // (Native, Public, HasOutParms)
 // Parameters:
-// struct FHeartBeatData          Data                           (Parm, OutParm)
+// struct FHeartBeatData Data (Parm, OutParm)
 
 void AUAEGameMode::GetPlayerAndRealAiNum(struct FHeartBeatData* Data)
 {
@@ -2465,7 +2465,7 @@ void AUAEGameMode::GetPlayerAndRealAiNum(struct FHeartBeatData* Data)
 // Function Gameplay.UAEGameMode.GetObserverControllerList
 // (Final, Native, Public)
 // Parameters:
-// TArray<class AUAEPlayerController*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AUAEPlayerController*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AUAEPlayerController*> AUAEGameMode::GetObserverControllerList()
 {
@@ -2490,7 +2490,7 @@ TArray<class AUAEPlayerController*> AUAEGameMode::GetObserverControllerList()
 // Function Gameplay.UAEGameMode.GetMonsterNum
 // (Native, Public, HasOutParms)
 // Parameters:
-// struct FHeartBeatData          Data                           (Parm, OutParm)
+// struct FHeartBeatData Data (Parm, OutParm)
 
 void AUAEGameMode::GetMonsterNum(struct FHeartBeatData* Data)
 {
@@ -2516,7 +2516,7 @@ void AUAEGameMode::GetMonsterNum(struct FHeartBeatData* Data)
 // Function Gameplay.UAEGameMode.GetMaxWeaponReportNum
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEGameMode::GetMaxWeaponReportNum()
 {
@@ -2541,7 +2541,7 @@ int AUAEGameMode::GetMaxWeaponReportNum()
 // Function Gameplay.UAEGameMode.GetClassicPlaneDirection
 // (Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector AUAEGameMode::GetClassicPlaneDirection()
 {
@@ -2566,9 +2566,9 @@ struct FVector AUAEGameMode::GetClassicPlaneDirection()
 // Function Gameplay.UAEGameMode.FindPlayerStateWithPlayerKey
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AUAEPlayerState*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerState* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUAEPlayerState* AUAEGameMode::FindPlayerStateWithPlayerKey(uint32_t PlayerKey, const struct FName& PlayerType)
 {
@@ -2595,9 +2595,9 @@ class AUAEPlayerState* AUAEGameMode::FindPlayerStateWithPlayerKey(uint32_t Playe
 // Function Gameplay.UAEGameMode.FindPlayerControllerWithPlayerKey
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AUAEPlayerController*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUAEPlayerController* AUAEGameMode::FindPlayerControllerWithPlayerKey(uint32_t PlayerKey, const struct FName& PlayerType)
 {
@@ -2624,8 +2624,8 @@ class AUAEPlayerController* AUAEGameMode::FindPlayerControllerWithPlayerKey(uint
 // Function Gameplay.UAEGameMode.FindPlayerControllerByUId
 // (Native, Public, Const)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* AUAEGameMode::FindPlayerControllerByUId(uint64_t UID)
 {
@@ -2651,9 +2651,9 @@ class APlayerController* AUAEGameMode::FindPlayerControllerByUId(uint64_t UID)
 // Function Gameplay.UAEGameMode.FindControllerWithPlayerKey
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AController* AUAEGameMode::FindControllerWithPlayerKey(uint32_t PlayerKey, const struct FName& PlayerType)
 {
@@ -2680,8 +2680,8 @@ class AController* AUAEGameMode::FindControllerWithPlayerKey(uint32_t PlayerKey,
 // Function Gameplay.UAEGameMode.DestroyNoActiveWorldActor
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
-// float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, OutParm, IsPlainOldData)
+// float Radius (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::DestroyNoActiveWorldActor(struct FVector* Location, float* Radius)
 {
@@ -2709,7 +2709,7 @@ void AUAEGameMode::DestroyNoActiveWorldActor(struct FVector* Location, float* Ra
 // Function Gameplay.UAEGameMode.DestroyCharacterForPlayerController
 // (Native, Public)
 // Parameters:
-// class APlayerController*       PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::DestroyCharacterForPlayerController(class APlayerController* PC)
 {
@@ -2796,7 +2796,7 @@ void AUAEGameMode::DeleteDynamicLoadItem()
 // Function Gameplay.UAEGameMode.DebugEnterFriendObserver
 // (Native, Public)
 // Parameters:
-// class AUAEPlayerController*    InController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::DebugEnterFriendObserver(class AUAEPlayerController* InController)
 {
@@ -2820,7 +2820,7 @@ void AUAEGameMode::DebugEnterFriendObserver(class AUAEPlayerController* InContro
 // Function Gameplay.UAEGameMode.CreateDynamicBuildingGroups
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Offset                         (Parm, IsPlainOldData)
+// struct FVector Offset (Parm, IsPlainOldData)
 
 void AUAEGameMode::CreateDynamicBuildingGroups(const struct FVector& Offset)
 {
@@ -2844,9 +2844,9 @@ void AUAEGameMode::CreateDynamicBuildingGroups(const struct FVector& Offset)
 // Function Gameplay.UAEGameMode.ChangeName
 // (Native, Public)
 // Parameters:
-// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 NewName                        (Parm, ZeroConstructor)
-// bool                           bNameChange                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* Controller (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString NewName (Parm, ZeroConstructor)
+// bool bNameChange (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEGameMode::ChangeName(class AController* Controller, const struct FString& NewName, bool bNameChange)
 {
@@ -2872,8 +2872,8 @@ void AUAEGameMode::ChangeName(class AController* Controller, const struct FStrin
 // Function Gameplay.UAEGameMode.AddAirDropBox
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// int                            boxId                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int boxId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AUAEGameMode::AddAirDropBox(int boxId, const struct FVector& Pos)
 {
@@ -2898,8 +2898,8 @@ void AUAEGameMode::AddAirDropBox(int boxId, const struct FVector& Pos)
 // Function Gameplay.UAEGameState.SendLuaDSToClient
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEGameState::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -2924,8 +2924,8 @@ void AUAEGameState::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 // Function Gameplay.UAEGameState.RPC_LuaDSToClient
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEGameState::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -2950,8 +2950,8 @@ void AUAEGameState::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 // Function Gameplay.UAEGameState.HasTimeIDSwitch
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TimeID                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TimeID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameState::HasTimeIDSwitch(int TimeID)
 {
@@ -2977,8 +2977,8 @@ bool AUAEGameState::HasTimeIDSwitch(int TimeID)
 // Function Gameplay.UAEGameState.CheckDSSwitchOpen
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SwitchId                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SwitchId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEGameState::CheckDSSwitchOpen(int SwitchId)
 {
@@ -3004,8 +3004,8 @@ bool AUAEGameState::CheckDSSwitchOpen(int SwitchId)
 // Function Gameplay.UAEPlayerState.SetRankAndPersonalRank
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TempRank                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TempPersonalRank               (Parm, ZeroConstructor, IsPlainOldData)
+// int TempRank (Parm, ZeroConstructor, IsPlainOldData)
+// int TempPersonalRank (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::SetRankAndPersonalRank(int TempRank, int TempPersonalRank)
 {
@@ -3030,7 +3030,7 @@ void AUAEPlayerState::SetRankAndPersonalRank(int TempRank, int TempPersonalRank)
 // Function Gameplay.UAEPlayerState.SetGVMemberIDServerCall
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            memberID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int memberID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::SetGVMemberIDServerCall(int memberID)
 {
@@ -3054,7 +3054,7 @@ void AUAEPlayerState::SetGVMemberIDServerCall(int memberID)
 // Function Gameplay.UAEPlayerState.SetGVMemberID
 // (Final, Native, Public)
 // Parameters:
-// int                            memberID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int memberID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::SetGVMemberID(int memberID)
 {
@@ -3078,9 +3078,9 @@ void AUAEPlayerState::SetGVMemberID(int memberID)
 // Function Gameplay.UAEPlayerState.SetDeliveryResult
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InDeliverPlayerKey             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInSuccess                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EventTypeId                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InDeliverPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInSuccess (Parm, ZeroConstructor, IsPlainOldData)
+// int EventTypeId (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::SetDeliveryResult(uint32_t InDeliverPlayerKey, bool bInSuccess, int EventTypeId)
 {
@@ -3106,8 +3106,8 @@ void AUAEPlayerState::SetDeliveryResult(uint32_t InDeliverPlayerKey, bool bInSuc
 // Function Gameplay.UAEPlayerState.SendLuaDSToClient
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerState::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -3132,9 +3132,9 @@ void AUAEPlayerState::SendLuaDSToClient(int ID, TArray<unsigned char> Content)
 // Function Gameplay.UAEPlayerState.RPC_ServerAddGeneralCount
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCount                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int InCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::RPC_ServerAddGeneralCount(int ID, int InCount, bool bReset)
 {
@@ -3160,8 +3160,8 @@ void AUAEPlayerState::RPC_ServerAddGeneralCount(int ID, int InCount, bool bReset
 // Function Gameplay.UAEPlayerState.RPC_LuaDSToClient
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerState::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -3186,7 +3186,7 @@ void AUAEPlayerState::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 // Function Gameplay.UAEPlayerState.RPC_ChangeOnlyTeamChat
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// int                            NewPreTeamChatState            (Parm, ZeroConstructor, IsPlainOldData)
+// int NewPreTeamChatState (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::RPC_ChangeOnlyTeamChat(int NewPreTeamChatState)
 {
@@ -3210,8 +3210,8 @@ void AUAEPlayerState::RPC_ChangeOnlyTeamChat(int NewPreTeamChatState)
 // Function Gameplay.UAEPlayerState.ReportTaskExtInfo
 // (Final, Native, Public)
 // Parameters:
-// int                            TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ExtInfo                        (Parm, ZeroConstructor)
+// int TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ExtInfo (Parm, ZeroConstructor)
 
 void AUAEPlayerState::ReportTaskExtInfo(int TaskId, const struct FString& ExtInfo)
 {
@@ -3236,8 +3236,8 @@ void AUAEPlayerState::ReportTaskExtInfo(int TaskId, const struct FString& ExtInf
 // Function Gameplay.UAEPlayerState.ReportTaskData
 // (Final, Native, Public)
 // Parameters:
-// int                            TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            process                        (Parm, ZeroConstructor, IsPlainOldData)
+// int TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// int process (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportTaskData(int TaskId, int process)
 {
@@ -3262,8 +3262,8 @@ void AUAEPlayerState::ReportTaskData(int TaskId, int process)
 // Function Gameplay.UAEPlayerState.ReportSpecialCollection
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportSpecialCollection(int ItemId, int Count)
 {
@@ -3288,7 +3288,7 @@ void AUAEPlayerState::ReportSpecialCollection(int ItemId, int Count)
 // Function Gameplay.UAEPlayerState.ReportSecretAreaID
 // (Final, Native, Public)
 // Parameters:
-// int                            SecretAreaID                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SecretAreaID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportSecretAreaID(int SecretAreaID)
 {
@@ -3312,8 +3312,8 @@ void AUAEPlayerState::ReportSecretAreaID(int SecretAreaID)
 // Function Gameplay.UAEPlayerState.ReportLikeTeammate
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        BeLikeUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LikeType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t BeLikeUID (Parm, ZeroConstructor, IsPlainOldData)
+// int LikeType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLikeTeammate(int64_t BeLikeUID, int LikeType)
 {
@@ -3338,7 +3338,7 @@ void AUAEPlayerState::ReportLikeTeammate(int64_t BeLikeUID, int LikeType)
 // Function Gameplay.UAEPlayerState.ReportLikeSwitch
 // (Final, Native, Public)
 // Parameters:
-// int                            SwitchSetting                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SwitchSetting (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLikeSwitch(int SwitchSetting)
 {
@@ -3362,7 +3362,7 @@ void AUAEPlayerState::ReportLikeSwitch(int SwitchSetting)
 // Function Gameplay.UAEPlayerState.ReportLikeSelf
 // (Final, Native, Public)
 // Parameters:
-// int                            LikeType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int LikeType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLikeSelf(int LikeType)
 {
@@ -3386,7 +3386,7 @@ void AUAEPlayerState::ReportLikeSelf(int LikeType)
 // Function Gameplay.UAEPlayerState.ReportLandLocType
 // (Final, Native, Public)
 // Parameters:
-// int                            TouchDownLocType               (Parm, ZeroConstructor, IsPlainOldData)
+// int TouchDownLocType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLandLocType(int TouchDownLocType)
 {
@@ -3410,7 +3410,7 @@ void AUAEPlayerState::ReportLandLocType(int TouchDownLocType)
 // Function Gameplay.UAEPlayerState.ReportLandAreaList
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<int>                    TouchDownAreaIDs               (Parm, OutParm, ZeroConstructor)
+// TArray<int> TouchDownAreaIDs (Parm, OutParm, ZeroConstructor)
 
 void AUAEPlayerState::ReportLandAreaList(TArray<int>* TouchDownAreaIDs)
 {
@@ -3436,7 +3436,7 @@ void AUAEPlayerState::ReportLandAreaList(TArray<int>* TouchDownAreaIDs)
 // Function Gameplay.UAEPlayerState.ReportLandArea
 // (Final, Native, Public)
 // Parameters:
-// int                            TouchDownArea                  (Parm, ZeroConstructor, IsPlainOldData)
+// int TouchDownArea (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLandArea(int TouchDownArea)
 {
@@ -3460,8 +3460,8 @@ void AUAEPlayerState::ReportLandArea(int TouchDownArea)
 // Function Gameplay.UAEPlayerState.ReportLabelCheck
 // (Final, Native, Public)
 // Parameters:
-// int                            TeammateUID                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int TeammateUID (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ReportLabelCheck(int TeammateUID, int Result)
 {
@@ -3486,7 +3486,7 @@ void AUAEPlayerState::ReportLabelCheck(int TeammateUID, int Result)
 // Function Gameplay.UAEPlayerState.RecordUseHelicoper
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       UseHelicoperId                 (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t UseHelicoperId (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::RecordUseHelicoper(uint32_t UseHelicoperId)
 {
@@ -3845,8 +3845,8 @@ void AUAEPlayerState::OnClientVeteranRecruitIndexUpdated()
 // Function Gameplay.UAEPlayerState.IsSpecialPickItemCollectionCompleted
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerState::IsSpecialPickItemCollectionCompleted(int ItemId)
 {
@@ -3872,8 +3872,8 @@ bool AUAEPlayerState::IsSpecialPickItemCollectionCompleted(int ItemId)
 // Function Gameplay.UAEPlayerState.IsSpecialPickItem
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerState::IsSpecialPickItem(int ItemId)
 {
@@ -3899,7 +3899,7 @@ bool AUAEPlayerState::IsSpecialPickItem(int ItemId)
 // Function Gameplay.UAEPlayerState.IsNearDeathDamageInfoValid
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerState::IsNearDeathDamageInfoValid()
 {
@@ -3924,8 +3924,8 @@ bool AUAEPlayerState::IsNearDeathDamageInfoValid()
 // Function Gameplay.UAEPlayerState.IsItemForbidMerge
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ItemResId                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemResId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerState::IsItemForbidMerge(int ItemResId)
 {
@@ -3951,7 +3951,7 @@ bool AUAEPlayerState::IsItemForbidMerge(int ItemResId)
 // Function Gameplay.UAEPlayerState.IsDeathDamageInfoValid
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerState::IsDeathDamageInfoValid()
 {
@@ -3976,7 +3976,7 @@ bool AUAEPlayerState::IsDeathDamageInfoValid()
 // Function Gameplay.UAEPlayerState.GetWeaponReportByWeaponRecord
 // (Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FOnePlayerWeapon        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FOnePlayerWeapon ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FOnePlayerWeapon AUAEPlayerState::GetWeaponReportByWeaponRecord()
 {
@@ -4000,7 +4000,7 @@ struct FOnePlayerWeapon AUAEPlayerState::GetWeaponReportByWeaponRecord()
 // Function Gameplay.UAEPlayerState.GetWeaponRecordData
 // (Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FOnePlayerWeapon        OutWeaponInfo                  (Parm, OutParm)
+// struct FOnePlayerWeapon OutWeaponInfo (Parm, OutParm)
 
 void AUAEPlayerState::GetWeaponRecordData(struct FOnePlayerWeapon* OutWeaponInfo)
 {
@@ -4026,7 +4026,7 @@ void AUAEPlayerState::GetWeaponRecordData(struct FOnePlayerWeapon* OutWeaponInfo
 // Function Gameplay.UAEPlayerState.GetVeteranPlayerLevel
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerState::GetVeteranPlayerLevel()
 {
@@ -4051,8 +4051,8 @@ int AUAEPlayerState::GetVeteranPlayerLevel()
 // Function Gameplay.UAEPlayerState.GetUserIDByMemberID
 // (Native, Public)
 // Parameters:
-// int                            memberID                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int memberID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t AUAEPlayerState::GetUserIDByMemberID(int memberID)
 {
@@ -4078,7 +4078,7 @@ uint32_t AUAEPlayerState::GetUserIDByMemberID(int memberID)
 // Function Gameplay.UAEPlayerState.GetUIDString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString AUAEPlayerState::GetUIDString()
 {
@@ -4103,7 +4103,7 @@ struct FString AUAEPlayerState::GetUIDString()
 // Function Gameplay.UAEPlayerState.GetTeammateBattleResultData
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FGameModeTeammateBattleResultData ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameModeTeammateBattleResultData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameModeTeammateBattleResultData AUAEPlayerState::GetTeammateBattleResultData()
 {
@@ -4128,7 +4128,7 @@ struct FGameModeTeammateBattleResultData AUAEPlayerState::GetTeammateBattleResul
 // Function Gameplay.UAEPlayerState.GetTeamId
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerState::GetTeamId()
 {
@@ -4153,7 +4153,7 @@ int AUAEPlayerState::GetTeamId()
 // Function Gameplay.UAEPlayerState.GetRank
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerState::GetRank()
 {
@@ -4178,7 +4178,7 @@ int AUAEPlayerState::GetRank()
 // Function Gameplay.UAEPlayerState.GetPlayerTotalShootNum
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerState::GetPlayerTotalShootNum()
 {
@@ -4203,7 +4203,7 @@ int AUAEPlayerState::GetPlayerTotalShootNum()
 // Function Gameplay.UAEPlayerState.GetPlayerKey
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t AUAEPlayerState::GetPlayerKey()
 {
@@ -4228,7 +4228,7 @@ uint32_t AUAEPlayerState::GetPlayerKey()
 // Function Gameplay.UAEPlayerState.GetPlayerBattleResultData_SuperCold
 // (Native, Public, Const)
 // Parameters:
-// struct FGameModePlayerBattleResultData_SuperCold ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameModePlayerBattleResultData_SuperCold ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameModePlayerBattleResultData_SuperCold AUAEPlayerState::GetPlayerBattleResultData_SuperCold()
 {
@@ -4253,7 +4253,7 @@ struct FGameModePlayerBattleResultData_SuperCold AUAEPlayerState::GetPlayerBattl
 // Function Gameplay.UAEPlayerState.GetPlayerBattleResultData
 // (Native, Public, Const)
 // Parameters:
-// struct FGameModePlayerBattleResultData ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameModePlayerBattleResultData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameModePlayerBattleResultData AUAEPlayerState::GetPlayerBattleResultData()
 {
@@ -4278,7 +4278,7 @@ struct FGameModePlayerBattleResultData AUAEPlayerState::GetPlayerBattleResultDat
 // Function Gameplay.UAEPlayerState.GetMentorPlayerType
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EMentorPlayerType              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EMentorPlayerType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EMentorPlayerType AUAEPlayerState::GetMentorPlayerType()
 {
@@ -4408,8 +4408,8 @@ void AUAEPlayerState::ClearKillNum()
 // Function Gameplay.UAEPlayerState.ChangeCollectItemRecord
 // (Final, Native, Public)
 // Parameters:
-// int                            InItemID                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InNewState                     (Parm, ZeroConstructor, IsPlainOldData)
+// int InItemID (Parm, ZeroConstructor, IsPlainOldData)
+// bool InNewState (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::ChangeCollectItemRecord(int InItemID, bool InNewState)
 {
@@ -4434,9 +4434,9 @@ void AUAEPlayerState::ChangeCollectItemRecord(int InItemID, bool InNewState)
 // Function Gameplay.UAEPlayerState.AddGeneralTLogJustForDelegate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DeltaCnt                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurrValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int DeltaCnt (Parm, ZeroConstructor, IsPlainOldData)
+// int CurrValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::AddGeneralTLogJustForDelegate(int ID, int DeltaCnt, int CurrValue)
 {
@@ -4462,9 +4462,9 @@ void AUAEPlayerState::AddGeneralTLogJustForDelegate(int ID, int DeltaCnt, int Cu
 // Function Gameplay.UAEPlayerState.AddGeneralCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCount                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int InCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::AddGeneralCount(int ID, int InCount, bool bReset)
 {
@@ -4490,9 +4490,9 @@ void AUAEPlayerState::AddGeneralCount(int ID, int InCount, bool bReset)
 // Function Gameplay.UAEPlayerState.AddEventCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// unsigned char                  EventID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCount                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char EventID (Parm, ZeroConstructor, IsPlainOldData)
+// int InCount (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerState::AddEventCount(unsigned char EventID, int InCount, bool bReset)
 {
@@ -4518,7 +4518,7 @@ void AUAEPlayerState::AddEventCount(unsigned char EventID, int InCount, bool bRe
 // Function Gameplay.GroupSpotSceneComponent.SetGroupValid
 // (Native, Public)
 // Parameters:
-// bool                           Valid                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Valid (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGroupSpotSceneComponent::SetGroupValid(bool Valid)
 {
@@ -4542,7 +4542,7 @@ void UGroupSpotSceneComponent::SetGroupValid(bool Valid)
 // Function Gameplay.GroupSpotSceneComponent.IsValidGroup
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGroupSpotSceneComponent::IsValidGroup()
 {
@@ -4567,7 +4567,7 @@ bool UGroupSpotSceneComponent::IsValidGroup()
 // Function Gameplay.GroupSpotSceneComponent.FindWorldCompositionID
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UGroupSpotSceneComponent::FindWorldCompositionID()
 {
@@ -4613,8 +4613,8 @@ void UGroupSpotSceneComponent::DoPickUp()
 // Function Gameplay.ItemGroupSpotSceneComponent.SetGroupProperty
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UItemGeneratorComponent* Generator                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FSpotGroupProperty      Property                       (ConstParm, Parm, OutParm, ReferenceParm)
+// class UItemGeneratorComponent* Generator (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FSpotGroupProperty Property (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemGroupSpotSceneComponent::SetGroupProperty(class UItemGeneratorComponent* Generator, const struct FSpotGroupProperty& Property)
 {
@@ -4660,7 +4660,7 @@ void UItemGroupSpotSceneComponent::RepeatSpots()
 // Function Gameplay.ItemGroupSpotSceneComponent.RepeatSingleSpot
 // (Final, Native, Protected)
 // Parameters:
-// class UItemSpotSceneComponent* Spot                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UItemSpotSceneComponent* Spot (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UItemGroupSpotSceneComponent::RepeatSingleSpot(class UItemSpotSceneComponent* Spot)
 {
@@ -4684,9 +4684,9 @@ void UItemGroupSpotSceneComponent::RepeatSingleSpot(class UItemSpotSceneComponen
 // Function Gameplay.ItemGroupSpotSceneComponent.RandomSpotByType
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TEnumAsByte<enum ESpotType>    SpotType                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UItemSpotSceneComponent*> AllSpots                       (Parm, OutParm, ZeroConstructor)
-// struct FSpotTypeProperty       Property                       (ConstParm, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<enum ESpotType> SpotType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UItemSpotSceneComponent*> AllSpots (Parm, OutParm, ZeroConstructor)
+// struct FSpotTypeProperty Property (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemGroupSpotSceneComponent::RandomSpotByType(TEnumAsByte<enum ESpotType> SpotType, const struct FSpotTypeProperty& Property, TArray<class UItemSpotSceneComponent*>* AllSpots)
 {
@@ -4714,8 +4714,8 @@ void UItemGroupSpotSceneComponent::RandomSpotByType(TEnumAsByte<enum ESpotType> 
 // Function Gameplay.ItemGroupSpotSceneComponent.RandomSingleSpot
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<class UItemSpotSceneComponent*> Spots                          (Parm, OutParm, ZeroConstructor)
-// struct FSpotTypeProperty       Property                       (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<class UItemSpotSceneComponent*> Spots (Parm, OutParm, ZeroConstructor)
+// struct FSpotTypeProperty Property (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemGroupSpotSceneComponent::RandomSingleSpot(const struct FSpotTypeProperty& Property, TArray<class UItemSpotSceneComponent*>* Spots)
 {
@@ -4742,8 +4742,8 @@ void UItemGroupSpotSceneComponent::RandomSingleSpot(const struct FSpotTypeProper
 // Function Gameplay.ItemGroupSpotSceneComponent.RandomRepeatGenerateItemCD
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FSpotGroupProperty      GroupProperty                  (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSpotGroupProperty GroupProperty (ConstParm, Parm, OutParm, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UItemGroupSpotSceneComponent::RandomRepeatGenerateItemCD(const struct FSpotGroupProperty& GroupProperty)
 {
@@ -4769,7 +4769,7 @@ float UItemGroupSpotSceneComponent::RandomRepeatGenerateItemCD(const struct FSpo
 // Function Gameplay.SpotSceneComponent.SetSpotValid
 // (Native, Public)
 // Parameters:
-// bool                           Valid                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Valid (Parm, ZeroConstructor, IsPlainOldData)
 
 void USpotSceneComponent::SetSpotValid(bool Valid)
 {
@@ -4793,14 +4793,14 @@ void USpotSceneComponent::SetSpotValid(bool Valid)
 // Function Gameplay.SpotSceneComponent.LineTraceSingle
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Start                          (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, IsPlainOldData)
-// bool                           bTraceComplex                  (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ActorsToIgnore                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FHitResult              OutHit                         (Parm, OutParm, IsPlainOldData)
-// bool                           bIgnoreSelf                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, IsPlainOldData)
+// bool bTraceComplex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ActorsToIgnore (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FHitResult OutHit (Parm, OutParm, IsPlainOldData)
+// bool bIgnoreSelf (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpotSceneComponent::LineTraceSingle(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
@@ -4834,7 +4834,7 @@ bool USpotSceneComponent::LineTraceSingle(class UObject* WorldContextObject, con
 // Function Gameplay.SpotSceneComponent.IsSpotValid
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpotSceneComponent::IsSpotValid()
 {
@@ -4859,8 +4859,8 @@ bool USpotSceneComponent::IsSpotValid()
 // Function Gameplay.SpotSceneComponent.GetRandomCategory
 // (Native, Protected, HasOutParms)
 // Parameters:
-// TArray<struct FSpotWeight>     SpotWeights                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSpotWeight> SpotWeights (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString USpotSceneComponent::GetRandomCategory(TArray<struct FSpotWeight> SpotWeights)
 {
@@ -4886,7 +4886,7 @@ struct FString USpotSceneComponent::GetRandomCategory(TArray<struct FSpotWeight>
 // Function Gameplay.SpotSceneComponent.GenerateSpot
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USpotSceneComponent::GenerateSpot()
 {
@@ -4911,11 +4911,11 @@ bool USpotSceneComponent::GenerateSpot()
 // Function Gameplay.SpotSceneComponent.GenerateActor
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UClass*                  ActorClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ActorLocation                  (Parm, OutParm, IsPlainOldData)
-// struct FRotator                ActorRotator                   (Parm, OutParm, IsPlainOldData)
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ActorLocation (Parm, OutParm, IsPlainOldData)
+// struct FRotator ActorRotator (Parm, OutParm, IsPlainOldData)
 // ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USpotSceneComponent::GenerateActor(class UClass* ActorClass, ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod, struct FVector* ActorLocation, struct FRotator* ActorRotator)
 {
@@ -4947,12 +4947,12 @@ class AActor* USpotSceneComponent::GenerateActor(class UClass* ActorClass, ESpaw
 // Function Gameplay.ItemSpotSceneComponent.SetSpotProperty
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            CompositionID                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ESpotGroupType> GroupType                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UItemGeneratorComponent* Generator                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FSpotTypeProperty       Property                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UGroupSpotSceneComponent* Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           RepeatGenerateItem             (Parm, ZeroConstructor, IsPlainOldData)
+// int CompositionID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESpotGroupType> GroupType (Parm, ZeroConstructor, IsPlainOldData)
+// class UItemGeneratorComponent* Generator (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FSpotTypeProperty Property (ConstParm, Parm, OutParm, ReferenceParm)
+// class UGroupSpotSceneComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool RepeatGenerateItem (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemSpotSceneComponent::SetSpotProperty(int CompositionID, TEnumAsByte<enum ESpotGroupType> GroupType, class UItemGeneratorComponent* Generator, const struct FSpotTypeProperty& Property, class UGroupSpotSceneComponent* Component, bool RepeatGenerateItem)
 {
@@ -4981,7 +4981,7 @@ void UItemSpotSceneComponent::SetSpotProperty(int CompositionID, TEnumAsByte<enu
 // Function Gameplay.ItemSpotSceneComponent.RepeatSpotProperty
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FSpotTypeProperty       Property                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSpotTypeProperty Property (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemSpotSceneComponent::RepeatSpotProperty(const struct FSpotTypeProperty& Property)
 {
@@ -5005,7 +5005,7 @@ void UItemSpotSceneComponent::RepeatSpotProperty(const struct FSpotTypeProperty&
 // Function Gameplay.ItemSpotSceneComponent.GenerateSpot
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemSpotSceneComponent::GenerateSpot()
 {
@@ -5030,7 +5030,7 @@ bool UItemSpotSceneComponent::GenerateSpot()
 // Function Gameplay.ItemSpotSceneComponent.GenerateItems
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<struct FItemGenerateSpawnClass> AllItemClass                   (Parm, OutParm, ZeroConstructor)
+// TArray<struct FItemGenerateSpawnClass> AllItemClass (Parm, OutParm, ZeroConstructor)
 
 void UItemSpotSceneComponent::GenerateItems(TArray<struct FItemGenerateSpawnClass>* AllItemClass)
 {
@@ -5056,8 +5056,8 @@ void UItemSpotSceneComponent::GenerateItems(TArray<struct FItemGenerateSpawnClas
 // Function Gameplay.ItemSpotSceneComponent.DoPickUp
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ItemValue                      (Parm, ZeroConstructor)
-// struct FString                 ItemCategory                   (Parm, ZeroConstructor)
+// struct FString ItemValue (Parm, ZeroConstructor)
+// struct FString ItemCategory (Parm, ZeroConstructor)
 
 void UItemSpotSceneComponent::DoPickUp(const struct FString& ItemValue, const struct FString& ItemCategory)
 {
@@ -5082,7 +5082,7 @@ void UItemSpotSceneComponent::DoPickUp(const struct FString& ItemValue, const st
 // Function Gameplay.ItemSpotSceneComponent.CountCacheItemValeCategory
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UItemSpotSceneComponent::CountCacheItemValeCategory()
 {
@@ -5128,7 +5128,7 @@ void UItemSpotSceneComponent::ClearCacheItems()
 // Function Gameplay.UAEHouseActor.RecordBreakWindowTlog
 // (Final, Native, Public)
 // Parameters:
-// class APlayerController*       EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* EventInstigator (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEHouseActor::RecordBreakWindowTlog(class APlayerController* EventInstigator)
 {
@@ -5215,7 +5215,7 @@ void AUAEHouseActor::ClearWindowList()
 // Function Gameplay.UAEHouseActor.BroadcastWindowRepDataUpdated
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// struct FUAEWindowRepData       InRepData                      (Parm)
+// struct FUAEWindowRepData InRepData (Parm)
 
 void AUAEHouseActor::BroadcastWindowRepDataUpdated(const struct FUAEWindowRepData& InRepData)
 {
@@ -5239,8 +5239,8 @@ void AUAEHouseActor::BroadcastWindowRepDataUpdated(const struct FUAEWindowRepDat
 // Function Gameplay.UAEGameplayStatics.GetGameBridge
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UGameplayDelegates*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UGameplayDelegates* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UGameplayDelegates* UUAEGameplayStatics::GetGameBridge(class UObject* WorldContextObject)
 {
@@ -5266,8 +5266,8 @@ class UGameplayDelegates* UUAEGameplayStatics::GetGameBridge(class UObject* Worl
 // Function Gameplay.UAEProjectile.WorkAsBuffApplierEvent
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FString                 BuffName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class APawn*                   BuffTarget                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BuffName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class APawn* BuffTarget (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEProjectile::WorkAsBuffApplierEvent(const struct FString& BuffName, class APawn* BuffTarget)
 {
@@ -5334,11 +5334,11 @@ void AUAEProjectile::TimeoutExplodeMulticast_BPEvent()
 // Function Gameplay.UAEProjectile.SetActorInitialRelativeOffset
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Offset                         (Parm, IsPlainOldData)
-// struct FVector                 StandOffset                    (Parm, IsPlainOldData)
-// struct FVector                 CrouchOffset                   (Parm, IsPlainOldData)
-// struct FVector                 ProneOffset                    (Parm, IsPlainOldData)
-// TEnumAsByte<enum ECharacterPoseType> PrevoisOwnerPose               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Offset (Parm, IsPlainOldData)
+// struct FVector StandOffset (Parm, IsPlainOldData)
+// struct FVector CrouchOffset (Parm, IsPlainOldData)
+// struct FVector ProneOffset (Parm, IsPlainOldData)
+// TEnumAsByte<enum ECharacterPoseType> PrevoisOwnerPose (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEProjectile::SetActorInitialRelativeOffset(const struct FVector& Offset, const struct FVector& StandOffset, const struct FVector& CrouchOffset, const struct FVector& ProneOffset, TEnumAsByte<enum ECharacterPoseType> PrevoisOwnerPose)
 {
@@ -5491,7 +5491,7 @@ void AUAEProjectile::IsServerAlreadyExplodedCppNotify()
 // Function Gameplay.UAEProjectile.IsOwnerAutomous
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEProjectile::IsOwnerAutomous()
 {
@@ -5516,8 +5516,8 @@ bool AUAEProjectile::IsOwnerAutomous()
 // Function Gameplay.UAEProjectile.GlassDetect
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AUAEProjectile::GlassDetect(const struct FVector& Start, const struct FVector& End)
 {
@@ -5542,7 +5542,7 @@ void AUAEProjectile::GlassDetect(const struct FVector& Start, const struct FVect
 // Function Gameplay.UAEProjectile.GetRemainingEffectTime
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AUAEProjectile::GetRemainingEffectTime()
 {
@@ -5567,7 +5567,7 @@ float AUAEProjectile::GetRemainingEffectTime()
 // Function Gameplay.UAEProjectile.ChangeGrenadeMarkerState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewState                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewState (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEProjectile::ChangeGrenadeMarkerState(bool bNewState)
 {
@@ -5633,7 +5633,7 @@ void AUAEProjectile::BroadcastClientExplode()
 // Function Gameplay.UAEPlayerController.UseingWeaponScheme
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::UseingWeaponScheme()
 {
@@ -5679,9 +5679,9 @@ void AUAEPlayerController::TestShowLongTimeNoOperation()
 // Function Gameplay.UAEPlayerController.TestCastUIMsgWithPara
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
-// int                            TestID                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
+// int TestID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::TestCastUIMsgWithPara(const struct FString& strMsg, const struct FString& module, int TestID)
 {
@@ -5707,7 +5707,7 @@ void AUAEPlayerController::TestCastUIMsgWithPara(const struct FString& strMsg, c
 // Function Gameplay.UAEPlayerController.SyncDailyTaskStoreInfo
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FDailyTaskStoreInfo> NewDailyTaskStoreList          (Parm, ZeroConstructor)
+// TArray<struct FDailyTaskStoreInfo> NewDailyTaskStoreList (Parm, ZeroConstructor)
 
 void AUAEPlayerController::SyncDailyTaskStoreInfo(TArray<struct FDailyTaskStoreInfo> NewDailyTaskStoreList)
 {
@@ -5731,7 +5731,7 @@ void AUAEPlayerController::SyncDailyTaskStoreInfo(TArray<struct FDailyTaskStoreI
 // Function Gameplay.UAEPlayerController.SetUsedSimulationCVar
 // (Final, Native, Public)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::SetUsedSimulationCVar(bool Value)
 {
@@ -5755,8 +5755,8 @@ void AUAEPlayerController::SetUsedSimulationCVar(bool Value)
 // Function Gameplay.UAEPlayerController.SetTargetMsgReceiveDelegate
 // (Final, Native, Static, Public)
 // Parameters:
-// class UGameInstance*           InGameInstance                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// class UGameInstance* InGameInstance (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void AUAEPlayerController::SetTargetMsgReceiveDelegate(class UGameInstance* InGameInstance, const struct FScriptDelegate& InDelegate)
 {
@@ -5781,7 +5781,7 @@ void AUAEPlayerController::SetTargetMsgReceiveDelegate(class UGameInstance* InGa
 // Function Gameplay.UAEPlayerController.SetPanels
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UUAEUserWidget*>  panels                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UUAEUserWidget*> panels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::SetPanels(TArray<class UUAEUserWidget*> panels)
 {
@@ -5805,7 +5805,7 @@ void AUAEPlayerController::SetPanels(TArray<class UUAEUserWidget*> panels)
 // Function Gameplay.UAEPlayerController.SetIsInPetSpectator
 // (Final, Native, Public)
 // Parameters:
-// bool                           inIsInPetSpectator             (Parm, ZeroConstructor, IsPlainOldData)
+// bool inIsInPetSpectator (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::SetIsInPetSpectator(bool inIsInPetSpectator)
 {
@@ -5829,7 +5829,7 @@ void AUAEPlayerController::SetIsInPetSpectator(bool inIsInPetSpectator)
 // Function Gameplay.UAEPlayerController.SetDSMsgReceiveDelegate
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void AUAEPlayerController::SetDSMsgReceiveDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -5853,8 +5853,8 @@ void AUAEPlayerController::SetDSMsgReceiveDelegate(const struct FScriptDelegate&
 // Function Gameplay.UAEPlayerController.SetClientMsgReceiveDelegate
 // (Final, Native, Static, Public)
 // Parameters:
-// class UGameInstance*           InGameInstance                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// class UGameInstance* InGameInstance (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void AUAEPlayerController::SetClientMsgReceiveDelegate(class UGameInstance* InGameInstance, const struct FScriptDelegate& InDelegate)
 {
@@ -5879,8 +5879,8 @@ void AUAEPlayerController::SetClientMsgReceiveDelegate(class UGameInstance* InGa
 // Function Gameplay.UAEPlayerController.ServerUpdateLevelVisibility
 // (Final, Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FName                   PackageName                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsVisible                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PackageName (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsVisible (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerUpdateLevelVisibility(const struct FName& PackageName, bool bIsVisible)
 {
@@ -5905,7 +5905,7 @@ void AUAEPlayerController::ServerUpdateLevelVisibility(const struct FName& Packa
 // Function Gameplay.UAEPlayerController.ServerSetVoiceId
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// int                            VoiceID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int VoiceID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerSetVoiceId(int VoiceID)
 {
@@ -5929,7 +5929,7 @@ void AUAEPlayerController::ServerSetVoiceId(int VoiceID)
 // Function Gameplay.UAEPlayerController.ServerRepListDispatch
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerRepListDispatch(class UObject* InObject)
 {
@@ -5953,7 +5953,7 @@ void AUAEPlayerController::ServerRepListDispatch(class UObject* InObject)
 // Function Gameplay.UAEPlayerController.ServerRepComponentsDispatch
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerRepComponentsDispatch(class UObject* InObject)
 {
@@ -5998,7 +5998,7 @@ void AUAEPlayerController::ServerKickSelf()
 // Function Gameplay.UAEPlayerController.ServerGotoSpectating
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class APawn*                   ViewTarget                     (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ViewTarget (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerGotoSpectating(class APawn* ViewTarget)
 {
@@ -6043,7 +6043,7 @@ void AUAEPlayerController::ServerExitGame()
 // Function Gameplay.UAEPlayerController.ServerAcknowledgeReconnection_2
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// uint32_t                       Token                          (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Token (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ServerAcknowledgeReconnection_2(uint32_t Token)
 {
@@ -6067,7 +6067,7 @@ void AUAEPlayerController::ServerAcknowledgeReconnection_2(uint32_t Token)
 // Function Gameplay.UAEPlayerController.SendNetObjectPathNameMappingHashToServer
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// uint32_t                       VersionHash                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t VersionHash (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::SendNetObjectPathNameMappingHashToServer(uint32_t VersionHash)
 {
@@ -6091,9 +6091,9 @@ void AUAEPlayerController::SendNetObjectPathNameMappingHashToServer(uint32_t Ver
 // Function Gameplay.UAEPlayerController.SendLuaDSToClient
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           IsUnreliable                   (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool IsUnreliable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::SendLuaDSToClient(int ID, TArray<unsigned char> Content, bool IsUnreliable)
 {
@@ -6119,9 +6119,9 @@ void AUAEPlayerController::SendLuaDSToClient(int ID, TArray<unsigned char> Conte
 // Function Gameplay.UAEPlayerController.SendLuaClientToDS
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           IsUnreliable                   (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool IsUnreliable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::SendLuaClientToDS(int ID, TArray<unsigned char> Content, bool IsUnreliable)
 {
@@ -6147,9 +6147,9 @@ void AUAEPlayerController::SendLuaClientToDS(int ID, TArray<unsigned char> Conte
 // Function Gameplay.UAEPlayerController.RPC_Server_SyncClientNetInfo
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            InLoss                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutLoss                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InNetworkType                  (Parm, ZeroConstructor, IsPlainOldData)
+// int InLoss (Parm, ZeroConstructor, IsPlainOldData)
+// int OutLoss (Parm, ZeroConstructor, IsPlainOldData)
+// int InNetworkType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::RPC_Server_SyncClientNetInfo(int InLoss, int OutLoss, int InNetworkType)
 {
@@ -6175,15 +6175,15 @@ void AUAEPlayerController::RPC_Server_SyncClientNetInfo(int InLoss, int OutLoss,
 // Function Gameplay.UAEPlayerController.RPC_Server_ReportClientNetInfo
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            AvgPing                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPing                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MinPing                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LostPackRate                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvgNoOutlier                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StdNoOutlier                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumNoOutlier                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InLoss                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutLoss                        (Parm, ZeroConstructor, IsPlainOldData)
+// int AvgPing (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPing (Parm, ZeroConstructor, IsPlainOldData)
+// int MinPing (Parm, ZeroConstructor, IsPlainOldData)
+// int LostPackRate (Parm, ZeroConstructor, IsPlainOldData)
+// int AvgNoOutlier (Parm, ZeroConstructor, IsPlainOldData)
+// int StdNoOutlier (Parm, ZeroConstructor, IsPlainOldData)
+// int NumNoOutlier (Parm, ZeroConstructor, IsPlainOldData)
+// int InLoss (Parm, ZeroConstructor, IsPlainOldData)
+// int OutLoss (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::RPC_Server_ReportClientNetInfo(int AvgPing, int MaxPing, int MinPing, int LostPackRate, int AvgNoOutlier, int StdNoOutlier, int NumNoOutlier, int InLoss, int OutLoss)
 {
@@ -6215,8 +6215,8 @@ void AUAEPlayerController::RPC_Server_ReportClientNetInfo(int AvgPing, int MaxPi
 // Function Gameplay.UAEPlayerController.RPC_LuaDSToClient_NR
 // (Net, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::RPC_LuaDSToClient_NR(int ID, TArray<unsigned char> Content)
 {
@@ -6241,8 +6241,8 @@ void AUAEPlayerController::RPC_LuaDSToClient_NR(int ID, TArray<unsigned char> Co
 // Function Gameplay.UAEPlayerController.RPC_LuaDSToClient
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::RPC_LuaDSToClient(int ID, TArray<unsigned char> Content)
 {
@@ -6267,8 +6267,8 @@ void AUAEPlayerController::RPC_LuaDSToClient(int ID, TArray<unsigned char> Conte
 // Function Gameplay.UAEPlayerController.RPC_LuaClientToDS_NR
 // (Net, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::RPC_LuaClientToDS_NR(int ID, TArray<unsigned char> Content)
 {
@@ -6293,8 +6293,8 @@ void AUAEPlayerController::RPC_LuaClientToDS_NR(int ID, TArray<unsigned char> Co
 // Function Gameplay.UAEPlayerController.RPC_LuaClientToDS
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::RPC_LuaClientToDS(int ID, TArray<unsigned char> Content)
 {
@@ -6884,9 +6884,9 @@ void AUAEPlayerController::OnNetObjectPathNameMappingTableAsyncLoad()
 // Function Gameplay.UAEPlayerController.OnMemberVoice
 // (Native, Public)
 // Parameters:
-// int                            Member                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            status                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 UserInfo                       (Parm, ZeroConstructor)
+// int Member (Parm, ZeroConstructor, IsPlainOldData)
+// int status (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString UserInfo (Parm, ZeroConstructor)
 
 void AUAEPlayerController::OnMemberVoice(int Member, int status, const struct FString& UserInfo)
 {
@@ -6933,8 +6933,8 @@ void AUAEPlayerController::NotifyEnterBattle()
 // Function Gameplay.UAEPlayerController.LuaDSToClient_Implementation
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::LuaDSToClient_Implementation(int ID, TArray<unsigned char> Content)
 {
@@ -6959,8 +6959,8 @@ void AUAEPlayerController::LuaDSToClient_Implementation(int ID, TArray<unsigned 
 // Function Gameplay.UAEPlayerController.LuaClientToDS_Implementation
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Content                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Content (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::LuaClientToDS_Implementation(int ID, TArray<unsigned char> Content)
 {
@@ -7006,7 +7006,7 @@ void AUAEPlayerController::KickSelf()
 // Function Gameplay.UAEPlayerController.IsTeammateSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsTeammateSpectator()
 {
@@ -7031,7 +7031,7 @@ bool AUAEPlayerController::IsTeammateSpectator()
 // Function Gameplay.UAEPlayerController.IsSpectatorOrDemoPlayer
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsSpectatorOrDemoPlayer()
 {
@@ -7056,7 +7056,7 @@ bool AUAEPlayerController::IsSpectatorOrDemoPlayer()
 // Function Gameplay.UAEPlayerController.IsSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsSpectator()
 {
@@ -7081,7 +7081,7 @@ bool AUAEPlayerController::IsSpectator()
 // Function Gameplay.UAEPlayerController.IsRoomMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsRoomMode()
 {
@@ -7106,7 +7106,7 @@ bool AUAEPlayerController::IsRoomMode()
 // Function Gameplay.UAEPlayerController.IsPureSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsPureSpectator()
 {
@@ -7131,7 +7131,7 @@ bool AUAEPlayerController::IsPureSpectator()
 // Function Gameplay.UAEPlayerController.IsObserver
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsObserver()
 {
@@ -7156,7 +7156,7 @@ bool AUAEPlayerController::IsObserver()
 // Function Gameplay.UAEPlayerController.IsInSpectatingEnemy
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsInSpectatingEnemy()
 {
@@ -7181,7 +7181,7 @@ bool AUAEPlayerController::IsInSpectatingEnemy()
 // Function Gameplay.UAEPlayerController.IsInSpectating
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsInSpectating()
 {
@@ -7206,7 +7206,7 @@ bool AUAEPlayerController::IsInSpectating()
 // Function Gameplay.UAEPlayerController.IsInPetSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsInPetSpectator()
 {
@@ -7231,7 +7231,7 @@ bool AUAEPlayerController::IsInPetSpectator()
 // Function Gameplay.UAEPlayerController.IsHawkEyeSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsHawkEyeSpectator()
 {
@@ -7256,7 +7256,7 @@ bool AUAEPlayerController::IsHawkEyeSpectator()
 // Function Gameplay.UAEPlayerController.IsFriendOrEnemySpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsFriendOrEnemySpectator()
 {
@@ -7281,7 +7281,7 @@ bool AUAEPlayerController::IsFriendOrEnemySpectator()
 // Function Gameplay.UAEPlayerController.IsFriendObserver
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsFriendObserver()
 {
@@ -7306,7 +7306,7 @@ bool AUAEPlayerController::IsFriendObserver()
 // Function Gameplay.UAEPlayerController.IsFriendNotHawkEyeObserver
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsFriendNotHawkEyeObserver()
 {
@@ -7331,7 +7331,7 @@ bool AUAEPlayerController::IsFriendNotHawkEyeObserver()
 // Function Gameplay.UAEPlayerController.IsExited
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsExited()
 {
@@ -7356,7 +7356,7 @@ bool AUAEPlayerController::IsExited()
 // Function Gameplay.UAEPlayerController.IsDemoRecSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsDemoRecSpectator()
 {
@@ -7381,7 +7381,7 @@ bool AUAEPlayerController::IsDemoRecSpectator()
 // Function Gameplay.UAEPlayerController.IsDemoPlaySpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsDemoPlaySpectator()
 {
@@ -7406,7 +7406,7 @@ bool AUAEPlayerController::IsDemoPlaySpectator()
 // Function Gameplay.UAEPlayerController.IsDemoPlayGlobalObserver
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsDemoPlayGlobalObserver()
 {
@@ -7431,7 +7431,7 @@ bool AUAEPlayerController::IsDemoPlayGlobalObserver()
 // Function Gameplay.UAEPlayerController.IsDeathSpectator
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::IsDeathSpectator()
 {
@@ -7456,7 +7456,7 @@ bool AUAEPlayerController::IsDeathSpectator()
 // Function Gameplay.UAEPlayerController.InitWithPlayerParams
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGameModePlayerParams   Params                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameModePlayerParams Params (ConstParm, Parm, OutParm, ReferenceParm)
 
 void AUAEPlayerController::InitWithPlayerParams(const struct FGameModePlayerParams& Params)
 {
@@ -7606,7 +7606,7 @@ void AUAEPlayerController::InitIngameUI()
 // Function Gameplay.UAEPlayerController.InitGrenadeAvatarList
 // (Native, Public)
 // Parameters:
-// bool                           ReInitial                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReInitial (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::InitGrenadeAvatarList(bool ReInitial)
 {
@@ -7630,8 +7630,8 @@ void AUAEPlayerController::InitGrenadeAvatarList(bool ReInitial)
 // Function Gameplay.UAEPlayerController.HasAnySpectatorReplayFlag
 // (Native, Public, Const)
 // Parameters:
-// uint32_t                       InFlag                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t InFlag (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::HasAnySpectatorReplayFlag(uint32_t InFlag)
 {
@@ -7657,8 +7657,8 @@ bool AUAEPlayerController::HasAnySpectatorReplayFlag(uint32_t InFlag)
 // Function Gameplay.UAEPlayerController.GotoSpectating
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayerID                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int PlayerID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerController::GotoSpectating(int PlayerID)
 {
@@ -7684,9 +7684,9 @@ int AUAEPlayerController::GotoSpectating(int PlayerID)
 // Function Gameplay.UAEPlayerController.GetWeaponPandentReflect
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            wraponID                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            pendantID                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int wraponID (Parm, ZeroConstructor, IsPlainOldData)
+// int pendantID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::GetWeaponPandentReflect(int wraponID, int* pendantID)
 {
@@ -7715,8 +7715,8 @@ bool AUAEPlayerController::GetWeaponPandentReflect(int wraponID, int* pendantID)
 // Function Gameplay.UAEPlayerController.GetWeaponAvatarItemId
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerController::GetWeaponAvatarItemId(int ID)
 {
@@ -7742,7 +7742,7 @@ int AUAEPlayerController::GetWeaponAvatarItemId(int ID)
 // Function Gameplay.UAEPlayerController.GetVisibleLevelsLoadedName
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FString>         VisibleLevels                  (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> VisibleLevels (Parm, OutParm, ZeroConstructor)
 
 void AUAEPlayerController::GetVisibleLevelsLoadedName(TArray<struct FString>* VisibleLevels)
 {
@@ -7768,7 +7768,7 @@ void AUAEPlayerController::GetVisibleLevelsLoadedName(TArray<struct FString>* Vi
 // Function Gameplay.UAEPlayerController.GetLobbyWatchedPlayerKeyAsString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString AUAEPlayerController::GetLobbyWatchedPlayerKeyAsString()
 {
@@ -7793,8 +7793,8 @@ struct FString AUAEPlayerController::GetLobbyWatchedPlayerKeyAsString()
 // Function Gameplay.UAEPlayerController.GetEffectItemBySlot
 // (Final, Native, Public)
 // Parameters:
-// unsigned char                  SlotIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPlayerEffectItemInfo   ReturnValue                    (Parm, OutParm, ReturnParm)
+// unsigned char SlotIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPlayerEffectItemInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FPlayerEffectItemInfo AUAEPlayerController::GetEffectItemBySlot(unsigned char SlotIndex)
 {
@@ -7820,8 +7820,8 @@ struct FPlayerEffectItemInfo AUAEPlayerController::GetEffectItemBySlot(unsigned 
 // Function Gameplay.UAEPlayerController.GetDailyTaskStoreInfoByTaskId
 // (Final, Native, Public)
 // Parameters:
-// int                            TaskId                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDailyTaskStoreInfo     ReturnValue                    (Parm, OutParm, ReturnParm)
+// int TaskId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDailyTaskStoreInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FDailyTaskStoreInfo AUAEPlayerController::GetDailyTaskStoreInfoByTaskId(int TaskId)
 {
@@ -7847,7 +7847,7 @@ struct FDailyTaskStoreInfo AUAEPlayerController::GetDailyTaskStoreInfoByTaskId(i
 // Function Gameplay.UAEPlayerController.GetCurrentWeaponSchemeMainSlotItemId
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerController::GetCurrentWeaponSchemeMainSlotItemId()
 {
@@ -7872,7 +7872,7 @@ int AUAEPlayerController::GetCurrentWeaponSchemeMainSlotItemId()
 // Function Gameplay.UAEPlayerController.GetCurrentPetInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FGameModePlayerPetInfo  ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameModePlayerPetInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameModePlayerPetInfo AUAEPlayerController::GetCurrentPetInfo()
 {
@@ -7897,7 +7897,7 @@ struct FGameModePlayerPetInfo AUAEPlayerController::GetCurrentPetInfo()
 // Function Gameplay.UAEPlayerController.GetCurrentOBPlayerKey
 // (Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t AUAEPlayerController::GetCurrentOBPlayerKey()
 {
@@ -7922,7 +7922,7 @@ uint32_t AUAEPlayerController::GetCurrentOBPlayerKey()
 // Function Gameplay.UAEPlayerController.GetCurrentOBPlayerInfoIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerController::GetCurrentOBPlayerInfoIndex()
 {
@@ -7947,9 +7947,9 @@ int AUAEPlayerController::GetCurrentOBPlayerInfoIndex()
 // Function Gameplay.UAEPlayerController.GenerateKillBroadcastItemID
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ClothAvatarID                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PlayerUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ClothAvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// int PlayerUID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AUAEPlayerController::GenerateKillBroadcastItemID(int ClothAvatarID, int PlayerUID)
 {
@@ -8038,7 +8038,7 @@ void AUAEPlayerController::ExhaustCPU()
 // Function Gameplay.UAEPlayerController.ExecDSCommand
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FString                 DSCommand                      (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// struct FString DSCommand (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void AUAEPlayerController::ExecDSCommand(const struct FString& DSCommand)
 {
@@ -8062,8 +8062,8 @@ void AUAEPlayerController::ExecDSCommand(const struct FString& DSCommand)
 // Function Gameplay.UAEPlayerController.ExcuteIntRecord
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ExcuteIntRecord(const struct FString& Key, int Count)
 {
@@ -8088,8 +8088,8 @@ void AUAEPlayerController::ExcuteIntRecord(const struct FString& Key, int Count)
 // Function Gameplay.UAEPlayerController.ExcuteIntCounterRecord
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ExcuteIntCounterRecord(const struct FString& Key, int Count)
 {
@@ -8345,7 +8345,7 @@ void AUAEPlayerController::DelayEnterBattleCheck()
 // Function Gameplay.UAEPlayerController.DealWithPickUpFailed
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
+// struct FItemDefineID DefineID (Parm)
 
 void AUAEPlayerController::DealWithPickUpFailed(const struct FItemDefineID& DefineID)
 {
@@ -8411,11 +8411,11 @@ void AUAEPlayerController::ClientSendOodleNetworkAckToServer()
 // Function Gameplay.UAEPlayerController.ClientRPC_CastUIMsgWithStrings
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
-// int                            TipsID                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Param1                         (Parm, ZeroConstructor)
-// struct FString                 Param2                         (Parm, ZeroConstructor)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
+// int TipsID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Param1 (Parm, ZeroConstructor)
+// struct FString Param2 (Parm, ZeroConstructor)
 
 void AUAEPlayerController::ClientRPC_CastUIMsgWithStrings(const struct FString& strMsg, const struct FString& module, int TipsID, const struct FString& Param1, const struct FString& Param2)
 {
@@ -8443,9 +8443,9 @@ void AUAEPlayerController::ClientRPC_CastUIMsgWithStrings(const struct FString& 
 // Function Gameplay.UAEPlayerController.ClientRPC_CastUIMsgParams
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
-// int                            Type                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
+// int Type (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ClientRPC_CastUIMsgParams(const struct FString& strMsg, const struct FString& module, int Type)
 {
@@ -8471,8 +8471,8 @@ void AUAEPlayerController::ClientRPC_CastUIMsgParams(const struct FString& strMs
 // Function Gameplay.UAEPlayerController.ClientRPC_CastUIMsg
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
 
 void AUAEPlayerController::ClientRPC_CastUIMsg(const struct FString& strMsg, const struct FString& module)
 {
@@ -8497,7 +8497,7 @@ void AUAEPlayerController::ClientRPC_CastUIMsg(const struct FString& strMsg, con
 // Function Gameplay.UAEPlayerController.ClientRepListReq
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ClientRepListReq(class UObject* InObject)
 {
@@ -8521,7 +8521,7 @@ void AUAEPlayerController::ClientRepListReq(class UObject* InObject)
 // Function Gameplay.UAEPlayerController.ClientRepComponentsReq
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ClientRepComponentsReq(class UObject* InObject)
 {
@@ -8608,7 +8608,7 @@ void AUAEPlayerController::ClientBroadcastReconnectionSuccessful()
 // Function Gameplay.UAEPlayerController.ClientAcknowledgeReconnection_4
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// uint32_t                       Token                          (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Token (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEPlayerController::ClientAcknowledgeReconnection_4(uint32_t Token)
 {
@@ -8653,8 +8653,8 @@ void AUAEPlayerController::CheckPlayerOBInfoButtonInit()
 // Function Gameplay.UAEPlayerController.CheckAcknowledgedPawn
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APawn* InPawn (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAEPlayerController::CheckAcknowledgedPawn(class APawn* InPawn)
 {
@@ -8680,8 +8680,8 @@ bool AUAEPlayerController::CheckAcknowledgedPawn(class APawn* InPawn)
 // Function Gameplay.UAEPlayerController.CastUIMsg
 // (Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
 
 void AUAEPlayerController::CastUIMsg(const struct FString& strMsg, const struct FString& module)
 {
@@ -8706,8 +8706,8 @@ void AUAEPlayerController::CastUIMsg(const struct FString& strMsg, const struct 
 // Function Gameplay.UAEPlayerController.CanPickUpItem
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// EPickUpCheckResult             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// EPickUpCheckResult ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EPickUpCheckResult AUAEPlayerController::CanPickUpItem(const struct FItemDefineID& DefineID)
 {
@@ -8733,10 +8733,10 @@ EPickUpCheckResult AUAEPlayerController::CanPickUpItem(const struct FItemDefineI
 // Function Gameplay.UAEPlayerController.BroadcastUIMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 MessageName                    (Parm, ZeroConstructor)
-// int                            TipsIDOrType                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Param1                         (Parm, ZeroConstructor)
-// struct FString                 Param2                         (Parm, ZeroConstructor)
+// struct FString MessageName (Parm, ZeroConstructor)
+// int TipsIDOrType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Param1 (Parm, ZeroConstructor)
+// struct FString Param2 (Parm, ZeroConstructor)
 
 void AUAEPlayerController::BroadcastUIMessage(const struct FString& MessageName, int TipsIDOrType, const struct FString& Param1, const struct FString& Param2)
 {
@@ -8784,10 +8784,10 @@ void AUAEPlayerController::BroadcastRespawnComplete()
 // Function Gameplay.BackpackComponent.UseItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// struct FBattleItemUseTarget    Target                         (Parm)
-// EBattleItemUseReason           Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// struct FBattleItemUseTarget Target (Parm)
+// EBattleItemUseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::UseItem(const struct FItemDefineID& DefineID, const struct FBattleItemUseTarget& Target, EBattleItemUseReason Reason)
 {
@@ -8815,9 +8815,9 @@ bool UBackpackComponent::UseItem(const struct FItemDefineID& DefineID, const str
 // Function Gameplay.BackpackComponent.UpdateStoreAreaOccupiedCapacity
 // (Native, Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// float                          StoreAreaOccupiedCapacity      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float StoreAreaOccupiedCapacity (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBackpackComponent::UpdateStoreAreaOccupiedCapacity(EItemStoreArea InItemStoreArea, float* StoreAreaOccupiedCapacity)
 {
@@ -8867,7 +8867,7 @@ void UBackpackComponent::UpdateOccupiedCapacity()
 // Function Gameplay.BackpackComponent.UpdateCapacity
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBackpackComponent::UpdateCapacity()
 {
@@ -8913,8 +8913,8 @@ void UBackpackComponent::UnlockUpdateItemListReceive()
 // Function Gameplay.BackpackComponent.TryMergeItemHandles
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::TryMergeItemHandles(const struct FItemDefineID& DefineID, EItemStoreArea InItemStoreArea)
 {
@@ -8939,10 +8939,10 @@ void UBackpackComponent::TryMergeItemHandles(const struct FItemDefineID& DefineI
 // Function Gameplay.BackpackComponent.TakeItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCallHandleDrop                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCallHandleDrop (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::TakeItem(const struct FItemDefineID& DefineID, int Count, bool bCallHandleDrop)
 {
@@ -8970,9 +8970,9 @@ int UBackpackComponent::TakeItem(const struct FItemDefineID& DefineID, int Count
 // Function Gameplay.BackpackComponent.SwapItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID1                      (Parm)
-// struct FItemDefineID           DefineID2                      (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID1 (Parm)
+// struct FItemDefineID DefineID2 (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::SwapItem(const struct FItemDefineID& DefineID1, const struct FItemDefineID& DefineID2)
 {
@@ -8999,7 +8999,7 @@ bool UBackpackComponent::SwapItem(const struct FItemDefineID& DefineID1, const s
 // Function Gameplay.BackpackComponent.SetForceAutoEquipAim
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAutoEquipAim                (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoEquipAim (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::SetForceAutoEquipAim(bool bInAutoEquipAim)
 {
@@ -9023,7 +9023,7 @@ void UBackpackComponent::SetForceAutoEquipAim(bool bInAutoEquipAim)
 // Function Gameplay.BackpackComponent.SetChangeWeaponSchemeState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInIsChangeWeaponScheme        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInIsChangeWeaponScheme (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::SetChangeWeaponSchemeState(bool bInIsChangeWeaponScheme)
 {
@@ -9047,7 +9047,7 @@ void UBackpackComponent::SetChangeWeaponSchemeState(bool bInIsChangeWeaponScheme
 // Function Gameplay.BackpackComponent.ServerSetShowBounty
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// bool                           bInShowBounty                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInShowBounty (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ServerSetShowBounty(bool bInShowBounty)
 {
@@ -9071,7 +9071,7 @@ void UBackpackComponent::ServerSetShowBounty(bool bInShowBounty)
 // Function Gameplay.BackpackComponent.ServerSetDropMeelWeapon
 // (Net, NetReliable, Native, Event, Protected, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// bool                           NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool NewValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ServerSetDropMeelWeapon(bool NewValue)
 {
@@ -9095,10 +9095,10 @@ void UBackpackComponent::ServerSetDropMeelWeapon(bool NewValue)
 // Function Gameplay.BackpackComponent.ServerSetCustomAccessories
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// int                            WeaponItemId                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsSetOrRemove                 (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsSetOrRemove (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ServerSetCustomAccessories(int WeaponItemId, int Index, int ItemId, bool bIsSetOrRemove)
 {
@@ -9125,8 +9125,8 @@ void UBackpackComponent::ServerSetCustomAccessories(int WeaponItemId, int Index,
 // Function Gameplay.BackpackComponent.ServerEnableItem
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// bool                           bUse                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// bool bUse (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ServerEnableItem(const struct FItemDefineID& DefineID, bool bUse)
 {
@@ -9151,7 +9151,7 @@ void UBackpackComponent::ServerEnableItem(const struct FItemDefineID& DefineID, 
 // Function Gameplay.BackpackComponent.RPC_Multicast_AllItem
 // (Net, NetReliable, Native, Event, NetMulticast, Public, BlueprintCallable)
 // Parameters:
-// struct FIncNetArray            Items                          (Parm)
+// struct FIncNetArray Items (Parm)
 
 void UBackpackComponent::RPC_Multicast_AllItem(const struct FIncNetArray& Items)
 {
@@ -9175,10 +9175,10 @@ void UBackpackComponent::RPC_Multicast_AllItem(const struct FIncNetArray& Items)
 // Function Gameplay.BackpackComponent.ReturnItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCallHandlePickup              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCallHandlePickup (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::ReturnItem(const struct FItemDefineID& DefineID, int Count, bool bCallHandlePickup)
 {
@@ -9206,8 +9206,8 @@ int UBackpackComponent::ReturnItem(const struct FItemDefineID& DefineID, int Cou
 // Function Gameplay.BackpackComponent.RemoveItemHandle
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::RemoveItemHandle(const struct FItemDefineID& DefineID)
 {
@@ -9275,10 +9275,10 @@ void UBackpackComponent::ReceiveCapacity()
 // Function Gameplay.BackpackComponent.PreCheckCanPickupBagAvatar
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UBattleItemHandleBase*   NewHandle                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UBattleItemHandleBase*   OldHandle                      (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemUseReason           reson                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBattleItemHandleBase* NewHandle (Parm, ZeroConstructor, IsPlainOldData)
+// class UBattleItemHandleBase* OldHandle (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemUseReason reson (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::PreCheckCanPickupBagAvatar(class UBattleItemHandleBase* NewHandle, class UBattleItemHandleBase* OldHandle, EBattleItemUseReason reson)
 {
@@ -9306,8 +9306,8 @@ int UBackpackComponent::PreCheckCanPickupBagAvatar(class UBattleItemHandleBase* 
 // Function Gameplay.BackpackComponent.PostItemHandleEquippingState
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bEquipping                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool bEquipping (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::PostItemHandleEquippingState(const struct FItemDefineID& DefineID, bool bEquipping)
 {
@@ -9332,11 +9332,11 @@ void UBackpackComponent::PostItemHandleEquippingState(const struct FItemDefineID
 // Function Gameplay.BackpackComponent.PickupItemFromWrapperDetail
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemClientPickupType    BattleItemClientPickupType     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemClientPickupType BattleItemClientPickupType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::PickupItemFromWrapperDetail(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason, EBattleItemClientPickupType BattleItemClientPickupType)
 {
@@ -9365,10 +9365,10 @@ bool UBackpackComponent::PickupItemFromWrapperDetail(const struct FItemDefineID&
 // Function Gameplay.BackpackComponent.PickUpItem_Default
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::PickUpItem_Default(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason)
 {
@@ -9396,11 +9396,11 @@ bool UBackpackComponent::PickUpItem_Default(const struct FItemDefineID& DefineID
 // Function Gameplay.BackpackComponent.PickupItem
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemClientPickupType    BattleItemClientPickupType     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemClientPickupType BattleItemClientPickupType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::PickupItem(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason, EBattleItemClientPickupType BattleItemClientPickupType)
 {
@@ -9450,10 +9450,10 @@ void UBackpackComponent::PickupBattleItemOnPlane()
 // Function Gameplay.BackpackComponent.PickItem_IntoSafetyBox
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::PickItem_IntoSafetyBox(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason)
 {
@@ -9481,10 +9481,10 @@ bool UBackpackComponent::PickItem_IntoSafetyBox(const struct FItemDefineID& Defi
 // Function Gameplay.BackpackComponent.PickItem_IntoBackpack
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::PickItem_IntoBackpack(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason)
 {
@@ -9596,7 +9596,7 @@ void UBackpackComponent::OnRep_Capacity()
 // Function Gameplay.BackpackComponent.NotifyItemUpdated
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBackpackComponent::NotifyItemUpdated(const struct FItemDefineID& DefineID)
 {
@@ -9620,7 +9620,7 @@ void UBackpackComponent::NotifyItemUpdated(const struct FItemDefineID& DefineID)
 // Function Gameplay.BackpackComponent.NotifyItemRemoved
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBackpackComponent::NotifyItemRemoved(const struct FItemDefineID& DefineID)
 {
@@ -9686,8 +9686,8 @@ void UBackpackComponent::NotifyCapacityUpdated()
 // Function Gameplay.BackpackComponent.NewItemHandle
 // (Native, Event, Protected, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBattleItemHandleBase*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBattleItemHandleBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBattleItemHandleBase* UBackpackComponent::NewItemHandle(const struct FItemDefineID& DefineID)
 {
@@ -9713,8 +9713,8 @@ class UBattleItemHandleBase* UBackpackComponent::NewItemHandle(const struct FIte
 // Function Gameplay.BackpackComponent.NewItemDefineID
 // (Native, Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FItemDefineID           ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemDefineID UBackpackComponent::NewItemDefineID(const struct FItemDefineID& DefineID)
 {
@@ -9740,8 +9740,8 @@ struct FItemDefineID UBackpackComponent::NewItemDefineID(const struct FItemDefin
 // Function Gameplay.BackpackComponent.ModifyItemHandleEquippingState
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// class UItemHandleBase*         ItemHandle                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEquipping                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UItemHandleBase* ItemHandle (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEquipping (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ModifyItemHandleEquippingState(class UItemHandleBase* ItemHandle, bool bEquipping)
 {
@@ -9766,8 +9766,8 @@ void UBackpackComponent::ModifyItemHandleEquippingState(class UItemHandleBase* I
 // Function Gameplay.BackpackComponent.ModifyItemHandleCount
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// class UItemHandleBase*         ItemHandle                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UItemHandleBase* ItemHandle (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ModifyItemHandleCount(class UItemHandleBase* ItemHandle, int Count)
 {
@@ -9792,7 +9792,7 @@ void UBackpackComponent::ModifyItemHandleCount(class UItemHandleBase* ItemHandle
 // Function Gameplay.BackpackComponent.ModifyAutoPickClipType
 // (Net, NetReliable, Native, Event, Public, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// int                            InAutoPickClipType             (Parm, ZeroConstructor, IsPlainOldData)
+// int InAutoPickClipType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ModifyAutoPickClipType(int InAutoPickClipType)
 {
@@ -9816,7 +9816,7 @@ void UBackpackComponent::ModifyAutoPickClipType(int InAutoPickClipType)
 // Function Gameplay.BackpackComponent.ModifyAimNotAutoUse
 // (Net, NetReliable, Native, Event, Protected, NetServer, BlueprintCallable, NetValidate)
 // Parameters:
-// bool                           bAdd                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAdd (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ModifyAimNotAutoUse(bool bAdd)
 {
@@ -9861,8 +9861,8 @@ void UBackpackComponent::LockUpdateItemListReceive()
 // Function Gameplay.BackpackComponent.ItemNet2Data
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FNetArrayUnit           NetItem                        (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FNetArrayUnit NetItem (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBackpackComponent::ItemNet2Data(const struct FNetArrayUnit& NetItem)
 {
@@ -9888,8 +9888,8 @@ struct FBattleItemData UBackpackComponent::ItemNet2Data(const struct FNetArrayUn
 // Function Gameplay.BackpackComponent.IsNeedToShowInBackpack
 // (Final, Native, Public)
 // Parameters:
-// int                            TypeDefineID                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TypeDefineID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsNeedToShowInBackpack(int TypeDefineID)
 {
@@ -9915,8 +9915,8 @@ bool UBackpackComponent::IsNeedToShowInBackpack(int TypeDefineID)
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasSomeItemTypes
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<int>                    ItemTypes                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> ItemTypes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasSomeItemTypes(TArray<int> ItemTypes)
 {
@@ -9942,8 +9942,8 @@ bool UBackpackComponent::IsItemListUpdatedHasSomeItemTypes(TArray<int> ItemTypes
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasSomeItemSubTypes
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<int>                    ItemSubTypes                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> ItemSubTypes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasSomeItemSubTypes(TArray<int> ItemSubTypes)
 {
@@ -9969,8 +9969,8 @@ bool UBackpackComponent::IsItemListUpdatedHasSomeItemSubTypes(TArray<int> ItemSu
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasSomeItems
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<int>                    ItemTypeSpecificIDs            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> ItemTypeSpecificIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasSomeItems(TArray<int> ItemTypeSpecificIDs)
 {
@@ -9996,8 +9996,8 @@ bool UBackpackComponent::IsItemListUpdatedHasSomeItems(TArray<int> ItemTypeSpeci
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasOneItemType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            itemType                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int itemType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasOneItemType(int itemType)
 {
@@ -10023,8 +10023,8 @@ bool UBackpackComponent::IsItemListUpdatedHasOneItemType(int itemType)
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasOneItemSubType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ItemSubType                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemSubType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasOneItemSubType(int ItemSubType)
 {
@@ -10050,8 +10050,8 @@ bool UBackpackComponent::IsItemListUpdatedHasOneItemSubType(int ItemSubType)
 // Function Gameplay.BackpackComponent.IsItemListUpdatedHasOneItem
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ItemTypeSpecificID             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemTypeSpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemListUpdatedHasOneItem(int ItemTypeSpecificID)
 {
@@ -10077,8 +10077,8 @@ bool UBackpackComponent::IsItemListUpdatedHasOneItem(int ItemTypeSpecificID)
 // Function Gameplay.BackpackComponent.IsItemExist
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsItemExist(const struct FItemDefineID& DefineID)
 {
@@ -10102,9 +10102,9 @@ bool UBackpackComponent::IsItemExist(const struct FItemDefineID& DefineID)
 
 
 // Function Gameplay.BackpackComponent.IsEnableWeaponAttachmentBindToWeapon
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsEnableWeaponAttachmentBindToWeapon()
 {
@@ -10129,7 +10129,7 @@ bool UBackpackComponent::IsEnableWeaponAttachmentBindToWeapon()
 // Function Gameplay.BackpackComponent.IsEnableBackpackRepActor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsEnableBackpackRepActor()
 {
@@ -10154,9 +10154,9 @@ bool UBackpackComponent::IsEnableBackpackRepActor()
 // Function Gameplay.BackpackComponent.IsCustomIgnoreAccessories
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsCustomIgnoreAccessories(int WeaponId, int Index)
 {
@@ -10183,9 +10183,9 @@ bool UBackpackComponent::IsCustomIgnoreAccessories(int WeaponId, int Index)
 // Function Gameplay.BackpackComponent.IsCustomAccessories
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsCustomAccessories(int WeaponId, int ItemId)
 {
@@ -10212,7 +10212,7 @@ bool UBackpackComponent::IsCustomAccessories(int WeaponId, int ItemId)
 // Function Gameplay.BackpackComponent.IsChangeWeaponScheme
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsChangeWeaponScheme()
 {
@@ -10237,8 +10237,8 @@ bool UBackpackComponent::IsChangeWeaponScheme()
 // Function Gameplay.BackpackComponent.IsBackPackContainItemId
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsBackPackContainItemId(int ItemId)
 {
@@ -10264,8 +10264,8 @@ bool UBackpackComponent::IsBackPackContainItemId(int ItemId)
 // Function Gameplay.BackpackComponent.IsAutoUse
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::IsAutoUse(int ItemId)
 {
@@ -10290,9 +10290,9 @@ bool UBackpackComponent::IsAutoUse(int ItemId)
 // Function Gameplay.BackpackComponent.HasUnEquipItemByDefindIdRange
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            LowValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            HighValue                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int LowValue (Parm, ZeroConstructor, IsPlainOldData)
+// int HighValue (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasUnEquipItemByDefindIdRange(int LowValue, int HighValue)
 {
@@ -10319,9 +10319,9 @@ bool UBackpackComponent::HasUnEquipItemByDefindIdRange(int LowValue, int HighVal
 // Function Gameplay.BackpackComponent.HasTagSub
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   TagName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName TagName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasTagSub(int ItemId, const struct FName& TagName)
 {
@@ -10347,8 +10347,8 @@ bool UBackpackComponent::HasTagSub(int ItemId, const struct FName& TagName)
 // Function Gameplay.BackpackComponent.HasItemBySubType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SubType                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SubType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasItemBySubType(int SubType)
 {
@@ -10374,8 +10374,8 @@ bool UBackpackComponent::HasItemBySubType(int SubType)
 // Function Gameplay.BackpackComponent.HasItemBySpecificID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SpecificID                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasItemBySpecificID(int SpecificID)
 {
@@ -10401,8 +10401,8 @@ bool UBackpackComponent::HasItemBySpecificID(int SpecificID)
 // Function Gameplay.BackpackComponent.HasItemByDefineID
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasItemByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -10428,9 +10428,9 @@ bool UBackpackComponent::HasItemByDefineID(const struct FItemDefineID& DefineID)
 // Function Gameplay.BackpackComponent.HasItemByDefindIdRange
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            LowValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            HighValue                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int LowValue (Parm, ZeroConstructor, IsPlainOldData)
+// int HighValue (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::HasItemByDefindIdRange(int LowValue, int HighValue)
 {
@@ -10457,9 +10457,9 @@ bool UBackpackComponent::HasItemByDefindIdRange(int LowValue, int HighValue)
 // Function Gameplay.BackpackComponent.HasAllItem
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FBattleItemData> ItemDataArray                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bExcludeEquippingItem          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FBattleItemData> ItemDataArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bExcludeEquippingItem (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UBackpackComponent::HasAllItem(TArray<struct FBattleItemData> ItemDataArray, bool bExcludeEquippingItem)
 {
@@ -10486,10 +10486,10 @@ TArray<int> UBackpackComponent::HasAllItem(TArray<struct FBattleItemData> ItemDa
 // Function Gameplay.BackpackComponent.HandleDropInDisuse
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBattleItemHandleBase*   ItemHandle                     (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemDisuseReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OccupiedCapacityBeforeDisuse   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBattleItemHandleBase* ItemHandle (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemDisuseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// float OccupiedCapacityBeforeDisuse (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::HandleDropInDisuse(const struct FItemDefineID& DefineID, class UBattleItemHandleBase* ItemHandle, EBattleItemDisuseReason Reason, float OccupiedCapacityBeforeDisuse)
 {
@@ -10516,7 +10516,7 @@ void UBackpackComponent::HandleDropInDisuse(const struct FItemDefineID& DefineID
 // Function Gameplay.BackpackComponent.GetWorld_BP
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UBackpackComponent::GetWorld_BP()
 {
@@ -10541,8 +10541,8 @@ class UWorld* UBackpackComponent::GetWorld_BP()
 // Function Gameplay.BackpackComponent.GetUnEquipItemNumByItemId
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::GetUnEquipItemNumByItemId(int ItemId)
 {
@@ -10568,8 +10568,8 @@ int UBackpackComponent::GetUnEquipItemNumByItemId(int ItemId)
 // Function Gameplay.BackpackComponent.GetSpecialItemNow
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// struct FSpecialPickInfo        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (Parm)
+// struct FSpecialPickInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSpecialPickInfo UBackpackComponent::GetSpecialItemNow(const struct FItemDefineID& DefineID)
 {
@@ -10595,8 +10595,8 @@ struct FSpecialPickInfo UBackpackComponent::GetSpecialItemNow(const struct FItem
 // Function Gameplay.BackpackComponent.GetSpecialItemBefore
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ItemResId                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSpecialPickInfo        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int ItemResId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSpecialPickInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSpecialPickInfo UBackpackComponent::GetSpecialItemBefore(int ItemResId)
 {
@@ -10622,7 +10622,7 @@ struct FSpecialPickInfo UBackpackComponent::GetSpecialItemBefore(int ItemResId)
 // Function Gameplay.BackpackComponent.GetSafetyBoxCapacity
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBackpackComponent::GetSafetyBoxCapacity()
 {
@@ -10647,9 +10647,9 @@ float UBackpackComponent::GetSafetyBoxCapacity()
 // Function Gameplay.BackpackComponent.GetLeastElectrictyBattleItemData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// EBattleItemAdditionalDataType  AdditionalDataNameType         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (Parm)
+// EBattleItemAdditionalDataType AdditionalDataNameType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBackpackComponent::GetLeastElectrictyBattleItemData(const struct FItemDefineID& DefineID, EBattleItemAdditionalDataType AdditionalDataNameType)
 {
@@ -10676,8 +10676,8 @@ struct FBattleItemData UBackpackComponent::GetLeastElectrictyBattleItemData(cons
 // Function Gameplay.BackpackComponent.GetItemSubType
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::GetItemSubType(int ItemId)
 {
@@ -10702,10 +10702,10 @@ int UBackpackComponent::GetItemSubType(int ItemId)
 // Function Gameplay.BackpackComponent.GetItemListBySpecialID
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    SpecialIDArray                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bIgnoreEquipping               (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FBattleItemData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> SpecialIDArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bIgnoreEquipping (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FBattleItemData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBattleItemData> UBackpackComponent::GetItemListBySpecialID(TArray<int> SpecialIDArray, bool bIgnoreEquipping, EItemStoreArea InItemStoreArea)
 {
@@ -10733,8 +10733,8 @@ TArray<struct FBattleItemData> UBackpackComponent::GetItemListBySpecialID(TArray
 // Function Gameplay.BackpackComponent.GetItemListByDefineID
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FBattleItemData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FBattleItemData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBattleItemData> UBackpackComponent::GetItemListByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -10760,7 +10760,7 @@ TArray<struct FBattleItemData> UBackpackComponent::GetItemListByDefineID(const s
 // Function Gameplay.BackpackComponent.GetItemHandleMap
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// TMap<struct FItemDefineID, class UItemHandleBase*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FItemDefineID, class UItemHandleBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FItemDefineID, class UItemHandleBase*> UBackpackComponent::GetItemHandleMap()
 {
@@ -10785,7 +10785,7 @@ TMap<struct FItemDefineID, class UItemHandleBase*> UBackpackComponent::GetItemHa
 // Function Gameplay.BackpackComponent.GetItemHandleList
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// TArray<class UItemHandleBase*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UItemHandleBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UItemHandleBase*> UBackpackComponent::GetItemHandleList()
 {
@@ -10810,8 +10810,8 @@ TArray<class UItemHandleBase*> UBackpackComponent::GetItemHandleList()
 // Function Gameplay.BackpackComponent.GetItemCountByType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InItemType                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InItemType (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::GetItemCountByType(int InItemType)
 {
@@ -10837,8 +10837,8 @@ int UBackpackComponent::GetItemCountByType(int InItemType)
 // Function Gameplay.BackpackComponent.GetItemCountByItemSpecialID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InItemSpecialID                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InItemSpecialID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::GetItemCountByItemSpecialID(int InItemSpecialID)
 {
@@ -10864,8 +10864,8 @@ int UBackpackComponent::GetItemCountByItemSpecialID(int InItemSpecialID)
 // Function Gameplay.BackpackComponent.GetItemByDefineID
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBackpackComponent::GetItemByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -10891,8 +10891,8 @@ struct FBattleItemData UBackpackComponent::GetItemByDefineID(const struct FItemD
 // Function Gameplay.BackpackComponent.GetItemAttrsFlag
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            ItemId                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::GetItemAttrsFlag(int ItemId)
 {
@@ -10918,8 +10918,8 @@ int UBackpackComponent::GetItemAttrsFlag(int ItemId)
 // Function Gameplay.BackpackComponent.GetItemAssociateWeights
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FBattleItemData         InItemData                     (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBattleItemData InItemData (ConstParm, Parm, OutParm, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBackpackComponent::GetItemAssociateWeights(const struct FBattleItemData& InItemData)
 {
@@ -10945,8 +10945,8 @@ float UBackpackComponent::GetItemAssociateWeights(const struct FBattleItemData& 
 // Function Gameplay.BackpackComponent.GetFirstItemBySubType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SubType                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// int SubType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBackpackComponent::GetFirstItemBySubType(int SubType)
 {
@@ -10972,8 +10972,8 @@ struct FBattleItemData UBackpackComponent::GetFirstItemBySubType(int SubType)
 // Function Gameplay.BackpackComponent.GetFirstItemByDefineIDIgnoreInstance
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBackpackComponent::GetFirstItemByDefineIDIgnoreInstance(const struct FItemDefineID& DefineID)
 {
@@ -10999,7 +10999,7 @@ struct FBattleItemData UBackpackComponent::GetFirstItemByDefineIDIgnoreInstance(
 // Function Gameplay.BackpackComponent.GetCurrentPickupItemDefineID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemDefineID UBackpackComponent::GetCurrentPickupItemDefineID()
 {
@@ -11024,8 +11024,8 @@ struct FItemDefineID UBackpackComponent::GetCurrentPickupItemDefineID()
 // Function Gameplay.BackpackComponent.GetBattleItemFeatureDataByDefineID
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemFeatureData  ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemFeatureData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemFeatureData UBackpackComponent::GetBattleItemFeatureDataByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -11051,8 +11051,8 @@ struct FBattleItemFeatureData UBackpackComponent::GetBattleItemFeatureDataByDefi
 // Function Gameplay.BackpackComponent.GetAllItemList
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FBattleItemData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FBattleItemData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBattleItemData> UBackpackComponent::GetAllItemList(EItemStoreArea InItemStoreArea)
 {
@@ -11078,8 +11078,8 @@ TArray<struct FBattleItemData> UBackpackComponent::GetAllItemList(EItemStoreArea
 // Function Gameplay.BackpackComponent.GetAIPickupType
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemClientPickupType    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemClientPickupType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EBattleItemClientPickupType UBackpackComponent::GetAIPickupType(int ItemId)
 {
@@ -11126,10 +11126,10 @@ void UBackpackComponent::ForceNetUpdate()
 // Function Gameplay.BackpackComponent.DropItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemDropReason          Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemDropReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::DropItem(const struct FItemDefineID& DefineID, int Count, EBattleItemDropReason Reason)
 {
@@ -11157,9 +11157,9 @@ bool UBackpackComponent::DropItem(const struct FItemDefineID& DefineID, int Coun
 // Function Gameplay.BackpackComponent.DisuseItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// EBattleItemDisuseReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// EBattleItemDisuseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::DisuseItem(const struct FItemDefineID& DefineID, EBattleItemDisuseReason Reason)
 {
@@ -11186,8 +11186,8 @@ bool UBackpackComponent::DisuseItem(const struct FItemDefineID& DefineID, EBattl
 // Function Gameplay.BackpackComponent.CreateItemHandleInternal
 // (Native, Event, Protected, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBattleItemHandleBase*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBattleItemHandleBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBattleItemHandleBase* UBackpackComponent::CreateItemHandleInternal(const struct FItemDefineID& DefineID)
 {
@@ -11213,8 +11213,8 @@ class UBattleItemHandleBase* UBackpackComponent::CreateItemHandleInternal(const 
 // Function Gameplay.BackpackComponent.CreateItemHandle
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UItemHandleBase*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UItemHandleBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UItemHandleBase* UBackpackComponent::CreateItemHandle(const struct FItemDefineID& DefineID)
 {
@@ -11240,9 +11240,9 @@ class UItemHandleBase* UBackpackComponent::CreateItemHandle(const struct FItemDe
 // Function Gameplay.BackpackComponent.ConsumeItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::ConsumeItem(const struct FItemDefineID& DefineID, int Count)
 {
@@ -11269,9 +11269,9 @@ int UBackpackComponent::ConsumeItem(const struct FItemDefineID& DefineID, int Co
 // Function Gameplay.BackpackComponent.ClientBroadcastItemOperationFailedDelegate
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, ReferenceParm)
-// EBattleItemOperationType       OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemOperationFailedReason FailedReason                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, ReferenceParm)
+// EBattleItemOperationType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemOperationFailedReason FailedReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ClientBroadcastItemOperationFailedDelegate(const struct FItemDefineID& DefineID, EBattleItemOperationType OperationType, EBattleItemOperationFailedReason FailedReason)
 {
@@ -11297,9 +11297,9 @@ void UBackpackComponent::ClientBroadcastItemOperationFailedDelegate(const struct
 // Function Gameplay.BackpackComponent.ClientBroadcastItemOperationDelegate
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, ReferenceParm)
-// EBattleItemOperationType       OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, ReferenceParm)
+// EBattleItemOperationType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ClientBroadcastItemOperationDelegate(const struct FItemDefineID& DefineID, EBattleItemOperationType OperationType, unsigned char Reason)
 {
@@ -11325,10 +11325,10 @@ void UBackpackComponent::ClientBroadcastItemOperationDelegate(const struct FItem
 // Function Gameplay.BackpackComponent.ClientBroadcastItemChangeAreaDelegate
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// int                            TypeSpecificID                 (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemChangeAreaType      OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bToSafeBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TypeSpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemChangeAreaType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// bool bToSafeBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::ClientBroadcastItemChangeAreaDelegate(int TypeSpecificID, EBattleItemChangeAreaType OperationType, int Num, bool bToSafeBox)
 {
@@ -11355,9 +11355,9 @@ void UBackpackComponent::ClientBroadcastItemChangeAreaDelegate(int TypeSpecificI
 // Function Gameplay.BackpackComponent.CheckSpecialMaxCountForItem
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::CheckSpecialMaxCountForItem(const struct FItemDefineID& DefineID, int Count)
 {
@@ -11384,9 +11384,9 @@ int UBackpackComponent::CheckSpecialMaxCountForItem(const struct FItemDefineID& 
 // Function Gameplay.BackpackComponent.CheckSkillPropItemCanBePickup
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBackpackComponent*      BackpackComp                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FItemDefineID           DefineID                       (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBackpackComponent* BackpackComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CheckSkillPropItemCanBePickup(class UBackpackComponent* BackpackComp, const struct FItemDefineID& DefineID)
 {
@@ -11413,10 +11413,10 @@ bool UBackpackComponent::CheckSkillPropItemCanBePickup(class UBackpackComponent*
 // Function Gameplay.BackpackComponent.CheckPickUpItemDefaultSuccess
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bPickupSucc                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoEquip                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool bPickupSucc (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAutoEquip (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CheckPickUpItemDefaultSuccess(const struct FItemDefineID& DefineID, bool bPickupSucc, bool bAutoEquip)
 {
@@ -11444,9 +11444,9 @@ bool UBackpackComponent::CheckPickUpItemDefaultSuccess(const struct FItemDefineI
 // Function Gameplay.BackpackComponent.CheckLeftLimitCountForItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            InItemID                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCount                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InItemID (Parm, ZeroConstructor, IsPlainOldData)
+// int InCount (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::CheckLeftLimitCountForItem(int InItemID, int InCount)
 {
@@ -11473,7 +11473,7 @@ int UBackpackComponent::CheckLeftLimitCountForItem(int InItemID, int InCount)
 // Function Gameplay.BackpackComponent.CheckItemEmptyInBackpack
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InItemID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int InItemID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::CheckItemEmptyInBackpack(int InItemID)
 {
@@ -11497,9 +11497,9 @@ void UBackpackComponent::CheckItemEmptyInBackpack(int InItemID)
 // Function Gameplay.BackpackComponent.CheckItemAttrsFlag
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            ItemId                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EItemAttrs                     ItemAttrEnum                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EItemAttrs ItemAttrEnum (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CheckItemAttrsFlag(int ItemId, EItemAttrs ItemAttrEnum)
 {
@@ -11526,10 +11526,10 @@ bool UBackpackComponent::CheckItemAttrsFlag(int ItemId, EItemAttrs ItemAttrEnum)
 // Function Gameplay.BackpackComponent.CheckCapacityForItem
 // (Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBackpackComponent::CheckCapacityForItem(const struct FItemDefineID& DefineID, int Count, EItemStoreArea InItemStoreArea)
 {
@@ -11557,10 +11557,10 @@ int UBackpackComponent::CheckCapacityForItem(const struct FItemDefineID& DefineI
 // Function Gameplay.BackpackComponent.ChangeItemStoreAreaNew
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::ChangeItemStoreAreaNew(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -11588,10 +11588,10 @@ bool UBackpackComponent::ChangeItemStoreAreaNew(const struct FItemDefineID& Defi
 // Function Gameplay.BackpackComponent.ChangeItemStoreArea
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::ChangeItemStoreArea(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -11619,7 +11619,7 @@ bool UBackpackComponent::ChangeItemStoreArea(const struct FItemDefineID& DefineI
 // Function Gameplay.BackpackComponent.CantDrop
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CantDrop()
 {
@@ -11644,8 +11644,8 @@ bool UBackpackComponent::CantDrop()
 // Function Gameplay.BackpackComponent.CanDisuseToBackpack
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CanDisuseToBackpack(const struct FItemDefineID& DefineID)
 {
@@ -11671,9 +11671,9 @@ bool UBackpackComponent::CanDisuseToBackpack(const struct FItemDefineID& DefineI
 // Function Gameplay.BackpackComponent.CacheItemAssociationBeforeDisuse
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// EBattleItemDisuseReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// EBattleItemDisuseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::CacheItemAssociationBeforeDisuse(const struct FItemDefineID& DefineID, EBattleItemDisuseReason Reason)
 {
@@ -11700,9 +11700,9 @@ bool UBackpackComponent::CacheItemAssociationBeforeDisuse(const struct FItemDefi
 // Function Gameplay.BackpackComponent.BroadcastItemOperCountDelegate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemOperationType       OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemOperationType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::BroadcastItemOperCountDelegate(const struct FItemDefineID& DefineID, EBattleItemOperationType OperationType, int Count)
 {
@@ -11728,7 +11728,7 @@ void UBackpackComponent::BroadcastItemOperCountDelegate(const struct FItemDefine
 // Function Gameplay.BackpackComponent.BroadcastItemOperationInfoDelegate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemOperationInfo      ItemOperationInfo              (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemOperationInfo ItemOperationInfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBackpackComponent::BroadcastItemOperationInfoDelegate(const struct FItemOperationInfo& ItemOperationInfo)
 {
@@ -11752,9 +11752,9 @@ void UBackpackComponent::BroadcastItemOperationInfoDelegate(const struct FItemOp
 // Function Gameplay.BackpackComponent.BroadcastItemOperationFailedDelegate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemOperationType       OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemOperationFailedReason FailedReason                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemOperationType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemOperationFailedReason FailedReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::BroadcastItemOperationFailedDelegate(const struct FItemDefineID& DefineID, EBattleItemOperationType OperationType, EBattleItemOperationFailedReason FailedReason)
 {
@@ -11780,9 +11780,9 @@ void UBackpackComponent::BroadcastItemOperationFailedDelegate(const struct FItem
 // Function Gameplay.BackpackComponent.BroadcastItemOperationDelegate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemOperationType       OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemOperationType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::BroadcastItemOperationDelegate(const struct FItemDefineID& DefineID, EBattleItemOperationType OperationType, unsigned char Reason)
 {
@@ -11808,10 +11808,10 @@ void UBackpackComponent::BroadcastItemOperationDelegate(const struct FItemDefine
 // Function Gameplay.BackpackComponent.BroadcastItemChangeAreaDelegate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TypeSpecificID                 (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemChangeAreaType      OperationType                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bToSafeBox                     (Parm, ZeroConstructor, IsPlainOldData)
+// int TypeSpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemChangeAreaType OperationType (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// bool bToSafeBox (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::BroadcastItemChangeAreaDelegate(int TypeSpecificID, EBattleItemChangeAreaType OperationType, int Num, bool bToSafeBox)
 {
@@ -11838,8 +11838,8 @@ void UBackpackComponent::BroadcastItemChangeAreaDelegate(int TypeSpecificID, EBa
 // Function Gameplay.BackpackComponent.AlternativePickupItem
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::AlternativePickupItem(struct FItemDefineID* DefineID)
 {
@@ -11867,9 +11867,9 @@ bool UBackpackComponent::AlternativePickupItem(struct FItemDefineID* DefineID)
 // Function Gameplay.BackpackComponent.AddItemHandle
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UItemHandleBase*         ItemHandle                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UItemHandleBase* ItemHandle (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponent::AddItemHandle(const struct FItemDefineID& DefineID, class UItemHandleBase* ItemHandle)
 {
@@ -11896,10 +11896,10 @@ bool UBackpackComponent::AddItemHandle(const struct FItemDefineID& DefineID, cla
 // Function Gameplay.BackpackComponent.AddBattleItemPickupOnPlane
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm, OutParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (Parm, OutParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemClientPickupType    BattleItemClientPickupType     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm, OutParm)
+// struct FBattleItemPickupInfo PickupInfo (Parm, OutParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemClientPickupType BattleItemClientPickupType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBackpackComponent::AddBattleItemPickupOnPlane(EBattleItemPickupReason Reason, EBattleItemClientPickupType BattleItemClientPickupType, struct FItemDefineID* DefineID, struct FBattleItemPickupInfo* PickupInfo)
 {
@@ -11950,8 +11950,8 @@ void ABackpackRepActor::OnRep_ItemListNet()
 // Function Gameplay.BackpackRepActor.NotifyItemUpdated
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void ABackpackRepActor::NotifyItemUpdated(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -11976,8 +11976,8 @@ void ABackpackRepActor::NotifyItemUpdated(const struct FItemDefineID& DefineID, 
 // Function Gameplay.BackpackRepActor.NotifyItemRemoved
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void ABackpackRepActor::NotifyItemRemoved(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -12002,7 +12002,7 @@ void ABackpackRepActor::NotifyItemRemoved(const struct FItemDefineID& DefineID, 
 // Function Gameplay.BackpackRepActor.NotifyItemEmpty
 // (Final, Native, Public)
 // Parameters:
-// int                            Slack                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Slack (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABackpackRepActor::NotifyItemEmpty(int Slack)
 {
@@ -12026,8 +12026,8 @@ void ABackpackRepActor::NotifyItemEmpty(int Slack)
 // Function Gameplay.BackpackRepActor.NotifyItemAdded
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void ABackpackRepActor::NotifyItemAdded(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -12052,7 +12052,7 @@ void ABackpackRepActor::NotifyItemAdded(const struct FItemDefineID& DefineID, co
 // Function Gameplay.BaseGeneratorComponent.RegisterWorldTileSpot
 // (Native, Public)
 // Parameters:
-// class USpotSceneComponent*     Spot                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USpotSceneComponent* Spot (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBaseGeneratorComponent::RegisterWorldTileSpot(class USpotSceneComponent* Spot)
 {
@@ -12076,7 +12076,7 @@ void UBaseGeneratorComponent::RegisterWorldTileSpot(class USpotSceneComponent* S
 // Function Gameplay.BaseGeneratorComponent.RegisterSpotComponentToTick
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class USpotSceneComponent*     SpotComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USpotSceneComponent* SpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBaseGeneratorComponent::RegisterSpotComponentToTick(class USpotSceneComponent* SpotComponent)
 {
@@ -12100,7 +12100,7 @@ void UBaseGeneratorComponent::RegisterSpotComponentToTick(class USpotSceneCompon
 // Function Gameplay.BaseGeneratorComponent.RegisterGroupSpotComponent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UGroupSpotSceneComponent* GroupSpotComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UGroupSpotSceneComponent* GroupSpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBaseGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
 {
@@ -12124,8 +12124,8 @@ void UBaseGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneCo
 // Function Gameplay.BaseGeneratorComponent.GetRandomCategory
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FSpotWeight>     SpotWeights                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSpotWeight> SpotWeights (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBaseGeneratorComponent::GetRandomCategory(TArray<struct FSpotWeight> SpotWeights)
 {
@@ -12151,7 +12151,7 @@ struct FString UBaseGeneratorComponent::GetRandomCategory(TArray<struct FSpotWei
 // Function Gameplay.BaseGeneratorComponent.GeneratorWorldTileSpots
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FWorldTileSpotArray     SpotArray                      (Parm, OutParm)
+// struct FWorldTileSpotArray SpotArray (Parm, OutParm)
 
 void UBaseGeneratorComponent::GeneratorWorldTileSpots(struct FWorldTileSpotArray* SpotArray)
 {
@@ -12198,7 +12198,7 @@ void UBaseGeneratorComponent::GenerateSpots()
 // Function Gameplay.BaseGeneratorComponent.GenerateSpotOnTick
 // (Native, Public)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBaseGeneratorComponent::GenerateSpotOnTick(float DeltaTime)
 {
@@ -12222,12 +12222,12 @@ void UBaseGeneratorComponent::GenerateSpotOnTick(float DeltaTime)
 // Function Gameplay.BaseGeneratorComponent.GeneratePickupActor
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UClass*                  ActorClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ActorLocation                  (Parm, OutParm, IsPlainOldData)
-// struct FRotator                ActorRotator                   (Parm, OutParm, IsPlainOldData)
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ActorLocation (Parm, OutParm, IsPlainOldData)
+// struct FRotator ActorRotator (Parm, OutParm, IsPlainOldData)
 // ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemGenerateSpawnClass ItemData                       (Parm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemGenerateSpawnClass ItemData (Parm)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UBaseGeneratorComponent::GeneratePickupActor(class UClass* ActorClass, ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod, const struct FItemGenerateSpawnClass& ItemData, struct FVector* ActorLocation, struct FRotator* ActorRotator)
 {
@@ -12302,9 +12302,9 @@ void UDynamicSpotContainerComponent::UseSerializeData()
 // Function Gameplay.GeneratorActorAIInterface.RegisterAIPickupPoint
 // (Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 BuildingLoc                    (Parm, IsPlainOldData)
-// struct FVector                 SpotLoc                        (Parm, IsPlainOldData)
-// class AActor*                  PickUpActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BuildingLoc (Parm, IsPlainOldData)
+// struct FVector SpotLoc (Parm, IsPlainOldData)
+// class AActor* PickUpActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorActorAIInterface::RegisterAIPickupPoint(const struct FVector& BuildingLoc, const struct FVector& SpotLoc, class AActor* PickUpActor)
 {
@@ -12330,8 +12330,8 @@ void UGeneratorActorAIInterface::RegisterAIPickupPoint(const struct FVector& Bui
 // Function Gameplay.GeneratorActorInterface.SetExtendData
 // (Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorActorInterface::SetExtendData(const struct FString& Key, int Value)
 {
@@ -12356,7 +12356,7 @@ void UGeneratorActorInterface::SetExtendData(const struct FString& Key, int Valu
 // Function Gameplay.GeneratorActorInterface.SetAttachedActor
 // (Native, Public)
 // Parameters:
-// class AActor*                  AttachedActor                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* AttachedActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorActorInterface::SetAttachedActor(class AActor* AttachedActor)
 {
@@ -12380,11 +12380,11 @@ void UGeneratorActorInterface::SetAttachedActor(class AActor* AttachedActor)
 // Function Gameplay.GeneratorActorInterface.InitDataNew
 // (Native, Public)
 // Parameters:
-// int                            ItemCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// bool                           RepeatGenerateItem             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SpotDataIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Value (Parm, ZeroConstructor)
+// struct FString Category (Parm, ZeroConstructor)
+// bool RepeatGenerateItem (Parm, ZeroConstructor, IsPlainOldData)
+// int SpotDataIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorActorInterface::InitDataNew(int ItemCount, const struct FString& Value, const struct FString& Category, bool RepeatGenerateItem, int SpotDataIndex)
 {
@@ -12412,11 +12412,11 @@ void UGeneratorActorInterface::InitDataNew(int ItemCount, const struct FString& 
 // Function Gameplay.GeneratorActorInterface.InitData
 // (Native, Public)
 // Parameters:
-// class UItemSpotSceneComponent* ItemSpotSceneComponent         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ItemCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// bool                           RepeatGenerateItem             (Parm, ZeroConstructor, IsPlainOldData)
+// class UItemSpotSceneComponent* ItemSpotSceneComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int ItemCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Value (Parm, ZeroConstructor)
+// struct FString Category (Parm, ZeroConstructor)
+// bool RepeatGenerateItem (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorActorInterface::InitData(class UItemSpotSceneComponent* ItemSpotSceneComponent, int ItemCount, const struct FString& Value, const struct FString& Category, bool RepeatGenerateItem)
 {
@@ -12444,7 +12444,7 @@ void UGeneratorActorInterface::InitData(class UItemSpotSceneComponent* ItemSpotS
 // Function Gameplay.GeneratorActorInterface.GetItemId
 // (Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UGeneratorActorInterface::GetItemId()
 {
@@ -12469,7 +12469,7 @@ int UGeneratorActorInterface::GetItemId()
 // Function Gameplay.GeneratorVehicleInterface.SetSafeSpawn
 // (Native, Public)
 // Parameters:
-// bool                           ab_IsSafeSpawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool ab_IsSafeSpawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorVehicleInterface::SetSafeSpawn(bool ab_IsSafeSpawn)
 {
@@ -12493,8 +12493,8 @@ void UGeneratorVehicleInterface::SetSafeSpawn(bool ab_IsSafeSpawn)
 // Function Gameplay.GeneratorVehicleInterface.ServerDetachAllPlayerFromSeatByGenerator
 // (Native, Public)
 // Parameters:
-// bool                           bMustExit                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bApplyVehicleVelocity          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMustExit (Parm, ZeroConstructor, IsPlainOldData)
+// bool bApplyVehicleVelocity (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorVehicleInterface::ServerDetachAllPlayerFromSeatByGenerator(bool bMustExit, bool bApplyVehicleVelocity)
 {
@@ -12519,9 +12519,9 @@ void UGeneratorVehicleInterface::ServerDetachAllPlayerFromSeatByGenerator(bool b
 // Function Gameplay.GeneratorVehicleInterface.InitVehicle
 // (Native, Public)
 // Parameters:
-// int                            FuelPercent                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEngineOn                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInHouse                       (Parm, ZeroConstructor, IsPlainOldData)
+// int FuelPercent (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEngineOn (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInHouse (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorVehicleInterface::InitVehicle(int FuelPercent, bool bEngineOn, bool bInHouse)
 {
@@ -12547,8 +12547,8 @@ void UGeneratorVehicleInterface::InitVehicle(int FuelPercent, bool bEngineOn, bo
 // Function Gameplay.GeneratorVehicleInterface.CheckSpawnLocation
 // (Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 SpawnLocation                  (Parm, IsPlainOldData)
-// float                          MaxSpawnDistance               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector SpawnLocation (Parm, IsPlainOldData)
+// float MaxSpawnDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeneratorVehicleInterface::CheckSpawnLocation(const struct FVector& SpawnLocation, float MaxSpawnDistance)
 {
@@ -12594,8 +12594,8 @@ void AGlobalConfigActor::Init()
 // Function Gameplay.ImplItemRegionInterface.GetRegion
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 Tag                            (Parm, ZeroConstructor)
-// struct FItemRegionCircle       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Tag (Parm, ZeroConstructor)
+// struct FItemRegionCircle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemRegionCircle UImplItemRegionInterface::GetRegion(const struct FString& Tag)
 {
@@ -12621,8 +12621,8 @@ struct FItemRegionCircle UImplItemRegionInterface::GetRegion(const struct FStrin
 // Function Gameplay.ItemConfigActorComponent.RegisterGroupSceneComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupType                      (Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         GroupSceneComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int GroupType (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* GroupSceneComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UItemConfigActorComponent::RegisterGroupSceneComponent(int GroupType, class USceneComponent* GroupSceneComponent)
 {
@@ -12647,9 +12647,9 @@ void UItemConfigActorComponent::RegisterGroupSceneComponent(int GroupType, class
 // Function Gameplay.ItemConfigActorComponent.RandomItemSpawnClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ItemValue                      (Parm, ZeroConstructor)
-// struct FString                 ItemCategory                   (Parm, ZeroConstructor)
-// TArray<struct FItemSpawnClass> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ItemValue (Parm, ZeroConstructor)
+// struct FString ItemCategory (Parm, ZeroConstructor)
+// TArray<struct FItemSpawnClass> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FItemSpawnClass> UItemConfigActorComponent::RandomItemSpawnClass(const struct FString& ItemValue, const struct FString& ItemCategory)
 {
@@ -12676,9 +12676,9 @@ TArray<struct FItemSpawnClass> UItemConfigActorComponent::RandomItemSpawnClass(c
 // Function Gameplay.ItemConfigActorComponent.RandomGroupSceneComponents
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            GroupType                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Persent                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class USceneComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// int GroupType (Parm, ZeroConstructor, IsPlainOldData)
+// int Persent (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class USceneComponent*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class USceneComponent*> UItemConfigActorComponent::RandomGroupSceneComponents(int GroupType, int Persent)
 {
@@ -12705,8 +12705,8 @@ TArray<class USceneComponent*> UItemConfigActorComponent::RandomGroupSceneCompon
 // Function Gameplay.ItemConfigActorComponent.RandomGroupSceneComponent
 // (Final, Native, Public)
 // Parameters:
-// TArray<class USceneComponent*> AllGroups                      (Parm, ZeroConstructor)
-// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// TArray<class USceneComponent*> AllGroups (Parm, ZeroConstructor)
+// class USceneComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USceneComponent* UItemConfigActorComponent::RandomGroupSceneComponent(TArray<class USceneComponent*> AllGroups)
 {
@@ -12732,8 +12732,8 @@ class USceneComponent* UItemConfigActorComponent::RandomGroupSceneComponent(TArr
 // Function Gameplay.ItemConfigActorComponent.LoadActorClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UItemConfigActorComponent::LoadActorClass(const struct FString& Path)
 {
@@ -12759,8 +12759,8 @@ class UClass* UItemConfigActorComponent::LoadActorClass(const struct FString& Pa
 // Function Gameplay.ItemConfigActorComponent.GetItemSpawnClass
 // (Final, Native, Public)
 // Parameters:
-// struct FItemSpawnData          Data                           (Parm)
-// TArray<struct FItemSpawnClass> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FItemSpawnData Data (Parm)
+// TArray<struct FItemSpawnClass> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FItemSpawnClass> UItemConfigActorComponent::GetItemSpawnClass(const struct FItemSpawnData& Data)
 {
@@ -12786,8 +12786,8 @@ TArray<struct FItemSpawnClass> UItemConfigActorComponent::GetItemSpawnClass(cons
 // Function Gameplay.ItemCountArea.IsInArea
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Position                       (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Position (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AItemCountArea::IsInArea(struct FVector* Position)
 {
@@ -12983,8 +12983,8 @@ void UItemGeneratorComponent::WriteAllStatisticsDatas()
 // Function Gameplay.ItemGeneratorComponent.TryLoadItemSpawnTableByTableMgr
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::TryLoadItemSpawnTableByTableMgr(const struct FString& tableName)
 {
@@ -13010,7 +13010,7 @@ bool UItemGeneratorComponent::TryLoadItemSpawnTableByTableMgr(const struct FStri
 // Function Gameplay.ItemGeneratorComponent.SetRandomSeed
 // (Final, Native, Public)
 // Parameters:
-// int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Seed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::SetRandomSeed(int Seed)
 {
@@ -13034,7 +13034,7 @@ void UItemGeneratorComponent::SetRandomSeed(int Seed)
 // Function Gameplay.ItemGeneratorComponent.SetCatetoryRate
 // (Final, Native, Public)
 // Parameters:
-// TMap<struct FString, float>    Rates                          (Parm, ZeroConstructor)
+// TMap<struct FString, float> Rates (Parm, ZeroConstructor)
 
 void UItemGeneratorComponent::SetCatetoryRate(TMap<struct FString, float> Rates)
 {
@@ -13058,8 +13058,8 @@ void UItemGeneratorComponent::SetCatetoryRate(TMap<struct FString, float> Rates)
 // Function Gameplay.ItemGeneratorComponent.RemoveSpotInfo
 // (Final, Native, Public)
 // Parameters:
-// bool                           bFirstEnterState               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bFirstEnterState (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::RemoveSpotInfo(bool bFirstEnterState)
 {
@@ -13106,8 +13106,8 @@ void UItemGeneratorComponent::RemoveItemOnTick()
 // Function Gameplay.ItemGeneratorComponent.RemoveDropGround
 // (Final, Native, Public)
 // Parameters:
-// bool                           bFirstEnterState               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bFirstEnterState (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::RemoveDropGround(bool bFirstEnterState)
 {
@@ -13133,7 +13133,7 @@ bool UItemGeneratorComponent::RemoveDropGround(bool bFirstEnterState)
 // Function Gameplay.ItemGeneratorComponent.RegisterItemGenerateSpawnData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemGenerateSpawnData  Data                           (Parm)
+// struct FItemGenerateSpawnData Data (Parm)
 
 void UItemGeneratorComponent::RegisterItemGenerateSpawnData(const struct FItemGenerateSpawnData& Data)
 {
@@ -13157,7 +13157,7 @@ void UItemGeneratorComponent::RegisterItemGenerateSpawnData(const struct FItemGe
 // Function Gameplay.ItemGeneratorComponent.RegisterBornIslandItem
 // (Native, Public)
 // Parameters:
-// class AActor*                  Item                           (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Item (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::RegisterBornIslandItem(class AActor* Item)
 {
@@ -13181,8 +13181,8 @@ void UItemGeneratorComponent::RegisterBornIslandItem(class AActor* Item)
 // Function Gameplay.ItemGeneratorComponent.ReadItemGenerateTable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TablePath                      (Parm, ZeroConstructor)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString TablePath (Parm, ZeroConstructor)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UItemGeneratorComponent::ReadItemGenerateTable(const struct FString& TablePath)
 {
@@ -13229,9 +13229,9 @@ void UItemGeneratorComponent::ReAddAllSpot()
 // Function Gameplay.ItemGeneratorComponent.RandomSingleGroup
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<class UGroupSpotSceneComponent*> Groups                         (Parm, OutParm, ZeroConstructor)
-// struct FSpotGroupProperty      GroupProperty                  (ConstParm, Parm, OutParm, ReferenceParm)
-// class UItemGroupSpotSceneComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// TArray<class UGroupSpotSceneComponent*> Groups (Parm, OutParm, ZeroConstructor)
+// struct FSpotGroupProperty GroupProperty (ConstParm, Parm, OutParm, ReferenceParm)
+// class UItemGroupSpotSceneComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UItemGroupSpotSceneComponent* UItemGeneratorComponent::RandomSingleGroup(const struct FSpotGroupProperty& GroupProperty, TArray<class UGroupSpotSceneComponent*>* Groups)
 {
@@ -13260,7 +13260,7 @@ class UItemGroupSpotSceneComponent* UItemGeneratorComponent::RandomSingleGroup(c
 // Function Gameplay.ItemGeneratorComponent.RandomGroupsByType
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FSpotGroupProperty      GroupProperty                  (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSpotGroupProperty GroupProperty (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemGeneratorComponent::RandomGroupsByType(const struct FSpotGroupProperty& GroupProperty)
 {
@@ -13305,7 +13305,7 @@ void UItemGeneratorComponent::RandomBornIslandGroups()
 // Function Gameplay.ItemGeneratorComponent.OnAsyncLoadItemClassFinish
 // (Final, Native, Public)
 // Parameters:
-// struct FItemGenerateSpawnClass SpawnClass                     (Parm)
+// struct FItemGenerateSpawnClass SpawnClass (Parm)
 
 void UItemGeneratorComponent::OnAsyncLoadItemClassFinish(const struct FItemGenerateSpawnClass& SpawnClass)
 {
@@ -13329,8 +13329,8 @@ void UItemGeneratorComponent::OnAsyncLoadItemClassFinish(const struct FItemGener
 // Function Gameplay.ItemGeneratorComponent.LuaCustomFunctionAfterGenerate
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemGenerateSpawnClass SpawnClass                     (Parm, OutParm)
-// class AActor*                  ItemActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemGenerateSpawnClass SpawnClass (Parm, OutParm)
+// class AActor* ItemActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::LuaCustomFunctionAfterGenerate(class AActor* ItemActor, struct FItemGenerateSpawnClass* SpawnClass)
 {
@@ -13357,8 +13357,8 @@ void UItemGeneratorComponent::LuaCustomFunctionAfterGenerate(class AActor* ItemA
 // Function Gameplay.ItemGeneratorComponent.LuaAddRandomItemClassArray
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FItemGenerateSpawnClass SpawnClass                     (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemGenerateSpawnClass SpawnClass (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::LuaAddRandomItemClassArray(const struct FItemGenerateSpawnClass& SpawnClass)
 {
@@ -13405,7 +13405,7 @@ void UItemGeneratorComponent::LoadItemGenerateTable()
 // Function Gameplay.ItemGeneratorComponent.IsCatetoryEnabled
 // (Final, Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::IsCatetoryEnabled()
 {
@@ -13472,13 +13472,13 @@ void UItemGeneratorComponent::InitCategoryEx()
 // Function Gameplay.ItemGeneratorComponent.GMTrackGroundCheck
 // (Final, Native, Public)
 // Parameters:
-// class UClass*                  CheckClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FloatUp                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FloatDown                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SinkUp                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SinkTop                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCheckBounds                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UClass* CheckClass (Parm, ZeroConstructor, IsPlainOldData)
+// float FloatUp (Parm, ZeroConstructor, IsPlainOldData)
+// float FloatDown (Parm, ZeroConstructor, IsPlainOldData)
+// float SinkUp (Parm, ZeroConstructor, IsPlainOldData)
+// float SinkTop (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCheckBounds (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UItemGeneratorComponent::GMTrackGroundCheck(class UClass* CheckClass, float FloatUp, float FloatDown, float SinkUp, float SinkTop, bool bCheckBounds)
 {
@@ -13509,8 +13509,8 @@ TArray<struct FVector> UItemGeneratorComponent::GMTrackGroundCheck(class UClass*
 // Function Gameplay.ItemGeneratorComponent.GMGenerateAllSpot
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ItemPath                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ItemPath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::GMGenerateAllSpot(const struct FString& ItemPath)
 {
@@ -13536,7 +13536,7 @@ bool UItemGeneratorComponent::GMGenerateAllSpot(const struct FString& ItemPath)
 // Function Gameplay.ItemGeneratorComponent.GMEnableRefreshAllSpotWithSeed
 // (Final, Native, Public)
 // Parameters:
-// int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Seed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::GMEnableRefreshAllSpotWithSeed(int Seed)
 {
@@ -13560,7 +13560,7 @@ void UItemGeneratorComponent::GMEnableRefreshAllSpotWithSeed(int Seed)
 // Function Gameplay.ItemGeneratorComponent.GetSpotTags
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UItemGeneratorComponent::GetSpotTags()
 {
@@ -13585,8 +13585,8 @@ TArray<struct FString> UItemGeneratorComponent::GetSpotTags()
 // Function Gameplay.ItemGeneratorComponent.GetSpotLocsByTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ExTag                          (Parm, ZeroConstructor)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ExTag (Parm, ZeroConstructor)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UItemGeneratorComponent::GetSpotLocsByTag(const struct FString& ExTag)
 {
@@ -13612,10 +13612,10 @@ TArray<struct FVector> UItemGeneratorComponent::GetSpotLocsByTag(const struct FS
 // Function Gameplay.ItemGeneratorComponent.GetSpotLocInPolygon
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FVector>         Anchors                        (Parm, ZeroConstructor)
-// TArray<struct FVector>         OutLocs                        (Parm, OutParm, ZeroConstructor)
-// int                            RandomNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FVector> Anchors (Parm, ZeroConstructor)
+// TArray<struct FVector> OutLocs (Parm, OutParm, ZeroConstructor)
+// int RandomNum (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UItemGeneratorComponent::GetSpotLocInPolygon(TArray<struct FVector> Anchors, int RandomNum, TArray<struct FVector>* OutLocs)
 {
@@ -13645,11 +13645,11 @@ int UItemGeneratorComponent::GetSpotLocInPolygon(TArray<struct FVector> Anchors,
 // Function Gameplay.ItemGeneratorComponent.GetSpotLocInCircle
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Center                         (Parm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         OutLocs                        (Parm, OutParm, ZeroConstructor)
-// int                            RandomNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Center (Parm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> OutLocs (Parm, OutParm, ZeroConstructor)
+// int RandomNum (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UItemGeneratorComponent::GetSpotLocInCircle(const struct FVector& Center, float Radius, int RandomNum, TArray<struct FVector>* OutLocs)
 {
@@ -13680,8 +13680,8 @@ int UItemGeneratorComponent::GetSpotLocInCircle(const struct FVector& Center, fl
 // Function Gameplay.ItemGeneratorComponent.GetSpotGroupPropertyByGroupType
 // (Final, Native, Public)
 // Parameters:
-// TEnumAsByte<enum ESpotGroupType> SpotGroupType                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSpotGroupProperty      ReturnValue                    (Parm, OutParm, ReturnParm)
+// TEnumAsByte<enum ESpotGroupType> SpotGroupType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSpotGroupProperty ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSpotGroupProperty UItemGeneratorComponent::GetSpotGroupPropertyByGroupType(TEnumAsByte<enum ESpotGroupType> SpotGroupType)
 {
@@ -13707,12 +13707,12 @@ struct FSpotGroupProperty UItemGeneratorComponent::GetSpotGroupPropertyByGroupTy
 // Function Gameplay.ItemGeneratorComponent.GetRandomItemClassArray
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 Value                          (Parm, OutParm, ZeroConstructor)
-// struct FString                 Category                       (Parm, OutParm, ZeroConstructor)
-// TArray<struct FItemGenerateSpawnClass> Results                        (Parm, OutParm, ZeroConstructor)
-// bool                           RepeatGenerateItem             (Parm, ZeroConstructor, IsPlainOldData)
-// class UItemSpotSceneComponent* SpotComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Value (Parm, OutParm, ZeroConstructor)
+// struct FString Category (Parm, OutParm, ZeroConstructor)
+// TArray<struct FItemGenerateSpawnClass> Results (Parm, OutParm, ZeroConstructor)
+// bool RepeatGenerateItem (Parm, ZeroConstructor, IsPlainOldData)
+// class UItemSpotSceneComponent* SpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::GetRandomItemClassArray(bool RepeatGenerateItem, class UItemSpotSceneComponent* SpotComponent, struct FString* Value, struct FString* Category, TArray<struct FItemGenerateSpawnClass>* Results)
 {
@@ -13746,8 +13746,8 @@ bool UItemGeneratorComponent::GetRandomItemClassArray(bool RepeatGenerateItem, c
 // Function Gameplay.ItemGeneratorComponent.GetRandomCategory
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FSpotWeight>     SpotWeights                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSpotWeight> SpotWeights (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UItemGeneratorComponent::GetRandomCategory(TArray<struct FSpotWeight> SpotWeights)
 {
@@ -13773,8 +13773,8 @@ struct FString UItemGeneratorComponent::GetRandomCategory(TArray<struct FSpotWei
 // Function Gameplay.ItemGeneratorComponent.GetItemDefineID
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class UClass*                  PickUpClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* PickUpClass (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UItemGeneratorComponent::GetItemDefineID(class UClass* PickUpClass)
 {
@@ -13799,8 +13799,8 @@ int UItemGeneratorComponent::GetItemDefineID(class UClass* PickUpClass)
 // Function Gameplay.ItemGeneratorComponent.GetCatetoryRate
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Catetory                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Catetory (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UItemGeneratorComponent::GetCatetoryRate(const struct FString& Catetory)
 {
@@ -13826,7 +13826,7 @@ float UItemGeneratorComponent::GetCatetoryRate(const struct FString& Catetory)
 // Function Gameplay.ItemGeneratorComponent.GenerateSpotOnTick
 // (Native, Public)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::GenerateSpotOnTick(float DeltaTime)
 {
@@ -13871,9 +13871,9 @@ void UItemGeneratorComponent::GenerateNewRandomSeed()
 // Function Gameplay.ItemGeneratorComponent.FindASpawnLoc
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 TraceStart                     (ConstParm, Parm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector TraceStart (ConstParm, Parm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UItemGeneratorComponent::FindASpawnLoc(class UWorld* InWorld, const struct FVector& TraceStart)
 {
@@ -13942,8 +13942,8 @@ void UItemGeneratorComponent::EnableRefreshAllSpot()
 // Function Gameplay.ItemGeneratorComponent.EnablePrimeItemPolygon
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FVector>         Anchors                        (Parm, ZeroConstructor)
-// int                            PrimeConfigIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Anchors (Parm, ZeroConstructor)
+// int PrimeConfigIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::EnablePrimeItemPolygon(TArray<struct FVector> Anchors, int PrimeConfigIndex)
 {
@@ -13968,9 +13968,9 @@ void UItemGeneratorComponent::EnablePrimeItemPolygon(TArray<struct FVector> Anch
 // Function Gameplay.ItemGeneratorComponent.EnablePrimeItemCircle
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Center                         (Parm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PrimeConfigIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Center (Parm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int PrimeConfigIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::EnablePrimeItemCircle(const struct FVector& Center, float Radius, int PrimeConfigIndex)
 {
@@ -13996,7 +13996,7 @@ void UItemGeneratorComponent::EnablePrimeItemCircle(const struct FVector& Center
 // Function Gameplay.ItemGeneratorComponent.EnableDynamicSpotConfigByIndex
 // (Final, Native, Public)
 // Parameters:
-// int                            DynamicIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int DynamicIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::EnableDynamicSpotConfigByIndex(int DynamicIndex)
 {
@@ -14020,9 +14020,9 @@ void UItemGeneratorComponent::EnableDynamicSpotConfigByIndex(int DynamicIndex)
 // Function Gameplay.ItemGeneratorComponent.DoPickUp
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ItemSpotDataIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// struct FString                 Category                       (Parm, ZeroConstructor)
+// int ItemSpotDataIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Value (Parm, ZeroConstructor)
+// struct FString Category (Parm, ZeroConstructor)
 
 void UItemGeneratorComponent::DoPickUp(int ItemSpotDataIndex, const struct FString& Value, const struct FString& Category)
 {
@@ -14069,8 +14069,8 @@ void UItemGeneratorComponent::DeleteBornIslandItems()
 // Function Gameplay.ItemGeneratorComponent.CheckShouldGenerateItem
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::CheckShouldGenerateItem(int ItemId)
 {
@@ -14117,9 +14117,9 @@ void UItemGeneratorComponent::CheckRecoverItems()
 // Function Gameplay.ItemGeneratorComponent.CheckInPolygon
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<struct FVector>         Anchors                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<struct FVector> Anchors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::CheckInPolygon(const struct FVector& Pos, TArray<struct FVector> Anchors)
 {
@@ -14146,10 +14146,10 @@ bool UItemGeneratorComponent::CheckInPolygon(const struct FVector& Pos, TArray<s
 // Function Gameplay.ItemGeneratorComponent.CheckInCircle
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Pos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UItemGeneratorComponent::CheckInCircle(const struct FVector& Pos, const struct FVector& Center, float* Radius)
 {
@@ -14179,7 +14179,7 @@ bool UItemGeneratorComponent::CheckInCircle(const struct FVector& Pos, const str
 // Function Gameplay.ItemGeneratorComponent.AddIgnoreItemClassPath
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FString>         IgnoreItemClassList            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> IgnoreItemClassList (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UItemGeneratorComponent::AddIgnoreItemClassPath(TArray<struct FString> IgnoreItemClassList)
 {
@@ -14203,7 +14203,7 @@ void UItemGeneratorComponent::AddIgnoreItemClassPath(TArray<struct FString> Igno
 // Function Gameplay.ItemGeneratorComponent.AddDropGround
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemGeneratorComponent::AddDropGround(class AActor* InActor)
 {
@@ -14269,7 +14269,7 @@ void UItemGroupRepeatSpotComponent::SetPropertySpotAll()
 // Function Gameplay.ItemGroupRepeatSpotComponent.GetGameMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AUAEGameMode*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AUAEGameMode* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AUAEGameMode* UItemGroupRepeatSpotComponent::GetGameMode()
 {
@@ -14336,9 +14336,9 @@ void UItemGroupRepeatSpotComponent::ClearAllSpotItems()
 // Function Gameplay.LuaBTDecoratorBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -14363,8 +14363,8 @@ void ULuaBTDecoratorBase::ReceiveTickAI(class AAIController* OwnerController, cl
 // Function Gameplay.LuaBTDecoratorBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -14388,8 +14388,8 @@ void ULuaBTDecoratorBase::ReceiveTick(class AActor* OwnerActor, float DeltaSecon
 // Function Gameplay.LuaBTDecoratorBase.ReceiveObserverDeactivatedAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -14413,7 +14413,7 @@ void ULuaBTDecoratorBase::ReceiveObserverDeactivatedAI(class AAIController* Owne
 // Function Gameplay.LuaBTDecoratorBase.ReceiveObserverDeactivated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
 {
@@ -14436,8 +14436,8 @@ void ULuaBTDecoratorBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
 // Function Gameplay.LuaBTDecoratorBase.ReceiveObserverActivatedAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -14461,7 +14461,7 @@ void ULuaBTDecoratorBase::ReceiveObserverActivatedAI(class AAIController* OwnerC
 // Function Gameplay.LuaBTDecoratorBase.ReceiveObserverActivated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveObserverActivated(class AActor* OwnerActor)
 {
@@ -14484,8 +14484,8 @@ void ULuaBTDecoratorBase::ReceiveObserverActivated(class AActor* OwnerActor)
 // Function Gameplay.LuaBTDecoratorBase.ReceiveExecutionStartAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -14509,7 +14509,7 @@ void ULuaBTDecoratorBase::ReceiveExecutionStartAI(class AAIController* OwnerCont
 // Function Gameplay.LuaBTDecoratorBase.ReceiveExecutionStart
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveExecutionStart(class AActor* OwnerActor)
 {
@@ -14532,9 +14532,9 @@ void ULuaBTDecoratorBase::ReceiveExecutionStart(class AActor* OwnerActor)
 // Function Gameplay.LuaBTDecoratorBase.ReceiveExecutionFinishAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBTNodeResult> NodeResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBTNodeResult> NodeResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, TEnumAsByte<enum EBTNodeResult> NodeResult)
 {
@@ -14559,8 +14559,8 @@ void ULuaBTDecoratorBase::ReceiveExecutionFinishAI(class AAIController* OwnerCon
 // Function Gameplay.LuaBTDecoratorBase.ReceiveExecutionFinish
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBTNodeResult> NodeResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBTNodeResult> NodeResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTDecoratorBase::ReceiveExecutionFinish(class AActor* OwnerActor, TEnumAsByte<enum EBTNodeResult> NodeResult)
 {
@@ -14584,9 +14584,9 @@ void ULuaBTDecoratorBase::ReceiveExecutionFinish(class AActor* OwnerActor, TEnum
 // Function Gameplay.LuaBTDecoratorBase.PerformConditionCheckAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTDecoratorBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -14610,10 +14610,10 @@ bool ULuaBTDecoratorBase::PerformConditionCheckAI(class AAIController* OwnerCont
 
 
 // Function Gameplay.LuaBTDecoratorBase.PerformConditionCheck
-// (Event, Protected, BlueprintEvent)
+// (Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTDecoratorBase::PerformConditionCheck(class AActor* OwnerActor)
 {
@@ -14638,7 +14638,7 @@ bool ULuaBTDecoratorBase::PerformConditionCheck(class AActor* OwnerActor)
 // Function Gameplay.LuaBTDecoratorBase.IsDecoratorObserverActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTDecoratorBase::IsDecoratorObserverActive()
 {
@@ -14663,7 +14663,7 @@ bool ULuaBTDecoratorBase::IsDecoratorObserverActive()
 // Function Gameplay.LuaBTDecoratorBase.IsDecoratorExecutionActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTDecoratorBase::IsDecoratorExecutionActive()
 {
@@ -14688,8 +14688,8 @@ bool ULuaBTDecoratorBase::IsDecoratorExecutionActive()
 // Function Gameplay.LuaBTNodeInterface.SetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 VectorValue                    (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector VectorValue (Parm, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsVector(const struct FName& KeyName, const struct FVector& VectorValue)
 {
@@ -14714,8 +14714,8 @@ void ULuaBTNodeInterface::SetValueAsVector(const struct FName& KeyName, const st
 // Function Gameplay.LuaBTNodeInterface.SetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 StringValue                    (Parm, ZeroConstructor)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString StringValue (Parm, ZeroConstructor)
 
 void ULuaBTNodeInterface::SetValueAsString(const struct FName& KeyName, const struct FString& StringValue)
 {
@@ -14740,8 +14740,8 @@ void ULuaBTNodeInterface::SetValueAsString(const struct FName& KeyName, const st
 // Function Gameplay.LuaBTNodeInterface.SetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                RotatorValue                   (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator RotatorValue (Parm, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsRotator(const struct FName& KeyName, const struct FRotator& RotatorValue)
 {
@@ -14766,8 +14766,8 @@ void ULuaBTNodeInterface::SetValueAsRotator(const struct FName& KeyName, const s
 // Function Gameplay.LuaBTNodeInterface.SetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsObject(const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -14792,8 +14792,8 @@ void ULuaBTNodeInterface::SetValueAsObject(const struct FName& KeyName, class UO
 // Function Gameplay.LuaBTNodeInterface.SetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   NameValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName NameValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsName(const struct FName& KeyName, const struct FName& NameValue)
 {
@@ -14818,8 +14818,8 @@ void ULuaBTNodeInterface::SetValueAsName(const struct FName& KeyName, const stru
 // Function Gameplay.LuaBTNodeInterface.SetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            IntValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int IntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsInt(const struct FName& KeyName, int IntValue)
 {
@@ -14844,8 +14844,8 @@ void ULuaBTNodeInterface::SetValueAsInt(const struct FName& KeyName, int IntValu
 // Function Gameplay.LuaBTNodeInterface.SetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          FloatValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float FloatValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsFloat(const struct FName& KeyName, float FloatValue)
 {
@@ -14870,8 +14870,8 @@ void ULuaBTNodeInterface::SetValueAsFloat(const struct FName& KeyName, float Flo
 // Function Gameplay.LuaBTNodeInterface.SetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  EnumValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char EnumValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsEnum(const struct FName& KeyName, unsigned char EnumValue)
 {
@@ -14896,8 +14896,8 @@ void ULuaBTNodeInterface::SetValueAsEnum(const struct FName& KeyName, unsigned c
 // Function Gameplay.LuaBTNodeInterface.SetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ClassValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ClassValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsClass(const struct FName& KeyName, class UClass* ClassValue)
 {
@@ -14922,8 +14922,8 @@ void ULuaBTNodeInterface::SetValueAsClass(const struct FName& KeyName, class UCl
 // Function Gameplay.LuaBTNodeInterface.SetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           BoolValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool BoolValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTNodeInterface::SetValueAsBool(const struct FName& KeyName, bool BoolValue)
 {
@@ -14948,8 +14948,8 @@ void ULuaBTNodeInterface::SetValueAsBool(const struct FName& KeyName, bool BoolV
 // Function Gameplay.LuaBTNodeInterface.IsVectorValueSet
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTNodeInterface::IsVectorValueSet(const struct FName& KeyName)
 {
@@ -14975,8 +14975,8 @@ bool ULuaBTNodeInterface::IsVectorValueSet(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector ULuaBTNodeInterface::GetValueAsVector(const struct FName& KeyName)
 {
@@ -15002,8 +15002,8 @@ struct FVector ULuaBTNodeInterface::GetValueAsVector(const struct FName& KeyName
 // Function Gameplay.LuaBTNodeInterface.GetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ULuaBTNodeInterface::GetValueAsString(const struct FName& KeyName)
 {
@@ -15029,8 +15029,8 @@ struct FString ULuaBTNodeInterface::GetValueAsString(const struct FName& KeyName
 // Function Gameplay.LuaBTNodeInterface.GetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator ULuaBTNodeInterface::GetValueAsRotator(const struct FName& KeyName)
 {
@@ -15056,8 +15056,8 @@ struct FRotator ULuaBTNodeInterface::GetValueAsRotator(const struct FName& KeyNa
 // Function Gameplay.LuaBTNodeInterface.GetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* ULuaBTNodeInterface::GetValueAsObject(const struct FName& KeyName)
 {
@@ -15083,8 +15083,8 @@ class UObject* ULuaBTNodeInterface::GetValueAsObject(const struct FName& KeyName
 // Function Gameplay.LuaBTNodeInterface.GetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName ULuaBTNodeInterface::GetValueAsName(const struct FName& KeyName)
 {
@@ -15110,8 +15110,8 @@ struct FName ULuaBTNodeInterface::GetValueAsName(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULuaBTNodeInterface::GetValueAsInt(const struct FName& KeyName)
 {
@@ -15137,8 +15137,8 @@ int ULuaBTNodeInterface::GetValueAsInt(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ULuaBTNodeInterface::GetValueAsFloat(const struct FName& KeyName)
 {
@@ -15164,8 +15164,8 @@ float ULuaBTNodeInterface::GetValueAsFloat(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char ULuaBTNodeInterface::GetValueAsEnum(const struct FName& KeyName)
 {
@@ -15191,8 +15191,8 @@ unsigned char ULuaBTNodeInterface::GetValueAsEnum(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* ULuaBTNodeInterface::GetValueAsClass(const struct FName& KeyName)
 {
@@ -15218,8 +15218,8 @@ class UClass* ULuaBTNodeInterface::GetValueAsClass(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.GetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTNodeInterface::GetValueAsBool(const struct FName& KeyName)
 {
@@ -15245,7 +15245,7 @@ bool ULuaBTNodeInterface::GetValueAsBool(const struct FName& KeyName)
 // Function Gameplay.LuaBTNodeInterface.ClearValue
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
 void ULuaBTNodeInterface::ClearValue(const struct FName& KeyName)
 {
@@ -15269,9 +15269,9 @@ void ULuaBTNodeInterface::ClearValue(const struct FName& KeyName)
 // Function Gameplay.LuaBTServiceBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -15296,8 +15296,8 @@ void ULuaBTServiceBase::ReceiveTickAI(class AAIController* OwnerController, clas
 // Function Gameplay.LuaBTServiceBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -15321,8 +15321,8 @@ void ULuaBTServiceBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds
 // Function Gameplay.LuaBTServiceBase.ReceiveSearchStartAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveSearchStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -15346,7 +15346,7 @@ void ULuaBTServiceBase::ReceiveSearchStartAI(class AAIController* OwnerControlle
 // Function Gameplay.LuaBTServiceBase.ReceiveSearchStart
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveSearchStart(class AActor* OwnerActor)
 {
@@ -15369,8 +15369,8 @@ void ULuaBTServiceBase::ReceiveSearchStart(class AActor* OwnerActor)
 // Function Gameplay.LuaBTServiceBase.ReceiveDeactivationAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -15394,7 +15394,7 @@ void ULuaBTServiceBase::ReceiveDeactivationAI(class AAIController* OwnerControll
 // Function Gameplay.LuaBTServiceBase.ReceiveDeactivation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveDeactivation(class AActor* OwnerActor)
 {
@@ -15417,8 +15417,8 @@ void ULuaBTServiceBase::ReceiveDeactivation(class AActor* OwnerActor)
 // Function Gameplay.LuaBTServiceBase.ReceiveActivationAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -15442,7 +15442,7 @@ void ULuaBTServiceBase::ReceiveActivationAI(class AAIController* OwnerController
 // Function Gameplay.LuaBTServiceBase.ReceiveActivation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTServiceBase::ReceiveActivation(class AActor* OwnerActor)
 {
@@ -15465,7 +15465,7 @@ void ULuaBTServiceBase::ReceiveActivation(class AActor* OwnerActor)
 // Function Gameplay.LuaBTServiceBase.IsServiceActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTServiceBase::IsServiceActive()
 {
@@ -15490,8 +15490,8 @@ bool ULuaBTServiceBase::IsServiceActive()
 // Function Gameplay.LuaBTTaskBase.SetFinishOnMessageWithId
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FName                   MessageName                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RequestID                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName MessageName (Parm, ZeroConstructor, IsPlainOldData)
+// int RequestID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::SetFinishOnMessageWithId(const struct FName& MessageName, int RequestID)
 {
@@ -15516,7 +15516,7 @@ void ULuaBTTaskBase::SetFinishOnMessageWithId(const struct FName& MessageName, i
 // Function Gameplay.LuaBTTaskBase.SetFinishOnMessage
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FName                   MessageName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName MessageName (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::SetFinishOnMessage(const struct FName& MessageName)
 {
@@ -15540,9 +15540,9 @@ void ULuaBTTaskBase::SetFinishOnMessage(const struct FName& MessageName)
 // Function Gameplay.LuaBTTaskBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -15567,8 +15567,8 @@ void ULuaBTTaskBase::ReceiveTickAI(class AAIController* OwnerController, class A
 // Function Gameplay.LuaBTTaskBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -15592,8 +15592,8 @@ void ULuaBTTaskBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 // Function Gameplay.LuaBTTaskBase.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -15617,7 +15617,7 @@ void ULuaBTTaskBase::ReceiveExecuteAI(class AAIController* OwnerController, clas
 // Function Gameplay.LuaBTTaskBase.ReceiveExecute
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveExecute(class AActor* OwnerActor)
 {
@@ -15640,8 +15640,8 @@ void ULuaBTTaskBase::ReceiveExecute(class AActor* OwnerActor)
 // Function Gameplay.LuaBTTaskBase.ReceiveAbortAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -15665,7 +15665,7 @@ void ULuaBTTaskBase::ReceiveAbortAI(class AAIController* OwnerController, class 
 // Function Gameplay.LuaBTTaskBase.ReceiveAbort
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::ReceiveAbort(class AActor* OwnerActor)
 {
@@ -15688,7 +15688,7 @@ void ULuaBTTaskBase::ReceiveAbort(class AActor* OwnerActor)
 // Function Gameplay.LuaBTTaskBase.IsTaskExecuting
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTTaskBase::IsTaskExecuting()
 {
@@ -15713,7 +15713,7 @@ bool ULuaBTTaskBase::IsTaskExecuting()
 // Function Gameplay.LuaBTTaskBase.IsTaskAborting
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaBTTaskBase::IsTaskAborting()
 {
@@ -15738,7 +15738,7 @@ bool ULuaBTTaskBase::IsTaskAborting()
 // Function Gameplay.LuaBTTaskBase.FinishExecute
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           bSuccess                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaBTTaskBase::FinishExecute(bool bSuccess)
 {
@@ -15804,7 +15804,7 @@ void UMissionBoardComponent::OnRep_Config()
 // Function Gameplay.MissionBoardComponent.GetUtcLeftSecondsByConfig
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMissionBoardComponent::GetUtcLeftSecondsByConfig()
 {
@@ -15829,8 +15829,8 @@ int UMissionBoardComponent::GetUtcLeftSecondsByConfig()
 // Function Gameplay.NetworkReportActor.RPC_Server_SyncClientPkgLossArrayInfo
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// TArray<unsigned char>          InLoss                         (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          OutLoss                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> InLoss (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> OutLoss (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void ANetworkReportActor::RPC_Server_SyncClientPkgLossArrayInfo(TArray<unsigned char> InLoss, TArray<unsigned char> OutLoss)
 {
@@ -15896,7 +15896,7 @@ void UNewWeatherComponent::LuaInit()
 // Function Gameplay.UAEAdvertisementActor.SetStaticMeshPath
 // (Native, Public)
 // Parameters:
-// struct FString                 InMeshPath                     (Parm, ZeroConstructor)
+// struct FString InMeshPath (Parm, ZeroConstructor)
 
 void AUAEAdvertisementActor::SetStaticMeshPath(const struct FString& InMeshPath)
 {
@@ -15920,7 +15920,7 @@ void AUAEAdvertisementActor::SetStaticMeshPath(const struct FString& InMeshPath)
 // Function Gameplay.UAEAdvertisementActor.SetStaticMesh
 // (Native, Public)
 // Parameters:
-// class UStaticMesh*             InStaticMesh                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* InStaticMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEAdvertisementActor::SetStaticMesh(class UStaticMesh* InStaticMesh)
 {
@@ -15944,7 +15944,7 @@ void AUAEAdvertisementActor::SetStaticMesh(class UStaticMesh* InStaticMesh)
 // Function Gameplay.UAEAdvertisementActor.SetScale
 // (Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 inScale                        (Parm, IsPlainOldData)
+// struct FVector inScale (Parm, IsPlainOldData)
 
 void AUAEAdvertisementActor::SetScale(const struct FVector& inScale)
 {
@@ -15968,7 +15968,7 @@ void AUAEAdvertisementActor::SetScale(const struct FVector& inScale)
 // Function Gameplay.UAEAdvertisementActor.SetId
 // (Final, Native, Public)
 // Parameters:
-// int                            InputID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int InputID (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEAdvertisementActor::SetId(int InputID)
 {
@@ -15992,7 +15992,7 @@ void AUAEAdvertisementActor::SetId(int InputID)
 // Function Gameplay.UAEAdvertisementActor.SetCulDistance
 // (Native, Public)
 // Parameters:
-// float                          CulDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// float CulDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEAdvertisementActor::SetCulDistance(float CulDistance)
 {
@@ -16016,7 +16016,7 @@ void AUAEAdvertisementActor::SetCulDistance(float CulDistance)
 // Function Gameplay.UAEAdvertisementActor.RequestHttpImageByUrl
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 PicUrl                         (Parm, ZeroConstructor)
+// struct FString PicUrl (Parm, ZeroConstructor)
 
 void AUAEAdvertisementActor::RequestHttpImageByUrl(const struct FString& PicUrl)
 {
@@ -16040,7 +16040,7 @@ void AUAEAdvertisementActor::RequestHttpImageByUrl(const struct FString& PicUrl)
 // Function Gameplay.UAEAdvertisementActor.ReplaceTexture
 // (Final, Native, Protected)
 // Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* Texture (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAEAdvertisementActor::ReplaceTexture(class UTexture2D* Texture)
 {
@@ -16064,8 +16064,8 @@ void AUAEAdvertisementActor::ReplaceTexture(class UTexture2D* Texture)
 // Function Gameplay.UAEAdvertisementActor.OnRequestImgSuccess
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UTexture2D*              Texture                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 RequestedURL                   (Parm, ZeroConstructor)
+// class UTexture2D* Texture (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString RequestedURL (Parm, ZeroConstructor)
 
 void AUAEAdvertisementActor::OnRequestImgSuccess(class UTexture2D* Texture, const struct FString& RequestedURL)
 {
@@ -16171,7 +16171,7 @@ void AUAEAdvertisementActor::InitImageDownloadUtil()
 // Function Gameplay.RegionableAdvertisementActor.ReceivedPlayerActiveRegionsChanged
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           bEnter                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnter (Parm, ZeroConstructor, IsPlainOldData)
 
 void ARegionableAdvertisementActor::ReceivedPlayerActiveRegionsChanged(bool bEnter)
 {
@@ -16194,7 +16194,7 @@ void ARegionableAdvertisementActor::ReceivedPlayerActiveRegionsChanged(bool bEnt
 // Function Gameplay.UAEBuffApplierActor.GetTheInstigatorController
 // (Native, Public, Const)
 // Parameters:
-// class AController*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AController* AUAEBuffApplierActor::GetTheInstigatorController()
 {
@@ -16219,7 +16219,7 @@ class AController* AUAEBuffApplierActor::GetTheInstigatorController()
 // Function Gameplay.UAEChaCustomAnimListComponent.SetCharacterAnimOverrideType
 // (Final, Native, Public)
 // Parameters:
-// int                            AnimOverrideType               (Parm, ZeroConstructor, IsPlainOldData)
+// int AnimOverrideType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEChaCustomAnimListComponent::SetCharacterAnimOverrideType(int AnimOverrideType)
 {
@@ -16264,7 +16264,7 @@ void UUAEChaCustomAnimListComponent::ReleaseCustomAnimAssets()
 // Function Gameplay.UAEChaCustomAnimListComponent.HasAnimAsyncLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEChaCustomAnimListComponent::HasAnimAsyncLoadingFinished()
 {
@@ -16289,7 +16289,7 @@ bool UUAEChaCustomAnimListComponent::HasAnimAsyncLoadingFinished()
 // Function Gameplay.UAEChaCustomAnimListComponent.GetOwnerName
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEChaCustomAnimListComponent::GetOwnerName()
 {
@@ -16314,8 +16314,8 @@ struct FString UUAEChaCustomAnimListComponent::GetOwnerName()
 // Function Gameplay.UAEChaCustomAnimListComponent.GetCharacterCustomAnimInstance
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AnimName                       (Parm, ZeroConstructor)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimName (Parm, ZeroConstructor)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUAEChaCustomAnimListComponent::GetCharacterCustomAnimInstance(const struct FString& AnimName)
 {
@@ -16341,8 +16341,8 @@ class UClass* UUAEChaCustomAnimListComponent::GetCharacterCustomAnimInstance(con
 // Function Gameplay.UAEChaCustomAnimListComponent.GetCharacterCustomAnim
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 AnimName                       (Parm, ZeroConstructor)
-// class UAnimationAsset*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimName (Parm, ZeroConstructor)
+// class UAnimationAsset* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimationAsset* UUAEChaCustomAnimListComponent::GetCharacterCustomAnim(const struct FString& AnimName)
 {
@@ -16368,8 +16368,8 @@ class UAnimationAsset* UUAEChaCustomAnimListComponent::GetCharacterCustomAnim(co
 // Function Gameplay.UAEChaCustomAnimListComponent.GetBlendSpace1D
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AnimAssetName                  (Parm, ZeroConstructor)
-// class UBlendSpace1D*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimAssetName (Parm, ZeroConstructor)
+// class UBlendSpace1D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlendSpace1D* UUAEChaCustomAnimListComponent::GetBlendSpace1D(const struct FString& AnimAssetName)
 {
@@ -16395,8 +16395,8 @@ class UBlendSpace1D* UUAEChaCustomAnimListComponent::GetBlendSpace1D(const struc
 // Function Gameplay.UAEChaCustomAnimListComponent.GetBlendSpace
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AnimAssetName                  (Parm, ZeroConstructor)
-// class UBlendSpace*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimAssetName (Parm, ZeroConstructor)
+// class UBlendSpace* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlendSpace* UUAEChaCustomAnimListComponent::GetBlendSpace(const struct FString& AnimAssetName)
 {
@@ -16422,8 +16422,8 @@ class UBlendSpace* UUAEChaCustomAnimListComponent::GetBlendSpace(const struct FS
 // Function Gameplay.UAEChaCustomAnimListComponent.GetAnimSequence
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AnimAssetName                  (Parm, ZeroConstructor)
-// class UAnimSequence*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimAssetName (Parm, ZeroConstructor)
+// class UAnimSequence* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimSequence* UUAEChaCustomAnimListComponent::GetAnimSequence(const struct FString& AnimAssetName)
 {
@@ -16449,8 +16449,8 @@ class UAnimSequence* UUAEChaCustomAnimListComponent::GetAnimSequence(const struc
 // Function Gameplay.UAEChaCustomAnimListComponent.GetAnimMontage
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AnimAssetName                  (Parm, ZeroConstructor)
-// class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimAssetName (Parm, ZeroConstructor)
+// class UAnimMontage* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimMontage* UUAEChaCustomAnimListComponent::GetAnimMontage(const struct FString& AnimAssetName)
 {
@@ -16476,8 +16476,8 @@ class UAnimMontage* UUAEChaCustomAnimListComponent::GetAnimMontage(const struct 
 // Function Gameplay.UAEChaCustomAnimListComponent.GetAimOffsetBlendSpace
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AnimAssetName                  (Parm, ZeroConstructor)
-// class UAimOffsetBlendSpace*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AnimAssetName (Parm, ZeroConstructor)
+// class UAimOffsetBlendSpace* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAimOffsetBlendSpace* UUAEChaCustomAnimListComponent::GetAimOffsetBlendSpace(const struct FString& AnimAssetName)
 {
@@ -16545,7 +16545,7 @@ void UUAEChaParachuteAnimListComponent::ReleaseParachuteAnimAssets()
 // Function Gameplay.UAEChaParachuteAnimListComponent.OnParachuteAnimAsyncLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AnimLoaded                     (Parm, ZeroConstructor)
+// struct FString AnimLoaded (Parm, ZeroConstructor)
 
 void UUAEChaParachuteAnimListComponent::OnParachuteAnimAsyncLoadingFinished(const struct FString& AnimLoaded)
 {
@@ -16590,7 +16590,7 @@ void UUAEChaParachuteAnimListComponent::OnAnimListAsyncLoadingFinished()
 // Function Gameplay.UAEChaParachuteAnimListComponent.HasAnimAsyncLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEChaParachuteAnimListComponent::HasAnimAsyncLoadingFinished()
 {
@@ -16636,7 +16636,7 @@ void UUAEChaParachuteAnimListComponent::HandleAsyncLoadingFinishedEvent()
 // Function Gameplay.UAEChaParachuteAnimListComponent.GetOwnerName
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEChaParachuteAnimListComponent::GetOwnerName()
 {
@@ -16661,9 +16661,9 @@ struct FString UUAEChaParachuteAnimListComponent::GetOwnerName()
 // Function Gameplay.UAEChaParachuteAnimListComponent.GetCharacterParachuteAnim
 // (Final, Native, Public, Const)
 // Parameters:
-// TEnumAsByte<enum ECharacterParachuteAnimType> AnimType                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AnimOverrideType               (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimationAsset*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ECharacterParachuteAnimType> AnimType (Parm, ZeroConstructor, IsPlainOldData)
+// int AnimOverrideType (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimationAsset* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimationAsset* UUAEChaParachuteAnimListComponent::GetCharacterParachuteAnim(TEnumAsByte<enum ECharacterParachuteAnimType> AnimType, int AnimOverrideType)
 {
@@ -16690,7 +16690,7 @@ class UAnimationAsset* UUAEChaParachuteAnimListComponent::GetCharacterParachuteA
 // Function Gameplay.UAECharacterAnimListComponent.SetAnimListMapValueData
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FAnimListMapValueData   AnimListValue                  (Parm, OutParm)
+// struct FAnimListMapValueData AnimListValue (Parm, OutParm)
 
 void UUAECharacterAnimListComponent::SetAnimListMapValueData(struct FAnimListMapValueData* AnimListValue)
 {
@@ -16716,8 +16716,8 @@ void UUAECharacterAnimListComponent::SetAnimListMapValueData(struct FAnimListMap
 // Function Gameplay.UAECharacterAnimListComponent.OnPreLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// struct FAsyncLoadCharAnimParams LoadingParam                   (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAsyncLoadCharAnimParams LoadingParam (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAECharacterAnimListComponent::OnPreLoadingFinished(const struct FAsyncLoadCharAnimParams& LoadingParam)
 {
@@ -16743,7 +16743,7 @@ bool UUAECharacterAnimListComponent::OnPreLoadingFinished(const struct FAsyncLoa
 // Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinishedNew2
 // (Final, Native, Public)
 // Parameters:
-// struct FAsyncLoadCharAnimParams LoadingParam                   (Parm)
+// struct FAsyncLoadCharAnimParams LoadingParam (Parm)
 
 void UUAECharacterAnimListComponent::OnAsyncLoadingFinishedNew2(const struct FAsyncLoadCharAnimParams& LoadingParam)
 {
@@ -16767,7 +16767,7 @@ void UUAECharacterAnimListComponent::OnAsyncLoadingFinishedNew2(const struct FAs
 // Function Gameplay.UAECharacterAnimListComponent.OnAsyncLoadingFinishedNew
 // (Final, Native, Public)
 // Parameters:
-// struct FAsyncLoadCharAnimParams LoadingParam                   (Parm)
+// struct FAsyncLoadCharAnimParams LoadingParam (Parm)
 
 void UUAECharacterAnimListComponent::OnAsyncLoadingFinishedNew(const struct FAsyncLoadCharAnimParams& LoadingParam)
 {
@@ -16791,7 +16791,7 @@ void UUAECharacterAnimListComponent::OnAsyncLoadingFinishedNew(const struct FAsy
 // Function Gameplay.UAECharacterAnimListComponent.InitAnimListMap
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsFPP                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsFPP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAECharacterAnimListComponent::InitAnimListMap(bool IsFPP)
 {
@@ -16815,7 +16815,7 @@ void UUAECharacterAnimListComponent::InitAnimListMap(bool IsFPP)
 // Function Gameplay.UAECharacterAnimListComponent.GetCharacterShovelAnim
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<struct FPlayerAnimData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FPlayerAnimData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterShovelAnim()
 {
@@ -16840,8 +16840,8 @@ TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterShove
 // Function Gameplay.UAECharacterAnimListComponent.GetCharacterJumpAnim
 // (Final, Native, Public, Const)
 // Parameters:
-// TEnumAsByte<enum ECharacterJumpType> JumpType                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FPlayerAnimData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TEnumAsByte<enum ECharacterJumpType> JumpType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPlayerAnimData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterJumpAnim(TEnumAsByte<enum ECharacterJumpType> JumpType)
 {
@@ -16867,7 +16867,7 @@ TArray<struct FPlayerAnimData> UUAECharacterAnimListComponent::GetCharacterJumpA
 // Function Gameplay.UAECharacterAnimListComponent.GetAnimationAsset
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// class UAnimationAsset*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAnimationAsset* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimationAsset* UUAECharacterAnimListComponent::GetAnimationAsset()
 {
@@ -16892,7 +16892,7 @@ class UAnimationAsset* UUAECharacterAnimListComponent::GetAnimationAsset()
 // Function Gameplay.UAEChaVehAnimListComponent.SetVehCharAnimDataList
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FVehCharAnimData> InVehCharAnimDataList          (Parm, ZeroConstructor)
+// TArray<struct FVehCharAnimData> InVehCharAnimDataList (Parm, ZeroConstructor)
 
 void UUAEChaVehAnimListComponent::SetVehCharAnimDataList(TArray<struct FVehCharAnimData> InVehCharAnimDataList)
 {
@@ -16937,7 +16937,7 @@ void UUAEChaVehAnimListComponent::OnIdleAnimListAsyncLoadingFinished()
 // Function Gameplay.UAEChaVehAnimListComponent.OnAnimListAsyncLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// struct FAsyncLoadCharVehAnimParams LoadingParam                   (Parm)
+// struct FAsyncLoadCharVehAnimParams LoadingParam (Parm)
 
 void UUAEChaVehAnimListComponent::OnAnimListAsyncLoadingFinished(const struct FAsyncLoadCharVehAnimParams& LoadingParam)
 {
@@ -16961,7 +16961,7 @@ void UUAEChaVehAnimListComponent::OnAnimListAsyncLoadingFinished(const struct FA
 // Function Gameplay.UAEChaVehAnimListComponent.ChangeAnimData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVehCharAnimData> InAnimData                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVehCharAnimData> InAnimData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UUAEChaVehAnimListComponent::ChangeAnimData(TArray<struct FVehCharAnimData> InAnimData)
 {
@@ -16979,531 +16979,6 @@ void UUAEChaVehAnimListComponent::ChangeAnimData(TArray<struct FVehCharAnimData>
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagEventNodeBase.Validate
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                  NodeTarget                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Observer                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagEventNodeBase::Validate(class AActor* NodeTarget, class UObject* Observer)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagEventNodeBase.Validate");
-
-	UUAEGameplayTagEventNodeBase_Validate_Params params;
-	params.NodeTarget = NodeTarget;
-	params.Observer = Observer;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagEventNodeBase.OnUnregistered
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                  NodeTarget                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Observer                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagEventNodeBase::OnUnregistered(class AActor* NodeTarget, class UObject* Observer)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagEventNodeBase.OnUnregistered");
-
-	UUAEGameplayTagEventNodeBase_OnUnregistered_Params params;
-	params.NodeTarget = NodeTarget;
-	params.Observer = Observer;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagEventNodeBase.OnRegistered
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                  NodeTarget                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Observer                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagEventNodeBase::OnRegistered(class AActor* NodeTarget, class UObject* Observer)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagEventNodeBase.OnRegistered");
-
-	UUAEGameplayTagEventNodeBase_OnRegistered_Params params;
-	params.NodeTarget = NodeTarget;
-	params.Observer = Observer;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagEventNodeBase.Invalidate
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                  NodeTarget                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Observer                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagEventNodeBase::Invalidate(class AActor* NodeTarget, class UObject* Observer)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagEventNodeBase.Invalidate");
-
-	UUAEGameplayTagEventNodeBase_Invalidate_Params params;
-	params.NodeTarget = NodeTarget;
-	params.Observer = Observer;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.OnActorEndPlay
-// (Final, Native, Protected)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagImposerSubsystem::OnActorEndPlay(class AActor* Actor, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.OnActorEndPlay");
-
-	UUAEGameplayTagImposerSubsystem_OnActorEndPlay_Params params;
-	params.Actor = Actor;
-	params.EndPlayReason = EndPlayReason;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_UntagActor
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            Tag                            (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UUAEGameplayTagImposerSubsystem::K2_UntagActor(class AActor* Actor, const struct FGameplayTag& Tag)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_UntagActor");
-
-	UUAEGameplayTagImposerSubsystem_K2_UntagActor_Params params;
-	params.Actor = Actor;
-	params.Tag = Tag;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_UnregisterActorTagChangedEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            InTag                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FScriptDelegate         InDelegate                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUAEGameplayTagImposerSubsystem::K2_UnregisterActorTagChangedEvent(class AActor* Actor, const struct FGameplayTag& InTag, const struct FScriptDelegate& InDelegate)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_UnregisterActorTagChangedEvent");
-
-	UUAEGameplayTagImposerSubsystem_K2_UnregisterActorTagChangedEvent_Params params;
-	params.Actor = Actor;
-	params.InTag = InTag;
-	params.InDelegate = InDelegate;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_TagActor
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            Tag                            (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UUAEGameplayTagImposerSubsystem::K2_TagActor(class AActor* Actor, const struct FGameplayTag& Tag)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_TagActor");
-
-	UUAEGameplayTagImposerSubsystem_K2_TagActor_Params params;
-	params.Actor = Actor;
-	params.Tag = Tag;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RemoveAllMatchingTags
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            Tag                            (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UUAEGameplayTagImposerSubsystem::K2_RemoveAllMatchingTags(class AActor* Actor, const struct FGameplayTag& Tag)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RemoveAllMatchingTags");
-
-	UUAEGameplayTagImposerSubsystem_K2_RemoveAllMatchingTags_Params params;
-	params.Actor = Actor;
-	params.Tag = Tag;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RemoveActorTagEventNode
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Handle                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagImposerSubsystem::K2_RemoveActorTagEventNode(class UObject* WorldContextObject, int Handle)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RemoveActorTagEventNode");
-
-	UUAEGameplayTagImposerSubsystem_K2_RemoveActorTagEventNode_Params params;
-	params.WorldContextObject = WorldContextObject;
-	params.Handle = Handle;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RegisterActorTagChangedEvent
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            InTag                          (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FScriptDelegate         InDelegate                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUAEGameplayTagImposerSubsystem::K2_RegisterActorTagChangedEvent(class AActor* Actor, const struct FGameplayTag& InTag, const struct FScriptDelegate& InDelegate)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_RegisterActorTagChangedEvent");
-
-	UUAEGameplayTagImposerSubsystem_K2_RegisterActorTagChangedEvent_Params params;
-	params.Actor = Actor;
-	params.InTag = InTag;
-	params.InDelegate = InDelegate;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_MultipleUntagActor
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FGameplayTag>    InTags                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UUAEGameplayTagImposerSubsystem::K2_MultipleUntagActor(class AActor* Actor, TArray<struct FGameplayTag> InTags)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_MultipleUntagActor");
-
-	UUAEGameplayTagImposerSubsystem_K2_MultipleUntagActor_Params params;
-	params.Actor = Actor;
-	params.InTags = InTags;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_MultipleTagActor
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FGameplayTag>    InTags                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UUAEGameplayTagImposerSubsystem::K2_MultipleTagActor(class AActor* Actor, TArray<struct FGameplayTag> InTags)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_MultipleTagActor");
-
-	UUAEGameplayTagImposerSubsystem_K2_MultipleTagActor_Params params;
-	params.Actor = Actor;
-	params.InTags = InTags;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ClearActorTags
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNotifyAll                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UUAEGameplayTagImposerSubsystem::K2_ClearActorTags(class AActor* Actor, bool bNotifyAll)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ClearActorTags");
-
-	UUAEGameplayTagImposerSubsystem_K2_ClearActorTags_Params params;
-	params.Actor = Actor;
-	params.bNotifyAll = bNotifyAll;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ApplyActorTagEventNode
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEGameplayTagEventNodeBase* NodeBase                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UUAEGameplayTagImposerSubsystem::K2_ApplyActorTagEventNode(class AActor* TargetActor, class UObject* NodeOwner, class UUAEGameplayTagEventNodeBase* NodeBase)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ApplyActorTagEventNode");
-
-	UUAEGameplayTagImposerSubsystem_K2_ApplyActorTagEventNode_Params params;
-	params.TargetActor = TargetActor;
-	params.NodeOwner = NodeOwner;
-	params.NodeBase = NodeBase;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasMatchingTag
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            TagToCheck                     (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUAEGameplayTagImposerSubsystem::K2_ActorHasMatchingTag(class AActor* Actor, const struct FGameplayTag& TagToCheck, bool bExactMatch)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasMatchingTag");
-
-	UUAEGameplayTagImposerSubsystem_K2_ActorHasMatchingTag_Params params;
-	params.Actor = Actor;
-	params.TagToCheck = TagToCheck;
-	params.bExactMatch = bExactMatch;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasAnyTags
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FGameplayTag>    InTags                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUAEGameplayTagImposerSubsystem::K2_ActorHasAnyTags(class AActor* Actor, TArray<struct FGameplayTag> InTags, bool bExactMatch)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasAnyTags");
-
-	UUAEGameplayTagImposerSubsystem_K2_ActorHasAnyTags_Params params;
-	params.Actor = Actor;
-	params.InTags = InTags;
-	params.bExactMatch = bExactMatch;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasAllTags
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FGameplayTag>    InTags                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UUAEGameplayTagImposerSubsystem::K2_ActorHasAllTags(class AActor* Actor, TArray<struct FGameplayTag> InTags, bool bExactMatch)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.K2_ActorHasAllTags");
-
-	UUAEGameplayTagImposerSubsystem_K2_ActorHasAllTags_Params params;
-	params.Actor = Actor;
-	params.InTags = InTags;
-	params.bExactMatch = bExactMatch;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Gameplay.UAEGameplayTagImposerSubsystem.Get
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEGameplayTagImposerSubsystem* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UUAEGameplayTagImposerSubsystem* UUAEGameplayTagImposerSubsystem::Get(class UObject* WorldContextObject)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAEGameplayTagImposerSubsystem.Get");
-
-	UUAEGameplayTagImposerSubsystem_Get_Params params;
-	params.WorldContextObject = WorldContextObject;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -17531,7 +17006,7 @@ void AUAELevelSequenceActor::UpdateTrackBindingData()
 // Function Gameplay.UAELevelSequenceActor.UpdateSequence
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 LevelSequencePath              (Parm, ZeroConstructor)
+// struct FString LevelSequencePath (Parm, ZeroConstructor)
 
 void AUAELevelSequenceActor::UpdateSequence(const struct FString& LevelSequencePath)
 {
@@ -17555,10 +17030,10 @@ void AUAELevelSequenceActor::UpdateSequence(const struct FString& LevelSequenceP
 // Function Gameplay.UAELevelSequenceActor.UpdatePlayback
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bRestoreState                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDisableMovementInput          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDisableLookAtInput            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHidePlayer                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRestoreState (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDisableMovementInput (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDisableLookAtInput (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHidePlayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::UpdatePlayback(bool bRestoreState, bool bDisableMovementInput, bool bDisableLookAtInput, bool bHidePlayer)
 {
@@ -17585,8 +17060,8 @@ void AUAELevelSequenceActor::UpdatePlayback(bool bRestoreState, bool bDisableMov
 // Function Gameplay.UAELevelSequenceActor.UpdateInstanceData
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 OffsetVector                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                OffsetRotation                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OffsetVector (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator OffsetRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AUAELevelSequenceActor::UpdateInstanceData(const struct FVector& OffsetVector, const struct FRotator& OffsetRotation)
 {
@@ -17611,7 +17086,7 @@ void AUAELevelSequenceActor::UpdateInstanceData(const struct FVector& OffsetVect
 // Function Gameplay.UAELevelSequenceActor.StopMontageParticle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SlotName                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SlotName (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::StopMontageParticle(const struct FName& SlotName)
 {
@@ -17656,7 +17131,7 @@ void AUAELevelSequenceActor::Stop()
 // Function Gameplay.UAELevelSequenceActor.SetUseSelfTransformOrigin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInUse                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInUse (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::SetUseSelfTransformOrigin(bool bInUse)
 {
@@ -17680,7 +17155,7 @@ void AUAELevelSequenceActor::SetUseSelfTransformOrigin(bool bInUse)
 // Function Gameplay.UAELevelSequenceActor.SetTrackBindingInfo
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TMap<struct FString, struct FString> TrackBindingInfo               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, struct FString> TrackBindingInfo (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAELevelSequenceActor::SetTrackBindingInfo(TMap<struct FString, struct FString> TrackBindingInfo)
 {
@@ -17703,7 +17178,7 @@ void AUAELevelSequenceActor::SetTrackBindingInfo(TMap<struct FString, struct FSt
 // Function Gameplay.UAELevelSequenceActor.SetTrackBindingData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FSeqActorBindingData> InTrackBindingData             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FSeqActorBindingData> InTrackBindingData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void AUAELevelSequenceActor::SetTrackBindingData(TArray<struct FSeqActorBindingData> InTrackBindingData)
 {
@@ -17727,9 +17202,9 @@ void AUAELevelSequenceActor::SetTrackBindingData(TArray<struct FSeqActorBindingD
 // Function Gameplay.UAELevelSequenceActor.SetNetSyncBinding
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// TArray<class AActor*>          Actors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bAllowBindingsFromAsset        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// TArray<class AActor*> Actors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bAllowBindingsFromAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::SetNetSyncBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset)
 {
@@ -17755,7 +17230,7 @@ void AUAELevelSequenceActor::SetNetSyncBinding(const struct FMovieSceneObjectBin
 // Function Gameplay.UAELevelSequenceActor.SetLevelSequenceAssetPath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InLevelSequenceAssetPath       (Parm, ZeroConstructor)
+// struct FString InLevelSequenceAssetPath (Parm, ZeroConstructor)
 
 void AUAELevelSequenceActor::SetLevelSequenceAssetPath(const struct FString& InLevelSequenceAssetPath)
 {
@@ -17800,7 +17275,7 @@ void AUAELevelSequenceActor::ResetNetSyncBindings()
 // Function Gameplay.UAELevelSequenceActor.ResetNetSyncBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
+// struct FMovieSceneObjectBindingID Binding (Parm)
 
 void AUAELevelSequenceActor::ResetNetSyncBinding(const struct FMovieSceneObjectBindingID& Binding)
 {
@@ -17824,8 +17299,8 @@ void AUAELevelSequenceActor::ResetNetSyncBinding(const struct FMovieSceneObjectB
 // Function Gameplay.UAELevelSequenceActor.RemoveNetSyncBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::RemoveNetSyncBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor)
 {
@@ -17971,8 +17446,8 @@ void AUAELevelSequenceActor::ReceiveOnPause()
 // Function Gameplay.UAELevelSequenceActor.ReceiveOnObjectSpawned
 // (Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGuid                   InBindingID                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGuid InBindingID (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AUAELevelSequenceActor::ReceiveOnObjectSpawned(class UObject* InObject, const struct FGuid& InBindingID)
 {
@@ -18016,7 +17491,7 @@ void AUAELevelSequenceActor::ReceiveOnFinished()
 // Function Gameplay.UAELevelSequenceActor.Play
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InPlaytime                     (Parm, ZeroConstructor, IsPlainOldData)
+// float InPlaytime (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::Play(float InPlaytime)
 {
@@ -18145,9 +17620,9 @@ void AUAELevelSequenceActor::OnRep_AuthorityStartPlayTime()
 // Function Gameplay.UAELevelSequenceActor.OnObjectSpawnedEvent
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UObject*                 InObject                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGuid                   InBindingID                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FMovieSceneSequenceID   InSequenceID                   (Parm)
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGuid InBindingID (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMovieSceneSequenceID InSequenceID (Parm)
 
 void AUAELevelSequenceActor::OnObjectSpawnedEvent(class UObject* InObject, const struct FGuid& InBindingID, const struct FMovieSceneSequenceID& InSequenceID)
 {
@@ -18167,6 +17642,31 @@ void AUAELevelSequenceActor::OnObjectSpawnedEvent(class UObject* InObject, const
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Gameplay.UAELevelSequenceActor.HasActiveSequenceActor
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AUAELevelSequenceActor::HasActiveSequenceActor()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Gameplay.UAELevelSequenceActor.HasActiveSequenceActor");
+
+	AUAELevelSequenceActor_HasActiveSequenceActor_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -18215,8 +17715,8 @@ void AUAELevelSequenceActor::GoToEndAndStop()
 // Function Gameplay.UAELevelSequenceActor.GetPossessableOrSpawnableByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 NameKeyString                  (Parm, ZeroConstructor)
-// struct FMovieSceneObjectBindingID ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString NameKeyString (Parm, ZeroConstructor)
+// struct FMovieSceneObjectBindingID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FMovieSceneObjectBindingID AUAELevelSequenceActor::GetPossessableOrSpawnableByName(const struct FString& NameKeyString)
 {
@@ -18242,7 +17742,7 @@ struct FMovieSceneObjectBindingID AUAELevelSequenceActor::GetPossessableOrSpawna
 // Function Gameplay.UAELevelSequenceActor.GetFirstPossessableTrack
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FMovieSceneObjectBindingID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FMovieSceneObjectBindingID AUAELevelSequenceActor::GetFirstPossessableTrack()
 {
@@ -18267,11 +17767,11 @@ struct FMovieSceneObjectBindingID AUAELevelSequenceActor::GetFirstPossessableTra
 // Function Gameplay.UAELevelSequenceActor.CreateLevelSequencePlayer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class ULevelSequence*          InLevelSequence                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FMovieSceneSequencePlaybackSettings Settings                       (Parm)
-// class AUAELevelSequenceActor*  OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class ULevelSequencePlayer*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequence* InLevelSequence (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneSequencePlaybackSettings Settings (Parm)
+// class AUAELevelSequenceActor* OutActor (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class ULevelSequencePlayer* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULevelSequencePlayer* AUAELevelSequenceActor::CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* InLevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class AUAELevelSequenceActor** OutActor)
 {
@@ -18302,7 +17802,7 @@ class ULevelSequencePlayer* AUAELevelSequenceActor::CreateLevelSequencePlayer(cl
 // Function Gameplay.UAELevelSequenceActor.CheckStartPlayValid
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AUAELevelSequenceActor::CheckStartPlayValid()
 {
@@ -18327,9 +17827,9 @@ bool AUAELevelSequenceActor::CheckStartPlayValid()
 // Function Gameplay.UAELevelSequenceActor.AddNetSyncBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID Binding                        (Parm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowBindingsFromAsset        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FMovieSceneObjectBindingID Binding (Parm)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllowBindingsFromAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAELevelSequenceActor::AddNetSyncBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset)
 {
@@ -18355,7 +17855,7 @@ void AUAELevelSequenceActor::AddNetSyncBinding(const struct FMovieSceneObjectBin
 // Function Gameplay.AELobbyCharAnimListComp.OnAsyncLoadingFinished
 // (Final, Native, Public)
 // Parameters:
-// struct FLobbyAsyncLoadCharAnimParams LoadingParam                   (Parm)
+// struct FLobbyAsyncLoadCharAnimParams LoadingParam (Parm)
 
 void UAELobbyCharAnimListComp::OnAsyncLoadingFinished(const struct FLobbyAsyncLoadCharAnimParams& LoadingParam)
 {
@@ -18379,8 +17879,8 @@ void UAELobbyCharAnimListComp::OnAsyncLoadingFinished(const struct FLobbyAsyncLo
 // Function Gameplay.AELobbyCharAnimListComp.InitPendingList
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FLobbyCharacterWeaponAnimData> animEditList                   (Parm, OutParm, ZeroConstructor)
-// TArray<struct FSoftObjectPath> PendingList                    (Parm, OutParm, ZeroConstructor)
+// TArray<struct FLobbyCharacterWeaponAnimData> animEditList (Parm, OutParm, ZeroConstructor)
+// TArray<struct FSoftObjectPath> PendingList (Parm, OutParm, ZeroConstructor)
 
 void UAELobbyCharAnimListComp::InitPendingList(TArray<struct FLobbyCharacterWeaponAnimData>* animEditList, TArray<struct FSoftObjectPath>* PendingList)
 {
@@ -18408,11 +17908,11 @@ void UAELobbyCharAnimListComp::InitPendingList(TArray<struct FLobbyCharacterWeap
 // Function Gameplay.AELobbyCharAnimListComp.GetCharacterAnim
 // (Final, Native, Public, Const)
 // Parameters:
-// TEnumAsByte<enum ELobbyCharacterPosIndex> PosIdx                         (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ELobbyCharacterAnimType> GenderType                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponAnimType                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ECharacterShowSceneType> sceneType                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimationAsset*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ELobbyCharacterPosIndex> PosIdx (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ELobbyCharacterAnimType> GenderType (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponAnimType (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ECharacterShowSceneType> sceneType (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimationAsset* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAnimationAsset* UAELobbyCharAnimListComp::GetCharacterAnim(TEnumAsByte<enum ELobbyCharacterPosIndex> PosIdx, TEnumAsByte<enum ELobbyCharacterAnimType> GenderType, int WeaponAnimType, TEnumAsByte<enum ECharacterShowSceneType> sceneType)
 {
@@ -18441,8 +17941,8 @@ class UAnimationAsset* UAELobbyCharAnimListComp::GetCharacterAnim(TEnumAsByte<en
 // Function Gameplay.AELobbyCharAnimListComp.BuildAnimMap
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FLobbyCharacterWeaponAnimData> AnimList                       (Parm, OutParm, ZeroConstructor)
-// TEnumAsByte<enum ECharacterShowSceneType> sceneType                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FLobbyCharacterWeaponAnimData> AnimList (Parm, OutParm, ZeroConstructor)
+// TEnumAsByte<enum ECharacterShowSceneType> sceneType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAELobbyCharAnimListComp::BuildAnimMap(TEnumAsByte<enum ECharacterShowSceneType> sceneType, TArray<struct FLobbyCharacterWeaponAnimData>* AnimList)
 {
@@ -18469,8 +17969,8 @@ void UAELobbyCharAnimListComp::BuildAnimMap(TEnumAsByte<enum ECharacterShowScene
 // Function Gameplay.UAESpawnActorComponent.UAESpawnActor
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FUAESpawnActorParam     Param                          (Parm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FUAESpawnActorParam Param (Parm)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UUAESpawnActorComponent::UAESpawnActor(const struct FUAESpawnActorParam& Param)
 {
@@ -18496,8 +17996,8 @@ class AActor* UUAESpawnActorComponent::UAESpawnActor(const struct FUAESpawnActor
 // Function Gameplay.UAESpawnActorComponent.PrepareSpawnData
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            TemplateID                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TemplateID (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUAESpawnActorComponent::PrepareSpawnData(int TemplateID)
 {
@@ -18523,8 +18023,8 @@ class UClass* UUAESpawnActorComponent::PrepareSpawnData(int TemplateID)
 // Function Gameplay.UAESpawnActorComponent.InitializeActor
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TemplateID                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// int TemplateID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAESpawnActorComponent::InitializeActor(class AActor* InActor, int TemplateID)
 {
@@ -18549,7 +18049,7 @@ void UUAESpawnActorComponent::InitializeActor(class AActor* InActor, int Templat
 // Function Gameplay.UAEWindowComponent.NotifyServerBroken
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class APlayerController*       Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* Instigator (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWindowComponent::NotifyServerBroken(class APlayerController* Instigator)
 {
@@ -18572,8 +18072,8 @@ void UUAEWindowComponent::NotifyServerBroken(class APlayerController* Instigator
 // Function Gameplay.UAEWindowComponent.NotifyRepDataUpdated
 // (Final, Native, Protected)
 // Parameters:
-// bool                           bInitial                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLocal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInitial (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLocal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWindowComponent::NotifyRepDataUpdated(bool bInitial, bool bLocal)
 {
@@ -18598,8 +18098,8 @@ void UUAEWindowComponent::NotifyRepDataUpdated(bool bInitial, bool bLocal)
 // Function Gameplay.UAEWindowComponent.LocalHandleWindowBrokenBP
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                           bInitial                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLocal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInitial (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLocal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWindowComponent::LocalHandleWindowBrokenBP(bool bInitial, bool bLocal)
 {
@@ -18623,8 +18123,8 @@ void UUAEWindowComponent::LocalHandleWindowBrokenBP(bool bInitial, bool bLocal)
 // Function Gameplay.UAEWindowComponent.LocalHandleWindowBroken
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           bInitial                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLocal                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInitial (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLocal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWindowComponent::LocalHandleWindowBroken(bool bInitial, bool bLocal)
 {
@@ -18649,8 +18149,8 @@ void UUAEWindowComponent::LocalHandleWindowBroken(bool bInitial, bool bLocal)
 // Function Gameplay.UAEWindowComponent.HandleBroken
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLocal                         (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* Instigator (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLocal (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWindowComponent::HandleBroken(class APlayerController* Instigator, bool bLocal)
 {
@@ -18675,7 +18175,7 @@ void UUAEWindowComponent::HandleBroken(class APlayerController* Instigator, bool
 // Function Gameplay.UAEWindowComponent.GetRepData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FUAEWindowRepData       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FUAEWindowRepData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FUAEWindowRepData UUAEWindowComponent::GetRepData()
 {
@@ -18700,8 +18200,8 @@ struct FUAEWindowRepData UUAEWindowComponent::GetRepData()
 // Function Gameplay.VehicleConfigActorComponent.LoadActorClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UVehicleConfigActorComponent::LoadActorClass(const struct FString& Path)
 {
@@ -18895,7 +18395,7 @@ void UVehicleAndTreasureBoxGeneratorComponent::WriteAllVehicleStatisticsDatas()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.SetAllVehicleNumRate
 // (Final, Native, Public)
 // Parameters:
-// TMap<struct FString, float>    Rates                          (Parm, ZeroConstructor)
+// TMap<struct FString, float> Rates (Parm, ZeroConstructor)
 
 void UVehicleAndTreasureBoxGeneratorComponent::SetAllVehicleNumRate(TMap<struct FString, float> Rates)
 {
@@ -18940,7 +18440,7 @@ void UVehicleAndTreasureBoxGeneratorComponent::ResumeGenerate()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterVehicleGenerateSpawnData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FVehicleGenerateSpawnData Data                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVehicleGenerateSpawnData Data (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
 {
@@ -18964,7 +18464,7 @@ void UVehicleAndTreasureBoxGeneratorComponent::RegisterVehicleGenerateSpawnData(
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterSpotFromSingleFile
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 SpotFilePath                   (Parm, ZeroConstructor)
+// struct FString SpotFilePath (Parm, ZeroConstructor)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RegisterSpotFromSingleFile(const struct FString& SpotFilePath)
 {
@@ -18988,7 +18488,7 @@ void UVehicleAndTreasureBoxGeneratorComponent::RegisterSpotFromSingleFile(const 
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RegisterGroupSpotComponent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UGroupSpotSceneComponent* GroupSpotComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UGroupSpotSceneComponent* GroupSpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
 {
@@ -19012,8 +18512,8 @@ void UVehicleAndTreasureBoxGeneratorComponent::RegisterGroupSpotComponent(class 
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSpotsByType
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FTreasureBoxSpotProperty Property                       (Parm, OutParm)
-// struct FVehicleSpotComponentArray Spots                          (Parm, OutParm)
+// struct FTreasureBoxSpotProperty Property (Parm, OutParm)
+// struct FVehicleSpotComponentArray Spots (Parm, OutParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSpotsByType(struct FTreasureBoxSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
 {
@@ -19041,8 +18541,8 @@ void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSpotsByType(stru
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomTreasureBoxSingleSpots
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<class UVehicleSpotSceneComponent*> AllSpots                       (Parm, OutParm, ZeroConstructor)
-// struct FTreasureBoxSpotProperty Property                       (Parm, OutParm)
+// TArray<class UVehicleSpotSceneComponent*> AllSpots (Parm, OutParm, ZeroConstructor)
+// struct FTreasureBoxSpotProperty Property (Parm, OutParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FTreasureBoxSpotProperty* Property)
 {
@@ -19070,8 +18570,8 @@ void UVehicleAndTreasureBoxGeneratorComponent::RandomTreasureBoxSingleSpots(TArr
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSpotsByType
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FVehicleSpotProperty    Property                       (Parm, OutParm)
-// struct FVehicleSpotComponentArray Spots                          (Parm, OutParm)
+// struct FVehicleSpotProperty Property (Parm, OutParm)
+// struct FVehicleSpotComponentArray Spots (Parm, OutParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
 {
@@ -19099,8 +18599,8 @@ void UVehicleAndTreasureBoxGeneratorComponent::RandomSpotsByType(struct FVehicle
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.RandomSingleSpots
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<class UVehicleSpotSceneComponent*> AllSpots                       (Parm, OutParm, ZeroConstructor)
-// struct FVehicleSpotProperty    Property                       (Parm, OutParm)
+// TArray<class UVehicleSpotSceneComponent*> AllSpots (Parm, OutParm, ZeroConstructor)
+// struct FVehicleSpotProperty Property (Parm, OutParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
 {
@@ -19190,8 +18690,8 @@ void UVehicleAndTreasureBoxGeneratorComponent::LoadVehicleGenerateTable()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GMGenerateAllVehicleSpot
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 VehiclePath                    (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString VehiclePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UVehicleAndTreasureBoxGeneratorComponent::GMGenerateAllVehicleSpot(const struct FString& VehiclePath)
 {
@@ -19217,9 +18717,9 @@ bool UVehicleAndTreasureBoxGeneratorComponent::GMGenerateAllVehicleSpot(const st
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoWithCategory
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FVehicleSpotProperty    SpotProperty                   (Parm, OutParm)
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FVehicleSpotProperty SpotProperty (Parm, OutParm)
+// struct FString Category (Parm, ZeroConstructor)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfoWithCategory(const struct FString& Category, struct FVehicleSpotProperty* SpotProperty)
 {
@@ -19248,9 +18748,9 @@ struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetV
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
 // (Final, Native, Public)
 // Parameters:
-// TEnumAsByte<enum ESpotType>    SpotType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InCategory                     (Parm, ZeroConstructor)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// TEnumAsByte<enum ESpotType> SpotType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InCategory (Parm, ZeroConstructor)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(TEnumAsByte<enum ESpotType> SpotType, const struct FString& InCategory)
 {
@@ -19277,9 +18777,9 @@ struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetV
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetVehicleSpotRandomInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FVehicleSpotProperty    SpotProperty                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 InCategory                     (Parm, ZeroConstructor)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FVehicleSpotProperty SpotProperty (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString InCategory (Parm, ZeroConstructor)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetVehicleSpotRandomInfo(const struct FVehicleSpotProperty& SpotProperty, const struct FString& InCategory)
 {
@@ -19306,8 +18806,8 @@ struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetV
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTreasureBoxSpotRandomInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FTreasureBoxSpotProperty SpotProperty                   (Parm, OutParm)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FTreasureBoxSpotProperty SpotProperty (Parm, OutParm)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetTreasureBoxSpotRandomInfo(struct FTreasureBoxSpotProperty* SpotProperty)
 {
@@ -19335,9 +18835,9 @@ struct FVehicleGenerateRandomInfo UVehicleAndTreasureBoxGeneratorComponent::GetT
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetTraceLevelName
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 SpotFileName                   (Parm, ZeroConstructor)
-// int16_t                        LevelIndex                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString SpotFileName (Parm, ZeroConstructor)
+// int16_t LevelIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVehicleAndTreasureBoxGeneratorComponent::GetTraceLevelName(const struct FString& SpotFileName, int16_t LevelIndex)
 {
@@ -19364,8 +18864,8 @@ struct FString UVehicleAndTreasureBoxGeneratorComponent::GetTraceLevelName(const
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomVehicleClass
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// struct FVehicleGenerateSpawnData ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Category (Parm, ZeroConstructor)
+// struct FVehicleGenerateSpawnData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateSpawnData UVehicleAndTreasureBoxGeneratorComponent::GetRandomVehicleClass(const struct FString& Category)
 {
@@ -19391,8 +18891,8 @@ struct FVehicleGenerateSpawnData UVehicleAndTreasureBoxGeneratorComponent::GetRa
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetRandomCategory
 // (Native, Protected, HasOutParms)
 // Parameters:
-// TArray<struct FSpotWeight>     SpotWeights                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSpotWeight> SpotWeights (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVehicleAndTreasureBoxGeneratorComponent::GetRandomCategory(TArray<struct FSpotWeight> SpotWeights)
 {
@@ -19418,7 +18918,7 @@ struct FString UVehicleAndTreasureBoxGeneratorComponent::GetRandomCategory(TArra
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GetAlreadyGeneratedVehicleNum
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UVehicleAndTreasureBoxGeneratorComponent::GetAlreadyGeneratedVehicleNum()
 {
@@ -19443,7 +18943,7 @@ int UVehicleAndTreasureBoxGeneratorComponent::GetAlreadyGeneratedVehicleNum()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.GenerateSpotOnTick
 // (Native, Protected)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAndTreasureBoxGeneratorComponent::GenerateSpotOnTick(float DeltaTime)
 {
@@ -19509,9 +19009,9 @@ void UVehicleAndTreasureBoxGeneratorComponent::EnableRemovableMode()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.DynamicSpawnVehicleBySpotId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Category (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UVehicleAndTreasureBoxGeneratorComponent::DynamicSpawnVehicleBySpotId(int ID, const struct FString& Category)
 {
@@ -19559,10 +19059,10 @@ void UVehicleAndTreasureBoxGeneratorComponent::DeleteGroups()
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.CanDynamicSpawnVehicle
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 SpawnLocation                  (Parm, IsPlainOldData)
-// struct FVector                 TestLocationOffset             (Parm, IsPlainOldData)
-// struct FVector                 TestBoxSize                    (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector SpawnLocation (Parm, IsPlainOldData)
+// struct FVector TestLocationOffset (Parm, IsPlainOldData)
+// struct FVector TestBoxSize (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UVehicleAndTreasureBoxGeneratorComponent::CanDynamicSpawnVehicle(const struct FVector& SpawnLocation, const struct FVector& TestLocationOffset, const struct FVector& TestBoxSize)
 {
@@ -19590,11 +19090,11 @@ bool UVehicleAndTreasureBoxGeneratorComponent::CanDynamicSpawnVehicle(const stru
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleSpotCount
 // (Final, Native, Protected)
 // Parameters:
-// TEnumAsByte<enum ESpotType>    SpotType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// float                          LocationX                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationY                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationZ                      (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESpotType> SpotType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// float LocationX (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationY (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleSpotCount(TEnumAsByte<enum ESpotType> SpotType, const struct FString& Path, float LocationX, float LocationY, float LocationZ)
 {
@@ -19622,9 +19122,9 @@ void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleSpotCount(TEnumAsByte<e
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddVehicleClassCount
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// bool                           IsValid                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// bool IsValid (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleClassCount(const struct FString& Path, bool IsValid, int Count)
 {
@@ -19650,7 +19150,7 @@ void UVehicleAndTreasureBoxGeneratorComponent::AddVehicleClassCount(const struct
 // Function Gameplay.VehicleAndTreasureBoxGeneratorComponent.AddIgnoreClassPath
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FString>         IgnoreItemClassList            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> IgnoreItemClassList (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UVehicleAndTreasureBoxGeneratorComponent::AddIgnoreClassPath(TArray<struct FString> IgnoreItemClassList)
 {
@@ -19737,7 +19237,7 @@ void UVehicleGeneratorComponent::WriteAllVehicleStatisticsDatas()
 // Function Gameplay.VehicleGeneratorComponent.RegisterVehicleGenerateSpawnData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FVehicleGenerateSpawnData Data                           (Parm)
+// struct FVehicleGenerateSpawnData Data (Parm)
 
 void UVehicleGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct FVehicleGenerateSpawnData& Data)
 {
@@ -19761,7 +19261,7 @@ void UVehicleGeneratorComponent::RegisterVehicleGenerateSpawnData(const struct F
 // Function Gameplay.VehicleGeneratorComponent.RegisterGroupSpotComponent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UGroupSpotSceneComponent* GroupSpotComponent             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UGroupSpotSceneComponent* GroupSpotComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UVehicleGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotSceneComponent* GroupSpotComponent)
 {
@@ -19785,8 +19285,8 @@ void UVehicleGeneratorComponent::RegisterGroupSpotComponent(class UGroupSpotScen
 // Function Gameplay.VehicleGeneratorComponent.RandomSpotsByType
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FVehicleSpotProperty    Property                       (Parm, OutParm)
-// struct FVehicleSpotComponentArray Spots                          (Parm, OutParm)
+// struct FVehicleSpotProperty Property (Parm, OutParm)
+// struct FVehicleSpotComponentArray Spots (Parm, OutParm)
 
 void UVehicleGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* Property, struct FVehicleSpotComponentArray* Spots)
 {
@@ -19814,8 +19314,8 @@ void UVehicleGeneratorComponent::RandomSpotsByType(struct FVehicleSpotProperty* 
 // Function Gameplay.VehicleGeneratorComponent.RandomSingleSpots
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// TArray<class UVehicleSpotSceneComponent*> AllSpots                       (Parm, OutParm, ZeroConstructor)
-// struct FVehicleSpotProperty    Property                       (Parm, OutParm)
+// TArray<class UVehicleSpotSceneComponent*> AllSpots (Parm, OutParm, ZeroConstructor)
+// struct FVehicleSpotProperty Property (Parm, OutParm)
 
 void UVehicleGeneratorComponent::RandomSingleSpots(TArray<class UVehicleSpotSceneComponent*>* AllSpots, struct FVehicleSpotProperty* Property)
 {
@@ -19885,8 +19385,8 @@ void UVehicleGeneratorComponent::LoadVehicleGenerateTable()
 // Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfoBySpotType
 // (Final, Native, Public)
 // Parameters:
-// TEnumAsByte<enum ESpotType>    SpotType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// TEnumAsByte<enum ESpotType> SpotType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfoBySpotType(TEnumAsByte<enum ESpotType> SpotType)
 {
@@ -19912,8 +19412,8 @@ struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRand
 // Function Gameplay.VehicleGeneratorComponent.GetVehicleSpotRandomInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FVehicleSpotProperty    SpotProperty                   (Parm, OutParm)
-// struct FVehicleGenerateRandomInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FVehicleSpotProperty SpotProperty (Parm, OutParm)
+// struct FVehicleGenerateRandomInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRandomInfo(struct FVehicleSpotProperty* SpotProperty)
 {
@@ -19941,8 +19441,8 @@ struct FVehicleGenerateRandomInfo UVehicleGeneratorComponent::GetVehicleSpotRand
 // Function Gameplay.VehicleGeneratorComponent.GetRandomVehicleClass
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// struct FVehicleGenerateSpawnData ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Category (Parm, ZeroConstructor)
+// struct FVehicleGenerateSpawnData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FVehicleGenerateSpawnData UVehicleGeneratorComponent::GetRandomVehicleClass(const struct FString& Category)
 {
@@ -19968,8 +19468,8 @@ struct FVehicleGenerateSpawnData UVehicleGeneratorComponent::GetRandomVehicleCla
 // Function Gameplay.VehicleGeneratorComponent.GetRandomCategory
 // (Native, Protected, HasOutParms)
 // Parameters:
-// TArray<struct FSpotWeight>     SpotWeights                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSpotWeight> SpotWeights (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVehicleGeneratorComponent::GetRandomCategory(TArray<struct FSpotWeight> SpotWeights)
 {
@@ -19995,7 +19495,7 @@ struct FString UVehicleGeneratorComponent::GetRandomCategory(TArray<struct FSpot
 // Function Gameplay.VehicleGeneratorComponent.GenerateSpotOnTick
 // (Native, Protected)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleGeneratorComponent::GenerateSpotOnTick(float DeltaTime)
 {
@@ -20040,11 +19540,11 @@ void UVehicleGeneratorComponent::DeleteGroups()
 // Function Gameplay.VehicleGeneratorComponent.AddVehicleSpotCount
 // (Final, Native, Protected)
 // Parameters:
-// TEnumAsByte<enum ESpotType>    SpotType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// float                          LocationX                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationY                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationZ                      (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESpotType> SpotType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// float LocationX (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationY (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleGeneratorComponent::AddVehicleSpotCount(TEnumAsByte<enum ESpotType> SpotType, const struct FString& Path, float LocationX, float LocationY, float LocationZ)
 {
@@ -20072,9 +19572,9 @@ void UVehicleGeneratorComponent::AddVehicleSpotCount(TEnumAsByte<enum ESpotType>
 // Function Gameplay.VehicleGeneratorComponent.AddVehicleClassCount
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// bool                           IsValid                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// bool IsValid (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleGeneratorComponent::AddVehicleClassCount(const struct FString& Path, bool IsValid, int Count)
 {
@@ -20142,7 +19642,7 @@ void UVehicleSpotObject::OnTraceLevelShown()
 // Function Gameplay.VehicleSpotSceneComponent.SetSpotRandomInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FVehicleGenerateRandomInfo RandomInfo                     (Parm, OutParm)
+// struct FVehicleGenerateRandomInfo RandomInfo (Parm, OutParm)
 
 void UVehicleSpotSceneComponent::SetSpotRandomInfo(struct FVehicleGenerateRandomInfo* RandomInfo)
 {
@@ -20168,7 +19668,7 @@ void UVehicleSpotSceneComponent::SetSpotRandomInfo(struct FVehicleGenerateRandom
 // Function Gameplay.VehicleSpotSceneComponent.GenerateSpot
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UVehicleSpotSceneComponent::GenerateSpot()
 {

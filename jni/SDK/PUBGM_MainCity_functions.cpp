@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function MainCity.CarryBackMCAnimInstance.HandlePlayerPoseChange
 // (Native, Public)
 // Parameters:
-// TEnumAsByte<enum ESTEPoseState> LastPose                       (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ESTEPoseState> NewPose                        (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESTEPoseState> LastPose (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESTEPoseState> NewPose (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCarryBackMCAnimInstance::HandlePlayerPoseChange(TEnumAsByte<enum ESTEPoseState> LastPose, TEnumAsByte<enum ESTEPoseState> NewPose)
 {
@@ -58,8 +58,8 @@ void UCharLocomotionMCAnimInstance::SwitchingPoseFinishCallback()
 // Function MainCity.CharLocomotionMCAnimInstance.SetViewPointLimitByPoseStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ECharacterAnimBlendPoseType    InPoseType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnter                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// ECharacterAnimBlendPoseType InPoseType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnter (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharLocomotionMCAnimInstance::SetViewPointLimitByPoseStatus(ECharacterAnimBlendPoseType InPoseType, bool bEnter)
 {
@@ -84,8 +84,8 @@ void UCharLocomotionMCAnimInstance::SetViewPointLimitByPoseStatus(ECharacterAnim
 // Function MainCity.CharLocomotionMCAnimInstance.SetInterruptPose
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bUseInterruptPose              (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ECharacterPoseType> InterruptPose                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseInterruptPose (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ECharacterPoseType> InterruptPose (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharLocomotionMCAnimInstance::SetInterruptPose(bool bUseInterruptPose, TEnumAsByte<enum ECharacterPoseType> InterruptPose)
 {
@@ -131,7 +131,7 @@ void UCharLocomotionMCAnimInstance::LeaveStateCallback()
 // Function MainCity.CharLocomotionMCAnimInstance.HandleStateLeave
 // (Final, Native, Public)
 // Parameters:
-// EPawnState                     LeaveState                     (Parm, ZeroConstructor, IsPlainOldData)
+// EPawnState LeaveState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharLocomotionMCAnimInstance::HandleStateLeave(EPawnState LeaveState)
 {
@@ -155,8 +155,8 @@ void UCharLocomotionMCAnimInstance::HandleStateLeave(EPawnState LeaveState)
 // Function MainCity.CharLocomotionMCAnimInstance.HandlePlayerPoseChange
 // (Native, Public)
 // Parameters:
-// TEnumAsByte<enum ESTEPoseState> LastPose                       (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum ESTEPoseState> NewPose                        (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESTEPoseState> LastPose (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum ESTEPoseState> NewPose (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharLocomotionMCAnimInstance::HandlePlayerPoseChange(TEnumAsByte<enum ESTEPoseState> LastPose, TEnumAsByte<enum ESTEPoseState> NewPose)
 {
@@ -181,8 +181,8 @@ void UCharLocomotionMCAnimInstance::HandlePlayerPoseChange(TEnumAsByte<enum ESTE
 // Function MainCity.CharMainMCAnimInstance.SetClimbAnimation
 // (Final, Native, Public)
 // Parameters:
-// class UAnimSequence*           AnimSequence                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlag                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimSequence* AnimSequence (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharMainMCAnimInstance::SetClimbAnimation(class UAnimSequence* AnimSequence, bool bFlag)
 {
@@ -207,13 +207,13 @@ void UCharMainMCAnimInstance::SetClimbAnimation(class UAnimSequence* AnimSequenc
 // Function MainCity.CharMainMCAnimInstance.HandlePlayerAnimMontagePlayExtraDelegate
 // (Final, Native, Public)
 // Parameters:
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWantsPlay                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StartSection                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartPos                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOnlyJumpToSectionWhilePlaying (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   IgnoreStopSection              (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage* MontageToPlay (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWantsPlay (Parm, ZeroConstructor, IsPlainOldData)
+// float PlayRate (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName StartSection (Parm, ZeroConstructor, IsPlainOldData)
+// float StartPos (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOnlyJumpToSectionWhilePlaying (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName IgnoreStopSection (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharMainMCAnimInstance::HandlePlayerAnimMontagePlayExtraDelegate(class UAnimMontage* MontageToPlay, bool bWantsPlay, float PlayRate, const struct FName& StartSection, float StartPos, bool bOnlyJumpToSectionWhilePlaying, const struct FName& IgnoreStopSection)
 {
@@ -243,11 +243,11 @@ void UCharMainMCAnimInstance::HandlePlayerAnimMontagePlayExtraDelegate(class UAn
 // Function MainCity.CharMainMCAnimInstance.HandlePlayerAnimMontagePlayDelegate
 // (Final, Native, Public)
 // Parameters:
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWantsPlay                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StartSection                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartPos                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage* MontageToPlay (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWantsPlay (Parm, ZeroConstructor, IsPlainOldData)
+// float PlayRate (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName StartSection (Parm, ZeroConstructor, IsPlainOldData)
+// float StartPos (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharMainMCAnimInstance::HandlePlayerAnimMontagePlayDelegate(class UAnimMontage* MontageToPlay, bool bWantsPlay, float PlayRate, const struct FName& StartSection, float StartPos)
 {
@@ -275,14 +275,14 @@ void UCharMainMCAnimInstance::HandlePlayerAnimMontagePlayDelegate(class UAnimMon
 // Function MainCity.CharMainMCAnimInstance.HandleAnimPlaySlotAnimDelegate
 // (Final, Native, Public)
 // Parameters:
-// class UAnimSequenceBase*       AnimSequence                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWantsPlay                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SlotName                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  InLoopCount                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          InStartPos                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          LoopStartPos                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimSequenceBase* AnimSequence (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWantsPlay (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SlotName (Parm, ZeroConstructor, IsPlainOldData)
+// float PlayRate (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendTime (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char InLoopCount (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float InStartPos (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float LoopStartPos (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharMainMCAnimInstance::HandleAnimPlaySlotAnimDelegate(class UAnimSequenceBase* AnimSequence, bool bWantsPlay, const struct FName& SlotName, float PlayRate, float BlendTime, unsigned char InLoopCount, float InStartPos, float LoopStartPos)
 {
@@ -313,7 +313,7 @@ void UCharMainMCAnimInstance::HandleAnimPlaySlotAnimDelegate(class UAnimSequence
 // Function MainCity.MainCityGameMode.ReplayRecoverGenerateDSCheckpoint
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InReplayName                   (Parm, ZeroConstructor)
+// struct FString InReplayName (Parm, ZeroConstructor)
 
 void AMainCityGameMode::ReplayRecoverGenerateDSCheckpoint(const struct FString& InReplayName)
 {
@@ -358,7 +358,7 @@ void AMainCityGameMode::PreInitGameState()
 // Function MainCity.MainCityGameMode.InternalNotifyPlayerExit
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class ASTExtraPlayerController* PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
 
 void AMainCityGameMode::InternalNotifyPlayerExit(class ASTExtraPlayerController* PlayerController)
 {
@@ -382,7 +382,7 @@ void AMainCityGameMode::InternalNotifyPlayerExit(class ASTExtraPlayerController*
 // Function MainCity.MainCityGameMode.InitConsoleVar
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Command                        (Parm, ZeroConstructor)
+// struct FString Command (Parm, ZeroConstructor)
 
 void AMainCityGameMode::InitConsoleVar(const struct FString& Command)
 {
@@ -406,7 +406,7 @@ void AMainCityGameMode::InitConsoleVar(const struct FString& Command)
 // Function MainCity.MainCityGameMode.GenReplayDone
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ErrorMsg                       (Parm, ZeroConstructor)
+// struct FString ErrorMsg (Parm, ZeroConstructor)
 
 void AMainCityGameMode::GenReplayDone(const struct FString& ErrorMsg)
 {
@@ -430,9 +430,9 @@ void AMainCityGameMode::GenReplayDone(const struct FString& ErrorMsg)
 // Function MainCity.MainCityGameMode.DSPlayerKickOut
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ExitReason                     (Parm, ZeroConstructor)
+// uint64_t UID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ExitReason (Parm, ZeroConstructor)
 
 void AMainCityGameMode::DSPlayerKickOut(uint64_t UID, const struct FName& PlayerType, const struct FString& ExitReason)
 {
@@ -458,7 +458,7 @@ void AMainCityGameMode::DSPlayerKickOut(uint64_t UID, const struct FName& Player
 // Function MainCity.MainCityGameplayStatics.GetProjectSavedDir
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UMainCityGameplayStatics::GetProjectSavedDir()
 {
@@ -483,8 +483,8 @@ struct FString UMainCityGameplayStatics::GetProjectSavedDir()
 // Function MainCity.MainCityHelper.SetSwapRolesForReplay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMainCityHelper::SetSwapRolesForReplay(class AActor* InActor)
 {
@@ -510,7 +510,7 @@ int UMainCityHelper::SetSwapRolesForReplay(class AActor* InActor)
 // Function MainCity.MainCityPlayerState.RefreshAliasInfo
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGameModePlayerAliasInfo PlayerAliasInfo                (Parm, OutParm)
+// struct FGameModePlayerAliasInfo PlayerAliasInfo (Parm, OutParm)
 
 void AMainCityPlayerState::RefreshAliasInfo(struct FGameModePlayerAliasInfo* PlayerAliasInfo)
 {
@@ -557,8 +557,8 @@ void UMainCitySeesawAnimInstance::SyncAttachedActorAnimation()
 // Function MainCity.MainCitySubsystem.SetHasInitLobbyAvatar
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraPlayerController* InController                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerController* InController (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMainCitySubsystem::SetHasInitLobbyAvatar(class ASTExtraPlayerController* InController, bool bInValue)
 {
@@ -583,7 +583,7 @@ void UMainCitySubsystem::SetHasInitLobbyAvatar(class ASTExtraPlayerController* I
 // Function MainCity.MainCitySubsystem.ResetMainCityGameState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraGameStateBase*   InGameState                    (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraGameStateBase* InGameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMainCitySubsystem::ResetMainCityGameState(class ASTExtraGameStateBase* InGameState)
 {
@@ -649,7 +649,7 @@ void UMainCitySubsystem::PreEnterMainCityBattle()
 // Function MainCity.MainCitySubsystem.PreDestroyAutonomousChar
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class ASTExtraBaseCharacter*   Character                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMainCitySubsystem::PreDestroyAutonomousChar(class ASTExtraBaseCharacter* Character)
 {
@@ -799,7 +799,7 @@ void UMainCitySubsystem::PostClearActors()
 // Function MainCity.MainCitySubsystem.KeepActor
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMainCitySubsystem::KeepActor(class AActor* InActor)
 {
@@ -823,10 +823,10 @@ void UMainCitySubsystem::KeepActor(class AActor* InActor)
 // Function MainCity.MainCitySubsystem.InitStandalonePawn
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 InLocation                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                InRotation                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class ASTExtraBaseCharacter*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* InClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator InRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class ASTExtraBaseCharacter* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraBaseCharacter* UMainCitySubsystem::InitStandalonePawn(class UClass* InClass, const struct FVector& InLocation, const struct FRotator& InRotation)
 {
@@ -875,7 +875,7 @@ void UMainCitySubsystem::ClearActors()
 // Function MainCity.ReplayRecoverSubsystem.WriteLuaInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InData                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> InData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UReplayRecoverSubsystem::WriteLuaInfo(TArray<unsigned char> InData)
 {
@@ -899,7 +899,7 @@ void UReplayRecoverSubsystem::WriteLuaInfo(TArray<unsigned char> InData)
 // Function MainCity.ReplayRecoverSubsystem.SetReplayName
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InReplayName                   (Parm, ZeroConstructor)
+// struct FString InReplayName (Parm, ZeroConstructor)
 
 void UReplayRecoverSubsystem::SetReplayName(const struct FString& InReplayName)
 {
@@ -923,7 +923,7 @@ void UReplayRecoverSubsystem::SetReplayName(const struct FString& InReplayName)
 // Function MainCity.ReplayRecoverSubsystem.ReadLuaInfo
 // (Final, Native, Public)
 // Parameters:
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UReplayRecoverSubsystem::ReadLuaInfo()
 {
@@ -948,8 +948,8 @@ TArray<unsigned char> UReplayRecoverSubsystem::ReadLuaInfo()
 // Function MainCity.ReplayRecoverSubsystem.PreInitializeWithParams
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UNetDriver*              InDriver                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class UNetDriver* InDriver (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PreInitializeWithParams(class UWorld* InWorld, class UNetDriver* InDriver)
 {
@@ -974,9 +974,9 @@ void UReplayRecoverSubsystem::PreInitializeWithParams(class UWorld* InWorld, cla
 // Function MainCity.ReplayRecoverSubsystem.PreInitializeForWorld
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InURLStr                       (Parm, ZeroConstructor)
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class USTExtraGameInstance*    InGameInstance                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InURLStr (Parm, ZeroConstructor)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class USTExtraGameInstance* InGameInstance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PreInitializeForWorld(const struct FString& InURLStr, class UWorld* InWorld, class USTExtraGameInstance* InGameInstance)
 {
@@ -1002,9 +1002,9 @@ void UReplayRecoverSubsystem::PreInitializeForWorld(const struct FString& InURLS
 // Function MainCity.ReplayRecoverSubsystem.PreInitializeForGameMode
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InURLStr                       (Parm, ZeroConstructor)
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AGameStateBase*          InGameState                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InURLStr (Parm, ZeroConstructor)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* InGameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PreInitializeForGameMode(const struct FString& InURLStr, class UWorld* InWorld, class AGameStateBase* InGameState)
 {
@@ -1030,7 +1030,7 @@ void UReplayRecoverSubsystem::PreInitializeForGameMode(const struct FString& InU
 // Function MainCity.ReplayRecoverSubsystem.PreDemoPlaybackEnded
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PreDemoPlaybackEnded(class UWorld* InWorld)
 {
@@ -1054,8 +1054,8 @@ void UReplayRecoverSubsystem::PreDemoPlaybackEnded(class UWorld* InWorld)
 // Function MainCity.ReplayRecoverSubsystem.PostInitializeWithParams
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UNetDriver*              InDriver                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class UNetDriver* InDriver (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PostInitializeWithParams(class UWorld* InWorld, class UNetDriver* InDriver)
 {
@@ -1080,9 +1080,9 @@ void UReplayRecoverSubsystem::PostInitializeWithParams(class UWorld* InWorld, cl
 // Function MainCity.ReplayRecoverSubsystem.PostInitializeForWorld
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InURLStr                       (Parm, ZeroConstructor)
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class USTExtraGameInstance*    InGameInstance                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InURLStr (Parm, ZeroConstructor)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class USTExtraGameInstance* InGameInstance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PostInitializeForWorld(const struct FString& InURLStr, class UWorld* InWorld, class USTExtraGameInstance* InGameInstance)
 {
@@ -1108,9 +1108,9 @@ void UReplayRecoverSubsystem::PostInitializeForWorld(const struct FString& InURL
 // Function MainCity.ReplayRecoverSubsystem.PostInitializeForGameMode
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 InURLStr                       (Parm, ZeroConstructor)
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AGameStateBase*          InGameState                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InURLStr (Parm, ZeroConstructor)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class AGameStateBase* InGameState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::PostInitializeForGameMode(const struct FString& InURLStr, class UWorld* InWorld, class AGameStateBase* InGameState)
 {
@@ -1136,7 +1136,7 @@ void UReplayRecoverSubsystem::PostInitializeForGameMode(const struct FString& In
 // Function MainCity.ReplayRecoverSubsystem.LuaSaveLuaInfo
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UReplayRecoverSubsystem::LuaSaveLuaInfo()
 {
@@ -1161,7 +1161,7 @@ bool UReplayRecoverSubsystem::LuaSaveLuaInfo()
 // Function MainCity.ReplayRecoverSubsystem.LoadReplayDone
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ErrorMsg                       (Parm, ZeroConstructor)
+// struct FString ErrorMsg (Parm, ZeroConstructor)
 
 void UReplayRecoverSubsystem::LoadReplayDone(const struct FString& ErrorMsg)
 {
@@ -1185,9 +1185,9 @@ void UReplayRecoverSubsystem::LoadReplayDone(const struct FString& ErrorMsg)
 // Function MainCity.ReplayRecoverSubsystem.IsVersionValid
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 RecordVersion                  (Parm, ZeroConstructor)
-// struct FString                 PlayerVersion                  (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString RecordVersion (Parm, ZeroConstructor)
+// struct FString PlayerVersion (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UReplayRecoverSubsystem::IsVersionValid(const struct FString& RecordVersion, const struct FString& PlayerVersion)
 {
@@ -1214,9 +1214,9 @@ bool UReplayRecoverSubsystem::IsVersionValid(const struct FString& RecordVersion
 // Function MainCity.ReplayRecoverSubsystem.IsTimeValid
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        RecordTime                     (Parm, ZeroConstructor, IsPlainOldData)
-// int64_t                        PlayTime                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t RecordTime (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t PlayTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UReplayRecoverSubsystem::IsTimeValid(int64_t RecordTime, int64_t PlayTime)
 {
@@ -1243,7 +1243,7 @@ bool UReplayRecoverSubsystem::IsTimeValid(int64_t RecordTime, int64_t PlayTime)
 // Function MainCity.ReplayRecoverSubsystem.GenReplayDone
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 ErrorMsg                       (Parm, ZeroConstructor)
+// struct FString ErrorMsg (Parm, ZeroConstructor)
 
 void UReplayRecoverSubsystem::GenReplayDone(const struct FString& ErrorMsg)
 {
@@ -1267,7 +1267,7 @@ void UReplayRecoverSubsystem::GenReplayDone(const struct FString& ErrorMsg)
 // Function MainCity.ReplayRecoverSubsystem.DeleteExpiredFiles
 // (Final, Native, Public)
 // Parameters:
-// float                          MaxKeepHours                   (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxKeepHours (Parm, ZeroConstructor, IsPlainOldData)
 
 void UReplayRecoverSubsystem::DeleteExpiredFiles(float MaxKeepHours)
 {

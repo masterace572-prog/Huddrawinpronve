@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class ALightningActor : public AActor
 {
 public:
-	class ULightningComponent*                         LightningComponent;                                       // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class ULightningComponent* LightningComponent; // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class LightningComponent.LightningActor");
@@ -27,36 +26,35 @@ public:
 
 
 // Class LightningComponent.LightningComponent
-// 0x00B0 (0x0A30 - 0x0980)
+// 0x00B0 (0x0A50 - 0x09A0)
 class ULightningComponent : public UMeshComponent
 {
 public:
-	float                                              LightningWidth;                                           // 0x0980(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              WidthDecay;                                               // 0x0984(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              BrightnessDecay;                                          // 0x0988(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bShrinkWidth;                                             // 0x098C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x098D(0x0003) MISSED OFFSET
-	int                                                AtlasNum;                                                 // 0x0990(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SeedStart;                                                // 0x0994(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector                                     SeedEnd;                                                  // 0x09A0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ZigZagFraction;                                           // 0x09AC(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ZigZagDeviationRight;                                     // 0x09B4(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ZigZagDeviationUp;                                        // 0x09BC(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ZigZagDeviationDecay;                                     // 0x09C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ForkFraction;                                             // 0x09C8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ForkZigZagDeviationRight;                                 // 0x09D0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ForkZigZagDeviationUp;                                    // 0x09D8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ForkZigZagDeviationDecay;                                 // 0x09E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ForkDeviationRight;                                       // 0x09E4(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ForkDeviationUp;                                          // 0x09EC(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   ForkDeviationForward;                                     // 0x09F4(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ForkDeviationDecay;                                       // 0x09FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ForkLength;                                               // 0x0A00(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              ForkLengthDecay;                                          // 0x0A08(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x24];                                      // 0x0A0C(0x0024) MISSED OFFSET
+	float LightningWidth; // 0x09A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float WidthDecay; // 0x09A4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float BrightnessDecay; // 0x09A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bShrinkWidth; // 0x09AC(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x09AD(0x0003) MISSED OFFSET
+	int AtlasNum; // 0x09B0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector SeedStart; // 0x09B4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector SeedEnd; // 0x09C0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ZigZagFraction; // 0x09CC(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ZigZagDeviationRight; // 0x09D4(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ZigZagDeviationUp; // 0x09DC(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float ZigZagDeviationDecay; // 0x09E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D ForkFraction; // 0x09E8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ForkZigZagDeviationRight; // 0x09F0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ForkZigZagDeviationUp; // 0x09F8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float ForkZigZagDeviationDecay; // 0x0A00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D ForkDeviationRight; // 0x0A04(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ForkDeviationUp; // 0x0A0C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D ForkDeviationForward; // 0x0A14(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float ForkDeviationDecay; // 0x0A1C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D ForkLength; // 0x0A20(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float ForkLengthDecay; // 0x0A28(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x24]; // 0x0A2C(0x0024) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class LightningComponent.LightningComponent");

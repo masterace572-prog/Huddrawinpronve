@@ -1,7 +1,7 @@
 #include "Helper/include.h"
 #include "Helper/definition.h"
 #include "Helper/Items.h"
-
+#include "Helper/bypass.h"
 #include <fcntl.h>
 #include <iostream>
 #include <fstream>
@@ -346,151 +346,199 @@ void DrawMemory()
 {
     if (Cheat::localPlayer && Cheat::localController)
     {
-        if (Cheat::Aimbot::Enable)
-        {
-            ASTExtraPlayerCharacter* Target = GetTargetForAimBot();
+        
+if (Cheat::Aimbot::Enable) {
+    // 获取瞄准目标
+    ASTExtraPlayerCharacter *Target = GetTargetForAimBot();
+    // 目标有效时的处理
+    if (Target) {
+    bool triggerOk = false;
+   if (Cheat::Aimbot::Trigger == EAimTrigger::None) {
+triggerOk = Cheat::localPlayer->bIsWeaponFiring;
+}
+if (Cheat::Aimbot::Trigger == EAimTrigger::Scoping) {
+triggerOk = Cheat::localPlayer->bIsGunADS;
+}
+if (Cheat::Aimbot::Trigger == EAimTrigger::Both) {
+triggerOk = Cheat::localPlayer->bIsWeaponFiring || Cheat::localPlayer->bIsGunADS;
+}
+if (triggerOk) {
+FVector targetAimPos;
+ if (Cheat::Aimbot::Target == EAimTarget::Head) {
+ targetAimPos = Target->GetBonePos("Head", {0, 0, 0});
+  }
 
-            if (Target)
-            {
-                bool triggerOk = true;
-                triggerOk = Cheat::localPlayer->bIsWeaponFiring;
-
-                if (triggerOk)
-                {
-                    FVector targetAimPos = Target->GetBonePos("Head", {});
-                    targetAimPos.Z -= 22.0f;
-
-                    auto WeaponManagerComponent = Cheat::localPlayer->WeaponManagerComponent;
-
-                    if (WeaponManagerComponent)
-                    {
-                        auto propSlot = WeaponManagerComponent->GetCurrentUsingPropSlot();
-
-                        if ((int)propSlot.GetValue() >= 1 && (int)propSlot.GetValue() <= 3)
+ if (Cheat::Aimbot::Target == EAimTarget::Chest) {
+ targetAimPos = Target->GetBonePos("upperarm_r", {0, 0, 0});
+}
+switch (Cheat::Aimbot::Target == EAimTarget::Head) {
+                            case 1:
+                                targetAimPos = Target->GetBonePos("Head", {});
+                                break;
+                            case 2:
+                                targetAimPos = Target->GetBonePos("pelvis", {});
+                                break;
+                            case 3:
+                                targetAimPos = Target->GetBonePos("calf_l", {});
+                                break;
+                            case 4:
+                                targetAimPos = Target->GetBonePos("calf_r", {});
+                                break;
+                            case 5:
+                                targetAimPos = Target->GetBonePos("lowerarm_l", {});
+                                break;
+                            case 6:
+                                targetAimPos = Target->GetBonePos("lowerarm_r", {});
+                                break;
+                            case 7:
+                                targetAimPos = Target->GetBonePos("upperarm_l", {});
+                                break;
+                            case 8:
+                                targetAimPos = Target->GetBonePos("upperarm_r", {});
+                                break;
+                            case 9:
+                                targetAimPos = Target->GetBonePos("thigh_l", {});
+                                break;
+                            case 10:
+                                targetAimPos = Target->GetBonePos("thigh_r", {});
+                                break;
+                            case 11:
+                                targetAimPos = Target->GetBonePos("foot_l", {});
+                                break;
+                            case 12:
+                                targetAimPos = Target->GetBonePos("foot_r", {});
+                                break;
+                            default:
+                                targetAimPos = Target->GetBonePos("Head", {});
+                                break;
+                        }
+                        if(Cheat::Aimbot::Target == EAimTarget::Chest){
+                        if(算法 == 0) {
+                        targetAimPos = Target->GetBonePos("Head", {});//头
+                        }else if(算法 == 1) {
+                        targetAimPos = Target->GetBonePos("spine_03", {});//脖子
+                        }else if(算法 == 2){
+                        targetAimPos = Target->GetBonePos("pelvis", {});//屁股
+                        }else if(算法 == 3){
+                        targetAimPos = Target->GetBonePos("calf_l", {});//左小腿
+                        }else if(算法 == 4){
+                        targetAimPos = Target->GetBonePos("calf_r", {});//右小腿
+                        }else if(算法 == 5){
+                        targetAimPos = Target->GetBonePos("lowerarm_l", {});//左小臂
+                        }else if(算法 == 6){
+                        targetAimPos = Target->GetBonePos("lowerarm_r", {});//右小臂
+                        }else if(算法 == 7){
+                        targetAimPos = Target->GetBonePos("upperarm_l", {});//左上臂
+                        }else if(算法 == 8){
+                        targetAimPos = Target->GetBonePos("upperarm_r", {});//右上臂
+                        }else if(算法 == 9) {
+                        targetAimPos = Target->GetBonePos("thigh_l", {});//左大腿
+                        }else if(算法 == 10) {
+                        targetAimPos = Target->GetBonePos("thigh_r", {});//右大腿
+                        }else if(算法 == 11) {
+                        targetAimPos = Target->GetBonePos("foot_l", {});//左脚
+                        }else if(算法 == 12){
+                        targetAimPos = Target->GetBonePos("foot_r", {});//右脚
+                        }
+                        }        
+            
+            
+            if (targetAimPos.X > 0 && targetAimPos.Y > 0 && targetAimPos.Z > 0) {
+    auto WeaponManagerComponent = Cheat::localPlayer->WeaponManagerComponent;
+    if (WeaponManagerComponent) {
+        auto propSlot = WeaponManagerComponent->GetCurrentUsingPropSlot();
+        if ((int) propSlot.GetValue() >= 1 && (int) propSlot.GetValue() <= 3) {
+            auto CurrentWeaponReplicated = (ASTExtraShootWeapon *) WeaponManagerComponent->CurrentWeaponReplicated;
+            if (CurrentWeaponReplicated) {
+                auto ShootWeaponComponent = CurrentWeaponReplicated->ShootWeaponComponent;
+                auto ShootWeaponEffectComp = CurrentWeaponReplicated->ShootWeaponEffectComp;
+                if (ShootWeaponComponent) {
+                    UShootWeaponEntity *ShootWeaponEntityComponent = ShootWeaponComponent->ShootWeaponEntityComponent;
+                    if (ShootWeaponEntityComponent) {
+                        // Get bullet fire speed using offset 0x408
+                        float BulletFireSpeed = *(float*)((uintptr_t)ShootWeaponEntityComponent + 0x560);
+                        
+                        ASTExtraVehicleBase *CurrentVehicle = Target->CurrentVehicle;
+                        if (CurrentVehicle) {
+                            FVector LinearVelocity = CurrentVehicle->ReplicatedMovement.LinearVelocity;
+                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
+                            auto timeToTravel = dist / BulletFireSpeed;  // Using BulletFireSpeed instead of BulletRange
+                            targetAimPos = UKismetMathLibrary::Add_VectorVector(targetAimPos, UKismetMathLibrary::Multiply_VectorFloat(LinearVelocity, timeToTravel));
+                            targetAimPos.Z += LinearVelocity.Z * timeToTravel + 0.5 * 573.f * timeToTravel * timeToTravel;
+                        } else {
+                            FVector Velocity = Target->GetVelocity();
+                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
+                            auto timeToTravel = dist / BulletFireSpeed;  // Using BulletFireSpeed instead of BulletRange
+                            targetAimPos = UKismetMathLibrary::Add_VectorVector(targetAimPos, UKismetMathLibrary::Multiply_VectorFloat(Velocity, timeToTravel));
+                            targetAimPos.Z += Velocity.Z * timeToTravel + 0.5 * 573.f * timeToTravel * timeToTravel;
+                        }
+                        
+                        if (Cheat::localPlayer->bIsWeaponFiring)
                         {
-                            auto CurrentWeaponReplicated = (ASTExtraShootWeapon*)WeaponManagerComponent->CurrentWeaponReplicated;
-
-                            if (CurrentWeaponReplicated)
-                            {
-                                auto ShootWeaponComponent = CurrentWeaponReplicated->ShootWeaponComponent;
-
-                                if (ShootWeaponComponent)
-                                {
-                                    UShootWeaponEntity* ShootWeaponEntityComponent = ShootWeaponComponent->ShootWeaponEntityComponent;
-
-                                    if (ShootWeaponEntityComponent)
-                                    {
-                                        ASTExtraVehicleBase* CurrentVehicle = Target->CurrentVehicle;
-
-                                        if (CurrentVehicle)
-                                        {
-                                            FVector LinearVelocity = CurrentVehicle->ReplicatedMovement.LinearVelocity;
-                                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
-                                            auto timeToTravel = dist / ShootWeaponEntityComponent->BulletFireSpeed;
-                                            targetAimPos = UKismetMathLibrary::Add_VectorVector(
-                                                targetAimPos,
-                                                UKismetMathLibrary::Multiply_VectorFloat(LinearVelocity, timeToTravel)
-                                            );
-                                        }
-                                        else
-                                        {
-                                            FVector Velocity = Target->GetVelocity();
-                                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
-                                            auto timeToTravel = dist / ShootWeaponEntityComponent->BulletFireSpeed;
-                                            targetAimPos = UKismetMathLibrary::Add_VectorVector(
-                                                targetAimPos,
-                                                UKismetMathLibrary::Multiply_VectorFloat(Velocity, timeToTravel)
-                                            );
-                                        }
-
-                                        if (Cheat::localPlayer->bIsWeaponFiring)
-                                        {
-                                            float dist = Cheat::localPlayer->GetDistanceTo(Target) / 100.f;
-                                            targetAimPos.Z -= dist * Cheat::Aimbot::Recoil;
-                                        }
-
-                                        FVector fDir = UKismetMathLibrary::Subtract_VectorVector(
-                                            targetAimPos,
-                                            Cheat::localController->PlayerCameraManager->CameraCache.POV.Location
-                                        );
-
-                                        FRotator Yaptr = UKismetMathLibrary::Conv_VectorToRotator(fDir);
-                                        FRotator CpYaT = Cheat::localController->PlayerCameraManager->CameraCache.POV.Rotation;
-
-                                        Yaptr.Pitch -= CpYaT.Pitch;
-                                        Yaptr.Yaw -= CpYaT.Yaw;
-                                        Yaptr.Roll = 0.f;
-
-                                        NekoHook(Yaptr);
-
-                                        CpYaT.Pitch += Yaptr.Pitch / Xs;
-                                        CpYaT.Yaw += Yaptr.Yaw / Ys;
-                                        CpYaT.Roll = 0.f;
-
-                                        Cheat::localController->SetControlRotation(CpYaT, "");
-                                    }
-                                }
-                            }
+                            float dist = Cheat::localPlayer->GetDistanceTo(Target) / 100.f;
+                            targetAimPos.Z -= dist * Cheat::Aimbot::RecoilSet;
+                        }
+                        
+                        //开镜自瞄偏移修复(关键变量/AimControlRotationAdditive)
+                        auto ControlRotator = Cheat::localController->ControlRotation;
+                        auto aimRotation = ToRotator(Cheat::localController->PlayerCameraManager->CameraCache.POV.Location, targetAimPos);
+                        ControlRotator.Pitch = aimRotation.Pitch - Cheat::localController->ControlRotation.Pitch - Cheat::localPlayer->AimControlRotationAdditive.Pitch / 1;
+                        ControlRotator.Yaw = aimRotation.Yaw - Cheat::localController->ControlRotation.Yaw - Cheat::localPlayer->AimControlRotationAdditive.Yaw / 1;
+                        
+                        int 命中概率 = rand() % 101; //生成0到100的随机数
+                        if (命中概率 <= 100) //设定概率
+                        {
+                            Cheat::localPlayer->AddControllerPitchInput(ControlRotator.Pitch);
+                            Cheat::localPlayer->AddControllerYawInput(ControlRotator.Yaw);
                         }
                     }
                 }
             }
         }
-
-        static USTExtraGameInstance* Instance = nullptr;
-        if (!Instance)
-        {
-            Instance = UObject::FindObject<USTExtraGameInstance>("STExtraGameInstance Transient.UAEGameEngine_1.STExtraGameInstance_1");
-            if (Instance != nullptr)
-            {
-                auto& UserSettings = Instance->UserDetailSetting;
-                UserSettings.PUBGDeviceFPSDef = 120;
-                UserSettings.PUBGDeviceFPSLow = 120;
-                UserSettings.PUBGDeviceFPSMid = 120;
-                UserSettings.PUBGDeviceFPSHigh = 120;
-                UserSettings.PUBGDeviceFPSHDR = 120;
-                UserSettings.PUBGDeviceFPSUltralHigh = 120;
-                UserSettings.DeviceMaxQualityLevel = 3;
-            }
-        }
-
-static ULocalPlayer *UlocalPlayer = nullptr;
-    if (!UlocalPlayer)
-    {
-        UlocalPlayer = UObject::FindObject<ULocalPlayer>("LocalPlayer Transient.UAEGameEngine_1.LocalPlayer_1");
     }
+}
+        }
+    }
+}
 
-    if (UlocalPlayer == nullptr)
+       if (Cheat::Memory::XHitEffect)
+        {
+            if (Cheat::localController != nullptr)
+{
+ if (Cheat::localPlayer->bIsWeaponFiring || Cheat::localPlayer->bIsGunADS) 
+ {
+    auto MyHUD = (ASurviveHUD *)Cheat::localController->MyHUD;
+    if (MyHUD == nullptr)
         return;
+FLinearColor interpolatedColor = RandomColor();
 
 
+    auto hitPerformPtr = &MyHUD->HitPerform;
 
-    static auto OrigView = UlocalPlayer->AspectRatioAxisConstraint;
-    if (Cheat::Memory::Wide)
-    {
-        UlocalPlayer->AspectRatioAxisConstraint = EAspectRatioAxisConstraint::AspectRatio_MaintainYFOV;
-    }
-    else
-    {
-        if (UlocalPlayer->AspectRatioAxisConstraint != OrigView)
-        {
-            UlocalPlayer->AspectRatioAxisConstraint = OrigView;
+    uintptr_t hitPerformAddress = *(uintptr_t *)(uintptr_t)hitPerformPtr;
+
+    *(float *)((uintptr_t)hitPerformAddress + 0x10) = 99999.0f;
+    *(float *)((uintptr_t)hitPerformAddress + 0x50) = 99999.0f;
+    *(float *)((uintptr_t)hitPerformAddress + 0x90) = 99999.0f;
+    *(float *)((uintptr_t)hitPerformAddress + 0xD0) = 99999.0f;
+
+    MyHUD->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Head, interpolatedColor);
+    MyHUD->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Body, interpolatedColor);
+    Cheat::Memory::XHitEffect = true;
+}
+}
         }
-    }
-	
-        if (Cheat::Memory::Wide)
+        
+        if (Cheat::localController != 0)
         {
-            uintptr_t localPlayer = (uintptr_t)Cheat::localPlayer;
+        
+           // Cheat::Memory::XHitEffect = true;
+            
+        }
+        else
+        {
+           // Cheat::Memory::XHitEffect = false;
 
-            if (localPlayer)
-            {
-                uintptr_t cameraComponent = *(uintptr_t*)(localPlayer + 0x1C08);
-
-                if (cameraComponent)
-                {
-                    *(float*)(cameraComponent + 0x33C) = 140.0f;
-                }
-            }
         }
 
         if (Cheat::Memory::Small)
@@ -515,7 +563,8 @@ static ULocalPlayer *UlocalPlayer = nullptr;
 
                             if (ShootWeaponEntityComponent && Cheat::Memory::Small)
                             {
-                                ShootWeaponEntityComponent->GameDeviationFactor = 0.0f;
+                                FLinearColor interpolatedColor = RandomColor();
+                              //  ShootWeaponEntityComponent->GameDeviationFactor = 0.0f;
                             }
                         }
                     }
@@ -535,16 +584,19 @@ void AutoEspOn()
     Cheat::Esp::Box = true;
 	Cheat::Esp::LootBox = true;
 	Cheat::Esp::Throwable = true;
-    Cheat::Esp::Target = true;
+  //  Cheat::Esp::Target = true;
 	Cheat::Esp::Counter = true;
     Cheat::Esp::Vehicle::Name = true;
-	
-  //   Cheat::Aimbot::Enable = true;
- //   Cheat::Memory::Wide = true;
+    
+  //  Cheat::BulletTrack::Enable = true;
+    
+    Cheat::Aimbot::Enable = true;
+    Cheat::Aimbot::RecoilSet = 1.045f;
+    Cheat::Aimbot::VisCheck = true;
+    Cheat::Aimbot::IgnoreKnock = true;
+    Cheat::Aimbot::Target = Chest;
 	
 	Cheat::Memory::Small = true;
-	//Cheat::Memory::Magic = true;
-	//Cheat::Aimbot::Enable = true;
 	
     for (auto &i : items_data) 
     {
@@ -560,11 +612,8 @@ void AutoEspOn()
     }
 }
 
-// ============================================================
-// ReceiveDrawHUD — direct offset hook (no ProcessEvent)
-// Replace 0x0 with the actual ReceiveDrawHUD offset in libUE4.so
-// ============================================================
-#define RECEIVE_DRAW_HUD_OFFSET 0x0  // TODO: set real offset
+
+
 
 void (*oReceiveDrawHUD)(AHUD *pHUD, int SizeX, int SizeY);
 void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
@@ -578,12 +627,31 @@ void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
     oReceiveDrawHUD(pHUD, SizeX, SizeY);
 }
 
-void initOffset()
+
+void (*ShootBulletInner)(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID);
+void xShootBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID)
 {
-    // Hook ReceiveDrawHUD directly at its offset
-    A64HookFunction((void *)(Cheat::libUE4Base + RECEIVE_DRAW_HUD_OFFSET),
-                    (void *)hkReceiveDrawHUD, (void **)&oReceiveDrawHUD);
+    if (Cheat::BulletTrack::Enable)
+    {
+        ASTExtraPlayerCharacter* Target = GetTargetForAimBot();
+        if (Target)
+        {
+            FVector targetAimPos = Target->GetBonePos("Head", {});
+            targetAimPos.Z -= -19.0f;   // same as targetAimPos.Z += 19.0f
+            FRotator adjustedRot = ToRotator(StartLoc, targetAimPos);
+            return ShootBulletInner(Weapon, StartLoc, adjustedRot, ShootID);
+        }
+    }
+    return ShootBulletInner(Weapon, StartLoc, StartRot, ShootID);
 }
+
+
+
+
+
+
+
+
 
 void *RunGame(void *) 
 {
@@ -605,8 +673,12 @@ void *RunGame(void *)
 
     UObject::GUObjectArray = (FUObjectArray *)(Cheat::libUE4Base + Cheat::GUObject_Offset);
     
-    initOffset();
-	
+    shadowhook_init(shadowhook_mode_t::SHADOWHOOK_MODE_UNIQUE, 0);
+    
+    shadowhook_hook_func_addr((void *)(Cheat::libUE4Base + 0x6BB0CFC), (void *)xShootBulletInner, (void **)&ShootBulletInner);
+    
+   shadowhook_hook_func_addr((void *)(Cheat::libUE4Base + 0xAA8E774), (void *)hkReceiveDrawHUD, (void **)&oReceiveDrawHUD);
+   
     items_data = json::parse(JSON_ITEMS);
     AutoEspOn();
 

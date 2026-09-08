@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,14 +13,13 @@ namespace SDK
 class UAIGCAnimData : public UObject
 {
 public:
-	TArray<struct FAIBonesTransfroms>                  BonesTransfroms;                                          // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                FrameRate;                                                // 0x0038(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseCustomSpace;                                          // 0x003C(0x0001) (ZeroConstructor, IsPlainOldData)
-	struct FSkeletonModifyRule                         CustomRule;                                               // 0x003D(0x0006)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x0043(0x0005) MISSED OFFSET
+	TArray<struct FAIBonesTransfroms> BonesTransfroms; // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int FrameRate; // 0x0038(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bUseCustomSpace; // 0x003C(0x0001) (ZeroConstructor, IsPlainOldData)
+	struct FSkeletonModifyRule CustomRule; // 0x003D(0x0006)
+	unsigned char UnknownData00[0x5]; // 0x0043(0x0005) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIGCKit.AIGCAnimData");
@@ -35,23 +34,22 @@ public:
 class UAIGCAnimInstance : public UAnimInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x03F0(0x0008) MISSED OFFSET
-	bool                                               bUseAIGCAnimation;                                        // 0x03F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x03F9(0x0003) MISSED OFFSET
-	float                                              CurrentAIGCAnimFrameIndex;                                // 0x03FC(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneModificationMode>            TranslationMode;                                          // 0x0400(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneModificationMode>            RotationMode;                                             // 0x0401(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneModificationMode>            ScaleMode;                                                // 0x0402(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneControlSpace>                TranslationSpace;                                         // 0x0403(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneControlSpace>                RotationSpace;                                            // 0x0404(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBoneControlSpace>                ScaleSpace;                                               // 0x0405(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x0406(0x0002) MISSED OFFSET
-	float                                              AIGCAnimFrameRate;                                        // 0x0408(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FSkeletonModifyRule                         DefaultSkeletonModifyRule;                                // 0x040C(0x0006)
-	unsigned char                                      UnknownData03[0xE];                                       // 0x0412(0x000E) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x03F0(0x0008) MISSED OFFSET
+	bool bUseAIGCAnimation; // 0x03F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x03F9(0x0003) MISSED OFFSET
+	float CurrentAIGCAnimFrameIndex; // 0x03FC(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneModificationMode> TranslationMode; // 0x0400(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneModificationMode> RotationMode; // 0x0401(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneModificationMode> ScaleMode; // 0x0402(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneControlSpace> TranslationSpace; // 0x0403(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneControlSpace> RotationSpace; // 0x0404(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBoneControlSpace> ScaleSpace; // 0x0405(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x2]; // 0x0406(0x0002) MISSED OFFSET
+	float AIGCAnimFrameRate; // 0x0408(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FSkeletonModifyRule DefaultSkeletonModifyRule; // 0x040C(0x0006)
+	unsigned char UnknownData03[0xE]; // 0x0412(0x000E) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIGCKit.AIGCAnimInstance");
@@ -69,8 +67,7 @@ class UAIGCKitFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIGCKit.AIGCKitFunctionLibrary");
@@ -89,14 +86,13 @@ public:
 class UAIGCKitSettings : public UObject
 {
 public:
-	TMap<struct FString, struct FSkeletonNodeInfo>     FaceSkeletons;                                            // 0x0028(0x0050) (Edit, ZeroConstructor, Config)
-	TMap<struct FString, struct FSkeletonNodeInfo>     BodySkeletons;                                            // 0x0078(0x0050) (Edit, ZeroConstructor, Config)
-	struct FSkeletonModifyRule                         DefaultFaceRule;                                          // 0x00C8(0x0006) (Edit, Config)
-	struct FSkeletonModifyRule                         DefaultBodyRule;                                          // 0x00CE(0x0006) (Edit, Config)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
+	TMap<struct FString, struct FSkeletonNodeInfo> FaceSkeletons; // 0x0028(0x0050) (Edit, ZeroConstructor, Config)
+	TMap<struct FString, struct FSkeletonNodeInfo> BodySkeletons; // 0x0078(0x0050) (Edit, ZeroConstructor, Config)
+	struct FSkeletonModifyRule DefaultFaceRule; // 0x00C8(0x0006) (Edit, Config)
+	struct FSkeletonModifyRule DefaultBodyRule; // 0x00CE(0x0006) (Edit, Config)
+	unsigned char UnknownData00[0x4]; // 0x00D4(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIGCKit.AIGCKitSettings");

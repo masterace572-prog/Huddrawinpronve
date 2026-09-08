@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UOverlays : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Overlay.Overlays");
@@ -30,10 +29,9 @@ public:
 class UBasicOverlays : public UOverlays
 {
 public:
-	TArray<struct FOverlayItem>                        Overlays;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FOverlayItem> Overlays; // 0x0028(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Overlay.BasicOverlays");
@@ -48,11 +46,10 @@ public:
 class ULocalizedOverlays : public UOverlays
 {
 public:
-	class UBasicOverlays*                              DefaultOverlays;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TMap<struct FString, class UBasicOverlays*>        LocaleToOverlaysMap;                                      // 0x0030(0x0050) (Edit, ZeroConstructor)
+	class UBasicOverlays* DefaultOverlays; // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TMap<struct FString, class UBasicOverlays*> LocaleToOverlaysMap; // 0x0030(0x0050) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Overlay.LocalizedOverlays");

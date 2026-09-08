@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,49 +13,48 @@ namespace SDK
 class UCreativeLuaVM : public UObject
 {
 public:
-	uint64_t                                           SuspendFrameCounter;                                      // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	uint64_t                                           RunFrameCounter;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                CostCheckInterval;                                        // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	double                                             FrameExecuteTime;                                         // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FrameSuspendMaxDelay;                                     // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	double                                             SuspendFrameExecuteTime;                                  // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                CrossVMAPICost;                                           // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
-	class UWorld*                                      World;                                                    // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AWorldSettings*                              WorldSettings;                                            // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
-	bool                                               bExitWhenFatalOccurs;                                     // 0x0078(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bExecuting;                                               // 0x0079(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAbort;                                                   // 0x007A(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1];                                       // 0x007B(0x0001) MISSED OFFSET
-	int                                                MaxLoopRunCount;                                          // 0x007C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxExecuteAPICount;                                       // 0x0080(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
-	struct FString                                     LuaReturnFunctionName;                                    // 0x0088(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FString                                     RedirectorName;                                           // 0x0098(0x0010) (BlueprintVisible, ZeroConstructor)
-	TMap<struct FString, double>                       ElapsedTimeMap;                                           // 0x00A8(0x0050) (ZeroConstructor)
-	TMap<struct FString, double>                       MaxElapsedTimeMap;                                        // 0x00F8(0x0050) (ZeroConstructor)
-	TMap<struct FString, int>                          CountBlockMap;                                            // 0x0148(0x0050) (ZeroConstructor)
-	bool                                               bCanFreeze;                                               // 0x0198(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x0199(0x0007) MISSED OFFSET
-	struct FScriptDelegate                             AtPanicDelegate;                                          // 0x01A0(0x0016) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData07[0x10];                                      // 0x01B0(0x0010) MISSED OFFSET
-	struct FScriptDelegate                             CodeFinishDelegate;                                       // 0x01C0(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             CodeOutputDelegate;                                       // 0x01D0(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             HasEventToRunDelegate;                                    // 0x01E0(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             PrepareEventDelegate;                                     // 0x01F0(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             ExecuteDelayedDelegate;                                   // 0x0200(0x0016) (ZeroConstructor, InstancedReference)
-	struct FScriptDelegate                             CodePreExecuteDelegate;                                   // 0x0210(0x0016) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData08[0x20];                                      // 0x0220(0x0020) MISSED OFFSET
-	struct FString                                     MainModule;                                               // 0x0240(0x0010) (ZeroConstructor)
-	struct FString                                     EventHandlerName;                                         // 0x0250(0x0010) (ZeroConstructor)
-	TScriptInterface<class UCreativeEntityInterface>   EntityInterface;                                          // 0x0260(0x0010) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0xF0];                                      // 0x0270(0x00F0) MISSED OFFSET
+	uint64_t SuspendFrameCounter; // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	uint64_t RunFrameCounter; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int CostCheckInterval; // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x003C(0x0004) MISSED OFFSET
+	double FrameExecuteTime; // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float FrameSuspendMaxDelay; // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x004C(0x0004) MISSED OFFSET
+	double SuspendFrameExecuteTime; // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int CrossVMAPICost; // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x005C(0x0004) MISSED OFFSET
+	class UWorld* World; // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AWorldSettings* WorldSettings; // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x8]; // 0x0070(0x0008) MISSED OFFSET
+	bool bExitWhenFatalOccurs; // 0x0078(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bExecuting; // 0x0079(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bAbort; // 0x007A(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x1]; // 0x007B(0x0001) MISSED OFFSET
+	int MaxLoopRunCount; // 0x007C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int MaxExecuteAPICount; // 0x0080(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x4]; // 0x0084(0x0004) MISSED OFFSET
+	struct FString LuaReturnFunctionName; // 0x0088(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FString RedirectorName; // 0x0098(0x0010) (BlueprintVisible, ZeroConstructor)
+	TMap<struct FString, double> ElapsedTimeMap; // 0x00A8(0x0050) (ZeroConstructor)
+	TMap<struct FString, double> MaxElapsedTimeMap; // 0x00F8(0x0050) (ZeroConstructor)
+	TMap<struct FString, int> CountBlockMap; // 0x0148(0x0050) (ZeroConstructor)
+	bool bCanFreeze; // 0x0198(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x7]; // 0x0199(0x0007) MISSED OFFSET
+	struct FScriptDelegate AtPanicDelegate; // 0x01A0(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData07[0x10]; // 0x01B0(0x0010) MISSED OFFSET
+	struct FScriptDelegate CodeFinishDelegate; // 0x01C0(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate CodeOutputDelegate; // 0x01D0(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate HasEventToRunDelegate; // 0x01E0(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate PrepareEventDelegate; // 0x01F0(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate ExecuteDelayedDelegate; // 0x0200(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptDelegate CodePreExecuteDelegate; // 0x0210(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData08[0x20]; // 0x0220(0x0020) MISSED OFFSET
+	struct FString MainModule; // 0x0240(0x0010) (ZeroConstructor)
+	struct FString EventHandlerName; // 0x0250(0x0010) (ZeroConstructor)
+	TScriptInterface<class UCreativeEntityInterface> EntityInterface; // 0x0260(0x0010) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData09[0xF0]; // 0x0270(0x00F0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UgcLua.CreativeLuaVM");
@@ -99,8 +98,7 @@ class UCreativeEntityInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UgcLua.CreativeEntityInterface");

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function KantanChartsDatasource.KantanCartesianDatasourceInterface.GetSeriesName
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            SeriesIdx                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// int SeriesIdx (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FText UKantanCartesianDatasourceInterface::GetSeriesName(int SeriesIdx)
 {
@@ -38,8 +38,8 @@ struct FText UKantanCartesianDatasourceInterface::GetSeriesName(int SeriesIdx)
 // Function KantanChartsDatasource.KantanCartesianDatasourceInterface.GetSeriesId
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            CatIdx                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int CatIdx (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UKantanCartesianDatasourceInterface::GetSeriesId(int CatIdx)
 {
@@ -65,8 +65,8 @@ struct FName UKantanCartesianDatasourceInterface::GetSeriesId(int CatIdx)
 // Function KantanChartsDatasource.KantanCartesianDatasourceInterface.GetSeriesDatapoints
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            SeriesIdx                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FKantanCartesianDatapoint> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int SeriesIdx (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FKantanCartesianDatapoint> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FKantanCartesianDatapoint> UKantanCartesianDatasourceInterface::GetSeriesDatapoints(int SeriesIdx)
 {
@@ -92,7 +92,7 @@ TArray<struct FKantanCartesianDatapoint> UKantanCartesianDatasourceInterface::Ge
 // Function KantanChartsDatasource.KantanCartesianDatasourceInterface.GetNumSeries
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UKantanCartesianDatasourceInterface::GetNumSeries()
 {
@@ -117,7 +117,7 @@ int UKantanCartesianDatasourceInterface::GetNumSeries()
 // Function KantanChartsDatasource.KantanCategoryDatasourceInterface.GetNumCategories
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UKantanCategoryDatasourceInterface::GetNumCategories()
 {
@@ -142,8 +142,8 @@ int UKantanCategoryDatasourceInterface::GetNumCategories()
 // Function KantanChartsDatasource.KantanCategoryDatasourceInterface.GetCategoryValue
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            CatIdx                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int CatIdx (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UKantanCategoryDatasourceInterface::GetCategoryValue(int CatIdx)
 {
@@ -169,8 +169,8 @@ float UKantanCategoryDatasourceInterface::GetCategoryValue(int CatIdx)
 // Function KantanChartsDatasource.KantanCategoryDatasourceInterface.GetCategoryName
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            CatIdx                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// int CatIdx (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FText UKantanCategoryDatasourceInterface::GetCategoryName(int CatIdx)
 {
@@ -196,8 +196,8 @@ struct FText UKantanCategoryDatasourceInterface::GetCategoryName(int CatIdx)
 // Function KantanChartsDatasource.KantanCategoryDatasourceInterface.GetCategoryId
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            CatIdx                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int CatIdx (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UKantanCategoryDatasourceInterface::GetCategoryId(int CatIdx)
 {
@@ -223,7 +223,7 @@ struct FName UKantanCategoryDatasourceInterface::GetCategoryId(int CatIdx)
 // Function KantanChartsDatasource.KantanSimpleCartesianDatasource.NewSimpleCartesianDatasource
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UKantanSimpleCartesianDatasource* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UKantanSimpleCartesianDatasource* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UKantanSimpleCartesianDatasource* UKantanSimpleCartesianDatasource::NewSimpleCartesianDatasource()
 {
@@ -248,8 +248,8 @@ class UKantanSimpleCartesianDatasource* UKantanSimpleCartesianDatasource::NewSim
 // Function KantanChartsDatasource.KantanSimpleCartesianDatasource.BP_RemoveSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCartesianDatasource::BP_RemoveSeries(const struct FName& ID, bool* bSuccess)
 {
@@ -297,9 +297,9 @@ void UKantanSimpleCartesianDatasource::BP_RemoveAllSeries()
 // Function KantanChartsDatasource.KantanSimpleCartesianDatasource.BP_AddSeriesWithId
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCartesianDatasource::BP_AddSeriesWithId(const struct FName& ID, const struct FText& Name, bool* bSuccess)
 {
@@ -327,8 +327,8 @@ void UKantanSimpleCartesianDatasource::BP_AddSeriesWithId(const struct FName& ID
 // Function KantanChartsDatasource.KantanSimpleCartesianDatasource.BP_AddSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   Name                           (Parm)
-// struct FName                   SeriesId                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// struct FName SeriesId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCartesianDatasource::BP_AddSeries(const struct FText& Name, struct FName* SeriesId)
 {
@@ -355,9 +355,9 @@ void UKantanSimpleCartesianDatasource::BP_AddSeries(const struct FText& Name, st
 // Function KantanChartsDatasource.KantanSimpleCartesianDatasource.BP_AddDatapoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCartesianDatasource::BP_AddDatapoint(const struct FName& SeriesId, const struct FVector2D& Point, bool* bSuccess)
 {
@@ -385,7 +385,7 @@ void UKantanSimpleCartesianDatasource::BP_AddDatapoint(const struct FName& Serie
 // Function KantanChartsDatasource.KantanSimpleCategoryDatasource.NewSimpleCategoryDatasource
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UKantanSimpleCategoryDatasource* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UKantanSimpleCategoryDatasource* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UKantanSimpleCategoryDatasource* UKantanSimpleCategoryDatasource::NewSimpleCategoryDatasource()
 {
@@ -410,9 +410,9 @@ class UKantanSimpleCategoryDatasource* UKantanSimpleCategoryDatasource::NewSimpl
 // Function KantanChartsDatasource.KantanSimpleCategoryDatasource.BP_UpdateCategoryValue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCategoryDatasource::BP_UpdateCategoryValue(const struct FName& ID, float Value, bool* bSuccess)
 {
@@ -440,8 +440,8 @@ void UKantanSimpleCategoryDatasource::BP_UpdateCategoryValue(const struct FName&
 // Function KantanChartsDatasource.KantanSimpleCategoryDatasource.BP_RemoveCategory
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCategoryDatasource::BP_RemoveCategory(const struct FName& ID, bool* bSuccess)
 {
@@ -489,9 +489,9 @@ void UKantanSimpleCategoryDatasource::BP_RemoveAllCategories()
 // Function KantanChartsDatasource.KantanSimpleCategoryDatasource.BP_AddCategoryWithId
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCategoryDatasource::BP_AddCategoryWithId(const struct FName& ID, const struct FText& Name, bool* bSuccess)
 {
@@ -519,8 +519,8 @@ void UKantanSimpleCategoryDatasource::BP_AddCategoryWithId(const struct FName& I
 // Function KantanChartsDatasource.KantanSimpleCategoryDatasource.BP_AddCategory
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   Name                           (Parm)
-// struct FName                   CatId                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// struct FName CatId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UKantanSimpleCategoryDatasource::BP_AddCategory(const struct FText& Name, struct FName* CatId)
 {

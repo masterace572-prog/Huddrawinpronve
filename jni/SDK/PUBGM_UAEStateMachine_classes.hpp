@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class ATestStatemachine : public AActor
 {
 public:
-	class UUAEStateMachineComponent*                   UAEStateMachineComponent;                                 // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UUAEStateMachineComponent* UAEStateMachineComponent; // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UAEStateMachine.TestStatemachine");
@@ -31,17 +30,16 @@ public:
 class UUAEStateMachineComponent : public UActorComponent
 {
 public:
-	struct FScriptMulticastDelegate                    OnBeforeTransientEvent;                                   // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnAfterTransientEvent;                                    // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FString                                     Tag;                                                      // 0x0198(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UUAEState*>                           States;                                                   // 0x01A8(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	TMap<struct FString, struct FUAEStateMachineTransition> Transitions;                                              // 0x01B8(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FUAETransitionState                         StartState;                                               // 0x0208(0x0010) (Edit, DisableEditOnInstance)
-	struct FUAETransitionState                         EndState;                                                 // 0x0218(0x0010) (Edit, DisableEditOnInstance)
-	class UUAEState*                                   CurrentState;                                             // 0x0228(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	struct FScriptMulticastDelegate OnBeforeTransientEvent; // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnAfterTransientEvent; // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FString Tag; // 0x0198(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UUAEState*> States; // 0x01A8(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	TMap<struct FString, struct FUAEStateMachineTransition> Transitions; // 0x01B8(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FUAETransitionState StartState; // 0x0208(0x0010) (Edit, DisableEditOnInstance)
+	struct FUAETransitionState EndState; // 0x0218(0x0010) (Edit, DisableEditOnInstance)
+	class UUAEState* CurrentState; // 0x0228(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UAEStateMachine.UAEStateMachineComponent");
@@ -67,8 +65,7 @@ class UUAEState : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UAEStateMachine.UAEState");

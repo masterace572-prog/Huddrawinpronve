@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function MMKVUnreal.MMKVObject.TotalSize
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMMKVObject::TotalSize()
 {
@@ -36,9 +36,9 @@ uint32_t UMMKVObject::TotalSize()
 // Function MMKVUnreal.MMKVObject.SetString
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::SetString(const struct FString& Key, const struct FString& Value)
 {
@@ -65,9 +65,9 @@ bool UMMKVObject::SetString(const struct FString& Key, const struct FString& Val
 // Function MMKVUnreal.MMKVObject.SetInt32
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::SetInt32(const struct FString& Key, int Value)
 {
@@ -94,7 +94,7 @@ bool UMMKVObject::SetInt32(const struct FString& Key, int Value)
 // Function MMKVUnreal.MMKVObject.SetErrorLogDelegate
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FScriptDelegate         handler                        (Parm, ZeroConstructor)
+// struct FScriptDelegate handler (Parm, ZeroConstructor)
 
 void UMMKVObject::SetErrorLogDelegate(const struct FScriptDelegate& handler)
 {
@@ -118,9 +118,9 @@ void UMMKVObject::SetErrorLogDelegate(const struct FScriptDelegate& handler)
 // Function MMKVUnreal.MMKVObject.SetDouble
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// double                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// double Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::SetDouble(const struct FString& Key, double Value)
 {
@@ -147,9 +147,9 @@ bool UMMKVObject::SetDouble(const struct FString& Key, double Value)
 // Function MMKVUnreal.MMKVObject.SetBuffer
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// TArray<unsigned char>          Buffer                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// TArray<unsigned char> Buffer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::SetBuffer(const struct FString& Key, TArray<unsigned char> Buffer)
 {
@@ -176,9 +176,9 @@ bool UMMKVObject::SetBuffer(const struct FString& Key, TArray<unsigned char> Buf
 // Function MMKVUnreal.MMKVObject.SetBool
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::SetBool(const struct FString& Key, bool Value)
 {
@@ -205,7 +205,7 @@ bool UMMKVObject::SetBool(const struct FString& Key, bool Value)
 // Function MMKVUnreal.MMKVObject.Remove
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
 
 void UMMKVObject::Remove(const struct FString& Key)
 {
@@ -229,8 +229,8 @@ void UMMKVObject::Remove(const struct FString& Key)
 // DelegateFunction MMKVUnreal.MMKVObject.MMKVLogError__DelegateSignature
 // (Public, Delegate)
 // Parameters:
-// struct FString                 MapID                          (Parm, ZeroConstructor)
-// int                            ErrorType                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MapID (Parm, ZeroConstructor)
+// int ErrorType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMMKVObject::MMKVLogError__DelegateSignature(const struct FString& MapID, int ErrorType)
 {
@@ -254,8 +254,8 @@ void UMMKVObject::MMKVLogError__DelegateSignature(const struct FString& MapID, i
 // Function MMKVUnreal.MMKVObject.Init
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 MMapID                         (Parm, ZeroConstructor)
-// struct FString                 RootPath                       (Parm, ZeroConstructor)
+// struct FString MMapID (Parm, ZeroConstructor)
+// struct FString RootPath (Parm, ZeroConstructor)
 
 void UMMKVObject::Init(const struct FString& MMapID, const struct FString& RootPath)
 {
@@ -280,8 +280,8 @@ void UMMKVObject::Init(const struct FString& MMapID, const struct FString& RootP
 // Function MMKVUnreal.MMKVObject.GetValueSize
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMMKVObject::GetValueSize(const struct FString& Key)
 {
@@ -307,8 +307,8 @@ uint32_t UMMKVObject::GetValueSize(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetString
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UMMKVObject::GetString(const struct FString& Key)
 {
@@ -334,8 +334,8 @@ struct FString UMMKVObject::GetString(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetInt32
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMMKVObject::GetInt32(const struct FString& Key)
 {
@@ -361,8 +361,8 @@ int UMMKVObject::GetInt32(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetDouble
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// double ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 double UMMKVObject::GetDouble(const struct FString& Key)
 {
@@ -388,8 +388,8 @@ double UMMKVObject::GetDouble(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetBuffer
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Key (Parm, ZeroConstructor)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UMMKVObject::GetBuffer(const struct FString& Key)
 {
@@ -415,8 +415,8 @@ TArray<unsigned char> UMMKVObject::GetBuffer(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetBool
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::GetBool(const struct FString& Key)
 {
@@ -442,7 +442,7 @@ bool UMMKVObject::GetBool(const struct FString& Key)
 // Function MMKVUnreal.MMKVObject.GetAllKeys
 // (Final, Native, Public, Const)
 // Parameters:
-// TMap<struct FString, bool>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, bool> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, bool> UMMKVObject::GetAllKeys()
 {
@@ -467,8 +467,8 @@ TMap<struct FString, bool> UMMKVObject::GetAllKeys()
 // Function MMKVUnreal.MMKVObject.ContainsKey
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMMKVObject::ContainsKey(const struct FString& Key)
 {

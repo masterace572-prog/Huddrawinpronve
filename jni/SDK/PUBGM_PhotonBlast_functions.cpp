@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -53,7 +53,7 @@ void UPhotonReplicationStaticMeshComponent::UnRegisterFromCluster()
 // Function PhotonBlast.PhotonReplicationStaticMeshComponent.SetMoveable
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationStaticMeshComponent::SetMoveable(bool Value)
 {
@@ -77,7 +77,7 @@ void UPhotonReplicationStaticMeshComponent::SetMoveable(bool Value)
 // Function PhotonBlast.PhotonReplicationStaticMeshComponent.SetClusterUniqueID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InClusterID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InClusterID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationStaticMeshComponent::SetClusterUniqueID(int InClusterID)
 {
@@ -101,7 +101,7 @@ void UPhotonReplicationStaticMeshComponent::SetClusterUniqueID(int InClusterID)
 // Function PhotonBlast.PhotonReplicationStaticMeshComponent.SetClusterEntityState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EClusterEntityState            EntityState                    (Parm, ZeroConstructor, IsPlainOldData)
+// EClusterEntityState EntityState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationStaticMeshComponent::SetClusterEntityState(EClusterEntityState EntityState)
 {
@@ -125,7 +125,7 @@ void UPhotonReplicationStaticMeshComponent::SetClusterEntityState(EClusterEntity
 // Function PhotonBlast.PhotonReplicationStaticMeshComponent.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationStaticMeshComponent::RegistLuaTick(float TickInterval)
 {
@@ -170,7 +170,7 @@ void UPhotonReplicationStaticMeshComponent::RegisterToCluster()
 // Function PhotonBlast.PhotonReplicationStaticMeshComponent.MarkPropDirty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            PropIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// int PropIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationStaticMeshComponent::MarkPropDirty(int PropIndex)
 {
@@ -194,7 +194,7 @@ void UPhotonReplicationStaticMeshComponent::MarkPropDirty(int PropIndex)
 // Function PhotonBlast.PhotonDestructibleMeshComponent.SetupFragmentsMaxHp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          HP                             (Parm, ZeroConstructor, IsPlainOldData)
+// float HP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonDestructibleMeshComponent::SetupFragmentsMaxHp(float HP)
 {
@@ -218,7 +218,7 @@ void UPhotonDestructibleMeshComponent::SetupFragmentsMaxHp(float HP)
 // Function PhotonBlast.PhotonDestructibleMeshComponent.SetServerDamagedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UPhotonDestructibleMeshComponent::SetServerDamagedDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -242,8 +242,8 @@ void UPhotonDestructibleMeshComponent::SetServerDamagedDelegate(const struct FSc
 // Function PhotonBlast.PhotonDestructibleMeshComponent.SetFracturedMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPhotonDestructibleMesh* InFracturedMesh                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Force                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPhotonDestructibleMesh* InFracturedMesh (Parm, ZeroConstructor, IsPlainOldData)
+// bool Force (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonDestructibleMeshComponent::SetFracturedMesh(class UPhotonDestructibleMesh* InFracturedMesh, bool Force)
 {
@@ -268,11 +268,11 @@ void UPhotonDestructibleMeshComponent::SetFracturedMesh(class UPhotonDestructibl
 // Function PhotonBlast.PhotonDestructibleMeshComponent.Server_OnComponentHitAction
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*     HitComp                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 NormalImpulse                  (Parm, IsPlainOldData)
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent* HitComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector NormalImpulse (Parm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UPhotonDestructibleMeshComponent::Server_OnComponentHitAction(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
@@ -300,12 +300,12 @@ void UPhotonDestructibleMeshComponent::Server_OnComponentHitAction(class UPrimit
 // Function PhotonBlast.PhotonDestructibleMeshComponent.Server_DamageFragmentsByRadius
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector4                WorldImpactVelocityAndRotateStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector4                WorldImpactPointAndSpreadStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          HP                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Attenuation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector4 WorldImpactVelocityAndRotateStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector4 WorldImpactPointAndSpreadStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float HP (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// bool Attenuation (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::Server_DamageFragmentsByRadius(const struct FVector4& WorldImpactVelocityAndRotateStrength, const struct FVector4& WorldImpactPointAndSpreadStrength, float HP, float Radius, bool Attenuation)
 {
@@ -335,11 +335,11 @@ bool UPhotonDestructibleMeshComponent::Server_DamageFragmentsByRadius(const stru
 // Function PhotonBlast.PhotonDestructibleMeshComponent.Server_DamageFragmentsByHp
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// TArray<int>                    FragmentsIndex                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<float>                  HP                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector4                WorldImpactPointAndSpreadStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector4                WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> FragmentsIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> HP (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector4 WorldImpactPointAndSpreadStrength (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector4 WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::Server_DamageFragmentsByHp(TArray<int> FragmentsIndex, TArray<float> HP, const struct FVector4& WorldImpactPointAndSpreadStrength, const struct FVector4& WorldImpactVelocityAndRotateSpeed)
 {
@@ -431,8 +431,8 @@ void UPhotonDestructibleMeshComponent::OnRep_FragmentsState()
 // Function PhotonBlast.PhotonDestructibleMeshComponent.IsFragmentCanDestroy
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FragmentItemIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentItemIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::IsFragmentCanDestroy(int FragmentItemIndex)
 {
@@ -458,8 +458,8 @@ bool UPhotonDestructibleMeshComponent::IsFragmentCanDestroy(int FragmentItemInde
 // Function PhotonBlast.PhotonDestructibleMeshComponent.IsFragmentCanBeDamaged
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FragmentItemIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentItemIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::IsFragmentCanBeDamaged(int FragmentItemIndex)
 {
@@ -485,7 +485,7 @@ bool UPhotonDestructibleMeshComponent::IsFragmentCanBeDamaged(int FragmentItemIn
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetPhotonDestructibleMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonDestructibleMesh* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonDestructibleMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonDestructibleMesh* UPhotonDestructibleMeshComponent::GetPhotonDestructibleMesh()
 {
@@ -510,10 +510,10 @@ class UPhotonDestructibleMesh* UPhotonDestructibleMeshComponent::GetPhotonDestru
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentTransform
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
-// bool                           WorldSpace                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform OutTransform (Parm, OutParm, IsPlainOldData)
+// bool WorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentTransform(int FragmentIndex, bool WorldSpace, struct FTransform* OutTransform)
 {
@@ -543,9 +543,9 @@ bool UPhotonDestructibleMeshComponent::GetFragmentTransform(int FragmentIndex, b
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentsWorldPosition
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 FragmentPosition               (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector FragmentPosition (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentsWorldPosition(int FragmentIndex, struct FVector* FragmentPosition)
 {
@@ -574,9 +574,9 @@ bool UPhotonDestructibleMeshComponent::GetFragmentsWorldPosition(int FragmentInd
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentsNotDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    Fragments                      (Parm, OutParm, ZeroConstructor)
-// bool                           IsReturnNotDestroyedFragments  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> Fragments (Parm, OutParm, ZeroConstructor)
+// bool IsReturnNotDestroyedFragments (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentsNotDamaged(bool IsReturnNotDestroyedFragments, TArray<int>* Fragments)
 {
@@ -605,8 +605,8 @@ bool UPhotonDestructibleMeshComponent::GetFragmentsNotDamaged(bool IsReturnNotDe
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentsDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    Fragments                      (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> Fragments (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentsDamaged(TArray<int>* Fragments)
 {
@@ -634,12 +634,12 @@ bool UPhotonDestructibleMeshComponent::GetFragmentsDamaged(TArray<int>* Fragment
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentsByRadius
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 HitPoint                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    FragmentsIndex                 (Parm, OutParm, ZeroConstructor)
-// TArray<float>                  ImpactDistance                 (Parm, OutParm, ZeroConstructor)
-// int                            DamageType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector HitPoint (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> FragmentsIndex (Parm, OutParm, ZeroConstructor)
+// TArray<float> ImpactDistance (Parm, OutParm, ZeroConstructor)
+// int DamageType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentsByRadius(const struct FVector& HitPoint, float Radius, int DamageType, TArray<int>* FragmentsIndex, TArray<float>* ImpactDistance)
 {
@@ -672,7 +672,7 @@ bool UPhotonDestructibleMeshComponent::GetFragmentsByRadius(const struct FVector
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentItemCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotonDestructibleMeshComponent::GetFragmentItemCount()
 {
@@ -697,10 +697,10 @@ int UPhotonDestructibleMeshComponent::GetFragmentItemCount()
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFragmentBounds
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FBox                    OutBox                         (Parm, OutParm, IsPlainOldData)
-// bool                           WorldSpace                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox OutBox (Parm, OutParm, IsPlainOldData)
+// bool WorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonDestructibleMeshComponent::GetFragmentBounds(int FragmentIndex, bool WorldSpace, struct FBox* OutBox)
 {
@@ -730,7 +730,7 @@ bool UPhotonDestructibleMeshComponent::GetFragmentBounds(int FragmentIndex, bool
 // Function PhotonBlast.PhotonDestructibleMeshComponent.GetFracturedMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonFracturedMesh*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonFracturedMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonFracturedMesh* UPhotonDestructibleMeshComponent::GetFracturedMesh()
 {
@@ -752,11 +752,71 @@ class UPhotonFracturedMesh* UPhotonDestructibleMeshComponent::GetFracturedMesh()
 }
 
 
+// Function PhotonBlast.PhotonDestructibleMeshComponent.ClientGetFragmentsNotDamaged
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<int> Fragments (Parm, OutParm, ZeroConstructor)
+// bool IsReturnNotDestroyedFragments (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPhotonDestructibleMeshComponent::ClientGetFragmentsNotDamaged(bool IsReturnNotDestroyedFragments, TArray<int>* Fragments)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function PhotonBlast.PhotonDestructibleMeshComponent.ClientGetFragmentsNotDamaged");
+
+	UPhotonDestructibleMeshComponent_ClientGetFragmentsNotDamaged_Params params;
+	params.IsReturnNotDestroyedFragments = IsReturnNotDestroyedFragments;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (Fragments != nullptr)
+		*Fragments = params.Fragments;
+
+	return params.ReturnValue;
+}
+
+
+// Function PhotonBlast.PhotonDestructibleMeshComponent.ClientGetFragmentsDamaged
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<int> Fragments (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UPhotonDestructibleMeshComponent::ClientGetFragmentsDamaged(TArray<int>* Fragments)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function PhotonBlast.PhotonDestructibleMeshComponent.ClientGetFragmentsDamaged");
+
+	UPhotonDestructibleMeshComponent_ClientGetFragmentsDamaged_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (Fragments != nullptr)
+		*Fragments = params.Fragments;
+
+	return params.ReturnValue;
+}
+
+
 // Function PhotonBlast.PhotonDestructibleMeshComponent.ClientDamageAndInitalFragments
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<int>                    DamagedFragmentItemIndex       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    InitialFragmentItemIndex       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> DamagedFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InitialFragmentItemIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UPhotonDestructibleMeshComponent::ClientDamageAndInitalFragments(TArray<int> DamagedFragmentItemIndex, TArray<int> InitialFragmentItemIndex)
 {
@@ -823,7 +883,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::UnRegisterFromCluster()
 // Function PhotonBlast.PhotonReplicationInstancedStaticMeshComponent.SetMoveable
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationInstancedStaticMeshComponent::SetMoveable(bool Value)
 {
@@ -847,7 +907,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::SetMoveable(bool Value)
 // Function PhotonBlast.PhotonReplicationInstancedStaticMeshComponent.SetClusterUniqueID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InClusterID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InClusterID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationInstancedStaticMeshComponent::SetClusterUniqueID(int InClusterID)
 {
@@ -871,7 +931,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::SetClusterUniqueID(int InCl
 // Function PhotonBlast.PhotonReplicationInstancedStaticMeshComponent.SetClusterEntityState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EClusterEntityState            EntityState                    (Parm, ZeroConstructor, IsPlainOldData)
+// EClusterEntityState EntityState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationInstancedStaticMeshComponent::SetClusterEntityState(EClusterEntityState EntityState)
 {
@@ -895,7 +955,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::SetClusterEntityState(EClus
 // Function PhotonBlast.PhotonReplicationInstancedStaticMeshComponent.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationInstancedStaticMeshComponent::RegistLuaTick(float TickInterval)
 {
@@ -940,7 +1000,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::RegisterToCluster()
 // Function PhotonBlast.PhotonReplicationInstancedStaticMeshComponent.MarkPropDirty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            PropIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// int PropIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationInstancedStaticMeshComponent::MarkPropDirty(int PropIndex)
 {
@@ -964,7 +1024,7 @@ void UPhotonReplicationInstancedStaticMeshComponent::MarkPropDirty(int PropIndex
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.SetupFragmentsMaxHp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          HP                             (Parm, ZeroConstructor, IsPlainOldData)
+// float HP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonInstancedDestructibleMeshComponent::SetupFragmentsMaxHp(float HP)
 {
@@ -988,7 +1048,7 @@ void UPhotonInstancedDestructibleMeshComponent::SetupFragmentsMaxHp(float HP)
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.SetServerDamagedDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UPhotonInstancedDestructibleMeshComponent::SetServerDamagedDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -1012,7 +1072,7 @@ void UPhotonInstancedDestructibleMeshComponent::SetServerDamagedDelegate(const s
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.SetPhysMaterialOverride
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UPhysicalMaterial*       NewPhysMaterial                (Parm, ZeroConstructor, IsPlainOldData)
+// class UPhysicalMaterial* NewPhysMaterial (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonInstancedDestructibleMeshComponent::SetPhysMaterialOverride(class UPhysicalMaterial* NewPhysMaterial)
 {
@@ -1036,8 +1096,8 @@ void UPhotonInstancedDestructibleMeshComponent::SetPhysMaterialOverride(class UP
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.SetFracturedMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPhotonDestructibleMesh* InFracturedMesh                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Force                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UPhotonDestructibleMesh* InFracturedMesh (Parm, ZeroConstructor, IsPlainOldData)
+// bool Force (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonInstancedDestructibleMeshComponent::SetFracturedMesh(class UPhotonDestructibleMesh* InFracturedMesh, bool Force)
 {
@@ -1062,11 +1122,11 @@ void UPhotonInstancedDestructibleMeshComponent::SetFracturedMesh(class UPhotonDe
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.Server_OnComponentHitAction
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*     HitComp                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 NormalImpulse                  (Parm, IsPlainOldData)
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent* HitComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector NormalImpulse (Parm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UPhotonInstancedDestructibleMeshComponent::Server_OnComponentHitAction(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
@@ -1094,12 +1154,12 @@ void UPhotonInstancedDestructibleMeshComponent::Server_OnComponentHitAction(clas
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.Server_DamageFragmentsByRadius
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector4                WorldImpactVelocity            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector4                WorldHitPointAndSpreadSpeed    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          HP                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Attenuation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector4 WorldImpactVelocity (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector4 WorldHitPointAndSpreadSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float HP (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// bool Attenuation (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::Server_DamageFragmentsByRadius(const struct FVector4& WorldImpactVelocity, const struct FVector4& WorldHitPointAndSpreadSpeed, float HP, float Radius, bool Attenuation)
 {
@@ -1129,9 +1189,9 @@ bool UPhotonInstancedDestructibleMeshComponent::Server_DamageFragmentsByRadius(c
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.ReplaceAllInstances
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FTransform>      InstanceTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bShouldReturnIndices           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FTransform> InstanceTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bShouldReturnIndices (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UPhotonInstancedDestructibleMeshComponent::ReplaceAllInstances(TArray<struct FTransform> InstanceTransforms, bool bShouldReturnIndices)
 {
@@ -1200,9 +1260,9 @@ void UPhotonInstancedDestructibleMeshComponent::OnRep_FragmentsState()
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.IsFragmentCanDestroy
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentItemIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentItemIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::IsFragmentCanDestroy(int InstanceIndex, int FragmentItemIndex)
 {
@@ -1229,7 +1289,7 @@ bool UPhotonInstancedDestructibleMeshComponent::IsFragmentCanDestroy(int Instanc
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetPhotonDestructibleMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonDestructibleMesh* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonDestructibleMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonDestructibleMesh* UPhotonInstancedDestructibleMeshComponent::GetPhotonDestructibleMesh()
 {
@@ -1254,10 +1314,10 @@ class UPhotonDestructibleMesh* UPhotonInstancedDestructibleMeshComponent::GetPho
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetInstancesOverlappingSphere
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 Center                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSphereInWorldSpace            (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FVector Center (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSphereInWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UPhotonInstancedDestructibleMeshComponent::GetInstancesOverlappingSphere(const struct FVector& Center, float Radius, bool bSphereInWorldSpace)
 {
@@ -1285,7 +1345,7 @@ TArray<int> UPhotonInstancedDestructibleMeshComponent::GetInstancesOverlappingSp
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetInstanceItemCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotonInstancedDestructibleMeshComponent::GetInstanceItemCount()
 {
@@ -1310,11 +1370,11 @@ int UPhotonInstancedDestructibleMeshComponent::GetInstanceItemCount()
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentTransform
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
-// bool                           WorldSpace                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform OutTransform (Parm, OutParm, IsPlainOldData)
+// bool WorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::GetFragmentTransform(int InstanceIndex, int FragmentIndex, bool WorldSpace, struct FTransform* OutTransform)
 {
@@ -1345,10 +1405,10 @@ bool UPhotonInstancedDestructibleMeshComponent::GetFragmentTransform(int Instanc
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentsWorldPosition
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 FragmentPosition               (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector FragmentPosition (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsWorldPosition(int InstanceIndex, int FragmentIndex, struct FVector* FragmentPosition)
 {
@@ -1378,10 +1438,10 @@ bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsWorldPosition(int In
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentsNotDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    FragmentsNoDamaged             (Parm, OutParm, ZeroConstructor)
-// bool                           IsReturnNotDestroyedFragments  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> FragmentsNoDamaged (Parm, OutParm, ZeroConstructor)
+// bool IsReturnNotDestroyedFragments (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsNotDamaged(int InstanceIndex, bool IsReturnNotDestroyedFragments, TArray<int>* FragmentsNoDamaged)
 {
@@ -1411,9 +1471,9 @@ bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsNotDamaged(int Insta
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentsDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    FragmentsDamaged               (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> FragmentsDamaged (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsDamaged(int InstanceIndex, TArray<int>* FragmentsDamaged)
 {
@@ -1442,7 +1502,7 @@ bool UPhotonInstancedDestructibleMeshComponent::GetFragmentsDamaged(int Instance
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentItemCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotonInstancedDestructibleMeshComponent::GetFragmentItemCount()
 {
@@ -1467,11 +1527,11 @@ int UPhotonInstancedDestructibleMeshComponent::GetFragmentItemCount()
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFragmentBounds
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            FragmentIndex                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FBox                    OutBox                         (Parm, OutParm, IsPlainOldData)
-// bool                           WorldSpace                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int FragmentIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FBox OutBox (Parm, OutParm, IsPlainOldData)
+// bool WorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonInstancedDestructibleMeshComponent::GetFragmentBounds(int InstanceIndex, int FragmentIndex, bool WorldSpace, struct FBox* OutBox)
 {
@@ -1502,7 +1562,7 @@ bool UPhotonInstancedDestructibleMeshComponent::GetFragmentBounds(int InstanceIn
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.GetFracturedMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonFracturedMesh*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonFracturedMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonFracturedMesh* UPhotonInstancedDestructibleMeshComponent::GetFracturedMesh()
 {
@@ -1527,8 +1587,8 @@ class UPhotonFracturedMesh* UPhotonInstancedDestructibleMeshComponent::GetFractu
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.AddInstanceWorldSpace
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              WorldTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTransform WorldTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotonInstancedDestructibleMeshComponent::AddInstanceWorldSpace(const struct FTransform& WorldTransform)
 {
@@ -1554,10 +1614,10 @@ int UPhotonInstancedDestructibleMeshComponent::AddInstanceWorldSpace(const struc
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.AddInstances
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FTransform>      InstanceTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bShouldReturnIndices           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FTransform> InstanceTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bShouldReturnIndices (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMarkRenderStateDirty (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UPhotonInstancedDestructibleMeshComponent::AddInstances(TArray<struct FTransform> InstanceTransforms, bool bShouldReturnIndices, bool bMarkRenderStateDirty)
 {
@@ -1585,8 +1645,8 @@ TArray<int> UPhotonInstancedDestructibleMeshComponent::AddInstances(TArray<struc
 // Function PhotonBlast.PhotonInstancedDestructibleMeshComponent.AddInstance
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              InstanceTransform              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTransform InstanceTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotonInstancedDestructibleMeshComponent::AddInstance(const struct FTransform& InstanceTransform)
 {
@@ -1612,9 +1672,9 @@ int UPhotonInstancedDestructibleMeshComponent::AddInstance(const struct FTransfo
 // Function PhotonBlast.PhotonHierarchicalInstancedDestructibleMeshComponent.ShowInstances
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InstanceIndices                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FTransform>      InstanceTransforms             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstanceIndices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FTransform> InstanceTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedDestructibleMeshComponent::ShowInstances(TArray<int> InstanceIndices, TArray<struct FTransform> InstanceTransforms)
 {
@@ -1641,8 +1701,8 @@ bool UPhotonHierarchicalInstancedDestructibleMeshComponent::ShowInstances(TArray
 // Function PhotonBlast.PhotonHierarchicalInstancedDestructibleMeshComponent.RemoveInstances
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InstancesToRemove              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstancesToRemove (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedDestructibleMeshComponent::RemoveInstances(TArray<int> InstancesToRemove)
 {
@@ -1668,7 +1728,7 @@ bool UPhotonHierarchicalInstancedDestructibleMeshComponent::RemoveInstances(TArr
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.UpdatePickupAndDeadBoxInRange
 // (Final, Native, Protected, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Location                       (Parm, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::UpdatePickupAndDeadBoxInRange(const struct FVector& Location)
 {
@@ -1692,7 +1752,7 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::UpdatePickupAndDeadBoxInRa
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.SetFracturedMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPhotonDestructibleMesh* InPhotonDestructibleMesh       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPhotonDestructibleMesh* InPhotonDestructibleMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::SetFracturedMesh(class UPhotonDestructibleMesh* InPhotonDestructibleMesh)
 {
@@ -1716,8 +1776,8 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::SetFracturedMesh(class UPh
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.ServerGetInstanceIndexsNotDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InstancesNoDamaged             (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstancesNoDamaged (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::ServerGetInstanceIndexsNotDamaged(TArray<int>* InstancesNoDamaged)
 {
@@ -1745,8 +1805,8 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::ServerGetInstanceIndexsNot
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.ServerGetInstanceIndexsDamaged
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InstancesDamaged               (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstancesDamaged (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::ServerGetInstanceIndexsDamaged(TArray<int>* InstancesDamaged)
 {
@@ -1774,11 +1834,11 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::ServerGetInstanceIndexsDam
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.Server_InstanceByHp
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// TArray<int>                    InstancedIndex                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<float>                  DamagesHp                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 WorldImpactVelocity            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// EDestructionDamageType         DamageType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstancedIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> DamagesHp (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector WorldImpactVelocity (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// EDestructionDamageType DamageType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_InstanceByHp(TArray<int> InstancedIndex, TArray<float> DamagesHp, const struct FVector& WorldImpactVelocity, EDestructionDamageType DamageType)
 {
@@ -1807,12 +1867,12 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_InstanceByHp(TArray
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.Server_InstanceAndWorldVelocityByHp
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// TArray<int>                    InstancedIndex                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<float>                  DamagesHp                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 WorldImpactPoint               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// EDestructionDamageType         DamageType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Strength                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<int> InstancedIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> DamagesHp (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector WorldImpactPoint (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// EDestructionDamageType DamageType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Strength (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_InstanceAndWorldVelocityByHp(TArray<int> InstancedIndex, TArray<float> DamagesHp, const struct FVector& WorldImpactPoint, EDestructionDamageType DamageType, float Strength)
 {
@@ -1842,11 +1902,11 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_InstanceAndWorldVel
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.Server_DamageFragmentsByRadius
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 WorldImpactVelocity            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 WorldHitPointAndSpreadSpeed    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          HP                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector WorldImpactVelocity (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector WorldHitPointAndSpreadSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float HP (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_DamageFragmentsByRadius(const struct FVector& WorldImpactVelocity, const struct FVector& WorldHitPointAndSpreadSpeed, float HP, float Radius)
 {
@@ -1875,11 +1935,11 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::Server_DamageFragmentsByRa
 // DelegateFunction PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.OnTriggerServerEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults)
 // Parameters:
-// class ASTExtraVehicleBase*     VehicleActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     HitComp                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 DesPos                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            TriggerIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* VehicleActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* HitComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector DesPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int TriggerIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::OnTriggerServerEvent__DelegateSignature(class ASTExtraVehicleBase* VehicleActor, class UPrimitiveComponent* HitComp, class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent, const struct FVector& DesPos, int TriggerIndex)
 {
@@ -1906,9 +1966,9 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::OnTriggerServerEvent__Dele
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.OnTriggeredByComp
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FTriggerEvent           TriggerEvent                   (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FTriggerEvent TriggerEvent (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::OnTriggeredByComp(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FTriggerEvent& TriggerEvent)
 {
@@ -1934,11 +1994,11 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::OnTriggeredByComp(class AA
 // DelegateFunction PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.OnTriggerClientEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults)
 // Parameters:
-// class ASTExtraVehicleBase*     VehicleActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     HitComp                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 DesPos                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            TriggerIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* VehicleActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* HitComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector DesPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int TriggerIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::OnTriggerClientEvent__DelegateSignature(class ASTExtraVehicleBase* VehicleActor, class UPrimitiveComponent* HitComp, class UPhotonHierarchicalInstancedStaticMeshComponent* MeshComponent, const struct FVector& DesPos, int TriggerIndex)
 {
@@ -1986,9 +2046,9 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::OnRep_ImpactData()
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.OnLocalVehicleHit
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector4                WorldImpactPointAndSpreadSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector4                WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<int> InstanceIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector4 WorldImpactPointAndSpreadSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector4 WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::OnLocalVehicleHit(TArray<int> InstanceIndex, const struct FVector4& WorldImpactPointAndSpreadSpeed, const struct FVector4& WorldImpactVelocityAndRotateSpeed)
 {
@@ -2014,7 +2074,7 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::OnLocalVehicleHit(TArray<i
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.GetPhotonDestructibleMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonDestructibleMesh* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonDestructibleMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonDestructibleMesh* UPhotonHierarchicalInstancedStaticMeshComponent::GetPhotonDestructibleMesh()
 {
@@ -2039,11 +2099,11 @@ class UPhotonDestructibleMesh* UPhotonHierarchicalInstancedStaticMeshComponent::
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.GetInstanceByRadius
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 HitPoint                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Radius                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    InstancedIndex                 (Parm, OutParm, ZeroConstructor)
-// EDestructionDamageType         DamageType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector HitPoint (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Radius (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> InstancedIndex (Parm, OutParm, ZeroConstructor)
+// EDestructionDamageType DamageType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPhotonHierarchicalInstancedStaticMeshComponent::GetInstanceByRadius(const struct FVector& HitPoint, float Radius, EDestructionDamageType DamageType, TArray<int>* InstancedIndex)
 {
@@ -2074,7 +2134,7 @@ bool UPhotonHierarchicalInstancedStaticMeshComponent::GetInstanceByRadius(const 
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.GetFracturedMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonFracturedMesh*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonFracturedMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonFracturedMesh* UPhotonHierarchicalInstancedStaticMeshComponent::GetFracturedMesh()
 {
@@ -2099,8 +2159,8 @@ class UPhotonFracturedMesh* UPhotonHierarchicalInstancedStaticMeshComponent::Get
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.GenerateEffectInstanceWorldSpace
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InstanceIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> WorldImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::GenerateEffectInstanceWorldSpace(TArray<int> InstanceIndex, TArray<struct FVector> WorldImpactVelocityAndRotateSpeed)
 {
@@ -2125,8 +2185,8 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::GenerateEffectInstanceWorl
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.GenerateEffectInstanceLocalSpace
 // (Native, Public, HasOutParms)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         LocalImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InstanceIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> LocalImpactVelocityAndRotateSpeed (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::GenerateEffectInstanceLocalSpace(TArray<int> InstanceIndex, TArray<struct FVector> LocalImpactVelocityAndRotateSpeed)
 {
@@ -2151,7 +2211,7 @@ void UPhotonHierarchicalInstancedStaticMeshComponent::GenerateEffectInstanceLoca
 // Function PhotonBlast.PhotonHierarchicalInstancedStaticMeshComponent.ClientCorrectVehicleHit
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<int>                    InstanceIndex                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InstanceIndex (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UPhotonHierarchicalInstancedStaticMeshComponent::ClientCorrectVehicleHit(TArray<int> InstanceIndex)
 {
@@ -2217,7 +2277,7 @@ void UPhotonReplicationSkeletalMeshComponent::UnRegisterFromCluster()
 // Function PhotonBlast.PhotonReplicationSkeletalMeshComponent.SetMoveable
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationSkeletalMeshComponent::SetMoveable(bool Value)
 {
@@ -2241,7 +2301,7 @@ void UPhotonReplicationSkeletalMeshComponent::SetMoveable(bool Value)
 // Function PhotonBlast.PhotonReplicationSkeletalMeshComponent.SetClusterUniqueID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InClusterID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InClusterID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationSkeletalMeshComponent::SetClusterUniqueID(int InClusterID)
 {
@@ -2265,7 +2325,7 @@ void UPhotonReplicationSkeletalMeshComponent::SetClusterUniqueID(int InClusterID
 // Function PhotonBlast.PhotonReplicationSkeletalMeshComponent.SetClusterEntityState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EClusterEntityState            EntityState                    (Parm, ZeroConstructor, IsPlainOldData)
+// EClusterEntityState EntityState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationSkeletalMeshComponent::SetClusterEntityState(EClusterEntityState EntityState)
 {
@@ -2289,7 +2349,7 @@ void UPhotonReplicationSkeletalMeshComponent::SetClusterEntityState(EClusterEnti
 // Function PhotonBlast.PhotonReplicationSkeletalMeshComponent.RegistLuaTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickInterval                   (Parm, ZeroConstructor, IsPlainOldData)
+// float TickInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationSkeletalMeshComponent::RegistLuaTick(float TickInterval)
 {
@@ -2334,7 +2394,7 @@ void UPhotonReplicationSkeletalMeshComponent::RegisterToCluster()
 // Function PhotonBlast.PhotonReplicationSkeletalMeshComponent.MarkPropDirty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            PropIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// int PropIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonReplicationSkeletalMeshComponent::MarkPropDirty(int PropIndex)
 {
@@ -2484,7 +2544,7 @@ void AReusableDestructibleMeshActor::OnRecycle()
 // Function PhotonBlast.PhotonStaticMeshComponent.SetFracturedMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPhotonDestructibleMesh* InPhotonDestructibleMesh       (Parm, ZeroConstructor, IsPlainOldData)
+// class UPhotonDestructibleMesh* InPhotonDestructibleMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonStaticMeshComponent::SetFracturedMesh(class UPhotonDestructibleMesh* InPhotonDestructibleMesh)
 {
@@ -2508,7 +2568,7 @@ void UPhotonStaticMeshComponent::SetFracturedMesh(class UPhotonDestructibleMesh*
 // Function PhotonBlast.PhotonStaticMeshComponent.GetPhotonDestructibleMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonDestructibleMesh* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonDestructibleMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonDestructibleMesh* UPhotonStaticMeshComponent::GetPhotonDestructibleMesh()
 {
@@ -2533,7 +2593,7 @@ class UPhotonDestructibleMesh* UPhotonStaticMeshComponent::GetPhotonDestructible
 // Function PhotonBlast.PhotonStaticMeshComponent.GetFracturedMesh
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPhotonFracturedMesh*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotonFracturedMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotonFracturedMesh* UPhotonStaticMeshComponent::GetFracturedMesh()
 {

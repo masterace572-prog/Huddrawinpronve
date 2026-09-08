@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function UIParticleSystem2.ParticleSystemWidget2.SetParticleSystem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UParticleSystem*         ParticleSystem                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem* ParticleSystem (Parm, ZeroConstructor, IsPlainOldData)
 
 void UParticleSystemWidget2::SetParticleSystem(class UParticleSystem* ParticleSystem)
 {
@@ -35,7 +35,7 @@ void UParticleSystemWidget2::SetParticleSystem(class UParticleSystem* ParticleSy
 // Function UIParticleSystem2.ParticleSystemWidget2.SetNiagaraSystem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraSystem*          ParticleSystem                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraSystem* ParticleSystem (Parm, ZeroConstructor, IsPlainOldData)
 
 void UParticleSystemWidget2::SetNiagaraSystem(class UNiagaraSystem* ParticleSystem)
 {
@@ -59,7 +59,7 @@ void UParticleSystemWidget2::SetNiagaraSystem(class UNiagaraSystem* ParticleSyst
 // Function UIParticleSystem2.ParticleSystemWidget2.SetActivate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bIsActivate                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsActivate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UParticleSystemWidget2::SetActivate(bool bIsActivate)
 {
@@ -83,7 +83,7 @@ void UParticleSystemWidget2::SetActivate(bool bIsActivate)
 // Function UIParticleSystem2.ParticleSystemWidget2.GetParticleComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UParticleSystemComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UParticleSystemComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UParticleSystemComponent* UParticleSystemWidget2::GetParticleComponent()
 {
@@ -108,7 +108,7 @@ class UParticleSystemComponent* UParticleSystemWidget2::GetParticleComponent()
 // Function UIParticleSystem2.ParticleSystemWidget2.GetNiagaraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UNiagaraComponent*       ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UNiagaraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UNiagaraComponent* UParticleSystemWidget2::GetNiagaraComponent()
 {

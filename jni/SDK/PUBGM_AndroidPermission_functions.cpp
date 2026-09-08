@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function AndroidPermission.AndroidPermissionFunctionLibrary.CheckPermission
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 permission                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString permission (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAndroidPermissionFunctionLibrary::CheckPermission(const struct FString& permission)
 {
@@ -38,8 +38,8 @@ bool UAndroidPermissionFunctionLibrary::CheckPermission(const struct FString& pe
 // Function AndroidPermission.AndroidPermissionFunctionLibrary.AcquirePermissions
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         Permissions                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UAndroidPermissionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> Permissions (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAndroidPermissionCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAndroidPermissionCallbackProxy* UAndroidPermissionFunctionLibrary::AcquirePermissions(TArray<struct FString> Permissions)
 {

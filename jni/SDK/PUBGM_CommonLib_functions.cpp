@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function CommonLib.TextWidgetInterface.GetTextContent
 // (Native, Public, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UTextWidgetInterface::GetTextContent()
 {
@@ -36,9 +36,9 @@ struct FString UTextWidgetInterface::GetTextContent()
 // Function CommonLib.CommonLuaLibrary.IsMatch
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 Source                         (Parm, ZeroConstructor)
-// struct FString                 regex                          (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Source (Parm, ZeroConstructor)
+// struct FString regex (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonLuaLibrary::IsMatch(const struct FString& Source, const struct FString& regex)
 {
@@ -65,8 +65,8 @@ bool UCommonLuaLibrary::IsMatch(const struct FString& Source, const struct FStri
 // Function CommonLib.CommonLuaLibrary.GetName
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonLuaLibrary::GetName(class UObject* Obj)
 {
@@ -92,7 +92,7 @@ struct FString UCommonLuaLibrary::GetName(class UObject* Obj)
 // Function CommonLib.CommonLuaLibrary.GetModNames
 // (Final, Native, Static, Public)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UCommonLuaLibrary::GetModNames()
 {
@@ -117,7 +117,7 @@ TArray<struct FString> UCommonLuaLibrary::GetModNames()
 // Function CommonLib.CommonLuaLibrary.GetGWorld
 // (Final, Native, Static, Public)
 // Parameters:
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UCommonLuaLibrary::GetGWorld()
 {
@@ -142,8 +142,8 @@ class UWorld* UCommonLuaLibrary::GetGWorld()
 // Function CommonLib.CommonLuaLibrary.GetFullName
 // (Final, Native, Static, Public)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonLuaLibrary::GetFullName(class UObject* Obj)
 {
@@ -169,9 +169,9 @@ struct FString UCommonLuaLibrary::GetFullName(class UObject* Obj)
 // Function CommonLib.RuntimeFilesDownloaderLibrary.DownloadFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 URL                            (Parm, ZeroConstructor)
-// struct FString                 SavePath                       (Parm, ZeroConstructor)
-// class URuntimeFilesDownloaderLibrary* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString URL (Parm, ZeroConstructor)
+// struct FString SavePath (Parm, ZeroConstructor)
+// class URuntimeFilesDownloaderLibrary* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class URuntimeFilesDownloaderLibrary* URuntimeFilesDownloaderLibrary::DownloadFile(const struct FString& URL, const struct FString& SavePath)
 {
@@ -198,7 +198,7 @@ class URuntimeFilesDownloaderLibrary* URuntimeFilesDownloaderLibrary::DownloadFi
 // Function CommonLib.RuntimeFilesDownloaderLibrary.CreateDownloader
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class URuntimeFilesDownloaderLibrary* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class URuntimeFilesDownloaderLibrary* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class URuntimeFilesDownloaderLibrary* URuntimeFilesDownloaderLibrary::CreateDownloader()
 {
@@ -223,8 +223,8 @@ class URuntimeFilesDownloaderLibrary* URuntimeFilesDownloaderLibrary::CreateDown
 // Function CommonLib.ServiceManager.UnregisterService
 // (Final, Native, Public)
 // Parameters:
-// class UClass*                  ServiceType                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 serviceName                    (Parm, ZeroConstructor)
+// class UClass* ServiceType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString serviceName (Parm, ZeroConstructor)
 
 void UServiceManager::UnregisterService(class UClass* ServiceType, const struct FString& serviceName)
 {
@@ -249,9 +249,9 @@ void UServiceManager::UnregisterService(class UClass* ServiceType, const struct 
 // Function CommonLib.ServiceManager.RegisterService
 // (Final, Native, Public)
 // Parameters:
-// class UObject*                 Service                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ServiceType                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 serviceName                    (Parm, ZeroConstructor)
+// class UObject* Service (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ServiceType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString serviceName (Parm, ZeroConstructor)
 
 void UServiceManager::RegisterService(class UObject* Service, class UClass* ServiceType, const struct FString& serviceName)
 {
@@ -277,9 +277,9 @@ void UServiceManager::RegisterService(class UObject* Service, class UClass* Serv
 // Function CommonLib.ServiceManager.GetService
 // (Final, Native, Public)
 // Parameters:
-// class UClass*                  ServiceType                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 serviceName                    (Parm, ZeroConstructor)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* ServiceType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString serviceName (Parm, ZeroConstructor)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UServiceManager::GetService(class UClass* ServiceType, const struct FString& serviceName)
 {

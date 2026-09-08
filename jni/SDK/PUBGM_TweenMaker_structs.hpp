@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -11,10 +11,10 @@ namespace SDK
 // Enum TweenMaker.ETweenGenericType
 enum class ETweenGenericType : uint8_t
 {
-	ETweenGenericType__Any         = 0,
-	ETweenGenericType__Move        = 1,
-	ETweenGenericType__Scale       = 2,
-	ETweenGenericType__Rotate      = 3,
+	ETweenGenericType__Any = 0,
+	ETweenGenericType__Move = 1,
+	ETweenGenericType__Scale = 2,
+	ETweenGenericType__Rotate = 3,
 	ETweenGenericType__RotateAroundPoint = 4,
 	ETweenGenericType__FollowSpline = 5,
 	ETweenGenericType__MaterialVector = 6,
@@ -32,9 +32,9 @@ enum class ETweenGenericType : uint8_t
 // Enum TweenMaker.ETweenReferenceAxis
 enum class ETweenReferenceAxis : uint8_t
 {
-	ETweenReferenceAxis__XAxis     = 0,
-	ETweenReferenceAxis__YAxis     = 1,
-	ETweenReferenceAxis__ZAxis     = 2,
+	ETweenReferenceAxis__XAxis = 0,
+	ETweenReferenceAxis__YAxis = 1,
+	ETweenReferenceAxis__ZAxis = 2,
 	ETweenReferenceAxis__ETweenReferenceAxis_MAX = 3
 };
 
@@ -45,10 +45,10 @@ enum class ETweenFloatType : uint8_t
 	ETweenFloatType__MaterialScalarFromTo = 0,
 	ETweenFloatType__MaterialScalarTo = 1,
 	ETweenFloatType__RotateAroundPoint = 2,
-	ETweenFloatType__FollowSpline  = 3,
+	ETweenFloatType__FollowSpline = 3,
 	ETweenFloatType__WidgetAngleTo = 4,
 	ETweenFloatType__WidgetOpacityTo = 5,
-	ETweenFloatType__Custom        = 6,
+	ETweenFloatType__Custom = 6,
 	ETweenFloatType__ETweenFloatType_MAX = 7
 };
 
@@ -65,8 +65,8 @@ enum class ETweenLinearColorType : uint8_t
 // Enum TweenMaker.ETweenRotatorType
 enum class ETweenRotatorType : uint8_t
 {
-	ETweenRotatorType__RotateTo    = 0,
-	ETweenRotatorType__RotateBy    = 1,
+	ETweenRotatorType__RotateTo = 0,
+	ETweenRotatorType__RotateBy = 1,
 	ETweenRotatorType__ETweenRotatorType_MAX = 2
 };
 
@@ -74,12 +74,12 @@ enum class ETweenRotatorType : uint8_t
 // Enum TweenMaker.ETweenVector2DType
 enum class ETweenVector2DType : uint8_t
 {
-	ETweenVector2DType__MoveTo     = 0,
-	ETweenVector2DType__MoveBy     = 1,
-	ETweenVector2DType__ScaleTo    = 2,
-	ETweenVector2DType__ScaleBy    = 3,
-	ETweenVector2DType__ShearTo    = 4,
-	ETweenVector2DType__Custom     = 5,
+	ETweenVector2DType__MoveTo = 0,
+	ETweenVector2DType__MoveBy = 1,
+	ETweenVector2DType__ScaleTo = 2,
+	ETweenVector2DType__ScaleBy = 3,
+	ETweenVector2DType__ShearTo = 4,
+	ETweenVector2DType__Custom = 5,
 	ETweenVector2DType__ETweenVector2DType_MAX = 6
 };
 
@@ -87,11 +87,11 @@ enum class ETweenVector2DType : uint8_t
 // Enum TweenMaker.ETweenVectorType
 enum class ETweenVectorType : uint8_t
 {
-	ETweenVectorType__MoveTo       = 0,
-	ETweenVectorType__MoveBy       = 1,
-	ETweenVectorType__ScaleTo      = 2,
-	ETweenVectorType__ScaleBy      = 3,
-	ETweenVectorType__Custom       = 4,
+	ETweenVectorType__MoveTo = 0,
+	ETweenVectorType__MoveBy = 1,
+	ETweenVectorType__ScaleTo = 2,
+	ETweenVectorType__ScaleBy = 3,
+	ETweenVectorType__Custom = 4,
 	ETweenVectorType__ETweenVectorType_MAX = 5
 };
 
@@ -99,11 +99,11 @@ enum class ETweenVectorType : uint8_t
 // Enum TweenMaker.ETweenTargetType
 enum class ETweenTargetType : uint8_t
 {
-	ETweenTargetType__Actor        = 0,
+	ETweenTargetType__Actor = 0,
 	ETweenTargetType__SceneComponent = 1,
-	ETweenTargetType__UMG          = 2,
-	ETweenTargetType__Material     = 3,
-	ETweenTargetType__Custom       = 4,
+	ETweenTargetType__UMG = 2,
+	ETweenTargetType__Material = 3,
+	ETweenTargetType__Custom = 4,
 	ETweenTargetType__ETweenTargetType_MAX = 5
 };
 
@@ -111,8 +111,8 @@ enum class ETweenTargetType : uint8_t
 // Enum TweenMaker.ETweenLoopType
 enum class ETweenLoopType : uint8_t
 {
-	ETweenLoopType__Yoyo           = 0,
-	ETweenLoopType__Restart        = 1,
+	ETweenLoopType__Yoyo = 0,
+	ETweenLoopType__Restart = 1,
 	ETweenLoopType__ETweenLoopType_MAX = 2
 };
 
@@ -120,45 +120,45 @@ enum class ETweenLoopType : uint8_t
 // Enum TweenMaker.ETweenEaseType
 enum class ETweenEaseType : uint8_t
 {
-	ETweenEaseType__Linear         = 0,
-	ETweenEaseType__EaseInQuad     = 1,
-	ETweenEaseType__EaseOutQuad    = 2,
-	ETweenEaseType__EaseInOutQuad  = 3,
-	ETweenEaseType__EaseOutInQuad  = 4,
-	ETweenEaseType__EaseInCubic    = 5,
-	ETweenEaseType__EaseOutCubic   = 6,
+	ETweenEaseType__Linear = 0,
+	ETweenEaseType__EaseInQuad = 1,
+	ETweenEaseType__EaseOutQuad = 2,
+	ETweenEaseType__EaseInOutQuad = 3,
+	ETweenEaseType__EaseOutInQuad = 4,
+	ETweenEaseType__EaseInCubic = 5,
+	ETweenEaseType__EaseOutCubic = 6,
 	ETweenEaseType__EaseInOutCubic = 7,
 	ETweenEaseType__EaseOutInCubic = 8,
-	ETweenEaseType__EaseInQuart    = 9,
-	ETweenEaseType__EaseOutQuart   = 10,
+	ETweenEaseType__EaseInQuart = 9,
+	ETweenEaseType__EaseOutQuart = 10,
 	ETweenEaseType__EaseInOutQuart = 11,
 	ETweenEaseType__EaseOutInQuart = 12,
-	ETweenEaseType__EaseInQuint    = 13,
-	ETweenEaseType__EaseOutQuint   = 14,
+	ETweenEaseType__EaseInQuint = 13,
+	ETweenEaseType__EaseOutQuint = 14,
 	ETweenEaseType__EaseInOutQuint = 15,
 	ETweenEaseType__EaseOutInQuint = 16,
-	ETweenEaseType__EaseInSine     = 17,
-	ETweenEaseType__EaseOutSine    = 18,
-	ETweenEaseType__EaseInOutSine  = 19,
-	ETweenEaseType__EaseOutInSine  = 20,
-	ETweenEaseType__EaseInExpo     = 21,
-	ETweenEaseType__EaseOutExpo    = 22,
-	ETweenEaseType__EaseInOutExpo  = 23,
-	ETweenEaseType__EaseOutInExpo  = 24,
-	ETweenEaseType__EaseInCirc     = 25,
-	ETweenEaseType__EaseOutCirc    = 26,
-	ETweenEaseType__EaseInOutCirc  = 27,
-	ETweenEaseType__EaseOutInCirc  = 28,
-	ETweenEaseType__EaseInElastic  = 29,
+	ETweenEaseType__EaseInSine = 17,
+	ETweenEaseType__EaseOutSine = 18,
+	ETweenEaseType__EaseInOutSine = 19,
+	ETweenEaseType__EaseOutInSine = 20,
+	ETweenEaseType__EaseInExpo = 21,
+	ETweenEaseType__EaseOutExpo = 22,
+	ETweenEaseType__EaseInOutExpo = 23,
+	ETweenEaseType__EaseOutInExpo = 24,
+	ETweenEaseType__EaseInCirc = 25,
+	ETweenEaseType__EaseOutCirc = 26,
+	ETweenEaseType__EaseInOutCirc = 27,
+	ETweenEaseType__EaseOutInCirc = 28,
+	ETweenEaseType__EaseInElastic = 29,
 	ETweenEaseType__EaseOutElastic = 30,
 	ETweenEaseType__EaseInOutElastic = 31,
 	ETweenEaseType__EaseOutInElastic = 32,
-	ETweenEaseType__EaseInBack     = 33,
-	ETweenEaseType__EaseOutBack    = 34,
-	ETweenEaseType__EaseInOutBack  = 35,
-	ETweenEaseType__EaseOutInBack  = 36,
-	ETweenEaseType__EaseInBounce   = 37,
-	ETweenEaseType__EaseOutBounce  = 38,
+	ETweenEaseType__EaseInBack = 33,
+	ETweenEaseType__EaseOutBack = 34,
+	ETweenEaseType__EaseInOutBack = 35,
+	ETweenEaseType__EaseOutInBack = 36,
+	ETweenEaseType__EaseInBounce = 37,
+	ETweenEaseType__EaseOutBounce = 38,
 	ETweenEaseType__EaseInOutBounce = 39,
 	ETweenEaseType__EaseOutInBounce = 40,
 	ETweenEaseType__ETweenEaseType_MAX = 41
@@ -174,16 +174,16 @@ enum class ETweenEaseType : uint8_t
 // 0x0020
 struct FParallelTween
 {
-	TArray<class UBaseTween*>                          ParallelTweens;                                           // 0x0000(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
+	TArray<class UBaseTween*> ParallelTweens; // 0x0000(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0010(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct TweenMaker.DistSquaredToTickInterval
 // 0x0008
 struct FDistSquaredToTickInterval
 {
-	float                                              DistSquared;                                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              TickInterval;                                             // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	float DistSquared; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float TickInterval; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 }

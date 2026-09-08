@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -44,13 +44,13 @@ enum class EMediaAudioCaptureDeviceFilter : uint8_t
 // Enum MediaAssets.EMediaPlayerTrack
 enum class EMediaPlayerTrack : uint8_t
 {
-	EMediaPlayerTrack__Audio       = 0,
-	EMediaPlayerTrack__Caption     = 1,
-	EMediaPlayerTrack__Metadata    = 2,
-	EMediaPlayerTrack__Script      = 3,
-	EMediaPlayerTrack__Subtitle    = 4,
-	EMediaPlayerTrack__Text        = 5,
-	EMediaPlayerTrack__Video       = 6,
+	EMediaPlayerTrack__Audio = 0,
+	EMediaPlayerTrack__Caption = 1,
+	EMediaPlayerTrack__Metadata = 2,
+	EMediaPlayerTrack__Script = 3,
+	EMediaPlayerTrack__Subtitle = 4,
+	EMediaPlayerTrack__Text = 5,
+	EMediaPlayerTrack__Video = 6,
 	EMediaPlayerTrack__EMediaPlayerTrack_MAX = 7
 };
 
@@ -58,9 +58,9 @@ enum class EMediaPlayerTrack : uint8_t
 // Enum MediaAssets.EMediaSoundChannels
 enum class EMediaSoundChannels : uint8_t
 {
-	EMediaSoundChannels__Mono      = 0,
-	EMediaSoundChannels__Stereo    = 1,
-	EMediaSoundChannels__Surround  = 2,
+	EMediaSoundChannels__Mono = 0,
+	EMediaSoundChannels__Stereo = 1,
+	EMediaSoundChannels__Surround = 2,
 	EMediaSoundChannels__EMediaSoundChannels_MAX = 3
 };
 
@@ -74,8 +74,8 @@ enum class EMediaSoundChannels : uint8_t
 // 0x0028
 struct FMediaCaptureDevice
 {
-	struct FText                                       DisplayName;                                              // 0x0000(0x0018) (BlueprintVisible, BlueprintReadOnly, Transient)
-	struct FString                                     URL;                                                      // 0x0018(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
+	struct FText DisplayName; // 0x0000(0x0018) (BlueprintVisible, BlueprintReadOnly, Transient)
+	struct FString URL; // 0x0018(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
 };
 
 }

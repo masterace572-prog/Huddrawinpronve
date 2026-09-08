@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ApexDestruction.DestructibleComponent.SetDestructibleMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UDestructibleMesh*       NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UDestructibleMesh* NewMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMesh)
 {
@@ -35,7 +35,7 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 // Function ApexDestruction.DestructibleComponent.GetDestructibleMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UDestructibleMesh*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UDestructibleMesh* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 {
@@ -60,11 +60,11 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 // Function ApexDestruction.DestructibleComponent.ApplyRadiusDamage
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                          BaseDamage                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HurtOrigin                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          DamageRadius                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFullDamage                    (Parm, ZeroConstructor, IsPlainOldData)
+// float BaseDamage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector HurtOrigin (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float DamageRadius (Parm, ZeroConstructor, IsPlainOldData)
+// float ImpulseStrength (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFullDamage (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
 {
@@ -92,10 +92,10 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 // Function ApexDestruction.DestructibleComponent.ApplyDamage
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// float                          DamageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitLocation                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 ImpulseDir                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          ImpulseStrength                (Parm, ZeroConstructor, IsPlainOldData)
+// float DamageAmount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector HitLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector ImpulseDir (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float ImpulseStrength (Parm, ZeroConstructor, IsPlainOldData)
 
 void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength)
 {

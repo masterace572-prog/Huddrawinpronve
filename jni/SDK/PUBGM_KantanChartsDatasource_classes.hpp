@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UKantanCartesianDatasourceInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsDatasource.KantanCartesianDatasourceInterface");
@@ -36,8 +35,7 @@ class UKantanCategoryDatasourceInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsDatasource.KantanCategoryDatasourceInterface");
@@ -57,10 +55,9 @@ public:
 class UKantanSimpleCartesianDatasource : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0028(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsDatasource.KantanSimpleCartesianDatasource");
@@ -82,10 +79,9 @@ public:
 class UKantanSimpleCategoryDatasource : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0028(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsDatasource.KantanSimpleCategoryDatasource");

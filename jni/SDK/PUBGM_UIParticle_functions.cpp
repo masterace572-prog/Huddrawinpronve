@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -53,7 +53,7 @@ void UUIParticle::Stop()
 // Function UIParticle.UIParticle.SetPlayParticle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InPlayParticle                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool InPlayParticle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUIParticle::SetPlayParticle(bool InPlayParticle)
 {
@@ -140,7 +140,7 @@ void UUIParticleEmitter::Stop()
 // Function UIParticle.UIParticleEmitter.SetPlayParticle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           InPlayParticle                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool InPlayParticle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUIParticleEmitter::SetPlayParticle(bool InPlayParticle)
 {
