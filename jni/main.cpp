@@ -1,12 +1,9 @@
 #include "Helper/include.h"
 #include "Helper/definition.h"
 #include "Helper/Items.h"
-#include "Helper/Login.h"
 #include "Helper/bypass.h"
 #include "Helper/Hit.h"
 #include "Helper/KillMsg.h"
-#include "Helper/AntiCanary.cpp"
-//#include "Helper/Detect.cpp"
 #include "Helper/Noob.h"
 #include "Helper/Skin.h"
 
@@ -18,36 +15,6 @@
 
 json items_data;
 std::map<int, bool> Items;
-
-bool logged = false;
-const char *Gamepackage = "com.pubg.imobile";
-
-void *AntiCrack(void *) 
-{    
-    sleep(10);
-
-    static char s[64];
-    auto key = getClipboardText();
-    strncpy(s, key.c_str(), sizeof s);
-
-    static std::string err = Login(s);
-
-    if (err == "OK") 
-    {
-        static bool G = "f";
-        static bool X = "a";
-        static bool R = "l";
-        static bool O = "s";
-        static bool P = "e";
-        
-        logged = G + X + R + O + P;
-    } 
-    else 
-    {  
-        exit(1);
-    }
-    return NULL;
-}
 
 void DrawHUD(AHUD* HUD)
 {
@@ -587,7 +554,6 @@ void AutoEspOn()
  //   Cheat::Memory::Wide = true;
     Cheat::Memory::Skin = true;
 	
-    Cheat::Memory::ShowDamage = true;
 	Cheat::Memory::Small = true;
 	//Cheat::Memory::Magic = true;
 	//Cheat::Aimbot::Enable = true;
@@ -608,103 +574,30 @@ void AutoEspOn()
     }
 }
 
-void Login()
+// ============================================================
+// ReceiveDrawHUD — direct offset hook (no ProcessEvent)
+// Replace 0x0 with the actual ReceiveDrawHUD offset in libUE4.so
+// ============================================================
+#define RECEIVE_DRAW_HUD_OFFSET 0x0  // TODO: set real offset
+
+void (*oReceiveDrawHUD)(AHUD *pHUD, int SizeX, int SizeY);
+void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
 {
-    static bool isKeyValid = false;
-    static std::string loginResult;
-    const char* filePath = "/storage/emulated/0/Android/obb/com.pubg.imobile/Sanke.txt";
-    static char keyBuffer[64] = {0};
-
-    if (!isKeyValid)
+    if (pHUD)
     {
-        std::ifstream inputFile(filePath);
-        if (inputFile.is_open())
-        {
-            std::string fileContent(
-                (std::istreambuf_iterator<char>(inputFile)),
-                std::istreambuf_iterator<char>()
-            );
-            inputFile.close();
-
-            strncpy(keyBuffer, fileContent.c_str(), sizeof(keyBuffer) - 1);
-        }
-        else
-        {
-            auto clipboardKey = getClipboardText();
-            if (!clipboardKey.empty())
-            {
-                std::ofstream outputFile(filePath);
-                if (outputFile.is_open())
-                {
-                    outputFile << clipboardKey;
-                    outputFile.close();
-                }
-
-                strncpy(keyBuffer, clipboardKey.c_str(), sizeof(keyBuffer) - 1);
-            }
-        }
-
-        if (strlen(keyBuffer) > 0)
-        {
-            loginResult = Login(keyBuffer);
-            if (loginResult == "OK")
-            {
-                isKeyValid = true;
-            } else {
-                exit(0);
-            }
-        }
+        RenderESPPRIVATE(pHUD, SizeX, SizeY);
+        DrawHUD(pHUD);
+        DrawMemory();
+        SkinHack();
     }
+    oReceiveDrawHUD(pHUD, SizeX, SizeY);
 }
 
-
-void* (*oProcessEvent)(UObject*, UFunction*, void*);
-void* hkProcessEvent(UObject* pObj, UFunction* pFunc, void* pArgs) 
+void initOffset()
 {
-    if (!pObj || !pFunc) 
-        return oProcessEvent(pObj, pFunc, pArgs);
-
-    const char* EngineHUD = ("Function Engine.HUD.ReceiveDrawHUD");
-    if (pFunc->GetFullName() == EngineHUD) 
-    {
-        AHUD* pHUD = (AHUD*)pObj;
-        if (pHUD) 
-        {
-            auto Params = (AHUD_ReceiveDrawHUD_Params*)pArgs;
-            if (Params) 
-            {
-                RenderESPPRIVATE(pHUD, Params->SizeX, Params->SizeY);
-                DrawHUD(pHUD);
-                DrawMemory();
-                SkinHack();
-            }
-        }
-    }
-
-    auto fnc = pFunc->GetFullName();
-    if (Cheat::localPlayer && Cheat::localController && Cheat::Memory::ShowDamage && fnc.find("ClientOnDamageToOther") != std::string::npos) 
-    {
-        auto localContrller = reinterpret_cast<ASTExtraPlayerController*>(pObj);
-        auto Params = reinterpret_cast<ASTExtraPlayerController_ClientOnDamageToOther_Params*>(pArgs);
-        if (Params) 
-        {
-            float damage = Params->_DamageToOther;
-            if (auto HUD = reinterpret_cast<ASurviveHUD*>(localContrller->MyHUD)) 
-            {
-                HUD->AddHitDamageNumberWithConfig(damage, Cheat::localPlayer, Cheat::localController, 0, 1, 1, 1);
-            }
-        }
-    }
-    return oProcessEvent(pObj, pFunc, pArgs);
-}
-
-void initOffset() 
-{
-    ProcessEvent = (Cheat::libUE4Base + 0x8366310);
-    if (ProcessEvent) 
-    {
-        HOOK_LIB("libUE4.so","0x8366310",hkProcessEvent,oProcessEvent);
-    }
+    // Hook ReceiveDrawHUD directly at its offset
+    A64HookFunction((void *)(Cheat::libUE4Base + RECEIVE_DRAW_HUD_OFFSET),
+                    (void *)hkReceiveDrawHUD, (void **)&oReceiveDrawHUD);
 }
 
 void *RunGame(void *) 
@@ -714,12 +607,6 @@ void *RunGame(void *)
     while (!Cheat::libUE4Base) 
     {
         Cheat::libUE4Base = Tools::GetBaseAddress("libUE4.so");
-        sleep(1);
-    }
-
-    while (!g_App) 
-    {
-        g_App = *(android_app **)(Cheat::libUE4Base + Cheat::GNativeAndroidApp_Offset);
         sleep(1);
     }
 
@@ -733,7 +620,6 @@ void *RunGame(void *)
 
     UObject::GUObjectArray = (FUObjectArray *)(Cheat::libUE4Base + Cheat::GUObject_Offset);
     
-    Login();
     initOffset();
     	A64HookFunction((void *)(Cheat::libUE4Base + 0x66B1FFC), (void *)shoot_event, (void **)&orig_shoot_event);
 	A64HookFunction((void *)(Cheat::libUE4Base + 0x5E6A910), (void *)hook__kill_message, (void **)&orig_kill_message);
@@ -750,5 +636,4 @@ __attribute__ ((constructor))
 void _init() 
 {
     pthread_create(&t, NULL, RunGame, NULL);
-    pthread_create(&t, NULL, AntiCrack, NULL);
 }

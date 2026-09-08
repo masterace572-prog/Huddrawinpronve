@@ -6,23 +6,6 @@ LOCAL_SRC_FILES := Dobby/libraries/$(TARGET_ARCH_ABI)/libdobby.a
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/Dobby/include
 include $(PREBUILT_STATIC_LIBRARY)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := libcurl
-LOCAL_SRC_FILES := curl/curl-android-$(TARGET_ARCH_ABI)/lib/libcurl.a
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/curl/include
-include $(PREBUILT_STATIC_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libssl
-LOCAL_SRC_FILES := curl/openssl-android-$(TARGET_ARCH_ABI)/lib/libssl.a
-include $(PREBUILT_STATIC_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libcrypto
-LOCAL_SRC_FILES := curl/openssl-android-$(TARGET_ARCH_ABI)/lib/libcrypto.a
-include $(PREBUILT_STATIC_LIBRARY)
-
-
 PREBUILT_DIR := prebuilt/fuck
 
 include $(CLEAR_VARS)
@@ -110,9 +93,6 @@ LOCAL_CPPFLAGS += -Wno-error=c++11-narrowing -fms-extensions -fno-rtti -fno-exce
 LOCAL_LDFLAGS += -Wl,--gc-sections,--strip-all, -llog
 LOCAL_ARM_MODE := arm
 
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/curl/curl-android-$(TARGET_ARCH_ABI)/include
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/curl/openssl-android-$(TARGET_ARCH_ABI)/include
-
 LOCAL_SRC_FILES :=  main.cpp \
         SDK/PUBGM_Basic.cpp \
         SDK/PUBGM_Basic_functions.cpp \
@@ -125,6 +105,6 @@ LOCAL_CPP_FEATURES := exceptions
 
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv2 -lGLESv3 -lGLESv1_CM -lz
 
-LOCAL_STATIC_LIBRARIES := libdobby libcurl libssl libcrypto And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf tools base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
+LOCAL_STATIC_LIBRARIES := libdobby And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf tools base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
 
 include $(BUILD_SHARED_LIBRARY)

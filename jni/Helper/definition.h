@@ -14,8 +14,6 @@ namespace Cheat
     uintptr_t GUObject_Offset = 0xDD91FA0;
     uintptr_t GNativeAndroidApp_Offset = 0xDAD0280;
     uintptr_t ActorArray_Offest = 0x9E70E64;
-    uintptr_t ProcessEvent;
-
     SDK::ASTExtraPlayerCharacter *localPlayer = nullptr;
     SDK::ASTExtraPlayerController *localController = nullptr;
 
@@ -86,7 +84,6 @@ namespace Cheat
         bool Small = false;
         bool Skin = false;
         bool Magic = false;
-		bool ShowDamage = false;
         
         float Size = 10000.0f;
     }
@@ -116,7 +113,7 @@ using namespace SDK;
 
 bool BulletTrack = true;
 using namespace SDK;
-uintptr_t ProcessEvent;
+
 bool WriteAddr(void *addr, void *buffer, size_t length) 
 {
     unsigned long page_size = sysconf(_SC_PAGESIZE);
@@ -1083,33 +1080,6 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
         Cheat::localPlayer = localPlayer;
         Cheat::localController = localPlayerController;
     }
-}
-
-// Hooked ProcessEvent (merged logic)
-void* (*pProcessEvent)(UObject*, UFunction*, void*);
-void* kProcessEvent(UObject* a1, UFunction* a, void* b) 
-{
-    if (!a1 || !a) 
-        return pProcessEvent(a1, a, b);
-
-    auto fnc = a->GetFullName();
-
-    // Show damage numbers
-    if (Cheat::localPlayer && Cheat::localController && Cheat::Memory::ShowDamage && fnc.find("ClientOnDamageToOther") != std::string::npos) 
-    {
-        auto localContrller = reinterpret_cast<ASTExtraPlayerController*>(a1);
-        auto Params = reinterpret_cast<ASTExtraPlayerController_ClientOnDamageToOther_Params*>(b);
-        if (Params) 
-        {
-            float damage = Params->_DamageToOther;
-            if (auto HUD = reinterpret_cast<ASurviveHUD*>(localContrller->MyHUD)) 
-            {
-                HUD->AddHitDamageNumberWithConfig(damage, Cheat::localPlayer, Cheat::localController, 0, 1, 1, 1);
-            }
-        }
-    }
-
-    return pProcessEvent(a1, a, b);
 }
 
 void Box4LineHUD(
