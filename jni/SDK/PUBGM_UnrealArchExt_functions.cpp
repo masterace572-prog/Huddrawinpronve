@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function UnrealArchExt.UAEUserWidget.Visible
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEUserWidget::Visible()
 {
@@ -98,7 +98,7 @@ void UUAEUserWidget::Show()
 // Function UnrealArchExt.UAEUserWidget.SetParentWidgetRecursive
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEUserWidget*          InParentWidget                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEUserWidget* InParentWidget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEUserWidget::SetParentWidgetRecursive(class UUAEUserWidget* InParentWidget)
 {
@@ -122,7 +122,7 @@ void UUAEUserWidget::SetParentWidgetRecursive(class UUAEUserWidget* InParentWidg
 // Function UnrealArchExt.UAEUserWidget.SetParentWidget
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEUserWidget*          InParentWidget                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEUserWidget* InParentWidget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEUserWidget::SetParentWidget(class UUAEUserWidget* InParentWidget)
 {
@@ -146,7 +146,7 @@ void UUAEUserWidget::SetParentWidget(class UUAEUserWidget* InParentWidget)
 // Function UnrealArchExt.UAEUserWidget.SetOnWidgetShow
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FScriptDelegate         onShow                         (Parm, ZeroConstructor)
+// struct FScriptDelegate onShow (Parm, ZeroConstructor)
 
 void UUAEUserWidget::SetOnWidgetShow(const struct FScriptDelegate& onShow)
 {
@@ -170,7 +170,7 @@ void UUAEUserWidget::SetOnWidgetShow(const struct FScriptDelegate& onShow)
 // Function UnrealArchExt.UAEUserWidget.SetOnWidgetHide
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FScriptDelegate         OnHide                         (Parm, ZeroConstructor)
+// struct FScriptDelegate OnHide (Parm, ZeroConstructor)
 
 void UUAEUserWidget::SetOnWidgetHide(const struct FScriptDelegate& OnHide)
 {
@@ -194,7 +194,7 @@ void UUAEUserWidget::SetOnWidgetHide(const struct FScriptDelegate& OnHide)
 // Function UnrealArchExt.UAEUserWidget.SetOnClearUIStack
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FScriptDelegate         onClear                        (Parm, ZeroConstructor)
+// struct FScriptDelegate onClear (Parm, ZeroConstructor)
 
 void UUAEUserWidget::SetOnClearUIStack(const struct FScriptDelegate& onClear)
 {
@@ -218,10 +218,10 @@ void UUAEUserWidget::SetOnClearUIStack(const struct FScriptDelegate& onClear)
 // Function UnrealArchExt.UAEUserWidget.SetAdapation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Left                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Top                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Right                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Bottom                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Left (Parm, ZeroConstructor, IsPlainOldData)
+// float Top (Parm, ZeroConstructor, IsPlainOldData)
+// float Right (Parm, ZeroConstructor, IsPlainOldData)
+// float Bottom (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEUserWidget::SetAdapation(float Left, float Top, float Right, float Bottom)
 {
@@ -248,7 +248,7 @@ void UUAEUserWidget::SetAdapation(float Left, float Top, float Right, float Bott
 // Function UnrealArchExt.UAEUserWidget.RegistToGameFrontendHUD
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UFrontendHUD*            GameFrontHUD                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UFrontendHUD* GameFrontHUD (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEUserWidget::RegistToGameFrontendHUD(class UFrontendHUD* GameFrontHUD)
 {
@@ -272,8 +272,8 @@ void UUAEUserWidget::RegistToGameFrontendHUD(class UFrontendHUD* GameFrontHUD)
 // Function UnrealArchExt.UAEUserWidget.Register
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ULogicManagerBase*       LogicManager                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAddToViewport                 (Parm, ZeroConstructor, IsPlainOldData)
+// class ULogicManagerBase* LogicManager (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAddToViewport (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEUserWidget::Register(class ULogicManagerBase* LogicManager, bool bAddToViewport)
 {
@@ -400,7 +400,7 @@ void UUAEUserWidget::ReCachedUIMsgFunction()
 // Function UnrealArchExt.UAEUserWidget.PushOpenedUIStack
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UUAEUserWidget::PushOpenedUIStack(const struct FString& Name)
 {
@@ -424,7 +424,7 @@ void UUAEUserWidget::PushOpenedUIStack(const struct FString& Name)
 // Function UnrealArchExt.UAEUserWidget.PopOpenedUIStack
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 curOpen                        (Parm, ZeroConstructor)
+// struct FString curOpen (Parm, ZeroConstructor)
 
 void UUAEUserWidget::PopOpenedUIStack(const struct FString& curOpen)
 {
@@ -448,7 +448,7 @@ void UUAEUserWidget::PopOpenedUIStack(const struct FString& curOpen)
 // DelegateFunction UnrealArchExt.UAEUserWidget.OnWidgetShow__DelegateSignature
 // (Public, Delegate)
 // Parameters:
-// struct FString                 ClassName                      (Parm, ZeroConstructor)
+// struct FString ClassName (Parm, ZeroConstructor)
 
 void UUAEUserWidget::OnWidgetShow__DelegateSignature(const struct FString& ClassName)
 {
@@ -471,7 +471,7 @@ void UUAEUserWidget::OnWidgetShow__DelegateSignature(const struct FString& Class
 // DelegateFunction UnrealArchExt.UAEUserWidget.OnWidgetHide__DelegateSignature
 // (Public, Delegate)
 // Parameters:
-// struct FString                 ClassName                      (Parm, ZeroConstructor)
+// struct FString ClassName (Parm, ZeroConstructor)
 
 void UUAEUserWidget::OnWidgetHide__DelegateSignature(const struct FString& ClassName)
 {
@@ -494,7 +494,7 @@ void UUAEUserWidget::OnWidgetHide__DelegateSignature(const struct FString& Class
 // Function UnrealArchExt.UAEUserWidget.OnRightClicked
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector2D               TempScreenPos                  (Parm, IsPlainOldData)
+// struct FVector2D TempScreenPos (Parm, IsPlainOldData)
 
 void UUAEUserWidget::OnRightClicked(const struct FVector2D& TempScreenPos)
 {
@@ -559,7 +559,7 @@ void UUAEUserWidget::OnFadeInFinished()
 // Function UnrealArchExt.UAEUserWidget.OnDoubleClicked
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector2D               TempScreenPos                  (Parm, IsPlainOldData)
+// struct FVector2D TempScreenPos (Parm, IsPlainOldData)
 
 void UUAEUserWidget::OnDoubleClicked(const struct FVector2D& TempScreenPos)
 {
@@ -582,7 +582,7 @@ void UUAEUserWidget::OnDoubleClicked(const struct FVector2D& TempScreenPos)
 // Function UnrealArchExt.UAEUserWidget.OnClicked
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector2D               TempScreenPos                  (Parm, IsPlainOldData)
+// struct FVector2D TempScreenPos (Parm, IsPlainOldData)
 
 void UUAEUserWidget::OnClicked(const struct FVector2D& TempScreenPos)
 {
@@ -625,10 +625,10 @@ void UUAEUserWidget::OnClearUIStack__DelegateSignature()
 // Function UnrealArchExt.UAEUserWidget.IntCompare
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            A                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            B                              (Parm, ZeroConstructor, IsPlainOldData)
-// EWidgetCompareType             CompareType                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int A (Parm, ZeroConstructor, IsPlainOldData)
+// int B (Parm, ZeroConstructor, IsPlainOldData)
+// EWidgetCompareType CompareType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEUserWidget::IntCompare(int A, int B, EWidgetCompareType CompareType)
 {
@@ -656,7 +656,7 @@ bool UUAEUserWidget::IntCompare(int A, int B, EWidgetCompareType CompareType)
 // Function UnrealArchExt.UAEUserWidget.InitWidget
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Recursive                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool Recursive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEUserWidget::InitWidget(bool Recursive)
 {
@@ -680,8 +680,8 @@ void UUAEUserWidget::InitWidget(bool Recursive)
 // Function UnrealArchExt.UAEUserWidget.InitCustomWidget
 // (Native, Public)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidgetComponent*        WidgetComponent                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidgetComponent* WidgetComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEUserWidget::InitCustomWidget(class AActor* OwnerActor, class UWidgetComponent* WidgetComponent)
 {
@@ -727,7 +727,7 @@ void UUAEUserWidget::Hide()
 // Function UnrealArchExt.UAEUserWidget.HandleUIMessageBattle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UIMessage                      (Parm, ZeroConstructor)
+// struct FString UIMessage (Parm, ZeroConstructor)
 
 void UUAEUserWidget::HandleUIMessageBattle(const struct FString& UIMessage)
 {
@@ -751,7 +751,7 @@ void UUAEUserWidget::HandleUIMessageBattle(const struct FString& UIMessage)
 // Function UnrealArchExt.UAEUserWidget.HandleUIMessage
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 UIMessage                      (Parm, ZeroConstructor)
+// struct FString UIMessage (Parm, ZeroConstructor)
 
 void UUAEUserWidget::HandleUIMessage(const struct FString& UIMessage)
 {
@@ -775,10 +775,10 @@ void UUAEUserWidget::HandleUIMessage(const struct FString& UIMessage)
 // Function UnrealArchExt.UAEUserWidget.GetWidgetsByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 WidgetName                     (Parm, ZeroConstructor)
-// struct FString                 OuterName                      (Parm, ZeroConstructor)
-// bool                           bUseContains                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString WidgetName (Parm, ZeroConstructor)
+// struct FString OuterName (Parm, ZeroConstructor)
+// bool bUseContains (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UWidget* UUAEUserWidget::GetWidgetsByName(const struct FString& WidgetName, const struct FString& OuterName, bool bUseContains)
 {
@@ -806,8 +806,8 @@ class UWidget* UUAEUserWidget::GetWidgetsByName(const struct FString& WidgetName
 // Function UnrealArchExt.UAEUserWidget.GetWidgetContainsName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// class UWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UWidget* UUAEUserWidget::GetWidgetContainsName(const struct FString& Name)
 {
@@ -833,7 +833,7 @@ class UWidget* UUAEUserWidget::GetWidgetContainsName(const struct FString& Name)
 // Function UnrealArchExt.UAEUserWidget.GetParentWidget
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UUAEUserWidget*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UUAEUserWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUAEUserWidget* UUAEUserWidget::GetParentWidget()
 {
@@ -858,7 +858,7 @@ class UUAEUserWidget* UUAEUserWidget::GetParentWidget()
 // Function UnrealArchExt.UAEUserWidget.GetOwningPlayer
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* UUAEUserWidget::GetOwningPlayer()
 {
@@ -883,7 +883,7 @@ class APlayerController* UUAEUserWidget::GetOwningPlayer()
 // Function UnrealArchExt.UAEUserWidget.GetOwningLogicManager
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class ULogicManagerBase*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ULogicManagerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULogicManagerBase* UUAEUserWidget::GetOwningLogicManager()
 {
@@ -908,7 +908,7 @@ class ULogicManagerBase* UUAEUserWidget::GetOwningLogicManager()
 // Function UnrealArchExt.UAEUserWidget.GetOwningFrontendHUD
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* UUAEUserWidget::GetOwningFrontendHUD()
 {
@@ -933,8 +933,8 @@ class UFrontendHUD* UUAEUserWidget::GetOwningFrontendHUD()
 // Function UnrealArchExt.UAEUserWidget.GetImgDynamicMaterial
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// class UImage*                  ImageMat                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UImage* ImageMat (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UMaterialInstanceDynamic* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UMaterialInstanceDynamic* UUAEUserWidget::GetImgDynamicMaterial(class UImage* ImageMat)
 {
@@ -960,10 +960,10 @@ class UMaterialInstanceDynamic* UUAEUserWidget::GetImgDynamicMaterial(class UIma
 // Function UnrealArchExt.UAEUserWidget.GetChildWidgetByEqualPolitics
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ChildName                      (Parm, ZeroConstructor)
-// EUserWidgetNameEqualPolitics   EqualPolitics                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RecursiveDepth                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UUserWidget*             ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString ChildName (Parm, ZeroConstructor)
+// EUserWidgetNameEqualPolitics EqualPolitics (Parm, ZeroConstructor, IsPlainOldData)
+// int RecursiveDepth (Parm, ZeroConstructor, IsPlainOldData)
+// class UUserWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUserWidget* UUAEUserWidget::GetChildWidgetByEqualPolitics(const struct FString& ChildName, EUserWidgetNameEqualPolitics EqualPolitics, int RecursiveDepth)
 {
@@ -991,8 +991,8 @@ class UUserWidget* UUAEUserWidget::GetChildWidgetByEqualPolitics(const struct FS
 // Function UnrealArchExt.UAEUserWidget.GetChildWidget
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 WName                          (Parm, ZeroConstructor)
-// class UUserWidget*             ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString WName (Parm, ZeroConstructor)
+// class UUserWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUserWidget* UUAEUserWidget::GetChildWidget(const struct FString& WName)
 {
@@ -1018,7 +1018,7 @@ class UUserWidget* UUAEUserWidget::GetChildWidget(const struct FString& WName)
 // Function UnrealArchExt.UAEUserWidget.GetAdapation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMargin                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FMargin ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FMargin UUAEUserWidget::GetAdapation()
 {
@@ -1043,10 +1043,10 @@ struct FMargin UUAEUserWidget::GetAdapation()
 // Function UnrealArchExt.UAEUserWidget.FloatCompare
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          A                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          B                              (Parm, ZeroConstructor, IsPlainOldData)
-// EWidgetCompareType             CompareType                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float A (Parm, ZeroConstructor, IsPlainOldData)
+// float B (Parm, ZeroConstructor, IsPlainOldData)
+// EWidgetCompareType CompareType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEUserWidget::FloatCompare(float A, float B, EWidgetCompareType CompareType)
 {
@@ -1074,7 +1074,7 @@ bool UUAEUserWidget::FloatCompare(float A, float B, EWidgetCompareType CompareTy
 // Function UnrealArchExt.UAEUserWidget.DynamicRegistUIMsgToCache
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEUserWidget*          Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEUserWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEUserWidget::DynamicRegistUIMsgToCache(class UUAEUserWidget* Widget)
 {
@@ -1140,7 +1140,7 @@ void UUAEUserWidget::ClearOpenedUIStack()
 // Function UnrealArchExt.UAEUserWidget.ClearFunctionCacheByMsgName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InUIMsg                        (Parm, ZeroConstructor)
+// struct FString InUIMsg (Parm, ZeroConstructor)
 
 void UUAEUserWidget::ClearFunctionCacheByMsgName(const struct FString& InUIMsg)
 {
@@ -1206,8 +1206,8 @@ void UUAEUserWidget::ClearClassWidgetTree()
 // Function UnrealArchExt.UAEUserWidget.BindCustomUserEvent
 // (Native, Public)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidgetComponent*        WidgetComponent                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidgetComponent* WidgetComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEUserWidget::BindCustomUserEvent(class AActor* OwnerActor, class UWidgetComponent* WidgetComponent)
 {
@@ -1253,8 +1253,8 @@ void UUAECanvasPanel::ReceiveInitCanvasPanel()
 // Function UnrealArchExt.BackendHUD.GetFrontendHUDByGameInstance
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UGameInstance*           GameInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameInstance* GameInstance (Parm, ZeroConstructor, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* UBackendHUD::GetFrontendHUDByGameInstance(class UGameInstance* GameInstance)
 {
@@ -1280,8 +1280,8 @@ class UFrontendHUD* UBackendHUD::GetFrontendHUDByGameInstance(class UGameInstanc
 // Function UnrealArchExt.BackendHUD.GetFrontendHUD
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FrontendHUDIndex               (Parm, ZeroConstructor, IsPlainOldData)
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FrontendHUDIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* UBackendHUD::GetFrontendHUD(int FrontendHUDIndex)
 {
@@ -1307,7 +1307,7 @@ class UFrontendHUD* UBackendHUD::GetFrontendHUD(int FrontendHUDIndex)
 // Function UnrealArchExt.LogicManagerBase.SetEnableRemoveDynamicWidgets
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULogicManagerBase::SetEnableRemoveDynamicWidgets(bool bEnable)
 {
@@ -1331,7 +1331,7 @@ void ULogicManagerBase::SetEnableRemoveDynamicWidgets(bool bEnable)
 // Function UnrealArchExt.LogicManagerBase.MarkWidgetClassPendingKill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEUserWidget*          Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUAEUserWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void ULogicManagerBase::MarkWidgetClassPendingKill(class UUAEUserWidget* Widget)
 {
@@ -1352,10 +1352,41 @@ void ULogicManagerBase::MarkWidgetClassPendingKill(class UUAEUserWidget* Widget)
 }
 
 
+// Function UnrealArchExt.LogicManagerBase.IsNeedClear
+// (Final, Native, Static, Public)
+// Parameters:
+// float MaxLowLevelMemorySize (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxMiddleMemorySize (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxGCArrayObjectSize (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ULogicManagerBase::IsNeedClear(float MaxLowLevelMemorySize, float MaxMiddleMemorySize, float MaxGCArrayObjectSize)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function UnrealArchExt.LogicManagerBase.IsNeedClear");
+
+	ULogicManagerBase_IsNeedClear_Params params;
+	params.MaxLowLevelMemorySize = MaxLowLevelMemorySize;
+	params.MaxMiddleMemorySize = MaxMiddleMemorySize;
+	params.MaxGCArrayObjectSize = MaxGCArrayObjectSize;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UnrealArchExt.LogicManagerBase.IsEnableRemoveDynamicWidgets
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULogicManagerBase::IsEnableRemoveDynamicWidgets()
 {
@@ -1380,7 +1411,7 @@ bool ULogicManagerBase::IsEnableRemoveDynamicWidgets()
 // Function UnrealArchExt.LogicManagerBase.GetWidgetList
 // (Final, Native, Public)
 // Parameters:
-// TArray<class UUAEUserWidget*>  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UUAEUserWidget*> ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UUAEUserWidget*> ULogicManagerBase::GetWidgetList()
 {
@@ -1405,8 +1436,8 @@ TArray<class UUAEUserWidget*> ULogicManagerBase::GetWidgetList()
 // Function UnrealArchExt.LogicManagerBase.GetWidgetByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// class UUAEUserWidget*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
+// class UUAEUserWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUAEUserWidget* ULogicManagerBase::GetWidgetByName(const struct FString& InName)
 {
@@ -1432,8 +1463,8 @@ class UUAEUserWidget* ULogicManagerBase::GetWidgetByName(const struct FString& I
 // Function UnrealArchExt.LogicManagerBase.GetWidgetByClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  InClass                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEUserWidget*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UClass* InClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEUserWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUAEUserWidget* ULogicManagerBase::GetWidgetByClass(class UClass* InClass)
 {
@@ -1459,7 +1490,7 @@ class UUAEUserWidget* ULogicManagerBase::GetWidgetByClass(class UClass* InClass)
 // Function UnrealArchExt.LogicManagerBase.GetOwningFrontendHUD
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* ULogicManagerBase::GetOwningFrontendHUD()
 {
@@ -1484,7 +1515,7 @@ class UFrontendHUD* ULogicManagerBase::GetOwningFrontendHUD()
 // Function UnrealArchExt.LogicManagerBase.GetDefaultSceneCamera
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULogicManagerBase::GetDefaultSceneCamera()
 {
@@ -1509,9 +1540,9 @@ int ULogicManagerBase::GetDefaultSceneCamera()
 // Function UnrealArchExt.LogicManagerBase.DispatchUIMessage
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UIMessage                      (Parm, ZeroConstructor)
-// class UObject*                 Source                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEUserWidget*          Target                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString UIMessage (Parm, ZeroConstructor)
+// class UObject* Source (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEUserWidget* Target (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void ULogicManagerBase::DispatchUIMessage(const struct FString& UIMessage, class UObject* Source, class UUAEUserWidget* Target)
 {
@@ -1537,7 +1568,7 @@ void ULogicManagerBase::DispatchUIMessage(const struct FString& UIMessage, class
 // Function UnrealArchExt.FrontendHUD.SwitchUIStatus
 // (Native, Public)
 // Parameters:
-// struct FString                 InUIStatus                     (Parm, ZeroConstructor)
+// struct FString InUIStatus (Parm, ZeroConstructor)
 
 void UFrontendHUD::SwitchUIStatus(const struct FString& InUIStatus)
 {
@@ -1561,8 +1592,8 @@ void UFrontendHUD::SwitchUIStatus(const struct FString& InUIStatus)
 // Function UnrealArchExt.FrontendHUD.SwitchGameStatus
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 GameStatus                     (Parm, ZeroConstructor)
-// struct FString                 Options                        (Parm, ZeroConstructor)
+// struct FString GameStatus (Parm, ZeroConstructor)
+// struct FString Options (Parm, ZeroConstructor)
 
 void UFrontendHUD::SwitchGameStatus(const struct FString& GameStatus, const struct FString& Options)
 {
@@ -1587,8 +1618,8 @@ void UFrontendHUD::SwitchGameStatus(const struct FString& GameStatus, const stru
 // Function UnrealArchExt.FrontendHUD.StandAloneSwitchGameStatus
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InGameStatus                   (Parm, ZeroConstructor)
-// struct FString                 Options                        (Parm, ZeroConstructor)
+// struct FString InGameStatus (Parm, ZeroConstructor)
+// struct FString Options (Parm, ZeroConstructor)
 
 void UFrontendHUD::StandAloneSwitchGameStatus(const struct FString& InGameStatus, const struct FString& Options)
 {
@@ -1613,7 +1644,7 @@ void UFrontendHUD::StandAloneSwitchGameStatus(const struct FString& InGameStatus
 // Function UnrealArchExt.FrontendHUD.OnRenderQualityChanged
 // (Final, Native, Public)
 // Parameters:
-// bool                           bLoadMap                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLoadMap (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendHUD::OnRenderQualityChanged(bool bLoadMap)
 {
@@ -1637,7 +1668,7 @@ void UFrontendHUD::OnRenderQualityChanged(bool bLoadMap)
 // Function UnrealArchExt.FrontendHUD.OnPreLoadMap
 // (Native, Protected)
 // Parameters:
-// struct FString                 MapName                        (Parm, ZeroConstructor)
+// struct FString MapName (Parm, ZeroConstructor)
 
 void UFrontendHUD::OnPreLoadMap(const struct FString& MapName)
 {
@@ -1661,7 +1692,7 @@ void UFrontendHUD::OnPreLoadMap(const struct FString& MapName)
 // Function UnrealArchExt.FrontendHUD.OnPostLoadMapWithWorld
 // (Native, Protected)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendHUD::OnPostLoadMapWithWorld(class UWorld* World)
 {
@@ -1706,7 +1737,7 @@ void UFrontendHUD::OnGameViewportClientCreated()
 // Function UnrealArchExt.FrontendHUD.GetWorld
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UFrontendHUD::GetWorld()
 {
@@ -1731,7 +1762,7 @@ class UWorld* UFrontendHUD::GetWorld()
 // Function UnrealArchExt.FrontendHUD.GetUtils
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UFrontendUtils*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendUtils* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendUtils* UFrontendHUD::GetUtils()
 {
@@ -1756,7 +1787,7 @@ class UFrontendUtils* UFrontendHUD::GetUtils()
 // Function UnrealArchExt.FrontendHUD.GetPlayerController
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* UFrontendHUD::GetPlayerController()
 {
@@ -1781,8 +1812,8 @@ class APlayerController* UFrontendHUD::GetPlayerController()
 // Function UnrealArchExt.FrontendHUD.GetLogicManagerByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 LogicManagerTagName            (Parm, ZeroConstructor)
-// class ULogicManagerBase*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString LogicManagerTagName (Parm, ZeroConstructor)
+// class ULogicManagerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULogicManagerBase* UFrontendHUD::GetLogicManagerByName(const struct FString& LogicManagerTagName)
 {
@@ -1808,8 +1839,8 @@ class ULogicManagerBase* UFrontendHUD::GetLogicManagerByName(const struct FStrin
 // Function UnrealArchExt.FrontendHUD.GetLogicManager
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            LogicManagerIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// class ULogicManagerBase*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int LogicManagerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class ULogicManagerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULogicManagerBase* UFrontendHUD::GetLogicManager(int LogicManagerIndex)
 {
@@ -1835,7 +1866,7 @@ class ULogicManagerBase* UFrontendHUD::GetLogicManager(int LogicManagerIndex)
 // Function UnrealArchExt.FrontendHUD.GetGameViewportClient
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UGameViewportClient*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameViewportClient* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UGameViewportClient* UFrontendHUD::GetGameViewportClient()
 {
@@ -1860,7 +1891,7 @@ class UGameViewportClient* UFrontendHUD::GetGameViewportClient()
 // Function UnrealArchExt.FrontendHUD.GetGameMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AGameMode*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AGameMode* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AGameMode* UFrontendHUD::GetGameMode()
 {
@@ -1885,7 +1916,7 @@ class AGameMode* UFrontendHUD::GetGameMode()
 // Function UnrealArchExt.FrontendHUD.GetGameInstance
 // (Final, Native, Public, Const)
 // Parameters:
-// class UGameInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UGameInstance* UFrontendHUD::GetGameInstance()
 {
@@ -1910,9 +1941,9 @@ class UGameInstance* UFrontendHUD::GetGameInstance()
 // Function UnrealArchExt.FrontendHUD.FindRegistedUIFunctionList
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 strMsg                         (Parm, ZeroConstructor)
-// struct FString                 moduleMsg                      (Parm, ZeroConstructor)
-// TArray<TWeakObjectPtr<class UObject>> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString strMsg (Parm, ZeroConstructor)
+// struct FString moduleMsg (Parm, ZeroConstructor)
+// TArray<TWeakObjectPtr<class UObject>> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<TWeakObjectPtr<class UObject>> UFrontendHUD::FindRegistedUIFunctionList(const struct FString& strMsg, const struct FString& moduleMsg)
 {
@@ -1939,7 +1970,7 @@ TArray<TWeakObjectPtr<class UObject>> UFrontendHUD::FindRegistedUIFunctionList(c
 // Function UnrealArchExt.FrontendHUD.EnableGuiTest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendHUD::EnableGuiTest(bool bEnable)
 {
@@ -1963,8 +1994,8 @@ void UFrontendHUD::EnableGuiTest(bool bEnable)
 // Function UnrealArchExt.FrontendHUD.DynamicRegistUIMsgToCache
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUAEUserWidget*          Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 module                         (Parm, ZeroConstructor)
+// class UUAEUserWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString module (Parm, ZeroConstructor)
 
 void UFrontendHUD::DynamicRegistUIMsgToCache(class UUAEUserWidget* Widget, const struct FString& module)
 {
@@ -1989,8 +2020,8 @@ void UFrontendHUD::DynamicRegistUIMsgToCache(class UUAEUserWidget* Widget, const
 // Function UnrealArchExt.FrontendHUD.ClearLogicManagerListByStatus
 // (Final, Native, Public)
 // Parameters:
-// struct FName                   PendingStatus                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsForceDelete                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PendingStatus (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsForceDelete (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendHUD::ClearLogicManagerListByStatus(const struct FName& PendingStatus, bool bIsForceDelete)
 {
@@ -2015,7 +2046,7 @@ void UFrontendHUD::ClearLogicManagerListByStatus(const struct FName& PendingStat
 // Function UnrealArchExt.FrontendHUD.ClearLogicManagerByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 managerName                    (Parm, ZeroConstructor)
+// struct FString managerName (Parm, ZeroConstructor)
 
 void UFrontendHUD::ClearLogicManagerByName(const struct FString& managerName)
 {
@@ -2039,12 +2070,12 @@ void UFrontendHUD::ClearLogicManagerByName(const struct FString& managerName)
 // Function UnrealArchExt.FrontendUtils.SwitchSceneCameraToTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              targetTrans                    (Parm, IsPlainOldData)
-// TEnumAsByte<enum ECameraProjectionMode> ProjectionMode                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FOV                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoFixAspect                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform targetTrans (Parm, IsPlainOldData)
+// TEnumAsByte<enum ECameraProjectionMode> ProjectionMode (Parm, ZeroConstructor, IsPlainOldData)
+// float FOV (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForce (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAutoFixAspect (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::SwitchSceneCameraToTransform(const struct FTransform& targetTrans, TEnumAsByte<enum ECameraProjectionMode> ProjectionMode, float FOV, float BlendTime, bool bForce, bool bAutoFixAspect)
 {
@@ -2073,9 +2104,9 @@ void UFrontendUtils::SwitchSceneCameraToTransform(const struct FTransform& targe
 // Function UnrealArchExt.FrontendUtils.SwitchSceneCamera
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SceneCameraName                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SceneCameraName (Parm, ZeroConstructor, IsPlainOldData)
+// float BlendTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForce (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::SwitchSceneCamera(const struct FName& SceneCameraName, float BlendTime, bool bForce)
 {
@@ -2101,10 +2132,10 @@ void UFrontendUtils::SwitchSceneCamera(const struct FName& SceneCameraName, floa
 // Function UnrealArchExt.FrontendUtils.SetSceneSkyLightProperty
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              targetTrans                    (Parm, IsPlainOldData)
-// float                          Intensity                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform targetTrans (Parm, IsPlainOldData)
+// float Intensity (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
 
 void UFrontendUtils::SetSceneSkyLightProperty(const struct FName& sceneLightName, const struct FTransform& targetTrans, float Intensity, const struct FLinearColor& Color)
 {
@@ -2131,12 +2162,12 @@ void UFrontendUtils::SetSceneSkyLightProperty(const struct FName& sceneLightName
 // Function UnrealArchExt.FrontendUtils.SetScenePointLightProperty
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              targetTrans                    (Parm, IsPlainOldData)
-// float                          Intensity                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
-// int                            inverseSquareFalloff           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform targetTrans (Parm, IsPlainOldData)
+// float Intensity (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
+// int inverseSquareFalloff (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::SetScenePointLightProperty(const struct FName& sceneLightName, const struct FTransform& targetTrans, float Intensity, const struct FLinearColor& Color, int inverseSquareFalloff, float Radius)
 {
@@ -2165,11 +2196,11 @@ void UFrontendUtils::SetScenePointLightProperty(const struct FName& sceneLightNa
 // Function UnrealArchExt.FrontendUtils.SetSceneDirectionalLightProperty
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              targetTrans                    (Parm, IsPlainOldData)
-// float                          Intensity                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
-// struct FLightingChannels       Channel                        (Parm)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform targetTrans (Parm, IsPlainOldData)
+// float Intensity (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
+// struct FLightingChannels Channel (Parm)
 
 void UFrontendUtils::SetSceneDirectionalLightProperty(const struct FName& sceneLightName, const struct FTransform& targetTrans, float Intensity, const struct FLinearColor& Color, const struct FLightingChannels& Channel)
 {
@@ -2197,8 +2228,8 @@ void UFrontendUtils::SetSceneDirectionalLightProperty(const struct FName& sceneL
 // Function UnrealArchExt.FrontendUtils.SetAutoFixFovByAspectRatio
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ACameraActor*            CameraActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInAutoFixFov                  (Parm, ZeroConstructor, IsPlainOldData)
+// class ACameraActor* CameraActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoFixFov (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::SetAutoFixFovByAspectRatio(class ACameraActor* CameraActor, bool bInAutoFixFov)
 {
@@ -2223,8 +2254,8 @@ void UFrontendUtils::SetAutoFixFovByAspectRatio(class ACameraActor* CameraActor,
 // Function UnrealArchExt.FrontendUtils.RegisterSceneSkyLight
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// class ASkyLight*               Light                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// class ASkyLight* Light (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::RegisterSceneSkyLight(const struct FName& sceneLightName, class ASkyLight* Light)
 {
@@ -2249,8 +2280,8 @@ void UFrontendUtils::RegisterSceneSkyLight(const struct FName& sceneLightName, c
 // Function UnrealArchExt.FrontendUtils.RegisterScenePointLight
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// class APointLight*             Light                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// class APointLight* Light (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::RegisterScenePointLight(const struct FName& sceneLightName, class APointLight* Light)
 {
@@ -2275,8 +2306,8 @@ void UFrontendUtils::RegisterScenePointLight(const struct FName& sceneLightName,
 // Function UnrealArchExt.FrontendUtils.RegisterSceneDirectionalLight
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   sceneLightName                 (Parm, ZeroConstructor, IsPlainOldData)
-// class ADirectionalLight*       Light                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName sceneLightName (Parm, ZeroConstructor, IsPlainOldData)
+// class ADirectionalLight* Light (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::RegisterSceneDirectionalLight(const struct FName& sceneLightName, class ADirectionalLight* Light)
 {
@@ -2301,8 +2332,8 @@ void UFrontendUtils::RegisterSceneDirectionalLight(const struct FName& sceneLigh
 // Function UnrealArchExt.FrontendUtils.RegisterSceneCamera
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SceneCameraName                (Parm, ZeroConstructor, IsPlainOldData)
-// class ACameraActor*            SceneCamera                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SceneCameraName (Parm, ZeroConstructor, IsPlainOldData)
+// class ACameraActor* SceneCamera (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::RegisterSceneCamera(const struct FName& SceneCameraName, class ACameraActor* SceneCamera)
 {
@@ -2369,8 +2400,8 @@ void UFrontendUtils::OnAllSceneCamerasRegistered()
 // Function UnrealArchExt.FrontendUtils.IsPushedPanel
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   managerName                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName managerName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFrontendUtils::IsPushedPanel(const struct FName& managerName)
 {
@@ -2396,7 +2427,7 @@ bool UFrontendUtils::IsPushedPanel(const struct FName& managerName)
 // Function UnrealArchExt.FrontendUtils.IsNoRenderClient
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFrontendUtils::IsNoRenderClient()
 {
@@ -2421,7 +2452,7 @@ bool UFrontendUtils::IsNoRenderClient()
 // Function UnrealArchExt.FrontendUtils.GetUIStackTopSrcTag
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFrontendUtils::GetUIStackTopSrcTag()
 {
@@ -2446,7 +2477,7 @@ struct FString UFrontendUtils::GetUIStackTopSrcTag()
 // Function UnrealArchExt.FrontendUtils.GetUIStackTopDstTag
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFrontendUtils::GetUIStackTopDstTag()
 {
@@ -2471,7 +2502,7 @@ struct FString UFrontendUtils::GetUIStackTopDstTag()
 // Function UnrealArchExt.FrontendUtils.GetUIStackTop
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFrontendUtils::GetUIStackTop()
 {
@@ -2493,10 +2524,35 @@ struct FString UFrontendUtils::GetUIStackTop()
 }
 
 
+// Function UnrealArchExt.FrontendUtils.GetSceneCameraComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCameraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UCameraComponent* UFrontendUtils::GetSceneCameraComponent()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function UnrealArchExt.FrontendUtils.GetSceneCameraComponent");
+
+	UFrontendUtils_GetSceneCameraComponent_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UnrealArchExt.FrontendUtils.GetSceneCamera
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ACameraActor*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ACameraActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ACameraActor* UFrontendUtils::GetSceneCamera()
 {
@@ -2521,7 +2577,7 @@ class ACameraActor* UFrontendUtils::GetSceneCamera()
 // Function UnrealArchExt.FrontendUtils.GetOwningFrontendHUD
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* UFrontendUtils::GetOwningFrontendHUD()
 {
@@ -2546,8 +2602,8 @@ class UFrontendHUD* UFrontendUtils::GetOwningFrontendHUD()
 // Function UnrealArchExt.FrontendUtils.GetGlobalUIContainer
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   ContainerName                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEWidgetContainer*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FName ContainerName (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEWidgetContainer* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UUAEWidgetContainer* UFrontendUtils::GetGlobalUIContainer(const struct FName& ContainerName)
 {
@@ -2573,8 +2629,8 @@ class UUAEWidgetContainer* UFrontendUtils::GetGlobalUIContainer(const struct FNa
 // Function UnrealArchExt.FrontendUtils.GetAllActorsFromLevel
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class ULevel*                  Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// class ULevel* Level (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UFrontendUtils::GetAllActorsFromLevel(class ULevel* Level, TArray<class AActor*>* OutActors)
 {
@@ -2601,7 +2657,7 @@ void UFrontendUtils::GetAllActorsFromLevel(class ULevel* Level, TArray<class AAc
 // Function UnrealArchExt.FrontendUtils.EnableLobbyMainLight
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           NewEnable                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool NewEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFrontendUtils::EnableLobbyMainLight(bool NewEnable)
 {
@@ -2646,10 +2702,10 @@ void UFrontendUtils::ClearAllSceneCameras()
 // Function UnrealArchExt.UAEDataTable.SetTableData_String
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 KeyValue                       (Parm, ZeroConstructor)
-// struct FString                 TagName                        (Parm, ZeroConstructor)
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString KeyValue (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEDataTable::SetTableData_String(const struct FString& KeyValue, const struct FString& TagName, const struct FString& Value)
 {
@@ -2677,10 +2733,10 @@ bool UUAEDataTable::SetTableData_String(const struct FString& KeyValue, const st
 // Function UnrealArchExt.UAEDataTable.SetTableData_Int32
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 KeyValue                       (Parm, ZeroConstructor)
-// struct FString                 TagName                        (Parm, ZeroConstructor)
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString KeyValue (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEDataTable::SetTableData_Int32(const struct FString& KeyValue, const struct FString& TagName, int Value)
 {
@@ -2708,10 +2764,10 @@ bool UUAEDataTable::SetTableData_Int32(const struct FString& KeyValue, const str
 // Function UnrealArchExt.UAEDataTable.SetTableData_Float
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 KeyValue                       (Parm, ZeroConstructor)
-// struct FString                 TagName                        (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString KeyValue (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEDataTable::SetTableData_Float(const struct FString& KeyValue, const struct FString& TagName, float Value)
 {
@@ -2739,7 +2795,7 @@ bool UUAEDataTable::SetTableData_Float(const struct FString& KeyValue, const str
 // Function UnrealArchExt.UAEDataTable.GetTableName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEDataTable::GetTableName()
 {
@@ -2764,8 +2820,8 @@ struct FString UUAEDataTable::GetTableName()
 // Function UnrealArchExt.UAEDataTable.GetRealTableName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString tableName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEDataTable::GetRealTableName(const struct FString& tableName)
 {
@@ -2791,8 +2847,8 @@ struct FString UUAEDataTable::GetRealTableName(const struct FString& tableName)
 // Function UnrealArchExt.UAEDataTable.ConditionAddEmptyRow
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   RowName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName RowName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEDataTable::ConditionAddEmptyRow(const struct FName& RowName)
 {
@@ -2818,7 +2874,7 @@ bool UUAEDataTable::ConditionAddEmptyRow(const struct FName& RowName)
 // Function UnrealArchExt.UAEUserWidgetForDrag.OnDragged
 // (Final, Native, Public)
 // Parameters:
-// class UDragDropOperation*      Operation                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UDragDropOperation* Operation (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEUserWidgetForDrag::OnDragged(class UDragDropOperation* Operation)
 {
@@ -2842,7 +2898,7 @@ void UUAEUserWidgetForDrag::OnDragged(class UDragDropOperation* Operation)
 // Function UnrealArchExt.UAEWidgetContainer.RemoveWidgetInternal
 // (Final, Native, Protected)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEWidgetContainer::RemoveWidgetInternal(class UWidget* Widget)
 {
@@ -2866,7 +2922,7 @@ void UUAEWidgetContainer::RemoveWidgetInternal(class UWidget* Widget)
 // Function UnrealArchExt.UAEWidgetContainer.RemoveWidget
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEWidgetContainer::RemoveWidget(class UWidget* Widget)
 {
@@ -2890,8 +2946,8 @@ void UUAEWidgetContainer::RemoveWidget(class UWidget* Widget)
 // Function UnrealArchExt.UAEWidgetContainer.AddWidgetWithZOrderInternal
 // (Final, Native, Protected)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ZOrder                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int ZOrder (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWidgetContainer::AddWidgetWithZOrderInternal(class UWidget* Widget, int ZOrder)
 {
@@ -2916,8 +2972,8 @@ void UUAEWidgetContainer::AddWidgetWithZOrderInternal(class UWidget* Widget, int
 // Function UnrealArchExt.UAEWidgetContainer.AddWidgetWithZOrder
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            ZOrder                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int ZOrder (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEWidgetContainer::AddWidgetWithZOrder(class UWidget* Widget, int ZOrder)
 {
@@ -2942,7 +2998,7 @@ void UUAEWidgetContainer::AddWidgetWithZOrder(class UWidget* Widget, int ZOrder)
 // Function UnrealArchExt.UAEWidgetContainer.AddWidgetInternal
 // (Final, Native, Protected)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEWidgetContainer::AddWidgetInternal(class UWidget* Widget)
 {
@@ -2966,7 +3022,7 @@ void UUAEWidgetContainer::AddWidgetInternal(class UWidget* Widget)
 // Function UnrealArchExt.UAEWidgetContainer.AddWidget
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UUAEWidgetContainer::AddWidget(class UWidget* Widget)
 {

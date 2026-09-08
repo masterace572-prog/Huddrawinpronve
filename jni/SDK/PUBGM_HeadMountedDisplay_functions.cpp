@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewScale                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// float NewScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* WorldContext, float NewScale)
 {
@@ -37,7 +37,7 @@ void UHeadMountedDisplayFunctionLibrary::SetWorldToMetersScale(class UObject* Wo
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetTrackingOrigin
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EHMDTrackingOrigin> Origin                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EHMDTrackingOrigin> Origin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetTrackingOrigin(TEnumAsByte<enum EHMDTrackingOrigin> Origin)
 {
@@ -61,7 +61,7 @@ void UHeadMountedDisplayFunctionLibrary::SetTrackingOrigin(TEnumAsByte<enum EHMD
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenTexture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UTexture*                InTexture                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture* InTexture (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenTexture(class UTexture* InTexture)
 {
@@ -85,12 +85,12 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenTexture(class UTextur
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenModeTexturePlusEyeLayout
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               EyeRectMin                     (Parm, IsPlainOldData)
-// struct FVector2D               EyeRectMax                     (Parm, IsPlainOldData)
-// struct FVector2D               TextureRectMin                 (Parm, IsPlainOldData)
-// struct FVector2D               TextureRectMax                 (Parm, IsPlainOldData)
-// bool                           bDrawEyeFirst                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bClearBlack                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D EyeRectMin (Parm, IsPlainOldData)
+// struct FVector2D EyeRectMax (Parm, IsPlainOldData)
+// struct FVector2D TextureRectMin (Parm, IsPlainOldData)
+// struct FVector2D TextureRectMax (Parm, IsPlainOldData)
+// bool bDrawEyeFirst (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClearBlack (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenModeTexturePlusEyeLayout(const struct FVector2D& EyeRectMin, const struct FVector2D& EyeRectMax, const struct FVector2D& TextureRectMin, const struct FVector2D& TextureRectMax, bool bDrawEyeFirst, bool bClearBlack)
 {
@@ -119,7 +119,7 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenModeTexturePlusEyeLay
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// ESpectatorScreenMode           Mode                           (Parm, ZeroConstructor, IsPlainOldData)
+// ESpectatorScreenMode Mode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenMode(ESpectatorScreenMode Mode)
 {
@@ -143,8 +143,8 @@ void UHeadMountedDisplayFunctionLibrary::SetSpectatorScreenMode(ESpectatorScreen
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetClippingPlanes
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Near                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Far                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Near (Parm, ZeroConstructor, IsPlainOldData)
+// float Far (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far)
 {
@@ -169,8 +169,8 @@ void UHeadMountedDisplayFunctionLibrary::SetClippingPlanes(float Near, float Far
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.ResetOrientationAndPosition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EOrientPositionSelector> Options                        (Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EOrientPositionSelector> Options (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, TEnumAsByte<enum EOrientPositionSelector> Options)
 {
@@ -195,7 +195,7 @@ void UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition(float Yaw, 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsSpectatorScreenModeControllable
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::IsSpectatorScreenModeControllable()
 {
@@ -220,7 +220,7 @@ bool UHeadMountedDisplayFunctionLibrary::IsSpectatorScreenModeControllable()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsInLowPersistenceMode
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::IsInLowPersistenceMode()
 {
@@ -245,7 +245,7 @@ bool UHeadMountedDisplayFunctionLibrary::IsInLowPersistenceMode()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayEnabled
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()
 {
@@ -270,7 +270,7 @@ bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.IsHeadMountedDisplayConnected
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayConnected()
 {
@@ -295,7 +295,7 @@ bool UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayConnected()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.HasValidTrackingPosition
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::HasValidTrackingPosition()
 {
@@ -320,8 +320,8 @@ bool UHeadMountedDisplayFunctionLibrary::HasValidTrackingPosition()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetWorldToMetersScale
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* WorldContext)
 {
@@ -347,8 +347,8 @@ float UHeadMountedDisplayFunctionLibrary::GetWorldToMetersScale(class UObject* W
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetVRFocusState
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           bUseFocus                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bHasFocus                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bUseFocus (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bHasFocus (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::GetVRFocusState(bool* bUseFocus, bool* bHasFocus)
 {
@@ -376,17 +376,17 @@ void UHeadMountedDisplayFunctionLibrary::GetVRFocusState(bool* bUseFocus, bool* 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 Origin                         (Parm, OutParm, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, OutParm, IsPlainOldData)
-// float                          LeftFOV                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          RightFOV                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          TopFOV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          BottomFOV                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          NearPlane                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          FarPlane                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsActive                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Origin (Parm, OutParm, IsPlainOldData)
+// struct FRotator Rotation (Parm, OutParm, IsPlainOldData)
+// float LeftFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float RightFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float TopFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float BottomFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float NearPlane (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float FarPlane (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool IsActive (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::GetTrackingSensorParameters(int Index, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, struct FVector* Origin, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive, float* BottomFOV)
 {
@@ -431,7 +431,7 @@ void UHeadMountedDisplayFunctionLibrary::GetTrackingSensorParameters(int Index, 
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetTrackingOrigin
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TEnumAsByte<enum EHMDTrackingOrigin> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EHMDTrackingOrigin> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::GetTrackingOrigin()
 {
@@ -456,7 +456,7 @@ TEnumAsByte<enum EHMDTrackingOrigin> UHeadMountedDisplayFunctionLibrary::GetTrac
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetScreenPercentage
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
 {
@@ -481,13 +481,13 @@ float UHeadMountedDisplayFunctionLibrary::GetScreenPercentage()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 CameraOrigin                   (Parm, OutParm, IsPlainOldData)
-// struct FRotator                CameraRotation                 (Parm, OutParm, IsPlainOldData)
-// float                          HFOV                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          VFOV                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          CameraDistance                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          NearPlane                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          FarPlane                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FVector CameraOrigin (Parm, OutParm, IsPlainOldData)
+// struct FRotator CameraRotation (Parm, OutParm, IsPlainOldData)
+// float HFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float VFOV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float CameraDistance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float NearPlane (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float FarPlane (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
 {
@@ -525,8 +525,8 @@ void UHeadMountedDisplayFunctionLibrary::GetPositionalTrackingCameraParameters(s
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FRotator                DeviceRotation                 (Parm, OutParm, IsPlainOldData)
-// struct FVector                 DevicePosition                 (Parm, OutParm, IsPlainOldData)
+// struct FRotator DeviceRotation (Parm, OutParm, IsPlainOldData)
+// struct FVector DevicePosition (Parm, OutParm, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition)
 {
@@ -554,7 +554,7 @@ void UHeadMountedDisplayFunctionLibrary::GetOrientationAndPosition(struct FRotat
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetNumOfTrackingSensors
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHeadMountedDisplayFunctionLibrary::GetNumOfTrackingSensors()
 {
@@ -579,7 +579,7 @@ int UHeadMountedDisplayFunctionLibrary::GetNumOfTrackingSensors()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDWornState
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TEnumAsByte<enum EHMDWornState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EHMDWornState> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EHMDWornState> UHeadMountedDisplayFunctionLibrary::GetHMDWornState()
 {
@@ -604,7 +604,7 @@ TEnumAsByte<enum EHMDWornState> UHeadMountedDisplayFunctionLibrary::GetHMDWornSt
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.GetHMDDeviceName
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UHeadMountedDisplayFunctionLibrary::GetHMDDeviceName()
 {
@@ -629,7 +629,7 @@ struct FName UHeadMountedDisplayFunctionLibrary::GetHMDDeviceName()
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableLowPersistenceMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 {
@@ -653,8 +653,8 @@ void UHeadMountedDisplayFunctionLibrary::EnableLowPersistenceMode(bool bEnable)
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.EnableHMD
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
 {
@@ -680,7 +680,7 @@ bool UHeadMountedDisplayFunctionLibrary::EnableHMD(bool bEnable)
 // Function HeadMountedDisplay.MotionControllerComponent.IsTracked
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionControllerComponent::IsTracked()
 {
@@ -705,7 +705,7 @@ bool UMotionControllerComponent::IsTracked()
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledByDefault(bool Enable)
 {
@@ -729,9 +729,9 @@ void UMotionTrackedDeviceFunctionLibrary::SetIsControllerMotionTrackingEnabledBy
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            playerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int playerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand Hand (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int playerIndex, EControllerHand Hand)
 {
@@ -758,8 +758,8 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int p
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UMotionControllerComponent* MotionControllerComponent (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(class UMotionControllerComponent* MotionControllerComponent)
 {
@@ -785,7 +785,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(cl
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackedDeviceCountManagementNecessary()
 {
@@ -810,7 +810,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackedDeviceCountManagementNe
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMotionTrackedDeviceFunctionLibrary::GetMotionTrackingEnabledControllerCount()
 {
@@ -835,7 +835,7 @@ int UMotionTrackedDeviceFunctionLibrary::GetMotionTrackingEnabledControllerCount
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMotionTrackedDeviceFunctionLibrary::GetMaximumMotionTrackedControllerCount()
 {
@@ -860,9 +860,9 @@ int UMotionTrackedDeviceFunctionLibrary::GetMaximumMotionTrackedControllerCount(
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            playerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int playerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand Hand (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int playerIndex, EControllerHand Hand)
 {
@@ -889,8 +889,8 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int playe
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UMotionControllerComponent* MotionControllerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent)
 {
@@ -916,8 +916,8 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            playerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// EControllerHand                Hand                           (Parm, ZeroConstructor, IsPlainOldData)
+// int playerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// EControllerHand Hand (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int playerIndex, EControllerHand Hand)
 {
@@ -942,7 +942,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int play
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            playerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int playerIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfControllersForPlayer(int playerIndex)
 {
@@ -987,7 +987,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfAllControllers(
 // Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UMotionControllerComponent* MotionControllerComponent      (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UMotionControllerComponent* MotionControllerComponent (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingForComponent(class UMotionControllerComponent* MotionControllerComponent)
 {

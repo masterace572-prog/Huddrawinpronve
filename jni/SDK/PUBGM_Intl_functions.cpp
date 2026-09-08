@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,10 +11,10 @@ namespace SDK
 // Function Intl.StatManager.ReportUAStatsEvent
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         InReportChannels               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 InEventName                    (Parm, ZeroConstructor)
-// TMap<struct FString, struct FString> InParams                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           InIsRealTime                   (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> InReportChannels (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString InEventName (Parm, ZeroConstructor)
+// TMap<struct FString, struct FString> InParams (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool InIsRealTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStatManager::ReportUAStatsEvent(TArray<struct FString> InReportChannels, const struct FString& InEventName, TMap<struct FString, struct FString> InParams, bool InIsRealTime)
 {
@@ -41,11 +41,11 @@ void UStatManager::ReportUAStatsEvent(TArray<struct FString> InReportChannels, c
 // Function Intl.StatManager.ReportRevenue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            InPurchaseEventType            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InCurrencyCode                 (Parm, ZeroConstructor)
-// struct FString                 InExpense                      (Parm, ZeroConstructor)
-// TMap<struct FString, struct FString> InParams                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// int InPurchaseEventType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InCurrencyCode (Parm, ZeroConstructor)
+// struct FString InExpense (Parm, ZeroConstructor)
+// TMap<struct FString, struct FString> InParams (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UStatManager::ReportRevenue(int InPurchaseEventType, const struct FString& InCurrencyCode, const struct FString& InExpense, TMap<struct FString, struct FString> InParams, const struct FString& InExtraJson)
 {
@@ -73,10 +73,10 @@ void UStatManager::ReportRevenue(int InPurchaseEventType, const struct FString& 
 // Function Intl.StatManager.ReportPurchase
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InPurchaseEventType            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InCurrencyCode                 (Parm, ZeroConstructor)
-// struct FString                 InExpense                      (Parm, ZeroConstructor)
-// bool                           isRealTime                     (Parm, ZeroConstructor, IsPlainOldData)
+// int InPurchaseEventType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InCurrencyCode (Parm, ZeroConstructor)
+// struct FString InExpense (Parm, ZeroConstructor)
+// bool isRealTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStatManager::ReportPurchase(int InPurchaseEventType, const struct FString& InCurrencyCode, const struct FString& InExpense, bool isRealTime)
 {
@@ -103,9 +103,9 @@ void UStatManager::ReportPurchase(int InPurchaseEventType, const struct FString&
 // Function Intl.StatManager.ReportEventWithString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 _eventBody                     (Parm, ZeroConstructor)
-// bool                           isRealTime                     (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString _eventBody (Parm, ZeroConstructor)
+// bool isRealTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStatManager::ReportEventWithString(int EventType, const struct FString& _eventBody, bool isRealTime)
 {
@@ -131,9 +131,9 @@ void UStatManager::ReportEventWithString(int EventType, const struct FString& _e
 // Function Intl.StatManager.ReportEventWithParam
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// TMap<struct FString, struct FString> _params                        (Parm, ZeroConstructor)
-// bool                           isRealTime                     (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
+// TMap<struct FString, struct FString> _params (Parm, ZeroConstructor)
+// bool isRealTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStatManager::ReportEventWithParam(int EventType, TMap<struct FString, struct FString> _params, bool isRealTime)
 {
@@ -159,8 +159,8 @@ void UStatManager::ReportEventWithParam(int EventType, TMap<struct FString, stru
 // Function Intl.StatManager.ReportEventWithNoParam
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isRealTime                     (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
+// bool isRealTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStatManager::ReportEventWithNoParam(int EventType, bool isRealTime)
 {
@@ -185,7 +185,7 @@ void UStatManager::ReportEventWithNoParam(int EventType, bool isRealTime)
 // Function Intl.StatManager.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UStatManager*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStatManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UStatManager* UStatManager::GetInstance()
 {

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ClusterReplication.ClusterReplicationSubsystem.SetAutoClearCache
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClusterReplicationSubsystem::SetAutoClearCache(bool Val)
 {
@@ -35,7 +35,7 @@ void UClusterReplicationSubsystem::SetAutoClearCache(bool Val)
 // Function ClusterReplication.ClusterReplicationSubsystem.SetAutoCache
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClusterReplicationSubsystem::SetAutoCache(bool Val)
 {

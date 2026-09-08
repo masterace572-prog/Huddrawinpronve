@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function PhotonDestructible.PhotonDestructibleSurfaceComponent.Server_ProcessHit
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FPhotonDestructibleSurfaceHitData HitData                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FPhotonDestructibleSurfaceHitData HitData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UPhotonDestructibleSurfaceComponent::Server_ProcessHit(const struct FPhotonDestructibleSurfaceHitData& HitData)
 {
@@ -56,7 +56,7 @@ void UPhotonDestructibleSurfaceComponent::OnRep_SurfaceNetData()
 // Function PhotonDestructible.PhotonDestructibleSurfaceComponent.Client_OnProcessHit
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// struct FPhotonDestructibleSurfaceHitData HitData                        (ConstParm, Parm, ReferenceParm)
+// struct FPhotonDestructibleSurfaceHitData HitData (ConstParm, Parm, ReferenceParm)
 
 void UPhotonDestructibleSurfaceComponent::Client_OnProcessHit(const struct FPhotonDestructibleSurfaceHitData& HitData)
 {
@@ -80,7 +80,7 @@ void UPhotonDestructibleSurfaceComponent::Client_OnProcessHit(const struct FPhot
 // Function PhotonDestructible.PhotonDestructibleInstancedSurfaceComponent.Server_ProcessHit
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FPhotonDestructibleSurfaceHitData HitData                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FPhotonDestructibleSurfaceHitData HitData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UPhotonDestructibleInstancedSurfaceComponent::Server_ProcessHit(const struct FPhotonDestructibleSurfaceHitData& HitData)
 {
@@ -125,7 +125,7 @@ void UPhotonDestructibleInstancedSurfaceComponent::OnRep_SurfaceNetData()
 // Function PhotonDestructible.PhotonDestructibleInstancedSurfaceComponent.Client_OnProcessHit
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// struct FPhotonDestructibleSurfaceHitData HitData                        (ConstParm, Parm, ReferenceParm)
+// struct FPhotonDestructibleSurfaceHitData HitData (ConstParm, Parm, ReferenceParm)
 
 void UPhotonDestructibleInstancedSurfaceComponent::Client_OnProcessHit(const struct FPhotonDestructibleSurfaceHitData& HitData)
 {
@@ -149,7 +149,7 @@ void UPhotonDestructibleInstancedSurfaceComponent::Client_OnProcessHit(const str
 // Function PhotonDestructible.PhotonDestructiblePuppet.TriggerPuppetEvent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            EventID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int EventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonDestructiblePuppet::TriggerPuppetEvent(int EventID)
 {
@@ -173,8 +173,8 @@ void UPhotonDestructiblePuppet::TriggerPuppetEvent(int EventID)
 // Function PhotonDestructible.PhotonDestructiblePuppetContainer.TriggerPuppetEvent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ObjectName                     (Parm, ZeroConstructor)
-// int                            EventID                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ObjectName (Parm, ZeroConstructor)
+// int EventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonDestructiblePuppetContainer::TriggerPuppetEvent(const struct FString& ObjectName, int EventID)
 {
@@ -199,8 +199,8 @@ void UPhotonDestructiblePuppetContainer::TriggerPuppetEvent(const struct FString
 // Function PhotonDestructible.PhotonDestructiblePuppetMgr.Client_TriggerPuppetEvent
 // (Net, NetReliable, Native, Event, NetMulticast, Public, HasDefaults)
 // Parameters:
-// struct FGuid                   PuppetGUID                     (ConstParm, Parm, ReferenceParm, IsPlainOldData)
-// int                            EventID                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGuid PuppetGUID (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// int EventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPhotonDestructiblePuppetMgr::Client_TriggerPuppetEvent(const struct FGuid& PuppetGUID, int EventID)
 {

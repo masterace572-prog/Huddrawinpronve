@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,18 +9,17 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class AnimationBudgetAllocator.SkeletalMeshComponentBudgeted
-// 0x0020 (0x11F0 - 0x11D0)
+// 0x0020 (0x12E0 - 0x12C0)
 class USkeletalMeshComponentBudgeted : public USkeletalMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x11D0(0x0018) MISSED OFFSET
-	unsigned char                                      bAutoRegisterWithBudgetAllocator : 1;                     // 0x11E8(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bAutoCalculateSignificance : 1;                           // 0x11E8(0x0001) (Edit)
-	unsigned char                                      bShouldUseActorRenderedFlag : 1;                          // 0x11E8(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x11E9(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x12C0(0x0018) MISSED OFFSET
+	unsigned char bAutoRegisterWithBudgetAllocator : 1; // 0x12D8(0x0001) (Edit, BlueprintVisible)
+	unsigned char bAutoCalculateSignificance : 1; // 0x12D8(0x0001) (Edit)
+	unsigned char bShouldUseActorRenderedFlag : 1; // 0x12D8(0x0001) (Edit)
+	unsigned char UnknownData01[0x7]; // 0x12D9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AnimationBudgetAllocator.SkeletalMeshComponentBudgeted");
@@ -38,8 +37,7 @@ class UAnimationBudgetBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AnimationBudgetAllocator.AnimationBudgetBlueprintLibrary");

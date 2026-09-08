@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,51 +13,50 @@ namespace SDK
 class ASTSpawnerBase : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04B0(0x0060) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0510(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	class USTStrategyTiming*                           SpawnTiming;                                              // 0x0520(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USTStrategyLocation*                         SpawnLocation;                                            // 0x0528(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USTStrategySpecies*                          SpawnSpecies;                                             // 0x0530(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class USTStrategyCond*>                     SpawnConditions;                                          // 0x0538(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
-	unsigned char                                      bUseRegion : 1;                                           // 0x0548(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bDebugDraw : 1;                                           // 0x0548(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bUsable : 1;                                              // 0x0548(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bIsMLAI : 1;                                              // 0x0548(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0549(0x0003) MISSED OFFSET
-	int                                                AILevel;                                                  // 0x054C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                SpawnerCampID;                                            // 0x0550(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ESTSpawnerVolume                                   VolumeType;                                               // 0x0554(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0555(0x0003) MISSED OFFSET
-	float                                              SphereRadius;                                             // 0x0558(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     BoxHalfExtent;                                            // 0x055C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	class UClass*                                      SpawnSpotClass;                                           // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnSpawnUnitSuccessDelegate;                               // 0x0570(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnSpawnedUnitDeadDelegate;                                // 0x0580(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	uint32_t                                           SpawnerID;                                                // 0x0590(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                MaxUnitsCount;                                            // 0x0594(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxAliveCount;                                            // 0x0598(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x059C(0x0004) MISSED OFFSET
-	struct FString                                     SpawnerDescString;                                        // 0x05A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      bUseAsTrigger : 1;                                        // 0x05B0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bForceSpawn : 1;                                          // 0x05B0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bRecycle;                                                 // 0x05B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x6];                                       // 0x05B2(0x0006) MISSED OFFSET
-	struct FString                                     SpawnerSnapshot;                                          // 0x05B8(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<class ASTSpawnSpot*>                        SpawnSpots;                                               // 0x05C8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class AActor*>                              AlivePawns;                                               // 0x05D8(0x0010) (BlueprintVisible, ZeroConstructor)
-	unsigned char                                      bActive : 1;                                              // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly, Net)
-	unsigned char                                      bInitialized : 1;                                         // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bTimeIsRipe : 1;                                          // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x05E9(0x0003) MISSED OFFSET
-	int                                                TotalSpawnedUnits;                                        // 0x05EC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class USTSpawnSubsystem*                           SpawnSubsystem;                                           // 0x05F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x10];                                      // 0x05F8(0x0010) MISSED OFFSET
-	int                                                WaitSpawn;                                                // 0x0608(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bPlayerEnterRegion : 1;                                   // 0x060C(0x0001)
-	unsigned char                                      UnknownData07[0xB];                                       // 0x060D(0x000B) MISSED OFFSET
+	unsigned char UnknownData00[0x60]; // 0x04B0(0x0060) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0510(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	class USTStrategyTiming* SpawnTiming; // 0x0520(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USTStrategyLocation* SpawnLocation; // 0x0528(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USTStrategySpecies* SpawnSpecies; // 0x0530(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class USTStrategyCond*> SpawnConditions; // 0x0538(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
+	unsigned char bUseRegion : 1; // 0x0548(0x0001) (Edit, BlueprintVisible)
+	unsigned char bDebugDraw : 1; // 0x0548(0x0001) (Edit, BlueprintVisible)
+	unsigned char bUsable : 1; // 0x0548(0x0001) (Edit, BlueprintVisible)
+	unsigned char bIsMLAI : 1; // 0x0548(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData01[0x3]; // 0x0549(0x0003) MISSED OFFSET
+	int AILevel; // 0x054C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int SpawnerCampID; // 0x0550(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ESTSpawnerVolume VolumeType; // 0x0554(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0555(0x0003) MISSED OFFSET
+	float SphereRadius; // 0x0558(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector BoxHalfExtent; // 0x055C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	class UClass* SpawnSpotClass; // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate OnSpawnUnitSuccessDelegate; // 0x0570(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnSpawnedUnitDeadDelegate; // 0x0580(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	uint32_t SpawnerID; // 0x0590(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	int MaxUnitsCount; // 0x0594(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int MaxAliveCount; // 0x0598(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x059C(0x0004) MISSED OFFSET
+	struct FString SpawnerDescString; // 0x05A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char bUseAsTrigger : 1; // 0x05B0(0x0001) (Edit, BlueprintVisible)
+	unsigned char bForceSpawn : 1; // 0x05B0(0x0001) (Edit, BlueprintVisible)
+	unsigned char bRecycle; // 0x05B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x6]; // 0x05B2(0x0006) MISSED OFFSET
+	struct FString SpawnerSnapshot; // 0x05B8(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<class ASTSpawnSpot*> SpawnSpots; // 0x05C8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class AActor*> AlivePawns; // 0x05D8(0x0010) (BlueprintVisible, ZeroConstructor)
+	unsigned char bActive : 1; // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly, Net)
+	unsigned char bInitialized : 1; // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char bTimeIsRipe : 1; // 0x05E8(0x0001) (BlueprintVisible, BlueprintReadOnly)
+	unsigned char UnknownData05[0x3]; // 0x05E9(0x0003) MISSED OFFSET
+	int TotalSpawnedUnits; // 0x05EC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class USTSpawnSubsystem* SpawnSubsystem; // 0x05F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x10]; // 0x05F8(0x0010) MISSED OFFSET
+	int WaitSpawn; // 0x0608(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char bPlayerEnterRegion : 1; // 0x060C(0x0001)
+	unsigned char UnknownData07[0xB]; // 0x060D(0x000B) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpawnerBase");
@@ -111,24 +110,23 @@ public:
 class USTSpawnSubsystem : public UBattleSubsystem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnSpawnSysUnitSpawnedSuc;                                 // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnSpawnSysAfterUnitInit;                                  // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
-	TMap<uint32_t, class ASTSpawnerBase*>              SpawnersMap;                                              // 0x0058(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x00A8(0x0088) MISSED OFFSET
-	float                                              TickFrequency;                                            // 0x0130(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ThinkTimesPerFrame;                                       // 0x0134(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ReadySpawnFrequency;                                      // 0x0138(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MaxWaitSpawnQueSize;                                      // 0x013C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bWaitSpawnInOrder;                                        // 0x0140(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x57];                                      // 0x0141(0x0057) MISSED OFFSET
-	int                                                RecAliveUnits;                                            // 0x0198(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x019C(0x0004) MISSED OFFSET
-	int                                                WaitSpawnInOrderIndex;                                    // 0x01A0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2C];                                      // 0x01A4(0x002C) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0030(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate OnSpawnSysUnitSpawnedSuc; // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnSpawnSysAfterUnitInit; // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
+	TMap<uint32_t, class ASTSpawnerBase*> SpawnersMap; // 0x0058(0x0050) (ZeroConstructor)
+	unsigned char UnknownData01[0x88]; // 0x00A8(0x0088) MISSED OFFSET
+	float TickFrequency; // 0x0130(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ThinkTimesPerFrame; // 0x0134(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float ReadySpawnFrequency; // 0x0138(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int MaxWaitSpawnQueSize; // 0x013C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bWaitSpawnInOrder; // 0x0140(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x57]; // 0x0141(0x0057) MISSED OFFSET
+	int RecAliveUnits; // 0x0198(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x019C(0x0004) MISSED OFFSET
+	int WaitSpawnInOrderIndex; // 0x01A0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x2C]; // 0x01A4(0x002C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpawnSubsystem");
@@ -161,23 +159,22 @@ public:
 class USTStrategyBase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      bShouldCD : 1;                                            // 0x0090(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0091(0x0003) MISSED OFFSET
-	float                                              ConfigCDDuration;                                         // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ASTSpawnerBase*                              OwnerSpawner;                                             // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bSTActive : 1;                                            // 0x00A0(0x0001)
-	unsigned char                                      bTickEnable : 1;                                          // 0x00A0(0x0001)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x00A1(0x0003) MISSED OFFSET
-	float                                              CDCounter;                                                // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     OwnerName;                                                // 0x00A8(0x0010) (ZeroConstructor)
-	struct FString                                     StrategyName;                                             // 0x00B8(0x0010) (BlueprintVisible, ZeroConstructor)
-	struct FString                                     StrategySnapshot;                                         // 0x00C8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char bShouldCD : 1; // 0x0090(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData01[0x3]; // 0x0091(0x0003) MISSED OFFSET
+	float ConfigCDDuration; // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ASTSpawnerBase* OwnerSpawner; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char bSTActive : 1; // 0x00A0(0x0001)
+	unsigned char bTickEnable : 1; // 0x00A0(0x0001)
+	unsigned char UnknownData02[0x3]; // 0x00A1(0x0003) MISSED OFFSET
+	float CDCounter; // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString OwnerName; // 0x00A8(0x0010) (ZeroConstructor)
+	struct FString StrategyName; // 0x00B8(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FString StrategySnapshot; // 0x00C8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData03[0x8]; // 0x00D8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyBase");
@@ -207,11 +204,10 @@ public:
 class USTStrategyLocation : public USTStrategyBase
 {
 public:
-	struct FScriptDelegate                             OnGenerateSpawnLocationDelegate;                          // 0x00E0(0x0016) (ZeroConstructor, InstancedReference)
-	TArray<struct FSpawnSpotInfo>                      CacheSpotInfosArray;                                      // 0x00F0(0x0010) (BlueprintVisible, ZeroConstructor)
+	struct FScriptDelegate OnGenerateSpawnLocationDelegate; // 0x00E0(0x0010) (ZeroConstructor, InstancedReference)
+	TArray<struct FSpawnSpotInfo> CacheSpotInfosArray; // 0x00F0(0x0010) (BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyLocation");
@@ -228,12 +224,11 @@ public:
 class USTStrategySpecies : public USTStrategyBase
 {
 public:
-	class USTSpeciesDataAsset*                         SpeciesData;                                              // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FScriptDelegate                             SupplySpawnSpeciesDelegate;                               // 0x00E8(0x0016) (ZeroConstructor, InstancedReference)
-	TArray<struct FUnitConfig>                         CacheSpeciesArray;                                        // 0x00F8(0x0010) (BlueprintVisible, ZeroConstructor)
+	class USTSpeciesDataAsset* SpeciesData; // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FScriptDelegate SupplySpawnSpeciesDelegate; // 0x00E8(0x0010) (ZeroConstructor, InstancedReference)
+	TArray<struct FUnitConfig> CacheSpeciesArray; // 0x00F8(0x0010) (BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategySpecies");
@@ -252,10 +247,9 @@ public:
 class USTStrategyTiming : public USTStrategyBase
 {
 public:
-	struct FScriptMulticastDelegate                    OnSpawnTimingUp;                                          // 0x00E0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnSpawnTimingUp; // 0x00E0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyTiming");
@@ -272,21 +266,20 @@ public:
 class USpawnSystemSettings : public UDeveloperSettings
 {
 public:
-	float                                              TickFrequency;                                            // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              SpawnUnitInterval;                                        // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                TickingSpawnerThreshold;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bShouldSpawnSystemLogout;                                 // 0x0044(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	int                                                MaxWaitSpawnQueSize;                                      // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              VisualDebugRange;                                         // 0x004C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FVector2D                                   VisualDebugSpotCapsule;                                   // 0x0050(0x0008) (Edit, Config, IsPlainOldData)
-	float                                              SpotDrawThickness;                                        // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              SpotDrawFlag;                                             // 0x005C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                SpawnerVisualDebugLevel;                                  // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	float TickFrequency; // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float SpawnUnitInterval; // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int TickingSpawnerThreshold; // 0x0040(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool bShouldSpawnSystemLogout; // 0x0044(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0045(0x0003) MISSED OFFSET
+	int MaxWaitSpawnQueSize; // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float VisualDebugRange; // 0x004C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FVector2D VisualDebugSpotCapsule; // 0x0050(0x0008) (Edit, Config, IsPlainOldData)
+	float SpotDrawThickness; // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float SpotDrawFlag; // 0x005C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int SpawnerVisualDebugLevel; // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0064(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.SpawnSystemSettings");
@@ -303,23 +296,22 @@ public:
 class ASTSpawnSpot : public AActor
 {
 public:
-	TArray<struct FUnitInitConfig>                     SpotInitConfig;                                           // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                AliveThresholdCfg;                                        // 0x04C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                NumberThresholdCfg;                                       // 0x04C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     SpotID;                                                   // 0x04C8(0x0010) (ZeroConstructor)
-	int                                                SpotWeigh;                                                // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ESpawnSpotType                                     SpotType;                                                 // 0x04DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04DD(0x0003) MISSED OFFSET
-	int                                                SquadIndex;                                               // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                UnitIndex;                                                // 0x04E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   CapsuleSize;                                              // 0x04E8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              MultiPosRangeMin;                                         // 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04F4(0x0004) MISSED OFFSET
-	class ASTSpawnerBase*                              OwnerSpawner;                                             // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x0500(0x0018) MISSED OFFSET
+	TArray<struct FUnitInitConfig> SpotInitConfig; // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int AliveThresholdCfg; // 0x04C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int NumberThresholdCfg; // 0x04C4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString SpotID; // 0x04C8(0x0010) (ZeroConstructor)
+	int SpotWeigh; // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ESpawnSpotType SpotType; // 0x04DC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x04DD(0x0003) MISSED OFFSET
+	int SquadIndex; // 0x04E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int UnitIndex; // 0x04E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D CapsuleSize; // 0x04E8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float MultiPosRangeMin; // 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x04F4(0x0004) MISSED OFFSET
+	class ASTSpawnerBase* OwnerSpawner; // 0x04F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x18]; // 0x0500(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpawnSpot");
@@ -350,8 +342,7 @@ class USTSpawnSystemGameplayStatics : public UGameplayStatics
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpawnSystemGameplayStatics");
@@ -372,10 +363,9 @@ public:
 class USTSpawnVisualDebug : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0028(0x00B8) MISSED OFFSET
+	unsigned char UnknownData00[0xB8]; // 0x0028(0x00B8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpawnVisualDebug");
@@ -392,13 +382,12 @@ public:
 class USTSpeciesDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FUnitConfig>                         UnitConfig;                                               // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FSquadConfig>                        SquadConfig;                                              // 0x0040(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FGroupConfig>                        GroupConfig;                                              // 0x0050(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FSpeciesRatioStruct>                 RatioConfig;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FUnitConfig> UnitConfig; // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FSquadConfig> SquadConfig; // 0x0040(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FGroupConfig> GroupConfig; // 0x0050(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FSpeciesRatioStruct> RatioConfig; // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STSpeciesDataAsset");
@@ -414,8 +403,7 @@ class USTStrategyCond : public USTStrategyBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyCond");
@@ -433,16 +421,15 @@ public:
 class USTStrategyCond_Hide : public USTStrategyCond
 {
 public:
-	float                                              Height;                                                   // 0x00E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     CharacterFOV;                                             // 0x00E4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      bUseLineTrace : 1;                                        // 0x00F0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
-	class UClass*                                      ClassFilter;                                              // 0x00F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseSpawnerLoc : 1;                                       // 0x0100(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0101(0x0007) MISSED OFFSET
+	float Height; // 0x00E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector CharacterFOV; // 0x00E4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char bUseLineTrace : 1; // 0x00F0(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0x7]; // 0x00F1(0x0007) MISSED OFFSET
+	class UClass* ClassFilter; // 0x00F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bUseSpawnerLoc : 1; // 0x0100(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData01[0x7]; // 0x0101(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyCond_Hide");
@@ -459,11 +446,10 @@ public:
 class USTStrategyCond_Quantity : public USTStrategyCond
 {
 public:
-	int                                                ThresholdQuantity;                                        // 0x00E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                AliveNumberLimit;                                         // 0x00E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ThresholdQuantity; // 0x00E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int AliveNumberLimit; // 0x00E4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyCond_Quantity");
@@ -482,8 +468,7 @@ class USTStrategyLocation_Root : public USTStrategyLocation
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyLocation_Root");
@@ -501,8 +486,7 @@ class USTStrategyLocation_Spots : public USTStrategyLocation
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyLocation_Spots");
@@ -519,11 +503,10 @@ public:
 class USTStrategySpecies_SquadRatio : public USTStrategySpecies
 {
 public:
-	int                                                RatioIndex;                                               // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x54];                                      // 0x010C(0x0054) MISSED OFFSET
+	int RatioIndex; // 0x0108(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x54]; // 0x010C(0x0054) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategySpecies_SquadRatio");
@@ -542,15 +525,14 @@ public:
 class USTStrategySpecies_Static : public USTStrategySpecies
 {
 public:
-	EReadSpeciesData                                   HowDataRead;                                              // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0109(0x0003) MISSED OFFSET
-	int                                                GroupIndex;                                               // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SquadIndex;                                               // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                UnitIndex;                                                // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0118(0x0010) MISSED OFFSET
+	EReadSpeciesData HowDataRead; // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0109(0x0003) MISSED OFFSET
+	int GroupIndex; // 0x010C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int SquadIndex; // 0x0110(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int UnitIndex; // 0x0114(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x10]; // 0x0118(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategySpecies_Static");
@@ -576,16 +558,15 @@ public:
 class USTStrategyTiming_Period : public USTStrategyTiming
 {
 public:
-	unsigned char                                      bFirstDelay : 1;                                          // 0x00F0(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x00F1(0x0003) MISSED OFFSET
-	float                                              FirstDelayDuration;                                       // 0x00F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bLoop : 1;                                                // 0x00F8(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00F9(0x0003) MISSED OFFSET
-	float                                              PeriodDuration;                                           // 0x00FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0100(0x0010) MISSED OFFSET
+	unsigned char bFirstDelay : 1; // 0x00F0(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0x3]; // 0x00F1(0x0003) MISSED OFFSET
+	float FirstDelayDuration; // 0x00F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bLoop : 1; // 0x00F8(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData01[0x3]; // 0x00F9(0x0003) MISSED OFFSET
+	float PeriodDuration; // 0x00FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x0100(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyTiming_Period");
@@ -606,14 +587,13 @@ public:
 class USTStrategyTiming_Trigger : public USTStrategyTiming
 {
 public:
-	ESTSpawnerVolume                                   VolumeType;                                               // 0x00F0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x00F1(0x0003) MISSED OFFSET
-	struct FVector                                     CenterLocation;                                           // 0x00F4(0x000C) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	float                                              SphereRadius;                                             // 0x0100(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     BoxExtent;                                                // 0x0104(0x000C) (BlueprintVisible, IsPlainOldData)
+	ESTSpawnerVolume VolumeType; // 0x00F0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x00F1(0x0003) MISSED OFFSET
+	struct FVector CenterLocation; // 0x00F4(0x000C) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	float SphereRadius; // 0x0100(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector BoxExtent; // 0x0104(0x000C) (BlueprintVisible, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyTiming_Trigger");
@@ -631,20 +611,19 @@ public:
 class USTStrategyTiming_Wave : public USTStrategyTiming
 {
 public:
-	TArray<int>                                        ConfigWaveAlive;                                          // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                WaveInterval;                                             // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bTriggerToStart : 1;                                      // 0x0104(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bDelayToStart : 1;                                        // 0x0104(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0105(0x0003) MISSED OFFSET
-	int                                                DelayDurationToStart;                                     // 0x0108(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRecycle;                                                 // 0x010C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x010D(0x0003) MISSED OFFSET
-	class USTStrategyTiming_Trigger*                   TriggerHelper;                                            // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                CurrentWave;                                              // 0x0118(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x14];                                      // 0x011C(0x0014) MISSED OFFSET
+	TArray<int> ConfigWaveAlive; // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int WaveInterval; // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bTriggerToStart : 1; // 0x0104(0x0001) (Edit, BlueprintVisible)
+	unsigned char bDelayToStart : 1; // 0x0104(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0x3]; // 0x0105(0x0003) MISSED OFFSET
+	int DelayDurationToStart; // 0x0108(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bRecycle; // 0x010C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x010D(0x0003) MISSED OFFSET
+	class USTStrategyTiming_Trigger* TriggerHelper; // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int CurrentWave; // 0x0118(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x14]; // 0x011C(0x0014) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpawnSystem.STStrategyTiming_Wave");

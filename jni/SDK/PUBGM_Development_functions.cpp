@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -7,6 +7,458 @@ namespace SDK
 //---------------------By BangJO---------------------------
 //Functions
 //---------------------By BangJO---------------------------
+
+// Function Development.ActorClickPickerWidget.SetPickerEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorClickPickerWidget::SetPickerEnabled(bool bEnable)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorClickPickerWidget.SetPickerEnabled");
+
+	UActorClickPickerWidget_SetPickerEnabled_Params params;
+	params.bEnable = bEnable;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorClickPickerWidget.SetOwnerTab
+// (Final, Native, Public)
+// Parameters:
+// class UActorInspectorTab* InOwnerTab (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorClickPickerWidget::SetOwnerTab(class UActorInspectorTab* InOwnerTab)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorClickPickerWidget.SetOwnerTab");
+
+	UActorClickPickerWidget_SetOwnerTab_Params params;
+	params.InOwnerTab = InOwnerTab;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorClickPickerWidget.IsPickerEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorClickPickerWidget::IsPickerEnabled()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorClickPickerWidget.IsPickerEnabled");
+
+	UActorClickPickerWidget_IsPickerEnabled_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.SetTargetObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject* InObject (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::SetTargetObject(class UObject* InObject)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.SetTargetObject");
+
+	UActorPropertyMonitorWidget_SetTargetObject_Params params;
+	params.InObject = InObject;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.SetTargetActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor* InActor (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::SetTargetActor(class AActor* InActor)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.SetTargetActor");
+
+	UActorPropertyMonitorWidget_SetTargetActor_Params params;
+	params.InActor = InActor;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.SetPropertyNames
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FString> PropertyNames (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UActorPropertyMonitorWidget::SetPropertyNames(TArray<struct FString> PropertyNames)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.SetPropertyNames");
+
+	UActorPropertyMonitorWidget_SetPropertyNames_Params params;
+	params.PropertyNames = PropertyNames;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.SearchProperties
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SearchKeyword (Parm, ZeroConstructor)
+
+void UActorPropertyMonitorWidget::SearchProperties(const struct FString& SearchKeyword)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.SearchProperties");
+
+	UActorPropertyMonitorWidget_SearchProperties_Params params;
+	params.SearchKeyword = SearchKeyword;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.RefreshPropertyValues
+// (Final, Native, Public, BlueprintCallable)
+
+void UActorPropertyMonitorWidget::RefreshPropertyValues()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.RefreshPropertyValues");
+
+	UActorPropertyMonitorWidget_RefreshPropertyValues_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnSearchTextChanged
+// (Final, Native, Protected, HasOutParms)
+// Parameters:
+// struct FText Text (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UActorPropertyMonitorWidget::OnSearchTextChanged(const struct FText& Text)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnSearchTextChanged");
+
+	UActorPropertyMonitorWidget_OnSearchTextChanged_Params params;
+	params.Text = Text;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnScaleChanged
+// (Final, Native, Protected)
+// Parameters:
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::OnScaleChanged(float Value)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnScaleChanged");
+
+	UActorPropertyMonitorWidget_OnScaleChanged_Params params;
+	params.Value = Value;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnPropertyValueCommittedInternal
+// (Final, Native, Protected, HasOutParms)
+// Parameters:
+// struct FText Text (ConstParm, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<enum ETextCommit> CommitMethod (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::OnPropertyValueCommittedInternal(const struct FText& Text, TEnumAsByte<enum ETextCommit> CommitMethod)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnPropertyValueCommittedInternal");
+
+	UActorPropertyMonitorWidget_OnPropertyValueCommittedInternal_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnPropertyValueCommitted
+// (Final, Native, Protected, HasOutParms)
+// Parameters:
+// struct FText Text (ConstParm, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<enum ETextCommit> CommitMethod (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PropertyName (Parm, ZeroConstructor)
+
+void UActorPropertyMonitorWidget::OnPropertyValueCommitted(const struct FText& Text, TEnumAsByte<enum ETextCommit> CommitMethod, const struct FString& PropertyName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnPropertyValueCommitted");
+
+	UActorPropertyMonitorWidget_OnPropertyValueCommitted_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+	params.PropertyName = PropertyName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnPropertyNameButtonClicked
+// (Final, Native, Protected)
+
+void UActorPropertyMonitorWidget::OnPropertyNameButtonClicked()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnPropertyNameButtonClicked");
+
+	UActorPropertyMonitorWidget_OnPropertyNameButtonClicked_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnOpacityChanged
+// (Final, Native, Protected)
+// Parameters:
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::OnOpacityChanged(float Value)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnOpacityChanged");
+
+	UActorPropertyMonitorWidget_OnOpacityChanged_Params params;
+	params.Value = Value;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnDragButtonReleased
+// (Final, Native, Protected)
+
+void UActorPropertyMonitorWidget::OnDragButtonReleased()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnDragButtonReleased");
+
+	UActorPropertyMonitorWidget_OnDragButtonReleased_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnDragButtonPressed
+// (Final, Native, Protected)
+
+void UActorPropertyMonitorWidget::OnDragButtonPressed()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnDragButtonPressed");
+
+	UActorPropertyMonitorWidget_OnDragButtonPressed_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnComponentSelectionChanged
+// (Final, Native, Protected)
+// Parameters:
+// struct FString SelectedItem (Parm, ZeroConstructor)
+// TEnumAsByte<enum ESelectInfo> SelectionType (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::OnComponentSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<enum ESelectInfo> SelectionType)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnComponentSelectionChanged");
+
+	UActorPropertyMonitorWidget_OnComponentSelectionChanged_Params params;
+	params.SelectedItem = SelectedItem;
+	params.SelectionType = SelectionType;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnClickListenerButtonClicked
+// (Final, Native, Protected)
+
+void UActorPropertyMonitorWidget::OnClickListenerButtonClicked()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnClickListenerButtonClicked");
+
+	UActorPropertyMonitorWidget_OnClickListenerButtonClicked_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ActorPropertyMonitorWidget.OnAttachedActorSelectionChanged
+// (Final, Native, Protected)
+// Parameters:
+// struct FString SelectedItem (Parm, ZeroConstructor)
+// TEnumAsByte<enum ESelectInfo> SelectionType (Parm, ZeroConstructor, IsPlainOldData)
+
+void UActorPropertyMonitorWidget::OnAttachedActorSelectionChanged(const struct FString& SelectedItem, TEnumAsByte<enum ESelectInfo> SelectionType)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ActorPropertyMonitorWidget.OnAttachedActorSelectionChanged");
+
+	UActorPropertyMonitorWidget_OnAttachedActorSelectionChanged_Params params;
+	params.SelectedItem = SelectedItem;
+	params.SelectionType = SelectionType;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
 
 // Function Development.CloudGMHandle.InitCloudGM
 // (Final, Native, Public, BlueprintCallable)
@@ -50,12 +502,259 @@ void UCloudGMHandle::DestroyCloudGM()
 }
 
 
+// Function Development.ImGuiFeatureWidget.SetFeatureVisible
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool bVisible (Parm, ZeroConstructor, IsPlainOldData)
+
+void UImGuiFeatureWidget::SetFeatureVisible(bool bVisible)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.SetFeatureVisible");
+
+	UImGuiFeatureWidget_SetFeatureVisible_Params params;
+	params.bVisible = bVisible;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiFeatureWidget.SetFeatureEnabled
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
+
+void UImGuiFeatureWidget::SetFeatureEnabled(bool bEnabled)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.SetFeatureEnabled");
+
+	UImGuiFeatureWidget_SetFeatureEnabled_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiFeatureWidget.IsFeatureVisible
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UImGuiFeatureWidget::IsFeatureVisible()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.IsFeatureVisible");
+
+	UImGuiFeatureWidget_IsFeatureVisible_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.IsFeatureEnabled
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UImGuiFeatureWidget::IsFeatureEnabled()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.IsFeatureEnabled");
+
+	UImGuiFeatureWidget_IsFeatureEnabled_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.GetOwnerWindow
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AImGuiWindowBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AImGuiWindowBase* UImGuiFeatureWidget::GetOwnerWindow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.GetOwnerWindow");
+
+	UImGuiFeatureWidget_GetOwnerWindow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.GetOwnerTab
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* UImGuiFeatureWidget::GetOwnerTab()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.GetOwnerTab");
+
+	UImGuiFeatureWidget_GetOwnerTab_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.GetOwner
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UImGuiFeatureWidget::GetOwner()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.GetOwner");
+
+	UImGuiFeatureWidget_GetOwner_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.GetFeatureName
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UImGuiFeatureWidget::GetFeatureName()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.GetFeatureName");
+
+	UImGuiFeatureWidget_GetFeatureName_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiFeatureWidget.GetFeatureID
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UImGuiFeatureWidget::GetFeatureID()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiFeatureWidget.GetFeatureID");
+
+	UImGuiFeatureWidget_GetFeatureID_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.DebugNameDisplayFeature.AddExcludedActorClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+
+void UDebugNameDisplayFeature::AddExcludedActorClass(class UClass* ActorClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.DebugNameDisplayFeature.AddExcludedActorClass");
+
+	UDebugNameDisplayFeature_AddExcludedActorClass_Params params;
+	params.ActorClass = ActorClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatAI.TeleportAIToLoc
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::TeleportAIToLoc(float X, float Y, float Z)
 {
@@ -81,9 +780,9 @@ void UGMCheatAI::TeleportAIToLoc(float X, float Y, float Z)
 // Function Development.GMCheatAI.SpawnAITeam
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AITeamID                       (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  Difficulty                     (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// int AITeamID (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Difficulty (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::SpawnAITeam(int Num, int AITeamID, unsigned char Difficulty)
 {
@@ -109,11 +808,11 @@ void UGMCheatAI::SpawnAITeam(int Num, int AITeamID, unsigned char Difficulty)
 // Function Development.GMCheatAI.SpawnAIPosi
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AITeamID                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiX                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiY                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiZ                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int AITeamID (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiX (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiY (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::SpawnAIPosi(int ID, int AITeamID, float PosiX, float PosiY, float PosiZ)
 {
@@ -141,8 +840,8 @@ void UGMCheatAI::SpawnAIPosi(int ID, int AITeamID, float PosiX, float PosiY, flo
 // Function Development.GMCheatAI.SpawnAI
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSpawnAll                      (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSpawnAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::SpawnAI(int Num, bool bSpawnAll)
 {
@@ -188,10 +887,10 @@ void UGMCheatAI::RecordReviveTowerInDSReplay()
 // Function Development.GMCheatAI.MoveToAIWithClassName
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 AIClassName                    (Parm, ZeroConstructor)
-// float                          XOffset                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          YOffset                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ZOffset                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AIClassName (Parm, ZeroConstructor)
+// float XOffset (Parm, ZeroConstructor, IsPlainOldData)
+// float YOffset (Parm, ZeroConstructor, IsPlainOldData)
+// float ZOffset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::MoveToAIWithClassName(const struct FString& AIClassName, float XOffset, float YOffset, float ZOffset)
 {
@@ -218,7 +917,7 @@ void UGMCheatAI::MoveToAIWithClassName(const struct FString& AIClassName, float 
 // Function Development.GMCheatAI.MoveToAIByDropItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::MoveToAIByDropItem(int ItemId)
 {
@@ -260,11 +959,32 @@ void UGMCheatAI::MoveToAI()
 }
 
 
+// Function Development.GMCheatAI.MobAIIgnorePlayers
+// (Final, Exec, Native, Public)
+
+void UGMCheatAI::MobAIIgnorePlayers()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatAI.MobAIIgnorePlayers");
+
+	UGMCheatAI_MobAIIgnorePlayers_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatAI.LogAIItemCount
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::LogAIItemCount(int ItemId, float Distance)
 {
@@ -289,7 +1009,7 @@ void UGMCheatAI::LogAIItemCount(int ItemId, float Distance)
 // Function Development.GMCheatAI.FindAIDropItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::FindAIDropItem(int ItemId)
 {
@@ -313,7 +1033,7 @@ void UGMCheatAI::FindAIDropItem(int ItemId)
 // Function Development.GMCheatAI.ChangeAIBehaviorTree
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            TreeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// int TreeIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::ChangeAIBehaviorTree(int TreeIndex)
 {
@@ -337,9 +1057,9 @@ void UGMCheatAI::ChangeAIBehaviorTree(int TreeIndex)
 // Function Development.GMCheatAI.AddAIItem
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAI::AddAIItem(int ID, int Count, float Distance)
 {
@@ -365,8 +1085,8 @@ void UGMCheatAI::AddAIItem(int ID, int Count, float Distance)
 // Function Development.GMCheatAnimation.TestAnimation
 // (Final, Exec, Native, Private)
 // Parameters:
-// int                            Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Param2                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// bool Param2 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAnimation::TestAnimation(int Param1, bool Param2)
 {
@@ -412,7 +1132,7 @@ void UGMCheatAnimation::DumpCharacterAnimBPVars()
 // Function Development.GMCheatAvatar.UseLocalWeaponDIYData
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bFlag                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::UseLocalWeaponDIYData(bool bFlag)
 {
@@ -457,7 +1177,7 @@ void UGMCheatAvatar::UseLocalVehicleAvatar()
 // Function Development.GMCheatAvatar.SetWeaponPendantShow
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bShow                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetWeaponPendantShow(bool bShow)
 {
@@ -481,8 +1201,8 @@ void UGMCheatAvatar::SetWeaponPendantShow(bool bShow)
 // Function Development.GMCheatAvatar.SetVehicleAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleShapeType               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleShapeType (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetVehicleAvatar(int VehicleShapeType, int VehicleSkin)
 {
@@ -507,7 +1227,7 @@ void UGMCheatAvatar::SetVehicleAvatar(int VehicleShapeType, int VehicleSkin)
 // Function Development.GMCheatAvatar.SetPlayerTeamBodyInstMask
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Mask                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Mask (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetPlayerTeamBodyInstMask(int Mask)
 {
@@ -531,7 +1251,7 @@ void UGMCheatAvatar::SetPlayerTeamBodyInstMask(int Mask)
 // Function Development.GMCheatAvatar.SetPlayerBodyInstMask
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Mask                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Mask (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetPlayerBodyInstMask(int Mask)
 {
@@ -555,8 +1275,8 @@ void UGMCheatAvatar::SetPlayerBodyInstMask(int Mask)
 // Function Development.GMCheatAvatar.SetGrenadeAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SubType                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EquipmentSkin                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SubType (Parm, ZeroConstructor, IsPlainOldData)
+// int EquipmentSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetGrenadeAvatar(int SubType, int EquipmentSkin)
 {
@@ -581,8 +1301,8 @@ void UGMCheatAvatar::SetGrenadeAvatar(int SubType, int EquipmentSkin)
 // Function Development.GMCheatAvatar.SetEquipmentAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            EquipmentAvatarType            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EquipmentSkin                  (Parm, ZeroConstructor, IsPlainOldData)
+// int EquipmentAvatarType (Parm, ZeroConstructor, IsPlainOldData)
+// int EquipmentSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetEquipmentAvatar(int EquipmentAvatarType, int EquipmentSkin)
 {
@@ -607,7 +1327,7 @@ void UGMCheatAvatar::SetEquipmentAvatar(int EquipmentAvatarType, int EquipmentSk
 // Function Development.GMCheatAvatar.SetEnableWingAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetEnableWingAvatar(bool Val)
 {
@@ -631,7 +1351,7 @@ void UGMCheatAvatar::SetEnableWingAvatar(bool Val)
 // Function Development.GMCheatAvatar.SetDownloadInBattle
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetDownloadInBattle(bool bEnable)
 {
@@ -655,7 +1375,7 @@ void UGMCheatAvatar::SetDownloadInBattle(bool bEnable)
 // Function Development.GMCheatAvatar.SetAvatarDownloadInBattle
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnableDownload                (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnableDownload (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::SetAvatarDownloadInBattle(bool bEnableDownload)
 {
@@ -721,8 +1441,8 @@ void UGMCheatAvatar::PrintAllStaticBufferSize()
 // Function Development.GMCheatAvatar.DeleteVehicleAdvanceAvatar_Style
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            VehicleStyle                   (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleStyle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::DeleteVehicleAdvanceAvatar_Style(int VehicleSkin, int VehicleStyle)
 {
@@ -747,8 +1467,8 @@ void UGMCheatAvatar::DeleteVehicleAdvanceAvatar_Style(int VehicleSkin, int Vehic
 // Function Development.GMCheatAvatar.DeleteVehicleAdvanceAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModelID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
+// int ModelID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::DeleteVehicleAdvanceAvatar(int VehicleSkin, int ModelID)
 {
@@ -794,7 +1514,7 @@ void UGMCheatAvatar::DebugWorldPlayerAvatarInfo()
 // Function Development.GMCheatAvatar.DebugChangeWearIndex
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::DebugChangeWearIndex(int Index)
 {
@@ -860,7 +1580,7 @@ void UGMCheatAvatar::ClearItemHandleNotExistlist()
 // Function Development.GMCheatAvatar.ClearCharacterAvatarHandlePool
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bSelf                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSelf (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::ClearCharacterAvatarHandlePool(bool bSelf)
 {
@@ -884,10 +1604,10 @@ void UGMCheatAvatar::ClearCharacterAvatarHandlePool(bool bSelf)
 // Function Development.GMCheatAvatar.ChangeBattleAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            HeadAvatarID                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            HairAvatarID                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InGender                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PutOffAvatar                   (Parm, ZeroConstructor, IsPlainOldData)
+// int HeadAvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// int HairAvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// int InGender (Parm, ZeroConstructor, IsPlainOldData)
+// int PutOffAvatar (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::ChangeBattleAvatar(int HeadAvatarID, int HairAvatarID, int InGender, int PutOffAvatar)
 {
@@ -914,8 +1634,8 @@ void UGMCheatAvatar::ChangeBattleAvatar(int HeadAvatarID, int HairAvatarID, int 
 // Function Development.GMCheatAvatar.AddWeaponPendantItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            pendantID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int pendantID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddWeaponPendantItem(int WeaponId, int pendantID)
 {
@@ -940,8 +1660,8 @@ void UGMCheatAvatar::AddWeaponPendantItem(int WeaponId, int pendantID)
 // Function Development.GMCheatAvatar.AddWeaponDIYPlan
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DIYPlanID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// int DIYPlanID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddWeaponDIYPlan(int AvatarID, int DIYPlanID)
 {
@@ -966,7 +1686,7 @@ void UGMCheatAvatar::AddWeaponDIYPlan(int AvatarID, int DIYPlanID)
 // Function Development.GMCheatAvatar.AddWeaponAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            WeaponSkin                     (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddWeaponAvatar(int WeaponSkin)
 {
@@ -990,8 +1710,8 @@ void UGMCheatAvatar::AddWeaponAvatar(int WeaponSkin)
 // Function Development.GMCheatAvatar.AddWeaponAttachmentAvatarSimple
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponAttachmentSkin           (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponAttachmentSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddWeaponAttachmentAvatarSimple(int WeaponId, int WeaponAttachmentSkin)
 {
@@ -1016,8 +1736,8 @@ void UGMCheatAvatar::AddWeaponAttachmentAvatarSimple(int WeaponId, int WeaponAtt
 // Function Development.GMCheatAvatar.AddWeaponAttachmentAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponAttachmentSkin           (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponAttachmentSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddWeaponAttachmentAvatar(int WeaponId, int WeaponAttachmentSkin)
 {
@@ -1042,7 +1762,7 @@ void UGMCheatAvatar::AddWeaponAttachmentAvatar(int WeaponId, int WeaponAttachmen
 // Function Development.GMCheatAvatar.AddVehicleAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddVehicleAvatar(int VehicleSkin)
 {
@@ -1066,8 +1786,8 @@ void UGMCheatAvatar::AddVehicleAvatar(int VehicleSkin)
 // Function Development.GMCheatAvatar.AddVehicleAdvanceAvatar_Style
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            VehicleStyle                   (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleStyle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddVehicleAdvanceAvatar_Style(int VehicleSkin, int VehicleStyle)
 {
@@ -1092,11 +1812,11 @@ void UGMCheatAvatar::AddVehicleAdvanceAvatar_Style(int VehicleSkin, int VehicleS
 // Function Development.GMCheatAvatar.AddVehicleAdvanceAvatar
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            VehicleSkin                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModelID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ColorID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PatternID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParticleID                     (Parm, ZeroConstructor, IsPlainOldData)
+// int VehicleSkin (Parm, ZeroConstructor, IsPlainOldData)
+// int ModelID (Parm, ZeroConstructor, IsPlainOldData)
+// int ColorID (Parm, ZeroConstructor, IsPlainOldData)
+// int PatternID (Parm, ZeroConstructor, IsPlainOldData)
+// int ParticleID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddVehicleAdvanceAvatar(int VehicleSkin, int ModelID, int ColorID, int PatternID, int ParticleID)
 {
@@ -1124,7 +1844,7 @@ void UGMCheatAvatar::AddVehicleAdvanceAvatar(int VehicleSkin, int ModelID, int C
 // Function Development.GMCheatAvatar.AddItemPathNotExistlist
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddItemPathNotExistlist(int ItemId)
 {
@@ -1148,7 +1868,7 @@ void UGMCheatAvatar::AddItemPathNotExistlist(int ItemId)
 // Function Development.GMCheatAvatar.AddItemHandleNotExistlist
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatAvatar::AddItemHandleNotExistlist(int ItemId)
 {
@@ -1172,7 +1892,7 @@ void UGMCheatAvatar::AddItemHandleNotExistlist(int ItemId)
 // Function Development.GMCheatBackpack.UseItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::UseItem(int ID)
 {
@@ -1196,7 +1916,7 @@ void UGMCheatBackpack::UseItem(int ID)
 // Function Development.GMCheatBackpack.FlushItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            onlyStatic                     (Parm, ZeroConstructor, IsPlainOldData)
+// int onlyStatic (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::FlushItem(int onlyStatic)
 {
@@ -1220,7 +1940,7 @@ void UGMCheatBackpack::FlushItem(int onlyStatic)
 // Function Development.GMCheatBackpack.DropItemsWithType
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            TypeItem                       (Parm, ZeroConstructor, IsPlainOldData)
+// int TypeItem (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::DropItemsWithType(int TypeItem)
 {
@@ -1244,7 +1964,7 @@ void UGMCheatBackpack::DropItemsWithType(int TypeItem)
 // Function Development.GMCheatBackpack.DropItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::DropItem(int ID)
 {
@@ -1286,6 +2006,27 @@ void UGMCheatBackpack::DropAllItem()
 }
 
 
+// Function Development.GMCheatBackpack.DestroyPickUpActors
+// (Final, Exec, Native, Public)
+
+void UGMCheatBackpack::DestroyPickUpActors()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatBackpack.DestroyPickUpActors");
+
+	UGMCheatBackpack_DestroyPickUpActors_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatBackpack.ClearBackpack
 // (Final, Exec, Native, Public)
 
@@ -1310,8 +2051,8 @@ void UGMCheatBackpack::ClearBackpack()
 // Function Development.GMCheatBackpack.BatchAddItemsString
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FString>         ItemDetailArray                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bClearBackpack                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ItemDetailArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bClearBackpack (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::BatchAddItemsString(TArray<struct FString> ItemDetailArray, bool bClearBackpack)
 {
@@ -1336,8 +2077,8 @@ void UGMCheatBackpack::BatchAddItemsString(TArray<struct FString> ItemDetailArra
 // Function Development.GMCheatBackpack.BatchAddItemsFromFile
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           bClearBackpack                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool bClearBackpack (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::BatchAddItemsFromFile(const struct FString& Filename, bool bClearBackpack)
 {
@@ -1362,7 +2103,7 @@ void UGMCheatBackpack::BatchAddItemsFromFile(const struct FString& Filename, boo
 // Function Development.GMCheatBackpack.AddItemString
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 ItemDetail                     (Parm, ZeroConstructor)
+// struct FString ItemDetail (Parm, ZeroConstructor)
 
 void UGMCheatBackpack::AddItemString(const struct FString& ItemDetail)
 {
@@ -1386,9 +2127,9 @@ void UGMCheatBackpack::AddItemString(const struct FString& ItemDetail)
 // Function Development.GMCheatBackpack.AddItemNew
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 ID                             (Parm, ZeroConstructor)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PickupType                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ID (Parm, ZeroConstructor)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// int PickupType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::AddItemNew(const struct FString& ID, int Count, int PickupType)
 {
@@ -1414,9 +2155,9 @@ void UGMCheatBackpack::AddItemNew(const struct FString& ID, int Count, int Picku
 // Function Development.GMCheatBackpack.AddItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PickupType                     (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// int PickupType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::AddItem(int ID, int Count, int PickupType)
 {
@@ -1442,10 +2183,10 @@ void UGMCheatBackpack::AddItem(int ID, int Count, int PickupType)
 // Function Development.GMCheatBackpack.AddAvatarItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Color                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Pattern                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// int Color (Parm, ZeroConstructor, IsPlainOldData)
+// int Pattern (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatBackpack::AddAvatarItem(int ID, int Color, int Pattern, int Num)
 {
@@ -1472,7 +2213,7 @@ void UGMCheatBackpack::AddAvatarItem(int ID, int Color, int Pattern, int Num)
 // Function Development.GMCheatCharacter.ToggleUserCmdDeltaSendAck
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleUserCmdDeltaSendAck(bool Val)
 {
@@ -1496,7 +2237,7 @@ void UGMCheatCharacter::ToggleUserCmdDeltaSendAck(bool Val)
 // Function Development.GMCheatCharacter.ToggleUserCmdDeltaFlag
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleUserCmdDeltaFlag(bool Val)
 {
@@ -1520,7 +2261,7 @@ void UGMCheatCharacter::ToggleUserCmdDeltaFlag(bool Val)
 // Function Development.GMCheatCharacter.ToggleUserCmdDeltaCheckSum
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleUserCmdDeltaCheckSum(bool Val)
 {
@@ -1544,7 +2285,7 @@ void UGMCheatCharacter::ToggleUserCmdDeltaCheckSum(bool Val)
 // Function Development.GMCheatCharacter.ToggleUserCmdDelta
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleUserCmdDelta(bool Val)
 {
@@ -1568,7 +2309,7 @@ void UGMCheatCharacter::ToggleUserCmdDelta(bool Val)
 // Function Development.GMCheatCharacter.ToggleServerAcknowledgePossession
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleServerAcknowledgePossession(bool Val)
 {
@@ -1592,7 +2333,7 @@ void UGMCheatCharacter::ToggleServerAcknowledgePossession(bool Val)
 // Function Development.GMCheatCharacter.ToggleCheatLocation
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ToggleCheatLocation(bool Val)
 {
@@ -1616,8 +2357,8 @@ void UGMCheatCharacter::ToggleCheatLocation(bool Val)
 // Function Development.GMCheatCharacter.TestLowProbCircle
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           UseLowProb                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoopCount                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool UseLowProb (Parm, ZeroConstructor, IsPlainOldData)
+// int LoopCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::TestLowProbCircle(bool UseLowProb, int LoopCount)
 {
@@ -1642,7 +2383,7 @@ void UGMCheatCharacter::TestLowProbCircle(bool UseLowProb, int LoopCount)
 // Function Development.GMCheatCharacter.TestLaunchFly
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Speed                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Speed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::TestLaunchFly(float Speed)
 {
@@ -1687,9 +2428,9 @@ void UGMCheatCharacter::TestAutoMoveToShootingMachine()
 // Function Development.GMCheatCharacter.TestAutoMoveToLocation
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::TestAutoMoveToLocation(float X, float Y, float Z)
 {
@@ -1715,7 +2456,7 @@ void UGMCheatCharacter::TestAutoMoveToLocation(float X, float Y, float Z)
 // Function Development.GMCheatCharacter.TestAutoMoveToCharacter
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 TargetPlayerUID                (Parm, ZeroConstructor)
+// struct FString TargetPlayerUID (Parm, ZeroConstructor)
 
 void UGMCheatCharacter::TestAutoMoveToCharacter(const struct FString& TargetPlayerUID)
 {
@@ -1781,8 +2522,8 @@ void UGMCheatCharacter::SwitchViewTarget()
 // Function Development.GMCheatCharacter.StartAirDropSpecified
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::StartAirDropSpecified(float X, float Y)
 {
@@ -1807,9 +2548,9 @@ void UGMCheatCharacter::StartAirDropSpecified(float X, float Y)
 // Function Development.GMCheatCharacter.StartAirDropBackupEnter
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPlaneNum                    (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPlaneNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::StartAirDropBackupEnter(float X, float Y, int MaxPlaneNum)
 {
@@ -1835,7 +2576,7 @@ void UGMCheatCharacter::StartAirDropBackupEnter(float X, float Y, int MaxPlaneNu
 // Function Development.GMCheatCharacter.StartAirDrop
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::StartAirDrop(int Index)
 {
@@ -1859,9 +2600,9 @@ void UGMCheatCharacter::StartAirDrop(int Index)
 // Function Development.GMCheatCharacter.StartAirAttackSpecified
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::StartAirAttackSpecified(float X, float Y, float Radius)
 {
@@ -1887,7 +2628,7 @@ void UGMCheatCharacter::StartAirAttackSpecified(float X, float Y, float Radius)
 // Function Development.GMCheatCharacter.StartAirAttack
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::StartAirAttack(int Index)
 {
@@ -1995,7 +2736,7 @@ void UGMCheatCharacter::ShowAllRoles()
 // Function Development.GMCheatCharacter.SetTimeSpeedFactor
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetTimeSpeedFactor(float Val)
 {
@@ -2019,7 +2760,7 @@ void UGMCheatCharacter::SetTimeSpeedFactor(float Val)
 // Function Development.GMCheatCharacter.SetTimeSpeedCheck
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetTimeSpeedCheck(bool Val)
 {
@@ -2043,7 +2784,7 @@ void UGMCheatCharacter::SetTimeSpeedCheck(bool Val)
 // Function Development.GMCheatCharacter.SetSpeed
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Modifier                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Modifier (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetSpeed(float Modifier)
 {
@@ -2067,7 +2808,7 @@ void UGMCheatCharacter::SetSpeed(float Modifier)
 // Function Development.GMCheatCharacter.SetMaxHealth
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          HP                             (Parm, ZeroConstructor, IsPlainOldData)
+// float HP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetMaxHealth(float HP)
 {
@@ -2091,10 +2832,10 @@ void UGMCheatCharacter::SetMaxHealth(float HP)
 // Function Development.GMCheatCharacter.SetLowProbCircle
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          R                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Prob                           (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float R (Parm, ZeroConstructor, IsPlainOldData)
+// float Prob (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetLowProbCircle(float X, float Y, float R, float Prob)
 {
@@ -2121,9 +2862,9 @@ void UGMCheatCharacter::SetLowProbCircle(float X, float Y, float R, float Prob)
 // Function Development.GMCheatCharacter.SetCustomJumpPoint
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          JmpX                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          JmpY                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          JmpRadius                      (Parm, ZeroConstructor, IsPlainOldData)
+// float JmpX (Parm, ZeroConstructor, IsPlainOldData)
+// float JmpY (Parm, ZeroConstructor, IsPlainOldData)
+// float JmpRadius (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetCustomJumpPoint(float JmpX, float JmpY, float JmpRadius)
 {
@@ -2149,7 +2890,7 @@ void UGMCheatCharacter::SetCustomJumpPoint(float JmpX, float JmpY, float JmpRadi
 // Function Development.GMCheatCharacter.SetCircleCenter
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 PointString                    (Parm, ZeroConstructor)
+// struct FString PointString (Parm, ZeroConstructor)
 
 void UGMCheatCharacter::SetCircleCenter(const struct FString& PointString)
 {
@@ -2173,9 +2914,9 @@ void UGMCheatCharacter::SetCircleCenter(const struct FString& PointString)
 // Function Development.GMCheatCharacter.SetCirCenterFixed
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetCirCenterFixed(bool Enable, float X, float Y)
 {
@@ -2201,7 +2942,7 @@ void UGMCheatCharacter::SetCirCenterFixed(bool Enable, float X, float Y)
 // Function Development.GMCheatCharacter.SetAirDropEnable
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetAirDropEnable(bool Enable)
 {
@@ -2225,7 +2966,7 @@ void UGMCheatCharacter::SetAirDropEnable(bool Enable)
 // Function Development.GMCheatCharacter.SetAirAttackEnable
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::SetAirAttackEnable(bool Enable)
 {
@@ -2249,7 +2990,7 @@ void UGMCheatCharacter::SetAirAttackEnable(bool Enable)
 // Function Development.GMCheatCharacter.Set2x2ForceCircleLastR
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          R                              (Parm, ZeroConstructor, IsPlainOldData)
+// float R (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::Set2x2ForceCircleLastR(float R)
 {
@@ -2273,9 +3014,9 @@ void UGMCheatCharacter::Set2x2ForceCircleLastR(float R)
 // Function Development.GMCheatCharacter.Set2x2ForceCircle
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          R                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float R (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::Set2x2ForceCircle(float X, float Y, float R)
 {
@@ -2301,9 +3042,9 @@ void UGMCheatCharacter::Set2x2ForceCircle(float X, float Y, float R)
 // Function Development.GMCheatCharacter.Set2x2CircleCenter
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::Set2x2CircleCenter(int Index, float X, float Y)
 {
@@ -2329,12 +3070,12 @@ void UGMCheatCharacter::Set2x2CircleCenter(int Index, float X, float Y)
 // Function Development.GMCheatCharacter.Set2x2Circle3Center
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          x2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          y2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X3                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          y3                             (Parm, ZeroConstructor, IsPlainOldData)
+// float X1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// float x2 (Parm, ZeroConstructor, IsPlainOldData)
+// float y2 (Parm, ZeroConstructor, IsPlainOldData)
+// float X3 (Parm, ZeroConstructor, IsPlainOldData)
+// float y3 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::Set2x2Circle3Center(float X1, float Y1, float x2, float y2, float X3, float y3)
 {
@@ -2363,7 +3104,7 @@ void UGMCheatCharacter::Set2x2Circle3Center(float X1, float Y1, float x2, float 
 // Function Development.GMCheatCharacter.PrintMovementLog
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            PrintLog                       (Parm, ZeroConstructor, IsPlainOldData)
+// int PrintLog (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::PrintMovementLog(int PrintLog)
 {
@@ -2408,8 +3149,8 @@ void UGMCheatCharacter::PrintDownCollision()
 // Function Development.GMCheatCharacter.MoveToXY
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::MoveToXY(float X, float Y)
 {
@@ -2434,7 +3175,7 @@ void UGMCheatCharacter::MoveToXY(float X, float Y)
 // Function Development.GMCheatCharacter.MoveToVehicle
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::MoveToVehicle(int ItemId)
 {
@@ -2458,7 +3199,7 @@ void UGMCheatCharacter::MoveToVehicle(int ItemId)
 // Function Development.GMCheatCharacter.MoveToS
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 VectorString                   (Parm, ZeroConstructor)
+// struct FString VectorString (Parm, ZeroConstructor)
 
 void UGMCheatCharacter::MoveToS(const struct FString& VectorString)
 {
@@ -2482,7 +3223,7 @@ void UGMCheatCharacter::MoveToS(const struct FString& VectorString)
 // Function Development.GMCheatCharacter.MoveToNearestVehicle
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          IgnoreDistance                 (Parm, ZeroConstructor, IsPlainOldData)
+// float IgnoreDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::MoveToNearestVehicle(float IgnoreDistance)
 {
@@ -2506,7 +3247,7 @@ void UGMCheatCharacter::MoveToNearestVehicle(float IgnoreDistance)
 // Function Development.GMCheatCharacter.MoveToItem
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::MoveToItem(int ItemId)
 {
@@ -2530,9 +3271,9 @@ void UGMCheatCharacter::MoveToItem(int ItemId)
 // Function Development.GMCheatCharacter.MoveTo
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::MoveTo(float X, float Y, float Z)
 {
@@ -2558,7 +3299,7 @@ void UGMCheatCharacter::MoveTo(float X, float Y, float Z)
 // Function Development.GMCheatCharacter.ModifyStreamingDistance
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Distance                       (Parm, ZeroConstructor, IsPlainOldData)
+// int Distance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::ModifyStreamingDistance(int Distance)
 {
@@ -2582,7 +3323,7 @@ void UGMCheatCharacter::ModifyStreamingDistance(int Distance)
 // Function Development.GMCheatCharacter.KillSomeOne
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 InPlayerName                   (Parm, ZeroConstructor)
+// struct FString InPlayerName (Parm, ZeroConstructor)
 
 void UGMCheatCharacter::KillSomeOne(const struct FString& InPlayerName)
 {
@@ -2627,7 +3368,7 @@ void UGMCheatCharacter::KillAll()
 // Function Development.GMCheatCharacter.Kill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            GivenNumber                    (Parm, ZeroConstructor, IsPlainOldData)
+// int GivenNumber (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::Kill(int GivenNumber)
 {
@@ -2648,31 +3389,10 @@ void UGMCheatCharacter::Kill(int GivenNumber)
 }
 
 
-// Function Development.GMCheatCharacter.GMTestZengzuo
-// (Final, Exec, Native, Public)
-
-void UGMCheatCharacter::GMTestZengzuo()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatCharacter.GMTestZengzuo");
-
-	UGMCheatCharacter_GMTestZengzuo_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function Development.GMCheatCharacter.GMSetCampId
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            CamID                          (Parm, ZeroConstructor, IsPlainOldData)
+// int CamID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatCharacter::GMSetCampId(int CamID)
 {
@@ -2717,7 +3437,7 @@ void UGMCheatCharacter::GetGameScreenSize()
 // Function Development.GMCheatCharacter.ExecFollowTeammate
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UGMCheatCharacter::ExecFollowTeammate(const struct FString& Name)
 {
@@ -2783,7 +3503,7 @@ void UGMCheatCharacter::DebugPhysicsAsset()
 // Function Development.GMCheatDump.DumpWeaponsToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpWeaponsToFile(const struct FString& Filename)
 {
@@ -2807,7 +3527,7 @@ void UGMCheatDump::DumpWeaponsToFile(const struct FString& Filename)
 // Function Development.GMCheatDump.DumpVehicleToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpVehicleToFile(const struct FString& Filename)
 {
@@ -2831,7 +3551,7 @@ void UGMCheatDump::DumpVehicleToFile(const struct FString& Filename)
 // Function Development.GMCheatDump.DumpVehicleAnimInstanceToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpVehicleAnimInstanceToFile(const struct FString& Filename)
 {
@@ -2897,7 +3617,7 @@ void UGMCheatDump::DumpVehicle()
 // Function Development.GMCheatDump.DumpSimulatedCharacterAnimInstanceToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpSimulatedCharacterAnimInstanceToFile(const struct FString& Filename)
 {
@@ -2942,8 +3662,8 @@ void UGMCheatDump::DumpSimulatedCharacterAnimInstance()
 // Function Development.GMCheatDump.DumpReticleTargetActorToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           bPrintFunc                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool bPrintFunc (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatDump::DumpReticleTargetActorToFile(const struct FString& Filename, bool bPrintFunc)
 {
@@ -2968,7 +3688,7 @@ void UGMCheatDump::DumpReticleTargetActorToFile(const struct FString& Filename, 
 // Function Development.GMCheatDump.DumpReticleTargetActor
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bPrintFunc                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPrintFunc (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatDump::DumpReticleTargetActor(bool bPrintFunc)
 {
@@ -3013,7 +3733,7 @@ void UGMCheatDump::DumpPlayerSkillInfo()
 // Function Development.GMCheatDump.DumpPlayerInfoToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpPlayerInfoToFile(const struct FString& Filename)
 {
@@ -3037,7 +3757,7 @@ void UGMCheatDump::DumpPlayerInfoToFile(const struct FString& Filename)
 // Function Development.GMCheatDump.DumpPlayerControllerToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpPlayerControllerToFile(const struct FString& Filename)
 {
@@ -3082,7 +3802,7 @@ void UGMCheatDump::DumpPlayerController()
 // Function Development.GMCheatDump.DumpPlayerCameraManagerToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpPlayerCameraManagerToFile(const struct FString& Filename)
 {
@@ -3106,7 +3826,7 @@ void UGMCheatDump::DumpPlayerCameraManagerToFile(const struct FString& Filename)
 // Function Development.GMCheatDump.DumpObservingCharacterToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpObservingCharacterToFile(const struct FString& Filename)
 {
@@ -3148,10 +3868,38 @@ void UGMCheatDump::DumpObservingCharacter()
 }
 
 
+// Function Development.GMCheatDump.DumpObjectPropertiesRecursive
+// (Final, Exec, Native, Public, Const)
+// Parameters:
+// struct FString ObjectName (Parm, ZeroConstructor)
+// int Depth (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPrintFunc (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGMCheatDump::DumpObjectPropertiesRecursive(const struct FString& ObjectName, int Depth, bool bPrintFunc)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatDump.DumpObjectPropertiesRecursive");
+
+	UGMCheatDump_DumpObjectPropertiesRecursive_Params params;
+	params.ObjectName = ObjectName;
+	params.Depth = Depth;
+	params.bPrintFunc = bPrintFunc;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatDump.DumpObjectProperties
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 ObjectName                     (Parm, ZeroConstructor)
+// struct FString ObjectName (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpObjectProperties(const struct FString& ObjectName)
 {
@@ -3175,7 +3923,7 @@ void UGMCheatDump::DumpObjectProperties(const struct FString& ObjectName)
 // Function Development.GMCheatDump.DumpCharacterToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpCharacterToFile(const struct FString& Filename)
 {
@@ -3199,7 +3947,7 @@ void UGMCheatDump::DumpCharacterToFile(const struct FString& Filename)
 // Function Development.GMCheatDump.DumpCharacterAnimInstanceToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpCharacterAnimInstanceToFile(const struct FString& Filename)
 {
@@ -3262,10 +4010,31 @@ void UGMCheatDump::DumpCharacter()
 }
 
 
+// Function Development.GMCheatDump.DumpBatchManager
+// (Final, Exec, Native, Public)
+
+void UGMCheatDump::DumpBatchManager()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatDump.DumpBatchManager");
+
+	UGMCheatDump_DumpBatchManager_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatDump.DumpAllVehiclesToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpAllVehiclesToFile(const struct FString& Filename)
 {
@@ -3310,9 +4079,10 @@ void UGMCheatDump::DumpAllVehicles()
 // Function Development.GMCheatDump.DumpAllSkillActorsInfoToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
+// int Depth (Parm, ZeroConstructor, IsPlainOldData)
 
-void UGMCheatDump::DumpAllSkillActorsInfoToFile(const struct FString& Filename)
+void UGMCheatDump::DumpAllSkillActorsInfoToFile(const struct FString& Filename, int Depth)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -3320,6 +4090,7 @@ void UGMCheatDump::DumpAllSkillActorsInfoToFile(const struct FString& Filename)
 
 	UGMCheatDump_DumpAllSkillActorsInfoToFile_Params params;
 	params.Filename = Filename;
+	params.Depth = Depth;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -3333,14 +4104,17 @@ void UGMCheatDump::DumpAllSkillActorsInfoToFile(const struct FString& Filename)
 
 // Function Development.GMCheatDump.DumpAllSkillActorsInfo
 // (Final, Exec, Native, Public, Const)
+// Parameters:
+// int Depth (Parm, ZeroConstructor, IsPlainOldData)
 
-void UGMCheatDump::DumpAllSkillActorsInfo()
+void UGMCheatDump::DumpAllSkillActorsInfo(int Depth)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatDump.DumpAllSkillActorsInfo");
 
 	UGMCheatDump_DumpAllSkillActorsInfo_Params params;
+	params.Depth = Depth;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -3355,7 +4129,7 @@ void UGMCheatDump::DumpAllSkillActorsInfo()
 // Function Development.GMCheatDump.DumpAllPlayerControllerToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpAllPlayerControllerToFile(const struct FString& Filename)
 {
@@ -3400,8 +4174,8 @@ void UGMCheatDump::DumpAllPlayerController()
 // Function Development.GMCheatDump.DumpAllCustomActorsInfoToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// class UClass*                  DesiredClass                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// class UClass* DesiredClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpAllCustomActorsInfoToFile(class UClass* DesiredClass, const struct FString& Filename)
 {
@@ -3426,7 +4200,7 @@ void UGMCheatDump::DumpAllCustomActorsInfoToFile(class UClass* DesiredClass, con
 // Function Development.GMCheatDump.DumpAllCustomActorsInfo
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// class UClass*                  DesiredClass                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* DesiredClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatDump::DumpAllCustomActorsInfo(class UClass* DesiredClass)
 {
@@ -3450,7 +4224,7 @@ void UGMCheatDump::DumpAllCustomActorsInfo(class UClass* DesiredClass)
 // Function Development.GMCheatDump.DumpAllCharactersToFile
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UGMCheatDump::DumpAllCharactersToFile(const struct FString& Filename)
 {
@@ -3516,7 +4290,7 @@ void UGMCheatGameFlow::StartReadyCountDown()
 // Function Development.GMCheatGameFlow.SetStateLeftTime
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            LeftTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// int LeftTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatGameFlow::SetStateLeftTime(int LeftTime)
 {
@@ -3603,7 +4377,7 @@ void UGMCheatGameFlow::GameModeGotoFightingState()
 // Function Development.GMCheatGameFlow.DsLuaGM
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 CmdString                      (ConstParm, Parm, ZeroConstructor)
+// struct FString CmdString (ConstParm, Parm, ZeroConstructor)
 
 void UGMCheatGameFlow::DsLuaGM(const struct FString& CmdString)
 {
@@ -3627,7 +4401,7 @@ void UGMCheatGameFlow::DsLuaGM(const struct FString& CmdString)
 // Function Development.GMCheatGameFlow.DsLuaDoString
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 LuaString                      (Parm, ZeroConstructor)
+// struct FString LuaString (Parm, ZeroConstructor)
 
 void UGMCheatGameFlow::DsLuaDoString(const struct FString& LuaString)
 {
@@ -3672,7 +4446,7 @@ void UGMCheatHiggs::TriggerActorChannelErrorDelegate()
 // Function Development.GMCheatHiggs.TestSpawnStaticmesh
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHiggs::TestSpawnStaticmesh(int Count)
 {
@@ -3696,8 +4470,8 @@ void UGMCheatHiggs::TestSpawnStaticmesh(int Count)
 // Function Development.GMCheatHiggs.TestGMCheatHiggs
 // (Final, Exec, Native, Private)
 // Parameters:
-// int                            Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Param2                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// bool Param2 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHiggs::TestGMCheatHiggs(int Param1, bool Param2)
 {
@@ -3722,8 +4496,8 @@ void UGMCheatHiggs::TestGMCheatHiggs(int Param1, bool Param2)
 // Function Development.GMCheatHiggs.TestGlueHia
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            GlueType                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            GlueValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// int GlueType (Parm, ZeroConstructor, IsPlainOldData)
+// int GlueValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHiggs::TestGlueHia(int GlueType, int GlueValue)
 {
@@ -3748,7 +4522,7 @@ void UGMCheatHiggs::TestGlueHia(int GlueType, int GlueValue)
 // Function Development.GMCheatHiggs.StatCPU
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHiggs::StatCPU(int Enable)
 {
@@ -3772,7 +4546,7 @@ void UGMCheatHiggs::StatCPU(int Enable)
 // Function Development.GMCheatHiggs.SetOpenSecurityAlert
 // (Exec, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           bOpen                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHiggs::SetOpenSecurityAlert(bool bOpen)
 {
@@ -3795,7 +4569,7 @@ void UGMCheatHiggs::SetOpenSecurityAlert(bool bOpen)
 // Function Development.GMCheatHiggs.OnFinishAsyncLoadResource
 // (Final, Native, Private, HasDefaults)
 // Parameters:
-// struct FSoftObjectPath         SoftObjectPath                 (Parm)
+// struct FSoftObjectPath SoftObjectPath (Parm)
 
 void UGMCheatHiggs::OnFinishAsyncLoadResource(const struct FSoftObjectPath& SoftObjectPath)
 {
@@ -3819,7 +4593,7 @@ void UGMCheatHiggs::OnFinishAsyncLoadResource(const struct FSoftObjectPath& Soft
 // Function Development.GMCheatHiggs.HiggsTestSyncLoad
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatHiggs::HiggsTestSyncLoad(const struct FString& Path)
 {
@@ -3864,7 +4638,7 @@ void UGMCheatHiggs::HiggsTestForbitMove()
 // Function Development.GMCheatHiggs.HiggsTestAsyncLoad
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatHiggs::HiggsTestAsyncLoad(const struct FString& Path)
 {
@@ -3930,7 +4704,7 @@ void UGMCheatHUD::ResetHUDDebugFunction()
 // Function Development.GMCheatHUD.RemoveHUDDebugFunction
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 FuncName                       (Parm, ZeroConstructor)
+// struct FString FuncName (Parm, ZeroConstructor)
 
 void UGMCheatHUD::RemoveHUDDebugFunction(const struct FString& FuncName)
 {
@@ -3954,8 +4728,8 @@ void UGMCheatHUD::RemoveHUDDebugFunction(const struct FString& FuncName)
 // Function Development.GMCheatHUD.EnableHUDDebug
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FuncName                       (Parm, ZeroConstructor)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FuncName (Parm, ZeroConstructor)
 
 void UGMCheatHUD::EnableHUDDebug(bool bEnable, const struct FString& FuncName)
 {
@@ -3980,8 +4754,8 @@ void UGMCheatHUD::EnableHUDDebug(bool bEnable, const struct FString& FuncName)
 // Function Development.GMCheatHUD.AddHUDDebugFunction
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 FuncName                       (Parm, ZeroConstructor)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FuncName (Parm, ZeroConstructor)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatHUD::AddHUDDebugFunction(const struct FString& FuncName, bool bReset)
 {
@@ -4006,10 +4780,10 @@ void UGMCheatHUD::AddHUDDebugFunction(const struct FString& FuncName, bool bRese
 // Function Development.GMCheatLevel.SpawnActorWithPath
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::SpawnActorWithPath(const struct FString& Path, float X, float Y, float Z)
 {
@@ -4036,7 +4810,7 @@ void UGMCheatLevel::SpawnActorWithPath(const struct FString& Path, float X, floa
 // Function Development.GMCheatLevel.ShutDownVehicleGenerate
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsOpen                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::ShutDownVehicleGenerate(bool IsOpen)
 {
@@ -4060,7 +4834,7 @@ void UGMCheatLevel::ShutDownVehicleGenerate(bool IsOpen)
 // Function Development.GMCheatLevel.ShutDownPickUpGenerate
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsOpen                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::ShutDownPickUpGenerate(bool IsOpen)
 {
@@ -4084,7 +4858,7 @@ void UGMCheatLevel::ShutDownPickUpGenerate(bool IsOpen)
 // Function Development.GMCheatLevel.ShutDownItemGenerate
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsOpen                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::ShutDownItemGenerate(bool IsOpen)
 {
@@ -4129,7 +4903,7 @@ void UGMCheatLevel::ShowNavOperator()
 // Function Development.GMCheatLevel.SetServerLevelLoadingMode
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bNewLoadAll                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewLoadAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::SetServerLevelLoadingMode(bool bNewLoadAll)
 {
@@ -4153,7 +4927,7 @@ void UGMCheatLevel::SetServerLevelLoadingMode(bool bNewLoadAll)
 // Function Development.GMCheatLevel.SetPlaneEnabled
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           InEnable                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool InEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::SetPlaneEnabled(bool InEnable)
 {
@@ -4177,10 +4951,10 @@ void UGMCheatLevel::SetPlaneEnabled(bool InEnable)
 // Function Development.GMCheatLevel.SetCustomFlightRoute
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          StartX                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartY                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndX                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndY                           (Parm, ZeroConstructor, IsPlainOldData)
+// float StartX (Parm, ZeroConstructor, IsPlainOldData)
+// float StartY (Parm, ZeroConstructor, IsPlainOldData)
+// float EndX (Parm, ZeroConstructor, IsPlainOldData)
+// float EndY (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::SetCustomFlightRoute(float StartX, float StartY, float EndX, float EndY)
 {
@@ -4270,7 +5044,7 @@ void UGMCheatLevel::LocalProfileFootprint()
 // Function Development.GMCheatLevel.LoadAllLand
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bLoadAll                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLoadAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::LoadAllLand(bool bLoadAll)
 {
@@ -4294,7 +5068,7 @@ void UGMCheatLevel::LoadAllLand(bool bLoadAll)
 // Function Development.GMCheatLevel.GotoDoubleCircleEdge
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::GotoDoubleCircleEdge(float Z)
 {
@@ -4486,9 +5260,9 @@ void UGMCheatLevel::GMDisableAllComponent()
 // Function Development.GMCheatLevel.GMBeginCircle
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            CurIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosX                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosY                           (Parm, ZeroConstructor, IsPlainOldData)
+// int CurIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float PosX (Parm, ZeroConstructor, IsPlainOldData)
+// float PosY (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::GMBeginCircle(int CurIndex, float PosX, float PosY)
 {
@@ -4514,7 +5288,7 @@ void UGMCheatLevel::GMBeginCircle(int CurIndex, float PosX, float PosY)
 // Function Development.GMCheatLevel.GetCurrentLevelOffset
 // (Final, Exec, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UGMCheatLevel::GetCurrentLevelOffset()
 {
@@ -4581,11 +5355,11 @@ void UGMCheatLevel::DisableMyLandscapeDraw()
 // Function Development.GMCheatLevel.DebugAirDropPickInfo
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          DrawTime                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BoxDrawSize                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BoxDrawLineLength              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ListWrapperDrawSize            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ListWrapperDrawLineLength      (Parm, ZeroConstructor, IsPlainOldData)
+// float DrawTime (Parm, ZeroConstructor, IsPlainOldData)
+// float BoxDrawSize (Parm, ZeroConstructor, IsPlainOldData)
+// float BoxDrawLineLength (Parm, ZeroConstructor, IsPlainOldData)
+// float ListWrapperDrawSize (Parm, ZeroConstructor, IsPlainOldData)
+// float ListWrapperDrawLineLength (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatLevel::DebugAirDropPickInfo(float DrawTime, float BoxDrawSize, float BoxDrawLineLength, float ListWrapperDrawSize, float ListWrapperDrawLineLength)
 {
@@ -4634,9 +5408,9 @@ void UGMCheatManager::WatchReport()
 // Function Development.GMCheatManager.VehicleTowardTo
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::VehicleTowardTo(float X, float Y, float Z)
 {
@@ -4683,9 +5457,9 @@ void UGMCheatManager::VehicleSpotLog()
 // Function Development.GMCheatManager.VehicleMoveTo
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::VehicleMoveTo(float X, float Y, float Z)
 {
@@ -4711,12 +5485,12 @@ void UGMCheatManager::VehicleMoveTo(float X, float Y, float Z)
 // Function Development.GMCheatManager.VehicleMoveAndTowardTo
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z1                             (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float X1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::VehicleMoveAndTowardTo(float X, float Y, float Z, float X1, float Y1, float Z1)
 {
@@ -4745,10 +5519,10 @@ void UGMCheatManager::VehicleMoveAndTowardTo(float X, float Y, float Z, float X1
 // Function Development.GMCheatManager.UpdateTrainingRank
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TrainingType                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Top1wScore                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Score                          (Parm, ZeroConstructor, IsPlainOldData)
+// int TrainingType (Parm, ZeroConstructor, IsPlainOldData)
+// int Level (Parm, ZeroConstructor, IsPlainOldData)
+// int Top1wScore (Parm, ZeroConstructor, IsPlainOldData)
+// int Score (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::UpdateTrainingRank(int TrainingType, int Level, int Top1wScore, int Score)
 {
@@ -4838,7 +5612,7 @@ void UGMCheatManager::TogglePawnInfo()
 // Function Development.GMCheatManager.TestStringSHA1
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 InStr                          (Parm, ZeroConstructor)
+// struct FString InStr (Parm, ZeroConstructor)
 
 void UGMCheatManager::TestStringSHA1(const struct FString& InStr)
 {
@@ -4883,7 +5657,7 @@ void UGMCheatManager::TestReplayStreamerLastError()
 // Function Development.GMCheatManager.TestPlayerLostEvent
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            LostEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// int LostEvent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TestPlayerLostEvent(int LostEvent)
 {
@@ -4949,9 +5723,9 @@ void UGMCheatManager::TestNetworkLost()
 // Function Development.GMCheatManager.TestLineTrace
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TestLineTrace(float X, float Y, float Z)
 {
@@ -4977,10 +5751,10 @@ void UGMCheatManager::TestLineTrace(float X, float Y, float Z)
 // Function Development.GMCheatManager.TestKillInfoPanel
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Relationship                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponAvatarID                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ClothID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
+// int Relationship (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponAvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// int ClothID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TestKillInfoPanel(int WeaponId, int Relationship, int WeaponAvatarID, int ClothID)
 {
@@ -5007,8 +5781,8 @@ void UGMCheatManager::TestKillInfoPanel(int WeaponId, int Relationship, int Weap
 // Function Development.GMCheatManager.TestGameplayDataRecord
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RecordType                     (Parm, ZeroConstructor, IsPlainOldData)
+// int UID (Parm, ZeroConstructor, IsPlainOldData)
+// int RecordType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TestGameplayDataRecord(int UID, int RecordType)
 {
@@ -5033,7 +5807,7 @@ void UGMCheatManager::TestGameplayDataRecord(int UID, int RecordType)
 // Function Development.GMCheatManager.TestEnableRegionsLongDistanceSleep
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TestEnableRegionsLongDistanceSleep(bool bEnable)
 {
@@ -5099,7 +5873,7 @@ void UGMCheatManager::TestCrash()
 // Function Development.GMCheatManager.TeleportToVehicleAI
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            InIndex                        (Parm, ZeroConstructor, IsPlainOldData)
+// int InIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TeleportToVehicleAI(int InIndex)
 {
@@ -5123,9 +5897,9 @@ void UGMCheatManager::TeleportToVehicleAI(int InIndex)
 // Function Development.GMCheatManager.TeleportToPVEMonster
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ChapterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WaveID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ChapterID (Parm, ZeroConstructor, IsPlainOldData)
+// int LevelID (Parm, ZeroConstructor, IsPlainOldData)
+// int WaveID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TeleportToPVEMonster(int ChapterID, int LevelID, int WaveID)
 {
@@ -5151,9 +5925,9 @@ void UGMCheatManager::TeleportToPVEMonster(int ChapterID, int LevelID, int WaveI
 // Function Development.GMCheatManager.TeleportTo
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TeleportTo(float X, float Y, float Z)
 {
@@ -5179,7 +5953,7 @@ void UGMCheatManager::TeleportTo(float X, float Y, float Z)
 // Function Development.GMCheatManager.TeleportNearestVehicleAIToPercentOfPath
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          InPercent                      (Parm, ZeroConstructor, IsPlainOldData)
+// float InPercent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::TeleportNearestVehicleAIToPercentOfPath(float InPercent)
 {
@@ -5203,8 +5977,8 @@ void UGMCheatManager::TeleportNearestVehicleAIToPercentOfPath(float InPercent)
 // Function Development.GMCheatManager.SwitchSocialIsland
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            LandId                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (Parm, ZeroConstructor, IsPlainOldData)
+// int LandId (Parm, ZeroConstructor, IsPlainOldData)
+// float Delay (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SwitchSocialIsland(int LandId, float Delay)
 {
@@ -5271,7 +6045,7 @@ void UGMCheatManager::SuperGMKillDS()
 // Function Development.GMCheatManager.StopAllMonsterDSAnim
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bStop                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStop (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::StopAllMonsterDSAnim(bool bStop)
 {
@@ -5316,7 +6090,7 @@ void UGMCheatManager::StatVehicle()
 // Function Development.GMCheatManager.StarTPerforPlatTag
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void UGMCheatManager::StarTPerforPlatTag(const struct FString& TagName)
 {
@@ -5340,12 +6114,12 @@ void UGMCheatManager::StarTPerforPlatTag(const struct FString& TagName)
 // Function Development.GMCheatManager.SpawnVehicleWithPathAtPoint
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// bool                           AroundMe                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// bool AroundMe (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnVehicleWithPathAtPoint(const struct FString& Path, bool AroundMe, float X, float Y, float Z, int Num)
 {
@@ -5374,8 +6148,8 @@ void UGMCheatManager::SpawnVehicleWithPathAtPoint(const struct FString& Path, bo
 // Function Development.GMCheatManager.SpawnTrainingAIAroundMe
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Range                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// int Range (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnTrainingAIAroundMe(int Num, int Range)
 {
@@ -5400,10 +6174,10 @@ void UGMCheatManager::SpawnTrainingAIAroundMe(int Num, int Range)
 // Function Development.GMCheatManager.SpawnMonsterAround
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            MonsterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopAI                        (Parm, ZeroConstructor, IsPlainOldData)
+// int MonsterID (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnMonsterAround(int MonsterID, float Radius, int Num, bool bStopAI)
 {
@@ -5430,7 +6204,7 @@ void UGMCheatManager::SpawnMonsterAround(int MonsterID, float Radius, int Num, b
 // Function Development.GMCheatManager.SpawnItemBySpotDefaultTag
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 DefaultTag                     (Parm, ZeroConstructor)
+// struct FString DefaultTag (Parm, ZeroConstructor)
 
 void UGMCheatManager::SpawnItemBySpotDefaultTag(const struct FString& DefaultTag)
 {
@@ -5454,7 +6228,7 @@ void UGMCheatManager::SpawnItemBySpotDefaultTag(const struct FString& DefaultTag
 // Function Development.GMCheatManager.SpawnGameFeatureActor
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatManager::SpawnGameFeatureActor(const struct FString& Path)
 {
@@ -5478,9 +6252,9 @@ void UGMCheatManager::SpawnGameFeatureActor(const struct FString& Path)
 // Function Development.GMCheatManager.SpawnFakePlayer
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopAI                        (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnFakePlayer(int Num, bool bWithPet, bool bStopAI)
 {
@@ -5527,7 +6301,7 @@ void UGMCheatManager::SpawnDecal()
 // Function Development.GMCheatManager.SpawnBotForTest
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnBotForTest(int Num)
 {
@@ -5551,11 +6325,11 @@ void UGMCheatManager::SpawnBotForTest(int Num)
 // Function Development.GMCheatManager.SpawnAIAroundMe
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           HasWeapon                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           HasAvator                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           HasBackpack                    (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// float Range (Parm, ZeroConstructor, IsPlainOldData)
+// bool HasWeapon (Parm, ZeroConstructor, IsPlainOldData)
+// bool HasAvator (Parm, ZeroConstructor, IsPlainOldData)
+// bool HasBackpack (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SpawnAIAroundMe(int Num, float Range, bool HasWeapon, bool HasAvator, bool HasBackpack)
 {
@@ -5583,9 +6357,9 @@ void UGMCheatManager::SpawnAIAroundMe(int Num, float Range, bool HasWeapon, bool
 // Function Development.GMCheatManager.ShowScrollMsg
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// uint32_t                       MsgID                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Param1                         (Parm, ZeroConstructor)
-// struct FString                 Param2                         (Parm, ZeroConstructor)
+// uint32_t MsgID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Param1 (Parm, ZeroConstructor)
+// struct FString Param2 (Parm, ZeroConstructor)
 
 void UGMCheatManager::ShowScrollMsg(uint32_t MsgID, const struct FString& Param1, const struct FString& Param2)
 {
@@ -5611,7 +6385,7 @@ void UGMCheatManager::ShowScrollMsg(uint32_t MsgID, const struct FString& Param1
 // Function Development.GMCheatManager.ShowPet
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ShowPet(bool Enable)
 {
@@ -5635,10 +6409,10 @@ void UGMCheatManager::ShowPet(bool Enable)
 // Function Development.GMCheatManager.ShowOBMultiKillTips
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 PlayerName                     (Parm, ZeroConstructor)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PlayerKillNum                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TeamKillNum                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PlayerName (Parm, ZeroConstructor)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int PlayerKillNum (Parm, ZeroConstructor, IsPlainOldData)
+// int TeamKillNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ShowOBMultiKillTips(const struct FString& PlayerName, int TeamID, int PlayerKillNum, int TeamKillNum)
 {
@@ -5665,8 +6439,8 @@ void UGMCheatManager::ShowOBMultiKillTips(const struct FString& PlayerName, int 
 // Function Development.GMCheatManager.ShowHideGuide
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            GuideID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShow                          (Parm, ZeroConstructor, IsPlainOldData)
+// int GuideID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ShowHideGuide(int GuideID, bool bShow)
 {
@@ -5691,7 +6465,7 @@ void UGMCheatManager::ShowHideGuide(int GuideID, bool bShow)
 // Function Development.GMCheatManager.ShowAllPlayersMarkIncludeAI
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          VisDistance                    (Parm, ZeroConstructor, IsPlainOldData)
+// float VisDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ShowAllPlayersMarkIncludeAI(float VisDistance)
 {
@@ -5715,7 +6489,7 @@ void UGMCheatManager::ShowAllPlayersMarkIncludeAI(float VisDistance)
 // Function Development.GMCheatManager.ShowAKComponentPosition
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           _IsShow                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool _IsShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ShowAKComponentPosition(bool _IsShow)
 {
@@ -5739,7 +6513,7 @@ void UGMCheatManager::ShowAKComponentPosition(bool _IsShow)
 // Function Development.GMCheatManager.SetWeatherPlaySpeed
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          FSpeed                         (Parm, ZeroConstructor, IsPlainOldData)
+// float FSpeed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetWeatherPlaySpeed(float FSpeed)
 {
@@ -5763,7 +6537,7 @@ void UGMCheatManager::SetWeatherPlaySpeed(float FSpeed)
 // Function Development.GMCheatManager.SetViewFPP
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           IsFPP                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsFPP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetViewFPP(bool IsFPP)
 {
@@ -5787,7 +6561,7 @@ void UGMCheatManager::SetViewFPP(bool IsFPP)
 // Function Development.GMCheatManager.SetTouchMoveLog
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetTouchMoveLog(bool Enable)
 {
@@ -5811,7 +6585,7 @@ void UGMCheatManager::SetTouchMoveLog(bool Enable)
 // Function Development.GMCheatManager.SetTouchMoveDelay
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            DelayFrame                     (Parm, ZeroConstructor, IsPlainOldData)
+// int DelayFrame (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetTouchMoveDelay(int DelayFrame)
 {
@@ -5835,7 +6609,7 @@ void UGMCheatManager::SetTouchMoveDelay(int DelayFrame)
 // Function Development.GMCheatManager.SetSpringArm
 // (Final, Exec, Native, Public)
 // Parameters:
-// unsigned char                  armFlag                        (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char armFlag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetSpringArm(unsigned char armFlag)
 {
@@ -5859,7 +6633,7 @@ void UGMCheatManager::SetSpringArm(unsigned char armFlag)
 // Function Development.GMCheatManager.SetSkillDup
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetSkillDup(int Count)
 {
@@ -5883,7 +6657,7 @@ void UGMCheatManager::SetSkillDup(int Count)
 // Function Development.GMCheatManager.SetRateScore
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          RankScore                      (Parm, ZeroConstructor, IsPlainOldData)
+// float RankScore (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetRateScore(float RankScore)
 {
@@ -5907,7 +6681,7 @@ void UGMCheatManager::SetRateScore(float RankScore)
 // Function Development.GMCheatManager.SetNetSpeed
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            NewSpeed                       (Parm, ZeroConstructor, IsPlainOldData)
+// int NewSpeed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNetSpeed(int NewSpeed)
 {
@@ -5931,7 +6705,7 @@ void UGMCheatManager::SetNetSpeed(int NewSpeed)
 // Function Development.GMCheatManager.SetNeckUp
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          UpAngle                        (Parm, ZeroConstructor, IsPlainOldData)
+// float UpAngle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNeckUp(float UpAngle)
 {
@@ -5955,7 +6729,7 @@ void UGMCheatManager::SetNeckUp(float UpAngle)
 // Function Development.GMCheatManager.SetNeckSpeed
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Speed                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Speed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNeckSpeed(float Speed)
 {
@@ -5979,7 +6753,7 @@ void UGMCheatManager::SetNeckSpeed(float Speed)
 // Function Development.GMCheatManager.SetNeckRight
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          RightAngle                     (Parm, ZeroConstructor, IsPlainOldData)
+// float RightAngle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNeckRight(float RightAngle)
 {
@@ -6003,7 +6777,7 @@ void UGMCheatManager::SetNeckRight(float RightAngle)
 // Function Development.GMCheatManager.SetNeckMax
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          MaxAngle                       (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxAngle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNeckMax(float MaxAngle)
 {
@@ -6027,7 +6801,7 @@ void UGMCheatManager::SetNeckMax(float MaxAngle)
 // Function Development.GMCheatManager.SetNeckLeft
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          LeftAngle                      (Parm, ZeroConstructor, IsPlainOldData)
+// float LeftAngle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetNeckLeft(float LeftAngle)
 {
@@ -6051,9 +6825,9 @@ void UGMCheatManager::SetNeckLeft(float LeftAngle)
 // Function Development.GMCheatManager.SetMonsterNumMultiple
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ChapterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DiffcultPerc                   (Parm, ZeroConstructor, IsPlainOldData)
+// int ChapterID (Parm, ZeroConstructor, IsPlainOldData)
+// int LevelID (Parm, ZeroConstructor, IsPlainOldData)
+// int DiffcultPerc (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetMonsterNumMultiple(int ChapterID, int LevelID, int DiffcultPerc)
 {
@@ -6079,7 +6853,7 @@ void UGMCheatManager::SetMonsterNumMultiple(int ChapterID, int LevelID, int Diff
 // Function Development.GMCheatManager.SetMonsterNB
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           MonsterNB                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool MonsterNB (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetMonsterNB(bool MonsterNB)
 {
@@ -6103,7 +6877,7 @@ void UGMCheatManager::SetMonsterNB(bool MonsterNB)
 // Function Development.GMCheatManager.SetMonsterHatred
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Hatred                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Hatred (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetMonsterHatred(float Hatred)
 {
@@ -6148,7 +6922,7 @@ void UGMCheatManager::SetMaxFpsFromDevice()
 // Function Development.GMCheatManager.SetIsRender
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsRender                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRender (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetIsRender(bool IsRender)
 {
@@ -6172,7 +6946,7 @@ void UGMCheatManager::SetIsRender(bool IsRender)
 // Function Development.GMCheatManager.SetInactiveClearEnable
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bNewActive                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetInactiveClearEnable(bool bNewActive)
 {
@@ -6196,7 +6970,7 @@ void UGMCheatManager::SetInactiveClearEnable(bool bNewActive)
 // Function Development.GMCheatManager.SetHignPerformance
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           SetOpen                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool SetOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetHignPerformance(bool SetOpen)
 {
@@ -6220,7 +6994,7 @@ void UGMCheatManager::SetHignPerformance(bool SetOpen)
 // Function Development.GMCheatManager.SetGVMemberID
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            memberID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int memberID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetGVMemberID(int memberID)
 {
@@ -6244,8 +7018,8 @@ void UGMCheatManager::SetGVMemberID(int memberID)
 // Function Development.GMCheatManager.SetFestivalAirDrop
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bFestival                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BoxMesh                        (Parm, ZeroConstructor)
+// bool bFestival (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BoxMesh (Parm, ZeroConstructor)
 
 void UGMCheatManager::SetFestivalAirDrop(bool bFestival, const struct FString& BoxMesh)
 {
@@ -6270,7 +7044,7 @@ void UGMCheatManager::SetFestivalAirDrop(bool bFestival, const struct FString& B
 // Function Development.GMCheatManager.SetFestivaGrenade
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bFestival                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFestival (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetFestivaGrenade(bool bFestival)
 {
@@ -6294,8 +7068,8 @@ void UGMCheatManager::SetFestivaGrenade(bool bFestival)
 // Function Development.GMCheatManager.SetDynamicWeather
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            WeatherType                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int WeatherType (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetDynamicWeather(int WeatherType, int EventType)
 {
@@ -6320,8 +7094,8 @@ void UGMCheatManager::SetDynamicWeather(int WeatherType, int EventType)
 // Function Development.GMCheatManager.SetDsSwitch
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            InKey                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InValue                        (Parm, ZeroConstructor)
+// int InKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InValue (Parm, ZeroConstructor)
 
 void UGMCheatManager::SetDsSwitch(int InKey, const struct FString& InValue)
 {
@@ -6367,8 +7141,8 @@ void UGMCheatManager::SetDeliver()
 // Function Development.GMCheatManager.SetDearDeathReduce
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReduceFactor                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Index (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float ReduceFactor (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetDearDeathReduce(int Index, float ReduceFactor)
 {
@@ -6393,7 +7167,7 @@ void UGMCheatManager::SetDearDeathReduce(int Index, float ReduceFactor)
 // Function Development.GMCheatManager.SetClearIslandEnable
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bNewActive                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetClearIslandEnable(bool bNewActive)
 {
@@ -6417,7 +7191,7 @@ void UGMCheatManager::SetClearIslandEnable(bool bNewActive)
 // Function Development.GMCheatManager.SetCameraLagEnable
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetCameraLagEnable(bool Enable)
 {
@@ -6441,7 +7215,7 @@ void UGMCheatManager::SetCameraLagEnable(bool Enable)
 // Function Development.GMCheatManager.SetCacheInputNum
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            CacheNum                       (Parm, ZeroConstructor, IsPlainOldData)
+// int CacheNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetCacheInputNum(int CacheNum)
 {
@@ -6465,7 +7239,7 @@ void UGMCheatManager::SetCacheInputNum(int CacheNum)
 // Function Development.GMCheatManager.SetAnimEnable
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetAnimEnable(bool Enable)
 {
@@ -6489,7 +7263,7 @@ void UGMCheatManager::SetAnimEnable(bool Enable)
 // Function Development.GMCheatManager.SetAnimDebugInfo
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           debugAnimInfo                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool debugAnimInfo (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetAnimDebugInfo(bool debugAnimInfo)
 {
@@ -6513,7 +7287,7 @@ void UGMCheatManager::SetAnimDebugInfo(bool debugAnimInfo)
 // Function Development.GMCheatManager.SetAnimDebugGroup
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           debugAnimGroup                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool debugAnimGroup (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetAnimDebugGroup(bool debugAnimGroup)
 {
@@ -6537,7 +7311,7 @@ void UGMCheatManager::SetAnimDebugGroup(bool debugAnimGroup)
 // Function Development.GMCheatManager.SetAllMonsterHp
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            HP                             (Parm, ZeroConstructor, IsPlainOldData)
+// int HP (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::SetAllMonsterHp(int HP)
 {
@@ -6561,7 +7335,7 @@ void UGMCheatManager::SetAllMonsterHp(int HP)
 // Function Development.GMCheatManager.ServerCMD
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Cmd                            (Parm, ZeroConstructor)
+// struct FString Cmd (Parm, ZeroConstructor)
 
 void UGMCheatManager::ServerCMD(const struct FString& Cmd)
 {
@@ -6606,8 +7380,8 @@ void UGMCheatManager::ResumeAllLevelSequenceActors()
 // Function Development.GMCheatManager.ReplayRecoverReconnect
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 IP                             (Parm, ZeroConstructor)
-// struct FString                 Port                           (Parm, ZeroConstructor)
+// struct FString IP (Parm, ZeroConstructor)
+// struct FString Port (Parm, ZeroConstructor)
 
 void UGMCheatManager::ReplayRecoverReconnect(const struct FString& IP, const struct FString& Port)
 {
@@ -6632,7 +7406,7 @@ void UGMCheatManager::ReplayRecoverReconnect(const struct FString& IP, const str
 // Function Development.GMCheatManager.ReplayRecoverGenerateDSCheckpoint
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 InReplayName                   (Parm, ZeroConstructor)
+// struct FString InReplayName (Parm, ZeroConstructor)
 
 void UGMCheatManager::ReplayRecoverGenerateDSCheckpoint(const struct FString& InReplayName)
 {
@@ -6656,8 +7430,8 @@ void UGMCheatManager::ReplayRecoverGenerateDSCheckpoint(const struct FString& In
 // Function Development.GMCheatManager.RenderTargetCompressTest
 // (Final, Exec, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UTexture*                pTexture                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Posoffset                      (Parm, IsPlainOldData)
+// class UTexture* pTexture (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Posoffset (Parm, IsPlainOldData)
 
 void UGMCheatManager::RenderTargetCompressTest(class UTexture* pTexture, const struct FVector& Posoffset)
 {
@@ -6682,7 +7456,7 @@ void UGMCheatManager::RenderTargetCompressTest(class UTexture* pTexture, const s
 // Function Development.GMCheatManager.RemoveTimeSwitch
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            TimeID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int TimeID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::RemoveTimeSwitch(int TimeID)
 {
@@ -6727,12 +7501,12 @@ void UGMCheatManager::RefreshReconnectUI()
 // Function Development.GMCheatManager.PVESpawnMonsterByPos
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            MonsterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosX                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosY                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosZ                           (Parm, ZeroConstructor, IsPlainOldData)
+// int MonsterID (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// float PosX (Parm, ZeroConstructor, IsPlainOldData)
+// float PosY (Parm, ZeroConstructor, IsPlainOldData)
+// float PosZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVESpawnMonsterByPos(int MonsterID, int Num, float Radius, float PosX, float PosY, float PosZ)
 {
@@ -6761,10 +7535,10 @@ void UGMCheatManager::PVESpawnMonsterByPos(int MonsterID, int Num, float Radius,
 // Function Development.GMCheatManager.PVESpawnMonsterByDistance
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            MonsterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FrontDist                      (Parm, ZeroConstructor, IsPlainOldData)
+// int MonsterID (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// float FrontDist (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVESpawnMonsterByDistance(int MonsterID, int Num, float Radius, float FrontDist)
 {
@@ -6791,8 +7565,8 @@ void UGMCheatManager::PVESpawnMonsterByDistance(int MonsterID, int Num, float Ra
 // Function Development.GMCheatManager.PVESpawnMonster
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            MonsterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           StopAI                         (Parm, ZeroConstructor, IsPlainOldData)
+// int MonsterID (Parm, ZeroConstructor, IsPlainOldData)
+// bool StopAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVESpawnMonster(int MonsterID, bool StopAI)
 {
@@ -6817,7 +7591,7 @@ void UGMCheatManager::PVESpawnMonster(int MonsterID, bool StopAI)
 // Function Development.GMCheatManager.PVESetTestMonster
 // (Final, Exec, Native, Public)
 // Parameters:
-// class AActor*                  InMonster                      (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InMonster (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVESetTestMonster(class AActor* InMonster)
 {
@@ -6883,7 +7657,7 @@ void UGMCheatManager::PVEPrintMonsterCount()
 // Function Development.GMCheatManager.PVEPrintAllAnim
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bPrintAll                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPrintAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEPrintAllAnim(bool bPrintAll)
 {
@@ -6907,8 +7681,8 @@ void UGMCheatManager::PVEPrintAllAnim(bool bPrintAll)
 // Function Development.GMCheatManager.PVEPlayerTriggerSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEPlayerTriggerSkill(int SkillID, int EventType)
 {
@@ -6933,8 +7707,8 @@ void UGMCheatManager::PVEPlayerTriggerSkill(int SkillID, int EventType)
 // Function Development.GMCheatManager.PVEPlayerStopSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEPlayerStopSkill(int SkillID, int StopReason)
 {
@@ -6959,8 +7733,8 @@ void UGMCheatManager::PVEPlayerStopSkill(int SkillID, int StopReason)
 // Function Development.GMCheatManager.PVEMonsterTriggerSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EventType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int EventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEMonsterTriggerSkill(int SkillID, int EventType)
 {
@@ -6985,8 +7759,8 @@ void UGMCheatManager::PVEMonsterTriggerSkill(int SkillID, int EventType)
 // Function Development.GMCheatManager.PVEMonsterStopSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StopReason                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int StopReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEMonsterStopSkill(int SkillID, int StopReason)
 {
@@ -7011,10 +7785,10 @@ void UGMCheatManager::PVEMonsterStopSkill(int SkillID, int StopReason)
 // Function Development.GMCheatManager.PVEMonsterRemoveBuffByID
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauserSkillID                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CauseByPlayer                  (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// int CauserSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool CauseByPlayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEMonsterRemoveBuffByID(int BuffID, int LayerCount, int CauserSkillID, bool CauseByPlayer)
 {
@@ -7041,10 +7815,10 @@ void UGMCheatManager::PVEMonsterRemoveBuffByID(int BuffID, int LayerCount, int C
 // Function Development.GMCheatManager.PVEMonsterAddBuffByID
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauserSkillID                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CauseByPlayer                  (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// int CauserSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool CauseByPlayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVEMonsterAddBuffByID(int BuffID, int LayerCount, int CauserSkillID, bool CauseByPlayer)
 {
@@ -7071,7 +7845,7 @@ void UGMCheatManager::PVEMonsterAddBuffByID(int BuffID, int LayerCount, int Caus
 // Function Development.GMCheatManager.PVECloseMonsterLimit
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bCloseMonsterLimit             (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCloseMonsterLimit (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PVECloseMonsterLimit(bool bCloseMonsterLimit)
 {
@@ -7092,12 +7866,33 @@ void UGMCheatManager::PVECloseMonsterLimit(bool bCloseMonsterLimit)
 }
 
 
+// Function Development.GMCheatManager.PVEClearTestMonster
+// (Final, Exec, Native, Public)
+
+void UGMCheatManager::PVEClearTestMonster()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatManager.PVEClearTestMonster");
+
+	UGMCheatManager_PVEClearTestMonster_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatManager.PrintScreenDebug
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Key                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TimeToDisplay                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DebugMessage                   (Parm, ZeroConstructor)
+// int Key (Parm, ZeroConstructor, IsPlainOldData)
+// float TimeToDisplay (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DebugMessage (Parm, ZeroConstructor)
 
 void UGMCheatManager::PrintScreenDebug(int Key, float TimeToDisplay, const struct FString& DebugMessage)
 {
@@ -7207,7 +8002,7 @@ void UGMCheatManager::PrintAllAnim()
 // Function Development.GMCheatManager.PrintAllActorLocationByClassName
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 InClassName                    (Parm, ZeroConstructor)
+// struct FString InClassName (Parm, ZeroConstructor)
 
 void UGMCheatManager::PrintAllActorLocationByClassName(const struct FString& InClassName)
 {
@@ -7231,7 +8026,7 @@ void UGMCheatManager::PrintAllActorLocationByClassName(const struct FString& InC
 // Function Development.GMCheatManager.PlayBornIslandSequence
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bPlay                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPlay (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PlayBornIslandSequence(bool bPlay)
 {
@@ -7255,7 +8050,7 @@ void UGMCheatManager::PlayBornIslandSequence(bool bPlay)
 // Function Development.GMCheatManager.PauseAnim
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bPause (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PauseAnim(bool bPause)
 {
@@ -7300,7 +8095,7 @@ void UGMCheatManager::PauseAllLevelSequenceActors()
 // Function Development.GMCheatManager.PacketSimulationLag
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            InSimulationLag                (Parm, ZeroConstructor, IsPlainOldData)
+// int InSimulationLag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::PacketSimulationLag(int InSimulationLag)
 {
@@ -7345,9 +8140,9 @@ void UGMCheatManager::OpenHitTest()
 // Function Development.GMCheatManager.OpenFixationFreeFallVelocity
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::OpenFixationFreeFallVelocity(float X, float Y, float Z)
 {
@@ -7370,10 +8165,34 @@ void UGMCheatManager::OpenFixationFreeFallVelocity(float X, float Y, float Z)
 }
 
 
+// Function Development.GMCheatManager.OpenAllCharacterHitBodyCollison
+// (Final, Exec, Native, Public)
+// Parameters:
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
+
+void UGMCheatManager::OpenAllCharacterHitBodyCollison(float Time)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatManager.OpenAllCharacterHitBodyCollison");
+
+	UGMCheatManager_OpenAllCharacterHitBodyCollison_Params params;
+	params.Time = Time;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.GMCheatManager.NotifyGameModeParamsChanged
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            NewDuration                    (Parm, ZeroConstructor, IsPlainOldData)
+// int NewDuration (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::NotifyGameModeParamsChanged(int NewDuration)
 {
@@ -7397,7 +8216,7 @@ void UGMCheatManager::NotifyGameModeParamsChanged(int NewDuration)
 // Function Development.GMCheatManager.NativeSimulateAction
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            SimActionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SimActionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::NativeSimulateAction(int SimActionType)
 {
@@ -7421,10 +8240,10 @@ void UGMCheatManager::NativeSimulateAction(int SimActionType)
 // Function Development.GMCheatManager.MoveSnake
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          moveInternal                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ForwardRate                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RightRate                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// float moveInternal (Parm, ZeroConstructor, IsPlainOldData)
+// float ForwardRate (Parm, ZeroConstructor, IsPlainOldData)
+// float RightRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::MoveSnake(bool bEnable, float moveInternal, float ForwardRate, float RightRate)
 {
@@ -7451,8 +8270,8 @@ void UGMCheatManager::MoveSnake(bool bEnable, float moveInternal, float ForwardR
 // Function Development.GMCheatManager.ModifyVehicleSyncServerData
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          MinCorrectionInterval          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AllowMaxDiatanceSqAtServer     (Parm, ZeroConstructor, IsPlainOldData)
+// float MinCorrectionInterval (Parm, ZeroConstructor, IsPlainOldData)
+// float AllowMaxDiatanceSqAtServer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ModifyVehicleSyncServerData(float MinCorrectionInterval, float AllowMaxDiatanceSqAtServer)
 {
@@ -7498,8 +8317,8 @@ void UGMCheatManager::ModifyVehicleSyncClientData()
 // Function Development.GMCheatManager.ModifyVehicleBuoyancy
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          MeshDensity                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// float MeshDensity (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ModifyVehicleBuoyancy(float MeshDensity, int Index)
 {
@@ -7524,7 +8343,7 @@ void UGMCheatManager::ModifyVehicleBuoyancy(float MeshDensity, int Index)
 // Function Development.GMCheatManager.MaxSimulationIterations
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            V                              (Parm, ZeroConstructor, IsPlainOldData)
+// int V (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::MaxSimulationIterations(int V)
 {
@@ -7569,8 +8388,8 @@ void UGMCheatManager::MarkAPMLevelFinish()
 // Function Development.GMCheatManager.MainCityConnectToDS
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 IP                             (Parm, ZeroConstructor)
-// struct FString                 Port                           (Parm, ZeroConstructor)
+// struct FString IP (Parm, ZeroConstructor)
+// struct FString Port (Parm, ZeroConstructor)
 
 void UGMCheatManager::MainCityConnectToDS(const struct FString& IP, const struct FString& Port)
 {
@@ -7616,8 +8435,8 @@ void UGMCheatManager::LogNetWorkParams()
 // Function Development.GMCheatManager.LogicAreaTest
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            AreaType                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 str                            (Parm, ZeroConstructor)
+// int AreaType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString str (Parm, ZeroConstructor)
 
 void UGMCheatManager::LogicAreaTest(int AreaType, const struct FString& str)
 {
@@ -7684,7 +8503,7 @@ void UGMCheatManager::LogAllActors()
 // Function Development.GMCheatManager.LocalConnectToLobbySrv
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 URL                            (Parm, ZeroConstructor)
+// struct FString URL (Parm, ZeroConstructor)
 
 void UGMCheatManager::LocalConnectToLobbySrv(const struct FString& URL)
 {
@@ -7750,9 +8569,9 @@ void UGMCheatManager::KillAllPlayers()
 // Function Development.GMCheatManager.JankOpt_Spawn20AIBlockVolume
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::JankOpt_Spawn20AIBlockVolume(float X, float Y, float Z)
 {
@@ -7862,7 +8681,7 @@ void UGMCheatManager::GotoSpectating()
 // Function Development.GMCheatManager.GotoSpecificWeather
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            WeatherIdx                     (Parm, ZeroConstructor, IsPlainOldData)
+// int WeatherIdx (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GotoSpecificWeather(int WeatherIdx)
 {
@@ -7886,7 +8705,7 @@ void UGMCheatManager::GotoSpecificWeather(int WeatherIdx)
 // Function Development.GMCheatManager.GMWayPointEvent
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            EventID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int EventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMWayPointEvent(int EventID)
 {
@@ -7910,7 +8729,7 @@ void UGMCheatManager::GMWayPointEvent(int EventID)
 // Function Development.GMCheatManager.GMUseGunCollision
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bIsUse                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsUse (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMUseGunCollision(bool bIsUse)
 {
@@ -7976,8 +8795,8 @@ void UGMCheatManager::GMSuicide()
 // Function Development.GMCheatManager.GMStopAI
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bStop                          (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStop (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMStopAI(bool bStop, uint32_t InPlayerKey)
 {
@@ -7988,27 +8807,6 @@ void UGMCheatManager::GMStopAI(bool bStop, uint32_t InPlayerKey)
 	UGMCheatManager_GMStopAI_Params params;
 	params.bStop = bStop;
 	params.InPlayerKey = InPlayerKey;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Development.GMCheatManager.GMSpeedUp
-// (Final, Exec, Native, Public, BlueprintCallable)
-
-void UGMCheatManager::GMSpeedUp()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatManager.GMSpeedUp");
-
-	UGMCheatManager_GMSpeedUp_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -8044,18 +8842,18 @@ void UGMCheatManager::GMSpawnSociallandSubVehicle01()
 // Function Development.GMCheatManager.GMSpawnSocialLandPlayerAIAroundPointWithAvatarList
 // (Final, Exec, Native, Public, HasOutParms, Const)
 // Parameters:
-// uint32_t                       DataOffset                     (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AINum                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithEqui                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AvatarList                     (Parm, OutParm, ZeroConstructor)
-// bool                           bWithWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t DataOffset (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AINum (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithEqui (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AvatarList (Parm, OutParm, ZeroConstructor)
+// bool bWithWeapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundPointWithAvatarList(uint32_t DataOffset, uint32_t AINum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon, struct FString* AvatarList)
 {
@@ -8092,17 +8890,17 @@ void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundPointWithAvatarList(uint32_
 // Function Development.GMCheatManager.GMSpawnSocialLandPlayerAIAroundPoint
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// uint32_t                       DataOffset                     (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AINum                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithEqui                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t DataOffset (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AINum (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithEqui (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithWeapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundPoint(uint32_t DataOffset, uint32_t AINum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon)
 {
@@ -8136,14 +8934,14 @@ void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundPoint(uint32_t DataOffset, 
 // Function Development.GMCheatManager.GMSpawnSocialLandPlayerAIAroundMeWithAvatar
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       AINum                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithEqui                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AvatarList                     (Parm, OutParm, ZeroConstructor)
-// bool                           bWithWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AINum (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithEqui (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AvatarList (Parm, OutParm, ZeroConstructor)
+// bool bWithWeapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundMeWithAvatar(uint32_t AINum, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon, struct FString* AvatarList)
 {
@@ -8176,13 +8974,13 @@ void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundMeWithAvatar(uint32_t AINum
 // Function Development.GMCheatManager.GMSpawnSocialLandPlayerAIAroundMe
 // (Final, Exec, Native, Public)
 // Parameters:
-// uint32_t                       AINum                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithEqui                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AINum (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithEqui (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithWeapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnSocialLandPlayerAIAroundMe(uint32_t AINum, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui, bool bWithWeapon)
 {
@@ -8233,14 +9031,14 @@ void UGMCheatManager::GMSpawnSmartBearerTestPlane()
 // Function Development.GMCheatManager.GMSpawnSingleSocialLandPlayerAI
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// uint32_t                       DataOffset                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithEqui                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t DataOffset (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithEqui (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnSingleSocialLandPlayerAI(uint32_t DataOffset, float X, float Y, float Z, bool bActiveAI, bool IsAIInvincible, bool bWithPet, bool bWithEqui)
 {
@@ -8271,14 +9069,14 @@ void UGMCheatManager::GMSpawnSingleSocialLandPlayerAI(uint32_t DataOffset, float
 // Function Development.GMCheatManager.GMSpawnPlayerAIAroundPointDownloadable
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// uint32_t                       iNum                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t iNum (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnPlayerAIAroundPointDownloadable(uint32_t iNum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet)
 {
@@ -8309,14 +9107,14 @@ void UGMCheatManager::GMSpawnPlayerAIAroundPointDownloadable(uint32_t iNum, floa
 // Function Development.GMCheatManager.GMSpawnPlayerAIAroundPoint
 // (Final, Exec, Native, Public)
 // Parameters:
-// uint32_t                       iNum                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t iNum (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnPlayerAIAroundPoint(uint32_t iNum, float X, float Y, float Z, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet)
 {
@@ -8347,11 +9145,11 @@ void UGMCheatManager::GMSpawnPlayerAIAroundPoint(uint32_t iNum, float X, float Y
 // Function Development.GMCheatManager.GMSpawnPlayerAIAroundMeDownloadable
 // (Final, Exec, Native, Public)
 // Parameters:
-// uint32_t                       iNum                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t iNum (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnPlayerAIAroundMeDownloadable(uint32_t iNum, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet)
 {
@@ -8379,11 +9177,11 @@ void UGMCheatManager::GMSpawnPlayerAIAroundMeDownloadable(uint32_t iNum, float f
 // Function Development.GMCheatManager.GMSpawnPlayerAIAroundMe
 // (Final, Exec, Native, Public)
 // Parameters:
-// uint32_t                       iNum                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t iNum (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnPlayerAIAroundMe(uint32_t iNum, float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet)
 {
@@ -8411,10 +9209,10 @@ void UGMCheatManager::GMSpawnPlayerAIAroundMe(uint32_t iNum, float fRadius, bool
 // Function Development.GMCheatManager.GMSpawnPickup
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SpawnNum                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PickupTypes                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Direction                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnDistance                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SpawnNum (Parm, ZeroConstructor, IsPlainOldData)
+// int PickupTypes (Parm, ZeroConstructor, IsPlainOldData)
+// int Direction (Parm, ZeroConstructor, IsPlainOldData)
+// float SpawnDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnPickup(int SpawnNum, int PickupTypes, int Direction, float SpawnDistance)
 {
@@ -8441,11 +9239,11 @@ void UGMCheatManager::GMSpawnPickup(int SpawnNum, int PickupTypes, int Direction
 // Function Development.GMCheatManager.GMSpawnParticle
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 AssetPath                      (Parm, ZeroConstructor)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AssetPath (Parm, ZeroConstructor)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnParticle(const struct FString& AssetPath, float X, float Y, float Z, float Scale)
 {
@@ -8473,7 +9271,7 @@ void UGMCheatManager::GMSpawnParticle(const struct FString& AssetPath, float X, 
 // Function Development.GMCheatManager.GMSpawnAutoTestAI
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            NameExtraID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int NameExtraID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSpawnAutoTestAI(int NameExtraID)
 {
@@ -8497,19 +9295,19 @@ void UGMCheatManager::GMSpawnAutoTestAI(int NameExtraID)
 // Function Development.GMCheatManager.GMSpawnAIWithIDAndLoc
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            AIID                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnLocX                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnLocY                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SpawnLocZ                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemID1                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemNum1                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemID2                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemNum2                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemID3                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemNum3                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int AIID (Parm, ZeroConstructor, IsPlainOldData)
+// float SpawnLocX (Parm, ZeroConstructor, IsPlainOldData)
+// float SpawnLocY (Parm, ZeroConstructor, IsPlainOldData)
+// float SpawnLocZ (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int TeamID (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemID1 (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemNum1 (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemID2 (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemNum2 (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemID3 (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemNum3 (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UGMCheatManager::GMSpawnAIWithIDAndLoc(int AIID, float SpawnLocX, float SpawnLocY, float SpawnLocZ, float Radius, int TeamID, int ItemID1, int ItemNum1, int ItemID2, int ItemNum2, int ItemID3, int ItemNum3)
 {
@@ -8609,9 +9407,9 @@ void UGMCheatManager::GMSpawnAIOnAIPoint1()
 // Function Development.GMCheatManager.GMSocialSetRotation
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSocialSetRotation(float X, float Y, float Z)
 {
@@ -8679,8 +9477,8 @@ void UGMCheatManager::GMSociallandPlayerMoveToAISpawnPoint1()
 // Function Development.GMCheatManager.GMSociallandChangeItemFromStr
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 ItemString                     (Parm, ZeroConstructor)
-// struct FString                 EquimentItemString             (Parm, ZeroConstructor)
+// struct FString ItemString (Parm, ZeroConstructor)
+// struct FString EquimentItemString (Parm, ZeroConstructor)
 
 void UGMCheatManager::GMSociallandChangeItemFromStr(const struct FString& ItemString, const struct FString& EquimentItemString)
 {
@@ -8705,7 +9503,7 @@ void UGMCheatManager::GMSociallandChangeItemFromStr(const struct FString& ItemSt
 // Function Development.GMCheatManager.GMShowHitFeedback
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bCombatHitFeedbackEnable       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCombatHitFeedbackEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMShowHitFeedback(bool bCombatHitFeedbackEnable)
 {
@@ -8729,7 +9527,7 @@ void UGMCheatManager::GMShowHitFeedback(bool bCombatHitFeedbackEnable)
 // Function Development.GMCheatManager.GMSetSpeed
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          WalkSpeed                      (Parm, ZeroConstructor, IsPlainOldData)
+// float WalkSpeed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetSpeed(float WalkSpeed)
 {
@@ -8753,7 +9551,7 @@ void UGMCheatManager::GMSetSpeed(float WalkSpeed)
 // Function Development.GMCheatManager.GMSetServerLevelLoadingMode
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewLoadAll                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewLoadAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetServerLevelLoadingMode(bool bNewLoadAll)
 {
@@ -8777,7 +9575,7 @@ void UGMCheatManager::GMSetServerLevelLoadingMode(bool bNewLoadAll)
 // Function Development.GMCheatManager.GMSetPawnNull
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bIsNull                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsNull (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetPawnNull(bool bIsNull)
 {
@@ -8801,7 +9599,7 @@ void UGMCheatManager::GMSetPawnNull(bool bIsNull)
 // Function Development.GMCheatManager.GMSetMLAIModifyDamage
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            InIsModify                     (Parm, ZeroConstructor, IsPlainOldData)
+// int InIsModify (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetMLAIModifyDamage(int InIsModify)
 {
@@ -8825,7 +9623,7 @@ void UGMCheatManager::GMSetMLAIModifyDamage(int InIsModify)
 // Function Development.GMCheatManager.GMSetMaxAINum
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetMaxAINum(int Num)
 {
@@ -8849,7 +9647,7 @@ void UGMCheatManager::GMSetMaxAINum(int Num)
 // Function Development.GMCheatManager.GMSetJoystickEightDirection
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           IsNeedEightDirection           (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsNeedEightDirection (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetJoystickEightDirection(bool IsNeedEightDirection)
 {
@@ -8873,8 +9671,8 @@ void UGMCheatManager::GMSetJoystickEightDirection(bool IsNeedEightDirection)
 // Function Development.GMCheatManager.GMSetJoystickActivatedRange
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           IsNeedActivatedRange           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ActivatedRange                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsNeedActivatedRange (Parm, ZeroConstructor, IsPlainOldData)
+// float ActivatedRange (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetJoystickActivatedRange(bool IsNeedActivatedRange, float ActivatedRange)
 {
@@ -8899,7 +9697,7 @@ void UGMCheatManager::GMSetJoystickActivatedRange(bool IsNeedActivatedRange, flo
 // Function Development.GMCheatManager.GMSetHealth
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetHealth(float Val)
 {
@@ -8923,7 +9721,7 @@ void UGMCheatManager::GMSetHealth(float Val)
 // Function Development.GMCheatManager.GMSetDeliveryToMLAI
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            InIsDeliveryToMLAI             (Parm, ZeroConstructor, IsPlainOldData)
+// int InIsDeliveryToMLAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetDeliveryToMLAI(int InIsDeliveryToMLAI)
 {
@@ -8947,7 +9745,7 @@ void UGMCheatManager::GMSetDeliveryToMLAI(int InIsDeliveryToMLAI)
 // Function Development.GMCheatManager.GMSetCullDistance
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bCullDistance                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCullDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetCullDistance(bool bCullDistance)
 {
@@ -8971,8 +9769,8 @@ void UGMCheatManager::GMSetCullDistance(bool bCullDistance)
 // Function Development.GMCheatManager.GMSetCircleTime
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          cdTime                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LastTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// float cdTime (Parm, ZeroConstructor, IsPlainOldData)
+// float LastTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSetCircleTime(float cdTime, float LastTime)
 {
@@ -8997,8 +9795,8 @@ void UGMCheatManager::GMSetCircleTime(float cdTime, float LastTime)
 // Function Development.GMCheatManager.GMSelectorWayPoint
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
-// struct FName                   NameOfAIWayPointSelector       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            GMPathIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName NameOfAIWayPointSelector (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int GMPathIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMSelectorWayPoint(const struct FName& NameOfAIWayPointSelector, int GMPathIndex)
 {
@@ -9044,7 +9842,7 @@ void UGMCheatManager::GMRevivePlayer()
 // Function Development.GMCheatManager.GMRainCount
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMRainCount(float Count)
 {
@@ -9068,7 +9866,7 @@ void UGMCheatManager::GMRainCount(float Count)
 // Function Development.GMCheatManager.GMIOSFrameRateLock
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            FrameRateLock                  (Parm, ZeroConstructor, IsPlainOldData)
+// int FrameRateLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMIOSFrameRateLock(int FrameRateLock)
 {
@@ -9092,7 +9890,7 @@ void UGMCheatManager::GMIOSFrameRateLock(int FrameRateLock)
 // Function Development.GMCheatManager.GMInvincible
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInvincible                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInvincible (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMInvincible(bool bInvincible)
 {
@@ -9137,10 +9935,10 @@ void UGMCheatManager::GMIncreaseHealth()
 // Function Development.GMCheatManager.GMGatherAllPlayerAIAroundMe
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          fRadius                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActiveAI                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAIInvincible                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWithPet                       (Parm, ZeroConstructor, IsPlainOldData)
+// float fRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActiveAI (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAIInvincible (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWithPet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMGatherAllPlayerAIAroundMe(float fRadius, bool bActiveAI, bool IsAIInvincible, bool bWithPet)
 {
@@ -9188,7 +9986,7 @@ void UGMCheatManager::GMForceSuicide()
 // Function Development.GMCheatManager.GMForceNullNetwork
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            bForce                         (Parm, ZeroConstructor, IsPlainOldData)
+// int bForce (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMForceNullNetwork(int bForce)
 {
@@ -9212,13 +10010,13 @@ void UGMCheatManager::GMForceNullNetwork(int bForce)
 // Function Development.GMCheatManager.GMDrawLine
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          x2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          y2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LifeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// float X1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z1 (Parm, ZeroConstructor, IsPlainOldData)
+// float x2 (Parm, ZeroConstructor, IsPlainOldData)
+// float y2 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z2 (Parm, ZeroConstructor, IsPlainOldData)
+// float LifeTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMDrawLine(float X1, float Y1, float Z1, float x2, float y2, float Z2, float LifeTime)
 {
@@ -9248,14 +10046,14 @@ void UGMCheatManager::GMDrawLine(float X1, float Y1, float Z1, float x2, float y
 // Function Development.GMCheatManager.GMDrawDirLine
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          StartX                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartY                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartZ                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirX                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirY                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirZ                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LifeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// float StartX (Parm, ZeroConstructor, IsPlainOldData)
+// float StartY (Parm, ZeroConstructor, IsPlainOldData)
+// float StartZ (Parm, ZeroConstructor, IsPlainOldData)
+// float DirX (Parm, ZeroConstructor, IsPlainOldData)
+// float DirY (Parm, ZeroConstructor, IsPlainOldData)
+// float DirZ (Parm, ZeroConstructor, IsPlainOldData)
+// float Length (Parm, ZeroConstructor, IsPlainOldData)
+// float LifeTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMDrawDirLine(float StartX, float StartY, float StartZ, float DirX, float DirY, float DirZ, float Length, float LifeTime)
 {
@@ -9286,12 +10084,12 @@ void UGMCheatManager::GMDrawDirLine(float StartX, float StartY, float StartZ, fl
 // Function Development.GMCheatManager.GMDrawDebugSphere2
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Segments                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LifeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int Segments (Parm, ZeroConstructor, IsPlainOldData)
+// float LifeTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMDrawDebugSphere2(float X, float Y, float Z, float Radius, int Segments, float LifeTime)
 {
@@ -9320,9 +10118,9 @@ void UGMCheatManager::GMDrawDebugSphere2(float X, float Y, float Z, float Radius
 // Function Development.GMCheatManager.GMDrawDebugSphere
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Segments                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LifeTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// int Segments (Parm, ZeroConstructor, IsPlainOldData)
+// float LifeTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMDrawDebugSphere(float Radius, int Segments, float LifeTime)
 {
@@ -9348,9 +10146,9 @@ void UGMCheatManager::GMDrawDebugSphere(float Radius, int Segments, float LifeTi
 // Function Development.GMCheatManager.GMDrawCone
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Degrees                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LifeTime                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LineNum                        (Parm, ZeroConstructor, IsPlainOldData)
+// float Degrees (Parm, ZeroConstructor, IsPlainOldData)
+// float LifeTime (Parm, ZeroConstructor, IsPlainOldData)
+// int LineNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMDrawCone(float Degrees, float LifeTime, int LineNum)
 {
@@ -9397,8 +10195,8 @@ void UGMCheatManager::GMDecreaseHealth()
 // Function Development.GMCheatManager.GMChangeAIAype
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMChangeAIAype(int Type, uint32_t InPlayerKey)
 {
@@ -9423,9 +10221,9 @@ void UGMCheatManager::GMChangeAIAype(int Type, uint32_t InPlayerKey)
 // Function Development.GMCheatManager.GMAutoTestChangeItem
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ItemString                     (Parm, ZeroConstructor)
-// struct FString                 EquimentItemString             (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ItemString (Parm, ZeroConstructor)
+// struct FString EquimentItemString (Parm, ZeroConstructor)
 
 void UGMCheatManager::GMAutoTestChangeItem(uint32_t PlayerKey, const struct FString& ItemString, const struct FString& EquimentItemString)
 {
@@ -9472,9 +10270,9 @@ void UGMCheatManager::GMAIFire()
 // Function Development.GMCheatManager.GMAddItemForAI
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMAddItemForAI(int ItemId, int Count, uint32_t InPlayerKey)
 {
@@ -9500,8 +10298,8 @@ void UGMCheatManager::GMAddItemForAI(int ItemId, int Count, uint32_t InPlayerKey
 // Function Development.GMCheatManager.GMActiveRenderDynamicStyle
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bSet                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSet (Parm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GMActiveRenderDynamicStyle(bool bSet, int Type)
 {
@@ -9547,7 +10345,7 @@ void UGMCheatManager::GMActiveAI()
 // Function Development.GMCheatManager.GetObjectRef
 // (Final, Exec, Native, Public)
 // Parameters:
-// uint64_t                       ObjectAddr                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t ObjectAddr (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GetObjectRef(uint64_t ObjectAddr)
 {
@@ -9571,7 +10369,7 @@ void UGMCheatManager::GetObjectRef(uint64_t ObjectAddr)
 // Function Development.GMCheatManager.GetGVMemberID
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            memberID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int memberID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GetGVMemberID(int memberID)
 {
@@ -9616,9 +10414,9 @@ void UGMCheatManager::GetGold()
 // Function Development.GMCheatManager.GenerateMonsterWave
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ChapterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WaveID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ChapterID (Parm, ZeroConstructor, IsPlainOldData)
+// int LevelID (Parm, ZeroConstructor, IsPlainOldData)
+// int WaveID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::GenerateMonsterWave(int ChapterID, int LevelID, int WaveID)
 {
@@ -9686,7 +10484,7 @@ void UGMCheatManager::ForceStartNextDynamicWeatherChange()
 // Function Development.GMCheatManager.ForceKickoutAllPlayers
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            LandId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int LandId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ForceKickoutAllPlayers(int LandId)
 {
@@ -9773,8 +10571,8 @@ void UGMCheatManager::FireSpawnAirplane()
 // Function Development.GMCheatManager.FireReviveTeammate
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            RespawnStartID                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bJump                          (Parm, ZeroConstructor, IsPlainOldData)
+// int RespawnStartID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bJump (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::FireReviveTeammate(int RespawnStartID, bool bJump)
 {
@@ -9799,7 +10597,7 @@ void UGMCheatManager::FireReviveTeammate(int RespawnStartID, bool bJump)
 // Function Development.GMCheatManager.FallKill
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            FallType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int FallType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::FallKill(int FallType)
 {
@@ -9823,7 +10621,7 @@ void UGMCheatManager::FallKill(int FallType)
 // Function Development.GMCheatManager.EquipHelmetAndBodyArmor
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Lev                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Lev (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EquipHelmetAndBodyArmor(int Lev)
 {
@@ -9847,8 +10645,8 @@ void UGMCheatManager::EquipHelmetAndBodyArmor(int Lev)
 // Function Development.GMCheatManager.EnterPVELevel
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ChapterID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LevelID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int ChapterID (Parm, ZeroConstructor, IsPlainOldData)
+// int LevelID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EnterPVELevel(int ChapterID, int LevelID)
 {
@@ -9873,8 +10671,8 @@ void UGMCheatManager::EnterPVELevel(int ChapterID, int LevelID)
 // Function Development.GMCheatManager.EnterPawnState
 // (Final, Exec, Native, Public)
 // Parameters:
-// EPawnState                     InState                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsEnter                        (Parm, ZeroConstructor, IsPlainOldData)
+// EPawnState InState (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsEnter (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EnterPawnState(EPawnState InState, bool IsEnter)
 {
@@ -9920,7 +10718,7 @@ void UGMCheatManager::EndAPMTag()
 // Function Development.GMCheatManager.EnablePool
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EnablePool(bool bEnable)
 {
@@ -9944,7 +10742,7 @@ void UGMCheatManager::EnablePool(bool bEnable)
 // Function Development.GMCheatManager.EnableHitBox
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EnableHitBox(bool bEnable)
 {
@@ -9989,8 +10787,8 @@ void UGMCheatManager::EnableFuzzyInformation()
 // Function Development.GMCheatManager.EnableDSAnim
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 MonsterName                    (Parm, ZeroConstructor)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MonsterName (Parm, ZeroConstructor)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::EnableDSAnim(const struct FString& MonsterName, bool bEnable)
 {
@@ -10057,7 +10855,7 @@ void UGMCheatManager::DumpPlayerStart()
 // Function Development.GMCheatManager.DumpObjectNetProperties
 // (Final, Exec, Native, Public)
 // Parameters:
-// class UObject*                 InObj                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* InObj (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DumpObjectNetProperties(class UObject* InObj)
 {
@@ -10081,7 +10879,7 @@ void UGMCheatManager::DumpObjectNetProperties(class UObject* InObj)
 // Function Development.GMCheatManager.DumpMoveLog
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bDump                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDump (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DumpMoveLog(bool bDump)
 {
@@ -10112,6 +10910,27 @@ void UGMCheatManager::DumpLevels()
 		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatManager.DumpLevels");
 
 	UGMCheatManager_DumpLevels_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.GMCheatManager.DumpLegacyObjectPoolInfo
+// (Final, Exec, Native, Public)
+
+void UGMCheatManager::DumpLegacyObjectPoolInfo()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.GMCheatManager.DumpLegacyObjectPoolInfo");
+
+	UGMCheatManager_DumpLegacyObjectPoolInfo_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -10273,12 +11092,12 @@ void UGMCheatManager::DismissIsland()
 // Function Development.GMCheatManager.DetectUnderGround
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          x2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          y2                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z2                             (Parm, ZeroConstructor, IsPlainOldData)
+// float X1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z1 (Parm, ZeroConstructor, IsPlainOldData)
+// float x2 (Parm, ZeroConstructor, IsPlainOldData)
+// float y2 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z2 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DetectUnderGround(float X1, float Y1, float Z1, float x2, float y2, float Z2)
 {
@@ -10307,7 +11126,7 @@ void UGMCheatManager::DetectUnderGround(float X1, float Y1, float Z1, float x2, 
 // Function Development.GMCheatManager.DestroyVehicleWithPath
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatManager::DestroyVehicleWithPath(const struct FString& Path)
 {
@@ -10352,7 +11171,7 @@ void UGMCheatManager::DebugUnderWaterEffect()
 // Function Development.GMCheatManager.DebugStopEMote
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugStopEMote(int Index)
 {
@@ -10397,7 +11216,7 @@ void UGMCheatManager::DebugStopCapture()
 // Function Development.GMCheatManager.DebugStartEMote
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugStartEMote(int Index)
 {
@@ -10421,7 +11240,7 @@ void UGMCheatManager::DebugStartEMote(int Index)
 // Function Development.GMCheatManager.DebugSpringArm
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bDebug                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDebug (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugSpringArm(bool bDebug)
 {
@@ -10466,7 +11285,7 @@ void UGMCheatManager::DebugSpeed()
 // Function Development.GMCheatManager.DebugSetChangeWearCoolDownTime
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugSetChangeWearCoolDownTime(float Time)
 {
@@ -10490,10 +11309,10 @@ void UGMCheatManager::DebugSetChangeWearCoolDownTime(float Time)
 // Function Development.GMCheatManager.DebugRoomCustomParams
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            FirstCircleDelayTime           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FirstCircleAppearTime          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FirstWhiteCircleRadiusMultiplicator (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BlueCircleDamageMultiplicator  (Parm, ZeroConstructor, IsPlainOldData)
+// int FirstCircleDelayTime (Parm, ZeroConstructor, IsPlainOldData)
+// int FirstCircleAppearTime (Parm, ZeroConstructor, IsPlainOldData)
+// int FirstWhiteCircleRadiusMultiplicator (Parm, ZeroConstructor, IsPlainOldData)
+// int BlueCircleDamageMultiplicator (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugRoomCustomParams(int FirstCircleDelayTime, int FirstCircleAppearTime, int FirstWhiteCircleRadiusMultiplicator, int BlueCircleDamageMultiplicator)
 {
@@ -10520,7 +11339,7 @@ void UGMCheatManager::DebugRoomCustomParams(int FirstCircleDelayTime, int FirstC
 // Function Development.GMCheatManager.DebugPoseState
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::DebugPoseState(bool bEnable)
 {
@@ -10712,8 +11531,8 @@ void UGMCheatManager::DebugAnimList()
 // Function Development.GMCheatManager.ClientSetSpeed
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// float                          Times                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bGMSetSpeed                    (Parm, ZeroConstructor, IsPlainOldData)
+// float Times (Parm, ZeroConstructor, IsPlainOldData)
+// bool bGMSetSpeed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ClientSetSpeed(float Times, bool bGMSetSpeed)
 {
@@ -10801,7 +11620,7 @@ void UGMCheatManager::ClearNoDriverVehicle()
 // Function Development.GMCheatManager.ClearAnimLayer
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            AnimLayer                      (Parm, ZeroConstructor, IsPlainOldData)
+// int AnimLayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ClearAnimLayer(int AnimLayer)
 {
@@ -10867,7 +11686,7 @@ void UGMCheatManager::CheatBeginPlay()
 // Function Development.GMCheatManager.ChatTest
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 Content                        (Parm, OutParm, ZeroConstructor)
+// struct FString Content (Parm, OutParm, ZeroConstructor)
 
 void UGMCheatManager::ChatTest(struct FString* Content)
 {
@@ -10914,7 +11733,7 @@ void UGMCheatManager::ChangeViewTarget()
 // Function Development.GMCheatManager.ChangeMonsterWalkMode
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Mode                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Mode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ChangeMonsterWalkMode(int Mode)
 {
@@ -10938,11 +11757,11 @@ void UGMCheatManager::ChangeMonsterWalkMode(int Mode)
 // Function Development.GMCheatManager.ChangeAllTimeDuration
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            NewEndStateTime                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewStartShowLifeTime           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewMinimumAliveTime            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewMinimumPlayerNum            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewSpecialLifeTime             (Parm, ZeroConstructor, IsPlainOldData)
+// int NewEndStateTime (Parm, ZeroConstructor, IsPlainOldData)
+// int NewStartShowLifeTime (Parm, ZeroConstructor, IsPlainOldData)
+// int NewMinimumAliveTime (Parm, ZeroConstructor, IsPlainOldData)
+// int NewMinimumPlayerNum (Parm, ZeroConstructor, IsPlainOldData)
+// int NewSpecialLifeTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ChangeAllTimeDuration(int NewEndStateTime, int NewStartShowLifeTime, int NewMinimumAliveTime, int NewMinimumPlayerNum, int NewSpecialLifeTime)
 {
@@ -10970,7 +11789,7 @@ void UGMCheatManager::ChangeAllTimeDuration(int NewEndStateTime, int NewStartSho
 // Function Development.GMCheatManager.ChangeAIDamageRate
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ChangeAIDamageRate(float InRate)
 {
@@ -10994,7 +11813,7 @@ void UGMCheatManager::ChangeAIDamageRate(float InRate)
 // Function Development.GMCheatManager.ChangeAIAttackPlayerDamageRate
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ChangeAIAttackPlayerDamageRate(float InRate)
 {
@@ -11018,8 +11837,8 @@ void UGMCheatManager::ChangeAIAttackPlayerDamageRate(float InRate)
 // Function Development.GMCheatManager.CastUIMsg
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Msg                            (Parm, ZeroConstructor)
-// struct FString                 module                         (Parm, ZeroConstructor)
+// struct FString Msg (Parm, ZeroConstructor)
+// struct FString module (Parm, ZeroConstructor)
 
 void UGMCheatManager::CastUIMsg(const struct FString& Msg, const struct FString& module)
 {
@@ -11065,8 +11884,8 @@ void UGMCheatManager::CallOnReconnect()
 // Function Development.GMCheatManager.CallLuaTableFunction
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString tableName (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UGMCheatManager::CallLuaTableFunction(const struct FString& tableName, const struct FString& FunctionName)
 {
@@ -11091,7 +11910,7 @@ void UGMCheatManager::CallLuaTableFunction(const struct FString& tableName, cons
 // Function Development.GMCheatManager.CallGMLua
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UGMCheatManager::CallGMLua(const struct FString& FunctionName)
 {
@@ -11115,7 +11934,7 @@ void UGMCheatManager::CallGMLua(const struct FString& FunctionName)
 // Function Development.GMCheatManager.CallGameModeLuaOverrideFunction
 // (Final, Exec, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, OutParm, ZeroConstructor)
+// struct FString FunctionName (Parm, OutParm, ZeroConstructor)
 
 void UGMCheatManager::CallGameModeLuaOverrideFunction(struct FString* FunctionName)
 {
@@ -11141,7 +11960,7 @@ void UGMCheatManager::CallGameModeLuaOverrideFunction(struct FString* FunctionNa
 // Function Development.GMCheatManager.CallGameModeLuaFunction
 // (Final, Exec, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, OutParm, ZeroConstructor)
+// struct FString FunctionName (Parm, OutParm, ZeroConstructor)
 
 void UGMCheatManager::CallGameModeLuaFunction(struct FString* FunctionName)
 {
@@ -11167,7 +11986,7 @@ void UGMCheatManager::CallGameModeLuaFunction(struct FString* FunctionName)
 // Function Development.GMCheatManager.BuildingCollide
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           InCollide                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool InCollide (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::BuildingCollide(bool InCollide)
 {
@@ -11191,8 +12010,8 @@ void UGMCheatManager::BuildingCollide(bool InCollide)
 // Function Development.GMCheatManager.AutoShoveling
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AutoShvelingSeconds            (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// float AutoShvelingSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AutoShoveling(bool bEnable, float AutoShvelingSeconds)
 {
@@ -11217,7 +12036,7 @@ void UGMCheatManager::AutoShoveling(bool bEnable, float AutoShvelingSeconds)
 // Function Development.GMCheatManager.AutoSetPlayerLocation
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AutoSetPlayerLocation(bool bEnable)
 {
@@ -11241,7 +12060,7 @@ void UGMCheatManager::AutoSetPlayerLocation(bool bEnable)
 // Function Development.GMCheatManager.AnimDebugUseSkipMapForDistanceFactor
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bFlag                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugUseSkipMapForDistanceFactor(bool bFlag)
 {
@@ -11265,7 +12084,7 @@ void UGMCheatManager::AnimDebugUseSkipMapForDistanceFactor(bool bFlag)
 // Function Development.GMCheatManager.AnimDebugUseLodMap
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bUseLodMap                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseLodMap (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugUseLodMap(bool bUseLodMap)
 {
@@ -11289,7 +12108,7 @@ void UGMCheatManager::AnimDebugUseLodMap(bool bUseLodMap)
 // Function Development.GMCheatManager.AnimDebugUpdateFlag
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugUpdateFlag(int Type)
 {
@@ -11313,7 +12132,7 @@ void UGMCheatManager::AnimDebugUpdateFlag(int Type)
 // Function Development.GMCheatManager.AnimDebugNonRenderedRate
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            UpdateRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// int UpdateRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugNonRenderedRate(int UpdateRate)
 {
@@ -11337,7 +12156,7 @@ void UGMCheatManager::AnimDebugNonRenderedRate(int UpdateRate)
 // Function Development.GMCheatManager.AnimDebugNonRenderedMinDist
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          minDist                        (Parm, ZeroConstructor, IsPlainOldData)
+// float minDist (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugNonRenderedMinDist(float minDist)
 {
@@ -11361,7 +12180,7 @@ void UGMCheatManager::AnimDebugNonRenderedMinDist(float minDist)
 // Function Development.GMCheatManager.AnimDebugNonRenderedMaxDist
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          MaxDist                        (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxDist (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugNonRenderedMaxDist(float MaxDist)
 {
@@ -11385,7 +12204,7 @@ void UGMCheatManager::AnimDebugNonRenderedMaxDist(float MaxDist)
 // Function Development.GMCheatManager.AnimDebugLodSkipMap
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// TMap<int, int>                 SkipMap                        (Parm, ZeroConstructor)
+// TMap<int, int> SkipMap (Parm, ZeroConstructor)
 
 void UGMCheatManager::AnimDebugLodSkipMap(TMap<int, int> SkipMap)
 {
@@ -11409,7 +12228,7 @@ void UGMCheatManager::AnimDebugLodSkipMap(TMap<int, int> SkipMap)
 // Function Development.GMCheatManager.AnimDebugEnable
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AnimDebugEnable(bool bEnable)
 {
@@ -11433,7 +12252,7 @@ void UGMCheatManager::AnimDebugEnable(bool bEnable)
 // Function Development.GMCheatManager.AnimDebugBaseDistFactor
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<float>                  BaseDistFactor                 (Parm, ZeroConstructor)
+// TArray<float> BaseDistFactor (Parm, ZeroConstructor)
 
 void UGMCheatManager::AnimDebugBaseDistFactor(TArray<float> BaseDistFactor)
 {
@@ -11457,10 +12276,10 @@ void UGMCheatManager::AnimDebugBaseDistFactor(TArray<float> BaseDistFactor)
 // Function Development.GMCheatManager.AirDropByClassPath
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ClassPath                      (Parm, ZeroConstructor)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ClassPath (Parm, ZeroConstructor)
 
 void UGMCheatManager::AirDropByClassPath(float X, float Y, float Z, const struct FString& ClassPath)
 {
@@ -11508,11 +12327,11 @@ void UGMCheatManager::AILog()
 // Function Development.GMCheatManager.AddWonderfulPeriod
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          EndTime                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AdditionalData                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// float StartTime (Parm, ZeroConstructor, IsPlainOldData)
+// float EndTime (Parm, ZeroConstructor, IsPlainOldData)
+// int AdditionalData (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AddWonderfulPeriod(int Type, float StartTime, float EndTime, int AdditionalData, int Index)
 {
@@ -11540,7 +12359,7 @@ void UGMCheatManager::AddWonderfulPeriod(int Type, float StartTime, float EndTim
 // Function Development.GMCheatManager.AddTimeSwitch
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            TimeID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int TimeID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AddTimeSwitch(int TimeID)
 {
@@ -11564,11 +12383,11 @@ void UGMCheatManager::AddTimeSwitch(int TimeID)
 // Function Development.GMCheatManager.AddTestTouchInput
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            FingerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Force                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsStart                       (Parm, ZeroConstructor, IsPlainOldData)
+// int FingerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Force (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsStart (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AddTestTouchInput(int FingerIndex, float X, float Y, float Force, bool bIsStart)
 {
@@ -11596,7 +12415,7 @@ void UGMCheatManager::AddTestTouchInput(int FingerIndex, float X, float Y, float
 // Function Development.GMCheatManager.AddScore
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// int                            Score                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Score (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::AddScore(int Score)
 {
@@ -11641,7 +12460,7 @@ void UGMCheatManager::AddAllTestRes()
 // Function Development.GMCheatManager.ActiveCurCamera
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatManager::ActiveCurCamera(bool bActive)
 {
@@ -11686,7 +12505,7 @@ void UGMCheatMod::TriggerHunterRevival()
 // Function Development.GMCheatMod.SetUAETriggerEnable
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsEnbale                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsEnbale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::SetUAETriggerEnable(bool IsEnbale)
 {
@@ -11710,7 +12529,7 @@ void UGMCheatMod::SetUAETriggerEnable(bool IsEnbale)
 // Function Development.GMCheatMod.SetInfectResetPlayerInterTime
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          InterTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float InterTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::SetInfectResetPlayerInterTime(float InterTime)
 {
@@ -11734,7 +12553,7 @@ void UGMCheatMod::SetInfectResetPlayerInterTime(float InterTime)
 // Function Development.GMCheatMod.OnBuyRevivalTeammate
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            TeammateIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// int TeammateIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::OnBuyRevivalTeammate(int TeammateIndex)
 {
@@ -11821,7 +12640,7 @@ void UGMCheatMod::GetGameResult()
 // Function Development.GMCheatMod.DebugEnableFerrisWheelTick
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::DebugEnableFerrisWheelTick(bool bEnable)
 {
@@ -11866,7 +12685,7 @@ void UGMCheatMod::ClearBossBornPoint()
 // Function Development.GMCheatMod.ChangePVELevel
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Lv                             (Parm, ZeroConstructor, IsPlainOldData)
+// int Lv (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::ChangePVELevel(int Lv)
 {
@@ -11890,7 +12709,7 @@ void UGMCheatMod::ChangePVELevel(int Lv)
 // Function Development.GMCheatMod.CallZombieFlowAirDrop
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ZombieID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int ZombieID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::CallZombieFlowAirDrop(int ZombieID)
 {
@@ -11914,7 +12733,7 @@ void UGMCheatMod::CallZombieFlowAirDrop(int ZombieID)
 // Function Development.GMCheatMod.CallZombieAirDrop
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            ZombieID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int ZombieID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::CallZombieAirDrop(int ZombieID)
 {
@@ -11938,8 +12757,8 @@ void UGMCheatMod::CallZombieAirDrop(int ZombieID)
 // Function Development.GMCheatMod.AddBossBornPoint
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          BornX                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BornY                          (Parm, ZeroConstructor, IsPlainOldData)
+// float BornX (Parm, ZeroConstructor, IsPlainOldData)
+// float BornY (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatMod::AddBossBornPoint(float BornX, float BornY)
 {
@@ -11964,7 +12783,7 @@ void UGMCheatMod::AddBossBornPoint(float BornX, float BornY)
 // Function Development.GMCheatOther.UnLoadAllCollision
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Unload                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Unload (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::UnLoadAllCollision(bool Unload)
 {
@@ -11988,7 +12807,7 @@ void UGMCheatOther::UnLoadAllCollision(bool Unload)
 // Function Development.GMCheatOther.ShutDownBroadcastFatalDamage
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsOpen                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::ShutDownBroadcastFatalDamage(bool IsOpen)
 {
@@ -12012,7 +12831,7 @@ void UGMCheatOther::ShutDownBroadcastFatalDamage(bool IsOpen)
 // Function Development.GMCheatOther.ShowHideLandscapeComponent
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bShow                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::ShowHideLandscapeComponent(bool bShow)
 {
@@ -12036,7 +12855,7 @@ void UGMCheatOther::ShowHideLandscapeComponent(bool bShow)
 // Function Development.GMCheatOther.SetSingleThreadUpdateAnim
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           InIsSingleThread               (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsSingleThread (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::SetSingleThreadUpdateAnim(bool InIsSingleThread)
 {
@@ -12060,7 +12879,7 @@ void UGMCheatOther::SetSingleThreadUpdateAnim(bool InIsSingleThread)
 // Function Development.GMCheatOther.SetIsShowBlood
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           InIsShowBlood                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsShowBlood (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::SetIsShowBlood(bool InIsShowBlood)
 {
@@ -12105,7 +12924,7 @@ void UGMCheatOther::RetrievePlayerBattleResultData()
 // Function Development.GMCheatOther.RemoveDSOptimGrayPublishFlags
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            InFlagIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InFlagIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::RemoveDSOptimGrayPublishFlags(int InFlagIndex)
 {
@@ -12192,7 +13011,7 @@ void UGMCheatOther::GMTestSpectateRPC()
 // Function Development.GMCheatOther.GMTestSpectateException
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::GMTestSpectateException(int Type)
 {
@@ -12216,7 +13035,7 @@ void UGMCheatOther::GMTestSpectateException(int Type)
 // Function Development.GMCheatOther.GMTestExternalData
 // (Final, Exec, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InData                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> InData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UGMCheatOther::GMTestExternalData(TArray<unsigned char> InData)
 {
@@ -12240,7 +13059,7 @@ void UGMCheatOther::GMTestExternalData(TArray<unsigned char> InData)
 // Function Development.GMCheatOther.GMTeleport
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FName                   Teleporter                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Teleporter (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::GMTeleport(const struct FName& Teleporter)
 {
@@ -12264,9 +13083,9 @@ void UGMCheatOther::GMTeleport(const struct FName& Teleporter)
 // Function Development.GMCheatOther.GMSetScalarParam
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 ShaderName                     (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString ShaderName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::GMSetScalarParam(const struct FString& Name, const struct FString& ShaderName, float Value)
 {
@@ -12355,7 +13174,7 @@ void UGMCheatOther::EmptyLandscapeActor()
 // Function Development.GMCheatOther.DumpGUIDCache
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            DriverIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int DriverIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::DumpGUIDCache(int DriverIndex)
 {
@@ -12400,7 +13219,7 @@ void UGMCheatOther::DumpActiveObject()
 // Function Development.GMCheatOther.DebugEnableDrawSearchLine
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// int bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::DebugEnableDrawSearchLine(int bEnabled)
 {
@@ -12424,7 +13243,7 @@ void UGMCheatOther::DebugEnableDrawSearchLine(int bEnabled)
 // Function Development.GMCheatOther.CanSeeAllUI
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bUIVisibility                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUIVisibility (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::CanSeeAllUI(bool bUIVisibility)
 {
@@ -12469,7 +13288,7 @@ void UGMCheatOther::AutoSelectTeammateToView()
 // Function Development.GMCheatOther.AddDSOptimGrayPublishFlags
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            InFlagIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InFlagIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatOther::AddDSOptimGrayPublishFlags(int InFlagIndex)
 {
@@ -12493,8 +13312,8 @@ void UGMCheatOther::AddDSOptimGrayPublishFlags(int InFlagIndex)
 // Function Development.GMCheatSkill.TryDeleteOneSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bImmediately                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bImmediately (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::TryDeleteOneSkill(int SkillID, bool bImmediately)
 {
@@ -12519,9 +13338,9 @@ void UGMCheatSkill::TryDeleteOneSkill(int SkillID, bool bImmediately)
 // Function Development.GMCheatSkill.TryAddOneSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bActive                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ButtonSlot                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bActive (Parm, ZeroConstructor, IsPlainOldData)
+// int ButtonSlot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::TryAddOneSkill(int SkillID, bool bActive, int ButtonSlot)
 {
@@ -12547,8 +13366,8 @@ void UGMCheatSkill::TryAddOneSkill(int SkillID, bool bActive, int ButtonSlot)
 // Function Development.GMCheatSkill.TriggerSkillWithID
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::TriggerSkillWithID(int SkillID, bool bEnable)
 {
@@ -12573,7 +13392,7 @@ void UGMCheatSkill::TriggerSkillWithID(int SkillID, bool bEnable)
 // Function Development.GMCheatSkill.StartSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::StartSkill(int SkillID)
 {
@@ -12618,8 +13437,8 @@ void UGMCheatSkill::StartMainSkill()
 // Function Development.GMCheatSkill.SetSkillSkinID
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillSkinID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillSkinID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::SetSkillSkinID(int SkillID, int SkillSkinID)
 {
@@ -12644,8 +13463,8 @@ void UGMCheatSkill::SetSkillSkinID(int SkillID, int SkillSkinID)
 // Function Development.GMCheatSkill.SetSkillLevel
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillLevel                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillLevel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::SetSkillLevel(int SkillID, int SkillLevel)
 {
@@ -12670,9 +13489,9 @@ void UGMCheatSkill::SetSkillLevel(int SkillID, int SkillLevel)
 // Function Development.GMCheatSkill.SetSkillCDTimeScale
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScaleType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
+// int ScaleType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::SetSkillCDTimeScale(int SkillID, float Scale, int ScaleType)
 {
@@ -12698,10 +13517,10 @@ void UGMCheatSkill::SetSkillCDTimeScale(int SkillID, float Scale, int ScaleType)
 // Function Development.GMCheatSkill.SetSkillCDIndexTimeScale
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillCDIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScaleType                      (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillCDIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
+// int ScaleType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::SetSkillCDIndexTimeScale(int SkillID, int SkillCDIndex, float Scale, int ScaleType)
 {
@@ -12728,7 +13547,7 @@ void UGMCheatSkill::SetSkillCDIndexTimeScale(int SkillID, int SkillCDIndex, floa
 // Function Development.GMCheatSkill.SetAllSkillCDTimeScale
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Scale                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Scale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::SetAllSkillCDTimeScale(float Scale)
 {
@@ -12752,7 +13571,7 @@ void UGMCheatSkill::SetAllSkillCDTimeScale(float Scale)
 // Function Development.GMCheatSkill.RemoveVehicleBuffBySkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::RemoveVehicleBuffBySkill(int SkillID)
 {
@@ -12776,7 +13595,7 @@ void UGMCheatSkill::RemoveVehicleBuffBySkill(int SkillID)
 // Function Development.GMCheatSkill.RemoveVehicleBuff
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::RemoveVehicleBuff(int BuffID)
 {
@@ -12800,9 +13619,9 @@ void UGMCheatSkill::RemoveVehicleBuff(int BuffID)
 // Function Development.GMCheatSkill.RemoveBuffBySkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IsPlayer                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int IsPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::RemoveBuffBySkill(int SkillID, int IsPlayer, int LayerCount)
 {
@@ -12828,9 +13647,9 @@ void UGMCheatSkill::RemoveBuffBySkill(int SkillID, int IsPlayer, int LayerCount)
 // Function Development.GMCheatSkill.RemoveBuff
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IsPlayer                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BuffLayer                      (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int IsPlayer (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffLayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::RemoveBuff(int BuffID, int IsPlayer, int BuffLayer)
 {
@@ -12877,7 +13696,7 @@ void UGMCheatSkill::ReloadPVETable()
 // Function Development.GMCheatSkill.EnableSkillCD
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::EnableSkillCD(bool bEnable)
 {
@@ -12901,7 +13720,7 @@ void UGMCheatSkill::EnableSkillCD(bool bEnable)
 // Function Development.GMCheatSkill.DynamicRemoveSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::DynamicRemoveSkill(int SkillID)
 {
@@ -12925,7 +13744,7 @@ void UGMCheatSkill::DynamicRemoveSkill(int SkillID)
 // Function Development.GMCheatSkill.DynamicAddSkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::DynamicAddSkill(int SkillID)
 {
@@ -12970,7 +13789,7 @@ void UGMCheatSkill::DumpSkills()
 // Function Development.GMCheatSkill.AddVehicleBuffBySkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::AddVehicleBuffBySkill(int SkillID)
 {
@@ -12994,7 +13813,7 @@ void UGMCheatSkill::AddVehicleBuffBySkill(int SkillID)
 // Function Development.GMCheatSkill.AddVehicleBuff
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::AddVehicleBuff(int BuffID)
 {
@@ -13018,8 +13837,8 @@ void UGMCheatSkill::AddVehicleBuff(int BuffID)
 // Function Development.GMCheatSkill.AddSkillToken
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAdd                           (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAdd (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::AddSkillToken(int SkillID, bool bAdd)
 {
@@ -13044,8 +13863,8 @@ void UGMCheatSkill::AddSkillToken(int SkillID, bool bAdd)
 // Function Development.GMCheatSkill.AddBuffBySkill
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IsPlayer                       (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int IsPlayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::AddBuffBySkill(int SkillID, int IsPlayer)
 {
@@ -13070,8 +13889,8 @@ void UGMCheatSkill::AddBuffBySkill(int SkillID, int IsPlayer)
 // Function Development.GMCheatSkill.AddBuff
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IsPlayer                       (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int IsPlayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatSkill::AddBuff(int BuffID, int IsPlayer)
 {
@@ -13096,7 +13915,7 @@ void UGMCheatSkill::AddBuff(int BuffID, int IsPlayer)
 // Function Development.GMCheatVehicle.VW_Seat
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            change                         (Parm, ZeroConstructor, IsPlainOldData)
+// int change (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::VW_Seat(int change)
 {
@@ -13120,9 +13939,9 @@ void UGMCheatVehicle::VW_Seat(int change)
 // Function Development.GMCheatVehicle.VehicleResetTo
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::VehicleResetTo(float X, float Y, float Z)
 {
@@ -13148,9 +13967,9 @@ void UGMCheatVehicle::VehicleResetTo(float X, float Y, float Z)
 // Function Development.GMCheatVehicle.VehicleMoveTo
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::VehicleMoveTo(float X, float Y, float Z)
 {
@@ -13176,7 +13995,7 @@ void UGMCheatVehicle::VehicleMoveTo(float X, float Y, float Z)
 // Function Development.GMCheatVehicle.ToggleVehicleSync
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::ToggleVehicleSync(bool Val)
 {
@@ -13200,8 +14019,8 @@ void UGMCheatVehicle::ToggleVehicleSync(bool Val)
 // Function Development.GMCheatVehicle.TeleportAndEnterVehicleWithPath
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// int                            SeatID                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// int SeatID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::TeleportAndEnterVehicleWithPath(const struct FString& Path, int SeatID)
 {
@@ -13226,11 +14045,11 @@ void UGMCheatVehicle::TeleportAndEnterVehicleWithPath(const struct FString& Path
 // Function Development.GMCheatVehicle.SpawnVehicleWithPathAndLoc
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::SpawnVehicleWithPathAndLoc(const struct FString& Path, float X, float Y, float Z, int Num)
 {
@@ -13258,8 +14077,8 @@ void UGMCheatVehicle::SpawnVehicleWithPathAndLoc(const struct FString& Path, flo
 // Function Development.GMCheatVehicle.SpawnVehicleWithPath
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Path (Parm, ZeroConstructor)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::SpawnVehicleWithPath(const struct FString& Path, int Num)
 {
@@ -13305,7 +14124,7 @@ void UGMCheatVehicle::SpawnVehicle()
 // Function Development.GMCheatVehicle.SpawnAllVehicle
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatVehicle::SpawnAllVehicle(const struct FString& Path)
 {
@@ -13329,9 +14148,9 @@ void UGMCheatVehicle::SpawnAllVehicle(const struct FString& Path)
 // Function Development.GMCheatVehicle.SetSnowBoradRotationInAir
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Yaw                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Roll                           (Parm, ZeroConstructor, IsPlainOldData)
+// float Pitch (Parm, ZeroConstructor, IsPlainOldData)
+// float Yaw (Parm, ZeroConstructor, IsPlainOldData)
+// float Roll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::SetSnowBoradRotationInAir(float Pitch, float Yaw, float Roll)
 {
@@ -13357,7 +14176,7 @@ void UGMCheatVehicle::SetSnowBoradRotationInAir(float Pitch, float Yaw, float Ro
 // Function Development.GMCheatVehicle.SetFuelByPercent
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          percent                        (Parm, ZeroConstructor, IsPlainOldData)
+// float percent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::SetFuelByPercent(float percent)
 {
@@ -13423,7 +14242,7 @@ void UGMCheatVehicle::ReqLeaveVehicle()
 // Function Development.GMCheatVehicle.ReqExchangeVehicleCharacter
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Param                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Param (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::ReqExchangeVehicleCharacter(int Param)
 {
@@ -13447,7 +14266,7 @@ void UGMCheatVehicle::ReqExchangeVehicleCharacter(int Param)
 // Function Development.GMCheatVehicle.ReqEnterVehicle
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          dis                            (Parm, ZeroConstructor, IsPlainOldData)
+// float dis (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::ReqEnterVehicle(float dis)
 {
@@ -13492,7 +14311,7 @@ void UGMCheatVehicle::ReqEnterSnowBoard()
 // Function Development.GMCheatVehicle.ReplaceVehicleWithPath
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UGMCheatVehicle::ReplaceVehicleWithPath(const struct FString& Path)
 {
@@ -13537,8 +14356,8 @@ void UGMCheatVehicle::ReplaceVehicle()
 // Function Development.GMCheatVehicle.MakeVehicleFly
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            IsFly                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsUp                          (Parm, ZeroConstructor, IsPlainOldData)
+// int IsFly (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsUp (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatVehicle::MakeVehicleFly(int IsFly, bool bIsUp)
 {
@@ -13605,7 +14424,7 @@ void UGMCheatWeapon::ToggleShootVertify()
 // Function Development.GMCheatWeapon.ShowWeaponDirection
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Time                           (Parm, ZeroConstructor, IsPlainOldData)
+// int Time (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::ShowWeaponDirection(int Time)
 {
@@ -13650,8 +14469,8 @@ void UGMCheatWeapon::ShowBulletInfo()
 // Function Development.GMCheatWeapon.SetWeaponAttrValue
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::SetWeaponAttrValue(const struct FString& AttrName, float Val)
 {
@@ -13676,7 +14495,7 @@ void UGMCheatWeapon::SetWeaponAttrValue(const struct FString& AttrName, float Va
 // Function Development.GMCheatWeapon.SetWeaponAttrReloadTable
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
+// struct FString tableName (Parm, ZeroConstructor)
 
 void UGMCheatWeapon::SetWeaponAttrReloadTable(const struct FString& tableName)
 {
@@ -13700,7 +14519,7 @@ void UGMCheatWeapon::SetWeaponAttrReloadTable(const struct FString& tableName)
 // Function Development.GMCheatWeapon.SetShootPveVertify
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           IsVertify                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsVertify (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::SetShootPveVertify(bool IsVertify)
 {
@@ -13724,7 +14543,7 @@ void UGMCheatWeapon::SetShootPveVertify(bool IsVertify)
 // Function Development.GMCheatWeapon.SetShootPveDebug
 // (Final, Exec, Native, Public)
 // Parameters:
-// bool                           DebugShootPve                  (Parm, ZeroConstructor, IsPlainOldData)
+// bool DebugShootPve (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::SetShootPveDebug(bool DebugShootPve)
 {
@@ -13748,7 +14567,7 @@ void UGMCheatWeapon::SetShootPveDebug(bool DebugShootPve)
 // Function Development.GMCheatWeapon.SetBaseImpactDamageEntity
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::SetBaseImpactDamageEntity(float Damage)
 {
@@ -13835,7 +14654,7 @@ void UGMCheatWeapon::PrintWeaponAllState()
 // Function Development.GMCheatWeapon.GMSwitchWeaponSpeedScale
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          SwitchScale                    (Parm, ZeroConstructor, IsPlainOldData)
+// float SwitchScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::GMSwitchWeaponSpeedScale(float SwitchScale)
 {
@@ -13859,7 +14678,7 @@ void UGMCheatWeapon::GMSwitchWeaponSpeedScale(float SwitchScale)
 // Function Development.GMCheatWeapon.GMSetReportWeaponNum
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::GMSetReportWeaponNum(int Num)
 {
@@ -13883,7 +14702,7 @@ void UGMCheatWeapon::GMSetReportWeaponNum(int Num)
 // Function Development.GMCheatWeapon.EnableCurrentWeaponInfiniteBullets
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::EnableCurrentWeaponInfiniteBullets(bool bEnable)
 {
@@ -13949,7 +14768,7 @@ void UGMCheatWeapon::DestroyMyWeapons()
 // Function Development.GMCheatWeapon.DebugEnableBulletImpact
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
+// int bEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::DebugEnableBulletImpact(int bEnabled)
 {
@@ -13973,7 +14792,7 @@ void UGMCheatWeapon::DebugEnableBulletImpact(int bEnabled)
 // Function Development.GMCheatWeapon.CreateAutoShootTimer
 // (Final, Native, Public)
 // Parameters:
-// float                          Interval                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Interval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::CreateAutoShootTimer(float Interval)
 {
@@ -14018,7 +14837,7 @@ void UGMCheatWeapon::CollectAllPlayerWeaponPosInfo()
 // Function Development.GMCheatWeapon.ChangeWeaponFunction
 // (Final, Exec, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewWeaponFunction              (Parm, ZeroConstructor, IsPlainOldData)
+// int NewWeaponFunction (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::ChangeWeaponFunction(int NewWeaponFunction)
 {
@@ -14042,9 +14861,9 @@ void UGMCheatWeapon::ChangeWeaponFunction(int NewWeaponFunction)
 // Function Development.GMCheatWeapon.ChangeShootWeaponStrValue
 // (Final, Exec, Native, Public)
 // Parameters:
-// struct FString                 StrName                        (Parm, ZeroConstructor)
-// struct FString                 KeyName                        (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString StrName (Parm, ZeroConstructor)
+// struct FString KeyName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::ChangeShootWeaponStrValue(const struct FString& StrName, const struct FString& KeyName, float Value)
 {
@@ -14070,8 +14889,8 @@ void UGMCheatWeapon::ChangeShootWeaponStrValue(const struct FString& StrName, co
 // Function Development.GMCheatWeapon.AutoShootNearestEnemy
 // (Final, Exec, Native, Public)
 // Parameters:
-// float                          Interval                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Interval (Parm, ZeroConstructor, IsPlainOldData)
+// float Duration (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::AutoShootNearestEnemy(float Interval, float Duration)
 {
@@ -14096,7 +14915,7 @@ void UGMCheatWeapon::AutoShootNearestEnemy(float Interval, float Duration)
 // Function Development.GMCheatWeapon.AutoShoot
 // (Final, Native, Public)
 // Parameters:
-// float                          Interval                       (Parm, ZeroConstructor, IsPlainOldData)
+// float Interval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGMCheatWeapon::AutoShoot(float Interval)
 {
@@ -14138,6 +14957,929 @@ void UGMCheatWeapon::AimForAutoShoot()
 }
 
 
+// Function Development.ImGuiWindowBase.ToggleWindow
+// (Final, Native, Public, BlueprintCallable)
+
+void AImGuiWindowBase::ToggleWindow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.ToggleWindow");
+
+	AImGuiWindowBase_ToggleWindow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.ToggleDisplayMode
+// (Final, Native, Public, BlueprintCallable)
+
+void AImGuiWindowBase::ToggleDisplayMode()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.ToggleDisplayMode");
+
+	AImGuiWindowBase_ToggleDisplayMode_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.ShowWindowWithTabs
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<class UClass*> TabClasses (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void AImGuiWindowBase::ShowWindowWithTabs(TArray<class UClass*> TabClasses)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.ShowWindowWithTabs");
+
+	AImGuiWindowBase_ShowWindowWithTabs_Params params;
+	params.TabClasses = TabClasses;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.ShowWindow
+// (Final, Native, Public, BlueprintCallable)
+
+void AImGuiWindowBase::ShowWindow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.ShowWindow");
+
+	AImGuiWindowBase_ShowWindow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.SetWindowAlpha
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float Alpha (Parm, ZeroConstructor, IsPlainOldData)
+
+void AImGuiWindowBase::SetWindowAlpha(float Alpha)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.SetWindowAlpha");
+
+	AImGuiWindowBase_SetWindowAlpha_Params params;
+	params.Alpha = Alpha;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.SetDisplayMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EImGuiWindowDisplayMode NewMode (Parm, ZeroConstructor, IsPlainOldData)
+
+void AImGuiWindowBase::SetDisplayMode(EImGuiWindowDisplayMode NewMode)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.SetDisplayMode");
+
+	AImGuiWindowBase_SetDisplayMode_Params params;
+	params.NewMode = NewMode;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.RemoveTab
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName TabID (Parm, ZeroConstructor, IsPlainOldData)
+
+void AImGuiWindowBase::RemoveTab(const struct FName& TabID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.RemoveTab");
+
+	AImGuiWindowBase_RemoveTab_Params params;
+	params.TabID = TabID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.RemoveFeature
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName FeatureID (Parm, ZeroConstructor, IsPlainOldData)
+
+void AImGuiWindowBase::RemoveFeature(const struct FName& FeatureID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.RemoveFeature");
+
+	AImGuiWindowBase_RemoveFeature_Params params;
+	params.FeatureID = FeatureID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.IsWindowVisible
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AImGuiWindowBase::IsWindowVisible()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.IsWindowVisible");
+
+	AImGuiWindowBase_IsWindowVisible_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.HideWindow
+// (Final, Native, Public, BlueprintCallable)
+
+void AImGuiWindowBase::HideWindow()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.HideWindow");
+
+	AImGuiWindowBase_HideWindow_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.GetWindowAlpha
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AImGuiWindowBase::GetWindowAlpha()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetWindowAlpha");
+
+	AImGuiWindowBase_GetWindowAlpha_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetTabByID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName TabID (Parm, ZeroConstructor, IsPlainOldData)
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* AImGuiWindowBase::GetTabByID(const struct FName& TabID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetTabByID");
+
+	AImGuiWindowBase_GetTabByID_Params params;
+	params.TabID = TabID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetFeatureByID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName FeatureID (Parm, ZeroConstructor, IsPlainOldData)
+// class UImGuiFeatureWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiFeatureWidget* AImGuiWindowBase::GetFeatureByID(const struct FName& FeatureID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetFeatureByID");
+
+	AImGuiWindowBase_GetFeatureByID_Params params;
+	params.FeatureID = FeatureID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetDisplayMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EImGuiWindowDisplayMode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+EImGuiWindowDisplayMode AImGuiWindowBase::GetDisplayMode()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetDisplayMode");
+
+	AImGuiWindowBase_GetDisplayMode_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetAllTabs
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UImGuiTabBase*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+
+TArray<class UImGuiTabBase*> AImGuiWindowBase::GetAllTabs()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetAllTabs");
+
+	AImGuiWindowBase_GetAllTabs_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetAllFeatures
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class UImGuiFeatureWidget*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+
+TArray<class UImGuiFeatureWidget*> AImGuiWindowBase::GetAllFeatures()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetAllFeatures");
+
+	AImGuiWindowBase_GetAllFeatures_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.GetActiveTab
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* AImGuiWindowBase::GetActiveTab()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.GetActiveTab");
+
+	AImGuiWindowBase_GetActiveTab_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddTabWithLuaPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* TabClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* AImGuiWindowBase::AddTabWithLuaPath(class UClass* TabClass, const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddTabWithLuaPath");
+
+	AImGuiWindowBase_AddTabWithLuaPath_Params params;
+	params.TabClass = TabClass;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddTabInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UImGuiTabBase* Tab (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+
+void AImGuiWindowBase::AddTabInstance(class UImGuiTabBase* Tab, const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddTabInstance");
+
+	AImGuiWindowBase_AddTabInstance_Params params;
+	params.Tab = Tab;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.AddTab
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* TabClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* AImGuiWindowBase::AddTab(class UClass* TabClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddTab");
+
+	AImGuiWindowBase_AddTab_Params params;
+	params.TabClass = TabClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddLuaTab
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+// class UImGuiTabBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiTabBase* AImGuiWindowBase::AddLuaTab(const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddLuaTab");
+
+	AImGuiWindowBase_AddLuaTab_Params params;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddLuaFeature
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+// class UImGuiFeatureWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiFeatureWidget* AImGuiWindowBase::AddLuaFeature(const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddLuaFeature");
+
+	AImGuiWindowBase_AddLuaFeature_Params params;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddFeatureWithLuaPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* FeatureClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+// class UImGuiFeatureWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiFeatureWidget* AImGuiWindowBase::AddFeatureWithLuaPath(class UClass* FeatureClass, const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddFeatureWithLuaPath");
+
+	AImGuiWindowBase_AddFeatureWithLuaPath_Params params;
+	params.FeatureClass = FeatureClass;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.AddFeatureInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UImGuiFeatureWidget* Feature (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InLuaFilePath (Parm, ZeroConstructor)
+
+void AImGuiWindowBase::AddFeatureInstance(class UImGuiFeatureWidget* Feature, const struct FString& InLuaFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddFeatureInstance");
+
+	AImGuiWindowBase_AddFeatureInstance_Params params;
+	params.Feature = Feature;
+	params.InLuaFilePath = InLuaFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowBase.AddFeature
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* FeatureClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UImGuiFeatureWidget* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiFeatureWidget* AImGuiWindowBase::AddFeature(class UClass* FeatureClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.AddFeature");
+
+	AImGuiWindowBase_AddFeature_Params params;
+	params.FeatureClass = FeatureClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowBase.ActivateTab
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FName TabID (Parm, ZeroConstructor, IsPlainOldData)
+
+void AImGuiWindowBase::ActivateTab(const struct FName& TabID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowBase.ActivateTab");
+
+	AImGuiWindowBase_ActivateTab_Params params;
+	params.TabID = TabID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.ToggleWindow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UImGuiWindowManager::ToggleWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.ToggleWindow");
+
+	UImGuiWindowManager_ToggleWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.ShowWindowWithTabs
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*> TabClasses (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UImGuiWindowManager::ShowWindowWithTabs(class UClass* WindowClass, TArray<class UClass*> TabClasses)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.ShowWindowWithTabs");
+
+	UImGuiWindowManager_ShowWindowWithTabs_Params params;
+	params.WindowClass = WindowClass;
+	params.TabClasses = TabClasses;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.ShowWindow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UImGuiWindowManager::ShowWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.ShowWindow");
+
+	UImGuiWindowManager_ShowWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.HideWindow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UImGuiWindowManager::HideWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.HideWindow");
+
+	UImGuiWindowManager_HideWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.HideAllWindows
+// (Final, Native, Public, BlueprintCallable)
+
+void UImGuiWindowManager::HideAllWindows()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.HideAllWindows");
+
+	UImGuiWindowManager_HideAllWindows_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Development.ImGuiWindowManager.HasWindow
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UImGuiWindowManager::HasWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.HasWindow");
+
+	UImGuiWindowManager_HasWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowManager.GetWindow
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AImGuiWindowBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AImGuiWindowBase* UImGuiWindowManager::GetWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.GetWindow");
+
+	UImGuiWindowManager_GetWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowManager.GetOrCreateWindow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass* WindowClass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AImGuiWindowBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AImGuiWindowBase* UImGuiWindowManager::GetOrCreateWindow(class UClass* WindowClass)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.GetOrCreateWindow");
+
+	UImGuiWindowManager_GetOrCreateWindow_Params params;
+	params.WindowClass = WindowClass;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowManager.GetAllWindows
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class AImGuiWindowBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<class AImGuiWindowBase*> UImGuiWindowManager::GetAllWindows()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.GetAllWindows");
+
+	UImGuiWindowManager_GetAllWindows_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowManager.Get
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UImGuiWindowManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UImGuiWindowManager* UImGuiWindowManager::Get(class UObject* WorldContextObject)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.Get");
+
+	UImGuiWindowManager_Get_Params params;
+	params.WorldContextObject = WorldContextObject;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Development.ImGuiWindowManager.DestroyAllWindows
+// (Final, Native, Public, BlueprintCallable)
+
+void UImGuiWindowManager::DestroyAllWindows()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Development.ImGuiWindowManager.DestroyAllWindows");
+
+	UImGuiWindowManager_DestroyAllWindows_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Development.MemLeakTestGameMode.ForceGC
 // (Final, Exec, Native, Private, BlueprintCallable)
 
@@ -14162,9 +15904,9 @@ void AMemLeakTestGameMode::ForceGC()
 // Function Development.QPSBPLibrary.SwitchUIWidgetShowFromUserWidget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   ContainName                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 UserWidgetName                 (Parm, ZeroConstructor)
-// struct FString                 WidgetName                     (Parm, ZeroConstructor)
+// struct FName ContainName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString UserWidgetName (Parm, ZeroConstructor)
+// struct FString WidgetName (Parm, ZeroConstructor)
 
 void UQPSBPLibrary::SwitchUIWidgetShowFromUserWidget(const struct FName& ContainName, const struct FString& UserWidgetName, const struct FString& WidgetName)
 {
@@ -14190,8 +15932,8 @@ void UQPSBPLibrary::SwitchUIWidgetShowFromUserWidget(const struct FName& Contain
 // Function Development.QPSBPLibrary.SwitchUIWidgetShow
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   ContainName                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 WidgetName                     (Parm, ZeroConstructor)
+// struct FName ContainName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString WidgetName (Parm, ZeroConstructor)
 
 void UQPSBPLibrary::SwitchUIWidgetShow(const struct FName& ContainName, const struct FString& WidgetName)
 {
@@ -14216,7 +15958,7 @@ void UQPSBPLibrary::SwitchUIWidgetShow(const struct FName& ContainName, const st
 // Function Development.QPSBPLibrary.SwitchUIContainsShow
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Name (Parm, ZeroConstructor, IsPlainOldData)
 
 void UQPSBPLibrary::SwitchUIContainsShow(const struct FName& Name)
 {
@@ -14240,7 +15982,7 @@ void UQPSBPLibrary::SwitchUIContainsShow(const struct FName& Name)
 // Function Development.QPSBPLibrary.IsPublishVersion
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UQPSBPLibrary::IsPublishVersion()
 {
@@ -14265,7 +16007,7 @@ bool UQPSBPLibrary::IsPublishVersion()
 // Function Development.QPSBPLibrary.GetHZBValue
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UQPSBPLibrary::GetHZBValue()
 {
@@ -14290,7 +16032,7 @@ int UQPSBPLibrary::GetHZBValue()
 // Function Development.QPSBPLibrary.GetDistanceCullingFactor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UQPSBPLibrary::GetDistanceCullingFactor()
 {

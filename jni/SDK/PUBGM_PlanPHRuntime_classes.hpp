@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UBinFileHelper : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.BinFileHelper");
@@ -32,10 +31,9 @@ public:
 class UMapBarrierWidget : public UWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0100(0x0030) MISSED OFFSET
+	unsigned char UnknownData00[0x30]; // 0x0100(0x0030) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.MapBarrierWidget");
@@ -51,14 +49,13 @@ public:
 
 
 // Class PlanPHRuntime.PlanPH_GameMode
-// 0x0008 (0x22A0 - 0x2298)
+// 0x0008 (0x22B8 - 0x22B0)
 class APlanPH_GameMode : public ABattleRoyaleGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x2298(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x22B0(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPH_GameMode");
@@ -73,13 +70,12 @@ public:
 
 
 // Class PlanPHRuntime.PlanPH_GameModeState_Active
-// 0x0000 (0x00C0 - 0x00C0)
+// 0x0000 (0x00C8 - 0x00C8)
 class UPlanPH_GameModeState_Active : public UGameModeStateActive
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPH_GameModeState_Active");
@@ -90,13 +86,12 @@ public:
 
 
 // Class PlanPHRuntime.PlanPH_GameModeState_Fighting
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x00D8 - 0x00D8)
 class UPlanPH_GameModeState_Fighting : public UGameModeStateFightingTeam
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPH_GameModeState_Fighting");
@@ -107,18 +102,17 @@ public:
 
 
 // Class PlanPHRuntime.PlanPH_GameState
-// 0x00B0 (0x1650 - 0x15A0)
+// 0x00B0 (0x16D0 - 0x1620)
 class APlanPH_GameState : public ASTExtraGameStateBase
 {
 public:
-	struct FScriptMulticastDelegate                    OnIslandPlayerChangeDelegate;                             // 0x15A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FPlanPH_CommonOccupy                        PartyDanceLeadInfo_2;                                     // 0x15B0(0x0028) (Net)
-	struct FPlanPH_CommonOccupy                        PartyDanceLeadInfo_3;                                     // 0x15D8(0x0028) (Net)
-	struct FPlanPH_CommonOccupy                        PartyDanceLeadInfo_4;                                     // 0x1600(0x0028) (Net)
-	struct FPlanPH_CommonOccupy                        PartyDanceLeadInfo_5;                                     // 0x1628(0x0028) (Net)
+	struct FScriptMulticastDelegate OnIslandPlayerChangeDelegate; // 0x1620(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FPlanPH_CommonOccupy PartyDanceLeadInfo_2; // 0x1630(0x0028) (Net)
+	struct FPlanPH_CommonOccupy PartyDanceLeadInfo_3; // 0x1658(0x0028) (Net)
+	struct FPlanPH_CommonOccupy PartyDanceLeadInfo_4; // 0x1680(0x0028) (Net)
+	struct FPlanPH_CommonOccupy PartyDanceLeadInfo_5; // 0x16A8(0x0028) (Net)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPH_GameState");
@@ -136,15 +130,14 @@ public:
 
 
 // Class PlanPHRuntime.PlanPH_PlayerState
-// 0x0008 (0x1CC8 - 0x1CC0)
+// 0x0008 (0x1CD0 - 0x1CC8)
 class APlanPH_PlayerState : public ASTExtraPlayerState
 {
 public:
-	int                                                LandId;                                                   // 0x1CC0(0x0004) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x1CC4(0x0004) MISSED OFFSET
+	int LandId; // 0x1CC8(0x0004) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x1CCC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPH_PlayerState");
@@ -160,15 +153,14 @@ public:
 
 
 // Class PlanPHRuntime.PlanPHCustomStaticMeshComponent
-// 0x0060 (0x0B90 - 0x0B30)
+// 0x0060 (0x0BB0 - 0x0B50)
 class UPlanPHCustomStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0B30(0x0050) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0B80(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x50]; // 0x0B50(0x0050) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0BA0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHCustomStaticMeshComponent");
@@ -186,12 +178,11 @@ public:
 class APlanPHDoor : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0570(0x0008) MISSED OFFSET
-	struct FVector                                     TransformDirVector;                                       // 0x0578(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0584(0x0004) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0570(0x0008) MISSED OFFSET
+	struct FVector TransformDirVector; // 0x0578(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0584(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHDoor");
@@ -210,8 +201,7 @@ class UPlanPHGameplayStatics : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHGameplayStatics");
@@ -231,15 +221,14 @@ public:
 class APlanPHHomeArea : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0570(0x0008) MISSED OFFSET
-	struct FIntVector                                  BlockNumXYZ;                                              // 0x0578(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FIntVector                                  MinGridIndexXYZ;                                          // 0x0584(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FIntVector                                  MaxGridIndexXYZ;                                          // 0x0590(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x059C(0x0004) MISSED OFFSET
-	class UPlanPHHomeAreaVisualizationComponent*       VisComponent;                                             // 0x05A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0570(0x0008) MISSED OFFSET
+	struct FIntVector BlockNumXYZ; // 0x0578(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FIntVector MinGridIndexXYZ; // 0x0584(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FIntVector MaxGridIndexXYZ; // 0x0590(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x059C(0x0004) MISSED OFFSET
+	class UPlanPHHomeAreaVisualizationComponent* VisComponent; // 0x05A0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHHomeArea");
@@ -252,14 +241,13 @@ public:
 
 
 // Class PlanPHRuntime.PlanPHHomeAreaVisualizationComponent
-// 0x0020 (0x0940 - 0x0920)
+// 0x0020 (0x0960 - 0x0940)
 class UPlanPHHomeAreaVisualizationComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0920(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0940(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHHomeAreaVisualizationComponent");
@@ -276,11 +264,10 @@ public:
 class UPlanPHMapData : public UMapDataBase
 {
 public:
-	TArray<class ASTExtraPlayerCharacter*>             PlayerCharacterArrayC;                                    // 0x0098(0x0010) (BlueprintVisible, ZeroConstructor)
-	TArray<struct FVector>                             OffsetLocations;                                          // 0x00A8(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<class ASTExtraPlayerCharacter*> PlayerCharacterArrayC; // 0x0098(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<struct FVector> OffsetLocations; // 0x00A8(0x0010) (BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHMapData");
@@ -298,13 +285,12 @@ public:
 class APlanPHSpectatorPawn : public ASpectatorPawn
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0538(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0590(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	float                                              PlaneMoveMaxSpeed;                                        // 0x05A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              VerticalMoveMaxSpeed;                                     // 0x05A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x58]; // 0x0538(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0590(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	float PlaneMoveMaxSpeed; // 0x05A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float VerticalMoveMaxSpeed; // 0x05A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHSpectatorPawn");
@@ -319,22 +305,21 @@ public:
 
 
 // Class PlanPHRuntime.PlanPHVisualGridComponent
-// 0x0060 (0x0980 - 0x0920)
+// 0x0060 (0x09A0 - 0x0940)
 class UPlanPHVisualGridComponent : public UPrimitiveComponent
 {
 public:
-	struct FVector                                     BlockDimension;                                           // 0x0920(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FIntVector                                  BlockNumXYZ;                                              // 0x092C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                XColor;                                                   // 0x0938(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                YColor;                                                   // 0x0948(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FLinearColor                                ZColor;                                                   // 0x0958(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              LineThickness;                                            // 0x0968(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x096C(0x000C) MISSED OFFSET
-	bool                                               bShouldShowGrids;                                         // 0x0978(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0979(0x0007) MISSED OFFSET
+	struct FVector BlockDimension; // 0x0940(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FIntVector BlockNumXYZ; // 0x094C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor XColor; // 0x0958(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor YColor; // 0x0968(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FLinearColor ZColor; // 0x0978(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	float LineThickness; // 0x0988(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xC]; // 0x098C(0x000C) MISSED OFFSET
+	bool bShouldShowGrids; // 0x0998(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0999(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class PlanPHRuntime.PlanPHVisualGridComponent");

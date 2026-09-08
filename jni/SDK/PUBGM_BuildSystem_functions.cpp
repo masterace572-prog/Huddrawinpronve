@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,10 +11,10 @@ namespace SDK
 // Function BuildSystem.BuildingActorBase.SpawnDestroyParticle
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// bool                           bSpawnParticle                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Loc                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FSoftObjectPath         DestroyBuildingEffectPath      (ConstParm, Parm, OutParm, ReferenceParm)
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSpawnParticle (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform Loc (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FSoftObjectPath DestroyBuildingEffectPath (ConstParm, Parm, OutParm, ReferenceParm)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorBase::SpawnDestroyParticle(bool bSpawnParticle, const struct FTransform& Loc, const struct FSoftObjectPath& DestroyBuildingEffectPath, class UWorld* World)
 {
@@ -38,10 +38,34 @@ void ABuildingActorBase::SpawnDestroyParticle(bool bSpawnParticle, const struct 
 }
 
 
+// Function BuildSystem.BuildingActorBase.SetLastQuadTraceDeviation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float InDeviation (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABuildingActorBase::SetLastQuadTraceDeviation(float InDeviation)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BuildSystem.BuildingActorBase.SetLastQuadTraceDeviation");
+
+	ABuildingActorBase_SetLastQuadTraceDeviation_Params params;
+	params.InDeviation = InDeviation;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function BuildSystem.BuildingActorBase.PlayDestroyAnimation
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           bUseParticle                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseParticle (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorBase::PlayDestroyAnimation(bool bUseParticle)
 {
@@ -65,11 +89,11 @@ void ABuildingActorBase::PlayDestroyAnimation(bool bUseParticle)
 // Function BuildSystem.BuildingActorBase.OnTakeDamageFromVehicle
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*     MyPrimitiveComp                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          ForwardSpeed                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DamageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* MyPrimitiveComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float ForwardSpeed (Parm, ZeroConstructor, IsPlainOldData)
+// float DamageAmount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* EventInstigator (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorBase::OnTakeDamageFromVehicle(class UPrimitiveComponent* MyPrimitiveComp, float ForwardSpeed, float DamageAmount, class AActor* DamageCauser, class AController* EventInstigator)
 {
@@ -117,7 +141,7 @@ void ABuildingActorBase::OnRep_Health()
 // Function BuildSystem.BuildingActorBase.OnPlayDestroyAnimation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                           bUseParticle                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseParticle (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorBase::OnPlayDestroyAnimation(bool bUseParticle)
 {
@@ -140,7 +164,7 @@ void ABuildingActorBase::OnPlayDestroyAnimation(bool bUseParticle)
 // Function BuildSystem.BuildingActorBase.OnBuildingActorDamaged
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// float                          Health                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Health (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorBase::OnBuildingActorDamaged(float Health)
 {
@@ -181,10 +205,35 @@ void ABuildingActorBase::OnBornAnimationPlayEndInClient()
 }
 
 
+// Function BuildSystem.BuildingActorBase.GetLastQuadTraceDeviation
+// (Final, Native, Public, Const)
+// Parameters:
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float ABuildingActorBase::GetLastQuadTraceDeviation()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BuildSystem.BuildingActorBase.GetLastQuadTraceDeviation");
+
+	ABuildingActorBase_GetLastQuadTraceDeviation_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BuildSystem.BuildingActorBase.GetBuildID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ABuildingActorBase::GetBuildID()
 {
@@ -229,8 +278,8 @@ void ABuildingActorBase::BPOnOwnerChanged()
 // Function BuildSystem.BuildSystemComponent.TryAttachToMoveablePlatform
 // (Event, Protected, HasDefaults, BlueprintEvent)
 // Parameters:
-// class AActor*                  SpawnedBuilding                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 BuildLocation                  (Parm, IsPlainOldData)
+// class AActor* SpawnedBuilding (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector BuildLocation (Parm, IsPlainOldData)
 
 void UBuildSystemComponent::TryAttachToMoveablePlatform(class AActor* SpawnedBuilding, const struct FVector& BuildLocation)
 {
@@ -296,9 +345,9 @@ void UBuildSystemComponent::StopPlaceBuilding()
 // Function BuildSystem.BuildSystemComponent.StartPrePlaceBuilding
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// EBuildingViewType              viewType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// EBuildingViewType viewType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::StartPrePlaceBuilding(int InBuildID, int AvatarID, EBuildingViewType viewType)
 {
@@ -324,8 +373,8 @@ void UBuildSystemComponent::StartPrePlaceBuilding(int InBuildID, int AvatarID, E
 // Function BuildSystem.BuildSystemComponent.SkipCDTimeByBuildID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          IncreaseRate                   (Parm, ZeroConstructor, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// float IncreaseRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::SkipCDTimeByBuildID(int InBuildID, float IncreaseRate)
 {
@@ -350,7 +399,7 @@ void UBuildSystemComponent::SkipCDTimeByBuildID(int InBuildID, float IncreaseRat
 // Function BuildSystem.BuildSystemComponent.ShouldEnableDoubleTouchMode
 // (Native, Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::ShouldEnableDoubleTouchMode()
 {
@@ -375,8 +424,8 @@ bool UBuildSystemComponent::ShouldEnableDoubleTouchMode()
 // Function BuildSystem.BuildSystemComponent.SetPrebuildEnabled
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           CanBePlaced                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsVisible                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool CanBePlaced (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsVisible (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::SetPrebuildEnabled(bool CanBePlaced, bool IsVisible)
 {
@@ -401,7 +450,7 @@ void UBuildSystemComponent::SetPrebuildEnabled(bool CanBePlaced, bool IsVisible)
 // Function BuildSystem.BuildSystemComponent.SetBuildingDataModeID
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
-// int                            ModeID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ModeID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::SetBuildingDataModeID(int ModeID)
 {
@@ -425,8 +474,8 @@ void UBuildSystemComponent::SetBuildingDataModeID(int ModeID)
 // Function BuildSystem.BuildSystemComponent.SetBuildingData
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBuildingData           InData                         (Parm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBuildingData InData (Parm)
 
 void UBuildSystemComponent::SetBuildingData(int Index, const struct FBuildingData& InData)
 {
@@ -451,10 +500,10 @@ void UBuildSystemComponent::SetBuildingData(int Index, const struct FBuildingDat
 // Function BuildSystem.BuildSystemComponent.ServerLineTraceCheck
 // (Native, Event, Protected, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// class UClass*                  BuildingClass                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 CheckLocation                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                CheckRotation                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* BuildingClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector CheckLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator CheckRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::ServerLineTraceCheck(class UClass* BuildingClass, const struct FVector& CheckLocation, const struct FRotator& CheckRotation)
 {
@@ -482,8 +531,8 @@ bool UBuildSystemComponent::ServerLineTraceCheck(class UClass* BuildingClass, co
 // Function BuildSystem.BuildSystemComponent.ResetBuildngCDByBuildID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InNewCDTime                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// float InNewCDTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::ResetBuildngCDByBuildID(int InBuildID, float InNewCDTime)
 {
@@ -529,13 +578,13 @@ void UBuildSystemComponent::ResetBuildList()
 // Function BuildSystem.BuildSystemComponent.ProccessNothingHitTraceOverlap
 // (Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 DestLocation                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                DestRotation                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          MaxBuildDist                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ViewLocation                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector DestLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator DestRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float MaxBuildDist (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OutLocation (Parm, OutParm, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ViewLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::ProccessNothingHitTraceOverlap(const struct FVector& DestLocation, const struct FRotator& DestRotation, float MaxBuildDist, int buildIndex, const struct FVector& ViewLocation, struct FVector* OutLocation)
 {
@@ -567,9 +616,9 @@ bool UBuildSystemComponent::ProccessNothingHitTraceOverlap(const struct FVector&
 // Function BuildSystem.BuildSystemComponent.PlaceBuildingWithIndex
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRelative                      (Parm, ZeroConstructor, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRelative (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::PlaceBuildingWithIndex(int buildIndex, int AvatarID, bool bRelative)
 {
@@ -595,9 +644,9 @@ void UBuildSystemComponent::PlaceBuildingWithIndex(int buildIndex, int AvatarID,
 // Function BuildSystem.BuildSystemComponent.PlaceBuildingAtLocation
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Loc                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Loc (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Rot (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UBuildSystemComponent::PlaceBuildingAtLocation(int buildIndex, const struct FVector& Loc, const struct FRotator& Rot)
 {
@@ -623,8 +672,8 @@ void UBuildSystemComponent::PlaceBuildingAtLocation(int buildIndex, const struct
 // Function BuildSystem.BuildSystemComponent.PlaceBuilding
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRelative                      (Parm, ZeroConstructor, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRelative (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::PlaceBuilding(int AvatarID, bool bRelative)
 {
@@ -649,10 +698,10 @@ void UBuildSystemComponent::PlaceBuilding(int AvatarID, bool bRelative)
 // Function BuildSystem.BuildSystemComponent.PickLocationByBuildID
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
-// struct FRotator                OutRotation                    (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OutLocation (Parm, OutParm, IsPlainOldData)
+// struct FRotator OutRotation (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::PickLocationByBuildID(int InBuildID, struct FVector* OutLocation, struct FRotator* OutRotation)
 {
@@ -683,10 +732,10 @@ bool UBuildSystemComponent::PickLocationByBuildID(int InBuildID, struct FVector*
 // Function BuildSystem.BuildSystemComponent.OverriveDeploymentTransform
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FRotator                rotIn                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 locIn                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                rotOut                         (Parm, OutParm, IsPlainOldData)
-// struct FVector                 locOut                         (Parm, OutParm, IsPlainOldData)
+// struct FRotator rotIn (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector locIn (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator rotOut (Parm, OutParm, IsPlainOldData)
+// struct FVector locOut (Parm, OutParm, IsPlainOldData)
 
 void UBuildSystemComponent::OverriveDeploymentTransform(const struct FRotator& rotIn, const struct FVector& locIn, struct FRotator* rotOut, struct FVector* locOut)
 {
@@ -716,9 +765,9 @@ void UBuildSystemComponent::OverriveDeploymentTransform(const struct FRotator& r
 // Function BuildSystem.BuildSystemComponent.OverrideBuildingMaxBuildDistance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BuildingMaxDistance            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           SetAll                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BuildingID                     (Parm, ZeroConstructor, IsPlainOldData)
+// float BuildingMaxDistance (Parm, ZeroConstructor, IsPlainOldData)
+// bool SetAll (Parm, ZeroConstructor, IsPlainOldData)
+// int BuildingID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::OverrideBuildingMaxBuildDistance(float BuildingMaxDistance, bool SetAll, int BuildingID)
 {
@@ -744,8 +793,8 @@ void UBuildSystemComponent::OverrideBuildingMaxBuildDistance(float BuildingMaxDi
 // Function BuildSystem.BuildSystemComponent.OnTouchedConstructableBoxEnded
 // (Native, Public)
 // Parameters:
-// TEnumAsByte<enum ETouchIndex>  FingerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     TouchedComponent               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum ETouchIndex> FingerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* TouchedComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBuildSystemComponent::OnTouchedConstructableBoxEnded(TEnumAsByte<enum ETouchIndex> FingerIndex, class UPrimitiveComponent* TouchedComponent)
 {
@@ -770,8 +819,8 @@ void UBuildSystemComponent::OnTouchedConstructableBoxEnded(TEnumAsByte<enum ETou
 // Function BuildSystem.BuildSystemComponent.OnTouchedConstructableBox
 // (Native, Public)
 // Parameters:
-// TEnumAsByte<enum ETouchIndex>  FingerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     TouchedComponent               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TEnumAsByte<enum ETouchIndex> FingerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* TouchedComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBuildSystemComponent::OnTouchedConstructableBox(TEnumAsByte<enum ETouchIndex> FingerIndex, class UPrimitiveComponent* TouchedComponent)
 {
@@ -796,8 +845,8 @@ void UBuildSystemComponent::OnTouchedConstructableBox(TEnumAsByte<enum ETouchInd
 // Function BuildSystem.BuildSystemComponent.OnTouchActorBuild
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector2D               ScreenPosition                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class APlayerController*       Controller                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D ScreenPosition (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class APlayerController* Controller (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::OnTouchActorBuild(const struct FVector2D& ScreenPosition, class APlayerController* Controller)
 {
@@ -822,7 +871,7 @@ void UBuildSystemComponent::OnTouchActorBuild(const struct FVector2D& ScreenPosi
 // Function BuildSystem.BuildSystemComponent.OnAsyncLoadingMeshFinished
 // (Final, Native, Public)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::OnAsyncLoadingMeshFinished(int buildIndex)
 {
@@ -846,7 +895,7 @@ void UBuildSystemComponent::OnAsyncLoadingMeshFinished(int buildIndex)
 // Function BuildSystem.BuildSystemComponent.OnAsyncLoadingEffectFinished
 // (Final, Native, Public)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::OnAsyncLoadingEffectFinished(int buildIndex)
 {
@@ -870,7 +919,7 @@ void UBuildSystemComponent::OnAsyncLoadingEffectFinished(int buildIndex)
 // Function BuildSystem.BuildSystemComponent.OnAsyncLoadingBuildingFinished
 // (Final, Native, Public)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::OnAsyncLoadingBuildingFinished(int buildIndex)
 {
@@ -894,8 +943,8 @@ void UBuildSystemComponent::OnAsyncLoadingBuildingFinished(int buildIndex)
 // Function BuildSystem.BuildSystemComponent.IsValidAvatar
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsValidAvatar(int AvatarID)
 {
@@ -921,8 +970,8 @@ bool UBuildSystemComponent::IsValidAvatar(int AvatarID)
 // Function BuildSystem.BuildSystemComponent.IsParticlePreBuildingEffect
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsParticlePreBuildingEffect(int InBuildID)
 {
@@ -948,9 +997,9 @@ bool UBuildSystemComponent::IsParticlePreBuildingEffect(int InBuildID)
 // Function BuildSystem.BuildSystemComponent.IsOverlayBuildHeightValid
 // (Event, Public, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 BuildLocation                  (Parm, IsPlainOldData)
-// float                          OverlayMaxHeightFromGround     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector BuildLocation (Parm, IsPlainOldData)
+// float OverlayMaxHeightFromGround (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsOverlayBuildHeightValid(const struct FVector& BuildLocation, float OverlayMaxHeightFromGround)
 {
@@ -976,7 +1025,7 @@ bool UBuildSystemComponent::IsOverlayBuildHeightValid(const struct FVector& Buil
 // Function BuildSystem.BuildSystemComponent.IsInPreBuildingMode
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsInPreBuildingMode()
 {
@@ -1001,8 +1050,8 @@ bool UBuildSystemComponent::IsInPreBuildingMode()
 // Function BuildSystem.BuildSystemComponent.IsCanPlaceBuildingBP
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsCanPlaceBuildingBP(int InBuildID)
 {
@@ -1028,9 +1077,9 @@ bool UBuildSystemComponent::IsCanPlaceBuildingBP(int InBuildID)
 // Function BuildSystem.BuildSystemComponent.IsCanPlaceBuilding
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBuildingActionType> _TYPE                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBuildingActionType> _TYPE (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsCanPlaceBuilding(int InBuildID, TEnumAsByte<enum EBuildingActionType> _TYPE)
 {
@@ -1057,8 +1106,8 @@ bool UBuildSystemComponent::IsCanPlaceBuilding(int InBuildID, TEnumAsByte<enum E
 // Function BuildSystem.BuildSystemComponent.IsActorProhibited
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::IsActorProhibited(class AActor* Actor)
 {
@@ -1084,8 +1133,8 @@ bool UBuildSystemComponent::IsActorProhibited(class AActor* Actor)
 // Function BuildSystem.BuildSystemComponent.GetPreBuildingEffectRotation
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UBuildSystemComponent::GetPreBuildingEffectRotation(int InBuildID)
 {
@@ -1111,9 +1160,9 @@ struct FRotator UBuildSystemComponent::GetPreBuildingEffectRotation(int InBuildI
 // Function BuildSystem.BuildSystemComponent.GetPreBuildingEffectPath
 // (Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvatarID                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSoftObjectPath         ReturnValue                    (Parm, OutParm, ReturnParm)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// int AvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSoftObjectPath ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSoftObjectPath UBuildSystemComponent::GetPreBuildingEffectPath(int InBuildID, int AvatarID)
 {
@@ -1139,8 +1188,8 @@ struct FSoftObjectPath UBuildSystemComponent::GetPreBuildingEffectPath(int InBui
 // Function BuildSystem.BuildSystemComponent.GetPreBuildingEffectOffset
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// int                            InBuildID                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int InBuildID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildSystemComponent::GetPreBuildingEffectOffset(int InBuildID)
 {
@@ -1166,7 +1215,7 @@ struct FVector UBuildSystemComponent::GetPreBuildingEffectOffset(int InBuildID)
 // Function BuildSystem.BuildSystemComponent.GetOwnerPlayerController
 // (Native, Protected)
 // Parameters:
-// class APlayerController*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APlayerController* UBuildSystemComponent::GetOwnerPlayerController()
 {
@@ -1191,7 +1240,7 @@ class APlayerController* UBuildSystemComponent::GetOwnerPlayerController()
 // Function BuildSystem.BuildSystemComponent.GetMaxDistance
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildSystemComponent::GetMaxDistance()
 {
@@ -1213,10 +1262,35 @@ float UBuildSystemComponent::GetMaxDistance()
 }
 
 
+// Function BuildSystem.BuildSystemComponent.GetLastQuadTraceDeviation
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBuildSystemComponent::GetLastQuadTraceDeviation()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BuildSystem.BuildSystemComponent.GetLastQuadTraceDeviation");
+
+	UBuildSystemComponent_GetLastQuadTraceDeviation_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BuildSystem.BuildSystemComponent.GetIsHasInitData
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::GetIsHasInitData()
 {
@@ -1241,8 +1315,8 @@ bool UBuildSystemComponent::GetIsHasInitData()
 // Function BuildSystem.BuildSystemComponent.GetIndexByBuildingID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            BuildID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuildID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBuildSystemComponent::GetIndexByBuildingID(int BuildID)
 {
@@ -1268,7 +1342,7 @@ int UBuildSystemComponent::GetIndexByBuildingID(int BuildID)
 // Function BuildSystem.BuildSystemComponent.GetCurrentBuildType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EBuildingType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBuildingType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBuildingType> UBuildSystemComponent::GetCurrentBuildType()
 {
@@ -1293,8 +1367,8 @@ TEnumAsByte<enum EBuildingType> UBuildSystemComponent::GetCurrentBuildType()
 // Function BuildSystem.BuildSystemComponent.GetCDOByIndex
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UBuildSystemComponent::GetCDOByIndex(int Index)
 {
@@ -1320,7 +1394,7 @@ class AActor* UBuildSystemComponent::GetCDOByIndex(int Index)
 // Function BuildSystem.BuildSystemComponent.GetBuildingList
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FBuildingData>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FBuildingData> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBuildingData> UBuildSystemComponent::GetBuildingList()
 {
@@ -1345,7 +1419,7 @@ TArray<struct FBuildingData> UBuildSystemComponent::GetBuildingList()
 // Function BuildSystem.BuildSystemComponent.GetBuildingDataModeID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBuildSystemComponent::GetBuildingDataModeID()
 {
@@ -1370,8 +1444,8 @@ int UBuildSystemComponent::GetBuildingDataModeID()
 // Function BuildSystem.BuildSystemComponent.EnableBuildingByID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuildID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// int BuildID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::EnableBuildingByID(int BuildID, bool bEnable)
 {
@@ -1396,12 +1470,12 @@ void UBuildSystemComponent::EnableBuildingByID(int BuildID, bool bEnable)
 // Function BuildSystem.BuildSystemComponent.DoSceenTouchBuild
 // (Native, Protected, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               ScreenPostion                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            PointerIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBuildingActionType> _TYPE                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsBegin                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBuildingActionType> CustomBuildEvent               (Parm, ZeroConstructor, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D ScreenPostion (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int PointerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBuildingActionType> _TYPE (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsBegin (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBuildingActionType> CustomBuildEvent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildSystemComponent::DoSceenTouchBuild(int buildIndex, const struct FVector2D& ScreenPostion, int PointerIndex, TEnumAsByte<enum EBuildingActionType> _TYPE, bool IsBegin, TEnumAsByte<enum EBuildingActionType> CustomBuildEvent)
 {
@@ -1430,8 +1504,8 @@ void UBuildSystemComponent::DoSceenTouchBuild(int buildIndex, const struct FVect
 // Function BuildSystem.BuildSystemComponent.DensityCheck
 // (Native, Event, Protected, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FBuildingActorDensityCheck DensityCheckParmas             (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBuildingActorDensityCheck DensityCheckParmas (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::DensityCheck(const struct FBuildingActorDensityCheck& DensityCheckParmas)
 {
@@ -1457,9 +1531,9 @@ bool UBuildSystemComponent::DensityCheck(const struct FBuildingActorDensityCheck
 // Function BuildSystem.BuildSystemComponent.CheckShouldSkipByVisibility
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UPrimitiveComponent*     _comp                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPrimitiveComponent* _comp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckShouldSkipByVisibility(class UPrimitiveComponent* _comp, int buildIndex)
 {
@@ -1486,12 +1560,12 @@ bool UBuildSystemComponent::CheckShouldSkipByVisibility(class UPrimitiveComponen
 // Function BuildSystem.BuildSystemComponent.CheckPlacementWithPitch
 // (Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 OutLocation                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                OutRotation                    (Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FBuildingData           CurBuildData                   (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OutLocation (Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator OutRotation (Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector BoxExtent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FBuildingData CurBuildData (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckPlacementWithPitch(const struct FHitResult& Hit, const struct FVector& BoxExtent, const struct FBuildingData& CurBuildData, struct FVector* OutLocation, struct FRotator* OutRotation)
 {
@@ -1523,15 +1597,15 @@ bool UBuildSystemComponent::CheckPlacementWithPitch(const struct FHitResult& Hit
 // Function BuildSystem.BuildSystemComponent.CheckPlacementOverlap
 // (Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// TArray<struct FHitResult>      HitArray                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
-// struct FVector                 BoxExtent                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FBuildingData           CurBuildData                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FRotator                BuildRotation                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                ControlRot                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 ViewLocation                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           HasForbiddenObject             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FHitResult> HitArray (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FVector OutLocation (Parm, OutParm, IsPlainOldData)
+// struct FVector BoxExtent (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FBuildingData CurBuildData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FRotator BuildRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator ControlRot (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector ViewLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool HasForbiddenObject (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckPlacementOverlap(TArray<struct FHitResult> HitArray, const struct FVector& ViewLocation, const struct FVector& BoxExtent, const struct FBuildingData& CurBuildData, const struct FRotator& BuildRotation, const struct FRotator& ControlRot, struct FVector* OutLocation, bool* HasForbiddenObject)
 {
@@ -1566,8 +1640,8 @@ bool UBuildSystemComponent::CheckPlacementOverlap(TArray<struct FHitResult> HitA
 // Function BuildSystem.BuildSystemComponent.CheckPlaceBuildingWithIndex
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckPlaceBuildingWithIndex(int buildIndex)
 {
@@ -1593,9 +1667,9 @@ bool UBuildSystemComponent::CheckPlaceBuildingWithIndex(int buildIndex)
 // Function BuildSystem.BuildSystemComponent.CheckObjectIsOneOfTheTemplate
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 Obj                            (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UClass*>          _ActorFilterTemplates          (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Obj (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*> _ActorFilterTemplates (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckObjectIsOneOfTheTemplate(class UObject* Obj, TArray<class UClass*> _ActorFilterTemplates)
 {
@@ -1622,8 +1696,8 @@ bool UBuildSystemComponent::CheckObjectIsOneOfTheTemplate(class UObject* Obj, TA
 // Function BuildSystem.BuildSystemComponent.CheckCollisionNeedSkipOwner
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::CheckCollisionNeedSkipOwner(int buildIndex)
 {
@@ -1649,12 +1723,12 @@ bool UBuildSystemComponent::CheckCollisionNeedSkipOwner(int buildIndex)
 // Function BuildSystem.BuildSystemComponent.BuildAtWorldLoc
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            buildIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              tranx                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndLocation                    (Parm, IsPlainOldData)
-// bool                           bUseTrace                      (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBuildingActionType> BuildType                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int buildIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform tranx (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector EndLocation (Parm, IsPlainOldData)
+// bool bUseTrace (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBuildingActionType> BuildType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildSystemComponent::BuildAtWorldLoc(int buildIndex, const struct FTransform& tranx, const struct FVector& EndLocation, bool bUseTrace, TEnumAsByte<enum EBuildingActionType> BuildType)
 {
@@ -1684,7 +1758,7 @@ bool UBuildSystemComponent::BuildAtWorldLoc(int buildIndex, const struct FTransf
 // Function BuildSystem.BuildSystemComponent.AddBuildingData
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FBuildingData           InData                         (Parm)
+// struct FBuildingData InData (Parm)
 
 void UBuildSystemComponent::AddBuildingData(const struct FBuildingData& InData)
 {
@@ -1705,10 +1779,43 @@ void UBuildSystemComponent::AddBuildingData(const struct FBuildingData& InData)
 }
 
 
+// Function BuildSystem.BuildingActorInterface.UseQuadTraceDeviationForSpawnOffset
+// (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector BuildLocation (Parm, IsPlainOldData)
+// float QuadTraceDeviation (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OutLocation (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBuildingActorInterface::UseQuadTraceDeviationForSpawnOffset(const struct FVector& BuildLocation, float QuadTraceDeviation, struct FVector* OutLocation)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BuildSystem.BuildingActorInterface.UseQuadTraceDeviationForSpawnOffset");
+
+	UBuildingActorInterface_UseQuadTraceDeviationForSpawnOffset_Params params;
+	params.BuildLocation = BuildLocation;
+	params.QuadTraceDeviation = QuadTraceDeviation;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutLocation != nullptr)
+		*OutLocation = params.OutLocation;
+
+	return params.ReturnValue;
+}
+
+
 // Function BuildSystem.BuildingActorInterface.UseFixedLocation
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::UseFixedLocation()
 {
@@ -1733,7 +1840,7 @@ bool UBuildingActorInterface::UseFixedLocation()
 // Function BuildSystem.BuildingActorInterface.UseCachedBuildLocation
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::UseCachedBuildLocation()
 {
@@ -1758,7 +1865,7 @@ bool UBuildingActorInterface::UseCachedBuildLocation()
 // Function BuildSystem.BuildingActorInterface.ShouldUseExtraRotation
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldUseExtraRotation()
 {
@@ -1783,7 +1890,7 @@ bool UBuildingActorInterface::ShouldUseExtraRotation()
 // Function BuildSystem.BuildingActorInterface.ShouldUseExtraOffset
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldUseExtraOffset()
 {
@@ -1808,7 +1915,7 @@ bool UBuildingActorInterface::ShouldUseExtraOffset()
 // Function BuildSystem.BuildingActorInterface.ShouldSnapToGrid
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldSnapToGrid()
 {
@@ -1833,7 +1940,7 @@ bool UBuildingActorInterface::ShouldSnapToGrid()
 // Function BuildSystem.BuildingActorInterface.ShouldSkipCheckOwnerCollision
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldSkipCheckOwnerCollision()
 {
@@ -1858,7 +1965,7 @@ bool UBuildingActorInterface::ShouldSkipCheckOwnerCollision()
 // Function BuildSystem.BuildingActorInterface.ShouldCustomBlockingChannels
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldCustomBlockingChannels()
 {
@@ -1883,7 +1990,7 @@ bool UBuildingActorInterface::ShouldCustomBlockingChannels()
 // Function BuildSystem.BuildingActorInterface.ShouldCheckVisibilityTypes
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldCheckVisibilityTypes()
 {
@@ -1908,7 +2015,7 @@ bool UBuildingActorInterface::ShouldCheckVisibilityTypes()
 // Function BuildSystem.BuildingActorInterface.ShouldAttachToMovementPlatform
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::ShouldAttachToMovementPlatform()
 {
@@ -1933,7 +2040,7 @@ bool UBuildingActorInterface::ShouldAttachToMovementPlatform()
 // Function BuildSystem.BuildingActorInterface.SetBuildingActorID
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            BuildID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int BuildID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildingActorInterface::SetBuildingActorID(int BuildID)
 {
@@ -1957,8 +2064,8 @@ void UBuildingActorInterface::SetBuildingActorID(int BuildID)
 // Function BuildSystem.BuildingActorInterface.PrebuildCDOBodyInstance
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              tranx                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform tranx (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UBuildingActorInterface::PrebuildCDOBodyInstance(class UWorld* World, const struct FTransform& tranx)
 {
@@ -2004,7 +2111,7 @@ void UBuildingActorInterface::NonCullingBeginPlay()
 // Function BuildSystem.BuildingActorInterface.MaxUnderWaterBuildDepth
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::MaxUnderWaterBuildDepth()
 {
@@ -2029,7 +2136,7 @@ float UBuildingActorInterface::MaxUnderWaterBuildDepth()
 // Function BuildSystem.BuildingActorInterface.IsEnablePitchRotatePlace
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::IsEnablePitchRotatePlace()
 {
@@ -2054,7 +2161,7 @@ bool UBuildingActorInterface::IsEnablePitchRotatePlace()
 // Function BuildSystem.BuildingActorInterface.IsEnableOverlayPlace
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::IsEnableOverlayPlace()
 {
@@ -2079,7 +2186,7 @@ bool UBuildingActorInterface::IsEnableOverlayPlace()
 // Function BuildSystem.BuildingActorInterface.IsBuildOnlyOnLandscape
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::IsBuildOnlyOnLandscape()
 {
@@ -2104,7 +2211,7 @@ bool UBuildingActorInterface::IsBuildOnlyOnLandscape()
 // Function BuildSystem.BuildingActorInterface.IsBuildOnEdge
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::IsBuildOnEdge()
 {
@@ -2129,7 +2236,7 @@ bool UBuildingActorInterface::IsBuildOnEdge()
 // Function BuildSystem.BuildingActorInterface.IsAutoPickValidPlace
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::IsAutoPickValidPlace()
 {
@@ -2154,7 +2261,7 @@ bool UBuildingActorInterface::IsAutoPickValidPlace()
 // Function BuildSystem.BuildingActorInterface.HandleBuildingDestroyed
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AController*             InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatedBy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildingActorInterface::HandleBuildingDestroyed(class AController* InstigatedBy)
 {
@@ -2178,7 +2285,7 @@ void UBuildingActorInterface::HandleBuildingDestroyed(class AController* Instiga
 // Function BuildSystem.BuildingActorInterface.HandleBuildingConstructed
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AController*             InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatedBy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuildingActorInterface::HandleBuildingConstructed(class AController* InstigatedBy)
 {
@@ -2202,7 +2309,7 @@ void UBuildingActorInterface::HandleBuildingConstructed(class AController* Insti
 // Function BuildSystem.BuildingActorInterface.GetWorldSnapSetup
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FBuildingActorWorldSnapSetup ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBuildingActorWorldSnapSetup ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBuildingActorWorldSnapSetup UBuildingActorInterface::GetWorldSnapSetup()
 {
@@ -2227,7 +2334,7 @@ struct FBuildingActorWorldSnapSetup UBuildingActorInterface::GetWorldSnapSetup()
 // Function BuildSystem.BuildingActorInterface.GetVisibilitySkipTypes
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UClass*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UClass*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UClass*> UBuildingActorInterface::GetVisibilitySkipTypes()
 {
@@ -2252,7 +2359,7 @@ TArray<class UClass*> UBuildingActorInterface::GetVisibilitySkipTypes()
 // Function BuildSystem.BuildingActorInterface.GetViewLocationOffset
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildingActorInterface::GetViewLocationOffset()
 {
@@ -2277,7 +2384,7 @@ struct FVector UBuildingActorInterface::GetViewLocationOffset()
 // Function BuildSystem.BuildingActorInterface.GetProhibitedActorTemplateList
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<class UClass*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UClass*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UClass*> UBuildingActorInterface::GetProhibitedActorTemplateList()
 {
@@ -2302,7 +2409,7 @@ TArray<class UClass*> UBuildingActorInterface::GetProhibitedActorTemplateList()
 // Function BuildSystem.BuildingActorInterface.GetPreBuildingEffectScale
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildingActorInterface::GetPreBuildingEffectScale()
 {
@@ -2327,7 +2434,7 @@ struct FVector UBuildingActorInterface::GetPreBuildingEffectScale()
 // Function BuildSystem.BuildingActorInterface.GetPreBuildingEffectRotation
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UBuildingActorInterface::GetPreBuildingEffectRotation()
 {
@@ -2352,7 +2459,7 @@ struct FRotator UBuildingActorInterface::GetPreBuildingEffectRotation()
 // Function BuildSystem.BuildingActorInterface.GetPreBuildingEffectPath
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FSoftObjectPath         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FSoftObjectPath ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSoftObjectPath UBuildingActorInterface::GetPreBuildingEffectPath()
 {
@@ -2377,7 +2484,7 @@ struct FSoftObjectPath UBuildingActorInterface::GetPreBuildingEffectPath()
 // Function BuildSystem.BuildingActorInterface.GetPreBuildingEffectOffset
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildingActorInterface::GetPreBuildingEffectOffset()
 {
@@ -2402,7 +2509,7 @@ struct FVector UBuildingActorInterface::GetPreBuildingEffectOffset()
 // Function BuildSystem.BuildingActorInterface.GetOverlayPlaceHeight
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetOverlayPlaceHeight()
 {
@@ -2427,7 +2534,7 @@ float UBuildingActorInterface::GetOverlayPlaceHeight()
 // Function BuildSystem.BuildingActorInterface.GetOverlayMaxHeightFromGround
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetOverlayMaxHeightFromGround()
 {
@@ -2452,7 +2559,7 @@ float UBuildingActorInterface::GetOverlayMaxHeightFromGround()
 // Function BuildSystem.BuildingActorInterface.GetMaxTraceDepth
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetMaxTraceDepth()
 {
@@ -2477,7 +2584,7 @@ float UBuildingActorInterface::GetMaxTraceDepth()
 // Function BuildSystem.BuildingActorInterface.GetMaxOffectHight
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetMaxOffectHight()
 {
@@ -2502,7 +2609,7 @@ float UBuildingActorInterface::GetMaxOffectHight()
 // Function BuildSystem.BuildingActorInterface.GetMaxDeviation
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetMaxDeviation()
 {
@@ -2527,7 +2634,7 @@ float UBuildingActorInterface::GetMaxDeviation()
 // Function BuildSystem.BuildingActorInterface.GetDSBuildCheckConfig
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FBuildingActorDSBuildCheck ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBuildingActorDSBuildCheck ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBuildingActorDSBuildCheck UBuildingActorInterface::GetDSBuildCheckConfig()
 {
@@ -2552,7 +2659,7 @@ struct FBuildingActorDSBuildCheck UBuildingActorInterface::GetDSBuildCheckConfig
 // Function BuildSystem.BuildingActorInterface.GetDetectDeath
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetDetectDeath()
 {
@@ -2577,7 +2684,7 @@ float UBuildingActorInterface::GetDetectDeath()
 // Function BuildSystem.BuildingActorInterface.GetDestroyedParticleTransformOffset
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UBuildingActorInterface::GetDestroyedParticleTransformOffset()
 {
@@ -2602,8 +2709,8 @@ struct FTransform UBuildingActorInterface::GetDestroyedParticleTransformOffset()
 // Function BuildSystem.BuildingActorInterface.GetDensityParams
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FBuildingActorDensityCheck ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FBuildingActorDensityCheck ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBuildingActorDensityCheck UBuildingActorInterface::GetDensityParams(const struct FVector& Location)
 {
@@ -2629,7 +2736,7 @@ struct FBuildingActorDensityCheck UBuildingActorInterface::GetDensityParams(cons
 // Function BuildSystem.BuildingActorInterface.GetCustomBlockingChannels
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TArray<TEnumAsByte<enum ECollisionChannel>> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<TEnumAsByte<enum ECollisionChannel>> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<TEnumAsByte<enum ECollisionChannel>> UBuildingActorInterface::GetCustomBlockingChannels()
 {
@@ -2654,7 +2761,7 @@ TArray<TEnumAsByte<enum ECollisionChannel>> UBuildingActorInterface::GetCustomBl
 // Function BuildSystem.BuildingActorInterface.GetConstructingMode
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// TEnumAsByte<enum EBuildingActorConstructingMode> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBuildingActorConstructingMode> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBuildingActorConstructingMode> UBuildingActorInterface::GetConstructingMode()
 {
@@ -2679,7 +2786,7 @@ TEnumAsByte<enum EBuildingActorConstructingMode> UBuildingActorInterface::GetCon
 // Function BuildSystem.BuildingActorInterface.GetBuildOnEdgeUpLength
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetBuildOnEdgeUpLength()
 {
@@ -2704,7 +2811,7 @@ float UBuildingActorInterface::GetBuildOnEdgeUpLength()
 // Function BuildSystem.BuildingActorInterface.GetBuildOnEdgeFrontLength
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuildingActorInterface::GetBuildOnEdgeFrontLength()
 {
@@ -2729,7 +2836,7 @@ float UBuildingActorInterface::GetBuildOnEdgeFrontLength()
 // Function BuildSystem.BuildingActorInterface.GetBuildingActorID
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBuildingActorInterface::GetBuildingActorID()
 {
@@ -2754,7 +2861,7 @@ int UBuildingActorInterface::GetBuildingActorID()
 // Function BuildSystem.BuildingActorInterface.GetActorCollisionBoxRotator
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UBuildingActorInterface::GetActorCollisionBoxRotator()
 {
@@ -2779,7 +2886,7 @@ struct FRotator UBuildingActorInterface::GetActorCollisionBoxRotator()
 // Function BuildSystem.BuildingActorInterface.GetActorCollisionBoxExtern
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildingActorInterface::GetActorCollisionBoxExtern()
 {
@@ -2804,7 +2911,7 @@ struct FVector UBuildingActorInterface::GetActorCollisionBoxExtern()
 // Function BuildSystem.BuildingActorInterface.GetActorCollisionBoxCenter
 // (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBuildingActorInterface::GetActorCollisionBoxCenter()
 {
@@ -2829,7 +2936,7 @@ struct FVector UBuildingActorInterface::GetActorCollisionBoxCenter()
 // Function BuildSystem.BuildingActorInterface.CanDoQuadTrace
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::CanDoQuadTrace()
 {
@@ -2854,7 +2961,7 @@ bool UBuildingActorInterface::CanDoQuadTrace()
 // Function BuildSystem.BuildingActorInterface.CanBuildUnderWater
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::CanBuildUnderWater()
 {
@@ -2879,12 +2986,12 @@ bool UBuildingActorInterface::CanBuildUnderWater()
 // Function BuildSystem.BuildingActorInterface.BPCheckPlacement
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              tranx                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            CheckType                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CurrentAvatarID                (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Builder                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform tranx (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int CheckType (Parm, ZeroConstructor, IsPlainOldData)
+// int CurrentAvatarID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Builder (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::BPCheckPlacement(class UWorld* World, const struct FTransform& tranx, int CheckType, int CurrentAvatarID, class AActor* Builder)
 {
@@ -2914,9 +3021,9 @@ bool UBuildingActorInterface::BPCheckPlacement(class UWorld* World, const struct
 // Function BuildSystem.BuildingActorInterface.BP_DSFinalCheckPlacement
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// struct FTransform              Transform                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class AActor*                  Builder                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTransform Transform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* Builder (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuildingActorInterface::BP_DSFinalCheckPlacement(const struct FTransform& Transform, class AActor* Builder)
 {
@@ -2943,8 +3050,8 @@ bool UBuildingActorInterface::BP_DSFinalCheckPlacement(const struct FTransform& 
 // Function BuildSystem.BuildingActorMgr.OnBuildingActorSpawned
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InOwnerActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class ABuildingActorBase*      InBuildingActor                (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InOwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// class ABuildingActorBase* InBuildingActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorMgr::OnBuildingActorSpawned(class AActor* InOwnerActor, class ABuildingActorBase* InBuildingActor)
 {
@@ -2969,7 +3076,7 @@ void ABuildingActorMgr::OnBuildingActorSpawned(class AActor* InOwnerActor, class
 // Function BuildSystem.BuildingActorMgr.OnBuildingActorDestroyed
 // (Final, Native, Public)
 // Parameters:
-// class ABuildingActorBase*      InBuildingActor                (Parm, ZeroConstructor, IsPlainOldData)
+// class ABuildingActorBase* InBuildingActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void ABuildingActorMgr::OnBuildingActorDestroyed(class ABuildingActorBase* InBuildingActor)
 {
@@ -2993,8 +3100,8 @@ void ABuildingActorMgr::OnBuildingActorDestroyed(class ABuildingActorBase* InBui
 // Function BuildSystem.BuildingActorMgr.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class ABuildingActorMgr*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class ABuildingActorMgr* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ABuildingActorMgr* ABuildingActorMgr::GetInstance(class UObject* WorldContextObject)
 {
@@ -3020,7 +3127,7 @@ class ABuildingActorMgr* ABuildingActorMgr::GetInstance(class UObject* WorldCont
 // Function BuildSystem.SelectBuildActor.SetSelectActorTemplateScale
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 inScale                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector inScale (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ASelectBuildActor::SetSelectActorTemplateScale(const struct FVector& inScale)
 {
@@ -3044,8 +3151,8 @@ void ASelectBuildActor::SetSelectActorTemplateScale(const struct FVector& inScal
 // Function BuildSystem.SelectBuildActor.SetSelectActorTemplateOffsetAndRotation
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 InOffset                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                InRotation                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector InOffset (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator InRotation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void ASelectBuildActor::SetSelectActorTemplateOffsetAndRotation(const struct FVector& InOffset, const struct FRotator& InRotation)
 {
@@ -3070,7 +3177,7 @@ void ASelectBuildActor::SetSelectActorTemplateOffsetAndRotation(const struct FVe
 // Function BuildSystem.SelectBuildActor.SetSelectActorTemplate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UParticleSystem*         Template                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UParticleSystem* Template (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASelectBuildActor::SetSelectActorTemplate(class UParticleSystem* Template)
 {
@@ -3094,8 +3201,8 @@ void ASelectBuildActor::SetSelectActorTemplate(class UParticleSystem* Template)
 // Function BuildSystem.SelectBuildActor.SetSelectActorPlacementEnable
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           PlacementEnable                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsVisible                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool PlacementEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsVisible (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASelectBuildActor::SetSelectActorPlacementEnable(bool PlacementEnable, bool IsVisible)
 {
@@ -3120,7 +3227,7 @@ void ASelectBuildActor::SetSelectActorPlacementEnable(bool PlacementEnable, bool
 // Function BuildSystem.SelectBuildActor.SetSelectActorMesh
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class UStaticMesh*             InMesh                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* InMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASelectBuildActor::SetSelectActorMesh(class UStaticMesh* InMesh)
 {
@@ -3144,7 +3251,7 @@ void ASelectBuildActor::SetSelectActorMesh(class UStaticMesh* InMesh)
 // Function BuildSystem.SelectBuildActor.SetIsPlacementEnable
 // (Final, Native, Public)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASelectBuildActor::SetIsPlacementEnable(bool Val)
 {
@@ -3189,7 +3296,7 @@ void ASelectBuildActor::OnParticleLoaded()
 // Function BuildSystem.SelectBuildActor.IsCurrentPlacementEnable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASelectBuildActor::IsCurrentPlacementEnable()
 {
@@ -3214,7 +3321,7 @@ bool ASelectBuildActor::IsCurrentPlacementEnable()
 // Function BuildSystem.SelectBuildActor.GetIsPlacementEnable
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASelectBuildActor::GetIsPlacementEnable()
 {
@@ -3239,7 +3346,7 @@ bool ASelectBuildActor::GetIsPlacementEnable()
 // Function BuildSystem.SelectBuildActor.GetIsParticleEffect
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASelectBuildActor::GetIsParticleEffect()
 {

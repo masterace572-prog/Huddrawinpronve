@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSectionUV0
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UProceduralMeshComponent::UpdateMeshSectionUV0(int SectionIndex, TArray<struct FVector2D> UV0)
 {
@@ -37,12 +37,12 @@ void UProceduralMeshComponent::UpdateMeshSectionUV0(int SectionIndex, TArray<str
 // Function ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection_LinearColor
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    VertexColors                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FProcMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FLinearColor> VertexColors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FProcMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UProceduralMeshComponent::UpdateMeshSection_LinearColor(int SectionIndex, TArray<struct FVector> Vertices, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FLinearColor> VertexColors, TArray<struct FProcMeshTangent> Tangents)
 {
@@ -71,12 +71,12 @@ void UProceduralMeshComponent::UpdateMeshSection_LinearColor(int SectionIndex, T
 // Function ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FColor>          VertexColors                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FProcMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FColor> VertexColors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FProcMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UProceduralMeshComponent::UpdateMeshSection(int SectionIndex, TArray<struct FVector> Vertices, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents)
 {
@@ -105,8 +105,8 @@ void UProceduralMeshComponent::UpdateMeshSection(int SectionIndex, TArray<struct
 // Function ProceduralMeshComponent.ProceduralMeshComponent.SetMeshSectionVisible
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewVisibility                 (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewVisibility (Parm, ZeroConstructor, IsPlainOldData)
 
 void UProceduralMeshComponent::SetMeshSectionVisible(int SectionIndex, bool bNewVisibility)
 {
@@ -131,8 +131,8 @@ void UProceduralMeshComponent::SetMeshSectionVisible(int SectionIndex, bool bNew
 // Function ProceduralMeshComponent.ProceduralMeshComponent.IsMeshSectionVisible
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UProceduralMeshComponent::IsMeshSectionVisible(int SectionIndex)
 {
@@ -158,7 +158,7 @@ bool UProceduralMeshComponent::IsMeshSectionVisible(int SectionIndex)
 // Function ProceduralMeshComponent.ProceduralMeshComponent.GetNumSections
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UProceduralMeshComponent::GetNumSections()
 {
@@ -183,14 +183,14 @@ int UProceduralMeshComponent::GetNumSections()
 // Function ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection_LinearColor
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    VertexColors                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FProcMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bCreateCollision               (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FLinearColor> VertexColors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FProcMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void UProceduralMeshComponent::CreateMeshSection_LinearColor(int SectionIndex, TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FLinearColor> VertexColors, TArray<struct FProcMeshTangent> Tangents, bool bCreateCollision)
 {
@@ -221,14 +221,14 @@ void UProceduralMeshComponent::CreateMeshSection_LinearColor(int SectionIndex, T
 // Function ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FColor>          VertexColors                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FProcMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bCreateCollision               (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FColor> VertexColors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FProcMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void UProceduralMeshComponent::CreateMeshSection(int SectionIndex, TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector> Normals, TArray<struct FVector2D> UV0, TArray<struct FColor> VertexColors, TArray<struct FProcMeshTangent> Tangents, bool bCreateCollision)
 {
@@ -259,7 +259,7 @@ void UProceduralMeshComponent::CreateMeshSection(int SectionIndex, TArray<struct
 // Function ProceduralMeshComponent.ProceduralMeshComponent.ClearMeshSection
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UProceduralMeshComponent::ClearMeshSection(int SectionIndex)
 {
@@ -325,7 +325,7 @@ void UProceduralMeshComponent::ClearAllMeshSections()
 // Function ProceduralMeshComponent.ProceduralMeshComponent.AddCollisionConvexMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         ConvexVerts                    (Parm, ZeroConstructor)
+// TArray<struct FVector> ConvexVerts (Parm, ZeroConstructor)
 
 void UProceduralMeshComponent::AddCollisionConvexMesh(TArray<struct FVector> ConvexVerts)
 {
@@ -349,13 +349,13 @@ void UProceduralMeshComponent::AddCollisionConvexMesh(TArray<struct FVector> Con
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.SliceProceduralMesh
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UProceduralMeshComponent* InProcMesh                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 PlanePosition                  (Parm, IsPlainOldData)
-// struct FVector                 PlaneNormal                    (Parm, IsPlainOldData)
-// bool                           bCreateOtherHalf               (Parm, ZeroConstructor, IsPlainOldData)
-// class UProceduralMeshComponent* OutOtherHalfProcMesh           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EProcMeshSliceCapOption        CapOption                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UMaterialInterface*      CapMaterial                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UProceduralMeshComponent* InProcMesh (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector PlanePosition (Parm, IsPlainOldData)
+// struct FVector PlaneNormal (Parm, IsPlainOldData)
+// bool bCreateOtherHalf (Parm, ZeroConstructor, IsPlainOldData)
+// class UProceduralMeshComponent* OutOtherHalfProcMesh (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EProcMeshSliceCapOption CapOption (Parm, ZeroConstructor, IsPlainOldData)
+// class UMaterialInterface* CapMaterial (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKismetProceduralMeshLibrary::SliceProceduralMesh(class UProceduralMeshComponent* InProcMesh, const struct FVector& PlanePosition, const struct FVector& PlaneNormal, bool bCreateOtherHalf, class UMaterialInterface* CapMaterial, EProcMeshSliceCapOption CapOption, class UProceduralMeshComponent** OutOtherHalfProcMesh)
 {
@@ -387,14 +387,14 @@ void UKismetProceduralMeshLibrary::SliceProceduralMesh(class UProceduralMeshComp
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.GetSectionFromStaticMesh
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UStaticMesh*             InMesh                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LODIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector2D>       UVs                            (Parm, OutParm, ZeroConstructor)
-// TArray<struct FProcMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// class UStaticMesh* InMesh (Parm, ZeroConstructor, IsPlainOldData)
+// int LODIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (Parm, OutParm, ZeroConstructor)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector2D> UVs (Parm, OutParm, ZeroConstructor)
+// TArray<struct FProcMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void UKismetProceduralMeshLibrary::GetSectionFromStaticMesh(class UStaticMesh* InMesh, int LODIndex, int SectionIndex, TArray<struct FVector>* Vertices, TArray<int>* Triangles, TArray<struct FVector>* Normals, TArray<struct FVector2D>* UVs, TArray<struct FProcMeshTangent>* Tangents)
 {
@@ -431,12 +431,12 @@ void UKismetProceduralMeshLibrary::GetSectionFromStaticMesh(class UStaticMesh* I
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.GenerateBoxMesh
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 BoxRadius                      (Parm, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector2D>       UVs                            (Parm, OutParm, ZeroConstructor)
-// TArray<struct FProcMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// struct FVector BoxRadius (Parm, IsPlainOldData)
+// TArray<struct FVector> Vertices (Parm, OutParm, ZeroConstructor)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector2D> UVs (Parm, OutParm, ZeroConstructor)
+// TArray<struct FProcMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void UKismetProceduralMeshLibrary::GenerateBoxMesh(const struct FVector& BoxRadius, TArray<struct FVector>* Vertices, TArray<int>* Triangles, TArray<struct FVector>* Normals, TArray<struct FVector2D>* UVs, TArray<struct FProcMeshTangent>* Tangents)
 {
@@ -471,10 +471,10 @@ void UKismetProceduralMeshLibrary::GenerateBoxMesh(const struct FVector& BoxRadi
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshTriangles
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            NumX                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumY                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWinding                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
+// int NumX (Parm, ZeroConstructor, IsPlainOldData)
+// int NumY (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWinding (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
 
 void UKismetProceduralMeshLibrary::CreateGridMeshTriangles(int NumX, int NumY, bool bWinding, TArray<int>* Triangles)
 {
@@ -503,10 +503,10 @@ void UKismetProceduralMeshLibrary::CreateGridMeshTriangles(int NumX, int NumY, b
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CopyProceduralMeshFromStaticMeshComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMeshComponent*    StaticMeshComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            LODIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UProceduralMeshComponent* ProcMeshComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bCreateCollision               (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMeshComponent* StaticMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int LODIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UProceduralMeshComponent* ProcMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKismetProceduralMeshLibrary::CopyProceduralMeshFromStaticMeshComponent(class UStaticMeshComponent* StaticMeshComponent, int LODIndex, class UProceduralMeshComponent* ProcMeshComponent, bool bCreateCollision)
 {
@@ -533,11 +533,11 @@ void UKismetProceduralMeshLibrary::CopyProceduralMeshFromStaticMeshComponent(cla
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.ConvertQuadToTriangles
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// int                            Vert0                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert1                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert2                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert3                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int Vert0 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert1 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert2 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert3 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKismetProceduralMeshLibrary::ConvertQuadToTriangles(int Vert0, int Vert1, int Vert2, int Vert3, TArray<int>* Triangles)
 {
@@ -567,11 +567,11 @@ void UKismetProceduralMeshLibrary::ConvertQuadToTriangles(int Vert0, int Vert1, 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CalculateTangentsForMesh
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UVs                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FProcMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UVs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FProcMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void UKismetProceduralMeshLibrary::CalculateTangentsForMesh(TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector2D> UVs, TArray<struct FVector>* Normals, TArray<struct FProcMeshTangent>* Tangents)
 {

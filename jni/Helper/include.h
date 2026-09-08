@@ -27,20 +27,17 @@
 #include <codecvt>
 #include "SDK.hpp"
 #include "KittyMemory/MemoryPatch.h"
+#include <shadowhook/shadowhook.h>
 #include "Substrate/SubstrateHook.h"
 #include "Includes/Logger.h"
 #include "Includes/Utils.h"
 #include "Includes/Macros.h"
 #include "Tools.h"
 #include "Includes/json.hpp"
-#include "Includes/StrEnc.h"
 #include "Includes/android_include.h"
 #include "Includes/Vector2.hpp"
 #include "Includes/Vector3.hpp"
 
-#include <curl/curl.h>
-#include <openssl/rsa.h>
-#include <openssl/pem.h>
 #include <cassert>
 #include <fcntl.h>
 #include <unistd.h>

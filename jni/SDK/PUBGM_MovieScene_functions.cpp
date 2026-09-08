@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function MovieScene.MovieSceneEasingFunction.OnEvaluate
 // (Event, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                          Interp                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Interp (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneEasingFunction::OnEvaluate(float Interp)
 {
@@ -79,7 +79,7 @@ void UMovieSceneSequencePlayer::StartPlayingNextTick()
 // Function MovieScene.MovieSceneSequencePlayer.SetPlayRate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
+// float PlayRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 {
@@ -103,7 +103,7 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 // Function MovieScene.MovieSceneSequencePlayer.SetPlayLoopCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NumLoops                       (Parm, ZeroConstructor, IsPlainOldData)
+// int NumLoops (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::SetPlayLoopCount(int NumLoops)
 {
@@ -127,8 +127,8 @@ void UMovieSceneSequencePlayer::SetPlayLoopCount(int NumLoops)
 // Function MovieScene.MovieSceneSequencePlayer.SetPlaybackRange
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewStartTime                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewEndTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewStartTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewEndTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEndTime)
 {
@@ -153,7 +153,7 @@ void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEn
 // Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPlaybackPosition            (Parm, ZeroConstructor, IsPlainOldData)
+// float NewPlaybackPosition (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
@@ -219,7 +219,7 @@ void UMovieSceneSequencePlayer::PlayReverse()
 // Function MovieScene.MovieSceneSequencePlayer.PlayLooping
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NumLoops                       (Parm, ZeroConstructor, IsPlainOldData)
+// int NumLoops (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::PlayLooping(int NumLoops)
 {
@@ -285,7 +285,7 @@ void UMovieSceneSequencePlayer::Pause()
 // Function MovieScene.MovieSceneSequencePlayer.JumpToPositionEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPlaybackPosition            (Parm, ZeroConstructor, IsPlainOldData)
+// float NewPlaybackPosition (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::JumpToPositionEx(float NewPlaybackPosition)
 {
@@ -309,7 +309,7 @@ void UMovieSceneSequencePlayer::JumpToPositionEx(float NewPlaybackPosition)
 // Function MovieScene.MovieSceneSequencePlayer.JumpToPosition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPlaybackPosition            (Parm, ZeroConstructor, IsPlainOldData)
+// float NewPlaybackPosition (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMovieSceneSequencePlayer::JumpToPosition(float NewPlaybackPosition)
 {
@@ -333,7 +333,7 @@ void UMovieSceneSequencePlayer::JumpToPosition(float NewPlaybackPosition)
 // Function MovieScene.MovieSceneSequencePlayer.IsPlaying
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMovieSceneSequencePlayer::IsPlaying()
 {
@@ -358,7 +358,7 @@ bool UMovieSceneSequencePlayer::IsPlaying()
 // Function MovieScene.MovieSceneSequencePlayer.IsPaused
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMovieSceneSequencePlayer::IsPaused()
 {
@@ -404,7 +404,7 @@ void UMovieSceneSequencePlayer::GoToEndAndStop()
 // Function MovieScene.MovieSceneSequencePlayer.GetPlayRate
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneSequencePlayer::GetPlayRate()
 {
@@ -429,7 +429,7 @@ float UMovieSceneSequencePlayer::GetPlayRate()
 // Function MovieScene.MovieSceneSequencePlayer.GetPlaybackStart
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneSequencePlayer::GetPlaybackStart()
 {
@@ -454,7 +454,7 @@ float UMovieSceneSequencePlayer::GetPlaybackStart()
 // Function MovieScene.MovieSceneSequencePlayer.GetPlaybackPosition
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneSequencePlayer::GetPlaybackPosition()
 {
@@ -479,7 +479,7 @@ float UMovieSceneSequencePlayer::GetPlaybackPosition()
 // Function MovieScene.MovieSceneSequencePlayer.GetPlaybackEnd
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneSequencePlayer::GetPlaybackEnd()
 {
@@ -504,7 +504,7 @@ float UMovieSceneSequencePlayer::GetPlaybackEnd()
 // Function MovieScene.MovieSceneSequencePlayer.GetLength
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMovieSceneSequencePlayer::GetLength()
 {
@@ -529,8 +529,8 @@ float UMovieSceneSequencePlayer::GetLength()
 // Function MovieScene.MovieSceneSequencePlayer.GetBoundObjects
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FMovieSceneObjectBindingID ObjectBinding                  (Parm)
-// TArray<class UObject*>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FMovieSceneObjectBindingID ObjectBinding (Parm)
+// TArray<class UObject*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UObject*> UMovieSceneSequencePlayer::GetBoundObjects(const struct FMovieSceneObjectBindingID& ObjectBinding)
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -35,17 +35,17 @@ enum class ETwoPlayerSplitScreenType : uint8_t
 // 0x0028
 struct FAutoCompleteCommand
 {
-	struct FString                                     Command;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     Desc;                                                     // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0020(0x0008) MISSED OFFSET
+	struct FString Command; // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString Desc; // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
+	unsigned char UnknownData00[0x8]; // 0x0020(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct EngineSettings.GameModeName
 // 0x0028
 struct FGameModeName
 {
-	struct FString                                     Name;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FSoftClassPath                              GameMode;                                                 // 0x0010(0x0018) (Edit)
+	struct FString Name; // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FSoftClassPath GameMode; // 0x0010(0x0018) (Edit)
 };
 
 }

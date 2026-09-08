@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UAbilityTask_Tick_WaitAbilityActivate : public UAbilityTask_WaitAbilityAct
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SGameplayAbilities.AbilityTask_Tick_WaitAbilityActivate");
@@ -35,8 +34,7 @@ class USAbilitySystemBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SGameplayAbilities.SAbilitySystemBlueprintLibrary");
@@ -54,14 +52,13 @@ public:
 class USAbilitySystemComponent : public UAbilitySystemComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x1140(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x1198(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UClass*>                              PreloadedAbilities;                                       // 0x11A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FGameplayAbilitySpecHandle>          PreloadedAbilityHandles;                                  // 0x11B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x11C8(0x0050) (Net)
+	unsigned char UnknownData00[0x58]; // 0x1140(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x1198(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UClass*> PreloadedAbilities; // 0x11A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FGameplayAbilitySpecHandle> PreloadedAbilityHandles; // 0x11B8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FLuaNetSerialization LuaNetSerialization; // 0x11C8(0x0050) (Net)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SGameplayAbilities.SAbilitySystemComponent");
@@ -81,11 +78,10 @@ public:
 class USGameplayAbility : public UGameplayAbility
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0440(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0498(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0440(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0498(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SGameplayAbilities.SGameplayAbility");

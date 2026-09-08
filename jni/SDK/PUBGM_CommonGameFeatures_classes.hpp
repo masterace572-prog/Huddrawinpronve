@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UActorRepControlComponent : public ULuaActorComponent
 {
 public:
-	TMap<int, struct FRepControlGroupData>             ItemRepBlockingUIDMap;                                    // 0x0238(0x0050) (ZeroConstructor, Transient)
+	TMap<int, struct FRepControlGroupData> ItemRepBlockingUIDMap; // 0x0238(0x0050) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonGameFeatures.ActorRepControlComponent");
@@ -35,10 +34,9 @@ public:
 class ARepControlActorBase : public ALuaActor
 {
 public:
-	class UActorRepControlComponent*                   CachedBlockingComp;                                       // 0x0570(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActorRepControlComponent* CachedBlockingComp; // 0x0570(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonGameFeatures.RepControlActorBase");

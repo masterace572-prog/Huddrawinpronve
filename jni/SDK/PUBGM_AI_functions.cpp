@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function AI.AESpawner.SwitchTeamAI
 // (Final, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::SwitchTeamAI(bool bEnable)
 {
@@ -35,10 +35,10 @@ void AAESpawner::SwitchTeamAI(bool bEnable)
 // Function AI.AESpawner.OnUnitTakeDamageEvent
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::OnUnitTakeDamageEvent(float Damage, const struct FDamageEvent& DamageEvent, class AActor* Victim, class AActor* Causer)
 {
@@ -65,9 +65,9 @@ void AAESpawner::OnUnitTakeDamageEvent(float Damage, const struct FDamageEvent& 
 // Function AI.AESpawner.OnUnitSpawned
 // (Native, Public, HasOutParms)
 // Parameters:
-// class AActor*                  NewUnit                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSTSpawnParam           SpawnParam                     (ConstParm, Parm, OutParm, ReferenceParm)
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* NewUnit (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (ConstParm, Parm, OutParm, ReferenceParm)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::OnUnitSpawned(class AActor* NewUnit, const struct FSTSpawnParam& SpawnParam, class ASTSpawnerBase* Spawner)
 {
@@ -93,7 +93,7 @@ void AAESpawner::OnUnitSpawned(class AActor* NewUnit, const struct FSTSpawnParam
 // Function AI.AESpawner.OnSpawnTimingRipe
 // (Native, Protected)
 // Parameters:
-// bool                           IsRipe                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRipe (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::OnSpawnTimingRipe(bool IsRipe)
 {
@@ -117,12 +117,12 @@ void AAESpawner::OnSpawnTimingRipe(bool IsRipe)
 // Function AI.AESpawner.OnOwnedMobDead
 // (Final, Native, Protected, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class ASTExtraSimpleCharacter* DeadCharacter                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             Killer                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              KillingHitInfo                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 KillingHitImpulseDir           (Parm, IsPlainOldData)
-// class UClass*                  KillingHitDamageType           (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraSimpleCharacter* DeadCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* Killer (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult KillingHitInfo (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector KillingHitImpulseDir (Parm, IsPlainOldData)
+// class UClass* KillingHitDamageType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::OnOwnedMobDead(class ASTExtraSimpleCharacter* DeadCharacter, class AController* Killer, class AActor* DamageCauser, const struct FHitResult& KillingHitInfo, const struct FVector& KillingHitImpulseDir, class UClass* KillingHitDamageType)
 {
@@ -151,12 +151,12 @@ void AAESpawner::OnOwnedMobDead(class ASTExtraSimpleCharacter* DeadCharacter, cl
 // Function AI.AESpawner.OnOwnedFakePlayerDead
 // (Final, Native, Protected, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class ASTExtraBaseCharacter*   DeadCharacter                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             Killer                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              KillingHitInfo                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 KillingHitImpulseDir           (Parm, IsPlainOldData)
-// class UClass*                  KillingHitDamageType           (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* DeadCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* Killer (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult KillingHitInfo (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector KillingHitImpulseDir (Parm, IsPlainOldData)
+// class UClass* KillingHitDamageType (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAESpawner::OnOwnedFakePlayerDead(class ASTExtraBaseCharacter* DeadCharacter, class AController* Killer, class AActor* DamageCauser, const struct FHitResult& KillingHitInfo, const struct FVector& KillingHitImpulseDir, class UClass* KillingHitDamageType)
 {
@@ -185,7 +185,7 @@ void AAESpawner::OnOwnedFakePlayerDead(class ASTExtraBaseCharacter* DeadCharacte
 // Function AI.AESpawner.GetSpeciesCategory
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EBotCategray> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBotCategray> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBotCategray> AAESpawner::GetSpeciesCategory()
 {
@@ -210,7 +210,7 @@ TEnumAsByte<enum EBotCategray> AAESpawner::GetSpeciesCategory()
 // Function AI.AESpawner.GetSpawnerTeamID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AAESpawner::GetSpawnerTeamID()
 {
@@ -235,7 +235,7 @@ float AAESpawner::GetSpawnerTeamID()
 // Function AI.AESpawner.GetSpawnerGroupID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AAESpawner::GetSpawnerGroupID()
 {
@@ -260,10 +260,10 @@ float AAESpawner::GetSpawnerGroupID()
 // Function AI.AESpawner.GenerateParamID
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BaseParamID                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSTSpawnParam           SpawnParam                     (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// int BaseParamID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AAESpawner::GenerateParamID(int ConfigId, int BaseParamID, const struct FSTSpawnParam& SpawnParam)
 {
@@ -311,9 +311,9 @@ void AAESpawner::DeactivateSpawner()
 // Function AI.AESpawner.BPOnUnitSpawned
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class APawn*                   AIPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ConfigId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSTSpawnParam           SpawnParam                     (ConstParm, Parm, OutParm, ReferenceParm)
+// class APawn* AIPawn (Parm, ZeroConstructor, IsPlainOldData)
+// int ConfigId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (ConstParm, Parm, OutParm, ReferenceParm)
 
 void AAESpawner::BPOnUnitSpawned(class APawn* AIPawn, int ConfigId, const struct FSTSpawnParam& SpawnParam)
 {
@@ -359,8 +359,8 @@ void AAESpawner::ActivateSpawner()
 // Function AI.AESpawnSubsystem.SpawnUnit
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FSTSpawnParam           SpawnParam                     (Parm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (Parm)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UAESpawnSubsystem::SpawnUnit(const struct FSTSpawnParam& SpawnParam)
 {
@@ -386,7 +386,7 @@ class AActor* UAESpawnSubsystem::SpawnUnit(const struct FSTSpawnParam& SpawnPara
 // Function AI.AESpawnSubsystem.RegisterSpawner
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAESpawnSubsystem::RegisterSpawner(class ASTSpawnerBase* Spawner)
 {
@@ -410,7 +410,7 @@ void UAESpawnSubsystem::RegisterSpawner(class ASTSpawnerBase* Spawner)
 // Function AI.AESpawnSubsystem.PreCheck
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAESpawnSubsystem::PreCheck()
 {
@@ -435,8 +435,8 @@ bool UAESpawnSubsystem::PreCheck()
 // Function AI.AESpawnSubsystem.ModifyThreshold
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EBotCategray> Category                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Threshold                      (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBotCategray> Category (Parm, ZeroConstructor, IsPlainOldData)
+// int Threshold (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAESpawnSubsystem::ModifyThreshold(TEnumAsByte<enum EBotCategray> Category, int Threshold)
 {
@@ -461,8 +461,8 @@ void UAESpawnSubsystem::ModifyThreshold(TEnumAsByte<enum EBotCategray> Category,
 // Function AI.AESpawnSubsystem.GetUnitsNumByCategory
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EBotCategray> Category                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBotCategray> Category (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAESpawnSubsystem::GetUnitsNumByCategory(TEnumAsByte<enum EBotCategray> Category)
 {
@@ -488,8 +488,8 @@ int UAESpawnSubsystem::GetUnitsNumByCategory(TEnumAsByte<enum EBotCategray> Cate
 // Function AI.AESpawnSubsystem.GetUnitConfigID
 // (Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Unit                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Unit (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAESpawnSubsystem::GetUnitConfigID(class AActor* Unit)
 {
@@ -515,8 +515,8 @@ int UAESpawnSubsystem::GetUnitConfigID(class AActor* Unit)
 // Function AI.AESpawnSubsystem.GetGroupedSpawners
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// int                            InGroupID                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class ASTSpawnerBase*>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int InGroupID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class ASTSpawnerBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class ASTSpawnerBase*> UAESpawnSubsystem::GetGroupedSpawners(int InGroupID)
 {
@@ -542,8 +542,8 @@ TArray<class ASTSpawnerBase*> UAESpawnSubsystem::GetGroupedSpawners(int InGroupI
 // Function AI.AESpawnSubsystem.EnQueue
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSTSpawnParam           SpawnParam                     (Parm, OutParm)
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (Parm, OutParm)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAESpawnSubsystem::EnQueue(class ASTSpawnerBase* Spawner, struct FSTSpawnParam* SpawnParam)
 {
@@ -591,9 +591,9 @@ void UAESpawnSubsystem::CleanQueue()
 // Function AI.AESpawnSubsystem.CheckCategoryLimit
 // (Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvailableBalance               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
+// int AvailableBalance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAESpawnSubsystem::CheckCategoryLimit(class ASTSpawnerBase* Spawner, int* AvailableBalance)
 {
@@ -622,8 +622,8 @@ bool UAESpawnSubsystem::CheckCategoryLimit(class ASTSpawnerBase* Spawner, int* A
 // Function AI.AIActionExecutionComponent.UseItem
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponSlot                     (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponSlot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::UseItem(int ItemId, int WeaponSlot)
 {
@@ -648,9 +648,9 @@ void UAIActionExecutionComponent::UseItem(int ItemId, int WeaponSlot)
 // Function AI.AIActionExecutionComponent.SwapAttachmentItem
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SourceWeaponSlot               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TargetWeaponSlot               (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int SourceWeaponSlot (Parm, ZeroConstructor, IsPlainOldData)
+// int TargetWeaponSlot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::SwapAttachmentItem(int ItemId, int SourceWeaponSlot, int TargetWeaponSlot)
 {
@@ -676,7 +676,7 @@ void UAIActionExecutionComponent::SwapAttachmentItem(int ItemId, int SourceWeapo
 // Function AI.AIActionExecutionComponent.SetGrenadeLastSelectID
 // (Final, Native, Public)
 // Parameters:
-// int                            WeaponId                       (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::SetGrenadeLastSelectID(int WeaponId)
 {
@@ -700,9 +700,9 @@ void UAIActionExecutionComponent::SetGrenadeLastSelectID(int WeaponId)
 // Function AI.AIActionExecutionComponent.SetFocusRotation
 // (Final, Native, Public)
 // Parameters:
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::SetFocusRotation(float InPitch, float InYaw, float InRoll)
 {
@@ -749,7 +749,7 @@ void UAIActionExecutionComponent::SetCurShootingPose()
 // Function AI.AIActionExecutionComponent.RescueTarget
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraBaseCharacter*   RescueCharacter                (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* RescueCharacter (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::RescueTarget(class ASTExtraBaseCharacter* RescueCharacter)
 {
@@ -773,9 +773,9 @@ void UAIActionExecutionComponent::RescueTarget(class ASTExtraBaseCharacter* Resc
 // Function AI.AIActionExecutionComponent.OpenFixedRateOfDoors
 // (Final, Native, Public)
 // Parameters:
-// float                          fCheckRealPlayerDistance       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fOpenDoorDistance              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          fOpenDoorRate                  (Parm, ZeroConstructor, IsPlainOldData)
+// float fCheckRealPlayerDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float fOpenDoorDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float fOpenDoorRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::OpenFixedRateOfDoors(float fCheckRealPlayerDistance, float fOpenDoorDistance, float fOpenDoorRate)
 {
@@ -822,7 +822,7 @@ void UAIActionExecutionComponent::OpenDoor()
 // Function AI.AIActionExecutionComponent.OnPlayerRespawn
 // (Final, Native, Public)
 // Parameters:
-// class AUAEPlayerController*    PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::OnPlayerRespawn(class AUAEPlayerController* PC)
 {
@@ -867,7 +867,7 @@ void UAIActionExecutionComponent::OnFakePlayerRespawn()
 // Function AI.AIActionExecutionComponent.IsValid
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIActionExecutionComponent::IsValid()
 {
@@ -892,7 +892,7 @@ bool UAIActionExecutionComponent::IsValid()
 // Function AI.AIActionExecutionComponent.IsFreeCamera
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIActionExecutionComponent::IsFreeCamera()
 {
@@ -917,8 +917,8 @@ bool UAIActionExecutionComponent::IsFreeCamera()
 // Function AI.AIActionExecutionComponent.GetPickActorWithID
 // (Final, Native, Public)
 // Parameters:
-// int                            UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// class APickUpWrapperActor*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int UID (Parm, ZeroConstructor, IsPlainOldData)
+// class APickUpWrapperActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APickUpWrapperActor* UAIActionExecutionComponent::GetPickActorWithID(int UID)
 {
@@ -944,7 +944,7 @@ class APickUpWrapperActor* UAIActionExecutionComponent::GetPickActorWithID(int U
 // Function AI.AIActionExecutionComponent.GetOwnerBaseCharacter
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraBaseCharacter*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraBaseCharacter* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraBaseCharacter* UAIActionExecutionComponent::GetOwnerBaseCharacter()
 {
@@ -969,7 +969,7 @@ class ASTExtraBaseCharacter* UAIActionExecutionComponent::GetOwnerBaseCharacter(
 // Function AI.AIActionExecutionComponent.GetBackpackComponent
 // (Final, Native, Public)
 // Parameters:
-// class UBackpackComponent*      ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UBackpackComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UBackpackComponent* UAIActionExecutionComponent::GetBackpackComponent()
 {
@@ -994,8 +994,8 @@ class UBackpackComponent* UAIActionExecutionComponent::GetBackpackComponent()
 // Function AI.AIActionExecutionComponent.DropItem
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DropItem(int ItemId, int Count)
 {
@@ -1017,12 +1017,40 @@ void UAIActionExecutionComponent::DropItem(int ItemId, int Count)
 }
 
 
+// Function AI.AIActionExecutionComponent.DoActionQuickMark_MLAI
+// (Final, Native, Public)
+// Parameters:
+// int actorUID (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int CheckRange (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIActionExecutionComponent::DoActionQuickMark_MLAI(int actorUID, int ItemId, int CheckRange)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIActionExecutionComponent.DoActionQuickMark_MLAI");
+
+	UAIActionExecutionComponent_DoActionQuickMark_MLAI_Params params;
+	params.actorUID = actorUID;
+	params.ItemId = ItemId;
+	params.CheckRange = CheckRange;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.AIActionExecutionComponent.DoActionQuickMark
 // (Final, Native, Public)
 // Parameters:
-// int                            actorUID                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CheckRange                     (Parm, ZeroConstructor, IsPlainOldData)
+// int actorUID (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int CheckRange (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DoActionQuickMark(int actorUID, int ItemId, int CheckRange)
 {
@@ -1048,12 +1076,12 @@ void UAIActionExecutionComponent::DoActionQuickMark(int actorUID, int ItemId, in
 // Function AI.AIActionExecutionComponent.DoActionMoveNew
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsStop                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsRun                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionX                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionY                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionZ                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SwimUpRate                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsStop (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRun (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionX (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionY (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionZ (Parm, ZeroConstructor, IsPlainOldData)
+// int SwimUpRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DoActionMoveNew(bool IsStop, bool IsRun, float DirectionX, float DirectionY, float DirectionZ, int SwimUpRate)
 {
@@ -1082,10 +1110,10 @@ void UAIActionExecutionComponent::DoActionMoveNew(bool IsStop, bool IsRun, float
 // Function AI.AIActionExecutionComponent.DoActionMove
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsRun                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionX                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionY                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DirectionZ                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRun (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionX (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionY (Parm, ZeroConstructor, IsPlainOldData)
+// float DirectionZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DoActionMove(bool IsRun, float DirectionX, float DirectionY, float DirectionZ)
 {
@@ -1112,10 +1140,10 @@ void UAIActionExecutionComponent::DoActionMove(bool IsRun, float DirectionX, flo
 // Function AI.AIActionExecutionComponent.DoActionFreeCamera
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsEnter                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsEnter (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DoActionFreeCamera(bool IsEnter, float InPitch, float InYaw, float InRoll)
 {
@@ -1142,8 +1170,8 @@ void UAIActionExecutionComponent::DoActionFreeCamera(bool IsEnter, float InPitch
 // Function AI.AIActionExecutionComponent.DisuseItem
 // (Final, Native, Public)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WeaponSlot                     (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponSlot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIActionExecutionComponent::DisuseItem(int ItemId, int WeaponSlot)
 {
@@ -1189,7 +1217,7 @@ void UAIActionExecutionComponent::CloseDoor()
 // Function AI.AIBasicStateInfoComponent.OnItemStateChanged
 // (Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Location                       (Parm, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
 
 void UAIBasicStateInfoComponent::OnItemStateChanged(const struct FVector& Location)
 {
@@ -1210,36 +1238,11 @@ void UAIBasicStateInfoComponent::OnItemStateChanged(const struct FVector& Locati
 }
 
 
-// Function AI.AIBasicStateInfoComponent.GetTLogAIShootInfo
-// (Native, Public)
-// Parameters:
-// struct FTLogAIShootInfo        ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FTLogAIShootInfo UAIBasicStateInfoComponent::GetTLogAIShootInfo()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIBasicStateInfoComponent.GetTLogAIShootInfo");
-
-	UAIBasicStateInfoComponent_GetTLogAIShootInfo_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function AI.AIBasicStateInfoComponent.GetPickActorWithID
 // (Native, Public)
 // Parameters:
-// int                            UID                            (Parm, ZeroConstructor, IsPlainOldData)
-// class APickUpWrapperActor*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int UID (Parm, ZeroConstructor, IsPlainOldData)
+// class APickUpWrapperActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APickUpWrapperActor* UAIBasicStateInfoComponent::GetPickActorWithID(int UID)
 {
@@ -1286,7 +1289,7 @@ void UAIBehaviorAdapter_VehicleBase::Suicide()
 // Function AI.AIBehaviorAdapter_VehicleBase.RPC_Client_SetServiceDebugInfo
 // (Net, Native, Event, NetMulticast, Protected)
 // Parameters:
-// struct FString                 Info                           (Parm, ZeroConstructor)
+// struct FString Info (Parm, ZeroConstructor)
 
 void UAIBehaviorAdapter_VehicleBase::RPC_Client_SetServiceDebugInfo(const struct FString& Info)
 {
@@ -1331,7 +1334,7 @@ void UAIBehaviorAdapter_VehicleBase::OnInit()
 // Function AI.AIBehaviorAdapter_VehicleBase.OnDeath
 // (Native, Public)
 // Parameters:
-// class AController*             InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatedBy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::OnDeath(class AController* InstigatedBy)
 {
@@ -1355,7 +1358,7 @@ void UAIBehaviorAdapter_VehicleBase::OnDeath(class AController* InstigatedBy)
 // Function AI.AIBehaviorAdapter_VehicleBase.OnAICPossessed
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AController*             InController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InController (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::OnAICPossessed(class AController* InController)
 {
@@ -1378,9 +1381,9 @@ void UAIBehaviorAdapter_VehicleBase::OnAICPossessed(class AController* InControl
 // Function AI.AIBehaviorAdapter_VehicleBase.LuaCalculateHitRate
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BaseHitRate                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+// float BaseHitRate (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAIBehaviorAdapter_VehicleBase::LuaCalculateHitRate(float Distance, float BaseHitRate)
 {
@@ -1406,7 +1409,7 @@ float UAIBehaviorAdapter_VehicleBase::LuaCalculateHitRate(float Distance, float 
 // Function AI.AIBehaviorAdapter_VehicleBase.IsAlive
 // (Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_VehicleBase::IsAlive()
 {
@@ -1431,11 +1434,11 @@ bool UAIBehaviorAdapter_VehicleBase::IsAlive()
 // Function AI.AIBehaviorAdapter_VehicleBase.HandleOnVehicleUnderAttack
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          OriginDamage                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* EventInstigator (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// float OriginDamage (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::HandleOnVehicleUnderAttack(class AController* EventInstigator, const struct FDamageEvent& DamageEvent, class AActor* DamageCauser, float Damage, float OriginDamage)
 {
@@ -1463,7 +1466,7 @@ void UAIBehaviorAdapter_VehicleBase::HandleOnVehicleUnderAttack(class AControlle
 // Function AI.AIBehaviorAdapter_VehicleBase.HandleOnVehicleHealthStateChanged
 // (Native, Protected)
 // Parameters:
-// ESTExtraVehicleHealthState     InVehicleHealthState           (Parm, ZeroConstructor, IsPlainOldData)
+// ESTExtraVehicleHealthState InVehicleHealthState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::HandleOnVehicleHealthStateChanged(ESTExtraVehicleHealthState InVehicleHealthState)
 {
@@ -1487,11 +1490,11 @@ void UAIBehaviorAdapter_VehicleBase::HandleOnVehicleHealthStateChanged(ESTExtraV
 // Function AI.AIBehaviorAdapter_VehicleBase.HandleOnMeshHit
 // (Native, Protected, HasOutParms, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*     HitComponent                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 NormalImpulse                  (Parm, IsPlainOldData)
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent* HitComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector NormalImpulse (Parm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::HandleOnMeshHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
@@ -1540,11 +1543,11 @@ void UAIBehaviorAdapter_VehicleBase::BroadcastServiceDebugInfo()
 // Function AI.AIBehaviorAdapter_VehicleBase.BPReceiveDamage
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UDamageType*             DamageType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EDamageType>  DamageEventType                (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// class UDamageType* DamageType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatedBy (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EDamageType> DamageEventType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_VehicleBase::BPReceiveDamage(float Damage, class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser, TEnumAsByte<enum EDamageType> DamageEventType)
 {
@@ -1571,10 +1574,10 @@ void UAIBehaviorAdapter_VehicleBase::BPReceiveDamage(float Damage, class UDamage
 // Function AI.AIBehaviorAdapter_Tank.UpdateTurretAimingTarget
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 TargetLocation                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FailedWhenCollided             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector TargetLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
+// bool FailedWhenCollided (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_Tank::UpdateTurretAimingTarget(const struct FVector& TargetLocation, float DeltaSeconds, bool FailedWhenCollided)
 {
@@ -1602,7 +1605,7 @@ bool UAIBehaviorAdapter_Tank::UpdateTurretAimingTarget(const struct FVector& Tar
 // Function AI.AIBehaviorAdapter_Tank.ShootTurret
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_Tank::ShootTurret()
 {
@@ -1627,7 +1630,7 @@ bool UAIBehaviorAdapter_Tank::ShootTurret()
 // Function AI.AIBehaviorAdapter_Tank.ShootMachineGun
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_Tank::ShootMachineGun()
 {
@@ -1673,7 +1676,7 @@ void UAIBehaviorAdapter_Tank::OnInit()
 // Function AI.AIBehaviorAdapter_Tank.OnDeath
 // (Native, Public)
 // Parameters:
-// class AController*             InstigatedBy                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatedBy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_Tank::OnDeath(class AController* InstigatedBy)
 {
@@ -1697,9 +1700,9 @@ void UAIBehaviorAdapter_Tank::OnDeath(class AController* InstigatedBy)
 // Function AI.AIBehaviorAdapter_Tank.IsTurretLockTarget
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 TargetLocation                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          LockRadius                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector TargetLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float LockRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_Tank::IsTurretLockTarget(const struct FVector& TargetLocation, float LockRadius)
 {
@@ -1726,7 +1729,7 @@ bool UAIBehaviorAdapter_Tank::IsTurretLockTarget(const struct FVector& TargetLoc
 // Function AI.AIBehaviorAdapter_Tank.IsAlive
 // (Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBehaviorAdapter_Tank::IsAlive()
 {
@@ -1751,7 +1754,7 @@ bool UAIBehaviorAdapter_Tank::IsAlive()
 // Function AI.AIBehaviorAdapter_Tank.HandleOnVehicleHealthStateChanged
 // (Native, Public)
 // Parameters:
-// ESTExtraVehicleHealthState     InVehicleHealthState           (Parm, ZeroConstructor, IsPlainOldData)
+// ESTExtraVehicleHealthState InVehicleHealthState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_Tank::HandleOnVehicleHealthStateChanged(ESTExtraVehicleHealthState InVehicleHealthState)
 {
@@ -1775,7 +1778,7 @@ void UAIBehaviorAdapter_Tank::HandleOnVehicleHealthStateChanged(ESTExtraVehicleH
 // Function AI.AIBehaviorAdapter_Tank.BroadcastTankShootWeapon
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// bool                           IsTurret                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsTurret (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBehaviorAdapter_Tank::BroadcastTankShootWeapon(bool IsTurret)
 {
@@ -1799,8 +1802,8 @@ void UAIBehaviorAdapter_Tank::BroadcastTankShootWeapon(bool IsTurret)
 // Function AI.AIPerceptionChildPickUpComponent.OnPickUpWrapperHideStateChange
 // (Final, Native, Public)
 // Parameters:
-// class APickUpWrapperActor*     PickUpActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHide                          (Parm, ZeroConstructor, IsPlainOldData)
+// class APickUpWrapperActor* PickUpActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHide (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionChildPickUpComponent::OnPickUpWrapperHideStateChange(class APickUpWrapperActor* PickUpActor, bool bHide)
 {
@@ -1825,7 +1828,7 @@ void UAIPerceptionChildPickUpComponent::OnPickUpWrapperHideStateChange(class APi
 // Function AI.AIPerceptionDynamicItemComponent.UpdateInAICell
 // (Final, Native, Public)
 // Parameters:
-// bool                           bForceUpdate                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceUpdate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionDynamicItemComponent::UpdateInAICell(bool bForceUpdate)
 {
@@ -1846,11 +1849,126 @@ void UAIPerceptionDynamicItemComponent::UpdateInAICell(bool bForceUpdate)
 }
 
 
+// Function AI.AIPerceptionDynamicItemComponent.UpdateCustomAttributeValue
+// (Final, Native, Public)
+// Parameters:
+// uint32_t InCustomAttributeID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float InValue (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRemove (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIPerceptionDynamicItemComponent::UpdateCustomAttributeValue(uint32_t InCustomAttributeID, float InValue, bool bRemove)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.UpdateCustomAttributeValue");
+
+	UAIPerceptionDynamicItemComponent_UpdateCustomAttributeValue_Params params;
+	params.InCustomAttributeID = InCustomAttributeID;
+	params.InValue = InValue;
+	params.bRemove = bRemove;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.AIPerceptionDynamicItemComponent.SetEnableState
+// (Final, Native, Public)
+// Parameters:
+// bool bInEnable (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAIPerceptionDynamicItemComponent::SetEnableState(bool bInEnable)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.SetEnableState");
+
+	UAIPerceptionDynamicItemComponent_SetEnableState_Params params;
+	params.bInEnable = bInEnable;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.AIPerceptionDynamicItemComponent.RemoveInAICell
+// (Final, Native, Public)
+
+void UAIPerceptionDynamicItemComponent::RemoveInAICell()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.RemoveInAICell");
+
+	UAIPerceptionDynamicItemComponent_RemoveInAICell_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.AIPerceptionDynamicItemComponent.RemoveFromCache
+// (Final, Native, Public)
+
+void UAIPerceptionDynamicItemComponent::RemoveFromCache()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.RemoveFromCache");
+
+	UAIPerceptionDynamicItemComponent_RemoveFromCache_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.AIPerceptionDynamicItemComponent.OnMeshAssetSet
+// (Final, Native, Public)
+
+void UAIPerceptionDynamicItemComponent::OnMeshAssetSet()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.OnMeshAssetSet");
+
+	UAIPerceptionDynamicItemComponent_OnMeshAssetSet_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.AIPerceptionDynamicItemComponent.GetUniqueID
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  DynamicItem                    (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* DynamicItem (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAIPerceptionDynamicItemComponent::GetUniqueID(class AActor* DynamicItem)
 {
@@ -1873,12 +1991,38 @@ uint32_t UAIPerceptionDynamicItemComponent::GetUniqueID(class AActor* DynamicIte
 }
 
 
+// Function AI.AIPerceptionDynamicItemComponent.GetCustomAttributeList
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// TArray<struct FAIAttribute> OutCustomAttributeList (Parm, OutParm, ZeroConstructor)
+
+void UAIPerceptionDynamicItemComponent::GetCustomAttributeList(TArray<struct FAIAttribute>* OutCustomAttributeList)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIPerceptionDynamicItemComponent.GetCustomAttributeList");
+
+	UAIPerceptionDynamicItemComponent_GetCustomAttributeList_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutCustomAttributeList != nullptr)
+		*OutCustomAttributeList = params.OutCustomAttributeList;
+}
+
+
 // Function AI.AISoundCollectionComponent.OnCollectionHearSound
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// ESoundType                     SoundType                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 InPos                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class AActor*                  InSourceActor                  (Parm, ZeroConstructor, IsPlainOldData)
+// ESoundType SoundType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* InSourceActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISoundCollectionComponent::OnCollectionHearSound(ESoundType SoundType, const struct FVector& InPos, class AActor* InSourceActor)
 {
@@ -1904,10 +2048,10 @@ void UAISoundCollectionComponent::OnCollectionHearSound(ESoundType SoundType, co
 // Function AI.AISoundCollectionComponent.OnAISoundManagerHear
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class AActor*                  InTargetActor                  (Parm, ZeroConstructor, IsPlainOldData)
-// ESoundType                     SoundType                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 InPos                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class AActor*                  InSourceActor                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTargetActor (Parm, ZeroConstructor, IsPlainOldData)
+// ESoundType SoundType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* InSourceActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISoundCollectionComponent::OnAISoundManagerHear(class AActor* InTargetActor, ESoundType SoundType, const struct FVector& InPos, class AActor* InSourceActor)
 {
@@ -1934,7 +2078,7 @@ void UAISoundCollectionComponent::OnAISoundManagerHear(class AActor* InTargetAct
 // Function AI.AISoundCollectionComponent.GetCollectSoundInfo
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FSoundState>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSoundState> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FSoundState> UAISoundCollectionComponent::GetCollectSoundInfo()
 {
@@ -1959,20 +2103,20 @@ TArray<struct FSoundState> UAISoundCollectionComponent::GetCollectSoundInfo()
 // Function AI.AIStateInfoComponentBase.QueryItemStates
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            MaxBoxNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxItemNum                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AirDropBoxRangeInner           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AirDropBoxRangeOuter           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeathBoxRange                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PickUpWrapperRange             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FindBuildingMaxRange           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          FindBuildingMinRange           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InIsUseItemSpotLoc             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxTreasureChestNum            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TreasureChestRange             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxWeedNum                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          WeedRange                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FItemStateData>  ItemStateDatas                 (Parm, OutParm, ZeroConstructor)
+// int MaxBoxNum (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// float AirDropBoxRangeInner (Parm, ZeroConstructor, IsPlainOldData)
+// float AirDropBoxRangeOuter (Parm, ZeroConstructor, IsPlainOldData)
+// float DeathBoxRange (Parm, ZeroConstructor, IsPlainOldData)
+// float PickUpWrapperRange (Parm, ZeroConstructor, IsPlainOldData)
+// float FindBuildingMaxRange (Parm, ZeroConstructor, IsPlainOldData)
+// float FindBuildingMinRange (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsUseItemSpotLoc (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxTreasureChestNum (Parm, ZeroConstructor, IsPlainOldData)
+// float TreasureChestRange (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxWeedNum (Parm, ZeroConstructor, IsPlainOldData)
+// float WeedRange (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FItemStateData> ItemStateDatas (Parm, OutParm, ZeroConstructor)
 
 void UAIStateInfoComponentBase::QueryItemStates(int MaxBoxNum, int MaxItemNum, float AirDropBoxRangeInner, float AirDropBoxRangeOuter, float DeathBoxRange, float PickUpWrapperRange, float FindBuildingMaxRange, float FindBuildingMinRange, bool InIsUseItemSpotLoc, int MaxTreasureChestNum, float TreasureChestRange, int MaxWeedNum, float WeedRange, TArray<struct FItemStateData>* ItemStateDatas)
 {
@@ -2032,7 +2176,7 @@ void UAIStateInfoComponentBase::PrintCacheAINearbyItem()
 // Function AI.AIStateInfoComponentBase.OnPlayerRespawn
 // (Final, Native, Public)
 // Parameters:
-// class AUAEPlayerController*    PC                             (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* PC (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIStateInfoComponentBase::OnPlayerRespawn(class AUAEPlayerController* PC)
 {
@@ -2098,7 +2242,7 @@ void UAIStateInfoComponentBase::OnAIStateRequestEnd()
 // Function AI.AIStateInfoComponentBase.IsValid
 // (Final, Native, Protected, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIStateInfoComponentBase::IsValid()
 {
@@ -2123,8 +2267,8 @@ bool UAIStateInfoComponentBase::IsValid()
 // Function AI.AIStateInfoComponentBase.IsAvailableNearbyItemType
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIStateInfoComponentBase::IsAvailableNearbyItemType(const struct FItemDefineID& DefineID)
 {
@@ -2150,8 +2294,8 @@ bool UAIStateInfoComponentBase::IsAvailableNearbyItemType(const struct FItemDefi
 // Function AI.AIStateInfoComponentBase.IsAvailableBackpackItemType
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIStateInfoComponentBase::IsAvailableBackpackItemType(const struct FItemDefineID& DefineID)
 {
@@ -2177,7 +2321,7 @@ bool UAIStateInfoComponentBase::IsAvailableBackpackItemType(const struct FItemDe
 // Function AI.AIStateInfoComponentBase.HasPlayerAround
 // (Final, Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIStateInfoComponentBase::HasPlayerAround()
 {
@@ -2202,8 +2346,8 @@ bool UAIStateInfoComponentBase::HasPlayerAround()
 // Function AI.AIStateInfoComponentBase.GetViewForwardVector
 // (Final, Native, Protected, HasDefaults, Const)
 // Parameters:
-// class ACharacter*              InCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class ACharacter* InCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAIStateInfoComponentBase::GetViewForwardVector(class ACharacter* InCharacter)
 {
@@ -2229,7 +2373,7 @@ struct FVector UAIStateInfoComponentBase::GetViewForwardVector(class ACharacter*
 // Function AI.AIStateInfoComponentBase.GetSoundInfo
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<struct FSoundState>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FSoundState> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FSoundState> UAIStateInfoComponentBase::GetSoundInfo()
 {
@@ -2254,7 +2398,7 @@ TArray<struct FSoundState> UAIStateInfoComponentBase::GetSoundInfo()
 // Function AI.AIStateInfoComponentBase.GetProgressBarState
 // (Final, Native, Public)
 // Parameters:
-// struct FProgressBarState       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FProgressBarState ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FProgressBarState UAIStateInfoComponentBase::GetProgressBarState()
 {
@@ -2279,7 +2423,7 @@ struct FProgressBarState UAIStateInfoComponentBase::GetProgressBarState()
 // Function AI.AIStateInfoComponentBase.GetPlayerInteractInfo
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FAIPlayerInteractInfo   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FAIPlayerInteractInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FAIPlayerInteractInfo UAIStateInfoComponentBase::GetPlayerInteractInfo()
 {
@@ -2304,7 +2448,7 @@ struct FAIPlayerInteractInfo UAIStateInfoComponentBase::GetPlayerInteractInfo()
 // Function AI.AIStateInfoComponentBase.GetOwnerBaseCharacter
 // (Final, Native, Protected, Const)
 // Parameters:
-// class ASTExtraBaseCharacter*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraBaseCharacter* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraBaseCharacter* UAIStateInfoComponentBase::GetOwnerBaseCharacter()
 {
@@ -2326,22 +2470,21 @@ class ASTExtraBaseCharacter* UAIStateInfoComponentBase::GetOwnerBaseCharacter()
 }
 
 
-// Function AI.AIStateInfoComponentBase.GetObstaclesState
+// Function AI.AIStateInfoComponentBase.GetNearbyItemState
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class ASTExtraBaseCharacter*   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Range                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FObstacleState>  ObstaclesState                 (Parm, OutParm, ZeroConstructor)
+// class ASTExtraBaseCharacter* InPawn (Parm, ZeroConstructor, IsPlainOldData)
+// bool OutIsUseCacheItem (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FItemStateData> NearbyItems (Parm, OutParm, ZeroConstructor)
 
-void UAIStateInfoComponentBase::GetObstaclesState(class ASTExtraBaseCharacter* InPawn, float Range, TArray<struct FObstacleState>* ObstaclesState)
+void UAIStateInfoComponentBase::GetNearbyItemState(class ASTExtraBaseCharacter* InPawn, bool* OutIsUseCacheItem, TArray<struct FItemStateData>* NearbyItems)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetObstaclesState");
+		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetNearbyItemState");
 
-	UAIStateInfoComponentBase_GetObstaclesState_Params params;
+	UAIStateInfoComponentBase_GetNearbyItemState_Params params;
 	params.InPawn = InPawn;
-	params.Range = Range;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -2351,15 +2494,17 @@ void UAIStateInfoComponentBase::GetObstaclesState(class ASTExtraBaseCharacter* I
 
 	pFunc->FunctionFlags = flags;
 
-	if (ObstaclesState != nullptr)
-		*ObstaclesState = params.ObstaclesState;
+	if (OutIsUseCacheItem != nullptr)
+		*OutIsUseCacheItem = params.OutIsUseCacheItem;
+	if (NearbyItems != nullptr)
+		*NearbyItems = params.NearbyItems;
 }
 
 
 // Function AI.AIStateInfoComponentBase.GetFrameNo
 // (Final, Native, Protected)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAIStateInfoComponentBase::GetFrameNo()
 {
@@ -2381,52 +2526,10 @@ uint32_t UAIStateInfoComponentBase::GetFrameNo()
 }
 
 
-// Function AI.AIStateInfoComponentBase.GetDiffAIStateInfoToCacheGeneral
-// (Native, Public)
-
-void UAIStateInfoComponentBase::GetDiffAIStateInfoToCacheGeneral()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetDiffAIStateInfoToCacheGeneral");
-
-	UAIStateInfoComponentBase_GetDiffAIStateInfoToCacheGeneral_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetDiffAIStateInfoToCache
-// (Native, Public)
-
-void UAIStateInfoComponentBase::GetDiffAIStateInfoToCache()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetDiffAIStateInfoToCache");
-
-	UAIStateInfoComponentBase_GetDiffAIStateInfoToCache_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function AI.AIStateInfoComponentBase.GetDamageSourcesNew
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FDamageSource>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FDamageSource> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FDamageSource> UAIStateInfoComponentBase::GetDamageSourcesNew()
 {
@@ -2448,169 +2551,10 @@ TArray<struct FDamageSource> UAIStateInfoComponentBase::GetDamageSourcesNew()
 }
 
 
-// Function AI.AIStateInfoComponentBase.GetDamageSources
-// (Final, Native, Public)
-// Parameters:
-// struct FAIDamageSources        ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FAIDamageSources UAIStateInfoComponentBase::GetDamageSources()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetDamageSources");
-
-	UAIStateInfoComponentBase_GetDamageSources_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetCameraState
-// (Final, Native, Public)
-// Parameters:
-// class ASTExtraBaseCharacter*   InCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FCameraState            ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FCameraState UAIStateInfoComponentBase::GetCameraState(class ASTExtraBaseCharacter* InCharacter)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetCameraState");
-
-	UAIStateInfoComponentBase_GetCameraState_Params params;
-	params.InCharacter = InCharacter;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetAIStateInfoToCache
-// (Native, Public)
-
-void UAIStateInfoComponentBase::GetAIStateInfoToCache()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetAIStateInfoToCache");
-
-	UAIStateInfoComponentBase_GetAIStateInfoToCache_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetAIStateInfoBaseModInternal
-// (Final, Native, Public)
-
-void UAIStateInfoComponentBase::GetAIStateInfoBaseModInternal()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetAIStateInfoBaseModInternal");
-
-	UAIStateInfoComponentBase_GetAIStateInfoBaseModInternal_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetAIPlayerBackpackItems
-// (Final, Native, Public, HasOutParms, Const)
-// Parameters:
-// TArray<struct FAIBackpackItem> Items                          (Parm, OutParm, ZeroConstructor)
-
-void UAIStateInfoComponentBase::GetAIPlayerBackpackItems(TArray<struct FAIBackpackItem>* Items)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetAIPlayerBackpackItems");
-
-	UAIStateInfoComponentBase_GetAIPlayerBackpackItems_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	if (Items != nullptr)
-		*Items = params.Items;
-}
-
-
-// Function AI.AIStateInfoComponentBase.GetAINearbyThrownState
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// class ASTExtraBaseCharacter*   InCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRange                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InCheckAngle                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxNum                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InSmokeRange                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAINearbyThrown> Ret                            (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAIStateInfoComponentBase::GetAINearbyThrownState(class ASTExtraBaseCharacter* InCharacter, float InRange, float InCheckAngle, int MaxNum, float InSmokeRange, TArray<struct FAINearbyThrown>* Ret)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.AIStateInfoComponentBase.GetAINearbyThrownState");
-
-	UAIStateInfoComponentBase_GetAINearbyThrownState_Params params;
-	params.InCharacter = InCharacter;
-	params.InRange = InRange;
-	params.InCheckAngle = InCheckAngle;
-	params.MaxNum = MaxNum;
-	params.InSmokeRange = InSmokeRange;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	if (Ret != nullptr)
-		*Ret = params.Ret;
-
-	return params.ReturnValue;
-}
-
-
 // Function AI.AIStateInfoComponentBase.GetAIDestroyBulletProbInfo
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// TArray<struct FAIDestroyBulletProbInfo> AIDestroyBulletProbInfoList    (Parm, OutParm, ZeroConstructor)
+// TArray<struct FAIDestroyBulletProbInfo> AIDestroyBulletProbInfoList (Parm, OutParm, ZeroConstructor)
 
 void UAIStateInfoComponentBase::GetAIDestroyBulletProbInfo(TArray<struct FAIDestroyBulletProbInfo>* AIDestroyBulletProbInfoList)
 {
@@ -2657,8 +2601,8 @@ void UAIStateInfoComponentBase::ClearDamageSources()
 // Function AI.BaseStateInfoCollector.RemoveBackpackItemUpdatedMap
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AllRemove                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool AllRemove (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBaseStateInfoCollector::RemoveBackpackItemUpdatedMap(uint32_t PlayerKey, bool AllRemove)
 {
@@ -2683,7 +2627,7 @@ void UBaseStateInfoCollector::RemoveBackpackItemUpdatedMap(uint32_t PlayerKey, b
 // Function AI.BaseStateInfoCollector.OnBackpackItemListUpdated
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBaseStateInfoCollector::OnBackpackItemListUpdated(uint32_t PlayerKey)
 {
@@ -2707,8 +2651,8 @@ void UBaseStateInfoCollector::OnBackpackItemListUpdated(uint32_t PlayerKey)
 // Function AI.BaseStateInfoCollector.AddBackpackItemListUpdatedDelegate
 // (Final, Native, Public)
 // Parameters:
-// class UBackpackComponent*      InBackpackComp                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UBackpackComponent* InBackpackComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBaseStateInfoCollector::AddBackpackItemListUpdatedDelegate(class UBackpackComponent* InBackpackComp, uint32_t InPlayerKey)
 {
@@ -2733,7 +2677,7 @@ void UBaseStateInfoCollector::AddBackpackItemListUpdatedDelegate(class UBackpack
 // Function AI.BTService_DebugInfo.GetInfo
 // (Native, Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBTService_DebugInfo::GetInfo()
 {
@@ -2758,8 +2702,8 @@ struct FString UBTService_DebugInfo::GetInfo()
 // Function AI.BTTask_SummonActor.GetSummonLocations
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  Invoker                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class AActor* Invoker (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UBTTask_SummonActor::GetSummonLocations(class AActor* Invoker)
 {
@@ -2785,7 +2729,7 @@ TArray<struct FVector> UBTTask_SummonActor::GetSummonLocations(class AActor* Inv
 // Function AI.BTTaskNode_NewParachuteJumpBase.DelayClearParachute
 // (Final, Native, Protected)
 // Parameters:
-// class ASTExtraPlayerCharacter* ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerCharacter* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTaskNode_NewParachuteJumpBase::DelayClearParachute(class ASTExtraPlayerCharacter* ControlledPawn)
 {
@@ -2830,10 +2774,10 @@ void UCustomDamageEventComponent::OnRep_ClientEvents()
 // Function AI.CharacterCustomDamageEventComponent.OnTakeDamageEvent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  Victim                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* Victim (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCharacterCustomDamageEventComponent::OnTakeDamageEvent(float Damage, const struct FDamageEvent& DamageEvent, class AActor* Victim, class AActor* Causer)
 {
@@ -2860,7 +2804,7 @@ void UCharacterCustomDamageEventComponent::OnTakeDamageEvent(float Damage, const
 // Function AI.MLAIControllerComponent.UnBindDelegates
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsEndPlay                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsEndPlay (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::UnBindDelegates(bool IsEndPlay)
 {
@@ -2884,7 +2828,7 @@ void UMLAIControllerComponent::UnBindDelegates(bool IsEndPlay)
 // Function AI.MLAIControllerComponent.SetShowDebugAILevelTime
 // (Final, Native, Static, Public)
 // Parameters:
-// float                          InSetShowDebugAILevelTime      (Parm, ZeroConstructor, IsPlainOldData)
+// float InSetShowDebugAILevelTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetShowDebugAILevelTime(float InSetShowDebugAILevelTime)
 {
@@ -2908,7 +2852,7 @@ void UMLAIControllerComponent::SetShowDebugAILevelTime(float InSetShowDebugAILev
 // Function AI.MLAIControllerComponent.SetMLAIStyle
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       NewAIStyle                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t NewAIStyle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetMLAIStyle(uint32_t NewAIStyle)
 {
@@ -2932,8 +2876,8 @@ void UMLAIControllerComponent::SetMLAIStyle(uint32_t NewAIStyle)
 // Function AI.MLAIControllerComponent.SetLuaAIParamConfigString
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InAIParamConfigString          (Parm, ZeroConstructor)
-// int                            InLuaAIParamType               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InAIParamConfigString (Parm, ZeroConstructor)
+// int InLuaAIParamType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetLuaAIParamConfigString(const struct FString& InAIParamConfigString, int InLuaAIParamType)
 {
@@ -2958,7 +2902,7 @@ void UMLAIControllerComponent::SetLuaAIParamConfigString(const struct FString& I
 // Function AI.MLAIControllerComponent.SetIsMLAI
 // (Final, Native, Public)
 // Parameters:
-// bool                           InIsMLAI                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsMLAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetIsMLAI(bool InIsMLAI)
 {
@@ -2982,7 +2926,7 @@ void UMLAIControllerComponent::SetIsMLAI(bool InIsMLAI)
 // Function AI.MLAIControllerComponent.SetCurShootingPose
 // (Final, Native, Public)
 // Parameters:
-// EAIShootingPose                InCurAIShootingPose            (Parm, ZeroConstructor, IsPlainOldData)
+// EAIShootingPose InCurAIShootingPose (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetCurShootingPose(EAIShootingPose InCurAIShootingPose)
 {
@@ -3006,7 +2950,7 @@ void UMLAIControllerComponent::SetCurShootingPose(EAIShootingPose InCurAIShootin
 // Function AI.MLAIControllerComponent.SetAllyMasterID
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InAllyMasterID                 (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAllyMasterID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetAllyMasterID(uint32_t InAllyMasterID)
 {
@@ -3030,7 +2974,7 @@ void UMLAIControllerComponent::SetAllyMasterID(uint32_t InAllyMasterID)
 // Function AI.MLAIControllerComponent.SetAIProvider
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       AIProvider                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AIProvider (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetAIProvider(uint32_t AIProvider)
 {
@@ -3054,7 +2998,7 @@ void UMLAIControllerComponent::SetAIProvider(uint32_t AIProvider)
 // Function AI.MLAIControllerComponent.SetAIParams
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGameModeAIPlayerParams InAIParams                     (Parm, OutParm)
+// struct FGameModeAIPlayerParams InAIParams (Parm, OutParm)
 
 void UMLAIControllerComponent::SetAIParams(struct FGameModeAIPlayerParams* InAIParams)
 {
@@ -3080,7 +3024,7 @@ void UMLAIControllerComponent::SetAIParams(struct FGameModeAIPlayerParams* InAIP
 // Function AI.MLAIControllerComponent.SetAILevel
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       NewAILevel                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t NewAILevel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::SetAILevel(uint32_t NewAILevel)
 {
@@ -3104,7 +3048,7 @@ void UMLAIControllerComponent::SetAILevel(uint32_t NewAILevel)
 // Function AI.MLAIControllerComponent.IsValid
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAIControllerComponent::IsValid()
 {
@@ -3129,7 +3073,7 @@ bool UMLAIControllerComponent::IsValid()
 // Function AI.MLAIControllerComponent.IsTeammateMLAI
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAIControllerComponent::IsTeammateMLAI()
 {
@@ -3154,7 +3098,7 @@ bool UMLAIControllerComponent::IsTeammateMLAI()
 // Function AI.MLAIControllerComponent.IsFreeCamera
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAIControllerComponent::IsFreeCamera()
 {
@@ -3179,7 +3123,7 @@ bool UMLAIControllerComponent::IsFreeCamera()
 // Function AI.MLAIControllerComponent.InitAIStateInfoComponent
 // (Final, Native, Public)
 // Parameters:
-// class UAIBasicStateInfoComponent* AIStateInfoComponent           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAIBasicStateInfoComponent* AIStateInfoComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UMLAIControllerComponent::InitAIStateInfoComponent(class UAIBasicStateInfoComponent* AIStateInfoComponent)
 {
@@ -3203,7 +3147,7 @@ void UMLAIControllerComponent::InitAIStateInfoComponent(class UAIBasicStateInfoC
 // Function AI.MLAIControllerComponent.InitAIActionExecutionComponent
 // (Final, Native, Public)
 // Parameters:
-// class UAIActionExecutionComponent* InAIActionExecutionComponent   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAIActionExecutionComponent* InAIActionExecutionComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UMLAIControllerComponent::InitAIActionExecutionComponent(class UAIActionExecutionComponent* InAIActionExecutionComponent)
 {
@@ -3227,7 +3171,7 @@ void UMLAIControllerComponent::InitAIActionExecutionComponent(class UAIActionExe
 // Function AI.MLAIControllerComponent.GetViewRotation
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UMLAIControllerComponent::GetViewRotation()
 {
@@ -3252,7 +3196,7 @@ struct FRotator UMLAIControllerComponent::GetViewRotation()
 // Function AI.MLAIControllerComponent.GetViewForwardVector
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UMLAIControllerComponent::GetViewForwardVector()
 {
@@ -3277,7 +3221,7 @@ struct FVector UMLAIControllerComponent::GetViewForwardVector()
 // Function AI.MLAIControllerComponent.GetOwnerBaseCharacter
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraBaseCharacter*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraBaseCharacter* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTExtraBaseCharacter* UMLAIControllerComponent::GetOwnerBaseCharacter()
 {
@@ -3302,7 +3246,7 @@ class ASTExtraBaseCharacter* UMLAIControllerComponent::GetOwnerBaseCharacter()
 // Function AI.MLAIControllerComponent.GetMLAIStyle
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMLAIControllerComponent::GetMLAIStyle()
 {
@@ -3327,7 +3271,7 @@ uint32_t UMLAIControllerComponent::GetMLAIStyle()
 // Function AI.MLAIControllerComponent.GetMLAIParachuteJumpComp
 // (Final, Native, Public, Const)
 // Parameters:
-// class UMLAIParachuteJumpComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UMLAIParachuteJumpComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UMLAIParachuteJumpComponent* UMLAIControllerComponent::GetMLAIParachuteJumpComp()
 {
@@ -3352,7 +3296,7 @@ class UMLAIParachuteJumpComponent* UMLAIControllerComponent::GetMLAIParachuteJum
 // Function AI.MLAIControllerComponent.GetIsMLAI
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAIControllerComponent::GetIsMLAI()
 {
@@ -3377,7 +3321,7 @@ bool UMLAIControllerComponent::GetIsMLAI()
 // Function AI.MLAIControllerComponent.GetBackpackComponent
 // (Final, Native, Public)
 // Parameters:
-// class UBackpackComponent*      ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UBackpackComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UBackpackComponent* UMLAIControllerComponent::GetBackpackComponent()
 {
@@ -3402,7 +3346,7 @@ class UBackpackComponent* UMLAIControllerComponent::GetBackpackComponent()
 // Function AI.MLAIControllerComponent.GetAllyMasterID
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMLAIControllerComponent::GetAllyMasterID()
 {
@@ -3427,7 +3371,7 @@ uint32_t UMLAIControllerComponent::GetAllyMasterID()
 // Function AI.MLAIControllerComponent.GetAIStateInfoComp
 // (Final, Native, Public, Const)
 // Parameters:
-// class UAIBasicStateInfoComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAIBasicStateInfoComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAIBasicStateInfoComponent* UMLAIControllerComponent::GetAIStateInfoComp()
 {
@@ -3452,7 +3396,7 @@ class UAIBasicStateInfoComponent* UMLAIControllerComponent::GetAIStateInfoComp()
 // Function AI.MLAIControllerComponent.GetAIProvider
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMLAIControllerComponent::GetAIProvider()
 {
@@ -3477,7 +3421,7 @@ uint32_t UMLAIControllerComponent::GetAIProvider()
 // Function AI.MLAIControllerComponent.GetAIParams
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FGameModeAIPlayerParams ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+// struct FGameModeAIPlayerParams ReturnValue (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 
 struct FGameModeAIPlayerParams UMLAIControllerComponent::GetAIParams()
 {
@@ -3502,7 +3446,7 @@ struct FGameModeAIPlayerParams UMLAIControllerComponent::GetAIParams()
 // Function AI.MLAIControllerComponent.GetAILevel
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UMLAIControllerComponent::GetAILevel()
 {
@@ -3527,7 +3471,7 @@ uint32_t UMLAIControllerComponent::GetAILevel()
 // Function AI.MLAIControllerComponent.GetAIActionExecutionComp
 // (Final, Native, Public, Const)
 // Parameters:
-// class UAIActionExecutionComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAIActionExecutionComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAIActionExecutionComponent* UMLAIControllerComponent::GetAIActionExecutionComp()
 {
@@ -3573,10 +3517,10 @@ void UMLAIControllerComponent::FreshShootingPose()
 // Function AI.MLAIControllerComponent.DoActionFreeCamera
 // (Final, Native, Public)
 // Parameters:
-// bool                           IsEnter                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsEnter (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIControllerComponent::DoActionFreeCamera(bool IsEnter, float InPitch, float InYaw, float InRoll)
 {
@@ -3603,8 +3547,8 @@ void UMLAIControllerComponent::DoActionFreeCamera(bool IsEnter, float InPitch, f
 // Function AI.MLAIControllerComponent.CheckCameraViewPitchLimit
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FRotator                InOutTargetRot                 (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FRotator InOutTargetRot (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAIControllerComponent::CheckCameraViewPitchLimit(struct FRotator* InOutTargetRot)
 {
@@ -3653,8 +3597,8 @@ void UMLAIControllerComponent::BindDelegates()
 // Function AI.MLAIParachuteJumpComponent.ParachuteMove
 // (Final, Native, Public)
 // Parameters:
-// float                          ForwardRate                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RightRate                      (Parm, ZeroConstructor, IsPlainOldData)
+// float ForwardRate (Parm, ZeroConstructor, IsPlainOldData)
+// float RightRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIParachuteJumpComponent::ParachuteMove(float ForwardRate, float RightRate)
 {
@@ -3763,8 +3707,8 @@ void UMLAIParachuteJumpComponent::JumpFromPlane()
 // Function AI.MLAIParachuteJumpComponent.EnterParachuteJumpPhase
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
-// struct FVector                 StartLoc                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FRotator                StartRot                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector StartLoc (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator StartRot (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UMLAIParachuteJumpComponent::EnterParachuteJumpPhase(const struct FVector& StartLoc, const struct FRotator& StartRot)
 {
@@ -3789,7 +3733,7 @@ void UMLAIParachuteJumpComponent::EnterParachuteJumpPhase(const struct FVector& 
 // Function AI.MLAIParachuteJumpComponent.EndJump
 // (Final, Native, Public)
 // Parameters:
-// bool                           bSuccess                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIParachuteJumpComponent::EndJump(bool bSuccess)
 {
@@ -3852,6 +3796,54 @@ void UMLAIStateInfoManager::StartRequestCache()
 }
 
 
+// Function AI.MLAIStateInfoManager.SetUseNewDiffCmds
+// (Final, Native, Public)
+// Parameters:
+// bool InUseNewDiffCmds (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAIStateInfoManager::SetUseNewDiffCmds(bool InUseNewDiffCmds)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.SetUseNewDiffCmds");
+
+	UMLAIStateInfoManager_SetUseNewDiffCmds_Params params;
+	params.InUseNewDiffCmds = InUseNewDiffCmds;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAIStateInfoManager.SetOpenHeadAndMuzzleInfo
+// (Final, Native, Public)
+// Parameters:
+// bool InOpenHeadAndMuzzleInfo (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAIStateInfoManager::SetOpenHeadAndMuzzleInfo(bool InOpenHeadAndMuzzleInfo)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.SetOpenHeadAndMuzzleInfo");
+
+	UMLAIStateInfoManager_SetOpenHeadAndMuzzleInfo_Params params;
+	params.InOpenHeadAndMuzzleInfo = InOpenHeadAndMuzzleInfo;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAIStateInfoManager.ResetWhiteList
 // (Final, Native, Public)
 
@@ -3873,35 +3865,10 @@ void UMLAIStateInfoManager::ResetWhiteList()
 }
 
 
-// Function AI.MLAIStateInfoManager.IsUseGeneralAIStateInfo
-// (Final, Native, Public, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UMLAIStateInfoManager::IsUseGeneralAIStateInfo()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.IsUseGeneralAIStateInfo");
-
-	UMLAIStateInfoManager_IsUseGeneralAIStateInfo_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function AI.MLAIStateInfoManager.InitCollectorList
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FCollectorInitInfo> CollectorInitInfoList          (Parm, ZeroConstructor)
+// TArray<struct FCollectorInitInfo> CollectorInitInfoList (Parm, ZeroConstructor)
 
 void UMLAIStateInfoManager::InitCollectorList(TArray<struct FCollectorInitInfo> CollectorInitInfoList)
 {
@@ -3946,7 +3913,7 @@ void UMLAIStateInfoManager::InitCollector()
 // Function AI.MLAIStateInfoManager.Init
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::Init(class UWorld* InWorld)
 {
@@ -3967,10 +3934,36 @@ void UMLAIStateInfoManager::Init(class UWorld* InWorld)
 }
 
 
+// Function AI.MLAIStateInfoManager.GetSinglePlayerStateInfoToCache
+// (Final, Native, Public)
+// Parameters:
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerCharacter* Player (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAIStateInfoManager::GetSinglePlayerStateInfoToCache(class UWorld* InWorld, class ASTExtraPlayerCharacter* Player)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.GetSinglePlayerStateInfoToCache");
+
+	UMLAIStateInfoManager_GetSinglePlayerStateInfoToCache_Params params;
+	params.InWorld = InWorld;
+	params.Player = Player;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAIStateInfoManager.GetGlobalGameStateToCache
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::GetGlobalGameStateToCache(class UWorld* InWorld)
 {
@@ -3994,7 +3987,7 @@ void UMLAIStateInfoManager::GetGlobalGameStateToCache(class UWorld* InWorld)
 // Function AI.MLAIStateInfoManager.GetDiffGlobalGameStateToCacheGeneral
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::GetDiffGlobalGameStateToCacheGeneral(class UWorld* InWorld)
 {
@@ -4015,60 +4008,10 @@ void UMLAIStateInfoManager::GetDiffGlobalGameStateToCacheGeneral(class UWorld* I
 }
 
 
-// Function AI.MLAIStateInfoManager.GetDiffGlobalGameStateToCacheCCS
-// (Final, Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIStateInfoManager::GetDiffGlobalGameStateToCacheCCS(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.GetDiffGlobalGameStateToCacheCCS");
-
-	UMLAIStateInfoManager_GetDiffGlobalGameStateToCacheCCS_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIStateInfoManager.GetDiffAllPlayerStateInfoToCacheCCS
-// (Final, Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseDiff                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIStateInfoManager::GetDiffAllPlayerStateInfoToCacheCCS(class UWorld* InWorld, bool bUseDiff)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIStateInfoManager.GetDiffAllPlayerStateInfoToCacheCCS");
-
-	UMLAIStateInfoManager_GetDiffAllPlayerStateInfoToCacheCCS_Params params;
-	params.InWorld = InWorld;
-	params.bUseDiff = bUseDiff;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function AI.MLAIStateInfoManager.GetDiffAllPlayerAIStateInfoToCacheGeneral
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::GetDiffAllPlayerAIStateInfoToCacheGeneral(class UWorld* InWorld)
 {
@@ -4092,7 +4035,7 @@ void UMLAIStateInfoManager::GetDiffAllPlayerAIStateInfoToCacheGeneral(class UWor
 // Function AI.MLAIStateInfoManager.GetAllPlayerStateInfoToCache
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::GetAllPlayerStateInfoToCache(class UWorld* InWorld)
 {
@@ -4137,9 +4080,9 @@ void UMLAIStateInfoManager::EndRequestCache()
 // Function AI.MLAIStateInfoManager.CollectCandidateAIStateInfoToCache
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// EStatePlayerType               CollectPlayerType              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIActingCandidateData  CandidateData                  (Parm, OutParm)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// EStatePlayerType CollectPlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIActingCandidateData CandidateData (Parm, OutParm)
 
 void UMLAIStateInfoManager::CollectCandidateAIStateInfoToCache(class UWorld* InWorld, EStatePlayerType CollectPlayerType, struct FAIActingCandidateData* CandidateData)
 {
@@ -4167,9 +4110,9 @@ void UMLAIStateInfoManager::CollectCandidateAIStateInfoToCache(class UWorld* InW
 // Function AI.MLAIStateInfoManager.CollectAIStateInfoToCache
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// EStatePlayerType               CollectPlayerType              (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraBaseCharacter*   PlayerPawn                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (Parm, ZeroConstructor, IsPlainOldData)
+// EStatePlayerType CollectPlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* PlayerPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAIStateInfoManager::CollectAIStateInfoToCache(class UWorld* InWorld, EStatePlayerType CollectPlayerType, class ASTExtraBaseCharacter* PlayerPawn)
 {
@@ -4195,7 +4138,7 @@ void UMLAIStateInfoManager::CollectAIStateInfoToCache(class UWorld* InWorld, ESt
 // Function AI.MLAISubSystem.UpdateSpecialZoneStateChanged
 // (Final, Native, Public)
 // Parameters:
-// class ASpecialZoneActor*       InSpecialZone                  (Parm, ZeroConstructor, IsPlainOldData)
+// class ASpecialZoneActor* InSpecialZone (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::UpdateSpecialZoneStateChanged(class ASpecialZoneActor* InSpecialZone)
 {
@@ -4219,7 +4162,7 @@ void UMLAISubSystem::UpdateSpecialZoneStateChanged(class ASpecialZoneActor* InSp
 // Function AI.MLAISubSystem.UpdateSpecialZoneInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FSpecialZoneState       NewZoneInfo                    (Parm, OutParm)
+// struct FSpecialZoneState NewZoneInfo (Parm, OutParm)
 
 void UMLAISubSystem::UpdateSpecialZoneInfo(struct FSpecialZoneState* NewZoneInfo)
 {
@@ -4245,7 +4188,7 @@ void UMLAISubSystem::UpdateSpecialZoneInfo(struct FSpecialZoneState* NewZoneInfo
 // Function AI.MLAISubSystem.UpdateRedZoneState
 // (Final, Native, Public)
 // Parameters:
-// class UWorld*                  InWorld                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* InWorld (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::UpdateRedZoneState(class UWorld* InWorld)
 {
@@ -4308,6 +4251,78 @@ void UMLAISubSystem::UpdateAirDropBoxStates()
 }
 
 
+// Function AI.MLAISubSystem.UnregisterSpecialMapping
+// (Final, Native, Public)
+// Parameters:
+// struct FString Key (Parm, ZeroConstructor)
+
+void UMLAISubSystem::UnregisterSpecialMapping(const struct FString& Key)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.UnregisterSpecialMapping");
+
+	UMLAISubSystem_UnregisterSpecialMapping_Params params;
+	params.Key = Key;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.UnregisterDynamicItemComponent
+// (Final, Native, Public)
+// Parameters:
+// class UAIPerceptionDynamicItemComponent* InDynamicItemComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UMLAISubSystem::UnregisterDynamicItemComponent(class UAIPerceptionDynamicItemComponent* InDynamicItemComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.UnregisterDynamicItemComponent");
+
+	UMLAISubSystem_UnregisterDynamicItemComponent_Params params;
+	params.InDynamicItemComp = InDynamicItemComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.UnregisterDestructibleItemComponent
+// (Final, Native, Public)
+// Parameters:
+// class UAIPerceptionDynamicItemComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UMLAISubSystem::UnregisterDestructibleItemComponent(class UAIPerceptionDynamicItemComponent* InComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.UnregisterDestructibleItemComponent");
+
+	UMLAISubSystem_UnregisterDestructibleItemComponent_Params params;
+	params.InComp = InComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.StartRequestCache
 // (Final, Native, Public)
 
@@ -4332,9 +4347,9 @@ void UMLAISubSystem::StartRequestCache()
 // Function AI.MLAISubSystem.SetWhitelistPlayerStatesSwitch
 // (Final, Native, Public)
 // Parameters:
-// bool                           InSwitch                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InReset                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InCheckGlobalState             (Parm, ZeroConstructor, IsPlainOldData)
+// bool InSwitch (Parm, ZeroConstructor, IsPlainOldData)
+// bool InReset (Parm, ZeroConstructor, IsPlainOldData)
+// bool InCheckGlobalState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetWhitelistPlayerStatesSwitch(bool InSwitch, bool InReset, bool InCheckGlobalState)
 {
@@ -4360,7 +4375,7 @@ void UMLAISubSystem::SetWhitelistPlayerStatesSwitch(bool InSwitch, bool InReset,
 // Function AI.MLAISubSystem.SetVehicleWeekPointConfig
 // (Final, Native, Public)
 // Parameters:
-// TMap<uint32_t, struct FString> InVehicleWeekPointConfig       (Parm, ZeroConstructor)
+// TMap<uint32_t, struct FString> InVehicleWeekPointConfig (Parm, ZeroConstructor)
 
 void UMLAISubSystem::SetVehicleWeekPointConfig(TMap<uint32_t, struct FString> InVehicleWeekPointConfig)
 {
@@ -4384,7 +4399,7 @@ void UMLAISubSystem::SetVehicleWeekPointConfig(TMap<uint32_t, struct FString> In
 // Function AI.MLAISubSystem.SetUseTablePool
 // (Final, Native, Public)
 // Parameters:
-// int                            InUseTablePool                 (Parm, ZeroConstructor, IsPlainOldData)
+// int InUseTablePool (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetUseTablePool(int InUseTablePool)
 {
@@ -4408,8 +4423,8 @@ void UMLAISubSystem::SetUseTablePool(int InUseTablePool)
 // Function AI.MLAISubSystem.SetSpecialZoneType
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InParent                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InType                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InParent (Parm, ZeroConstructor, IsPlainOldData)
+// int InType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetSpecialZoneType(class AActor* InParent, int InType)
 {
@@ -4434,8 +4449,8 @@ void UMLAISubSystem::SetSpecialZoneType(class AActor* InParent, int InType)
 // Function AI.MLAISubSystem.SetSpecialZoneExtraState
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InParent                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InExtraState                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InParent (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InExtraState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetSpecialZoneExtraState(class AActor* InParent, uint32_t InExtraState)
 {
@@ -4460,8 +4475,8 @@ void UMLAISubSystem::SetSpecialZoneExtraState(class AActor* InParent, uint32_t I
 // Function AI.MLAISubSystem.SetSpecialZoneCustomState
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InParent                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCustomState                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InParent (Parm, ZeroConstructor, IsPlainOldData)
+// int InCustomState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetSpecialZoneCustomState(class AActor* InParent, int InCustomState)
 {
@@ -4483,11 +4498,65 @@ void UMLAISubSystem::SetSpecialZoneCustomState(class AActor* InParent, int InCus
 }
 
 
+// Function AI.MLAISubSystem.SetSpecialZoneCustomAttribute
+// (Final, Native, Public)
+// Parameters:
+// class AActor* InParent (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t CustomAttributeID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float InValue (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRemove (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::SetSpecialZoneCustomAttribute(class AActor* InParent, uint32_t CustomAttributeID, float InValue, bool bRemove)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetSpecialZoneCustomAttribute");
+
+	UMLAISubSystem_SetSpecialZoneCustomAttribute_Params params;
+	params.InParent = InParent;
+	params.CustomAttributeID = CustomAttributeID;
+	params.InValue = InValue;
+	params.bRemove = bRemove;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.SetReportAllDynamicItems
+// (Final, Native, Public)
+// Parameters:
+// bool bInEnable (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::SetReportAllDynamicItems(bool bInEnable)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetReportAllDynamicItems");
+
+	UMLAISubSystem_SetReportAllDynamicItems_Params params;
+	params.bInEnable = bInEnable;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.SetPlayerRevivalType
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InRevivalType                  (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// int InRevivalType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetPlayerRevivalType(uint32_t InPlayerKey, int InRevivalType)
 {
@@ -4509,10 +4578,34 @@ void UMLAISubSystem::SetPlayerRevivalType(uint32_t InPlayerKey, int InRevivalTyp
 }
 
 
+// Function AI.MLAISubSystem.SetPlayerAttributeModifyCompConfig
+// (Final, Native, Public)
+// Parameters:
+// TMap<uint32_t, struct FString> InAttributeModifyCompConfig (Parm, ZeroConstructor)
+
+void UMLAISubSystem::SetPlayerAttributeModifyCompConfig(TMap<uint32_t, struct FString> InAttributeModifyCompConfig)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetPlayerAttributeModifyCompConfig");
+
+	UMLAISubSystem_SetPlayerAttributeModifyCompConfig_Params params;
+	params.InAttributeModifyCompConfig = InAttributeModifyCompConfig;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.SetPawnStateConfig
 // (Final, Native, Public)
 // Parameters:
-// TMap<int, uint32_t>            InPawnStateConfig              (Parm, ZeroConstructor)
+// TMap<int, uint32_t> InPawnStateConfig (Parm, ZeroConstructor)
 
 void UMLAISubSystem::SetPawnStateConfig(TMap<int, uint32_t> InPawnStateConfig)
 {
@@ -4533,10 +4626,34 @@ void UMLAISubSystem::SetPawnStateConfig(TMap<int, uint32_t> InPawnStateConfig)
 }
 
 
+// Function AI.MLAISubSystem.SetOverrideMapID
+// (Final, Native, Public)
+// Parameters:
+// int InOverrideMapID (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::SetOverrideMapID(int InOverrideMapID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetOverrideMapID");
+
+	UMLAISubSystem_SetOverrideMapID_Params params;
+	params.InOverrideMapID = InOverrideMapID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.SetOpenBTCameraInfo
 // (Final, Native, Public)
 // Parameters:
-// bool                           InOpenBTCameraInfo             (Parm, ZeroConstructor, IsPlainOldData)
+// bool InOpenBTCameraInfo (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetOpenBTCameraInfo(bool InOpenBTCameraInfo)
 {
@@ -4560,7 +4677,7 @@ void UMLAISubSystem::SetOpenBTCameraInfo(bool InOpenBTCameraInfo)
 // Function AI.MLAISubSystem.SetNonMLAIBuffConfig
 // (Final, Native, Public)
 // Parameters:
-// TMap<int, uint32_t>            InBuffIDs                      (Parm, ZeroConstructor)
+// TMap<int, uint32_t> InBuffIDs (Parm, ZeroConstructor)
 
 void UMLAISubSystem::SetNonMLAIBuffConfig(TMap<int, uint32_t> InBuffIDs)
 {
@@ -4584,7 +4701,7 @@ void UMLAISubSystem::SetNonMLAIBuffConfig(TMap<int, uint32_t> InBuffIDs)
 // Function AI.MLAISubSystem.SetNewbieRealHiddenScore
 // (Final, Native, Public)
 // Parameters:
-// int                            InNewbieRealHiddenScore        (Parm, ZeroConstructor, IsPlainOldData)
+// int InNewbieRealHiddenScore (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetNewbieRealHiddenScore(int InNewbieRealHiddenScore)
 {
@@ -4608,7 +4725,7 @@ void UMLAISubSystem::SetNewbieRealHiddenScore(int InNewbieRealHiddenScore)
 // Function AI.MLAISubSystem.SetNewbieMatchCount
 // (Final, Native, Public)
 // Parameters:
-// int                            InNewbieMatchCount             (Parm, ZeroConstructor, IsPlainOldData)
+// int InNewbieMatchCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetNewbieMatchCount(int InNewbieMatchCount)
 {
@@ -4632,7 +4749,7 @@ void UMLAISubSystem::SetNewbieMatchCount(int InNewbieMatchCount)
 // Function AI.MLAISubSystem.SetNeedAllInfo
 // (Final, Native, Static, Public)
 // Parameters:
-// bool                           bInNeedAllInfo                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInNeedAllInfo (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetNeedAllInfo(bool bInNeedAllInfo)
 {
@@ -4653,19 +4770,19 @@ void UMLAISubSystem::SetNeedAllInfo(bool bInNeedAllInfo)
 }
 
 
-// Function AI.MLAISubSystem.SetMLAIUtils
+// Function AI.MLAISubSystem.SetModGameType
 // (Final, Native, Public)
 // Parameters:
-// class UMLAIUtilsBase*          MLAIUtils                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int InModGameType (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMLAISubSystem::SetMLAIUtils(class UMLAIUtilsBase* MLAIUtils)
+void UMLAISubSystem::SetModGameType(int InModGameType)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetMLAIUtils");
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetModGameType");
 
-	UMLAISubSystem_SetMLAIUtils_Params params;
-	params.MLAIUtils = MLAIUtils;
+	UMLAISubSystem_SetModGameType_Params params;
+	params.InModGameType = InModGameType;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -4680,7 +4797,7 @@ void UMLAISubSystem::SetMLAIUtils(class UMLAIUtilsBase* MLAIUtils)
 // Function AI.MLAISubSystem.SetMLAIStateInfoManager
 // (Final, Native, Public)
 // Parameters:
-// class UMLAIStateInfoManager*   InMLAIStateInfoManager         (Parm, ZeroConstructor, IsPlainOldData)
+// class UMLAIStateInfoManager* InMLAIStateInfoManager (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetMLAIStateInfoManager(class UMLAIStateInfoManager* InMLAIStateInfoManager)
 {
@@ -4704,7 +4821,7 @@ void UMLAISubSystem::SetMLAIStateInfoManager(class UMLAIStateInfoManager* InMLAI
 // Function AI.MLAISubSystem.SetMLAIBuffConfig
 // (Final, Native, Public)
 // Parameters:
-// TMap<int, uint32_t>            InBuffIDs                      (Parm, ZeroConstructor)
+// TMap<int, uint32_t> InBuffIDs (Parm, ZeroConstructor)
 
 void UMLAISubSystem::SetMLAIBuffConfig(TMap<int, uint32_t> InBuffIDs)
 {
@@ -4728,7 +4845,7 @@ void UMLAISubSystem::SetMLAIBuffConfig(TMap<int, uint32_t> InBuffIDs)
 // Function AI.MLAISubSystem.SetCDSkillConfig
 // (Final, Native, Public)
 // Parameters:
-// TMap<int, uint32_t>            InAttributeCDSkillConfigs      (Parm, ZeroConstructor)
+// TMap<int, uint32_t> InAttributeCDSkillConfigs (Parm, ZeroConstructor)
 
 void UMLAISubSystem::SetCDSkillConfig(TMap<int, uint32_t> InAttributeCDSkillConfigs)
 {
@@ -4752,7 +4869,7 @@ void UMLAISubSystem::SetCDSkillConfig(TMap<int, uint32_t> InAttributeCDSkillConf
 // Function AI.MLAISubSystem.SetBackpackItemUpdatedMapSwitch
 // (Final, Native, Static, Public)
 // Parameters:
-// bool                           bInSwitch                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInSwitch (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetBackpackItemUpdatedMapSwitch(bool bInSwitch)
 {
@@ -4773,35 +4890,11 @@ void UMLAISubSystem::SetBackpackItemUpdatedMapSwitch(bool bInSwitch)
 }
 
 
-// Function AI.MLAISubSystem.SetAttributeModifyCompConfig
-// (Final, Native, Public)
-// Parameters:
-// TMap<uint32_t, struct FString> InAttributeModifyCompConfig    (Parm, ZeroConstructor)
-
-void UMLAISubSystem::SetAttributeModifyCompConfig(TMap<uint32_t, struct FString> InAttributeModifyCompConfig)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetAttributeModifyCompConfig");
-
-	UMLAISubSystem_SetAttributeModifyCompConfig_Params params;
-	params.InAttributeModifyCompConfig = InAttributeModifyCompConfig;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function AI.MLAISubSystem.SetAirDropLocation
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// int                            InAirDropTag                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 AirDropLocation                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int InAirDropTag (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector AirDropLocation (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UMLAISubSystem::SetAirDropLocation(int InAirDropTag, const struct FVector& AirDropLocation)
 {
@@ -4823,17 +4916,41 @@ void UMLAISubSystem::SetAirDropLocation(int InAirDropTag, const struct FVector& 
 }
 
 
+// Function AI.MLAISubSystem.SetAIAttributeModifyCompConfig
+// (Final, Native, Public)
+// Parameters:
+// TMap<uint32_t, struct FString> InAttributeModifyCompConfig (Parm, ZeroConstructor)
+
+void UMLAISubSystem::SetAIAttributeModifyCompConfig(TMap<uint32_t, struct FString> InAttributeModifyCompConfig)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.SetAIAttributeModifyCompConfig");
+
+	UMLAISubSystem_SetAIAttributeModifyCompConfig_Params params;
+	params.InAttributeModifyCompConfig = InAttributeModifyCompConfig;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.SetAIAttribute_CastEnergyWithCount
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InAttributeID                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InCurCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InCurEnergy                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InLastActiveTime               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InMaxCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InMaxEnergy                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InDeltaEnergy                  (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAttributeID (Parm, ZeroConstructor, IsPlainOldData)
+// int InCurCount (Parm, ZeroConstructor, IsPlainOldData)
+// float InCurEnergy (Parm, ZeroConstructor, IsPlainOldData)
+// float InLastActiveTime (Parm, ZeroConstructor, IsPlainOldData)
+// int InMaxCount (Parm, ZeroConstructor, IsPlainOldData)
+// float InMaxEnergy (Parm, ZeroConstructor, IsPlainOldData)
+// float InDeltaEnergy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetAIAttribute_CastEnergyWithCount(uint32_t InPlayerKey, uint32_t InAttributeID, int InCurCount, float InCurEnergy, float InLastActiveTime, int InMaxCount, float InMaxEnergy, float InDeltaEnergy)
 {
@@ -4864,9 +4981,9 @@ void UMLAISubSystem::SetAIAttribute_CastEnergyWithCount(uint32_t InPlayerKey, ui
 // Function AI.MLAISubSystem.SetAIAttribute
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InAttributeID                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InAttributeValue               (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAttributeID (Parm, ZeroConstructor, IsPlainOldData)
+// float InAttributeValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::SetAIAttribute(uint32_t InPlayerKey, uint32_t InAttributeID, float InAttributeValue)
 {
@@ -4892,8 +5009,8 @@ void UMLAISubSystem::SetAIAttribute(uint32_t InPlayerKey, uint32_t InAttributeID
 // Function AI.MLAISubSystem.ResetAttributeIDToPlayerKeysMap
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InAttributeID                  (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<uint32_t>               InPlayerKeys                   (Parm, ZeroConstructor)
+// uint32_t InAttributeID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<uint32_t> InPlayerKeys (Parm, ZeroConstructor)
 
 void UMLAISubSystem::ResetAttributeIDToPlayerKeysMap(uint32_t InAttributeID, TArray<uint32_t> InPlayerKeys)
 {
@@ -4918,8 +5035,8 @@ void UMLAISubSystem::ResetAttributeIDToPlayerKeysMap(uint32_t InAttributeID, TAr
 // Function AI.MLAISubSystem.RemoveSpecialZoneInfo
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ZoneID                         (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ZoneID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::RemoveSpecialZoneInfo(uint32_t ZoneID, uint32_t Type)
 {
@@ -4944,8 +5061,8 @@ void UMLAISubSystem::RemoveSpecialZoneInfo(uint32_t ZoneID, uint32_t Type)
 // Function AI.MLAISubSystem.RemoveMercenary2MasterMap
 // (Final, Native, Public)
 // Parameters:
-// class APawn*                   MercenaryAI                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   Master                         (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* MercenaryAI (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Master (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::RemoveMercenary2MasterMap(class APawn* MercenaryAI, class APawn* Master)
 {
@@ -4970,7 +5087,7 @@ void UMLAISubSystem::RemoveMercenary2MasterMap(class APawn* MercenaryAI, class A
 // Function AI.MLAISubSystem.RemoveFromSilentMLAIList
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::RemoveFromSilentMLAIList(uint32_t InPlayerKey)
 {
@@ -4994,7 +5111,7 @@ void UMLAISubSystem::RemoveFromSilentMLAIList(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.RemoveFromPlayerWhitelist
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::RemoveFromPlayerWhitelist(uint32_t InPlayerKey)
 {
@@ -5015,16 +5132,114 @@ void UMLAISubSystem::RemoveFromPlayerWhitelist(uint32_t InPlayerKey)
 }
 
 
+// Function AI.MLAISubSystem.RemoveAICheckVisibilityFilteredActor
+// (Final, Native, Public)
+// Parameters:
+// uint32_t actorid (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::RemoveAICheckVisibilityFilteredActor(uint32_t actorid)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.RemoveAICheckVisibilityFilteredActor");
+
+	UMLAISubSystem_RemoveAICheckVisibilityFilteredActor_Params params;
+	params.actorid = actorid;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.RegisterSpecialMapping
+// (Final, Native, Public)
+// Parameters:
+// struct FString Key (Parm, ZeroConstructor)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::RegisterSpecialMapping(const struct FString& Key, int Value)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.RegisterSpecialMapping");
+
+	UMLAISubSystem_RegisterSpecialMapping_Params params;
+	params.Key = Key;
+	params.Value = Value;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.RegisterDynamicItemComponent
+// (Final, Native, Public)
+// Parameters:
+// class UAIPerceptionDynamicItemComponent* InDynamicItemComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UMLAISubSystem::RegisterDynamicItemComponent(class UAIPerceptionDynamicItemComponent* InDynamicItemComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.RegisterDynamicItemComponent");
+
+	UMLAISubSystem_RegisterDynamicItemComponent_Params params;
+	params.InDynamicItemComp = InDynamicItemComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.RegisterDestructibleItemComponent
+// (Final, Native, Public)
+// Parameters:
+// class UAIPerceptionDynamicItemComponent* InComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UMLAISubSystem::RegisterDestructibleItemComponent(class UAIPerceptionDynamicItemComponent* InComp)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.RegisterDestructibleItemComponent");
+
+	UMLAISubSystem_RegisterDestructibleItemComponent_Params params;
+	params.InComp = InComp;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.OnVehicleDamageInfo
 // (Final, Native, Public)
 // Parameters:
-// class AController*             InstigatorController           (Parm, ZeroConstructor, IsPlainOldData)
-// class AController*             VictimController               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            DamageTypeId                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsFatalHealthCost             (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  VictimVehicle                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* InstigatorController (Parm, ZeroConstructor, IsPlainOldData)
+// class AController* VictimController (Parm, ZeroConstructor, IsPlainOldData)
+// int DamageTypeId (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsFatalHealthCost (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* VictimVehicle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::OnVehicleDamageInfo(class AController* InstigatorController, class AController* VictimController, int DamageTypeId, float Damage, bool bIsFatalHealthCost, class AActor* DamageCauser, class AActor* VictimVehicle)
 {
@@ -5054,8 +5269,8 @@ void UMLAISubSystem::OnVehicleDamageInfo(class AController* InstigatorController
 // Function AI.MLAISubSystem.OnPlayerStartFire
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// int Count (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::OnPlayerStartFire(uint32_t PlayerKey, int Count)
 {
@@ -5080,7 +5295,7 @@ void UMLAISubSystem::OnPlayerStartFire(uint32_t PlayerKey, int Count)
 // Function AI.MLAISubSystem.OnPlayerPickUpItem
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::OnPlayerPickUpItem(uint32_t InPlayerKey)
 {
@@ -5104,14 +5319,14 @@ void UMLAISubSystem::OnPlayerPickUpItem(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.OnPlayerDamageInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class ASTExtraPlayerState*     InstigatorPlayerState          (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraPlayerState*     VictimPlayerState              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FDamageEvent            DamageEvent                    (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          DamageBeforeCalArmor           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsFatalHealthCost             (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsNearDeathHealthCost         (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerState* InstigatorPlayerState (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerState* VictimPlayerState (Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (Parm, ZeroConstructor, IsPlainOldData)
+// struct FDamageEvent DamageEvent (ConstParm, Parm, OutParm, ReferenceParm)
+// float DamageBeforeCalArmor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsFatalHealthCost (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsNearDeathHealthCost (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::OnPlayerDamageInfo(class ASTExtraPlayerState* InstigatorPlayerState, class ASTExtraPlayerState* VictimPlayerState, float Damage, const struct FDamageEvent& DamageEvent, float DamageBeforeCalArmor, bool bIsFatalHealthCost, class AActor* DamageCauser, bool bIsNearDeathHealthCost)
 {
@@ -5142,7 +5357,7 @@ void UMLAISubSystem::OnPlayerDamageInfo(class ASTExtraPlayerState* InstigatorPla
 // Function AI.MLAISubSystem.OnItemStateChanged
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 Location                       (Parm, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
 
 void UMLAISubSystem::OnItemStateChanged(const struct FVector& Location)
 {
@@ -5166,7 +5381,7 @@ void UMLAISubSystem::OnItemStateChanged(const struct FVector& Location)
 // Function AI.MLAISubSystem.OnAirDropBoxSpawn
 // (Final, Native, Public)
 // Parameters:
-// class AAirDropBoxActor*        AirDropBoxActor                (Parm, ZeroConstructor, IsPlainOldData)
+// class AAirDropBoxActor* AirDropBoxActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::OnAirDropBoxSpawn(class AAirDropBoxActor* AirDropBoxActor)
 {
@@ -5190,10 +5405,10 @@ void UMLAISubSystem::OnAirDropBoxSpawn(class AAirDropBoxActor* AirDropBoxActor)
 // Function AI.MLAISubSystem.OnAirAttackInfo
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// EAirAttackInfo                 airattacktype                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            waveIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAirAttackOrder         InAirAttackOrder               (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 InAirAttackArea                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// EAirAttackInfo airattacktype (Parm, ZeroConstructor, IsPlainOldData)
+// int waveIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAirAttackOrder InAirAttackOrder (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector InAirAttackArea (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UMLAISubSystem::OnAirAttackInfo(EAirAttackInfo airattacktype, int waveIndex, const struct FAirAttackOrder& InAirAttackOrder, const struct FVector& InAirAttackArea)
 {
@@ -5220,8 +5435,8 @@ void UMLAISubSystem::OnAirAttackInfo(EAirAttackInfo airattacktype, int waveIndex
 // Function AI.MLAISubSystem.IsAvailableBackpackItemType
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAISubSystem::IsAvailableBackpackItemType(const struct FItemDefineID& DefineID)
 {
@@ -5247,7 +5462,7 @@ bool UMLAISubSystem::IsAvailableBackpackItemType(const struct FItemDefineID& Def
 // Function AI.MLAISubSystem.IsAIBotGame
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAISubSystem::IsAIBotGame()
 {
@@ -5272,7 +5487,7 @@ bool UMLAISubSystem::IsAIBotGame()
 // Function AI.MLAISubSystem.InsertPlayerWhitelist
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::InsertPlayerWhitelist(uint32_t InPlayerKey)
 {
@@ -5296,7 +5511,7 @@ void UMLAISubSystem::InsertPlayerWhitelist(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.InsertIntoSilentMLAIList
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::InsertIntoSilentMLAIList(uint32_t InPlayerKey)
 {
@@ -5320,7 +5535,7 @@ void UMLAISubSystem::InsertIntoSilentMLAIList(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.GetVoiceRoomInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<struct FBattleVoiceRoomInfo> BattleVoiceRoomInfos           (Parm, OutParm, ZeroConstructor)
+// TArray<struct FBattleVoiceRoomInfo> BattleVoiceRoomInfos (Parm, OutParm, ZeroConstructor)
 
 void UMLAISubSystem::GetVoiceRoomInfo(TArray<struct FBattleVoiceRoomInfo>* BattleVoiceRoomInfos)
 {
@@ -5346,7 +5561,7 @@ void UMLAISubSystem::GetVoiceRoomInfo(TArray<struct FBattleVoiceRoomInfo>* Battl
 // Function AI.MLAISubSystem.GetServerIPAddress
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UMLAISubSystem::GetServerIPAddress()
 {
@@ -5371,8 +5586,8 @@ struct FString UMLAISubSystem::GetServerIPAddress()
 // Function AI.MLAISubSystem.GetLossTime
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraPlayerController* PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTExtraPlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UMLAISubSystem::GetLossTime(class ASTExtraPlayerController* PlayerController)
 {
@@ -5395,11 +5610,38 @@ float UMLAISubSystem::GetLossTime(class ASTExtraPlayerController* PlayerControll
 }
 
 
+// Function AI.MLAISubSystem.GetItemDurability
+// (Final, Native, Public)
+// Parameters:
+// int InTypeSpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMLAISubSystem::GetItemDurability(int InTypeSpecificID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.GetItemDurability");
+
+	UMLAISubSystem_GetItemDurability_Params params;
+	params.InTypeSpecificID = InTypeSpecificID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function AI.MLAISubSystem.GetCacheAIAttributes
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAIAttribute>    Attributes                     (Parm, OutParm, ZeroConstructor)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAIAttribute> Attributes (Parm, OutParm, ZeroConstructor)
 
 void UMLAISubSystem::GetCacheAIAttributes(uint32_t InPlayerKey, TArray<struct FAIAttribute>* Attributes)
 {
@@ -5426,7 +5668,7 @@ void UMLAISubSystem::GetCacheAIAttributes(uint32_t InPlayerKey, TArray<struct FA
 // Function AI.MLAISubSystem.GetAndCheckAirDopTag
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UMLAISubSystem::GetAndCheckAirDopTag()
 {
@@ -5451,8 +5693,8 @@ int UMLAISubSystem::GetAndCheckAirDopTag()
 // Function AI.MLAISubSystem.FindPlayerWhiteRange
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 InLocation                     (Parm, IsPlainOldData)
-// float                          InRange                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InLocation (Parm, IsPlainOldData)
+// float InRange (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::FindPlayerWhiteRange(const struct FVector& InLocation, float InRange)
 {
@@ -5463,6 +5705,30 @@ void UMLAISubSystem::FindPlayerWhiteRange(const struct FVector& InLocation, floa
 	UMLAISubSystem_FindPlayerWhiteRange_Params params;
 	params.InLocation = InLocation;
 	params.InRange = InRange;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.FindMasterTeamMateList
+// (Final, Native, Public)
+// Parameters:
+// class APawn* Master (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::FindMasterTeamMateList(class APawn* Master)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.FindMasterTeamMateList");
+
+	UMLAISubSystem_FindMasterTeamMateList_Params params;
+	params.Master = Master;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -5495,10 +5761,31 @@ void UMLAISubSystem::EndRequestCache()
 }
 
 
+// Function AI.MLAISubSystem.ClearSpecialMappings
+// (Final, Native, Public)
+
+void UMLAISubSystem::ClearSpecialMappings()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.ClearSpecialMappings");
+
+	UMLAISubSystem_ClearSpecialMappings_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.MLAISubSystem.ClearAttributeIDToPlayerKeysMap
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InAttributeID                  (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAttributeID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::ClearAttributeIDToPlayerKeysMap(uint32_t InAttributeID)
 {
@@ -5522,10 +5809,10 @@ void UMLAISubSystem::ClearAttributeIDToPlayerKeysMap(uint32_t InAttributeID)
 // Function AI.MLAISubSystem.ChangeMLAIInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class AFakePlayerAIController* AIController                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// uint64_t                       DisplayUID                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPlayerOBInfo           OBInfo                         (Parm, OutParm)
+// class AFakePlayerAIController* AIController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// uint64_t DisplayUID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPlayerOBInfo OBInfo (Parm, OutParm)
 
 void UMLAISubSystem::ChangeMLAIInfo(class AFakePlayerAIController* AIController, const struct FString& Name, uint64_t DisplayUID, struct FPlayerOBInfo* OBInfo)
 {
@@ -5554,8 +5841,8 @@ void UMLAISubSystem::ChangeMLAIInfo(class AFakePlayerAIController* AIController,
 // Function AI.MLAISubSystem.CanGetState
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAISubSystem::CanGetState(uint32_t InPlayerKey)
 {
@@ -5581,8 +5868,8 @@ bool UMLAISubSystem::CanGetState(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.CanFindInSilentMLAIList
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t InPlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAISubSystem::CanFindInSilentMLAIList(uint32_t InPlayerKey)
 {
@@ -5608,8 +5895,8 @@ bool UMLAISubSystem::CanFindInSilentMLAIList(uint32_t InPlayerKey)
 // Function AI.MLAISubSystem.AddVoiceServerURLInfo
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BattleVoiceServerURL           (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BattleVoiceServerURL (Parm, ZeroConstructor)
 
 void UMLAISubSystem::AddVoiceServerURLInfo(uint32_t PlayerKey, const struct FString& BattleVoiceServerURL)
 {
@@ -5634,8 +5921,8 @@ void UMLAISubSystem::AddVoiceServerURLInfo(uint32_t PlayerKey, const struct FStr
 // Function AI.MLAISubSystem.AddVoiceRoomInfo
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       TeamID                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BattleVoiceRoomID              (Parm, ZeroConstructor)
+// uint32_t TeamID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BattleVoiceRoomID (Parm, ZeroConstructor)
 
 void UMLAISubSystem::AddVoiceRoomInfo(uint32_t TeamID, const struct FString& BattleVoiceRoomID)
 {
@@ -5660,7 +5947,7 @@ void UMLAISubSystem::AddVoiceRoomInfo(uint32_t TeamID, const struct FString& Bat
 // Function AI.MLAISubSystem.AddTeammateMLAITeamID
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       TeamID                         (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t TeamID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAISubSystem::AddTeammateMLAITeamID(uint32_t TeamID)
 {
@@ -5681,21 +5968,19 @@ void UMLAISubSystem::AddTeammateMLAITeamID(uint32_t TeamID)
 }
 
 
-// Function AI.MLAISubSystem.AddMercenary2MasterMap
+// Function AI.MLAISubSystem.AddPendingUpdateSpecialZone
 // (Final, Native, Public)
 // Parameters:
-// class APawn*                   MercenaryAI                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   Master                         (Parm, ZeroConstructor, IsPlainOldData)
+// class ASpecialZoneActor* InSpecialZone (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMLAISubSystem::AddMercenary2MasterMap(class APawn* MercenaryAI, class APawn* Master)
+void UMLAISubSystem::AddPendingUpdateSpecialZone(class ASpecialZoneActor* InSpecialZone)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.AddMercenary2MasterMap");
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.AddPendingUpdateSpecialZone");
 
-	UMLAISubSystem_AddMercenary2MasterMap_Params params;
-	params.MercenaryAI = MercenaryAI;
-	params.Master = Master;
+	UMLAISubSystem_AddPendingUpdateSpecialZone_Params params;
+	params.InSpecialZone = InSpecialZone;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -5707,21 +5992,47 @@ void UMLAISubSystem::AddMercenary2MasterMap(class APawn* MercenaryAI, class APaw
 }
 
 
-// Function AI.MLAISubSystem.AddAIAttributeConfig
+// Function AI.MLAISubSystem.AddMercenary2MasterMap
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InID                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InKey                          (Parm, ZeroConstructor)
+// class APawn* MercenaryAI (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Master (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIncludesTeammates (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMLAISubSystem::AddAIAttributeConfig(uint32_t InID, const struct FString& InKey)
+void UMLAISubSystem::AddMercenary2MasterMap(class APawn* MercenaryAI, class APawn* Master, bool bIncludesTeammates)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.AddAIAttributeConfig");
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.AddMercenary2MasterMap");
 
-	UMLAISubSystem_AddAIAttributeConfig_Params params;
-	params.InID = InID;
-	params.InKey = InKey;
+	UMLAISubSystem_AddMercenary2MasterMap_Params params;
+	params.MercenaryAI = MercenaryAI;
+	params.Master = Master;
+	params.bIncludesTeammates = bIncludesTeammates;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function AI.MLAISubSystem.AddAICheckVisibilityFilteredActor
+// (Final, Native, Public)
+// Parameters:
+// uint32_t actorid (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMLAISubSystem::AddAICheckVisibilityFilteredActor(uint32_t actorid)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAISubSystem.AddAICheckVisibilityFilteredActor");
+
+	UMLAISubSystem_AddAICheckVisibilityFilteredActor_Params params;
+	params.actorid = actorid;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -5757,7 +6068,7 @@ void UMLAITrainingComponent::StopRunnable()
 // Function AI.MLAITrainingComponent.SetPauseGamePlayerState
 // (Final, Native, Public)
 // Parameters:
-// class APlayerState*            InPlayerState                  (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState* InPlayerState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAITrainingComponent::SetPauseGamePlayerState(class APlayerState* InPlayerState)
 {
@@ -5781,9 +6092,9 @@ void UMLAITrainingComponent::SetPauseGamePlayerState(class APlayerState* InPlaye
 // Function AI.MLAITrainingComponent.SetPause
 // (Final, Native, Public)
 // Parameters:
-// bool                           bInPause                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPauseTime                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bInPause (Parm, ZeroConstructor, IsPlainOldData)
+// float InPauseTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAITrainingComponent::SetPause(bool bInPause, float InPauseTime)
 {
@@ -5810,7 +6121,7 @@ bool UMLAITrainingComponent::SetPause(bool bInPause, float InPauseTime)
 // Function AI.MLAITrainingComponent.SendAIStateRequest
 // (Final, Native, Public)
 // Parameters:
-// TArray<unsigned char>          Packet                         (Parm, ZeroConstructor)
+// TArray<unsigned char> Packet (Parm, ZeroConstructor)
 
 void UMLAITrainingComponent::SendAIStateRequest(TArray<unsigned char> Packet)
 {
@@ -5834,7 +6145,7 @@ void UMLAITrainingComponent::SendAIStateRequest(TArray<unsigned char> Packet)
 // Function AI.MLAITrainingComponent.IsRequestAIState
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMLAITrainingComponent::IsRequestAIState()
 {
@@ -5859,9 +6170,9 @@ bool UMLAITrainingComponent::IsRequestAIState()
 // Function AI.MLAITrainingComponent.InitRunnable
 // (Final, Native, Public)
 // Parameters:
-// float                          InStartCollectingInterval      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InSendInterval                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InTimeOutInterval              (Parm, ZeroConstructor, IsPlainOldData)
+// float InStartCollectingInterval (Parm, ZeroConstructor, IsPlainOldData)
+// float InSendInterval (Parm, ZeroConstructor, IsPlainOldData)
+// float InTimeOutInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMLAITrainingComponent::InitRunnable(float InStartCollectingInterval, float InSendInterval, float InTimeOutInterval)
 {
@@ -5905,454 +6216,10 @@ void UMLAITrainingComponent::EndRequestAIState()
 }
 
 
-// Function AI.MLAIUtilsBase.StartRequestCache
-// (Native, Public)
-
-void UMLAIUtilsBase::StartRequestCache()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.StartRequestCache");
-
-	UMLAIUtilsBase_StartRequestCache_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.SetUseNewDiffCmds
-// (Final, Native, Static, Public)
-// Parameters:
-// bool                           InUseNewDiffCmds               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InUseNewDiffField              (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::SetUseNewDiffCmds(bool InUseNewDiffCmds, bool InUseNewDiffField)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.SetUseNewDiffCmds");
-
-	UMLAIUtilsBase_SetUseNewDiffCmds_Params params;
-	params.InUseNewDiffCmds = InUseNewDiffCmds;
-	params.InUseNewDiffField = InUseNewDiffField;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	static auto defaultObj = StaticClass()->GetDefaultObject();
-	defaultObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.SetOpenHeadAndMuzzleInfo
-// (Final, Native, Public)
-// Parameters:
-// bool                           InOpenHeadAndMuzzleInfo        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::SetOpenHeadAndMuzzleInfo(bool InOpenHeadAndMuzzleInfo)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.SetOpenHeadAndMuzzleInfo");
-
-	UMLAIUtilsBase_SetOpenHeadAndMuzzleInfo_Params params;
-	params.InOpenHeadAndMuzzleInfo = InOpenHeadAndMuzzleInfo;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.RemoveBackpackItemUpdatedMap
-// (Final, Native, Public)
-// Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           AllRemove                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::RemoveBackpackItemUpdatedMap(uint32_t PlayerKey, bool AllRemove)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.RemoveBackpackItemUpdatedMap");
-
-	UMLAIUtilsBase_RemoveBackpackItemUpdatedMap_Params params;
-	params.PlayerKey = PlayerKey;
-	params.AllRemove = AllRemove;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.OnBackpackItemListUpdated
-// (Final, Native, Public)
-// Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::OnBackpackItemListUpdated(uint32_t PlayerKey)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.OnBackpackItemListUpdated");
-
-	UMLAIUtilsBase_OnBackpackItemListUpdated_Params params;
-	params.PlayerKey = PlayerKey;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetGlobalGameStateInfoToCache
-// (Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetGlobalGameStateInfoToCache(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetGlobalGameStateInfoToCache");
-
-	UMLAIUtilsBase_GetGlobalGameStateInfoToCache_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffGlobalGameStateInfoToCache
-// (Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffGlobalGameStateInfoToCache(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffGlobalGameStateInfoToCache");
-
-	UMLAIUtilsBase_GetDiffGlobalGameStateInfoToCache_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffGlobalGameStateBaseModToCacheGeneral
-// (Final, Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffGlobalGameStateBaseModToCacheGeneral(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffGlobalGameStateBaseModToCacheGeneral");
-
-	UMLAIUtilsBase_GetDiffGlobalGameStateBaseModToCacheGeneral_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffGlobalGameStatBaseModToCache
-// (Final, Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffGlobalGameStatBaseModToCache(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffGlobalGameStatBaseModToCache");
-
-	UMLAIUtilsBase_GetDiffGlobalGameStatBaseModToCache_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoToCacheCSS
-// (Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseDiff                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffAllPlayerStateInfoToCacheCSS(class UWorld* InWorld, bool bUseDiff)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoToCacheCSS");
-
-	UMLAIUtilsBase_GetDiffAllPlayerStateInfoToCacheCSS_Params params;
-	params.InWorld = InWorld;
-	params.bUseDiff = bUseDiff;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoToCache
-// (Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffAllPlayerStateInfoToCache(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoToCache");
-
-	UMLAIUtilsBase_GetDiffAllPlayerStateInfoToCache_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoBaseModToCacheCCS
-// (Final, Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseDiff                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetDiffAllPlayerStateInfoBaseModToCacheCCS(class UWorld* InWorld, bool bUseDiff)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetDiffAllPlayerStateInfoBaseModToCacheCCS");
-
-	UMLAIUtilsBase_GetDiffAllPlayerStateInfoBaseModToCacheCCS_Params params;
-	params.InWorld = InWorld;
-	params.bUseDiff = bUseDiff;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.GetAllPlayerStateInfoToCache
-// (Native, Public)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::GetAllPlayerStateInfoToCache(class UWorld* InWorld)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.GetAllPlayerStateInfoToCache");
-
-	UMLAIUtilsBase_GetAllPlayerStateInfoToCache_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.EndRequestCache
-// (Native, Public)
-
-void UMLAIUtilsBase::EndRequestCache()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.EndRequestCache");
-
-	UMLAIUtilsBase_EndRequestCache_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBase.AddBackpackItemListUpdatedDelegate
-// (Final, Native, Public)
-// Parameters:
-// class UBackpackComponent*      InBackpackComp                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// uint32_t                       InPlayerKey                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMLAIUtilsBase::AddBackpackItemListUpdatedDelegate(class UBackpackComponent* InBackpackComp, uint32_t InPlayerKey)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBase.AddBackpackItemListUpdatedDelegate");
-
-	UMLAIUtilsBase_AddBackpackItemListUpdatedDelegate_Params params;
-	params.InBackpackComp = InBackpackComp;
-	params.InPlayerKey = InPlayerKey;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBRBase.HandleGameModeStateChanged
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// struct FGameModeStateChangedParams Params                         (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UMLAIUtilsBRBase::HandleGameModeStateChanged(const struct FGameModeStateChangedParams& Params)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBRBase.HandleGameModeStateChanged");
-
-	UMLAIUtilsBRBase_HandleGameModeStateChanged_Params params;
-	params.Params = Params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function AI.MLAIUtilsBRBase.GetRedZoneState
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// class UWorld*                  InWorld                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRedZoneState           ZoneState                      (Parm, OutParm)
-
-void UMLAIUtilsBRBase::GetRedZoneState(class UWorld* InWorld, struct FRedZoneState* ZoneState)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBRBase.GetRedZoneState");
-
-	UMLAIUtilsBRBase_GetRedZoneState_Params params;
-	params.InWorld = InWorld;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	if (ZoneState != nullptr)
-		*ZoneState = params.ZoneState;
-}
-
-
-// Function AI.MLAIUtilsBRBase.GetAIPlayerStateBRBase
-// (Final, Native, Public, HasOutParms)
-// Parameters:
-// class ASTExtraBaseCharacter*   InCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIPlayerStateBRBase    Ret                            (Parm, OutParm)
-
-void UMLAIUtilsBRBase::GetAIPlayerStateBRBase(class ASTExtraBaseCharacter* InCharacter, struct FAIPlayerStateBRBase* Ret)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AI.MLAIUtilsBRBase.GetAIPlayerStateBRBase");
-
-	UMLAIUtilsBRBase_GetAIPlayerStateBRBase_Params params;
-	params.InCharacter = InCharacter;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	if (Ret != nullptr)
-		*Ret = params.Ret;
-}
-
-
 // Function AI.SpecialZoneActor.UpdateType
 // (Final, Native, Public)
 // Parameters:
-// int                            InType                         (Parm, ZeroConstructor, IsPlainOldData)
+// int InType (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASpecialZoneActor::UpdateType(int InType)
 {
@@ -6373,10 +6240,34 @@ void ASpecialZoneActor::UpdateType(int InType)
 }
 
 
+// Function AI.SpecialZoneActor.UpdateHealth
+// (Final, Native, Public)
+// Parameters:
+// float InHealth (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpecialZoneActor::UpdateHealth(float InHealth)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.SpecialZoneActor.UpdateHealth");
+
+	ASpecialZoneActor_UpdateHealth_Params params;
+	params.InHealth = InHealth;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.SpecialZoneActor.UpdateExtraState
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InExtraState                   (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InExtraState (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASpecialZoneActor::UpdateExtraState(uint32_t InExtraState)
 {
@@ -6400,7 +6291,7 @@ void ASpecialZoneActor::UpdateExtraState(uint32_t InExtraState)
 // Function AI.SpecialZoneActor.UpdateCustomState
 // (Final, Native, Public)
 // Parameters:
-// int                            InCustomState                  (Parm, ZeroConstructor, IsPlainOldData)
+// int InCustomState (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASpecialZoneActor::UpdateCustomState(int InCustomState)
 {
@@ -6421,12 +6312,40 @@ void ASpecialZoneActor::UpdateCustomState(int InCustomState)
 }
 
 
+// Function AI.SpecialZoneActor.UpdateCustomAttributeValue
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// uint32_t InCustomAttributeID (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float InValue (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool bRemove (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void ASpecialZoneActor::UpdateCustomAttributeValue(uint32_t InCustomAttributeID, float InValue, bool bRemove)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.SpecialZoneActor.UpdateCustomAttributeValue");
+
+	ASpecialZoneActor_UpdateCustomAttributeValue_Params params;
+	params.InCustomAttributeID = InCustomAttributeID;
+	params.InValue = InValue;
+	params.bRemove = bRemove;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.SpecialZoneActor.HandleFragmentsStateChanged
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            FragmentItemIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// EPhotonFracturedMeshFragmentState State                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<EPhotonFracturedMeshFragmentState> FragmentState                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int FragmentItemIndex (Parm, ZeroConstructor, IsPlainOldData)
+// EPhotonFracturedMeshFragmentState State (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<EPhotonFracturedMeshFragmentState> FragmentState (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void ASpecialZoneActor::HandleFragmentsStateChanged(int FragmentItemIndex, EPhotonFracturedMeshFragmentState State, TArray<EPhotonFracturedMeshFragmentState> FragmentState)
 {
@@ -6452,7 +6371,7 @@ void ASpecialZoneActor::HandleFragmentsStateChanged(int FragmentItemIndex, EPhot
 // Function AI.SpecialZoneActor.GetSpecialZoneState
 // (Final, Native, Public)
 // Parameters:
-// struct FSpecialZoneState       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FSpecialZoneState ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSpecialZoneState ASpecialZoneActor::GetSpecialZoneState()
 {
@@ -6474,10 +6393,57 @@ struct FSpecialZoneState ASpecialZoneActor::GetSpecialZoneState()
 }
 
 
+// Function AI.SpecialZoneActor.GetCustomAttributeList
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// TArray<struct FAIAttribute> OutCustomAttributeList (Parm, OutParm, ZeroConstructor)
+
+void ASpecialZoneActor::GetCustomAttributeList(TArray<struct FAIAttribute>* OutCustomAttributeList)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.SpecialZoneActor.GetCustomAttributeList");
+
+	ASpecialZoneActor_GetCustomAttributeList_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutCustomAttributeList != nullptr)
+		*OutCustomAttributeList = params.OutCustomAttributeList;
+}
+
+
+// Function AI.SpecialZoneActor.ClearCustomAttributeMap
+// (Final, Native, Public)
+
+void ASpecialZoneActor::ClearCustomAttributeMap()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AI.SpecialZoneActor.ClearCustomAttributeMap");
+
+	ASpecialZoneActor_ClearCustomAttributeMap_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AI.STStrategyLocation_Range.ModifyBaseLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 InLocation                     (Parm, IsPlainOldData)
+// struct FVector InLocation (Parm, IsPlainOldData)
 
 void USTStrategyLocation_Range::ModifyBaseLocation(const struct FVector& InLocation)
 {
@@ -6501,10 +6467,10 @@ void USTStrategyLocation_Range::ModifyBaseLocation(const struct FVector& InLocat
 // Function AI.STStrategyLocation_Range.GetSpawnLocation
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Requester                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReferenceCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  OutArr                         (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Requester (Parm, ZeroConstructor, IsPlainOldData)
+// int ReferenceCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> OutArr (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyLocation_Range::GetSpawnLocation(class AActor* Requester, int ReferenceCount, TArray<struct FSpawnSpotInfo>* OutArr)
 {
@@ -6534,8 +6500,8 @@ bool USTStrategyLocation_Range::GetSpawnLocation(class AActor* Requester, int Re
 // Function AI.STStrategyLocation_Range.AddSpawnArea
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FSpawnArea              NewArea                        (Parm)
-// bool                           ForceAdd                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSpawnArea NewArea (Parm)
+// bool ForceAdd (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyLocation_Range::AddSpawnArea(const struct FSpawnArea& NewArea, bool ForceAdd)
 {
@@ -6560,7 +6526,7 @@ void USTStrategyLocation_Range::AddSpawnArea(const struct FSpawnArea& NewArea, b
 // Function AI.STStrategyLocation_Range.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyLocation_Range::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -6584,9 +6550,9 @@ void USTStrategyLocation_Range::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function AI.STStrategySpecies_Candidate.Supply
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FUnitConfig> USTStrategySpecies_Candidate::Supply(int ReferencedCount, TArray<struct FSpawnSpotInfo> SpotSpecies)
 {
@@ -6613,7 +6579,7 @@ TArray<struct FUnitConfig> USTStrategySpecies_Candidate::Supply(int ReferencedCo
 // Function AI.STStrategySpecies_Candidate.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategySpecies_Candidate::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -6637,9 +6603,9 @@ void USTStrategySpecies_Candidate::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function AI.STStrategySpecies_Lua.Supply
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FUnitConfig> USTStrategySpecies_Lua::Supply(int ReferencedCount, TArray<struct FSpawnSpotInfo> SpotSpecies)
 {
@@ -6666,7 +6632,7 @@ TArray<struct FUnitConfig> USTStrategySpecies_Lua::Supply(int ReferencedCount, T
 // Function AI.STStrategySpecies_Lua.LuaSupply
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategySpecies_Lua::LuaSupply(int ReferencedCount)
 {
@@ -6689,7 +6655,7 @@ void USTStrategySpecies_Lua::LuaSupply(int ReferencedCount)
 // Function AI.STStrategyTiming_Event.TickStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Event::TickStrategy(float DeltaTime)
 {
@@ -6713,7 +6679,7 @@ void USTStrategyTiming_Event::TickStrategy(float DeltaTime)
 // Function AI.STStrategyTiming_Event.OnSpawnEventBroadcast
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       SpawnerID                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t SpawnerID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Event::OnSpawnEventBroadcast(uint32_t SpawnerID)
 {
@@ -6737,7 +6703,7 @@ void USTStrategyTiming_Event::OnSpawnEventBroadcast(uint32_t SpawnerID)
 // Function AI.STStrategyTiming_Event.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Event::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -6761,7 +6727,7 @@ void USTStrategyTiming_Event::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function AI.TeammateMLAIControllerComponent.SetMLAIStyle
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       NewAIStyle                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t NewAIStyle (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTeammateMLAIControllerComponent::SetMLAIStyle(uint32_t NewAIStyle)
 {
@@ -6785,7 +6751,7 @@ void UTeammateMLAIControllerComponent::SetMLAIStyle(uint32_t NewAIStyle)
 // Function AI.TeammateMLAIControllerComponent.SetIsMLAI
 // (Final, Native, Public)
 // Parameters:
-// bool                           InIsMLAI                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsMLAI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTeammateMLAIControllerComponent::SetIsMLAI(bool InIsMLAI)
 {
@@ -6809,7 +6775,7 @@ void UTeammateMLAIControllerComponent::SetIsMLAI(bool InIsMLAI)
 // Function AI.TeammateMLAIControllerComponent.SetAIParams
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGameModeAIPlayerParams InAIParams                     (Parm, OutParm)
+// struct FGameModeAIPlayerParams InAIParams (Parm, OutParm)
 
 void UTeammateMLAIControllerComponent::SetAIParams(struct FGameModeAIPlayerParams* InAIParams)
 {
@@ -6835,7 +6801,7 @@ void UTeammateMLAIControllerComponent::SetAIParams(struct FGameModeAIPlayerParam
 // Function AI.TeammateMLAIControllerComponent.SetAILevel
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       NewAILevel                     (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t NewAILevel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTeammateMLAIControllerComponent::SetAILevel(uint32_t NewAILevel)
 {
@@ -6901,7 +6867,7 @@ void UTeammateMLAIControllerComponent::OnTeammateMLAIExit()
 // Function AI.TeammateMLAIControllerComponent.OnControllerStateChanged
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// EStateType                     StateType                      (Parm, ZeroConstructor, IsPlainOldData)
+// EStateType StateType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTeammateMLAIControllerComponent::OnControllerStateChanged(EStateType StateType)
 {
@@ -6925,7 +6891,7 @@ void UTeammateMLAIControllerComponent::OnControllerStateChanged(EStateType State
 // Function AI.TeammateMLAIControllerComponent.IsTakeOverTeammate
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTeammateMLAIControllerComponent::IsTakeOverTeammate()
 {
@@ -6950,7 +6916,7 @@ bool UTeammateMLAIControllerComponent::IsTakeOverTeammate()
 // Function AI.TeammateMLAIControllerComponent.GetMLAIStyle
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UTeammateMLAIControllerComponent::GetMLAIStyle()
 {
@@ -6975,7 +6941,7 @@ uint32_t UTeammateMLAIControllerComponent::GetMLAIStyle()
 // Function AI.TeammateMLAIControllerComponent.GetAIParams
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FGameModeAIPlayerParams ReturnValue                    (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
+// struct FGameModeAIPlayerParams ReturnValue (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm)
 
 struct FGameModeAIPlayerParams UTeammateMLAIControllerComponent::GetAIParams()
 {
@@ -7000,7 +6966,7 @@ struct FGameModeAIPlayerParams UTeammateMLAIControllerComponent::GetAIParams()
 // Function AI.TeammateMLAIControllerComponent.GetAILevel
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UTeammateMLAIControllerComponent::GetAILevel()
 {
@@ -7025,7 +6991,7 @@ uint32_t UTeammateMLAIControllerComponent::GetAILevel()
 // Function AI.VehicleAIController.SetCurEnemy
 // (Native, Public)
 // Parameters:
-// class APawn*                   NewEnemy                       (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* NewEnemy (Parm, ZeroConstructor, IsPlainOldData)
 
 void AVehicleAIController::SetCurEnemy(class APawn* NewEnemy)
 {
@@ -7049,7 +7015,7 @@ void AVehicleAIController::SetCurEnemy(class APawn* NewEnemy)
 // Function AI.VehicleAIController.GetVehiclePathFollow
 // (Final, Native, Public)
 // Parameters:
-// class UVehiclePathFollowingComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UVehiclePathFollowingComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UVehiclePathFollowingComponent* AVehicleAIController::GetVehiclePathFollow()
 {
@@ -7074,7 +7040,7 @@ class UVehiclePathFollowingComponent* AVehicleAIController::GetVehiclePathFollow
 // Function AI.VehicleAIController.GetCurEnemy
 // (Native, Public)
 // Parameters:
-// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APawn* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APawn* AVehicleAIController::GetCurEnemy()
 {
@@ -7099,8 +7065,8 @@ class APawn* AVehicleAIController::GetCurEnemy()
 // Function AI.VehicleAIController.GetAIHitRate
 // (Native, Public)
 // Parameters:
-// float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Distance (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AVehicleAIController::GetAIHitRate(float Distance)
 {
@@ -7168,7 +7134,7 @@ void AVehicleAIController::DelayInitVehicleWeapon()
 // Function AI.VehicleAIUserComponent.ServerVehicleLeanOut
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bLeanOut                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLeanOut (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::ServerVehicleLeanOut(bool bLeanOut)
 {
@@ -7192,7 +7158,7 @@ void UVehicleAIUserComponent::ServerVehicleLeanOut(bool bLeanOut)
 // Function AI.VehicleAIUserComponent.ServerExitVehicleEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bMustExit                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMustExit (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::ServerExitVehicleEx(bool bMustExit)
 {
@@ -7237,8 +7203,8 @@ void UVehicleAIUserComponent::ServerExitVehicle()
 // Function AI.VehicleAIUserComponent.ServerEnterVehicle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraVehicleBase*     InVehicle                      (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SeatType                       (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* InVehicle (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char SeatType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::ServerEnterVehicle(class ASTExtraVehicleBase* InVehicle, unsigned char SeatType)
 {
@@ -7263,7 +7229,7 @@ void UVehicleAIUserComponent::ServerEnterVehicle(class ASTExtraVehicleBase* InVe
 // Function AI.VehicleAIUserComponent.ServerChangeVehicleSeat
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InSeatIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InSeatIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::ServerChangeVehicleSeat(int InSeatIndex)
 {
@@ -7308,11 +7274,11 @@ void UVehicleAIUserComponent::MulticastExitVehicle()
 // Function AI.VehicleAIUserComponent.MulticastEnterVehicle
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// class ASTExtraVehicleBase*     InVehicle                      (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraPlayerCharacter* Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SeatType                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SeatIndex                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraVehicleBase* InVehicle (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerCharacter* Pawn (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char SeatType (Parm, ZeroConstructor, IsPlainOldData)
+// int SeatIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::MulticastEnterVehicle(class ASTExtraVehicleBase* InVehicle, class ASTExtraPlayerCharacter* Pawn, bool bSuccess, unsigned char SeatType, int SeatIndex)
 {
@@ -7340,7 +7306,7 @@ void UVehicleAIUserComponent::MulticastEnterVehicle(class ASTExtraVehicleBase* I
 // Function AI.VehicleAIUserComponent.MulticastChangeVehicleSeat
 // (Net, NetReliable, Native, Event, NetMulticast, Public)
 // Parameters:
-// int                            InSeatIndex                    (Parm, ZeroConstructor, IsPlainOldData)
+// int InSeatIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleAIUserComponent::MulticastChangeVehicleSeat(int InSeatIndex)
 {
@@ -7364,8 +7330,8 @@ void UVehicleAIUserComponent::MulticastChangeVehicleSeat(int InSeatIndex)
 // Function AI.VehicleCustomDamageEventComponent.OnVehicleHPFuelChanged
 // (Final, Native, Public)
 // Parameters:
-// float                          HP                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Fuel                           (Parm, ZeroConstructor, IsPlainOldData)
+// float HP (Parm, ZeroConstructor, IsPlainOldData)
+// float Fuel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVehicleCustomDamageEventComponent::OnVehicleHPFuelChanged(float HP, float Fuel)
 {
@@ -7390,7 +7356,7 @@ void UVehicleCustomDamageEventComponent::OnVehicleHPFuelChanged(float HP, float 
 // Function AI.VehicleStateInfoCollector.HandleGameModeStateChanged
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGameModeStateChangedParams Params                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameModeStateChangedParams Params (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UVehicleStateInfoCollector::HandleGameModeStateChanged(const struct FGameModeStateChangedParams& Params)
 {

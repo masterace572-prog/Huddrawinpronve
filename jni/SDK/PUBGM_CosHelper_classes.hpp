@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UCosBase : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CosHelper.CosBase");
@@ -32,10 +31,9 @@ public:
 class UCosHelper : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xE8];                                      // 0x0028(0x00E8) MISSED OFFSET
+	unsigned char UnknownData00[0xE8]; // 0x0028(0x00E8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CosHelper.CosHelper");
@@ -51,8 +49,7 @@ class UCosHelperBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CosHelper.CosHelperBlueprintLibrary");
@@ -75,10 +72,9 @@ public:
 class UCosRequest : public UCosBase
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CosHelper.CosRequest");
@@ -93,10 +89,9 @@ public:
 class UCosResponse : public UCosBase
 {
 public:
-	unsigned char                                      UnknownData00[0x68];                                      // 0x0028(0x0068) MISSED OFFSET
+	unsigned char UnknownData00[0x68]; // 0x0028(0x0068) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CosHelper.CosResponse");

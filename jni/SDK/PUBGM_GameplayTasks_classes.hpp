@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,15 +13,14 @@ namespace SDK
 class UGameplayTask : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FName                                       InstanceName;                                             // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x0038(0x0002) MISSED OFFSET
-	ETaskResourceOverlapPolicy                         ResourceOverlapPolicy;                                    // 0x003A(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1D];                                      // 0x003B(0x001D) MISSED OFFSET
-	class UGameplayTask*                               ChildTask;                                                // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	struct FName InstanceName; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x2]; // 0x0038(0x0002) MISSED OFFSET
+	ETaskResourceOverlapPolicy ResourceOverlapPolicy; // 0x003A(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData02[0x1D]; // 0x003B(0x001D) MISSED OFFSET
+	class UGameplayTask* ChildTask; // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTask");
@@ -41,8 +40,7 @@ class UGameplayTask_ClaimResource : public UGameplayTask
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTask_ClaimResource");
@@ -60,13 +58,12 @@ public:
 class UGameplayTask_SpawnActor : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    Success;                                                  // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x0070(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
-	class UClass*                                      ClassToSpawn;                                             // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate Success; // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate DidNotSpawn; // 0x0070(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x18]; // 0x0080(0x0018) MISSED OFFSET
+	class UClass* ClassToSpawn; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTask_SpawnActor");
@@ -85,12 +82,11 @@ public:
 class UGameplayTask_TimeLimitedExecution : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    OnFinished;                                               // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTimeExpired;                                            // 0x0070(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0080(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate OnFinished; // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTimeExpired; // 0x0070(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x10]; // 0x0080(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTask_TimeLimitedExecution");
@@ -105,11 +101,10 @@ public:
 class UGameplayTask_WaitDelay : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate OnFinish; // 0x0060(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x8]; // 0x0070(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
@@ -128,8 +123,7 @@ class UGameplayTaskOwnerInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
@@ -144,13 +138,12 @@ public:
 class UGameplayTaskResource : public UObject
 {
 public:
-	int                                                ManualResourceID;                                         // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	int8_t                                             AutoResourceID;                                           // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bManuallySetID : 1;                                       // 0x002D(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002E(0x0002) MISSED OFFSET
+	int ManualResourceID; // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	int8_t AutoResourceID; // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char bManuallySetID : 1; // 0x002D(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char UnknownData00[0x2]; // 0x002E(0x0002) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
@@ -165,18 +158,17 @@ public:
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0178(0x0008) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x0180(0x0010) (Net, ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x0190(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x01A0(0x0010) MISSED OFFSET
-	TArray<class UGameplayTask*>                       TickingTasks;                                             // 0x01B0(0x0010) (ZeroConstructor)
-	TArray<class UGameplayTask*>                       KnownTasks;                                               // 0x01C0(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x01D0(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x01D8(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x01E8(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0178(0x0008) MISSED OFFSET
+	TArray<class UGameplayTask*> SimulatedTasks; // 0x0180(0x0010) (Net, ZeroConstructor)
+	TArray<class UGameplayTask*> TaskPriorityQueue; // 0x0190(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x10]; // 0x01A0(0x0010) MISSED OFFSET
+	TArray<class UGameplayTask*> TickingTasks; // 0x01B0(0x0010) (ZeroConstructor)
+	TArray<class UGameplayTask*> KnownTasks; // 0x01C0(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData02[0x8]; // 0x01D0(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate OnClaimedResourcesChange; // 0x01D8(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
+	unsigned char UnknownData03[0x8]; // 0x01E8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");

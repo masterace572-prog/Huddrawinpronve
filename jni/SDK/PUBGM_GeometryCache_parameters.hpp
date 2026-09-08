@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,7 +13,7 @@ namespace SDK
 // Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
 struct AGeometryCacheActor_GetGeometryCacheComponent_Params
 {
-	class UGeometryCacheComponent*                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UGeometryCacheComponent* ReturnValue; // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.Stop
@@ -24,26 +24,26 @@ struct UGeometryCacheComponent_Stop_Params
 // Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
 struct UGeometryCacheComponent_SetStartTimeOffset_Params
 {
-	float                                              NewStartTimeOffset;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float NewStartTimeOffset; // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
 struct UGeometryCacheComponent_SetPlaybackSpeed_Params
 {
-	float                                              NewPlaybackSpeed;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float NewPlaybackSpeed; // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetLooping
 struct UGeometryCacheComponent_SetLooping_Params
 {
-	bool                                               bNewLooping;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool bNewLooping; // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
 struct UGeometryCacheComponent_SetGeometryCache_Params
 {
-	class UGeometryCache*                              NewGeomCache;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class UGeometryCache* NewGeomCache; // (Parm, ZeroConstructor, IsPlainOldData)
+	bool ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.PlayReversedFromEnd
@@ -74,50 +74,50 @@ struct UGeometryCacheComponent_Pause_Params
 // Function GeometryCache.GeometryCacheComponent.IsPlayingReversed
 struct UGeometryCacheComponent_IsPlayingReversed_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.IsPlaying
 struct UGeometryCacheComponent_IsPlaying_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.IsLooping
 struct UGeometryCacheComponent_IsLooping_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset
 struct UGeometryCacheComponent_GetStartTimeOffset_Params
 {
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	float ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
 struct UGeometryCacheComponent_GetPlaybackSpeed_Params
 {
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	float ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
 struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
 {
-	struct FGeometryCacheMeshData                      MeshData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	float                                              SampleTime;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometryCacheMeshData MeshData; // (ConstParm, Parm, OutParm, ReferenceParm)
+	float SampleTime; // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
 struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
 {
-	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FGeometryCacheMeshData NewMeshData; // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
 struct UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params
 {
-	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FGeometryCacheMeshData NewMeshData; // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 }

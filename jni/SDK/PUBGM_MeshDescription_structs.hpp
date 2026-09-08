@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -11,9 +11,9 @@ namespace SDK
 // Enum MeshDescription.EComputeNTBsOptions
 enum class EComputeNTBsOptions : uint8_t
 {
-	EComputeNTBsOptions__None      = 0,
-	EComputeNTBsOptions__Normals   = 1,
-	EComputeNTBsOptions__Tangents  = 2,
+	EComputeNTBsOptions__None = 0,
+	EComputeNTBsOptions__Normals = 1,
+	EComputeNTBsOptions__Tangents = 2,
 	EComputeNTBsOptions__WeightedNTBs = 3,
 	EComputeNTBsOptions__EComputeNTBsOptions_MAX = 4
 };
@@ -28,7 +28,7 @@ enum class EComputeNTBsOptions : uint8_t
 // 0x0004
 struct FElementID
 {
-	int                                                IDValue;                                                  // 0x0000(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int IDValue; // 0x0000(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct MeshDescription.VertexInstanceID
@@ -42,9 +42,9 @@ struct FVertexInstanceID : public FElementID
 // 0x000C
 struct FMeshTriangle
 {
-	struct FVertexInstanceID                           VertexInstanceID0;                                        // 0x0000(0x0004) (BlueprintVisible)
-	struct FVertexInstanceID                           VertexInstanceID1;                                        // 0x0004(0x0004) (BlueprintVisible)
-	struct FVertexInstanceID                           VertexInstanceID2;                                        // 0x0008(0x0004) (BlueprintVisible)
+	struct FVertexInstanceID VertexInstanceID0; // 0x0000(0x0004) (BlueprintVisible)
+	struct FVertexInstanceID VertexInstanceID1; // 0x0004(0x0004) (BlueprintVisible)
+	struct FVertexInstanceID VertexInstanceID2; // 0x0008(0x0004) (BlueprintVisible)
 };
 
 // ScriptStruct MeshDescription.PolygonID

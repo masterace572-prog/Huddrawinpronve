@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,57 +9,57 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class Skill.UTSkill
-// 0x0270 (0x07E0 - 0x0570)
+// 0x0280 (0x07F0 - 0x0570)
 class AUTSkill : public ALuaActor
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0570(0x0020) MISSED OFFSET
-	bool                                               bNeedSync;                                                // 0x0590(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0591(0x0007) MISSED OFFSET
-	struct FString                                     SkillName;                                                // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       SkillGroup;                                               // 0x05A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bSinglePhaseRep;                                          // 0x05B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ESkillCastType                                     SkillCastType;                                            // 0x05B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bShouldMonopolize;                                        // 0x05B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bMonopolizeSelf;                                          // 0x05B3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                SkillID;                                                  // 0x05B4(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData)
-	int                                                SkillTemplateID;                                          // 0x05B8(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x05BC(0x0004) MISSED OFFSET
-	unsigned char                                      UnknownData03[0x50];                                      // 0x05BC(0x0050) UNKNOWN PROPERTY: SetProperty Skill.UTSkill.SkillTags
-	bool                                               bMeleeSkill;                                              // 0x0610(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bMoveSkill;                                               // 0x0611(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bCheckFirstPhaseConditions;                               // 0x0612(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bNeedCheckSimulateCondition;                              // 0x0613(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bNeedAutonomousClientSimulate;                            // 0x0614(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAutoShowRegisteredSkillUI;                               // 0x0615(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bKeepCastingWhenDisconnect;                               // 0x0616(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1];                                       // 0x0617(0x0001) MISSED OFFSET
-	struct FUTSkillCreateData                          BaseData;                                                 // 0x0618(0x0060) (Edit, BlueprintVisible)
-	bool                                               bCoolDownWhenStop;                                        // 0x0678(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x0679(0x0003) MISSED OFFSET
-	int                                                CoolDownWhenStopIndex;                                    // 0x067C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseNewSkillCD;                                           // 0x0680(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x7];                                       // 0x0681(0x0007) MISSED OFFSET
-	TArray<struct FUTSkillBlackboardParameter>         SkillBlackboardParamList;                                 // 0x0688(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bSetBlackboardDefaultData;                                // 0x0698(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bGsListener;                                              // 0x0699(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRecycleWhenStop;                                         // 0x069A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bHasBlackboradSync;                                       // 0x069B(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x4];                                       // 0x069C(0x0004) MISSED OFFSET
-	struct FString                                     SkillTimeScaleAttrName;                                   // 0x06A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       SkillTimeScaleBlackboardKey;                              // 0x06B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkillTriggerData*                           SkillTriggerData;                                         // 0x06B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TMap<class UObject*, int>                          InstancedNodeNameToMemoryMap;                             // 0x06C0(0x0050) (ZeroConstructor)
-	int                                                InstancedNodesTotalSize;                                  // 0x0710(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x4];                                       // 0x0714(0x0004) MISSED OFFSET
-	TArray<struct FString>                             ParentFolderPath;                                         // 0x0718(0x0010) (ZeroConstructor)
-	int                                                CurComponentNameIndex;                                    // 0x0728(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0xA4];                                      // 0x072C(0x00A4) MISSED OFFSET
-	TWeakObjectPtr<class UUTSkillManagerComponent>     SpecificSkillCompRef;                                     // 0x07D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UUAEBlackboard>               SpecificBlackBlackRef;                                    // 0x07D8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x20]; // 0x0570(0x0020) MISSED OFFSET
+	bool bNeedSync; // 0x0590(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0591(0x0007) MISSED OFFSET
+	struct FString SkillName; // 0x0598(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName SkillGroup; // 0x05A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bSinglePhaseRep; // 0x05B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ESkillCastType SkillCastType; // 0x05B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bShouldMonopolize; // 0x05B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bMonopolizeSelf; // 0x05B3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bConsumeDelayTask; // 0x05B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x05B5(0x0003) MISSED OFFSET
+	int SkillID; // 0x05B8(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData)
+	int SkillTemplateID; // 0x05BC(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, EditConst, IsPlainOldData)
+	unsigned char UnknownData03[0x50]; // 0x05C0(0x0050) UNKNOWN PROPERTY: SetProperty Skill.UTSkill.SkillTags
+	bool bMeleeSkill; // 0x0610(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bMoveSkill; // 0x0611(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bCheckFirstPhaseConditions; // 0x0612(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bNeedCheckSimulateCondition; // 0x0613(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bNeedAutonomousClientSimulate; // 0x0614(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bAutoShowRegisteredSkillUI; // 0x0615(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bKeepCastingWhenDisconnect; // 0x0616(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x1]; // 0x0617(0x0001) MISSED OFFSET
+	struct FUTSkillCreateData BaseData; // 0x0618(0x0070) (Edit, BlueprintVisible)
+	bool bCoolDownWhenStop; // 0x0688(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x3]; // 0x0689(0x0003) MISSED OFFSET
+	int CoolDownWhenStopIndex; // 0x068C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bUseNewSkillCD; // 0x0690(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData06[0x7]; // 0x0691(0x0007) MISSED OFFSET
+	TArray<struct FUTSkillBlackboardParameter> SkillBlackboardParamList; // 0x0698(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bSetBlackboardDefaultData; // 0x06A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bGsListener; // 0x06A9(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bRecycleWhenStop; // 0x06AA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bHasBlackboradSync; // 0x06AB(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData07[0x4]; // 0x06AC(0x0004) MISSED OFFSET
+	struct FString SkillTimeScaleAttrName; // 0x06B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName SkillTimeScaleBlackboardKey; // 0x06C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkillTriggerData* SkillTriggerData; // 0x06C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TMap<class UObject*, int> InstancedNodeNameToMemoryMap; // 0x06D0(0x0050) (ZeroConstructor)
+	int InstancedNodesTotalSize; // 0x0720(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData08[0x4]; // 0x0724(0x0004) MISSED OFFSET
+	TArray<struct FString> ParentFolderPath; // 0x0728(0x0010) (ZeroConstructor)
+	int CurComponentNameIndex; // 0x0738(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData09[0xA4]; // 0x073C(0x00A4) MISSED OFFSET
+	TWeakObjectPtr<class UUTSkillManagerComponent> SpecificSkillCompRef; // 0x07E0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UUAEBlackboard> SpecificBlackBlackRef; // 0x07E8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkill");
@@ -92,76 +92,79 @@ public:
 
 
 // Class Skill.UTSkillManagerComponent
-// 0x0C80 (0x0EB8 - 0x0238)
+// 0x0D20 (0x0F58 - 0x0238)
 class UUTSkillManagerComponent : public ULuaActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0238(0x0058) MISSED OFFSET
-	class APawn*                                       OwnerPawn;                                                // 0x0290(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x14];                                      // 0x0298(0x0014) MISSED OFFSET
-	int                                                NetAutoSkillID;                                           // 0x02AC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
-	bool                                               bEnableSkillCoolDown;                                     // 0x02B8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bGMDirectTriggerSkill;                                    // 0x02B9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableSkillBlackboradIDSync;                             // 0x02BA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableSkillNetBytesData;                                 // 0x02BB(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableSkillEncrypt;                                      // 0x02BC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x02BD(0x0003) MISSED OFFSET
-	class AActor*                                      OwnerActor;                                               // 0x02C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               DestroySkillsOnDie;                                       // 0x02C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x02C9(0x0007) MISSED OFFSET
-	TMap<int, TWeakObjectPtr<class AUTSkill>>          SkillIDToSkills;                                          // 0x02D0(0x0050) (ZeroConstructor, Transient)
-	TMap<int, class UUAEBlackboard*>                   SkillIDBlackboardMap;                                     // 0x0320(0x0050) (ZeroConstructor, Transient)
-	TMap<TWeakObjectPtr<class AActor>, class UUAEBlackboard*> ActorBlackboardMap;                                       // 0x0370(0x0050) (ZeroConstructor)
-	struct FScriptMulticastDelegate                    ChangeActorBlackboard;                                    // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TMap<int, struct FUTSkillRuntimeData>              SkillBaseDataMaps;                                        // 0x03D0(0x0050) (ZeroConstructor)
-	TArray<struct FUTSkillLastCastInfo>                LastCastArray;                                            // 0x0420(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnSkillCast;                                              // 0x0430(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FSkillActiveRepData                         SyncSkillActiveStateDatas;                                // 0x0440(0x00E0) (Net)
-	struct FSkillAttrRepData                           SyncSkillAttrRepData;                                     // 0x0520(0x00E0) (Net)
-	struct FSkillDynamicRepData                        SyncDynamicRepData;                                       // 0x0600(0x00E0) (Net)
-	TMap<int, int>                                     IDToSyncSkillCDDatas;                                     // 0x06E0(0x0050) (ZeroConstructor)
-	TMap<int, int>                                     ButtonSlotToSkillID;                                      // 0x0730(0x0050) (ZeroConstructor)
-	struct FTeammateSkillCDRepData                     TeammateSkillCDRepData;                                   // 0x0780(0x0010)
-	TMap<int, int>                                     SkillID2PackageIndex;                                     // 0x0790(0x0050) (ZeroConstructor)
-	TArray<struct FSkillCDRepData>                     SyncSkillCDDatas;                                         // 0x07E0(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData05[0x90];                                      // 0x07F0(0x0090) MISSED OFFSET
-	struct FUTSkillHitInfo                             SkillHitInfo;                                             // 0x0880(0x0038) (Net)
-	struct FUTSkillHitEnvInfo                          SkillHitEnvInfo;                                          // 0x08B8(0x0030)
-	TArray<struct FString>                             MutexMontageGroupBeenPlayed;                              // 0x08E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x08F8(0x0004) MISSED OFFSET
-	int                                                SkillSynRandomSeed;                                       // 0x08FC(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FRandomStream                               SkillSynRandStream;                                       // 0x0900(0x0008)
-	int                                                SkillSynRandomSeedExpireCount;                            // 0x0908(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0xC];                                       // 0x090C(0x000C) MISSED OFFSET
-	TArray<struct FSkillParamater>                     SkillParamaters;                                          // 0x0918(0x0010) (Net, ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnSkillInitSignature;                                     // 0x0928(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    InitOneSkillEvent;                                        // 0x0938(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillStartEvent;                                          // 0x0948(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillStopEvent;                                           // 0x0958(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillPhaseChangeEvent;                                    // 0x0968(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillLevelChangeEvent;                                    // 0x0978(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillSkinIDChangeEvent;                                   // 0x0988(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    SkillUpdateCDEvent;                                       // 0x0998(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TArray<int>                                        PendingRemoveSkillID;                                     // 0x09A8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData08[0x50];                                      // 0x09B8(0x0050) MISSED OFFSET
-	TArray<struct FUTReplaceSkillData>                 ReplacedSkillDatas;                                       // 0x0A08(0x0010) (BlueprintVisible, Net, ZeroConstructor)
-	TMap<int, struct FSkillDisableKeySet>              DisableSkillTagsMap;                                      // 0x0A18(0x0050) (ZeroConstructor)
-	TMap<int, struct FSkillDisableKeySet>              DisableSkillIDsMap;                                       // 0x0A68(0x0050) (ZeroConstructor)
-	TMap<int, struct FSkillLimitKeySet>                LimitSkillTagsMap;                                        // 0x0AB8(0x0050) (ZeroConstructor)
-	TMap<int, struct FSkillLimitKeySet>                LimitSkillIDMap;                                          // 0x0B08(0x0050) (ZeroConstructor)
-	struct FMultiSkillSynData                          NewSkillSynData;                                          // 0x0B58(0x00F0) (BlueprintVisible, Net)
-	struct FSkillSinglePhaseData                       NewSkillSinglePhaseData;                                  // 0x0C48(0x00F0) (BlueprintVisible, Net)
-	unsigned char                                      UnknownData09[0x8];                                       // 0x0D38(0x0008) MISSED OFFSET
-	TMap<uint64_t, struct FUTSkillSimulateData>        SkillSimulateDataMap;                                     // 0x0D40(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData10[0x50];                                      // 0x0D90(0x0050) UNKNOWN PROPERTY: SetProperty Skill.UTSkillManagerComponent.AsyncLoadingSkillInst
-	struct FUTSkillExecQueue                           SkillExecQueue;                                           // 0x0DE0(0x00B0)
-	uint64_t                                           NetClientSimulateInstID;                                  // 0x0E90(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData11[0x10];                                      // 0x0E98(0x0010) MISSED OFFSET
-	struct FScriptMulticastDelegate                    CreativeSkillDelegate;                                    // 0x0EA8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x58]; // 0x0238(0x0058) MISSED OFFSET
+	class APawn* OwnerPawn; // 0x0290(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x14]; // 0x0298(0x0014) MISSED OFFSET
+	int NetAutoSkillID; // 0x02AC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x8]; // 0x02B0(0x0008) MISSED OFFSET
+	bool bEnableSkillCoolDown; // 0x02B8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bGMDirectTriggerSkill; // 0x02B9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x6]; // 0x02BA(0x0006) MISSED OFFSET
+	class AActor* OwnerActor; // 0x02C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool DestroySkillsOnDie; // 0x02C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x02C9(0x0007) MISSED OFFSET
+	TMap<int, TWeakObjectPtr<class AUTSkill>> SkillIDToSkills; // 0x02D0(0x0050) (ZeroConstructor, Transient)
+	TMap<int, class UUAEBlackboard*> SkillIDBlackboardMap; // 0x0320(0x0050) (ZeroConstructor, Transient)
+	TMap<TWeakObjectPtr<class AActor>, class UUAEBlackboard*> ActorBlackboardMap; // 0x0370(0x0050) (ZeroConstructor)
+	struct FScriptMulticastDelegate ChangeActorBlackboard; // 0x03C0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TMap<int, struct FUTSkillRuntimeData> SkillBaseDataMaps; // 0x03D0(0x0050) (ZeroConstructor)
+	TArray<struct FUTSkillLastCastInfo> LastCastArray; // 0x0420(0x0010) (BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor)
+	struct FScriptMulticastDelegate OnSkillCast; // 0x0430(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FSkillActiveRepData SyncSkillActiveStateDatas; // 0x0440(0x00E0) (Net)
+	struct FSkillAttrRepData SyncSkillAttrRepData; // 0x0520(0x00E0) (Net)
+	struct FSkillDynamicRepData SyncDynamicRepData; // 0x0600(0x00E0) (Net)
+	TMap<int, int> IDToSyncSkillCDDatas; // 0x06E0(0x0050) (ZeroConstructor)
+	TMap<int, int> ButtonSlotToSkillID; // 0x0730(0x0050) (ZeroConstructor)
+	struct FTeammateSkillCDRepData TeammateSkillCDRepData; // 0x0780(0x0010)
+	TMap<int, int> SkillID2PackageIndex; // 0x0790(0x0050) (ZeroConstructor)
+	TArray<struct FSkillCDRepData> SyncSkillCDDatas; // 0x07E0(0x0010) (Net, ZeroConstructor)
+	unsigned char UnknownData05[0x90]; // 0x07F0(0x0090) MISSED OFFSET
+	struct FUTSkillHitInfo SkillHitInfo; // 0x0880(0x0038) (Net)
+	struct FUTSkillHitEnvInfo SkillHitEnvInfo; // 0x08B8(0x0030)
+	TArray<struct FString> MutexMontageGroupBeenPlayed; // 0x08E8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData06[0x4]; // 0x08F8(0x0004) MISSED OFFSET
+	int SkillSynRandomSeed; // 0x08FC(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FRandomStream SkillSynRandStream; // 0x0900(0x0008)
+	int SkillSynRandomSeedExpireCount; // 0x0908(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData07[0xC]; // 0x090C(0x000C) MISSED OFFSET
+	TArray<struct FSkillParamater> SkillParamaters; // 0x0918(0x0010) (Net, ZeroConstructor)
+	struct FScriptMulticastDelegate OnSkillInitSignature; // 0x0928(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate InitOneSkillEvent; // 0x0938(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillStartEvent; // 0x0948(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillStopEvent; // 0x0958(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillPhaseChangeEvent; // 0x0968(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillLevelChangeEvent; // 0x0978(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillSkinIDChangeEvent; // 0x0988(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillDoCoolDownEvent; // 0x0998(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate SkillUpdateCDEvent; // 0x09A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TArray<int> PendingRemoveSkillID; // 0x09B8(0x0010) (ZeroConstructor)
+	unsigned char UnknownData08[0x50]; // 0x09C8(0x0050) MISSED OFFSET
+	TArray<struct FUTReplaceSkillData> ReplacedSkillDatas; // 0x0A18(0x0010) (BlueprintVisible, Net, ZeroConstructor)
+	TMap<int, struct FSkillDisableKeySet> DisableSkillTagsMap; // 0x0A28(0x0050) (ZeroConstructor)
+	TMap<int, struct FSkillDisableKeySet> DisableSkillIDsMap; // 0x0A78(0x0050) (ZeroConstructor)
+	struct FScriptMulticastDelegate OnSkillDisableChangeDelegate; // 0x0AC8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TMap<int, struct FSkillLimitKeySet> LimitSkillTagsMap; // 0x0AD8(0x0050) (ZeroConstructor)
+	TMap<int, struct FSkillLimitKeySet> LimitSkillIDMap; // 0x0B28(0x0050) (ZeroConstructor)
+	struct FMultiSkillSynData NewSkillSynData; // 0x0B78(0x00F0) (BlueprintVisible, Net)
+	struct FSkillSinglePhaseData NewSkillSinglePhaseData; // 0x0C68(0x00F0) (BlueprintVisible, Net)
+	unsigned char UnknownData09[0x8]; // 0x0D58(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate OnSkillEventDelegate; // 0x0D60(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TMap<uint64_t, struct FUTSkillSimulateData> SkillSimulateDataMap; // 0x0D70(0x0050) (ZeroConstructor)
+	unsigned char UnknownData10[0x50]; // 0x0DC0(0x0050) UNKNOWN PROPERTY: SetProperty Skill.UTSkillManagerComponent.AsyncLoadingSkillInst
+	struct FUTSkillExecQueue SkillExecQueue; // 0x0E10(0x00B0)
+	struct FUTSkillEventHistory SkillEventHistory; // 0x0EC0(0x0050)
+	struct FUTSkillComboState SkillComboState; // 0x0F10(0x0018)
+	int AsyncSkillComboSkillID; // 0x0F28(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData11[0x4]; // 0x0F2C(0x0004) MISSED OFFSET
+	uint64_t NetClientSimulateInstID; // 0x0F30(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData12[0x10]; // 0x0F38(0x0010) MISSED OFFSET
+	struct FScriptMulticastDelegate CreativeSkillDelegate; // 0x0F48(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillManagerComponent");
@@ -183,11 +186,11 @@ public:
 	void StopSkillAll(EUTSkillStopReason StopReason);
 	void StopSkill(int SkillID, EUTSkillStopReason StopReason);
 	void StopCurSkill(EUTSkillStopReason StopReason);
+	void StopAllMonopolizeSkill(EUTSkillStopReason StopReason);
 	bool SetupOwnerAndSystem();
 	void SetSkillTagsLimit(TArray<int> SkillTags, bool bLimit, const struct FString& TriggerKey);
 	void SetSkillTagsDisable(TArray<int> SkillTags, bool bDisable, const struct FString& TriggerKey);
 	bool SetSkillSkinID(int SkillID, int InSkillSkinID);
-	bool SetSkillSelect(int SkillID, bool bSelect);
 	void SetSkillOwner(class AActor* tempActor);
 	bool SetSkillLevel(int SkillID, int SkillLevel);
 	void SetSkillIDsLimit(TArray<int> SkillIDs, bool bLimit, const struct FString& TriggerKey);
@@ -202,8 +205,10 @@ public:
 	void ServerTriggerEvent_WithIDAndTssData(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, TArray<unsigned char> TssData, uint64_t PackageIndex);
 	void ServerTriggerEvent_WithID(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, uint64_t InstID, uint64_t PackageIndex);
 	void ServerTriggerEvent(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType);
+	void ServerStopSkillCombo(int SkillID);
 	void ServerStopSkill(int SkillID, EUTSkillStopReason StopReason);
 	void ServerStopAllSkill(EUTSkillStopReason StopReason);
+	void ServerStopAllMonopolizeSkill(EUTSkillStopReason StopReason);
 	bool ServerStartSkill(int SkillID, bool bAutoCast);
 	void ServerNotifyRandomSeed(int Seed);
 	void ResetTeammateSkillCDData();
@@ -237,13 +242,13 @@ public:
 	void OnRep_NetAutoSkillID();
 	void OnRep_EnableSkillEncrypt();
 	void OnRep_DynamicRepData();
+	void OnRep_AsyncSkillComboSkillID();
 	void OnRecycled();
 	void OnInterruptSkill(class AUTSkill* Skill, EUTSkillStopReason StopReason);
 	void NewUAEBlackboard(int SkillID);
 	bool NeedSimulateStoppedNewSkill(int InSkillID);
 	void LocalTriggerNewSkillFail(class AUTSkill* InNewSkill, uint64_t InstID);
 	void LocalStopSkillAllWithExcludeArray(TArray<int> InExcludeArry, EUTSkillStopReason StopReason);
-	bool IsSkillSelect(int SkillID);
 	bool IsSkillNeedPackageVerify(int SkillID);
 	bool IsSkillInit(int InSkillID);
 	bool IsSkillIDDisable(int InSkillID);
@@ -257,6 +262,7 @@ public:
 	bool IsCastingSkillTag(int InSkillTag);
 	bool IsCastingSkillID(int InSkillID);
 	bool IsCastingSkill();
+	bool HasSkillEventFromLastCast(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType);
 	void HandleTriggerParamsEventFail(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType);
 	bool HandleTriggerParamsEvent(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType);
 	void HandleSkillStop(int SkillID, class AUTSkill* InSkill, EUTSkillStopReason StopReason);
@@ -274,6 +280,7 @@ public:
 	int GetSkillLevel(int SkillID);
 	int GetSkillIDByClass(class UClass* SkillClass);
 	TArray<struct FString> GetSkillExecString();
+	bool GetSkillEventTimestamp(int SkillID, TEnumAsByte<enum EUTSkillEventType> EventType, float* OutTimestamp);
 	int GetSkillCurPhase(class AUTSkill* Skill);
 	class AUTSkill* GetSkillByName(const struct FString& SkillName);
 	class AUTSkill* GetSkillByClassName(const struct FString& SkillClassName);
@@ -301,7 +308,7 @@ public:
 	void ClientTriggerEventSuccess_WithID(int SkillID, uint64_t PackageIndex);
 	void ClientTriggerEventFailed_WithID(int SkillID, ETriggerSkillFailed FailedReason, uint64_t PackageIndex);
 	void ClientStopPreActionSkill(int SkillID, uint64_t InstID);
-	void ClientStopOneSkill(uint64_t InstID, bool bSinglePhaseRep);
+	void ClientStopOneSkill(uint64_t InstID, bool bSinglePhaseRep, EUTSkillStopReason StopReason);
 	void ClientStartSkill(int SkillID, bool bAutoCast);
 	void ClientSimulateOneSkill(uint64_t InstID, int SkillID, int PhaseIndex, bool bSinglePhaseRep);
 	void ClearSkill(bool bStopAllSkill, bool bDeactivateAllSkill, bool bResetSkillCD);
@@ -318,16 +325,15 @@ public:
 class UUTSkillBaseWidget : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
-	bool                                               bWidgetEnabled;                                           // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
-	struct FString                                     EffectName;                                               // 0x0050(0x0010) (Edit, ZeroConstructor, EditConst)
-	class AActor*                                      BuffTargetActor;                                          // 0x0060(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TWeakObjectPtr<class AUTSkill>                     OwnerSkill;                                               // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UActorComponent*                             CurOwnerActorComponent;                                   // 0x0070(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x20]; // 0x0028(0x0020) MISSED OFFSET
+	bool bWidgetEnabled; // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0049(0x0007) MISSED OFFSET
+	struct FString EffectName; // 0x0050(0x0010) (Edit, ZeroConstructor, EditConst)
+	class AActor* BuffTargetActor; // 0x0060(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TWeakObjectPtr<class AUTSkill> OwnerSkill; // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UActorComponent* CurOwnerActorComponent; // 0x0070(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillBaseWidget");
@@ -338,6 +344,7 @@ public:
 	bool IsSetValueAsNewDataWhenNotExist(const struct FName& KeyName);
 	class UUAEBlackboard* GetUAEBlackboard();
 	class UUTSkillManagerComponent* GetOwnerSkillManager();
+	int GetOwnerSkillID();
 	class AActor* GetOwnerPawn();
 };
 
@@ -347,10 +354,9 @@ public:
 class UUTSkillEffect : public UUTSkillBaseWidget
 {
 public:
-	TArray<class UObject*>                             CacheSoftObject;                                          // 0x0078(0x0010) (ZeroConstructor)
+	TArray<class UObject*> CacheSoftObject; // 0x0078(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillEffect");
@@ -375,13 +381,12 @@ public:
 class UUTSkillAction : public UUTSkillEffect
 {
 public:
-	struct FUTSkillActionCreateData                    BaseData;                                                 // 0x0088(0x0008) (Edit)
-	class UUTSkillAction*                              OwnerPeriodAction;                                        // 0x0090(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	class UObject*                                     EventObj;                                                 // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FUTSkillActionCreateData BaseData; // 0x0088(0x0008) (Edit)
+	class UUTSkillAction* OwnerPeriodAction; // 0x0090(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0098(0x0008) MISSED OFFSET
+	class UObject* EventObj; // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillAction");
@@ -412,12 +417,11 @@ public:
 class UUTSkillCondition : public UUTSkillBaseWidget
 {
 public:
-	bool                                               bTickCheckCondition;                                      // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum ESkillConditionRole>              ConditionRole;                                            // 0x0079(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
+	bool bTickCheckCondition; // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum ESkillConditionRole> ConditionRole; // 0x0079(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x007A(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillCondition");
@@ -440,17 +444,16 @@ public:
 class UUTSkillEventEffectMapForEditor : public UUTSkillBaseWidget
 {
 public:
-	TEnumAsByte<enum EUTSkillEventType>                SkillEventType;                                           // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
-	TArray<struct FName>                               InterestedOwnerTags;                                      // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UUTSkillEffect*                              SkillEffect;                                              // 0x0090(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bUndoExecute;                                             // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
-	TArray<struct FSkillConditionWarpper>              Conditions;                                               // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FSkillConditionWarpper>              TargetConditions;                                         // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TEnumAsByte<enum EUTSkillEventType> SkillEventType; // 0x0078(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0079(0x0007) MISSED OFFSET
+	TArray<struct FName> InterestedOwnerTags; // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UUTSkillEffect* SkillEffect; // 0x0090(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bUndoExecute; // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0099(0x0007) MISSED OFFSET
+	TArray<struct FSkillConditionWarpper> Conditions; // 0x00A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FSkillConditionWarpper> TargetConditions; // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillEventEffectMapForEditor");
@@ -466,8 +469,7 @@ class UUTSkillInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillInterface");
@@ -475,6 +477,7 @@ public:
 	}
 
 
+	bool IsNeedCheckAutoSkill();
 	bool HasSkillToken(int SkillID);
 	void HandleSkillStart(int SkillID);
 	void HandleSkillEnd(int SkillID, EUTSkillStopReason Reason);
@@ -486,23 +489,22 @@ public:
 
 
 // Class Skill.UTSkillPhase
-// 0x00D0 (0x00F8 - 0x0028)
+// 0x00C0 (0x00E8 - 0x0028)
 class UUTSkillPhase : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
-	struct FString                                     PhaseName;                                                // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bPhaseEnabled;                                            // 0x0050(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
-	TWeakObjectPtr<class AUTSkill>                     OwnerSkill;                                               // 0x0054(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                PhaseIndex;                                               // 0x005C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
-	int                                                ActionsTopHalfCount;                                      // 0x0060(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FUTSkillPhaseCreateData                     BaseData;                                                 // 0x0068(0x0088) (Edit)
-	class UUTSkillPicker*                              InEffectPickerOnAction;                                   // 0x00F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0028(0x0018) MISSED OFFSET
+	struct FString PhaseName; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bPhaseEnabled; // 0x0050(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0051(0x0003) MISSED OFFSET
+	TWeakObjectPtr<class AUTSkill> OwnerSkill; // 0x0054(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	int PhaseIndex; // 0x005C(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
+	int ActionsTopHalfCount; // 0x0060(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x0064(0x0004) MISSED OFFSET
+	struct FUTSkillPhaseCreateData BaseData; // 0x0068(0x0078) (Edit)
+	class UUTSkillPicker* InEffectPickerOnAction; // 0x00E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillPhase");
@@ -525,18 +527,17 @@ public:
 
 
 // Class Skill.UTSkillPicker
-// 0x0068 (0x00E0 - 0x0078)
+// 0x0090 (0x0108 - 0x0078)
 class UUTSkillPicker : public UUTSkillBaseWidget
 {
 public:
-	struct FUTSkillPickerCreateData                    BaseData;                                                 // 0x0078(0x0028) (Edit)
-	TArray<class UClass*>                              FilterTemplates;                                          // 0x00A0(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00B0(0x0010) MISSED OFFSET
-	TArray<struct FUTSkillPickedTarget>                PickedResultTargets;                                      // 0x00C0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UUTSkillPickerFilter*>                Filters;                                                  // 0x00D0(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
+	struct FUTSkillPickerCreateData BaseData; // 0x0078(0x0050) (Edit)
+	TArray<class UClass*> FilterTemplates; // 0x00C8(0x0010) (Edit, ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x00D8(0x0010) MISSED OFFSET
+	TArray<struct FUTSkillPickedTarget> PickedResultTargets; // 0x00E8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UUTSkillPickerFilter*> Filters; // 0x00F8(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillPicker");
@@ -555,8 +556,7 @@ class UUTSkillPickerFilter : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillPickerFilter");
@@ -574,14 +574,13 @@ public:
 class UUTSkillWidget : public ULuaUAEUserWidget
 {
 public:
-	class UUTSkillManagerComponent*                    SkillManager;                                             // 0x0488(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                SkillID;                                                  // 0x0490(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              TickInterval;                                             // 0x0494(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableTick;                                              // 0x0498(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0499(0x0007) MISSED OFFSET
+	class UUTSkillManagerComponent* SkillManager; // 0x0488(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int SkillID; // 0x0490(0x0004) (ZeroConstructor, IsPlainOldData)
+	float TickInterval; // 0x0494(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bEnableTick; // 0x0498(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0499(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillWidget");
@@ -607,8 +606,7 @@ class UUTSkillLocationPicker : public UUTSkillBaseWidget
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillLocationPicker");
@@ -624,8 +622,7 @@ class UPrivateNodeLuaInterface : public ULuaOverriderInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.PrivateNodeLuaInterface");
@@ -644,8 +641,7 @@ class UUniqueKeyOwnerLuaInterface : public ULuaOverriderInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UniqueKeyOwnerLuaInterface");
@@ -660,12 +656,11 @@ public:
 class USharedDelegate : public UObject
 {
 public:
-	class UObject*                                     FunctionOuter;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       FunctionName;                                             // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	class UObject* FunctionOuter; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName FunctionName; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0038(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SharedDelegate");
@@ -683,8 +678,7 @@ class ULuaEventSharedDelegate : public USharedDelegate
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.LuaEventSharedDelegate");
@@ -695,16 +689,17 @@ public:
 
 
 // Class Skill.SharedDelegateManager
-// 0x00F0 (0x0120 - 0x0030)
+// 0x0110 (0x0140 - 0x0030)
 class USharedDelegateManager : public UWorldSubsystem
 {
 public:
-	TMap<struct FSharedDelegateWrap, class USharedDelegate*> DelegateMap;                                              // 0x0030(0x0050) (ZeroConstructor)
-	TMap<struct FMultiSharedDelegateWrap, class USharedDelegate*> MultiDelegateMap;                                         // 0x0080(0x0050) (ZeroConstructor)
-	TMap<struct FLuaEventRegistWrap, class ULuaEventSharedDelegate*> LuaEventRegistMap;                                        // 0x00D0(0x0050) (ZeroConstructor)
+	TMap<struct FSharedDelegateWrap, class USharedDelegate*> DelegateMap; // 0x0030(0x0050) (ZeroConstructor)
+	TMap<struct FMultiSharedDelegateWrap, class USharedDelegate*> MultiDelegateMap; // 0x0080(0x0050) (ZeroConstructor)
+	TMap<struct FLuaEventRegistWrap, class ULuaEventSharedDelegate*> LuaEventRegistMap; // 0x00D0(0x0050) (ZeroConstructor)
+	TArray<class USharedDelegate*> CacheSharedDelegates; // 0x0120(0x0010) (ZeroConstructor)
+	TArray<class ULuaEventSharedDelegate*> CacheLuaEventSharedDelegates; // 0x0130(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SharedDelegateManager");
@@ -720,8 +715,7 @@ class USkillNodeLuaInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SkillNodeLuaInterface");
@@ -736,12 +730,11 @@ public:
 class USkillTriggerData : public UUTSkillBaseWidget
 {
 public:
-	TArray<struct FUAEBlackboardKeySelector>           UploadSkillTriggerData;                                   // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TEnumAsByte<enum EUTSkillEventType>                CurSkillEvent;                                            // 0x0088(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
+	TArray<struct FUAEBlackboardKeySelector> UploadSkillTriggerData; // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TEnumAsByte<enum EUTSkillEventType> CurSkillEvent; // 0x0088(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0089(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SkillTriggerData");
@@ -758,14 +751,13 @@ public:
 class USkillTriggerData_Lua : public USkillTriggerData
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0090(0x00C0) MISSED OFFSET
-	TMap<struct FName, struct FString>                 ActionParams;                                             // 0x0150(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bEnableLuaPrivateData;                                    // 0x01A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x01A1(0x0007) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x01A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0xC0]; // 0x0090(0x00C0) MISSED OFFSET
+	TMap<struct FString, struct FString> ActionParams; // 0x0150(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool bEnableLuaPrivateData; // 0x01A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x01A1(0x0007) MISSED OFFSET
+	struct FString LuaFilePath; // 0x01A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SkillTriggerData_Lua");
@@ -780,14 +772,13 @@ public:
 class UUTSkillAction_Lua : public UUTSkillAction
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x00A8(0x00C0) MISSED OFFSET
-	TMap<struct FName, struct FString>                 ActionParams;                                             // 0x0168(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bEnableLuaPrivateData;                                    // 0x01B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x01C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0xC0]; // 0x00A8(0x00C0) MISSED OFFSET
+	TMap<struct FString, struct FString> ActionParams; // 0x0168(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool bEnableLuaPrivateData; // 0x01B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x01B9(0x0007) MISSED OFFSET
+	struct FString LuaFilePath; // 0x01C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillAction_Lua");
@@ -802,15 +793,14 @@ public:
 class UUTSkillAction_LuaContainer : public UUTSkillAction_Lua
 {
 public:
-	class UUTSkillAction*                              Action;                                                   // 0x01D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bDefaultDoAction;                                         // 0x01D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDefaultUpdateAction;                                     // 0x01D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDefaultResetAction;                                      // 0x01DA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDefaultUndoAction;                                       // 0x01DB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x01DC(0x0004) MISSED OFFSET
+	class UUTSkillAction* Action; // 0x01D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bDefaultDoAction; // 0x01D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bDefaultUpdateAction; // 0x01D9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bDefaultResetAction; // 0x01DA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bDefaultUndoAction; // 0x01DB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x01DC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillAction_LuaContainer");
@@ -831,8 +821,7 @@ class UUTSkillBlackboardInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillBlackboardInterface");
@@ -887,17 +876,16 @@ public:
 class UUTSkillCDBase : public ULuaObject
 {
 public:
-	TWeakObjectPtr<class UUTSkillManagerComponent>     OwnerSkillManager;                                        // 0x0090(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class AUTSkill>                     OwnerSkill;                                               // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              TimeScale;                                                // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
-	TArray<unsigned char>                              SyncContent;                                              // 0x00A8(0x0010) (ZeroConstructor)
-	bool                                               bIgnoreCastSkillCheck;                                    // 0x00B8(0x0001) (ZeroConstructor, IsPlainOldData)
-	ECDRole                                            CDRole;                                                   // 0x00B9(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00BA(0x0006) MISSED OFFSET
+	TWeakObjectPtr<class UUTSkillManagerComponent> OwnerSkillManager; // 0x0090(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class AUTSkill> OwnerSkill; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	float TimeScale; // 0x00A0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x00A4(0x0004) MISSED OFFSET
+	TArray<unsigned char> SyncContent; // 0x00A8(0x0010) (ZeroConstructor)
+	bool bIgnoreCastSkillCheck; // 0x00B8(0x0001) (ZeroConstructor, IsPlainOldData)
+	ECDRole CDRole; // 0x00B9(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x00BA(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillCDBase");
@@ -914,14 +902,13 @@ public:
 class UUTSkillCondition_Lua : public UUTSkillCondition
 {
 public:
-	unsigned char                                      UnknownData00[0xC0];                                      // 0x0080(0x00C0) MISSED OFFSET
-	TMap<struct FName, struct FString>                 ConditionParams;                                          // 0x0140(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               bEnableLuaPrivateData;                                    // 0x0190(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0198(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0xC0]; // 0x0080(0x00C0) MISSED OFFSET
+	TMap<struct FString, struct FString> ConditionParams; // 0x0140(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool bEnableLuaPrivateData; // 0x0190(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0191(0x0007) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0198(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillCondition_Lua");
@@ -936,11 +923,10 @@ public:
 class UUTSkillEvent : public UObject
 {
 public:
-	TEnumAsByte<enum EUTSkillEventType>                SkillEventType;                                           // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	TEnumAsByte<enum EUTSkillEventType> SkillEventType; // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillEvent");
@@ -956,8 +942,7 @@ class UUTSkillInstancedNodeContainerInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillInstancedNodeContainerInterface");
@@ -973,14 +958,15 @@ class UUTSkillInstancedNodeInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillInstancedNodeInterface");
 		return pStaticClass;
 	}
 
+
+	void PostOverrideLua();
 };
 
 
@@ -990,8 +976,7 @@ class UUTSkillNodeBlackboardInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillNodeBlackboardInterface");
@@ -1049,12 +1034,11 @@ public:
 class UUTSkillFunctionBase : public UUTSkillBaseWidget
 {
 public:
-	struct FSkillFuncNameSelector                      DoActionFuncKey;                                          // 0x0078(0x0010) (Edit, BlueprintVisible)
-	struct FSkillFuncNameSelector                      UndoActionFuncKey;                                        // 0x0088(0x0010) (Edit, BlueprintVisible)
-	struct FSkillFuncNameSelector                      ConditionFuncKey;                                         // 0x0098(0x0010) (Edit, BlueprintVisible)
+	struct FSkillFuncNameSelector DoActionFuncKey; // 0x0078(0x0010) (Edit, BlueprintVisible)
+	struct FSkillFuncNameSelector UndoActionFuncKey; // 0x0088(0x0010) (Edit, BlueprintVisible)
+	struct FSkillFuncNameSelector ConditionFuncKey; // 0x0098(0x0010) (Edit, BlueprintVisible)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillFunctionBase");
@@ -1069,15 +1053,14 @@ public:
 class UUTSkillSpecificAction : public UUTSkillAction
 {
 public:
-	struct FSkillFuncNameSelector                      DoActionFuncKey;                                          // 0x00A8(0x0010) (Edit, BlueprintVisible)
-	struct FSkillFuncNameSelector                      ResetActionFuncKey;                                       // 0x00B8(0x0010) (Edit, BlueprintVisible)
-	struct FSkillFuncNameSelector                      UndoActionFuncKey;                                        // 0x00C8(0x0010) (Edit, BlueprintVisible)
-	struct FString                                     DoActionLuaFunc;                                          // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ResetActionLuaFunc;                                       // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     UndoActionLuaFunc;                                        // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FSkillFuncNameSelector DoActionFuncKey; // 0x00A8(0x0010) (Edit, BlueprintVisible)
+	struct FSkillFuncNameSelector ResetActionFuncKey; // 0x00B8(0x0010) (Edit, BlueprintVisible)
+	struct FSkillFuncNameSelector UndoActionFuncKey; // 0x00C8(0x0010) (Edit, BlueprintVisible)
+	struct FString DoActionLuaFunc; // 0x00D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ResetActionLuaFunc; // 0x00E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString UndoActionLuaFunc; // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillSpecificAction");
@@ -1100,11 +1083,10 @@ public:
 class UUTSkillSpecificCondition : public UUTSkillCondition
 {
 public:
-	struct FSkillFuncNameSelector                      ConditionFuncKey;                                         // 0x0080(0x0010) (Edit, BlueprintVisible)
-	struct FString                                     LuaConditionFunc;                                         // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FSkillFuncNameSelector ConditionFuncKey; // 0x0080(0x0010) (Edit, BlueprintVisible)
+	struct FString LuaConditionFunc; // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.UTSkillSpecificCondition");
@@ -1120,8 +1102,7 @@ class USkillUtil : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class Skill.SkillUtil");

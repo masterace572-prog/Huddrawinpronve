@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class ULuaActorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0178(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x01D0(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0230(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0178(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x01D0(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0230(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaActorComponent");
@@ -37,12 +36,11 @@ public:
 class ULuaInstancedActorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0178(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x01D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x01E0(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0178(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x01D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x01E0(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaInstancedActorComponent");
@@ -60,11 +58,10 @@ public:
 class ULuaObject : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaObject");
@@ -79,13 +76,12 @@ public:
 class ALuaActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x04B0(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0508(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x0558(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0568(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x04B0(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0508(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0558(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0568(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaActor");
@@ -103,11 +99,10 @@ public:
 class ALuaGameMode : public AGameMode
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0580(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x05D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0580(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x05D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaGameMode");
@@ -122,12 +117,11 @@ public:
 class ALuaGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0510(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0568(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0510(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0568(0x0050) (Net)
+	struct FString LuaFilePath; // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaGameState");
@@ -142,35 +136,14 @@ public:
 class ALuaPlayerState : public APlayerState
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0540(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0598(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x05E8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0540(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0598(0x0050) (Net)
+	struct FString LuaFilePath; // 0x05E8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaPlayerState");
-		return pStaticClass;
-	}
-
-};
-
-
-// Class slua_unreal.LuaPlayerController
-// 0x00B8 (0x08E0 - 0x0828)
-class ALuaPlayerController : public APlayerController
-{
-public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0828(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0880(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x08D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-        static UClass *pStaticClass = nullptr;
-        if (!pStaticClass)
-            pStaticClass = UObject::FindClass("Class slua_unreal.LuaPlayerController");
 		return pStaticClass;
 	}
 
@@ -182,11 +155,10 @@ public:
 class ULuaUserWidget : public UUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0260(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x02B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0260(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x02B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaUserWidget");
@@ -201,15 +173,33 @@ public:
 class ALuaCharacter : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x08F0(0x0050) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0940(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x0990(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x50]; // 0x08F0(0x0050) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0940(0x0050) (Net)
+	struct FString LuaFilePath; // 0x0990(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaCharacter");
+		return pStaticClass;
+	}
+
+};
+
+
+// Class slua_unreal.LuaPlayerController
+// 0x00B8 (0x08E0 - 0x0828)
+class ALuaPlayerController : public APlayerController
+{
+public:
+	unsigned char UnknownData00[0x58]; // 0x0828(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0880(0x0050) (Net)
+	struct FString LuaFilePath; // 0x08D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class slua_unreal.LuaPlayerController");
 		return pStaticClass;
 	}
 
@@ -222,8 +212,7 @@ class ULuaOverriderInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaOverriderInterface");
@@ -240,10 +229,9 @@ public:
 class ULatentDelegate : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LatentDelegate");
@@ -260,10 +248,9 @@ public:
 class ULuaDelegate : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x158];                                     // 0x0028(0x0158) MISSED OFFSET
+	unsigned char UnknownData00[0x158]; // 0x0028(0x0158) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaDelegate");
@@ -280,12 +267,11 @@ public:
 class ALuaLevelScriptActor : public ALevelScriptActor
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x04B0(0x0058) MISSED OFFSET
-	struct FString                                     LuaFilePath;                                              // 0x0508(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0518(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x04B0(0x0058) MISSED OFFSET
+	struct FString LuaFilePath; // 0x0508(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x8]; // 0x0518(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaLevelScriptActor");
@@ -304,8 +290,7 @@ class ULuaOverrider : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaOverrider");
@@ -327,12 +312,11 @@ public:
 class ALuaPawn : public APawn
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0510(0x0058) MISSED OFFSET
-	struct FLuaNetSerialization                        LuaNetSerialization;                                      // 0x0568(0x0050) (Net)
-	struct FString                                     LuaFilePath;                                              // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData00[0x58]; // 0x0510(0x0058) MISSED OFFSET
+	struct FLuaNetSerialization LuaNetSerialization; // 0x0568(0x0050) (Net)
+	struct FString LuaFilePath; // 0x05B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.LuaPawn");
@@ -348,8 +332,7 @@ class USluaBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class slua_unreal.SluaBlueprintLibrary");

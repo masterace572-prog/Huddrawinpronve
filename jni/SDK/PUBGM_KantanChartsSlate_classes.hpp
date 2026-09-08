@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UKantanBarChartWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FKantanBarChartStyle                        ChartStyle;                                               // 0x0030(0x0158) (Edit)
+	struct FKantanBarChartStyle ChartStyle; // 0x0030(0x0158) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsSlate.KantanBarChartWidgetStyle");
@@ -31,10 +30,9 @@ public:
 class UKantanCartesianChartWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FKantanCartesianChartStyle                  ChartStyle;                                               // 0x0030(0x0158) (Edit)
+	struct FKantanCartesianChartStyle ChartStyle; // 0x0030(0x0158) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsSlate.KantanCartesianChartWidgetStyle");
@@ -49,10 +47,9 @@ public:
 class UKantanCategoryStyleSet : public UDataAsset
 {
 public:
-	TArray<struct FKantanCategoryStyle>                Styles;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FKantanCategoryStyle> Styles; // 0x0030(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsSlate.KantanCategoryStyleSet");
@@ -67,11 +64,10 @@ public:
 class UKantanPointStyle : public UDataAsset
 {
 public:
-	class UTexture2D*                                  DataPointTexture;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FIntPoint                                   PointSizeTextureOffsets[0x3];                             // 0x0038(0x0008) (Edit, IsPlainOldData)
+	class UTexture2D* DataPointTexture; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FIntPoint PointSizeTextureOffsets[0x3]; // 0x0038(0x0008) (Edit, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsSlate.KantanPointStyle");
@@ -86,10 +82,9 @@ public:
 class UKantanSeriesStyleSet : public UDataAsset
 {
 public:
-	TArray<struct FKantanSeriesStyle>                  Styles;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FKantanSeriesStyle> Styles; // 0x0030(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsSlate.KantanSeriesStyleSet");

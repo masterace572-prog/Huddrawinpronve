@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ScriptPlugin.ScriptContext.CallScriptFunction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UScriptContext::CallScriptFunction(const struct FString& FunctionName)
 {
@@ -35,8 +35,8 @@ void UScriptContext::CallScriptFunction(const struct FString& FunctionName)
 // Function ScriptPlugin.ScriptContextComponent.PushScriptArrayIndexData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ParamName                      (Parm, ZeroConstructor)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ParamName (Parm, ZeroConstructor)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UScriptContextComponent::PushScriptArrayIndexData(const struct FString& ParamName, int Index)
 {
@@ -61,7 +61,7 @@ void UScriptContextComponent::PushScriptArrayIndexData(const struct FString& Par
 // Function ScriptPlugin.ScriptContextComponent.PushOneScriptPropertyValues
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ParamName                      (Parm, ZeroConstructor)
+// struct FString ParamName (Parm, ZeroConstructor)
 
 void UScriptContextComponent::PushOneScriptPropertyValues(const struct FString& ParamName)
 {
@@ -106,8 +106,8 @@ void UScriptContextComponent::PushAllScriptPropertyValues()
 // Function ScriptPlugin.ScriptContextComponent.FetchScriptArrayIndexData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ParamName                      (Parm, ZeroConstructor)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ParamName (Parm, ZeroConstructor)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UScriptContextComponent::FetchScriptArrayIndexData(const struct FString& ParamName, int Index)
 {
@@ -132,7 +132,7 @@ void UScriptContextComponent::FetchScriptArrayIndexData(const struct FString& Pa
 // Function ScriptPlugin.ScriptContextComponent.FetchOneScriptPropertyValues
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ParamName                      (Parm, ZeroConstructor)
+// struct FString ParamName (Parm, ZeroConstructor)
 
 void UScriptContextComponent::FetchOneScriptPropertyValues(const struct FString& ParamName)
 {
@@ -177,7 +177,7 @@ void UScriptContextComponent::FetchAllScriptPropertyValues()
 // Function ScriptPlugin.ScriptContextComponent.CallScriptFunctionWithoutFetch
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UScriptContextComponent::CallScriptFunctionWithoutFetch(const struct FString& FunctionName)
 {
@@ -201,7 +201,7 @@ void UScriptContextComponent::CallScriptFunctionWithoutFetch(const struct FStrin
 // Function ScriptPlugin.ScriptContextComponent.CallScriptFunction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
+// struct FString FunctionName (Parm, ZeroConstructor)
 
 void UScriptContextComponent::CallScriptFunction(const struct FString& FunctionName)
 {
@@ -225,7 +225,7 @@ void UScriptContextComponent::CallScriptFunction(const struct FString& FunctionN
 // Function ScriptPlugin.ScriptHelperNetInterface.SendPacket_LuaState
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UScriptHelperNetInterface::SendPacket_LuaState()
 {
@@ -250,7 +250,7 @@ int UScriptHelperNetInterface::SendPacket_LuaState()
 // Function ScriptPlugin.ScriptHelperNetInterface.Disconnect
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TScriptInterface<class UNetInterface> NetInterface                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UNetInterface> NetInterface (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UScriptHelperNetInterface::Disconnect(TScriptInterface<class UNetInterface>* NetInterface)
 {
@@ -276,8 +276,8 @@ void UScriptHelperNetInterface::Disconnect(TScriptInterface<class UNetInterface>
 // Function ScriptPlugin.ScriptHelperNetInterface.Connect
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TScriptInterface<class UNetInterface> NetInterface                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            Timeout                        (Parm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UNetInterface> NetInterface (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int Timeout (Parm, ZeroConstructor, IsPlainOldData)
 
 void UScriptHelperNetInterface::Connect(int Timeout, TScriptInterface<class UNetInterface>* NetInterface)
 {
@@ -304,8 +304,8 @@ void UScriptHelperNetInterface::Connect(int Timeout, TScriptInterface<class UNet
 // Function ScriptPlugin.ScriptPluginComponent.CallScriptFunction
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UScriptPluginComponent::CallScriptFunction(const struct FString& FunctionName)
 {
@@ -331,10 +331,10 @@ bool UScriptPluginComponent::CallScriptFunction(const struct FString& FunctionNa
 // Function ScriptPlugin.ScriptTestActor.TestFunction
 // (Final, Native, Public)
 // Parameters:
-// float                          InValue                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InFactor                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bMultiply                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float InValue (Parm, ZeroConstructor, IsPlainOldData)
+// float InFactor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMultiply (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float AScriptTestActor::TestFunction(float InValue, float InFactor, bool bMultiply)
 {
@@ -362,12 +362,12 @@ float AScriptTestActor::TestFunction(float InValue, float InFactor, bool bMultip
 // Function ScriptPlugin.LuaClassBaseObj.ItsATest
 // (Native, Public)
 // Parameters:
-// struct FPlayerInfo             Player1                        (Parm)
-// TArray<int>                    nums                           (Parm, ZeroConstructor)
-// int                            X                              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Q                              (Parm, ZeroConstructor)
-// TArray<struct FPlayerInfo>     Player2                        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FPlayerInfo Player1 (Parm)
+// TArray<int> nums (Parm, ZeroConstructor)
+// int X (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Q (Parm, ZeroConstructor)
+// TArray<struct FPlayerInfo> Player2 (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ALuaClassBaseObj::ItsATest(const struct FPlayerInfo& Player1, TArray<int> nums, int X, const struct FString& Q, TArray<struct FPlayerInfo> Player2)
 {
@@ -397,7 +397,7 @@ struct FString ALuaClassBaseObj::ItsATest(const struct FPlayerInfo& Player1, TAr
 // Function ScriptPlugin.LuaClassBaseObj.HandleUIMessage
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UIMessage                      (Parm, ZeroConstructor)
+// struct FString UIMessage (Parm, ZeroConstructor)
 
 void ALuaClassBaseObj::HandleUIMessage(const struct FString& UIMessage)
 {
@@ -421,7 +421,7 @@ void ALuaClassBaseObj::HandleUIMessage(const struct FString& UIMessage)
 // Function ScriptPlugin.LuaClassBaseObj.GetGameStatus
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ALuaClassBaseObj::GetGameStatus()
 {

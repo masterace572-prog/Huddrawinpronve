@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function SpawnSystem.STSpawnerBase.Thinking
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::Thinking(float DeltaTime)
 {
@@ -35,7 +35,7 @@ void ASTSpawnerBase::Thinking(float DeltaTime)
 // Function SpawnSystem.STSpawnerBase.Switch
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           IsSwitchOn                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsSwitchOn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::Switch(bool IsSwitchOn)
 {
@@ -80,7 +80,7 @@ void ASTSpawnerBase::StopSpawn()
 // Function SpawnSystem.STSpawnerBase.SetSpawnerID
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ID                             (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ID (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::SetSpawnerID(uint32_t ID)
 {
@@ -104,9 +104,9 @@ void ASTSpawnerBase::SetSpawnerID(uint32_t ID)
 // Function SpawnSystem.STSpawnerBase.OnUnitSpawned
 // (Native, Public, HasOutParms)
 // Parameters:
-// class AActor*                  NewUnit                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSTSpawnParam           SpawnParam                     (ConstParm, Parm, OutParm, ReferenceParm)
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* NewUnit (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (ConstParm, Parm, OutParm, ReferenceParm)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::OnUnitSpawned(class AActor* NewUnit, const struct FSTSpawnParam& SpawnParam, class ASTSpawnerBase* Spawner)
 {
@@ -132,8 +132,8 @@ void ASTSpawnerBase::OnUnitSpawned(class AActor* NewUnit, const struct FSTSpawnP
 // Function SpawnSystem.STSpawnerBase.OnUnitDead
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::OnUnitDead(class AActor* Actor, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -158,7 +158,7 @@ void ASTSpawnerBase::OnUnitDead(class AActor* Actor, TEnumAsByte<enum EEndPlayRe
 // Function SpawnSystem.STSpawnerBase.OnSpawnTimingRipe
 // (Native, Protected)
 // Parameters:
-// bool                           IsRipe                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRipe (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::OnSpawnTimingRipe(bool IsRipe)
 {
@@ -243,13 +243,13 @@ void ASTSpawnerBase::OnRep_SpawnerID()
 // Function SpawnSystem.STSpawnerBase.Multicast_SpawnerSnapshot
 // (Net, NetReliable, Native, Event, NetMulticast, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Timing                         (Parm, ZeroConstructor)
-// struct FString                 Species                        (Parm, ZeroConstructor)
-// struct FString                 Location                       (Parm, ZeroConstructor)
-// struct FString                 Conditions                     (Parm, ZeroConstructor)
-// struct FString                 Extra                          (Parm, ZeroConstructor)
-// bool                           IsActive                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsUsable                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Timing (Parm, ZeroConstructor)
+// struct FString Species (Parm, ZeroConstructor)
+// struct FString Location (Parm, ZeroConstructor)
+// struct FString Conditions (Parm, ZeroConstructor)
+// struct FString Extra (Parm, ZeroConstructor)
+// bool IsActive (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsUsable (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::Multicast_SpawnerSnapshot(const struct FString& Timing, const struct FString& Species, const struct FString& Location, const struct FString& Conditions, const struct FString& Extra, bool IsActive, bool IsUsable)
 {
@@ -279,9 +279,9 @@ void ASTSpawnerBase::Multicast_SpawnerSnapshot(const struct FString& Timing, con
 // Function SpawnSystem.STSpawnerBase.Multicast_AlivePawnsChange
 // (Net, NetReliable, Native, Event, NetMulticast, Public, BlueprintCallable)
 // Parameters:
-// class APawn*                   Unit                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsBorn                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsAllDead                      (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Unit (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsBorn (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsAllDead (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::Multicast_AlivePawnsChange(class APawn* Unit, bool IsBorn, bool IsAllDead)
 {
@@ -307,7 +307,7 @@ void ASTSpawnerBase::Multicast_AlivePawnsChange(class APawn* Unit, bool IsBorn, 
 // Function SpawnSystem.STSpawnerBase.ModifyMaxAlive
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewAlive                       (Parm, ZeroConstructor, IsPlainOldData)
+// int NewAlive (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnerBase::ModifyMaxAlive(int NewAlive)
 {
@@ -331,7 +331,7 @@ void ASTSpawnerBase::ModifyMaxAlive(int NewAlive)
 // Function SpawnSystem.STSpawnerBase.IsUsable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::IsUsable()
 {
@@ -356,7 +356,7 @@ bool ASTSpawnerBase::IsUsable()
 // Function SpawnSystem.STSpawnerBase.IsPlayerEnterRegion
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::IsPlayerEnterRegion()
 {
@@ -381,7 +381,7 @@ bool ASTSpawnerBase::IsPlayerEnterRegion()
 // Function SpawnSystem.STSpawnerBase.IsInitialized
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::IsInitialized()
 {
@@ -406,7 +406,7 @@ bool ASTSpawnerBase::IsInitialized()
 // Function SpawnSystem.STSpawnerBase.IsActive
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::IsActive()
 {
@@ -452,7 +452,7 @@ void ASTSpawnerBase::InitSpawner()
 // Function SpawnSystem.STSpawnerBase.GetTotalSpawnedNum
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnerBase::GetTotalSpawnedNum()
 {
@@ -477,7 +477,7 @@ int ASTSpawnerBase::GetTotalSpawnedNum()
 // Function SpawnSystem.STSpawnerBase.GetSpawnSystem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USTSpawnSubsystem*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USTSpawnSubsystem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class USTSpawnSubsystem* ASTSpawnerBase::GetSpawnSystem()
 {
@@ -502,7 +502,7 @@ class USTSpawnSubsystem* ASTSpawnerBase::GetSpawnSystem()
 // Function SpawnSystem.STSpawnerBase.GetSpawnSpots
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class ASTSpawnSpot*>    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class ASTSpawnSpot*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class ASTSpawnSpot*> ASTSpawnerBase::GetSpawnSpots()
 {
@@ -527,7 +527,7 @@ TArray<class ASTSpawnSpot*> ASTSpawnerBase::GetSpawnSpots()
 // Function SpawnSystem.STSpawnerBase.GetSpawnRadius
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ASTSpawnerBase::GetSpawnRadius()
 {
@@ -552,7 +552,7 @@ float ASTSpawnerBase::GetSpawnRadius()
 // Function SpawnSystem.STSpawnerBase.GetSpawnLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector ASTSpawnerBase::GetSpawnLocation()
 {
@@ -577,7 +577,7 @@ struct FVector ASTSpawnerBase::GetSpawnLocation()
 // Function SpawnSystem.STSpawnerBase.GetSpawnExtent
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector ASTSpawnerBase::GetSpawnExtent()
 {
@@ -602,7 +602,7 @@ struct FVector ASTSpawnerBase::GetSpawnExtent()
 // Function SpawnSystem.STSpawnerBase.GetSpawnerSnapshot
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ASTSpawnerBase::GetSpawnerSnapshot()
 {
@@ -627,7 +627,7 @@ struct FString ASTSpawnerBase::GetSpawnerSnapshot()
 // Function SpawnSystem.STSpawnerBase.GetSpawnerID
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t ASTSpawnerBase::GetSpawnerID()
 {
@@ -652,7 +652,7 @@ uint32_t ASTSpawnerBase::GetSpawnerID()
 // Function SpawnSystem.STSpawnerBase.GetSpawnerDesc
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ASTSpawnerBase::GetSpawnerDesc()
 {
@@ -677,7 +677,7 @@ struct FString ASTSpawnerBase::GetSpawnerDesc()
 // Function SpawnSystem.STSpawnerBase.GetReferencedCount
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnerBase::GetReferencedCount()
 {
@@ -702,7 +702,7 @@ int ASTSpawnerBase::GetReferencedCount()
 // Function SpawnSystem.STSpawnerBase.GetMaxUnits
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnerBase::GetMaxUnits()
 {
@@ -727,7 +727,7 @@ int ASTSpawnerBase::GetMaxUnits()
 // Function SpawnSystem.STSpawnerBase.GetMaxAlive
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnerBase::GetMaxAlive()
 {
@@ -752,7 +752,7 @@ int ASTSpawnerBase::GetMaxAlive()
 // Function SpawnSystem.STSpawnerBase.GetIsForceSpawn
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::GetIsForceSpawn()
 {
@@ -777,7 +777,7 @@ bool ASTSpawnerBase::GetIsForceSpawn()
 // Function SpawnSystem.STSpawnerBase.GetAliveUnits
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> ASTSpawnerBase::GetAliveUnits()
 {
@@ -802,8 +802,8 @@ TArray<class AActor*> ASTSpawnerBase::GetAliveUnits()
 // Function SpawnSystem.STSpawnerBase.FindSpot
 // (Final, Native, Protected)
 // Parameters:
-// struct FString                 SpotID                         (Parm, ZeroConstructor)
-// class ASTSpawnSpot*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SpotID (Parm, ZeroConstructor)
+// class ASTSpawnSpot* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnSpot* ASTSpawnerBase::FindSpot(const struct FString& SpotID)
 {
@@ -850,8 +850,8 @@ void ASTSpawnerBase::DeactivateSpawner()
 // Function SpawnSystem.STSpawnerBase.CheckTriggerGuest
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  Guest                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Guest (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::CheckTriggerGuest(class AActor* Guest)
 {
@@ -877,8 +877,8 @@ bool ASTSpawnerBase::CheckTriggerGuest(class AActor* Guest)
 // Function SpawnSystem.STSpawnerBase.CheckOwnedUnit
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  InUnit                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* InUnit (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnerBase::CheckOwnedUnit(class AActor* InUnit)
 {
@@ -946,7 +946,7 @@ void ASTSpawnerBase::ActivateSpawner()
 // Function SpawnSystem.STSpawnSubsystem.UnregisterSpawner
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::UnregisterSpawner(class ASTSpawnerBase* Spawner)
 {
@@ -970,8 +970,8 @@ void USTSpawnSubsystem::UnregisterSpawner(class ASTSpawnerBase* Spawner)
 // Function SpawnSystem.STSpawnSubsystem.UnitFindSpawner
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            UnitUID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTSpawnerBase*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int UnitUID (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnerBase* USTSpawnSubsystem::UnitFindSpawner(int UnitUID)
 {
@@ -997,7 +997,7 @@ class ASTSpawnerBase* USTSpawnSubsystem::UnitFindSpawner(int UnitUID)
 // Function SpawnSystem.STSpawnSubsystem.StopSpawner
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       SpawnerID                      (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t SpawnerID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::StopSpawner(uint32_t SpawnerID)
 {
@@ -1021,8 +1021,8 @@ void USTSpawnSubsystem::StopSpawner(uint32_t SpawnerID)
 // Function SpawnSystem.STSpawnSubsystem.SpawnUnit
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FSTSpawnParam           SpawnParam                     (Parm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (Parm)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USTSpawnSubsystem::SpawnUnit(const struct FSTSpawnParam& SpawnParam)
 {
@@ -1048,7 +1048,7 @@ class AActor* USTSpawnSubsystem::SpawnUnit(const struct FSTSpawnParam& SpawnPara
 // Function SpawnSystem.STSpawnSubsystem.RegisterSpawner
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::RegisterSpawner(class ASTSpawnerBase* Spawner)
 {
@@ -1093,7 +1093,7 @@ void USTSpawnSubsystem::RecordProgress()
 // Function SpawnSystem.STSpawnSubsystem.ReadySpawn
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::ReadySpawn(float DeltaTime)
 {
@@ -1117,7 +1117,7 @@ void USTSpawnSubsystem::ReadySpawn(float DeltaTime)
 // Function SpawnSystem.STSpawnSubsystem.PreCheck
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTSpawnSubsystem::PreCheck()
 {
@@ -1142,7 +1142,7 @@ bool USTSpawnSubsystem::PreCheck()
 // Function SpawnSystem.STSpawnSubsystem.OrderSpawnerThinking
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::OrderSpawnerThinking(float DeltaTime)
 {
@@ -1166,8 +1166,8 @@ void USTSpawnSubsystem::OrderSpawnerThinking(float DeltaTime)
 // Function SpawnSystem.STSpawnSubsystem.ModifyConfiguration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          TickFreq                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ThinkTimes                     (Parm, ZeroConstructor, IsPlainOldData)
+// float TickFreq (Parm, ZeroConstructor, IsPlainOldData)
+// int ThinkTimes (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::ModifyConfiguration(float TickFreq, int ThinkTimes)
 {
@@ -1192,8 +1192,8 @@ void USTSpawnSubsystem::ModifyConfiguration(float TickFreq, int ThinkTimes)
 // Function SpawnSystem.STSpawnSubsystem.InitUnit
 // (Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// class APawn*                   AIPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FUnitInitConfig> Configs                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class APawn* AIPawn (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUnitInitConfig> Configs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTSpawnSubsystem::InitUnit(class APawn* AIPawn, TArray<struct FUnitInitConfig> Configs)
 {
@@ -1218,8 +1218,8 @@ void USTSpawnSubsystem::InitUnit(class APawn* AIPawn, TArray<struct FUnitInitCon
 // Function SpawnSystem.STSpawnSubsystem.GetUnitConfigID
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Unit                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Unit (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTSpawnSubsystem::GetUnitConfigID(class AActor* Unit)
 {
@@ -1245,7 +1245,7 @@ int USTSpawnSubsystem::GetUnitConfigID(class AActor* Unit)
 // Function SpawnSystem.STSpawnSubsystem.GetAllUnits
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> USTSpawnSubsystem::GetAllUnits()
 {
@@ -1270,8 +1270,8 @@ TArray<class AActor*> USTSpawnSubsystem::GetAllUnits()
 // Function SpawnSystem.STSpawnSubsystem.FindSpawner
 // (Final, Native, Public, Const)
 // Parameters:
-// uint32_t                       SpawnerID                      (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTSpawnerBase*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t SpawnerID (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnerBase* USTSpawnSubsystem::FindSpawner(uint32_t SpawnerID)
 {
@@ -1297,8 +1297,8 @@ class ASTSpawnerBase* USTSpawnSubsystem::FindSpawner(uint32_t SpawnerID)
 // Function SpawnSystem.STSpawnSubsystem.EnQueue
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSTSpawnParam           SpawnParam                     (Parm, OutParm)
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (Parm, OutParm)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTSpawnSubsystem::EnQueue(class ASTSpawnerBase* Spawner, struct FSTSpawnParam* SpawnParam)
 {
@@ -1346,9 +1346,9 @@ void USTSpawnSubsystem::CleanQueue()
 // Function SpawnSystem.STSpawnSubsystem.CheckCategoryLimit
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Spawner                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AvailableBalance               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTSpawnerBase* Spawner (Parm, ZeroConstructor, IsPlainOldData)
+// int AvailableBalance (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTSpawnSubsystem::CheckCategoryLimit(class ASTSpawnerBase* Spawner, int* AvailableBalance)
 {
@@ -1377,7 +1377,7 @@ bool USTSpawnSubsystem::CheckCategoryLimit(class ASTSpawnerBase* Spawner, int* A
 // Function SpawnSystem.STStrategyBase.UpdateSnapshot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 New                            (Parm, ZeroConstructor)
+// struct FString New (Parm, ZeroConstructor)
 
 void USTStrategyBase::UpdateSnapshot(const struct FString& New)
 {
@@ -1401,7 +1401,7 @@ void USTStrategyBase::UpdateSnapshot(const struct FString& New)
 // Function SpawnSystem.STStrategyBase.TickStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyBase::TickStrategy(float DeltaTime)
 {
@@ -1486,7 +1486,7 @@ void USTStrategyBase::OnStrategyActivate()
 // Function SpawnSystem.STStrategyBase.IsSTActive
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyBase::IsSTActive()
 {
@@ -1511,7 +1511,7 @@ bool USTStrategyBase::IsSTActive()
 // Function SpawnSystem.STStrategyBase.IsOnCD
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyBase::IsOnCD()
 {
@@ -1536,7 +1536,7 @@ bool USTStrategyBase::IsOnCD()
 // Function SpawnSystem.STStrategyBase.GetTickEnable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyBase::GetTickEnable()
 {
@@ -1561,7 +1561,7 @@ bool USTStrategyBase::GetTickEnable()
 // Function SpawnSystem.STStrategyBase.GetStrategyDesc
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString USTStrategyBase::GetStrategyDesc()
 {
@@ -1586,7 +1586,7 @@ struct FString USTStrategyBase::GetStrategyDesc()
 // Function SpawnSystem.STStrategyBase.GetSnapshot
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString USTStrategyBase::GetSnapshot()
 {
@@ -1611,7 +1611,7 @@ struct FString USTStrategyBase::GetSnapshot()
 // Function SpawnSystem.STStrategyBase.GetOwnerSpawner
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class ASTSpawnerBase*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ASTSpawnerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnerBase* USTStrategyBase::GetOwnerSpawner()
 {
@@ -1657,7 +1657,7 @@ void USTStrategyBase::DeactivateStrategy()
 // Function SpawnSystem.STStrategyBase.CDRemaining
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USTStrategyBase::CDRemaining()
 {
@@ -1682,7 +1682,7 @@ float USTStrategyBase::CDRemaining()
 // Function SpawnSystem.STStrategyBase.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyBase::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -1706,10 +1706,10 @@ void USTStrategyBase::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function SpawnSystem.STStrategyLocation.GetSpawnLocation
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Requester                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReferenceCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  OutArr                         (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Requester (Parm, ZeroConstructor, IsPlainOldData)
+// int ReferenceCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> OutArr (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyLocation::GetSpawnLocation(class AActor* Requester, int ReferenceCount, TArray<struct FSpawnSpotInfo>* OutArr)
 {
@@ -1739,9 +1739,9 @@ bool USTStrategyLocation::GetSpawnLocation(class AActor* Requester, int Referenc
 // Function SpawnSystem.STStrategySpecies.Supply
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FUnitConfig> USTStrategySpecies::Supply(int ReferencedCount, TArray<struct FSpawnSpotInfo> SpotSpecies)
 {
@@ -1768,7 +1768,7 @@ TArray<struct FUnitConfig> USTStrategySpecies::Supply(int ReferencedCount, TArra
 // Function SpawnSystem.STStrategySpecies.GeAllCacheConfigIDs
 // (Final, Native, Public)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> USTStrategySpecies::GeAllCacheConfigIDs()
 {
@@ -1793,7 +1793,7 @@ TArray<int> USTStrategySpecies::GeAllCacheConfigIDs()
 // Function SpawnSystem.STStrategySpecies.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategySpecies::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -1838,7 +1838,7 @@ void USTStrategyTiming::TimeIsRipe()
 // Function SpawnSystem.SpawnSystemSettings.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class USpawnSystemSettings*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USpawnSystemSettings* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class USpawnSystemSettings* USpawnSystemSettings::Get()
 {
@@ -1863,9 +1863,9 @@ class USpawnSystemSettings* USpawnSystemSettings::Get()
 // Function SpawnSystem.STSpawnSpot.OnUnitSpawnedSuc
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// uint32_t                       InSpawnerID                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   AIPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSTSpawnParam           SpawnParam                     (ConstParm, Parm, OutParm, ReferenceParm)
+// uint32_t InSpawnerID (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* AIPawn (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSTSpawnParam SpawnParam (ConstParm, Parm, OutParm, ReferenceParm)
 
 void ASTSpawnSpot::OnUnitSpawnedSuc(uint32_t InSpawnerID, class APawn* AIPawn, const struct FSTSpawnParam& SpawnParam)
 {
@@ -1891,8 +1891,8 @@ void ASTSpawnSpot::OnUnitSpawnedSuc(uint32_t InSpawnerID, class APawn* AIPawn, c
 // Function SpawnSystem.STSpawnSpot.OnUnitDead
 // (Final, Native, Protected)
 // Parameters:
-// uint32_t                       InSpawnerID                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   AIPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InSpawnerID (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* AIPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void ASTSpawnSpot::OnUnitDead(uint32_t InSpawnerID, class APawn* AIPawn)
 {
@@ -1917,7 +1917,7 @@ void ASTSpawnSpot::OnUnitDead(uint32_t InSpawnerID, class APawn* AIPawn)
 // Function SpawnSystem.STSpawnSpot.IsSpotValid
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnSpot::IsSpotValid()
 {
@@ -1942,7 +1942,7 @@ bool ASTSpawnSpot::IsSpotValid()
 // Function SpawnSystem.STSpawnSpot.HasModifySpecies
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ASTSpawnSpot::HasModifySpecies()
 {
@@ -1967,7 +1967,7 @@ bool ASTSpawnSpot::HasModifySpecies()
 // Function SpawnSystem.STSpawnSpot.GetSpotWeigh
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetSpotWeigh()
 {
@@ -1992,7 +1992,7 @@ int ASTSpawnSpot::GetSpotWeigh()
 // Function SpawnSystem.STSpawnSpot.GetSpotUnitIndex
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetSpotUnitIndex()
 {
@@ -2017,7 +2017,7 @@ int ASTSpawnSpot::GetSpotUnitIndex()
 // Function SpawnSystem.STSpawnSpot.GetSpotType
 // (Final, Native, Public, Const)
 // Parameters:
-// ESpawnSpotType                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ESpawnSpotType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ESpawnSpotType ASTSpawnSpot::GetSpotType()
 {
@@ -2042,7 +2042,7 @@ ESpawnSpotType ASTSpawnSpot::GetSpotType()
 // Function SpawnSystem.STSpawnSpot.GetSpotSquadIndex
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetSpotSquadIndex()
 {
@@ -2067,7 +2067,7 @@ int ASTSpawnSpot::GetSpotSquadIndex()
 // Function SpawnSystem.STSpawnSpot.GetSpotID
 // (Final, Native, Public, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString ASTSpawnSpot::GetSpotID()
 {
@@ -2092,7 +2092,7 @@ struct FString ASTSpawnSpot::GetSpotID()
 // Function SpawnSystem.STSpawnSpot.GetNumberThresholdCfg
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetNumberThresholdCfg()
 {
@@ -2117,10 +2117,10 @@ int ASTSpawnSpot::GetNumberThresholdCfg()
 // Function SpawnSystem.STSpawnSpot.GetMultiPositions
 // (Final, Native, Public)
 // Parameters:
-// int                            ReqCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TryTimes                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReqCount (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxCount (Parm, ZeroConstructor, IsPlainOldData)
+// int TryTimes (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> ASTSpawnSpot::GetMultiPositions(int ReqCount, int MaxCount, int TryTimes)
 {
@@ -2148,7 +2148,7 @@ TArray<struct FVector> ASTSpawnSpot::GetMultiPositions(int ReqCount, int MaxCoun
 // Function SpawnSystem.STSpawnSpot.GetCacheSpawnedCount
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetCacheSpawnedCount()
 {
@@ -2173,7 +2173,7 @@ int ASTSpawnSpot::GetCacheSpawnedCount()
 // Function SpawnSystem.STSpawnSpot.GetCacheAliveCount
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetCacheAliveCount()
 {
@@ -2198,7 +2198,7 @@ int ASTSpawnSpot::GetCacheAliveCount()
 // Function SpawnSystem.STSpawnSpot.GetAliveThresholdCfg
 // (Final, Native, Public, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ASTSpawnSpot::GetAliveThresholdCfg()
 {
@@ -2223,8 +2223,8 @@ int ASTSpawnSpot::GetAliveThresholdCfg()
 // Function SpawnSystem.STSpawnSystemGameplayStatics.UnitFindSpawnerByUObject
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Object                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class ASTSpawnerBase*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnerBase* USTSpawnSystemGameplayStatics::UnitFindSpawnerByUObject(class UObject* Object)
 {
@@ -2250,9 +2250,9 @@ class ASTSpawnerBase* USTSpawnSystemGameplayStatics::UnitFindSpawnerByUObject(cl
 // Function SpawnSystem.STSpawnSystemGameplayStatics.UnitFindSpawner
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            UnitUID                        (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTSpawnerBase*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int UnitUID (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ASTSpawnerBase* USTSpawnSystemGameplayStatics::UnitFindSpawner(class UObject* WorldContextObject, int UnitUID)
 {
@@ -2279,13 +2279,13 @@ class ASTSpawnerBase* USTSpawnSystemGameplayStatics::UnitFindSpawner(class UObje
 // Function SpawnSystem.STSpawnSystemGameplayStatics.ProjectPointToFloorWithComplexCollisionCheck
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Origin                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bOutHit                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bCheckComplex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              HitResult                      (Parm, OutParm, IsPlainOldData)
-// float                          OffsetHeight                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Origin (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool bOutHit (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bCheckComplex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult HitResult (Parm, OutParm, IsPlainOldData)
+// float OffsetHeight (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector USTSpawnSystemGameplayStatics::ProjectPointToFloorWithComplexCollisionCheck(class UObject* WorldContextObject, const struct FVector& Origin, bool bCheckComplex, float OffsetHeight, bool* bOutHit, struct FHitResult* HitResult)
 {
@@ -2319,7 +2319,7 @@ struct FVector USTSpawnSystemGameplayStatics::ProjectPointToFloorWithComplexColl
 // Function SpawnSystem.STSpawnSystemGameplayStatics.IsEditor
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTSpawnSystemGameplayStatics::IsEditor()
 {
@@ -2344,14 +2344,14 @@ bool USTSpawnSystemGameplayStatics::IsEditor()
 // Function SpawnSystem.STSpawnSystemGameplayStatics.FindNearbyGroundLoc
 // (Final, Native, Static, Public, HasDefaults)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutCount                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 InCenterLoc                    (Parm, IsPlainOldData)
-// float                          RangeMin                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeMax                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TraceHeight                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TryTimes                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int OutCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector InCenterLoc (Parm, IsPlainOldData)
+// float RangeMin (Parm, ZeroConstructor, IsPlainOldData)
+// float RangeMax (Parm, ZeroConstructor, IsPlainOldData)
+// float TraceHeight (Parm, ZeroConstructor, IsPlainOldData)
+// int TryTimes (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> USTSpawnSystemGameplayStatics::FindNearbyGroundLoc(class UObject* WorldContextObject, int OutCount, const struct FVector& InCenterLoc, float RangeMin, float RangeMax, float TraceHeight, int TryTimes)
 {
@@ -2383,7 +2383,7 @@ TArray<struct FVector> USTSpawnSystemGameplayStatics::FindNearbyGroundLoc(class 
 // Function SpawnSystem.STSpawnVisualDebug.Get
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class USTSpawnVisualDebug*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USTSpawnVisualDebug* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class USTSpawnVisualDebug* USTSpawnVisualDebug::Get()
 {
@@ -2408,7 +2408,7 @@ class USTSpawnVisualDebug* USTSpawnVisualDebug::Get()
 // Function SpawnSystem.STStrategyCond.LuaCheckCondition
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyCond::LuaCheckCondition()
 {
@@ -2433,7 +2433,7 @@ bool USTStrategyCond::LuaCheckCondition()
 // Function SpawnSystem.STStrategyCond.CheckCondition
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyCond::CheckCondition()
 {
@@ -2458,7 +2458,7 @@ bool USTStrategyCond::CheckCondition()
 // Function SpawnSystem.STStrategyCond_Hide.CheckCondition
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyCond_Hide::CheckCondition()
 {
@@ -2483,7 +2483,7 @@ bool USTStrategyCond_Hide::CheckCondition()
 // Function SpawnSystem.STStrategyCond_Quantity.CheckCondition
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyCond_Quantity::CheckCondition()
 {
@@ -2508,7 +2508,7 @@ bool USTStrategyCond_Quantity::CheckCondition()
 // Function SpawnSystem.STStrategyCond_Quantity.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyCond_Quantity::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -2532,10 +2532,10 @@ void USTStrategyCond_Quantity::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function SpawnSystem.STStrategyLocation_Root.GetSpawnLocation
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Requester                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReferenceCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  OutArr                         (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Requester (Parm, ZeroConstructor, IsPlainOldData)
+// int ReferenceCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> OutArr (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyLocation_Root::GetSpawnLocation(class AActor* Requester, int ReferenceCount, TArray<struct FSpawnSpotInfo>* OutArr)
 {
@@ -2565,10 +2565,10 @@ bool USTStrategyLocation_Root::GetSpawnLocation(class AActor* Requester, int Ref
 // Function SpawnSystem.STStrategyLocation_Spots.GetSpawnLocation
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Requester                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReferenceCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  OutArr                         (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Requester (Parm, ZeroConstructor, IsPlainOldData)
+// int ReferenceCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> OutArr (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTStrategyLocation_Spots::GetSpawnLocation(class AActor* Requester, int ReferenceCount, TArray<struct FSpawnSpotInfo>* OutArr)
 {
@@ -2598,9 +2598,9 @@ bool USTStrategyLocation_Spots::GetSpawnLocation(class AActor* Requester, int Re
 // Function SpawnSystem.STStrategySpecies_SquadRatio.Supply
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FUnitConfig> USTStrategySpecies_SquadRatio::Supply(int ReferencedCount, TArray<struct FSpawnSpotInfo> SpotSpecies)
 {
@@ -2627,8 +2627,8 @@ TArray<struct FUnitConfig> USTStrategySpecies_SquadRatio::Supply(int ReferencedC
 // Function SpawnSystem.STStrategySpecies_SquadRatio.ReadSquadRatios
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FUnitRatio>      RatioConfig                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUnitRatio> RatioConfig (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_SquadRatio::ReadSquadRatios(int ReferencedCount, TArray<struct FUnitRatio> RatioConfig)
 {
@@ -2653,7 +2653,7 @@ void USTStrategySpecies_SquadRatio::ReadSquadRatios(int ReferencedCount, TArray<
 // Function SpawnSystem.STStrategySpecies_SquadRatio.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategySpecies_SquadRatio::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -2677,8 +2677,8 @@ void USTStrategySpecies_SquadRatio::ActivateStrategy(class ASTSpawnerBase* Owner
 // Function SpawnSystem.STStrategySpecies_Static.WeightedReadUnit
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::WeightedReadUnit(int ReferencedCount, TArray<struct FUnitConfig> Units)
 {
@@ -2703,9 +2703,9 @@ void USTStrategySpecies_Static::WeightedReadUnit(int ReferencedCount, TArray<str
 // Function SpawnSystem.STStrategySpecies_Static.WeightedReadSquad
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSquadConfig            SquadConfig                    (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSquadConfig SquadConfig (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::WeightedReadSquad(int ReferencedCount, const struct FSquadConfig& SquadConfig, TArray<struct FUnitConfig> Units)
 {
@@ -2731,10 +2731,10 @@ void USTStrategySpecies_Static::WeightedReadSquad(int ReferencedCount, const str
 // Function SpawnSystem.STStrategySpecies_Static.WeightedReadGroup
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGroupConfig            GroupConfig                    (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FSquadConfig>    Squads                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGroupConfig GroupConfig (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FSquadConfig> Squads (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::WeightedReadGroup(int ReferencedCount, const struct FGroupConfig& GroupConfig, TArray<struct FSquadConfig> Squads, TArray<struct FUnitConfig> Units)
 {
@@ -2761,9 +2761,9 @@ void USTStrategySpecies_Static::WeightedReadGroup(int ReferencedCount, const str
 // Function SpawnSystem.STStrategySpecies_Static.Supply
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FUnitConfig> USTStrategySpecies_Static::Supply(int ReferencedCount, TArray<struct FSpawnSpotInfo> SpotSpecies)
 {
@@ -2790,10 +2790,10 @@ TArray<struct FUnitConfig> USTStrategySpecies_Static::Supply(int ReferencedCount
 // Function SpawnSystem.STStrategySpecies_Static.ReadSpotSpecies
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FSpawnSpotInfo>  SpotSpecies                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FSquadConfig>    Squads                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FSpawnSpotInfo> SpotSpecies (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FSquadConfig> Squads (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::ReadSpotSpecies(TArray<struct FSpawnSpotInfo> SpotSpecies, TArray<struct FSquadConfig> Squads, TArray<struct FUnitConfig> Units, int* ReferencedCount)
 {
@@ -2822,8 +2822,8 @@ void USTStrategySpecies_Static::ReadSpotSpecies(TArray<struct FSpawnSpotInfo> Sp
 // Function SpawnSystem.STStrategySpecies_Static.OrderedReadUnit
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::OrderedReadUnit(int ReferencedCount, TArray<struct FUnitConfig> Units)
 {
@@ -2848,9 +2848,9 @@ void USTStrategySpecies_Static::OrderedReadUnit(int ReferencedCount, TArray<stru
 // Function SpawnSystem.STStrategySpecies_Static.OrderedReadSquad
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSquadConfig            SquadConfig                    (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSquadConfig SquadConfig (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::OrderedReadSquad(int ReferencedCount, const struct FSquadConfig& SquadConfig, TArray<struct FUnitConfig> Units)
 {
@@ -2876,10 +2876,10 @@ void USTStrategySpecies_Static::OrderedReadSquad(int ReferencedCount, const stru
 // Function SpawnSystem.STStrategySpecies_Static.OrderedReadGroup
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGroupConfig            GroupConfig                    (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FSquadConfig>    Squads                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGroupConfig GroupConfig (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FSquadConfig> Squads (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::OrderedReadGroup(int ReferencedCount, const struct FGroupConfig& GroupConfig, TArray<struct FSquadConfig> Squads, TArray<struct FUnitConfig> Units)
 {
@@ -2906,9 +2906,9 @@ void USTStrategySpecies_Static::OrderedReadGroup(int ReferencedCount, const stru
 // Function SpawnSystem.STStrategySpecies_Static.ManuallyReadUnit
 // (Final, Native, Protected, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            ReferencedCount                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FUnitConfig>     Units                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int ReferencedCount (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FUnitConfig> Units (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTStrategySpecies_Static::ManuallyReadUnit(int ReferencedCount, int Index, TArray<struct FUnitConfig> Units)
 {
@@ -2934,7 +2934,7 @@ void USTStrategySpecies_Static::ManuallyReadUnit(int ReferencedCount, int Index,
 // Function SpawnSystem.STStrategySpecies_Static.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategySpecies_Static::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -2958,7 +2958,7 @@ void USTStrategySpecies_Static::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function SpawnSystem.STStrategyTiming_Period.TickStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Period::TickStrategy(float DeltaTime)
 {
@@ -3045,7 +3045,7 @@ void USTStrategyTiming_Period::DeactivateStrategy()
 // Function SpawnSystem.STStrategyTiming_Period.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Period::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -3069,7 +3069,7 @@ void USTStrategyTiming_Period::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function SpawnSystem.STStrategyTiming_Trigger.TickStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Trigger::TickStrategy(float DeltaTime)
 {
@@ -3093,7 +3093,7 @@ void USTStrategyTiming_Trigger::TickStrategy(float DeltaTime)
 // Function SpawnSystem.STStrategyTiming_Trigger.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Trigger::ActivateStrategy(class ASTSpawnerBase* Owner)
 {
@@ -3117,7 +3117,7 @@ void USTStrategyTiming_Trigger::ActivateStrategy(class ASTSpawnerBase* Owner)
 // Function SpawnSystem.STStrategyTiming_Wave.TickStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Wave::TickStrategy(float DeltaTime)
 {
@@ -3162,7 +3162,7 @@ void USTStrategyTiming_Wave::ResetCD()
 // Function SpawnSystem.STStrategyTiming_Wave.OnTriggerToStartWave
 // (Final, Native, Protected)
 // Parameters:
-// bool                           IsRipe                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsRipe (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Wave::OnTriggerToStartWave(bool IsRipe)
 {
@@ -3207,7 +3207,7 @@ void USTStrategyTiming_Wave::OnDelayToStartWave()
 // Function SpawnSystem.STStrategyTiming_Wave.GetCurrentWave
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTStrategyTiming_Wave::GetCurrentWave()
 {
@@ -3232,7 +3232,7 @@ int USTStrategyTiming_Wave::GetCurrentWave()
 // Function SpawnSystem.STStrategyTiming_Wave.ActivateStrategy
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class ASTSpawnerBase*          Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTSpawnerBase* Owner (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTStrategyTiming_Wave::ActivateStrategy(class ASTSpawnerBase* Owner)
 {

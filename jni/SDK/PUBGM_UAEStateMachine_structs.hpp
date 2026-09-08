@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -12,25 +12,25 @@ namespace SDK
 // 0x0010
 struct FUAETransitionState
 {
-	struct FString                                     StateName;                                                // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString StateName; // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct UAEStateMachine.UAEStateMachineTransition
 // 0x0028
 struct FUAEStateMachineTransition
 {
-	TArray<struct FUAETransitionState>                 TransiteFromStates;                                       // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FUAETransitionState                         TransitToState;                                           // 0x0010(0x0010) (Edit)
-	float                                              AutoFiredDelayTime;                                       // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               AutoFiredForcedTransit;                                   // 0x0024(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
+	TArray<struct FUAETransitionState> TransiteFromStates; // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FUAETransitionState TransitToState; // 0x0010(0x0010) (Edit)
+	float AutoFiredDelayTime; // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool AutoFiredForcedTransit; // 0x0024(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0025(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct UAEStateMachine.UAEStatesGather
 // 0x0010
 struct FUAEStatesGather
 {
-	TArray<class UUAEState*>                           States;                                                   // 0x0000(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UUAEState*> States; // 0x0000(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
 };
 
 }

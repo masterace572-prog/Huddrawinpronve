@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -13,19 +13,19 @@ namespace SDK
 // Function NiagaraUIRenderer.NiagaraSystemWidget.SetIsActivated
 struct UNiagaraSystemWidget_SetIsActivated_Params
 {
-	bool                                               bInIsActive;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool bInIsActive; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function NiagaraUIRenderer.NiagaraSystemWidget.GetNiagaraComponent
 struct UNiagaraSystemWidget_GetNiagaraComponent_Params
 {
-	class UNiagaraUIComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	class UNiagaraUIComponent* ReturnValue; // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function NiagaraUIRenderer.NiagaraSystemWidget.GetIsActivated
 struct UNiagaraSystemWidget_GetIsActivated_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	bool ReturnValue; // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function NiagaraUIRenderer.NiagaraSystemWidget.DeactivateSystem
@@ -36,7 +36,7 @@ struct UNiagaraSystemWidget_DeactivateSystem_Params
 // Function NiagaraUIRenderer.NiagaraSystemWidget.ActivateSystem
 struct UNiagaraSystemWidget_ActivateSystem_Params
 {
-	bool                                               Reset;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool Reset; // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

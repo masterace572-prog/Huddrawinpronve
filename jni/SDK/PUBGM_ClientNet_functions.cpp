@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ClientNet.HDmpveNet.SetTickNetMsgMaxTime
 // (Final, Native, Private)
 // Parameters:
-// float                          MaxTime                        (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::SetTickNetMsgMaxTime(float MaxTime)
 {
@@ -35,7 +35,7 @@ void UHDmpveNet::SetTickNetMsgMaxTime(float MaxTime)
 // Function ClientNet.HDmpveNet.OnWebviewNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FWebviewInfoWrapper     webviewinfo                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FWebviewInfoWrapper webviewinfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnWebviewNotify(const struct FWebviewInfoWrapper& webviewinfo)
 {
@@ -59,7 +59,7 @@ void UHDmpveNet::OnWebviewNotify(const struct FWebviewInfoWrapper& webviewinfo)
 // Function ClientNet.HDmpveNet.OnUAAssistantNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FUAAssistantInfoWrapper uaAssistantInfo                (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FUAAssistantInfoWrapper uaAssistantInfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnUAAssistantNotify(const struct FUAAssistantInfoWrapper& uaAssistantInfo)
 {
@@ -83,8 +83,8 @@ void UHDmpveNet::OnUAAssistantNotify(const struct FUAAssistantInfoWrapper& uaAss
 // Function ClientNet.HDmpveNet.OnTraceCallBack
 // (Final, Native, Private)
 // Parameters:
-// int                            code                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 dataJson                       (Parm, ZeroConstructor)
+// int code (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString dataJson (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnTraceCallBack(int code, const struct FString& dataJson)
 {
@@ -130,8 +130,8 @@ void UHDmpveNet::OnTConndAuthFailDelegate()
 // Function ClientNet.HDmpveNet.OnShareNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Platform                       (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
+// int Platform (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnShareNotify(int Result, int Platform)
 {
@@ -156,9 +156,9 @@ void UHDmpveNet::OnShareNotify(int Result, int Platform)
 // Function ClientNet.HDmpveNet.OnRequestPermissionsResult
 // (Final, Native, Private)
 // Parameters:
-// int                            code                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 permission                     (Parm, ZeroConstructor)
-// struct FString                 grantResult                    (Parm, ZeroConstructor)
+// int code (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString permission (Parm, ZeroConstructor)
+// struct FString grantResult (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnRequestPermissionsResult(int code, const struct FString& permission, const struct FString& grantResult)
 {
@@ -184,8 +184,8 @@ void UHDmpveNet::OnRequestPermissionsResult(int code, const struct FString& perm
 // Function ClientNet.HDmpveNet.OnReceiveDataNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          Msg                            (Parm, ZeroConstructor)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Msg (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnReceiveDataNotify(int Result, TArray<unsigned char> Msg)
 {
@@ -210,7 +210,7 @@ void UHDmpveNet::OnReceiveDataNotify(int Result, TArray<unsigned char> Msg)
 // Function ClientNet.HDmpveNet.OnQuickLoginNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FWakeupInfoWrapper      wakeupinfo                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FWakeupInfoWrapper wakeupinfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnQuickLoginNotify(const struct FWakeupInfoWrapper& wakeupinfo)
 {
@@ -234,9 +234,9 @@ void UHDmpveNet::OnQuickLoginNotify(const struct FWakeupInfoWrapper& wakeupinfo)
 // Function ClientNet.HDmpveNet.OnQRCodeGenQRImg
 // (Final, Native, Private)
 // Parameters:
-// int                            Tag                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Ret                            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 imgPath                        (Parm, ZeroConstructor)
+// int Tag (Parm, ZeroConstructor, IsPlainOldData)
+// int Ret (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString imgPath (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnQRCodeGenQRImg(int Tag, int Ret, const struct FString& imgPath)
 {
@@ -262,7 +262,7 @@ void UHDmpveNet::OnQRCodeGenQRImg(int Tag, int Ret, const struct FString& imgPat
 // Function ClientNet.HDmpveNet.OnMigrateNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnMigrateNotify(int Result)
 {
@@ -286,7 +286,7 @@ void UHDmpveNet::OnMigrateNotify(int Result)
 // Function ClientNet.HDmpveNet.OnLaunchInfo
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 roominfo                       (Parm, ZeroConstructor)
+// struct FString roominfo (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnLaunchInfo(const struct FString& roominfo)
 {
@@ -310,8 +310,8 @@ void UHDmpveNet::OnLaunchInfo(const struct FString& roominfo)
 // Function ClientNet.HDmpveNet.OnIGShareUploadFinished
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Platform                       (Parm, ZeroConstructor)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Platform (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnIGShareUploadFinished(int Result, const struct FString& Platform)
 {
@@ -336,7 +336,7 @@ void UHDmpveNet::OnIGShareUploadFinished(int Result, const struct FString& Platf
 // Function ClientNet.HDmpveNet.OnGroupNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FGroupInfoWrapper       groupInfo                      (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGroupInfoWrapper groupInfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnGroupNotify(const struct FGroupInfoWrapper& groupInfo)
 {
@@ -360,7 +360,7 @@ void UHDmpveNet::OnGroupNotify(const struct FGroupInfoWrapper& groupInfo)
 // Function ClientNet.HDmpveNet.OnGetWebviewActionNotify
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 webviewinfo                    (Parm, ZeroConstructor)
+// struct FString webviewinfo (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnGetWebviewActionNotify(const struct FString& webviewinfo)
 {
@@ -384,7 +384,7 @@ void UHDmpveNet::OnGetWebviewActionNotify(const struct FString& webviewinfo)
 // Function ClientNet.HDmpveNet.OnGetTicketNotify
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 TicketInfo                     (Parm, ZeroConstructor)
+// struct FString TicketInfo (Parm, ZeroConstructor)
 
 void UHDmpveNet::OnGetTicketNotify(const struct FString& TicketInfo)
 {
@@ -408,7 +408,7 @@ void UHDmpveNet::OnGetTicketNotify(const struct FString& TicketInfo)
 // Function ClientNet.HDmpveNet.OnGetShortUrlNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FShortURLInfoWrapper    shorturlinfo                   (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FShortURLInfoWrapper shorturlinfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnGetShortUrlNotify(const struct FShortURLInfoWrapper& shorturlinfo)
 {
@@ -432,7 +432,7 @@ void UHDmpveNet::OnGetShortUrlNotify(const struct FShortURLInfoWrapper& shorturl
 // Function ClientNet.HDmpveNet.OnGetPlatformFriendsNotify
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FPlatformFriendInfoMap  platformFriends                (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FPlatformFriendInfoMap platformFriends (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UHDmpveNet::OnGetPlatformFriendsNotify(const struct FPlatformFriendInfoMap& platformFriends)
 {
@@ -456,7 +456,7 @@ void UHDmpveNet::OnGetPlatformFriendsNotify(const struct FPlatformFriendInfoMap&
 // Function ClientNet.HDmpveNet.OnGetCountryNoByIMSDK
 // (Final, Native, Private)
 // Parameters:
-// int                            Country                        (Parm, ZeroConstructor, IsPlainOldData)
+// int Country (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnGetCountryNoByIMSDK(int Country)
 {
@@ -480,8 +480,8 @@ void UHDmpveNet::OnGetCountryNoByIMSDK(int Country)
 // Function ClientNet.HDmpveNet.OnGameMasterEvent
 // (Final, Native, Private)
 // Parameters:
-// struct FString                 EvenName                       (Parm, ZeroConstructor)
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EvenName (Parm, ZeroConstructor)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnGameMasterEvent(const struct FString& EvenName, int Result)
 {
@@ -506,10 +506,10 @@ void UHDmpveNet::OnGameMasterEvent(const struct FString& EvenName, int Result)
 // Function ClientNet.HDmpveNet.OnConnectorStateChangeNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            State                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Param2                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            param3                         (Parm, ZeroConstructor, IsPlainOldData)
+// int State (Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// int Param2 (Parm, ZeroConstructor, IsPlainOldData)
+// int param3 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnConnectorStateChangeNotify(int State, int Param1, int Param2, int param3)
 {
@@ -536,7 +536,7 @@ void UHDmpveNet::OnConnectorStateChangeNotify(int State, int Param1, int Param2,
 // Function ClientNet.HDmpveNet.OnConnectorDisconnectedNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnConnectorDisconnectedNotify(int Result)
 {
@@ -560,8 +560,8 @@ void UHDmpveNet::OnConnectorDisconnectedNotify(int Result)
 // Function ClientNet.HDmpveNet.OnConnectorConnectedNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            IsConnected                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            nResult                        (Parm, ZeroConstructor, IsPlainOldData)
+// int IsConnected (Parm, ZeroConstructor, IsPlainOldData)
+// int nResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnConnectorConnectedNotify(int IsConnected, int nResult)
 {
@@ -586,7 +586,7 @@ void UHDmpveNet::OnConnectorConnectedNotify(int IsConnected, int nResult)
 // Function ClientNet.HDmpveNet.OnBindIntlNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            bindEventID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int bindEventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnBindIntlNotify(int bindEventID)
 {
@@ -610,7 +610,7 @@ void UHDmpveNet::OnBindIntlNotify(int bindEventID)
 // Function ClientNet.HDmpveNet.OnAccountLogoutNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnAccountLogoutNotify(int Result)
 {
@@ -634,11 +634,11 @@ void UHDmpveNet::OnAccountLogoutNotify(int Result)
 // Function ClientNet.HDmpveNet.OnAccountLoginNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 OpenID                         (Parm, ZeroConstructor)
-// int                            Channel                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 resultMsg                      (Parm, ZeroConstructor)
-// int                            thirdRetCode                   (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString OpenID (Parm, ZeroConstructor)
+// int Channel (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString resultMsg (Parm, ZeroConstructor)
+// int thirdRetCode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnAccountLoginNotify(int Result, const struct FString& OpenID, int Channel, const struct FString& resultMsg, int thirdRetCode)
 {
@@ -666,7 +666,7 @@ void UHDmpveNet::OnAccountLoginNotify(int Result, const struct FString& OpenID, 
 // Function ClientNet.HDmpveNet.OnAccountInitializeNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnAccountInitializeNotify(int Result)
 {
@@ -690,7 +690,7 @@ void UHDmpveNet::OnAccountInitializeNotify(int Result)
 // Function ClientNet.HDmpveNet.OnAccessTokenRefreshedNotify
 // (Final, Native, Private)
 // Parameters:
-// int                            Result                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Result (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveNet::OnAccessTokenRefreshedNotify(int Result)
 {
@@ -714,9 +714,9 @@ void UHDmpveNet::OnAccessTokenRefreshedNotify(int Result)
 // Function ClientNet.HDmpveSDK.UploadFile
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 _imgPath                       (Parm, ZeroConstructor)
-// int                            shareFileType                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InDestKey                      (Parm, ZeroConstructor)
+// struct FString _imgPath (Parm, ZeroConstructor)
+// int shareFileType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InDestKey (Parm, ZeroConstructor)
 
 void UHDmpveSDK::UploadFile(const struct FString& _imgPath, int shareFileType, const struct FString& InDestKey)
 {
@@ -742,10 +742,10 @@ void UHDmpveSDK::UploadFile(const struct FString& _imgPath, int shareFileType, c
 // Function ClientNet.HDmpveSDK.ShareWithUploadPhotoByChannel
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 _imgPath                       (Parm, ZeroConstructor)
-// int                            _channel                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 _url                           (Parm, ZeroConstructor)
-// struct FString                 _destKey                       (Parm, ZeroConstructor)
+// struct FString _imgPath (Parm, ZeroConstructor)
+// int _channel (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString _url (Parm, ZeroConstructor)
+// struct FString _destKey (Parm, ZeroConstructor)
 
 void UHDmpveSDK::ShareWithUploadPhotoByChannel(const struct FString& _imgPath, int _channel, const struct FString& _url, const struct FString& _destKey)
 {
@@ -772,10 +772,10 @@ void UHDmpveSDK::ShareWithUploadPhotoByChannel(const struct FString& _imgPath, i
 // Function ClientNet.HDmpveSDK.ShareWithPhotoByChannel_Simple
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 _imgPath                       (Parm, ZeroConstructor)
-// struct FString                 _title                         (Parm, ZeroConstructor)
-// struct FString                 _content                       (Parm, ZeroConstructor)
-// int                            _channel                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString _imgPath (Parm, ZeroConstructor)
+// struct FString _title (Parm, ZeroConstructor)
+// struct FString _content (Parm, ZeroConstructor)
+// int _channel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveSDK::ShareWithPhotoByChannel_Simple(const struct FString& _imgPath, const struct FString& _title, const struct FString& _content, int _channel)
 {
@@ -802,9 +802,9 @@ void UHDmpveSDK::ShareWithPhotoByChannel_Simple(const struct FString& _imgPath, 
 // Function ClientNet.HDmpveSDK.ShareFacebookLink
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 ftitle                         (Parm, ZeroConstructor)
-// struct FString                 fdesc                          (Parm, ZeroConstructor)
-// struct FString                 fsharelink                     (Parm, ZeroConstructor)
+// struct FString ftitle (Parm, ZeroConstructor)
+// struct FString fdesc (Parm, ZeroConstructor)
+// struct FString fsharelink (Parm, ZeroConstructor)
 
 void UHDmpveSDK::ShareFacebookLink(const struct FString& ftitle, const struct FString& fdesc, const struct FString& fsharelink)
 {
@@ -830,8 +830,8 @@ void UHDmpveSDK::ShareFacebookLink(const struct FString& ftitle, const struct FS
 // Function ClientNet.HDmpveSDK.SetTestLogin
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 OpenID                         (Parm, ZeroConstructor)
-// int                            Channel                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString OpenID (Parm, ZeroConstructor)
+// int Channel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveSDK::SetTestLogin(const struct FString& OpenID, int Channel)
 {
@@ -856,9 +856,9 @@ void UHDmpveSDK::SetTestLogin(const struct FString& OpenID, int Channel)
 // Function ClientNet.HDmpveSDK.InviteSystemOfflineFriendsExt2
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 _title                         (Parm, ZeroConstructor)
-// struct FString                 _content                       (Parm, ZeroConstructor)
-// struct FString                 _link                          (Parm, ZeroConstructor)
+// struct FString _title (Parm, ZeroConstructor)
+// struct FString _content (Parm, ZeroConstructor)
+// struct FString _link (Parm, ZeroConstructor)
 
 void UHDmpveSDK::InviteSystemOfflineFriendsExt2(const struct FString& _title, const struct FString& _content, const struct FString& _link)
 {
@@ -884,9 +884,9 @@ void UHDmpveSDK::InviteSystemOfflineFriendsExt2(const struct FString& _title, co
 // Function ClientNet.HDmpveSDK.InviteSystemOfflineFriendsExt
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 _title                         (Parm, ZeroConstructor)
-// struct FString                 _content                       (Parm, ZeroConstructor)
-// struct FString                 _link                          (Parm, ZeroConstructor)
+// struct FString _title (Parm, ZeroConstructor)
+// struct FString _content (Parm, ZeroConstructor)
+// struct FString _link (Parm, ZeroConstructor)
 
 void UHDmpveSDK::InviteSystemOfflineFriendsExt(const struct FString& _title, const struct FString& _content, const struct FString& _link)
 {
@@ -912,10 +912,10 @@ void UHDmpveSDK::InviteSystemOfflineFriendsExt(const struct FString& _title, con
 // Function ClientNet.HDmpveSDK.InviteFBFriendsUnregistered_Link
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 _title                         (Parm, ZeroConstructor)
-// struct FString                 _content                       (Parm, ZeroConstructor)
-// struct FString                 _link                          (Parm, ZeroConstructor)
-// struct FString                 _extend                        (Parm, ZeroConstructor)
+// struct FString _title (Parm, ZeroConstructor)
+// struct FString _content (Parm, ZeroConstructor)
+// struct FString _link (Parm, ZeroConstructor)
+// struct FString _extend (Parm, ZeroConstructor)
 
 void UHDmpveSDK::InviteFBFriendsUnregistered_Link(const struct FString& _title, const struct FString& _content, const struct FString& _link, const struct FString& _extend)
 {
@@ -942,7 +942,7 @@ void UHDmpveSDK::InviteFBFriendsUnregistered_Link(const struct FString& _title, 
 // Function ClientNet.HDmpveSDK.HttpDnsSetOpenid
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 InOpenid                       (Parm, ZeroConstructor)
+// struct FString InOpenid (Parm, ZeroConstructor)
 
 void UHDmpveSDK::HttpDnsSetOpenid(const struct FString& InOpenid)
 {
@@ -966,9 +966,9 @@ void UHDmpveSDK::HttpDnsSetOpenid(const struct FString& InOpenid)
 // Function ClientNet.HDmpveSDK.HttpDnsInit
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 InAppId                        (Parm, ZeroConstructor)
-// bool                           InIsDebug                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InTimeout                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InAppId (Parm, ZeroConstructor)
+// bool InIsDebug (Parm, ZeroConstructor, IsPlainOldData)
+// int InTimeout (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHDmpveSDK::HttpDnsInit(const struct FString& InAppId, bool InIsDebug, int InTimeout)
 {
@@ -1015,8 +1015,8 @@ void UHDmpveSDK::HttpDnsDestroy()
 // Function ClientNet.HDmpveSDK.GRomePingDuallink
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 InHost                         (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InHost (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHDmpveSDK::GRomePingDuallink(const struct FString& InHost)
 {
@@ -1042,7 +1042,7 @@ int UHDmpveSDK::GRomePingDuallink(const struct FString& InHost)
 // Function ClientNet.HDmpveSDK.GRomeGetDuallinkStatus
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHDmpveSDK::GRomeGetDuallinkStatus()
 {
@@ -1067,8 +1067,8 @@ int UHDmpveSDK::GRomeGetDuallinkStatus()
 // Function ClientNet.HDmpveSDK.GetUploadUrlByFile
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 file                           (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString file (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHDmpveSDK::GetUploadUrlByFile(const struct FString& file)
 {
@@ -1094,7 +1094,7 @@ struct FString UHDmpveSDK::GetUploadUrlByFile(const struct FString& file)
 // Function ClientNet.HDmpveSDK.GetUploadUrl
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHDmpveSDK::GetUploadUrl()
 {
@@ -1119,8 +1119,8 @@ struct FString UHDmpveSDK::GetUploadUrl()
 // Function ClientNet.HDmpveSDK.GetUploadStatusByFile
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 file                           (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString file (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHDmpveSDK::GetUploadStatusByFile(const struct FString& file)
 {
@@ -1146,7 +1146,7 @@ int UHDmpveSDK::GetUploadStatusByFile(const struct FString& file)
 // Function ClientNet.HDmpveSDK.GetUploadStatus
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHDmpveSDK::GetUploadStatus()
 {
@@ -1171,7 +1171,7 @@ int UHDmpveSDK::GetUploadStatus()
 // Function ClientNet.HDmpveSDK.ClearFileUpload
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 file                           (Parm, ZeroConstructor)
+// struct FString file (Parm, ZeroConstructor)
 
 void UHDmpveSDK::ClearFileUpload(const struct FString& file)
 {
@@ -1216,8 +1216,8 @@ void UIMSDKConfig::PatchMSDKConfigWithAreaConfig()
 // Function ClientNet.IMSDKConfig.GetIMSDKLogLevel
 // (Final, Native, Public)
 // Parameters:
-// int                            InEnv                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int InEnv (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKConfig::GetIMSDKLogLevel(int InEnv)
 {
@@ -1243,7 +1243,7 @@ struct FString UIMSDKConfig::GetIMSDKLogLevel(int InEnv)
 // Function ClientNet.IMSDKHelper.UpdateIMSDKBindResult
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InBindResult                   (Parm, ZeroConstructor)
+// struct FString InBindResult (Parm, ZeroConstructor)
 
 void UIMSDKHelper::UpdateIMSDKBindResult(const struct FString& InBindResult)
 {
@@ -1267,8 +1267,8 @@ void UIMSDKHelper::UpdateIMSDKBindResult(const struct FString& InBindResult)
 // Function ClientNet.IMSDKHelper.SwitchQRCodeLoginResult
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InOpenid                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InOpenid (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::SwitchQRCodeLoginResult(const struct FString& InOpenid)
 {
@@ -1294,9 +1294,9 @@ bool UIMSDKHelper::SwitchQRCodeLoginResult(const struct FString& InOpenid)
 // Function ClientNet.IMSDKHelper.StartWebVerify
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraInfo                    (Parm, ZeroConstructor)
-// struct FString                 InVerifyAppId                  (Parm, ZeroConstructor)
-// struct FString                 InAccount                      (Parm, ZeroConstructor)
+// struct FString InExtraInfo (Parm, ZeroConstructor)
+// struct FString InVerifyAppId (Parm, ZeroConstructor)
+// struct FString InAccount (Parm, ZeroConstructor)
 
 void UIMSDKHelper::StartWebVerify(const struct FString& InExtraInfo, const struct FString& InVerifyAppId, const struct FString& InAccount)
 {
@@ -1322,7 +1322,7 @@ void UIMSDKHelper::StartWebVerify(const struct FString& InExtraInfo, const struc
 // Function ClientNet.IMSDKHelper.SetWindowEditorLoginTokenIndex
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SetWindowEditorLoginTokenIndex(int Index)
 {
@@ -1346,8 +1346,8 @@ void UIMSDKHelper::SetWindowEditorLoginTokenIndex(int Index)
 // Function ClientNet.IMSDKHelper.SetupLoginCacheInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InChannelID                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InIsQuickLogin                 (Parm, ZeroConstructor, IsPlainOldData)
+// int InChannelID (Parm, ZeroConstructor, IsPlainOldData)
+// bool InIsQuickLogin (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SetupLoginCacheInfo(int InChannelID, bool InIsQuickLogin)
 {
@@ -1372,9 +1372,9 @@ void UIMSDKHelper::SetupLoginCacheInfo(int InChannelID, bool InIsQuickLogin)
 // Function ClientNet.IMSDKHelper.SetupAdjustDMA
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InEEA                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InAdPersonalization            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InAdUserData                   (Parm, ZeroConstructor, IsPlainOldData)
+// int InEEA (Parm, ZeroConstructor, IsPlainOldData)
+// int InAdPersonalization (Parm, ZeroConstructor, IsPlainOldData)
+// int InAdUserData (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SetupAdjustDMA(int InEEA, int InAdPersonalization, int InAdUserData)
 {
@@ -1400,7 +1400,7 @@ void UIMSDKHelper::SetupAdjustDMA(int InEEA, int InAdPersonalization, int InAdUs
 // Function ClientNet.IMSDKHelper.SetUgId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InUgId                         (Parm, ZeroConstructor)
+// struct FString InUgId (Parm, ZeroConstructor)
 
 void UIMSDKHelper::SetUgId(const struct FString& InUgId)
 {
@@ -1424,7 +1424,7 @@ void UIMSDKHelper::SetUgId(const struct FString& InUgId)
 // Function ClientNet.IMSDKHelper.SetNoAuthOpenid
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 OpenID                         (Parm, ZeroConstructor)
+// struct FString OpenID (Parm, ZeroConstructor)
 
 void UIMSDKHelper::SetNoAuthOpenid(const struct FString& OpenID)
 {
@@ -1448,8 +1448,8 @@ void UIMSDKHelper::SetNoAuthOpenid(const struct FString& OpenID)
 // Function ClientNet.IMSDKHelper.SetMSDKConfig
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, struct FString> InConfigMaps                   (Parm, OutParm, ZeroConstructor)
-// bool                           InClearLoginData               (Parm, ZeroConstructor, IsPlainOldData)
+// TMap<struct FString, struct FString> InConfigMaps (Parm, OutParm, ZeroConstructor)
+// bool InClearLoginData (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SetMSDKConfig(bool InClearLoginData, TMap<struct FString, struct FString>* InConfigMaps)
 {
@@ -1476,7 +1476,7 @@ void UIMSDKHelper::SetMSDKConfig(bool InClearLoginData, TMap<struct FString, str
 // Function ClientNet.IMSDKHelper.SetLoginType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InIMSDKChannelName             (Parm, ZeroConstructor)
+// struct FString InIMSDKChannelName (Parm, ZeroConstructor)
 
 void UIMSDKHelper::SetLoginType(const struct FString& InIMSDKChannelName)
 {
@@ -1500,8 +1500,8 @@ void UIMSDKHelper::SetLoginType(const struct FString& InIMSDKChannelName)
 // Function ClientNet.IMSDKHelper.SetLoginResult
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InLoginRetJson                 (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InLoginRetJson (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::SetLoginResult(const struct FString& InLoginRetJson)
 {
@@ -1527,7 +1527,7 @@ struct FString UIMSDKHelper::SetLoginResult(const struct FString& InLoginRetJson
 // Function ClientNet.IMSDKHelper.SetIMSDKEnv
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            iEnv                           (Parm, ZeroConstructor, IsPlainOldData)
+// int iEnv (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SetIMSDKEnv(int iEnv)
 {
@@ -1548,10 +1548,37 @@ void UIMSDKHelper::SetIMSDKEnv(int iEnv)
 }
 
 
+// Function ClientNet.IMSDKHelper.SetGameDeviceId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InGameDeviceId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UIMSDKHelper::SetGameDeviceId(const struct FString& InGameDeviceId)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.SetGameDeviceId");
+
+	UIMSDKHelper_SetGameDeviceId_Params params;
+	params.InGameDeviceId = InGameDeviceId;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ClientNet.IMSDKHelper.SetChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InIMSDKChannelName             (Parm, ZeroConstructor)
+// struct FString InIMSDKChannelName (Parm, ZeroConstructor)
 
 void UIMSDKHelper::SetChannel(const struct FString& InIMSDKChannelName)
 {
@@ -1575,16 +1602,16 @@ void UIMSDKHelper::SetChannel(const struct FString& InIMSDKChannelName)
 // Function ClientNet.IMSDKHelper.SetAdvertiseUserID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 userID                         (Parm, ZeroConstructor)
+// struct FString UserId (Parm, ZeroConstructor)
 
-void UIMSDKHelper::SetAdvertiseUserID(const struct FString& userID)
+void UIMSDKHelper::SetAdvertiseUserID(const struct FString& UserId)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.SetAdvertiseUserID");
 
 	UIMSDKHelper_SetAdvertiseUserID_Params params;
-	params.userID = userID;
+	params.UserId = UserId;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -1599,7 +1626,7 @@ void UIMSDKHelper::SetAdvertiseUserID(const struct FString& userID)
 // Function ClientNet.IMSDKHelper.SetAdvertiseCustomData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InCustomData                   (Parm, ZeroConstructor)
+// struct FString InCustomData (Parm, ZeroConstructor)
 
 void UIMSDKHelper::SetAdvertiseCustomData(const struct FString& InCustomData)
 {
@@ -1623,7 +1650,7 @@ void UIMSDKHelper::SetAdvertiseCustomData(const struct FString& InCustomData)
 // Function ClientNet.IMSDKHelper.SaveLastIMSDKChannelID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            channelId                      (Parm, ZeroConstructor, IsPlainOldData)
+// int channelId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::SaveLastIMSDKChannelID(int channelId)
 {
@@ -1647,12 +1674,12 @@ void UIMSDKHelper::SaveLastIMSDKChannelID(int channelId)
 // Function ClientNet.IMSDKHelper.RequestVerifyCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InPhoneOrEmail                 (Parm, ZeroConstructor)
-// int                            InAccountType                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InUseForType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InPhoneAreaCode                (Parm, ZeroConstructor)
-// struct FString                 InLanuageCode                  (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InPhoneOrEmail (Parm, ZeroConstructor)
+// int InAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// int InUseForType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPhoneAreaCode (Parm, ZeroConstructor)
+// struct FString InLanuageCode (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::RequestVerifyCode(const struct FString& InPhoneOrEmail, int InAccountType, int InUseForType, const struct FString& InPhoneAreaCode, const struct FString& InLanuageCode, const struct FString& InExtraJson)
 {
@@ -1702,8 +1729,8 @@ void UIMSDKHelper::RefreshLogin()
 // Function ClientNet.IMSDKHelper.RecoverGuest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 channelUserId                  (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString channelUserId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::RecoverGuest(const struct FString& channelUserId)
 {
@@ -1750,9 +1777,9 @@ void UIMSDKHelper::QuickLogin()
 // Function ClientNet.IMSDKHelper.QueryQRCodeStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InCodeId                       (Parm, ZeroConstructor)
-// struct FString                 InRandStr                      (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InCodeId (Parm, ZeroConstructor)
+// struct FString InRandStr (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::QueryQRCodeStatus(const struct FString& InCodeId, const struct FString& InRandStr, const struct FString& InExtraJson)
 {
@@ -1799,15 +1826,15 @@ void UIMSDKHelper::PlayAdvertise()
 // Function ClientNet.IMSDKHelper.OriginalShare
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InShareType                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InMSDKChannelName              (Parm, ZeroConstructor)
-// struct FString                 InTitle                        (Parm, ZeroConstructor)
-// struct FString                 InContent                      (Parm, ZeroConstructor)
-// struct FString                 InLink                         (Parm, ZeroConstructor)
-// struct FString                 InThumbPath                    (Parm, ZeroConstructor)
-// struct FString                 InImagePath                    (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
-// struct FString                 InUser                         (Parm, ZeroConstructor)
+// int InShareType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InMSDKChannelName (Parm, ZeroConstructor)
+// struct FString InTitle (Parm, ZeroConstructor)
+// struct FString InContent (Parm, ZeroConstructor)
+// struct FString InLink (Parm, ZeroConstructor)
+// struct FString InThumbPath (Parm, ZeroConstructor)
+// struct FString InImagePath (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
+// struct FString InUser (Parm, ZeroConstructor)
 
 void UIMSDKHelper::OriginalShare(int InShareType, const struct FString& InMSDKChannelName, const struct FString& InTitle, const struct FString& InContent, const struct FString& InLink, const struct FString& InThumbPath, const struct FString& InImagePath, const struct FString& InExtraJson, const struct FString& InUser)
 {
@@ -1839,9 +1866,9 @@ void UIMSDKHelper::OriginalShare(int InShareType, const struct FString& InMSDKCh
 // Function ClientNet.IMSDKHelper.OriginalLogin
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
-// TArray<struct FString>         InPermissions                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           InNeedGuid                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InExtraJson (Parm, ZeroConstructor)
+// TArray<struct FString> InPermissions (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool InNeedGuid (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::OriginalLogin(const struct FString& InExtraJson, TArray<struct FString> InPermissions, bool InNeedGuid)
 {
@@ -1867,9 +1894,9 @@ void UIMSDKHelper::OriginalLogin(const struct FString& InExtraJson, TArray<struc
 // Function ClientNet.IMSDKHelper.OriginalBind
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InChannel                      (Parm, ZeroConstructor)
-// struct FString                 InSubChannel                   (Parm, ZeroConstructor)
-// struct FString                 InExtra                        (Parm, ZeroConstructor)
+// struct FString InChannel (Parm, ZeroConstructor)
+// struct FString InSubChannel (Parm, ZeroConstructor)
+// struct FString InExtra (Parm, ZeroConstructor)
 
 void UIMSDKHelper::OriginalBind(const struct FString& InChannel, const struct FString& InSubChannel, const struct FString& InExtra)
 {
@@ -1895,8 +1922,8 @@ void UIMSDKHelper::OriginalBind(const struct FString& InChannel, const struct FS
 // Function ClientNet.IMSDKHelper.OnCommandLogin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InCmd                          (Parm, ZeroConstructor)
-// struct FString                 InExtra                        (Parm, ZeroConstructor)
+// struct FString InCmd (Parm, ZeroConstructor)
+// struct FString InExtra (Parm, ZeroConstructor)
 
 void UIMSDKHelper::OnCommandLogin(const struct FString& InCmd, const struct FString& InExtra)
 {
@@ -1921,17 +1948,17 @@ void UIMSDKHelper::OnCommandLogin(const struct FString& InCmd, const struct FStr
 // Function ClientNet.IMSDKHelper.ModifyAccountInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InAccount                      (Parm, ZeroConstructor)
-// int                            InAccountType                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InVerifyType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InVerifyData                   (Parm, ZeroConstructor)
-// struct FString                 InPhoneAreaCode                (Parm, ZeroConstructor)
-// struct FString                 InLanuageCode                  (Parm, ZeroConstructor)
-// struct FString                 InMondifyToAccount             (Parm, ZeroConstructor)
-// int                            InModifyAccountType            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InModifyVerifyCode             (Parm, ZeroConstructor)
-// struct FString                 InModifyPhoneAreaCode          (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InAccount (Parm, ZeroConstructor)
+// int InAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// int InVerifyType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVerifyData (Parm, ZeroConstructor)
+// struct FString InPhoneAreaCode (Parm, ZeroConstructor)
+// struct FString InLanuageCode (Parm, ZeroConstructor)
+// struct FString InMondifyToAccount (Parm, ZeroConstructor)
+// int InModifyAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InModifyVerifyCode (Parm, ZeroConstructor)
+// struct FString InModifyPhoneAreaCode (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::ModifyAccountInfo(const struct FString& InAccount, int InAccountType, int InVerifyType, const struct FString& InVerifyData, const struct FString& InPhoneAreaCode, const struct FString& InLanuageCode, const struct FString& InMondifyToAccount, int InModifyAccountType, const struct FString& InModifyVerifyCode, const struct FString& InModifyPhoneAreaCode, const struct FString& InExtraJson)
 {
@@ -1965,7 +1992,7 @@ void UIMSDKHelper::ModifyAccountInfo(const struct FString& InAccount, int InAcco
 // Function ClientNet.IMSDKHelper.LogoutWith
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InMSDKChannelId                (Parm, ZeroConstructor, IsPlainOldData)
+// int InMSDKChannelId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UIMSDKHelper::LogoutWith(int InMSDKChannelId)
 {
@@ -1989,7 +2016,7 @@ void UIMSDKHelper::LogoutWith(int InMSDKChannelId)
 // Function ClientNet.IMSDKHelper.LogoutQRCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InOpenid                       (Parm, ZeroConstructor)
+// struct FString InOpenid (Parm, ZeroConstructor)
 
 void UIMSDKHelper::LogoutQRCode(const struct FString& InOpenid)
 {
@@ -2013,7 +2040,7 @@ void UIMSDKHelper::LogoutQRCode(const struct FString& InOpenid)
 // Function ClientNet.IMSDKHelper.LoadAdvertise
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InAdvertiseUnitId              (Parm, ZeroConstructor)
+// struct FString InAdvertiseUnitId (Parm, ZeroConstructor)
 
 void UIMSDKHelper::LoadAdvertise(const struct FString& InAdvertiseUnitId)
 {
@@ -2037,8 +2064,8 @@ void UIMSDKHelper::LoadAdvertise(const struct FString& InAdvertiseUnitId)
 // Function ClientNet.IMSDKHelper.IsEqualCurLoginPlatform
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 strChannel                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString strChannel (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsEqualCurLoginPlatform(const struct FString& strChannel)
 {
@@ -2064,8 +2091,8 @@ bool UIMSDKHelper::IsEqualCurLoginPlatform(const struct FString& strChannel)
 // Function ClientNet.IMSDKHelper.IsChannelBound
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InMSDKChannelId                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InMSDKChannelId (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsChannelBound(int InMSDKChannelId)
 {
@@ -2091,7 +2118,7 @@ bool UIMSDKHelper::IsChannelBound(int InMSDKChannelId)
 // Function ClientNet.IMSDKHelper.IsAlreadyBindWhatsApp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindWhatsApp()
 {
@@ -2116,7 +2143,7 @@ bool UIMSDKHelper::IsAlreadyBindWhatsApp()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindVK
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindVK()
 {
@@ -2141,7 +2168,7 @@ bool UIMSDKHelper::IsAlreadyBindVK()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindUnifiedAccount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindUnifiedAccount()
 {
@@ -2166,7 +2193,7 @@ bool UIMSDKHelper::IsAlreadyBindUnifiedAccount()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindTwitter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindTwitter()
 {
@@ -2191,7 +2218,7 @@ bool UIMSDKHelper::IsAlreadyBindTwitter()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindTikTok
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindTikTok()
 {
@@ -2216,7 +2243,7 @@ bool UIMSDKHelper::IsAlreadyBindTikTok()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindNosChat
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindNosChat()
 {
@@ -2241,7 +2268,7 @@ bool UIMSDKHelper::IsAlreadyBindNosChat()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindLine
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindLine()
 {
@@ -2266,7 +2293,7 @@ bool UIMSDKHelper::IsAlreadyBindLine()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindHMS
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindHMS()
 {
@@ -2291,7 +2318,7 @@ bool UIMSDKHelper::IsAlreadyBindHMS()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindGooglePlay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindGooglePlay()
 {
@@ -2316,7 +2343,7 @@ bool UIMSDKHelper::IsAlreadyBindGooglePlay()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindGameCenter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindGameCenter()
 {
@@ -2341,7 +2368,7 @@ bool UIMSDKHelper::IsAlreadyBindGameCenter()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindFB
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindFB()
 {
@@ -2366,7 +2393,7 @@ bool UIMSDKHelper::IsAlreadyBindFB()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindDiscord
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindDiscord()
 {
@@ -2391,7 +2418,7 @@ bool UIMSDKHelper::IsAlreadyBindDiscord()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindBgBg
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindBgBg()
 {
@@ -2416,7 +2443,7 @@ bool UIMSDKHelper::IsAlreadyBindBgBg()
 // Function ClientNet.IMSDKHelper.IsAlreadyBindApple
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::IsAlreadyBindApple()
 {
@@ -2441,9 +2468,9 @@ bool UIMSDKHelper::IsAlreadyBindApple()
 // Function ClientNet.IMSDKHelper.InvalidateQRCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InCodeId                       (Parm, ZeroConstructor)
-// struct FString                 InRandStr                      (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InCodeId (Parm, ZeroConstructor)
+// struct FString InRandStr (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::InvalidateQRCode(const struct FString& InCodeId, const struct FString& InRandStr, const struct FString& InExtraJson)
 {
@@ -2455,6 +2482,27 @@ void UIMSDKHelper::InvalidateQRCode(const struct FString& InCodeId, const struct
 	params.InCodeId = InCodeId;
 	params.InRandStr = InRandStr;
 	params.InExtraJson = InExtraJson;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function ClientNet.IMSDKHelper.InitAdvertiseSDK_iOS
+// (Final, Native, Public, BlueprintCallable)
+
+void UIMSDKHelper::InitAdvertiseSDK_iOS()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.InitAdvertiseSDK_iOS");
+
+	UIMSDKHelper_InitAdvertiseSDK_iOS_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -2490,7 +2538,7 @@ void UIMSDKHelper::InitAdvertiseSDK()
 // Function ClientNet.IMSDKHelper.GetVerifyAppId4SendCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetVerifyAppId4SendCode()
 {
@@ -2515,9 +2563,9 @@ struct FString UIMSDKHelper::GetVerifyAppId4SendCode()
 // Function ClientNet.IMSDKHelper.GetShortUrl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 URL                            (Parm, ZeroConstructor)
-// struct FString                 Mask                           (Parm, ZeroConstructor)
-// struct FString                 Extra                          (Parm, ZeroConstructor)
+// struct FString URL (Parm, ZeroConstructor)
+// struct FString Mask (Parm, ZeroConstructor)
+// struct FString Extra (Parm, ZeroConstructor)
 
 void UIMSDKHelper::GetShortUrl(const struct FString& URL, const struct FString& Mask, const struct FString& Extra)
 {
@@ -2540,10 +2588,35 @@ void UIMSDKHelper::GetShortUrl(const struct FString& URL, const struct FString& 
 }
 
 
+// Function ClientNet.IMSDKHelper.GetSessionId
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetSessionId()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetSessionId");
+
+	UIMSDKHelper_GetSessionId_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ClientNet.IMSDKHelper.GetOpenId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetOpenId()
 {
@@ -2568,7 +2641,7 @@ struct FString UIMSDKHelper::GetOpenId()
 // Function ClientNet.IMSDKHelper.GetLoginResult
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FIMSDKLoginResult       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FIMSDKLoginResult ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FIMSDKLoginResult UIMSDKHelper::GetLoginResult()
 {
@@ -2593,7 +2666,7 @@ struct FIMSDKLoginResult UIMSDKHelper::GetLoginResult()
 // Function ClientNet.IMSDKHelper.GetLastLoginResultJson
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetLastLoginResultJson()
 {
@@ -2618,7 +2691,7 @@ struct FString UIMSDKHelper::GetLastLoginResultJson()
 // Function ClientNet.IMSDKHelper.GetLastIMSDKChannelID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::GetLastIMSDKChannelID()
 {
@@ -2643,7 +2716,7 @@ int UIMSDKHelper::GetLastIMSDKChannelID()
 // Function ClientNet.IMSDKHelper.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UIMSDKHelper*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UIMSDKHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UIMSDKHelper* UIMSDKHelper::GetInstance()
 {
@@ -2665,10 +2738,95 @@ class UIMSDKHelper* UIMSDKHelper::GetInstance()
 }
 
 
+// Function ClientNet.IMSDKHelper.GetIMSDKWebLoginParamsLaunchFromWeb
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InState (Parm, ZeroConstructor)
+// struct FString InChallenge (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetIMSDKWebLoginParamsLaunchFromWeb(const struct FString& InState, const struct FString& InChallenge)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetIMSDKWebLoginParamsLaunchFromWeb");
+
+	UIMSDKHelper_GetIMSDKWebLoginParamsLaunchFromWeb_Params params;
+	params.InState = InState;
+	params.InChallenge = InChallenge;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ClientNet.IMSDKHelper.GetIMSDKWebLoginParams
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InURL (Parm, ZeroConstructor)
+// struct FString InAppId (Parm, ZeroConstructor)
+// struct FString InVerifier (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetIMSDKWebLoginParams(const struct FString& InURL, const struct FString& InAppId, const struct FString& InVerifier)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetIMSDKWebLoginParams");
+
+	UIMSDKHelper_GetIMSDKWebLoginParams_Params params;
+	params.InURL = InURL;
+	params.InAppId = InAppId;
+	params.InVerifier = InVerifier;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function ClientNet.IMSDKHelper.GetIMSDKLoginTokenExpireTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetIMSDKLoginTokenExpireTime()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetIMSDKLoginTokenExpireTime");
+
+	UIMSDKHelper_GetIMSDKLoginTokenExpireTime_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ClientNet.IMSDKHelper.GetIMSDKLoginToken
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetIMSDKLoginToken()
 {
@@ -2693,7 +2851,7 @@ struct FString UIMSDKHelper::GetIMSDKLoginToken()
 // Function ClientNet.IMSDKHelper.GetIMSDKClientApiParams
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetIMSDKClientApiParams()
 {
@@ -2718,7 +2876,7 @@ struct FString UIMSDKHelper::GetIMSDKClientApiParams()
 // Function ClientNet.IMSDKHelper.GetHDmpveChannelID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::GetHDmpveChannelID()
 {
@@ -2740,10 +2898,35 @@ int UIMSDKHelper::GetHDmpveChannelID()
 }
 
 
+// Function ClientNet.IMSDKHelper.GetDisplayLoginErrorCode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetDisplayLoginErrorCode()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetDisplayLoginErrorCode");
+
+	UIMSDKHelper_GetDisplayLoginErrorCode_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ClientNet.IMSDKHelper.GetCurLoginPlatform
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetCurLoginPlatform()
 {
@@ -2768,7 +2951,7 @@ struct FString UIMSDKHelper::GetCurLoginPlatform()
 // Function ClientNet.IMSDKHelper.GetChannelNickname
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetChannelNickname()
 {
@@ -2793,7 +2976,7 @@ struct FString UIMSDKHelper::GetChannelNickname()
 // Function ClientNet.IMSDKHelper.GetBindRet
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetBindRet()
 {
@@ -2839,7 +3022,7 @@ void UIMSDKHelper::GetBindInfo()
 // Function ClientNet.IMSDKHelper.GetBindCount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::GetBindCount()
 {
@@ -2864,7 +3047,7 @@ int UIMSDKHelper::GetBindCount()
 // Function ClientNet.IMSDKHelper.GetAllQRCodeLoginResults
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetAllQRCodeLoginResults()
 {
@@ -2886,10 +3069,35 @@ struct FString UIMSDKHelper::GetAllQRCodeLoginResults()
 }
 
 
+// Function ClientNet.IMSDKHelper.GetAdjustID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UIMSDKHelper::GetAdjustID()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.IMSDKHelper.GetAdjustID");
+
+	UIMSDKHelper_GetAdjustID_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function ClientNet.IMSDKHelper.GetAdjustAttr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::GetAdjustAttr()
 {
@@ -2914,7 +3122,7 @@ struct FString UIMSDKHelper::GetAdjustAttr()
 // Function ClientNet.IMSDKHelper.GenerateQRCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::GenerateQRCode(const struct FString& InExtraJson)
 {
@@ -2938,8 +3146,8 @@ void UIMSDKHelper::GenerateQRCode(const struct FString& InExtraJson)
 // Function ClientNet.IMSDKHelper.ConvertTConndChannel2IMSDKChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InTConndChannelId              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InTConndChannelId (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::ConvertTConndChannel2IMSDKChannel(int InTConndChannelId)
 {
@@ -2965,8 +3173,8 @@ int UIMSDKHelper::ConvertTConndChannel2IMSDKChannel(int InTConndChannelId)
 // Function ClientNet.IMSDKHelper.ConvertStrToIMSDKChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 strChannel                     (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString strChannel (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::ConvertStrToIMSDKChannel(const struct FString& strChannel)
 {
@@ -2992,9 +3200,9 @@ int UIMSDKHelper::ConvertStrToIMSDKChannel(const struct FString& strChannel)
 // Function ClientNet.IMSDKHelper.ConvertIMSDKChannelToStr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            imsdkChannel                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           caseSensitive                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int imsdkChannel (Parm, ZeroConstructor, IsPlainOldData)
+// bool caseSensitive (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UIMSDKHelper::ConvertIMSDKChannelToStr(int imsdkChannel, bool caseSensitive)
 {
@@ -3021,8 +3229,8 @@ struct FString UIMSDKHelper::ConvertIMSDKChannelToStr(int imsdkChannel, bool cas
 // Function ClientNet.IMSDKHelper.ConvertIMSDKChannel2TConndChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InIMSDKChannelId               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InIMSDKChannelId (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UIMSDKHelper::ConvertIMSDKChannel2TConndChannel(int InIMSDKChannelId)
 {
@@ -3090,13 +3298,13 @@ void UIMSDKHelper::ClearLoginResult()
 // Function ClientNet.IMSDKHelper.CheckVerifyCodeValid
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InAccount                      (Parm, ZeroConstructor)
-// int                            InAccountType                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InPhoneAreaCode                (Parm, ZeroConstructor)
-// struct FString                 InVerifyCode                   (Parm, ZeroConstructor)
-// int                            InCodeType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InLanuageCode                  (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InAccount (Parm, ZeroConstructor)
+// int InAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPhoneAreaCode (Parm, ZeroConstructor)
+// struct FString InVerifyCode (Parm, ZeroConstructor)
+// int InCodeType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InLanuageCode (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::CheckVerifyCodeValid(const struct FString& InAccount, int InAccountType, const struct FString& InPhoneAreaCode, const struct FString& InVerifyCode, int InCodeType, const struct FString& InLanuageCode, const struct FString& InExtraJson)
 {
@@ -3126,8 +3334,8 @@ void UIMSDKHelper::CheckVerifyCodeValid(const struct FString& InAccount, int InA
 // Function ClientNet.IMSDKHelper.CheckLocalForceLoginFlag
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InChannel                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InChannel (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UIMSDKHelper::CheckLocalForceLoginFlag(int InChannel)
 {
@@ -3153,11 +3361,11 @@ bool UIMSDKHelper::CheckLocalForceLoginFlag(int InChannel)
 // Function ClientNet.IMSDKHelper.CheckIsRegisted
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InAccount                      (Parm, ZeroConstructor)
-// int                            InAccountType                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InPhoneAreaCode                (Parm, ZeroConstructor)
-// struct FString                 InLanuageCode                  (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InAccount (Parm, ZeroConstructor)
+// int InAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPhoneAreaCode (Parm, ZeroConstructor)
+// struct FString InLanuageCode (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::CheckIsRegisted(const struct FString& InAccount, int InAccountType, const struct FString& InPhoneAreaCode, const struct FString& InLanuageCode, const struct FString& InExtraJson)
 {
@@ -3185,13 +3393,13 @@ void UIMSDKHelper::CheckIsRegisted(const struct FString& InAccount, int InAccoun
 // Function ClientNet.IMSDKHelper.ChangePassword
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InAccount                      (Parm, ZeroConstructor)
-// int                            InAccountType                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InVerifyCode                   (Parm, ZeroConstructor)
-// struct FString                 InNewPassword                  (Parm, ZeroConstructor)
-// struct FString                 InAreaCode                     (Parm, ZeroConstructor)
-// struct FString                 InLangType                     (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InAccount (Parm, ZeroConstructor)
+// int InAccountType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVerifyCode (Parm, ZeroConstructor)
+// struct FString InNewPassword (Parm, ZeroConstructor)
+// struct FString InAreaCode (Parm, ZeroConstructor)
+// struct FString InLangType (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::ChangePassword(const struct FString& InAccount, int InAccountType, const struct FString& InVerifyCode, const struct FString& InNewPassword, const struct FString& InAreaCode, const struct FString& InLangType, const struct FString& InExtraJson)
 {
@@ -3221,7 +3429,7 @@ void UIMSDKHelper::ChangePassword(const struct FString& InAccount, int InAccount
 // Function ClientNet.IMSDKHelper.BindWhatsApp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::BindWhatsApp(const struct FString& InExtraJson)
 {
@@ -3266,7 +3474,7 @@ void UIMSDKHelper::BindVK()
 // Function ClientNet.IMSDKHelper.BindUnifiedAccount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::BindUnifiedAccount(const struct FString& InExtraJson)
 {
@@ -3311,7 +3519,7 @@ void UIMSDKHelper::BindTwitter()
 // Function ClientNet.IMSDKHelper.BindTikTok
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::BindTikTok(const struct FString& InExtraJson)
 {
@@ -3482,8 +3690,8 @@ void UIMSDKHelper::BindDiscord()
 // Function ClientNet.IMSDKHelper.BindChannel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InMSDKChannelId                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// int InMSDKChannelId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UIMSDKHelper::BindChannel(int InMSDKChannelId, const struct FString& InExtraJson)
 {
@@ -3547,6 +3755,58 @@ void UIMSDKHelper::BindApple()
 }
 
 
+// Function ClientNet.MockGameSvrClientNet.LoginMockGameSvr
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString UID (Parm, ZeroConstructor)
+// struct FString PlayerName (Parm, ZeroConstructor)
+// int ModeID (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMockGameSvrClientNet::LoginMockGameSvr(const struct FString& UID, const struct FString& PlayerName, int ModeID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.MockGameSvrClientNet.LoginMockGameSvr");
+
+	UMockGameSvrClientNet_LoginMockGameSvr_Params params;
+	params.UID = UID;
+	params.PlayerName = PlayerName;
+	params.ModeID = ModeID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function ClientNet.StoreGameHelper.UnlockGPAchievement
+// (Final, Native, Public)
+// Parameters:
+// struct FString InAchievement (Parm, ZeroConstructor)
+
+void UStoreGameHelper::UnlockGPAchievement(const struct FString& InAchievement)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.StoreGameHelper.UnlockGPAchievement");
+
+	UStoreGameHelper_UnlockGPAchievement_Params params;
+	params.InAchievement = InAchievement;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function ClientNet.StoreGameHelper.UnInitialize
 // (Final, Native, Public)
 
@@ -3571,8 +3831,8 @@ void UStoreGameHelper::UnInitialize()
 // Function ClientNet.StoreGameHelper.ShowLeaderboard
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InIdentifier                   (Parm, ZeroConstructor)
-// int                            InTimeScope                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InIdentifier (Parm, ZeroConstructor)
+// int InTimeScope (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStoreGameHelper::ShowLeaderboard(const struct FString& InIdentifier, int InTimeScope)
 {
@@ -3615,11 +3875,32 @@ void UStoreGameHelper::ShowAchievements()
 }
 
 
+// Function ClientNet.StoreGameHelper.RequestServerAuthCode
+// (Final, Native, Public)
+
+void UStoreGameHelper::RequestServerAuthCode()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.StoreGameHelper.RequestServerAuthCode");
+
+	UStoreGameHelper_RequestServerAuthCode_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function ClientNet.StoreGameHelper.ReportScore
 // (Final, Native, Public)
 // Parameters:
-// int64_t                        InScore                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InIdentifier                   (Parm, ZeroConstructor)
+// int64_t InScore (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InIdentifier (Parm, ZeroConstructor)
 
 void UStoreGameHelper::ReportScore(int64_t InScore, const struct FString& InIdentifier)
 {
@@ -3644,8 +3925,8 @@ void UStoreGameHelper::ReportScore(int64_t InScore, const struct FString& InIden
 // Function ClientNet.StoreGameHelper.ReportAchievement1
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InIdentifier                   (Parm, ZeroConstructor)
-// double                         percent                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InIdentifier (Parm, ZeroConstructor)
+// double percent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStoreGameHelper::ReportAchievement1(const struct FString& InIdentifier, double percent)
 {
@@ -3670,8 +3951,8 @@ void UStoreGameHelper::ReportAchievement1(const struct FString& InIdentifier, do
 // Function ClientNet.StoreGameHelper.ReportAchievement
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InIdentifier                   (Parm, ZeroConstructor)
-// double                         percent                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InIdentifier (Parm, ZeroConstructor)
+// double percent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStoreGameHelper::ReportAchievement(const struct FString& InIdentifier, double percent)
 {
@@ -3682,6 +3963,27 @@ void UStoreGameHelper::ReportAchievement(const struct FString& InIdentifier, dou
 	UStoreGameHelper_ReportAchievement_Params params;
 	params.InIdentifier = InIdentifier;
 	params.percent = percent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function ClientNet.StoreGameHelper.LoginGPManual
+// (Final, Native, Public)
+
+void UStoreGameHelper::LoginGPManual()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.StoreGameHelper.LoginGPManual");
+
+	UStoreGameHelper_LoginGPManual_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -3717,11 +4019,11 @@ void UStoreGameHelper::LoadReceivedChallenges()
 // Function ClientNet.StoreGameHelper.LoadLeaderboardScores
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InIdentifier                   (Parm, ZeroConstructor)
-// int                            InRangeLocation                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InRangeLength                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InPlayScope                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InTimeScope                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InIdentifier (Parm, ZeroConstructor)
+// int InRangeLocation (Parm, ZeroConstructor, IsPlainOldData)
+// int InRangeLength (Parm, ZeroConstructor, IsPlainOldData)
+// int InPlayScope (Parm, ZeroConstructor, IsPlainOldData)
+// int InTimeScope (Parm, ZeroConstructor, IsPlainOldData)
 
 void UStoreGameHelper::LoadLeaderboardScores(const struct FString& InIdentifier, int InRangeLocation, int InRangeLength, int InPlayScope, int InTimeScope)
 {
@@ -3791,10 +4093,10 @@ void UStoreGameHelper::LoadAchievements()
 // Function ClientNet.StoreGameHelper.IssueChallengeWithScore
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TMap<struct FString, struct FString> InScoreInfo                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TMap<struct FString, struct FString> InPlayerInfo                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FString>         InPlayerIDs                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 InMessage                      (Parm, ZeroConstructor)
+// TMap<struct FString, struct FString> InScoreInfo (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, struct FString> InPlayerInfo (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> InPlayerIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString InMessage (Parm, ZeroConstructor)
 
 void UStoreGameHelper::IssueChallengeWithScore(TMap<struct FString, struct FString> InScoreInfo, TMap<struct FString, struct FString> InPlayerInfo, TArray<struct FString> InPlayerIDs, const struct FString& InMessage)
 {
@@ -3821,9 +4123,9 @@ void UStoreGameHelper::IssueChallengeWithScore(TMap<struct FString, struct FStri
 // Function ClientNet.StoreGameHelper.IssueChallengeWithArchivement
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TMap<struct FString, struct FString> InAchievementInfo              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FString>         InPlayerIDs                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 InMessage                      (Parm, ZeroConstructor)
+// TMap<struct FString, struct FString> InAchievementInfo (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FString> InPlayerIDs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString InMessage (Parm, ZeroConstructor)
 
 void UStoreGameHelper::IssueChallengeWithArchivement(TMap<struct FString, struct FString> InAchievementInfo, TArray<struct FString> InPlayerIDs, const struct FString& InMessage)
 {
@@ -3867,10 +4169,57 @@ void UStoreGameHelper::Initialize()
 }
 
 
+// Function ClientNet.StoreGameHelper.InitGP
+// (Final, Native, Public)
+
+void UStoreGameHelper::InitGP()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.StoreGameHelper.InitGP");
+
+	UStoreGameHelper_InitGP_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function ClientNet.StoreGameHelper.IncreaseGPAchievement
+// (Final, Native, Public)
+// Parameters:
+// struct FString InAchievement (Parm, ZeroConstructor)
+// int InStep (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStoreGameHelper::IncreaseGPAchievement(const struct FString& InAchievement, int InStep)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function ClientNet.StoreGameHelper.IncreaseGPAchievement");
+
+	UStoreGameHelper_IncreaseGPAchievement_Params params;
+	params.InAchievement = InAchievement;
+	params.InStep = InStep;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function ClientNet.StoreGameHelper.Get
 // (Final, Native, Static, Public)
 // Parameters:
-// class UStoreGameHelper*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UStoreGameHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UStoreGameHelper* UStoreGameHelper::Get()
 {

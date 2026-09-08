@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UNetInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.NetInterface");
@@ -30,12 +29,11 @@ public:
 class ALuaContext : public AActor
 {
 public:
-	class ULuaStateWrapper*                            OwningLuaStateWrapper;                                    // 0x04B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UObject*                                     OwningObject;                                             // 0x04B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UScriptContextComponent*                     ScriptContextComponent;                                   // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ULuaStateWrapper* OwningLuaStateWrapper; // 0x04B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UObject* OwningObject; // 0x04B8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UScriptContextComponent* ScriptContextComponent; // 0x04C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.LuaContext");
@@ -50,10 +48,9 @@ public:
 class UScriptProfiler : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0028(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptProfiler");
@@ -68,10 +65,9 @@ public:
 class ULuaStateWrapper : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xD0];                                      // 0x0028(0x00D0) MISSED OFFSET
+	unsigned char UnknownData00[0xD0]; // 0x0028(0x00D0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.LuaStateWrapper");
@@ -86,11 +82,10 @@ public:
 class UScriptBlueprint : public UBlueprint
 {
 public:
-	TArray<unsigned char>                              ByteCode;                                                 // 0x00D8(0x0010) (ZeroConstructor)
-	struct FString                                     SourceCode;                                               // 0x00E8(0x0010) (ZeroConstructor)
+	TArray<unsigned char> ByteCode; // 0x00D8(0x0010) (ZeroConstructor)
+	struct FString SourceCode; // 0x00E8(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptBlueprint");
@@ -101,16 +96,15 @@ public:
 
 
 // Class ScriptPlugin.ScriptBlueprintGeneratedClass
-// 0x0030 (0x0340 - 0x0310)
+// 0x0030 (0x0378 - 0x0348)
 class UScriptBlueprintGeneratedClass : public UBlueprintGeneratedClass
 {
 public:
-	TArray<unsigned char>                              ByteCode;                                                 // 0x0310(0x0010) (ZeroConstructor)
-	struct FString                                     SourceCode;                                               // 0x0320(0x0010) (ZeroConstructor)
-	TArray<class UProperty*>                           ScriptProperties;                                         // 0x0330(0x0010) (ZeroConstructor)
+	TArray<unsigned char> ByteCode; // 0x0348(0x0010) (ZeroConstructor)
+	struct FString SourceCode; // 0x0358(0x0010) (ZeroConstructor)
+	TArray<class UProperty*> ScriptProperties; // 0x0368(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptBlueprintGeneratedClass");
@@ -125,10 +119,9 @@ public:
 class UScriptContext : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptContext");
@@ -145,11 +138,10 @@ public:
 class UScriptContextComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0178(0x0008) MISSED OFFSET
-	class ULuaStateWrapper*                            OwningLuaStateWrapper;                                    // 0x0180(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0178(0x0008) MISSED OFFSET
+	class ULuaStateWrapper* OwningLuaStateWrapper; // 0x0180(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptContextComponent");
@@ -174,8 +166,7 @@ class UScriptHelperNetInterface : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptHelperNetInterface");
@@ -194,10 +185,9 @@ public:
 class UScriptPluginComponent : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptPluginComponent");
@@ -214,13 +204,12 @@ public:
 class AScriptTestActor : public AActor
 {
 public:
-	struct FString                                     TestString;                                               // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              TestValue;                                                // 0x04C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               TestBool;                                                 // 0x04C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04C5(0x0003) MISSED OFFSET
+	struct FString TestString; // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float TestValue; // 0x04C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool TestBool; // 0x04C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x04C5(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.ScriptTestActor");
@@ -238,8 +227,7 @@ class ALuaClassBaseObj : public AActor
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ScriptPlugin.LuaClassBaseObj");

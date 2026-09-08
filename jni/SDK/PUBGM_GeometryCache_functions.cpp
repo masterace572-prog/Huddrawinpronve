@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UGeometryCacheComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UGeometryCacheComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UGeometryCacheComponent* AGeometryCacheActor::GetGeometryCacheComponent()
 {
@@ -57,7 +57,7 @@ void UGeometryCacheComponent::Stop()
 // Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewStartTimeOffset             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewStartTimeOffset (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
 {
@@ -81,7 +81,7 @@ void UGeometryCacheComponent::SetStartTimeOffset(float NewStartTimeOffset)
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPlaybackSpeed               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewPlaybackSpeed (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
 {
@@ -105,7 +105,7 @@ void UGeometryCacheComponent::SetPlaybackSpeed(float NewPlaybackSpeed)
 // Function GeometryCache.GeometryCacheComponent.SetLooping
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewLooping                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewLooping (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 {
@@ -129,8 +129,8 @@ void UGeometryCacheComponent::SetLooping(bool bNewLooping)
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UGeometryCache*          NewGeomCache                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGeometryCache* NewGeomCache (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGeometryCacheComponent::SetGeometryCache(class UGeometryCache* NewGeomCache)
 {
@@ -261,7 +261,7 @@ void UGeometryCacheComponent::Pause()
 // Function GeometryCache.GeometryCacheComponent.IsPlayingReversed
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGeometryCacheComponent::IsPlayingReversed()
 {
@@ -286,7 +286,7 @@ bool UGeometryCacheComponent::IsPlayingReversed()
 // Function GeometryCache.GeometryCacheComponent.IsPlaying
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGeometryCacheComponent::IsPlaying()
 {
@@ -311,7 +311,7 @@ bool UGeometryCacheComponent::IsPlaying()
 // Function GeometryCache.GeometryCacheComponent.IsLooping
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGeometryCacheComponent::IsLooping()
 {
@@ -336,7 +336,7 @@ bool UGeometryCacheComponent::IsLooping()
 // Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UGeometryCacheComponent::GetStartTimeOffset()
 {
@@ -361,7 +361,7 @@ float UGeometryCacheComponent::GetStartTimeOffset()
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UGeometryCacheComponent::GetPlaybackSpeed()
 {
@@ -386,8 +386,8 @@ float UGeometryCacheComponent::GetPlaybackSpeed()
 // Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  MeshData                       (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          SampleTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FGeometryCacheMeshData MeshData (ConstParm, Parm, OutParm, ReferenceParm)
+// float SampleTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometryCacheMeshData& MeshData, float SampleTime)
 {
@@ -412,7 +412,7 @@ void UGeometryCacheTrack_FlipbookAnimation::AddMeshSample(const struct FGeometry
 // Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGeometryCacheMeshData NewMeshData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
 {
@@ -436,7 +436,7 @@ void UGeometryCacheTrack_TransformAnimation::SetMesh(const struct FGeometryCache
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FGeometryCacheMeshData  NewMeshData                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGeometryCacheMeshData NewMeshData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometryCacheMeshData& NewMeshData)
 {

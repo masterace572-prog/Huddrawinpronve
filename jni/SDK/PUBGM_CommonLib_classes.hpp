@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UTextWidgetInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonLib.TextWidgetInterface");
@@ -33,8 +32,7 @@ class ULuaService : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonLib.LuaService");
@@ -50,8 +48,7 @@ class UCommonLuaLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonLib.CommonLuaLibrary");
@@ -72,15 +69,14 @@ public:
 class URuntimeFilesDownloaderLibrary : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    OnProgress;                                               // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0038(0x0018) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnResult;                                                 // 0x0050(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0060(0x0018) MISSED OFFSET
-	struct FString                                     FileURL;                                                  // 0x0078(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     FileSavePath;                                             // 0x0088(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FScriptMulticastDelegate OnProgress; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x18]; // 0x0038(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate OnResult; // 0x0050(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData01[0x18]; // 0x0060(0x0018) MISSED OFFSET
+	struct FString FileURL; // 0x0078(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString FileSavePath; // 0x0088(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonLib.RuntimeFilesDownloaderLibrary");
@@ -98,10 +94,9 @@ public:
 class UServiceManager : public UObject
 {
 public:
-	TMap<struct FName, struct FServiceCollection>      Services;                                                 // 0x0028(0x0050) (ZeroConstructor)
+	TMap<struct FName, struct FServiceCollection> Services; // 0x0028(0x0050) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class CommonLib.ServiceManager");

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -8,10 +8,127 @@ namespace SDK
 //Functions
 //---------------------By BangJO---------------------------
 
+// Function QDevKit.FilePicker.UnInitialize
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UFilePicker::UnInitialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.FilePicker.UnInitialize");
+
+	UFilePicker_UnInitialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.FilePicker.OpenFilePicker
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InParamJson (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFilePicker::OpenFilePicker(const struct FString& InParamJson)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.FilePicker.OpenFilePicker");
+
+	UFilePicker_OpenFilePicker_Params params;
+	params.InParamJson = InParamJson;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function QDevKit.FilePicker.Initialize
+// (Final, Native, Public, BlueprintCallable)
+
+void UFilePicker::Initialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.FilePicker.Initialize");
+
+	UFilePicker_Initialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.FilePicker.GetInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UFilePicker* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UFilePicker* UFilePicker::GetInstance()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.FilePicker.GetInstance");
+
+	UFilePicker_GetInstance_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// DelegateFunction QDevKit.FilePicker.FileSelectionCompleteDelegate__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// struct FString ResultJson (Parm, ZeroConstructor)
+
+void UFilePicker::FileSelectionCompleteDelegate__DelegateSignature(const struct FString& ResultJson)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("DelegateFunction QDevKit.FilePicker.FileSelectionCompleteDelegate__DelegateSignature");
+
+	UFilePicker_FileSelectionCompleteDelegate__DelegateSignature_Params params;
+	params.ResultJson = ResultJson;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function QDevKit.FirebaseHelper.SetConsent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TMap<int, int>                 InConsent                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<int, int> InConsent (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UFirebaseHelper::SetConsent(TMap<int, int> InConsent)
 {
@@ -35,7 +152,7 @@ void UFirebaseHelper::SetConsent(TMap<int, int> InConsent)
 // Function QDevKit.FirebaseHelper.IsNotificationLaunchApp
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFirebaseHelper::IsNotificationLaunchApp()
 {
@@ -60,8 +177,8 @@ bool UFirebaseHelper::IsNotificationLaunchApp()
 // Function QDevKit.FirebaseHelper.GetNotificationLaunchAppExtraData
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InKey                          (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InKey (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFirebaseHelper::GetNotificationLaunchAppExtraData(const struct FString& InKey)
 {
@@ -87,7 +204,7 @@ struct FString UFirebaseHelper::GetNotificationLaunchAppExtraData(const struct F
 // Function QDevKit.FirebaseHelper.GetInstance
 // (Final, Native, Static, Public)
 // Parameters:
-// class UFirebaseHelper*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFirebaseHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFirebaseHelper* UFirebaseHelper::GetInstance()
 {
@@ -112,7 +229,7 @@ class UFirebaseHelper* UFirebaseHelper::GetInstance()
 // Function QDevKit.FirebaseHelper.GetFIRInstallId
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFirebaseHelper::GetFIRInstallId()
 {
@@ -137,7 +254,7 @@ struct FString UFirebaseHelper::GetFIRInstallId()
 // Function QDevKit.FirebaseHelper.GetFIRAppInstanceId
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFirebaseHelper::GetFIRAppInstanceId()
 {
@@ -162,7 +279,7 @@ struct FString UFirebaseHelper::GetFIRAppInstanceId()
 // Function QDevKit.FirebaseHelper.GetFCMToken
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFirebaseHelper::GetFCMToken()
 {
@@ -208,7 +325,7 @@ void UFirebaseHelper::ConsumeNotificationLaunchApp()
 // Function QDevKit.FirebaseRemoteConfigImpl.GetStatus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EQFirebaseRemoteConfigStatus   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EQFirebaseRemoteConfigStatus ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EQFirebaseRemoteConfigStatus UFirebaseRemoteConfigImpl::GetStatus()
 {
@@ -233,8 +350,8 @@ EQFirebaseRemoteConfigStatus UFirebaseRemoteConfigImpl::GetStatus()
 // Function QDevKit.FirebaseRemoteConfigImpl.GetRemoteConfig
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ConfigNameToQuery              (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ConfigNameToQuery (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFirebaseRemoteConfigImpl::GetRemoteConfig(const struct FString& ConfigNameToQuery)
 {
@@ -260,7 +377,7 @@ struct FString UFirebaseRemoteConfigImpl::GetRemoteConfig(const struct FString& 
 // Function QDevKit.FirebaseRemoteConfigImpl.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UFirebaseRemoteConfigImpl* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFirebaseRemoteConfigImpl* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFirebaseRemoteConfigImpl* UFirebaseRemoteConfigImpl::GetInstance()
 {
@@ -285,7 +402,7 @@ class UFirebaseRemoteConfigImpl* UFirebaseRemoteConfigImpl::GetInstance()
 // Function QDevKit.LocationHelper.QueryLocation
 // (Final, Native, Public)
 // Parameters:
-// int                            InTimeout                      (Parm, ZeroConstructor, IsPlainOldData)
+// int InTimeout (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULocationHelper::QueryLocation(int InTimeout)
 {
@@ -330,7 +447,7 @@ void ULocationHelper::Initialize()
 // Function QDevKit.LocationHelper.GetInstance
 // (Final, Native, Static, Public)
 // Parameters:
-// class ULocationHelper*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ULocationHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULocationHelper* ULocationHelper::GetInstance()
 {
@@ -397,8 +514,8 @@ void UPhotoAlbumHelper::UnRegisterScreenCaptureListener()
 // Function QDevKit.PhotoAlbumHelper.RegisterScreenCaptureListener
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InScreenshotFolders            (Parm, ZeroConstructor)
-// struct FString                 InScreenshotMimeTypes          (Parm, ZeroConstructor)
+// struct FString InScreenshotFolders (Parm, ZeroConstructor)
+// struct FString InScreenshotMimeTypes (Parm, ZeroConstructor)
 
 void UPhotoAlbumHelper::RegisterScreenCaptureListener(const struct FString& InScreenshotFolders, const struct FString& InScreenshotMimeTypes)
 {
@@ -444,7 +561,7 @@ void UPhotoAlbumHelper::Initialize()
 // Function QDevKit.PhotoAlbumHelper.GetInstance
 // (Final, Native, Static, Public)
 // Parameters:
-// class UPhotoAlbumHelper*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPhotoAlbumHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPhotoAlbumHelper* UPhotoAlbumHelper::GetInstance()
 {
@@ -469,13 +586,13 @@ class UPhotoAlbumHelper* UPhotoAlbumHelper::GetInstance()
 // Function QDevKit.PhotoAlbumHelper.GenerateImageFromAlbum
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InFilePath                     (Parm, ZeroConstructor)
-// struct FString                 InThumbFilePath                (Parm, ZeroConstructor)
-// int                            InThumbnailWidth               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InThumbnailHeight              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InForceJPG                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           InOverride                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InFilePath (Parm, ZeroConstructor)
+// struct FString InThumbFilePath (Parm, ZeroConstructor)
+// int InThumbnailWidth (Parm, ZeroConstructor, IsPlainOldData)
+// int InThumbnailHeight (Parm, ZeroConstructor, IsPlainOldData)
+// bool InForceJPG (Parm, ZeroConstructor, IsPlainOldData)
+// bool InOverride (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPhotoAlbumHelper::GenerateImageFromAlbum(const struct FString& InFilePath, const struct FString& InThumbFilePath, int InThumbnailWidth, int InThumbnailHeight, bool InForceJPG, bool InOverride)
 {
@@ -506,12 +623,12 @@ int UPhotoAlbumHelper::GenerateImageFromAlbum(const struct FString& InFilePath, 
 // Function QDevKit.PhotoAlbumHelper.FetchAlbumImageInfo
 // (Final, Native, Public)
 // Parameters:
-// int                            InStartIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InLimitNum                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InThumbWidth                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InThumbHeight                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InThumbPath                    (Parm, ZeroConstructor)
-// struct FString                 InExtraJson                    (Parm, ZeroConstructor)
+// int InStartIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int InLimitNum (Parm, ZeroConstructor, IsPlainOldData)
+// int InThumbWidth (Parm, ZeroConstructor, IsPlainOldData)
+// int InThumbHeight (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InThumbPath (Parm, ZeroConstructor)
+// struct FString InExtraJson (Parm, ZeroConstructor)
 
 void UPhotoAlbumHelper::FetchAlbumImageInfo(int InStartIndex, int InLimitNum, int InThumbWidth, int InThumbHeight, const struct FString& InThumbPath, const struct FString& InExtraJson)
 {
@@ -537,12 +654,84 @@ void UPhotoAlbumHelper::FetchAlbumImageInfo(int InStartIndex, int InLimitNum, in
 }
 
 
+// Function QDevKit.StoreKit.RequestReview
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool bForceOpenStoreInTestEnv (Parm, ZeroConstructor, IsPlainOldData)
+
+void UStoreKit::RequestReview(bool bForceOpenStoreInTestEnv)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.StoreKit.RequestReview");
+
+	UStoreKit_RequestReview_Params params;
+	params.bForceOpenStoreInTestEnv = bForceOpenStoreInTestEnv;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.StoreKit.OpenStorePage
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FString storeParam (Parm, ZeroConstructor)
+
+void UStoreKit::OpenStorePage(const struct FString& storeParam)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.StoreKit.OpenStorePage");
+
+	UStoreKit_OpenStorePage_Params params;
+	params.storeParam = storeParam;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.StoreKit.GetCountryCode
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FScriptDelegate Callback (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UStoreKit::GetCountryCode(const struct FScriptDelegate& Callback)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.StoreKit.GetCountryCode");
+
+	UStoreKit_GetCountryCode_Params params;
+	params.Callback = Callback;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function QDevKit.SystemPermissionHelper.RequestPermissions
 // (Final, Native, Public)
 // Parameters:
-// int                            InPermissionType               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InRequestCode                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InPermissionType (Parm, ZeroConstructor, IsPlainOldData)
+// int InRequestCode (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::RequestPermissions(int InPermissionType, int InRequestCode)
 {
@@ -569,8 +758,8 @@ bool USystemPermissionHelper::RequestPermissions(int InPermissionType, int InReq
 // Function QDevKit.SystemPermissionHelper.IsPermissionGranted
 // (Final, Native, Public)
 // Parameters:
-// int                            InPermissionType               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InPermissionType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::IsPermissionGranted(int InPermissionType)
 {
@@ -614,10 +803,37 @@ void USystemPermissionHelper::Initialize()
 }
 
 
+// Function QDevKit.SystemPermissionHelper.GetPermissionStatus
+// (Final, Native, Public)
+// Parameters:
+// int InPermissionType (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int USystemPermissionHelper::GetPermissionStatus(int InPermissionType)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.SystemPermissionHelper.GetPermissionStatus");
+
+	USystemPermissionHelper_GetPermissionStatus_Params params;
+	params.InPermissionType = InPermissionType;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function QDevKit.SystemPermissionHelper.GetInstance
 // (Final, Native, Static, Public)
 // Parameters:
-// class USystemPermissionHelper* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USystemPermissionHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class USystemPermissionHelper* USystemPermissionHelper::GetInstance()
 {
@@ -642,8 +858,8 @@ class USystemPermissionHelper* USystemPermissionHelper::GetInstance()
 // Function QDevKit.SystemPermissionHelper.AndroidShouldShowRequestPermissionRationale
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InPermission                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InPermission (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::AndroidShouldShowRequestPermissionRationale(const struct FString& InPermission)
 {
@@ -669,9 +885,9 @@ bool USystemPermissionHelper::AndroidShouldShowRequestPermissionRationale(const 
 // Function QDevKit.SystemPermissionHelper.AndroidRequestPermissions
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InPermission                   (Parm, ZeroConstructor)
-// int                            InRequestCode                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InPermission (Parm, ZeroConstructor)
+// int InRequestCode (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::AndroidRequestPermissions(const struct FString& InPermission, int InRequestCode)
 {
@@ -698,8 +914,8 @@ bool USystemPermissionHelper::AndroidRequestPermissions(const struct FString& In
 // Function QDevKit.SystemPermissionHelper.AndroidIsPermissionGranted
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InPermission                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InPermission (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::AndroidIsPermissionGranted(const struct FString& InPermission)
 {
@@ -725,8 +941,8 @@ bool USystemPermissionHelper::AndroidIsPermissionGranted(const struct FString& I
 // Function QDevKit.SystemPermissionHelper.AndroidHasDefinePermission
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InPermssionName                (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InPermssionName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USystemPermissionHelper::AndroidHasDefinePermission(const struct FString& InPermssionName)
 {
@@ -742,6 +958,148 @@ bool USystemPermissionHelper::AndroidHasDefinePermission(const struct FString& I
 
 	UObject *currentObj = (UObject *) this;
 	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function QDevKit.TouchTransmission.UnInitialize
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UTouchTransmission::UnInitialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.TouchTransmission.UnInitialize");
+
+	UTouchTransmission_UnInitialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// DelegateFunction QDevKit.TouchTransmission.TransmissionCompleteDelegate__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// struct FString ResultJson (Parm, ZeroConstructor)
+
+void UTouchTransmission::TransmissionCompleteDelegate__DelegateSignature(const struct FString& ResultJson)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("DelegateFunction QDevKit.TouchTransmission.TransmissionCompleteDelegate__DelegateSignature");
+
+	UTouchTransmission_TransmissionCompleteDelegate__DelegateSignature_Params params;
+	params.ResultJson = ResultJson;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.TouchTransmission.Initialize
+// (Final, Native, Public, BlueprintCallable)
+
+void UTouchTransmission::Initialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.TouchTransmission.Initialize");
+
+	UTouchTransmission_Initialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function QDevKit.TouchTransmission.HandleReceivedPakFiles
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InParamJson (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UTouchTransmission::HandleReceivedPakFiles(const struct FString& InParamJson)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.TouchTransmission.HandleReceivedPakFiles");
+
+	UTouchTransmission_HandleReceivedPakFiles_Params params;
+	params.InParamJson = InParamJson;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function QDevKit.TouchTransmission.GetTransmissionRawJsonContent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UTouchTransmission::GetTransmissionRawJsonContent()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.TouchTransmission.GetTransmissionRawJsonContent");
+
+	UTouchTransmission_GetTransmissionRawJsonContent_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function QDevKit.TouchTransmission.GetInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UTouchTransmission* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTouchTransmission* UTouchTransmission::GetInstance()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function QDevKit.TouchTransmission.GetInstance");
+
+	UTouchTransmission_GetInstance_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
 

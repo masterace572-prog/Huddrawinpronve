@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,22 +9,21 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class ProceduralMeshComponent.ProceduralMeshComponent
-// 0x0060 (0x09E0 - 0x0980)
+// 0x0060 (0x0A00 - 0x09A0)
 class UProceduralMeshComponent : public UMeshComponent
 {
 public:
-	bool                                               bUseComplexAsSimpleCollision;                             // 0x0980(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseAsyncCooking;                                         // 0x0981(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0982(0x0006) MISSED OFFSET
-	class UBodySetup*                                  ProcMeshBodySetup;                                        // 0x0988(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FProcMeshSection>                    ProcMeshSections;                                         // 0x0990(0x0010) (ZeroConstructor)
-	TArray<struct FKConvexElem>                        CollisionConvexElems;                                     // 0x09A0(0x0010) (ZeroConstructor)
-	struct FBoxSphereBounds                            LocalBounds;                                              // 0x09B0(0x001C) (IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x09CC(0x0004) MISSED OFFSET
-	TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                      // 0x09D0(0x0010) (ZeroConstructor, Transient)
+	bool bUseComplexAsSimpleCollision; // 0x09A0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bUseAsyncCooking; // 0x09A1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x09A2(0x0006) MISSED OFFSET
+	class UBodySetup* ProcMeshBodySetup; // 0x09A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FProcMeshSection> ProcMeshSections; // 0x09B0(0x0010) (ZeroConstructor)
+	TArray<struct FKConvexElem> CollisionConvexElems; // 0x09C0(0x0010) (ZeroConstructor)
+	struct FBoxSphereBounds LocalBounds; // 0x09D0(0x001C) (IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x09EC(0x0004) MISSED OFFSET
+	TArray<class UBodySetup*> AsyncBodySetupQueue; // 0x09F0(0x0010) (ZeroConstructor, Transient)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ProceduralMeshComponent.ProceduralMeshComponent");
@@ -53,8 +52,7 @@ class UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class ProceduralMeshComponent.KismetProceduralMeshLibrary");

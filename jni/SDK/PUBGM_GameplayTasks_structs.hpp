@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -22,9 +22,9 @@ enum class EGameplayTaskState : uint8_t
 {
 	EGameplayTaskState__Uninitialized = 0,
 	EGameplayTaskState__AwaitingActivation = 1,
-	EGameplayTaskState__Paused     = 2,
-	EGameplayTaskState__Active     = 3,
-	EGameplayTaskState__Finished   = 4,
+	EGameplayTaskState__Paused = 2,
+	EGameplayTaskState__Active = 3,
+	EGameplayTaskState__Finished = 4,
 	EGameplayTaskState__EGameplayTaskState_MAX = 5
 };
 
@@ -32,7 +32,7 @@ enum class EGameplayTaskState : uint8_t
 // Enum GameplayTasks.EGameplayTaskRunResult
 enum class EGameplayTaskRunResult : uint8_t
 {
-	EGameplayTaskRunResult__Error  = 0,
+	EGameplayTaskRunResult__Error = 0,
 	EGameplayTaskRunResult__Failed = 1,
 	EGameplayTaskRunResult__Success_Paused = 2,
 	EGameplayTaskRunResult__Success_Active = 3,
@@ -50,7 +50,7 @@ enum class EGameplayTaskRunResult : uint8_t
 // 0x0002
 struct FGameplayResourceSet
 {
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0000(0x0002) MISSED OFFSET
+	unsigned char UnknownData00[0x2]; // 0x0000(0x0002) MISSED OFFSET
 };
 
 }

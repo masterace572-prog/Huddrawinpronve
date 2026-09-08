@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function GooglePAD.GooglePADFunctionLibrary.ShowCellularDataConfirmation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::ShowCellularDataConfirmation()
 {
@@ -36,8 +36,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::ShowCellularDataConfirmation()
 // Function GooglePAD.GooglePADFunctionLibrary.RequestRemoval
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::RequestRemoval(const struct FString& Name)
 {
@@ -63,8 +63,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::RequestRemoval(const struct FStri
 // Function GooglePAD.GooglePADFunctionLibrary.RequestInfo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         AssetPacks                     (ConstParm, Parm, ZeroConstructor)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> AssetPacks (ConstParm, Parm, ZeroConstructor)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(TArray<struct FString> AssetPacks)
 {
@@ -90,8 +90,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::RequestInfo(TArray<struct FString
 // Function GooglePAD.GooglePADFunctionLibrary.RequestDownload
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         AssetPacks                     (ConstParm, Parm, ZeroConstructor)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> AssetPacks (ConstParm, Parm, ZeroConstructor)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(TArray<struct FString> AssetPacks)
 {
@@ -117,7 +117,7 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::RequestDownload(TArray<struct FSt
 // Function GooglePAD.GooglePADFunctionLibrary.ReleaseDownloadState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int State (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGooglePADFunctionLibrary::ReleaseDownloadState(int State)
 {
@@ -141,7 +141,7 @@ void UGooglePADFunctionLibrary::ReleaseDownloadState(int State)
 // Function GooglePAD.GooglePADFunctionLibrary.ReleaseAssetPackLocation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Location                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Location (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UGooglePADFunctionLibrary::ReleaseAssetPackLocation(int Location)
 {
@@ -165,8 +165,8 @@ void UGooglePADFunctionLibrary::ReleaseAssetPackLocation(int Location)
 // Function GooglePAD.GooglePADFunctionLibrary.GetTotalBytesToDownload
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int State (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UGooglePADFunctionLibrary::GetTotalBytesToDownload(int State)
 {
@@ -192,8 +192,8 @@ int UGooglePADFunctionLibrary::GetTotalBytesToDownload(int State)
 // Function GooglePAD.GooglePADFunctionLibrary.GetStorageMethod
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Location                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EGooglePADStorageMethod        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Location (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EGooglePADStorageMethod ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADStorageMethod UGooglePADFunctionLibrary::GetStorageMethod(int Location)
 {
@@ -219,8 +219,8 @@ EGooglePADStorageMethod UGooglePADFunctionLibrary::GetStorageMethod(int Location
 // Function GooglePAD.GooglePADFunctionLibrary.GetShowCellularDataConfirmationStatus
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// EGooglePADCellularDataConfirmStatus status                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EGooglePADCellularDataConfirmStatus status (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::GetShowCellularDataConfirmationStatus(EGooglePADCellularDataConfirmStatus* status)
 {
@@ -248,8 +248,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::GetShowCellularDataConfirmationSt
 // Function GooglePAD.GooglePADFunctionLibrary.GetDownloadStatus
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// EGooglePADDownloadStatus       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int State (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EGooglePADDownloadStatus ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADDownloadStatus UGooglePADFunctionLibrary::GetDownloadStatus(int State)
 {
@@ -275,9 +275,9 @@ EGooglePADDownloadStatus UGooglePADFunctionLibrary::GetDownloadStatus(int State)
 // Function GooglePAD.GooglePADFunctionLibrary.GetDownloadState
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// int                            State                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// int State (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::GetDownloadState(const struct FString& Name, int* State)
 {
@@ -306,8 +306,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::GetDownloadState(const struct FSt
 // Function GooglePAD.GooglePADFunctionLibrary.GetBytesDownloaded
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int State (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UGooglePADFunctionLibrary::GetBytesDownloaded(int State)
 {
@@ -333,8 +333,8 @@ int UGooglePADFunctionLibrary::GetBytesDownloaded(int State)
 // Function GooglePAD.GooglePADFunctionLibrary.GetAssetsPath
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Location                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int Location (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UGooglePADFunctionLibrary::GetAssetsPath(int Location)
 {
@@ -360,9 +360,9 @@ struct FString UGooglePADFunctionLibrary::GetAssetsPath(int Location)
 // Function GooglePAD.GooglePADFunctionLibrary.GetAssetPackLocation
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// int                            Location                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// int Location (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::GetAssetPackLocation(const struct FString& Name, int* Location)
 {
@@ -391,8 +391,8 @@ EGooglePADErrorCode UGooglePADFunctionLibrary::GetAssetPackLocation(const struct
 // Function GooglePAD.GooglePADFunctionLibrary.CancelDownload
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         AssetPacks                     (ConstParm, Parm, ZeroConstructor)
-// EGooglePADErrorCode            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> AssetPacks (ConstParm, Parm, ZeroConstructor)
+// EGooglePADErrorCode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EGooglePADErrorCode UGooglePADFunctionLibrary::CancelDownload(TArray<struct FString> AssetPacks)
 {

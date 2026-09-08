@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void UBaziState::OnControllerReconnected()
 // Function HiggsBoson.BaziState.AddChori
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FChori                  Element                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FChori Element (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBaziState::AddChori(const struct FChori& Element)
 {
@@ -56,7 +56,7 @@ void UBaziState::AddChori(const struct FChori& Element)
 // Function HiggsBoson.BaziState.AddBazi
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FBazi                   Element                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBazi Element (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBaziState::AddBazi(const struct FBazi& Element)
 {
@@ -80,7 +80,7 @@ void UBaziState::AddBazi(const struct FBazi& Element)
 // Function HiggsBoson.ClientGlueHiaSystem.Vulou
 // (Final, Native, Public, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UClientGlueHiaSystem::Vulou()
 {
@@ -105,7 +105,7 @@ float UClientGlueHiaSystem::Vulou()
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc9
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::LuaFunc9(int Param1)
 {
@@ -129,8 +129,8 @@ void UClientGlueHiaSystem::LuaFunc9(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc8
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc8(int Param1)
 {
@@ -156,8 +156,8 @@ bool UClientGlueHiaSystem::LuaFunc8(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc7
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc7(int Param1)
 {
@@ -183,8 +183,8 @@ bool UClientGlueHiaSystem::LuaFunc7(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc6
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc6(int Param1)
 {
@@ -210,8 +210,8 @@ bool UClientGlueHiaSystem::LuaFunc6(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc5
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc5(int Param1)
 {
@@ -237,8 +237,8 @@ bool UClientGlueHiaSystem::LuaFunc5(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc4
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc4(int Param1)
 {
@@ -264,7 +264,7 @@ bool UClientGlueHiaSystem::LuaFunc4(int Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc3
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::LuaFunc3(int Param1)
 {
@@ -309,8 +309,8 @@ void UClientGlueHiaSystem::LuaFunc2()
 // Function HiggsBoson.ClientGlueHiaSystem.LuaFunc1
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  PtrActor                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* PtrActor (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::LuaFunc1(class AActor* PtrActor)
 {
@@ -336,7 +336,7 @@ bool UClientGlueHiaSystem::LuaFunc1(class AActor* PtrActor)
 // Function HiggsBoson.ClientGlueHiaSystem.Func9
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  PtrWeapon                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* PtrWeapon (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func9(class AActor* PtrWeapon)
 {
@@ -360,10 +360,10 @@ void UClientGlueHiaSystem::Func9(class AActor* PtrWeapon)
 // Function HiggsBoson.ClientGlueHiaSystem.Func8
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// class AActor*                  PtrWeapon                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBulletHitInfoUploadData UploadData                     (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLocalShootHitData      LocalHitData                   (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* PtrWeapon (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBulletHitInfoUploadData UploadData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLocalShootHitData LocalHitData (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UClientGlueHiaSystem::Func8(class AActor* PtrWeapon, const struct FBulletHitInfoUploadData& UploadData, const struct FLocalShootHitData& LocalHitData)
 {
@@ -391,7 +391,7 @@ int UClientGlueHiaSystem::Func8(class AActor* PtrWeapon, const struct FBulletHit
 // Function HiggsBoson.ClientGlueHiaSystem.Func7
 // (Final, Native, Private)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::Func7()
 {
@@ -416,8 +416,8 @@ bool UClientGlueHiaSystem::Func7()
 // Function HiggsBoson.ClientGlueHiaSystem.Func6
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UClientGlueHiaSystem::Func6(class AActor* Param1)
 {
@@ -443,7 +443,7 @@ float UClientGlueHiaSystem::Func6(class AActor* Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func3
 // (Final, Native, Private)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UClientGlueHiaSystem::Func3()
 {
@@ -465,12 +465,44 @@ float UClientGlueHiaSystem::Func3()
 }
 
 
+// Function HiggsBoson.ClientGlueHiaSystem.Func29
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBulletHitInfoUploadDataInReplay HitData (ConstParm, Parm, OutParm, ReferenceParm)
+// float DrawRadius (Parm, ZeroConstructor, IsPlainOldData)
+// float DisplayTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDrawVictimBound (Parm, ZeroConstructor, IsPlainOldData)
+
+void UClientGlueHiaSystem::Func29(class UWorld* World, const struct FBulletHitInfoUploadDataInReplay& HitData, float DrawRadius, float DisplayTime, bool bDrawVictimBound)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.ClientGlueHiaSystem.Func29");
+
+	UClientGlueHiaSystem_Func29_Params params;
+	params.World = World;
+	params.HitData = HitData;
+	params.DrawRadius = DrawRadius;
+	params.DisplayTime = DisplayTime;
+	params.bDrawVictimBound = bDrawVictimBound;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function HiggsBoson.ClientGlueHiaSystem.Func28
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// class AActor*                  Weapon                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBulletHitInfoUploadData BulletHitInfoUploadData        (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLocalShootHitData      LocalShootHitData              (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* Weapon (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBulletHitInfoUploadData BulletHitInfoUploadData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLocalShootHitData LocalShootHitData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UClientGlueHiaSystem::Func28(class AActor* Weapon, const struct FBulletHitInfoUploadData& BulletHitInfoUploadData, const struct FLocalShootHitData& LocalShootHitData)
 {
@@ -496,7 +528,7 @@ void UClientGlueHiaSystem::Func28(class AActor* Weapon, const struct FBulletHitI
 // Function HiggsBoson.ClientGlueHiaSystem.Func27
 // (Final, Native, Private)
 // Parameters:
-// uint32_t                       ShootID                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ShootID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func27(uint32_t ShootID)
 {
@@ -520,8 +552,8 @@ void UClientGlueHiaSystem::Func27(uint32_t ShootID)
 // Function HiggsBoson.ClientGlueHiaSystem.Func26
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param4                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Param5                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param4 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param5 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func26(class AActor* Param4, class AActor* Param5)
 {
@@ -546,11 +578,11 @@ void UClientGlueHiaSystem::Func26(class AActor* Param4, class AActor* Param5)
 // Function HiggsBoson.ClientGlueHiaSystem.Func25
 // (Final, Native, Private)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Param2                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          param3                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Param4                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Param5                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Param2 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float param3 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param4 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param5 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func25(int Param1, float Param2, float param3, class AActor* Param4, class AActor* Param5)
 {
@@ -578,12 +610,12 @@ void UClientGlueHiaSystem::Func25(int Param1, float Param2, float param3, class 
 // Function HiggsBoson.ClientGlueHiaSystem.Func24
 // (Final, Native, Private)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Param2                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          param3                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Param4                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Param5                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Param6                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Param2 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float param3 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Param4 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param5 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param6 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func24(int Param1, float Param2, float param3, float Param4, class AActor* Param5, class AActor* Param6)
 {
@@ -612,9 +644,9 @@ void UClientGlueHiaSystem::Func24(int Param1, float Param2, float param3, float 
 // Function HiggsBoson.ClientGlueHiaSystem.Func23
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// uint32_t                       Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Param2                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FHitResult              param3                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// uint32_t Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Param2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FHitResult param3 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func23(uint32_t Param1, const struct FVector& Param2, const struct FHitResult& param3)
 {
@@ -640,9 +672,9 @@ void UClientGlueHiaSystem::Func23(uint32_t Param1, const struct FVector& Param2,
 // Function HiggsBoson.ClientGlueHiaSystem.Func22
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// uint32_t                       Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Param2                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 param3                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// uint32_t Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Param2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector param3 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func22(uint32_t Param1, const struct FVector& Param2, const struct FVector& param3)
 {
@@ -668,7 +700,7 @@ void UClientGlueHiaSystem::Func22(uint32_t Param1, const struct FVector& Param2,
 // Function HiggsBoson.ClientGlueHiaSystem.Func21
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func21(class AActor* Param1)
 {
@@ -692,8 +724,8 @@ void UClientGlueHiaSystem::Func21(class AActor* Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func20
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Param2                         (Parm, OutParm, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Param2 (Parm, OutParm, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func20(class AActor* Param1, struct FVector* Param2)
 {
@@ -720,9 +752,9 @@ void UClientGlueHiaSystem::Func20(class AActor* Param1, struct FVector* Param2)
 // Function HiggsBoson.ClientGlueHiaSystem.Func2
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  CharacterPtr                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bParam1                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* CharacterPtr (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bParam1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::Func2(class AActor* CharacterPtr, bool bParam1)
 {
@@ -749,9 +781,9 @@ bool UClientGlueHiaSystem::Func2(class AActor* CharacterPtr, bool bParam1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func19
 // (Final, Native, Private)
 // Parameters:
-// uint32_t                       Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Param2                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          param3                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Param2 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float param3 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func19(uint32_t Param1, float Param2, float param3)
 {
@@ -777,8 +809,8 @@ void UClientGlueHiaSystem::Func19(uint32_t Param1, float Param2, float param3)
 // Function HiggsBoson.ClientGlueHiaSystem.Func18
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<struct FBazi>           Bazi                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FChori>          Chori                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FBazi> Bazi (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FChori> Chori (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UClientGlueHiaSystem::Func18(TArray<struct FBazi> Bazi, TArray<struct FChori> Chori)
 {
@@ -803,7 +835,7 @@ void UClientGlueHiaSystem::Func18(TArray<struct FBazi> Bazi, TArray<struct FChor
 // Function HiggsBoson.ClientGlueHiaSystem.Func17
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FFatalDamageParameter   Param1                         (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FFatalDamageParameter Param1 (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UClientGlueHiaSystem::Func17(const struct FFatalDamageParameter& Param1)
 {
@@ -848,7 +880,7 @@ void UClientGlueHiaSystem::Func16()
 // Function HiggsBoson.ClientGlueHiaSystem.Func15
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func15(class AActor* Param1)
 {
@@ -872,8 +904,8 @@ void UClientGlueHiaSystem::Func15(class AActor* Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func14
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FShootTimeData          InData                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  PtrWeapon                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FShootTimeData InData (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* PtrWeapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func14(const struct FShootTimeData& InData, class AActor* PtrWeapon)
 {
@@ -898,8 +930,8 @@ void UClientGlueHiaSystem::Func14(const struct FShootTimeData& InData, class AAc
 // Function HiggsBoson.ClientGlueHiaSystem.Func11
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UClientGlueHiaSystem::Func11(class AActor* Param1)
 {
@@ -925,7 +957,7 @@ float UClientGlueHiaSystem::Func11(class AActor* Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func10
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  Param1                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Param1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientGlueHiaSystem::Func10(class AActor* Param1)
 {
@@ -949,10 +981,10 @@ void UClientGlueHiaSystem::Func10(class AActor* Param1)
 // Function HiggsBoson.ClientGlueHiaSystem.Func1
 // (Final, Native, Private, Const)
 // Parameters:
-// class AActor*                  CharacterPtr                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          TimeInSeconds                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MarginInSeconds                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* CharacterPtr (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float TimeInSeconds (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float MarginInSeconds (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UClientGlueHiaSystem::Func1(class AActor* CharacterPtr, float TimeInSeconds, float MarginInSeconds)
 {
@@ -980,9 +1012,9 @@ bool UClientGlueHiaSystem::Func1(class AActor* CharacterPtr, float TimeInSeconds
 // Function HiggsBoson.FuzzyObject.SetUInt8ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetUInt8ValueByName(int Name, unsigned char Value)
 {
@@ -1009,9 +1041,9 @@ bool UFuzzyObject::SetUInt8ValueByName(int Name, unsigned char Value)
 // Function HiggsBoson.FuzzyObject.SetUInt64ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetUInt64ValueByName(int Name, uint64_t Value)
 {
@@ -1038,9 +1070,9 @@ bool UFuzzyObject::SetUInt64ValueByName(int Name, uint64_t Value)
 // Function HiggsBoson.FuzzyObject.SetUInt32ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetUInt32ValueByName(int Name, uint32_t Value)
 {
@@ -1067,9 +1099,9 @@ bool UFuzzyObject::SetUInt32ValueByName(int Name, uint32_t Value)
 // Function HiggsBoson.FuzzyObject.SetUInt16ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint16_t                       Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint16_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetUInt16ValueByName(int Name, uint16_t Value)
 {
@@ -1096,9 +1128,9 @@ bool UFuzzyObject::SetUInt16ValueByName(int Name, uint16_t Value)
 // Function HiggsBoson.FuzzyObject.SetInt8ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int8_t                         Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int8_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetInt8ValueByName(int Name, int8_t Value)
 {
@@ -1125,9 +1157,9 @@ bool UFuzzyObject::SetInt8ValueByName(int Name, int8_t Value)
 // Function HiggsBoson.FuzzyObject.SetInt64ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int64_t                        Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int64_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetInt64ValueByName(int Name, int64_t Value)
 {
@@ -1154,9 +1186,9 @@ bool UFuzzyObject::SetInt64ValueByName(int Name, int64_t Value)
 // Function HiggsBoson.FuzzyObject.SetInt32ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetInt32ValueByName(int Name, int Value)
 {
@@ -1183,9 +1215,9 @@ bool UFuzzyObject::SetInt32ValueByName(int Name, int Value)
 // Function HiggsBoson.FuzzyObject.SetInt16ValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int16_t                        Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int16_t Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetInt16ValueByName(int Name, int16_t Value)
 {
@@ -1212,9 +1244,9 @@ bool UFuzzyObject::SetInt16ValueByName(int Name, int16_t Value)
 // Function HiggsBoson.FuzzyObject.SetFloatValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetFloatValueByName(int Name, float Value)
 {
@@ -1241,9 +1273,9 @@ bool UFuzzyObject::SetFloatValueByName(int Name, float Value)
 // Function HiggsBoson.FuzzyObject.SetBoolValueByName
 // (Final, Native, Public)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::SetBoolValueByName(int Name, bool Value)
 {
@@ -1270,9 +1302,9 @@ bool UFuzzyObject::SetBoolValueByName(int Name, bool Value)
 // Function HiggsBoson.FuzzyObject.GetUInt8ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetUInt8ValueByName(int Name, unsigned char* OutValue)
 {
@@ -1301,9 +1333,9 @@ bool UFuzzyObject::GetUInt8ValueByName(int Name, unsigned char* OutValue)
 // Function HiggsBoson.FuzzyObject.GetUInt64ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetUInt64ValueByName(int Name, uint64_t* OutValue)
 {
@@ -1332,9 +1364,9 @@ bool UFuzzyObject::GetUInt64ValueByName(int Name, uint64_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetUInt32ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetUInt32ValueByName(int Name, uint32_t* OutValue)
 {
@@ -1363,9 +1395,9 @@ bool UFuzzyObject::GetUInt32ValueByName(int Name, uint32_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetUInt16ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint16_t                       OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint16_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetUInt16ValueByName(int Name, uint16_t* OutValue)
 {
@@ -1394,9 +1426,9 @@ bool UFuzzyObject::GetUInt16ValueByName(int Name, uint16_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetInt8ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int8_t                         OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int8_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetInt8ValueByName(int Name, int8_t* OutValue)
 {
@@ -1425,9 +1457,9 @@ bool UFuzzyObject::GetInt8ValueByName(int Name, int8_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetInt64ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int64_t                        OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int64_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetInt64ValueByName(int Name, int64_t* OutValue)
 {
@@ -1456,9 +1488,9 @@ bool UFuzzyObject::GetInt64ValueByName(int Name, int64_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetInt32ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetInt32ValueByName(int Name, int* OutValue)
 {
@@ -1487,9 +1519,9 @@ bool UFuzzyObject::GetInt32ValueByName(int Name, int* OutValue)
 // Function HiggsBoson.FuzzyObject.GetInt16ValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int16_t                        OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int16_t OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetInt16ValueByName(int Name, int16_t* OutValue)
 {
@@ -1518,9 +1550,9 @@ bool UFuzzyObject::GetInt16ValueByName(int Name, int16_t* OutValue)
 // Function HiggsBoson.FuzzyObject.GetFloatValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetFloatValueByName(int Name, float* OutValue)
 {
@@ -1549,9 +1581,9 @@ bool UFuzzyObject::GetFloatValueByName(int Name, float* OutValue)
 // Function HiggsBoson.FuzzyObject.GetBoolValueByName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// int                            Name                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Name (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UFuzzyObject::GetBoolValueByName(int Name, bool* OutValue)
 {
@@ -1580,10 +1612,10 @@ bool UFuzzyObject::GetBoolValueByName(int Name, bool* OutValue)
 // Function HiggsBoson.ClientAmaUbaSubsystem.Func1
 // (Final, Native, Private)
 // Parameters:
-// int                            IntType                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          InTimestamp                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            IncreaseCount                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAlertUploadFrequency          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int IntType (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float InTimestamp (Parm, ZeroConstructor, IsPlainOldData)
+// int IncreaseCount (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bAlertUploadFrequency (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UClientAmaUbaSubsystem::Func1(int IntType, float InTimestamp, int IncreaseCount, bool bAlertUploadFrequency)
 {
@@ -1610,10 +1642,10 @@ void UClientAmaUbaSubsystem::Func1(int IntType, float InTimestamp, int IncreaseC
 // Function HiggsBoson.CamoyoHelper.MakeRectTu
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FScriptDelegate         CamoyoRetDelegate              (Parm, ZeroConstructor)
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// int                            Quality                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowUI                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate CamoyoRetDelegate (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
+// int Quality (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowUI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCamoyoHelper::MakeRectTu(const struct FScriptDelegate& CamoyoRetDelegate, const struct FString& Filename, int Quality, bool bShowUI)
 {
@@ -1640,7 +1672,7 @@ void UCamoyoHelper::MakeRectTu(const struct FScriptDelegate& CamoyoRetDelegate, 
 // Function HiggsBoson.CamoyoHelper.MakeMemPerform
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            InbOpen                        (Parm, ZeroConstructor, IsPlainOldData)
+// int InbOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCamoyoHelper::MakeMemPerform(int InbOpen)
 {
@@ -1664,10 +1696,10 @@ void UCamoyoHelper::MakeMemPerform(int InbOpen)
 // Function HiggsBoson.CamoyoHelper.MakeFitRectTu
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FScriptDelegate         CamoyoRetDelegate              (Parm, ZeroConstructor)
-// struct FVector4                InCutParam                     (Parm, IsPlainOldData)
-// int                            InTuType                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isShowUI                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate CamoyoRetDelegate (Parm, ZeroConstructor)
+// struct FVector4 InCutParam (Parm, IsPlainOldData)
+// int InTuType (Parm, ZeroConstructor, IsPlainOldData)
+// bool isShowUI (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCamoyoHelper::MakeFitRectTu(const struct FScriptDelegate& CamoyoRetDelegate, const struct FVector4& InCutParam, int InTuType, bool isShowUI)
 {
@@ -1691,10 +1723,76 @@ void UCamoyoHelper::MakeFitRectTu(const struct FScriptDelegate& CamoyoRetDelegat
 }
 
 
+// Function HiggsBoson.HiggsBosonComponent.RPC_Client_ShowSecurityAlertWindow
+// (Net, NetReliable, Public, NetClient)
+// Parameters:
+// struct FString StrProperty_2 (Parm, ZeroConstructor)
+
+void UHiggsBosonComponent::RPC_Client_ShowSecurityAlertWindow(const struct FString& StrProperty_2)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonComponent.RPC_Client_ShowSecurityAlertWindow");
+
+	UHiggsBosonComponent_RPC_Client_ShowSecurityAlertWindow_Params params;
+	params.StrProperty_2 = StrProperty_2;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function HiggsBoson.HiggsBosonComponent.RPC_Client_ServerNameAck
+// (Net, Public, NetClient)
+
+void UHiggsBosonComponent::RPC_Client_ServerNameAck()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonComponent.RPC_Client_ServerNameAck");
+
+	UHiggsBosonComponent_RPC_Client_ServerNameAck_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function HiggsBoson.HiggsBosonComponent.RPC_Server_TellServerName
+// (Net, Public, NetServer)
+// Parameters:
+// struct FString StrProperty_1 (Parm, ZeroConstructor)
+
+void UHiggsBosonComponent::RPC_Server_TellServerName(const struct FString& StrProperty_1)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonComponent.RPC_Server_TellServerName");
+
+	UHiggsBosonComponent_RPC_Server_TellServerName_Params params;
+	params.StrProperty_1 = StrProperty_1;
+
+	auto flags = pFunc->FunctionFlags;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function HiggsBoson.HiggsBosonComponent.Zanwu
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 Param1                         (Parm, ZeroConstructor)
+// struct FString Param1 (Parm, ZeroConstructor)
 
 void UHiggsBosonComponent::Zanwu(const struct FString& Param1)
 {
@@ -1718,7 +1816,7 @@ void UHiggsBosonComponent::Zanwu(const struct FString& Param1)
 // Function HiggsBoson.HiggsBosonComponent.SyncServerParam
 // (Final, Native, Public)
 // Parameters:
-// bool                           Param1                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool Param1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::SyncServerParam(bool Param1)
 {
@@ -1742,8 +1840,8 @@ void UHiggsBosonComponent::SyncServerParam(bool Param1)
 // Function HiggsBoson.HiggsBosonComponent.SwiftHawk
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// TArray<unsigned char>          Hawks                          (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint32_t                       Magic                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Hawks (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint32_t Magic (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::SwiftHawk(TArray<unsigned char> Hawks, uint32_t Magic)
 {
@@ -1768,8 +1866,8 @@ void UHiggsBosonComponent::SwiftHawk(TArray<unsigned char> Hawks, uint32_t Magic
 // Function HiggsBoson.HiggsBosonComponent.ShowABCD
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 Message                        (Parm, ZeroConstructor)
-// bool                           bIsClientShowWindow            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Message (Parm, ZeroConstructor)
+// bool bIsClientShowWindow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ShowABCD(const struct FString& Message, bool bIsClientShowWindow)
 {
@@ -1793,10 +1891,10 @@ void UHiggsBosonComponent::ShowABCD(const struct FString& Message, bool bIsClien
 // Function HiggsBoson.HiggsBosonComponent.SetSchemeForInitialize
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       VerifyLen                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          VerifyHashArray                (Parm, ZeroConstructor)
-// TArray<struct FPatchPoint>     PatchPointArray                (Parm, ZeroConstructor)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t VerifyLen (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> VerifyHashArray (Parm, ZeroConstructor)
+// TArray<struct FPatchPoint> PatchPointArray (Parm, ZeroConstructor)
 
 void UHiggsBosonComponent::SetSchemeForInitialize(int Index, uint32_t VerifyLen, TArray<unsigned char> VerifyHashArray, TArray<struct FPatchPoint> PatchPointArray)
 {
@@ -1823,10 +1921,10 @@ void UHiggsBosonComponent::SetSchemeForInitialize(int Index, uint32_t VerifyLen,
 // Function HiggsBoson.HiggsBosonComponent.SetSchemeForGet
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       VerifyLen                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          VerifyHashArray                (Parm, ZeroConstructor)
-// TArray<struct FPatchPoint>     PatchPointArray                (Parm, ZeroConstructor)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t VerifyLen (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> VerifyHashArray (Parm, ZeroConstructor)
+// TArray<struct FPatchPoint> PatchPointArray (Parm, ZeroConstructor)
 
 void UHiggsBosonComponent::SetSchemeForGet(int Index, uint32_t VerifyLen, TArray<unsigned char> VerifyHashArray, TArray<struct FPatchPoint> PatchPointArray)
 {
@@ -1853,7 +1951,7 @@ void UHiggsBosonComponent::SetSchemeForGet(int Index, uint32_t VerifyLen, TArray
 // Function HiggsBoson.HiggsBosonComponent.ServerPoPo
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          Array                          (Parm, OutParm, ZeroConstructor)
+// TArray<unsigned char> Array (Parm, OutParm, ZeroConstructor)
 
 void UHiggsBosonComponent::ServerPoPo(TArray<unsigned char>* Array)
 {
@@ -1879,7 +1977,7 @@ void UHiggsBosonComponent::ServerPoPo(TArray<unsigned char>* Array)
 // Function HiggsBoson.HiggsBosonComponent.SendMoveStatusToServer
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// EPawnState                     State                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// EPawnState State (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::SendMoveStatusToServer(EPawnState State)
 {
@@ -1903,7 +2001,7 @@ void UHiggsBosonComponent::SendMoveStatusToServer(EPawnState State)
 // Function HiggsBoson.HiggsBosonComponent.S2CNuoro
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int                            Lotion                         (Parm, ZeroConstructor, IsPlainOldData)
+// int Lotion (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::S2CNuoro(int Lotion)
 {
@@ -1927,12 +2025,12 @@ void UHiggsBosonComponent::S2CNuoro(int Lotion)
 // Function HiggsBoson.HiggsBosonComponent.RPC_ServerGlueHiaPark
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int8_t                         HiaType                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          GlueHiaParkArr                 (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint32_t                       HiaStatus                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          GlueArg                        (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// TArray<unsigned char>          GlueHiaParkArr2                (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint32_t                       HiaStatus2                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int8_t HiaType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> GlueHiaParkArr (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint32_t HiaStatus (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> GlueArg (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> GlueHiaParkArr2 (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint32_t HiaStatus2 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::RPC_ServerGlueHiaPark(int8_t HiaType, TArray<unsigned char> GlueHiaParkArr, uint32_t HiaStatus, TArray<unsigned char> GlueArg, TArray<unsigned char> GlueHiaParkArr2, uint32_t HiaStatus2)
 {
@@ -1961,9 +2059,9 @@ void UHiggsBosonComponent::RPC_ServerGlueHiaPark(int8_t HiaType, TArray<unsigned
 // Function HiggsBoson.HiggsBosonComponent.RPC_ServerCapbo
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// int8_t                         BoCapC                         (Parm, ZeroConstructor, IsPlainOldData)
-// int8_t                         InBoType                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          BoDataArr                      (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// int8_t BoCapC (Parm, ZeroConstructor, IsPlainOldData)
+// int8_t InBoType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> BoDataArr (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::RPC_ServerCapbo(int8_t BoCapC, int8_t InBoType, TArray<unsigned char> BoDataArr)
 {
@@ -1989,7 +2087,7 @@ void UHiggsBosonComponent::RPC_ServerCapbo(int8_t BoCapC, int8_t InBoType, TArra
 // Function HiggsBoson.HiggsBosonComponent.RPC_ServerAddInvalidFilesInPakLite
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// TArray<int>                    InvalidIndexList               (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<int> InvalidIndexList (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::RPC_ServerAddInvalidFilesInPakLite(TArray<int> InvalidIndexList)
 {
@@ -2013,9 +2111,9 @@ void UHiggsBosonComponent::RPC_ServerAddInvalidFilesInPakLite(TArray<int> Invali
 // Function HiggsBoson.HiggsBosonComponent.RPC_ClientCoronaLab
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// unsigned char                  bAllSwitch                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          CoronaLab                      (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// uint32_t                       CoronaState                    (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char bAllSwitch (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> CoronaLab (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// uint32_t CoronaState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::RPC_ClientCoronaLab(unsigned char bAllSwitch, TArray<unsigned char> CoronaLab, uint32_t CoronaState)
 {
@@ -2041,10 +2139,10 @@ void UHiggsBosonComponent::RPC_ClientCoronaLab(unsigned char bAllSwitch, TArray<
 // Function HiggsBoson.HiggsBosonComponent.OnWeaponAimInput
 // (Final, Native, Public)
 // Parameters:
-// float                          InDistToEnemy                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InDistToEnemy (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnWeaponAimInput(float InDistToEnemy, float InYaw, float InPitch, float InRoll)
 {
@@ -2071,9 +2169,9 @@ void UHiggsBosonComponent::OnWeaponAimInput(float InDistToEnemy, float InYaw, fl
 // Function HiggsBoson.HiggsBosonComponent.OnTouchInput
 // (Final, Native, Public)
 // Parameters:
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnTouchInput(float InYaw, float InPitch, float InRoll)
 {
@@ -2141,8 +2239,8 @@ void UHiggsBosonComponent::OnStartFireEvent()
 // Function HiggsBoson.HiggsBosonComponent.OnSkillInteruptVisual
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InTarget                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnSkillInteruptVisual(class AActor* InTarget, class AActor* InCauser)
 {
@@ -2167,8 +2265,8 @@ void UHiggsBosonComponent::OnSkillInteruptVisual(class AActor* InTarget, class A
 // Function HiggsBoson.HiggsBosonComponent.OnSkillEndVisual
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InTarget                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnSkillEndVisual(class AActor* InTarget, class AActor* InCauser)
 {
@@ -2193,8 +2291,8 @@ void UHiggsBosonComponent::OnSkillEndVisual(class AActor* InTarget, class AActor
 // Function HiggsBoson.HiggsBosonComponent.OnSkillEndTrans
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InTarget                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnSkillEndTrans(class AActor* InTarget, class AActor* InCauser)
 {
@@ -2219,8 +2317,8 @@ void UHiggsBosonComponent::OnSkillEndTrans(class AActor* InTarget, class AActor*
 // Function HiggsBoson.HiggsBosonComponent.OnSkillBeginVisual
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InTarget                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnSkillBeginVisual(class AActor* InTarget, class AActor* InCauser)
 {
@@ -2245,8 +2343,8 @@ void UHiggsBosonComponent::OnSkillBeginVisual(class AActor* InTarget, class AAct
 // Function HiggsBoson.HiggsBosonComponent.OnSkillBeginTrans
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InTarget                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InTarget (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnSkillBeginTrans(class AActor* InTarget, class AActor* InCauser)
 {
@@ -2271,7 +2369,7 @@ void UHiggsBosonComponent::OnSkillBeginTrans(class AActor* InTarget, class AActo
 // Function HiggsBoson.HiggsBosonComponent.OnRecoilCurveCheckFailed
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  Weapon                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Weapon (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnRecoilCurveCheckFailed(class AActor* Weapon)
 {
@@ -2295,7 +2393,7 @@ void UHiggsBosonComponent::OnRecoilCurveCheckFailed(class AActor* Weapon)
 // Function HiggsBoson.HiggsBosonComponent.OnPlayerScopeOut
 // (Final, Native, Public)
 // Parameters:
-// bool                           bBegan                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBegan (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnPlayerScopeOut(bool bBegan)
 {
@@ -2319,7 +2417,7 @@ void UHiggsBosonComponent::OnPlayerScopeOut(bool bBegan)
 // Function HiggsBoson.HiggsBosonComponent.OnPlayerScopeIn
 // (Final, Native, Public)
 // Parameters:
-// bool                           bBegan                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBegan (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnPlayerScopeIn(bool bBegan)
 {
@@ -2343,7 +2441,7 @@ void UHiggsBosonComponent::OnPlayerScopeIn(bool bBegan)
 // Function HiggsBoson.HiggsBosonComponent.OnMyPawnRespawn
 // (Final, Native, Public)
 // Parameters:
-// class AUAEPlayerController*    InPlayerController             (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAEPlayerController* InPlayerController (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnMyPawnRespawn(class AUAEPlayerController* InPlayerController)
 {
@@ -2367,7 +2465,7 @@ void UHiggsBosonComponent::OnMyPawnRespawn(class AUAEPlayerController* InPlayerC
 // Function HiggsBoson.HiggsBosonComponent.OnKillSomeOneEvent
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  InSomeOne                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* InSomeOne (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnKillSomeOneEvent(class AActor* InSomeOne)
 {
@@ -2391,9 +2489,9 @@ void UHiggsBosonComponent::OnKillSomeOneEvent(class AActor* InSomeOne)
 // Function HiggsBoson.HiggsBosonComponent.OnGyroInput
 // (Final, Native, Public)
 // Parameters:
-// float                          InYaw                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InPitch                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InRoll                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InYaw (Parm, ZeroConstructor, IsPlainOldData)
+// float InPitch (Parm, ZeroConstructor, IsPlainOldData)
+// float InRoll (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnGyroInput(float InYaw, float InPitch, float InRoll)
 {
@@ -2419,8 +2517,8 @@ void UHiggsBosonComponent::OnGyroInput(float InYaw, float InPitch, float InRoll)
 // Function HiggsBoson.HiggsBosonComponent.OnClientAdjustPosition
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 NewLoc                         (Parm, IsPlainOldData)
-// ECharacterMoveDragReason       Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector NewLoc (Parm, IsPlainOldData)
+// ECharacterMoveDragReason Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::OnClientAdjustPosition(const struct FVector& NewLoc, ECharacterMoveDragReason Reason)
 {
@@ -2445,9 +2543,9 @@ void UHiggsBosonComponent::OnClientAdjustPosition(const struct FVector& NewLoc, 
 // Function HiggsBoson.HiggsBosonComponent.OnCapboReturn
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// int                            BoCapC                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InBoType                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          RetData                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int BoCapC (Parm, ZeroConstructor, IsPlainOldData)
+// int InBoType (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> RetData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::OnCapboReturn(int BoCapC, int InBoType, TArray<unsigned char> RetData)
 {
@@ -2473,8 +2571,8 @@ void UHiggsBosonComponent::OnCapboReturn(int BoCapC, int InBoType, TArray<unsign
 // Function HiggsBoson.HiggsBosonComponent.OnBulletImpactEvent
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class AActor*                  InCauser                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              InImpactResult                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* InCauser (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult InImpactResult (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UHiggsBosonComponent::OnBulletImpactEvent(class AActor* InCauser, const struct FHitResult& InImpactResult)
 {
@@ -2496,36 +2594,10 @@ void UHiggsBosonComponent::OnBulletImpactEvent(class AActor* InCauser, const str
 }
 
 
-// Function HiggsBoson.HiggsBosonComponent.LuaNotifySecurityAbnormalJump
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Velocity                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UHiggsBosonComponent::LuaNotifySecurityAbnormalJump(float Time, float Velocity)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonComponent.LuaNotifySecurityAbnormalJump");
-
-	UHiggsBosonComponent_LuaNotifySecurityAbnormalJump_Params params;
-	params.Time = Time;
-	params.Velocity = Velocity;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function HiggsBoson.HiggsBosonComponent.IsCharacterOwnerWerewolf
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHiggsBosonComponent::IsCharacterOwnerWerewolf()
 {
@@ -2550,7 +2622,7 @@ bool UHiggsBosonComponent::IsCharacterOwnerWerewolf()
 // Function HiggsBoson.HiggsBosonComponent.IsCharacterOwnerButcher
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHiggsBosonComponent::IsCharacterOwnerButcher()
 {
@@ -2593,6 +2665,31 @@ void UHiggsBosonComponent::HandleClientReconnect()
 }
 
 
+// Function HiggsBoson.HiggsBosonComponent.GetBandaCountOffset
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UHiggsBosonComponent::GetBandaCountOffset()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonComponent.GetBandaCountOffset");
+
+	UHiggsBosonComponent_GetBandaCountOffset_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function HiggsBoson.HiggsBosonComponent.FlushGameEnd
 // (Final, Native, Public)
 
@@ -2617,10 +2714,10 @@ void UHiggsBosonComponent::FlushGameEnd()
 // Function HiggsBoson.HiggsBosonComponent.Ezio
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
-// int                            Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Param2                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            param3                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            Param4                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param2 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int param3 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Param4 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::Ezio(int Param1, int Param2, int param3, int Param4)
 {
@@ -2647,7 +2744,7 @@ void UHiggsBosonComponent::Ezio(int Param1, int Param2, int param3, int Param4)
 // Function HiggsBoson.HiggsBosonComponent.EnableTickEncrypt
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHiggsBosonComponent::EnableTickEncrypt()
 {
@@ -2672,7 +2769,7 @@ int UHiggsBosonComponent::EnableTickEncrypt()
 // Function HiggsBoson.HiggsBosonComponent.EnablePeekShootVerify
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHiggsBosonComponent::EnablePeekShootVerify()
 {
@@ -2697,7 +2794,7 @@ int UHiggsBosonComponent::EnablePeekShootVerify()
 // Function HiggsBoson.HiggsBosonComponent.EnableEnhancedDynamicActors
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::EnableEnhancedDynamicActors(int Index)
 {
@@ -2721,9 +2818,9 @@ void UHiggsBosonComponent::EnableEnhancedDynamicActors(int Index)
 // Function HiggsBoson.HiggsBosonComponent.EnableCheckFilesInPakLite
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FString>         InFiles                        (ConstParm, Parm, ZeroConstructor)
-// int                            InVerifyCountSinglePass        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FString> InFiles (ConstParm, Parm, ZeroConstructor)
+// int InVerifyCountSinglePass (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHiggsBosonComponent::EnableCheckFilesInPakLite(TArray<struct FString> InFiles, int InVerifyCountSinglePass)
 {
@@ -2750,13 +2847,13 @@ int UHiggsBosonComponent::EnableCheckFilesInPakLite(TArray<struct FString> InFil
 // Function HiggsBoson.HiggsBosonComponent.DispatchIntegrityCheckItem
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       PlatID                         (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       AreaID                         (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       GameBits                       (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Offset                         (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       Len                            (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       Type                           (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t PlatID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t AreaID (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t GameBits (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Index (Parm, ZeroConstructor, IsPlainOldData)
+// int Offset (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Len (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t Type (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::DispatchIntegrityCheckItem(uint32_t PlatID, uint32_t AreaID, uint32_t GameBits, uint32_t Index, int Offset, uint32_t Len, uint32_t Type)
 {
@@ -2786,12 +2883,12 @@ void UHiggsBosonComponent::DispatchIntegrityCheckItem(uint32_t PlatID, uint32_t 
 // Function HiggsBoson.HiggsBosonComponent.DevPVSCheckClientLocationC2S
 // (Net, NetReliable, Native, Event, Public, NetServer, HasDefaults, NetValidate)
 // Parameters:
-// class ASTExtraBaseCharacter*   PtrOtherCharacter              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 D                              (ConstParm, Parm, ReferenceParm, IsPlainOldData)
-// struct FVector                 A                              (ConstParm, Parm, ReferenceParm, IsPlainOldData)
-// struct FVector                 V                              (ConstParm, Parm, ReferenceParm, IsPlainOldData)
-// struct FVector                 C                              (ConstParm, Parm, ReferenceParm, IsPlainOldData)
-// bool                           b1                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* PtrOtherCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector D (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// struct FVector A (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// struct FVector V (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// struct FVector C (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// bool b1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::DevPVSCheckClientLocationC2S(class ASTExtraBaseCharacter* PtrOtherCharacter, const struct FVector& D, const struct FVector& A, const struct FVector& V, const struct FVector& C, bool b1)
 {
@@ -2820,8 +2917,8 @@ void UHiggsBosonComponent::DevPVSCheckClientLocationC2S(class ASTExtraBaseCharac
 // Function HiggsBoson.HiggsBosonComponent.DevPVSCheckClientLocation
 // (Net, NetReliable, Native, Event, Public, HasDefaults, NetClient, NetValidate)
 // Parameters:
-// class AActor*                  PtrSimulatedProxy              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 D                              (ConstParm, Parm, ReferenceParm, IsPlainOldData)
+// class AActor* PtrSimulatedProxy (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector D (ConstParm, Parm, ReferenceParm, IsPlainOldData)
 
 void UHiggsBosonComponent::DevPVSCheckClientLocation(class AActor* PtrSimulatedProxy, const struct FVector& D)
 {
@@ -2846,9 +2943,9 @@ void UHiggsBosonComponent::DevPVSCheckClientLocation(class AActor* PtrSimulatedP
 // Function HiggsBoson.HiggsBosonComponent.DevPrintMouke
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 Param0                         (Parm, ZeroConstructor)
-// float                          Param1                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 param3                         (Parm, ZeroConstructor)
+// struct FString Param0 (Parm, ZeroConstructor)
+// float Param1 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString param3 (Parm, ZeroConstructor)
 
 void UHiggsBosonComponent::DevPrintMouke(const struct FString& Param0, float Param1, const struct FString& param3)
 {
@@ -2874,7 +2971,7 @@ void UHiggsBosonComponent::DevPrintMouke(const struct FString& Param0, float Par
 // Function HiggsBoson.HiggsBosonComponent.ControlRoofTouch
 // (Final, Native, Public)
 // Parameters:
-// int                            Switch                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Switch (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ControlRoofTouch(int Switch)
 {
@@ -2898,12 +2995,12 @@ void UHiggsBosonComponent::ControlRoofTouch(int Switch)
 // Function HiggsBoson.HiggsBosonComponent.ControlMoveInputRecord
 // (Final, Native, Public)
 // Parameters:
-// int                            Switch                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          RecordCooldown                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            BitmapSize                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            MinValidSampleCount            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InAngleSampleMaxCount          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       InAngleDistributionNum         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Switch (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float RecordCooldown (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int BitmapSize (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int MinValidSampleCount (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAngleSampleMaxCount (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InAngleDistributionNum (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ControlMoveInputRecord(int Switch, float RecordCooldown, int BitmapSize, int MinValidSampleCount, uint32_t InAngleSampleMaxCount, uint32_t InAngleDistributionNum)
 {
@@ -2932,7 +3029,7 @@ void UHiggsBosonComponent::ControlMoveInputRecord(int Switch, float RecordCooldo
 // Function HiggsBoson.HiggsBosonComponent.ControlMHActive
 // (Final, Native, Public)
 // Parameters:
-// int                            Switch                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int Switch (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ControlMHActive(int Switch)
 {
@@ -2956,7 +3053,7 @@ void UHiggsBosonComponent::ControlMHActive(int Switch)
 // Function HiggsBoson.HiggsBosonComponent.Cofew
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       InIter                         (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t InIter (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::Cofew(uint32_t InIter)
 {
@@ -2980,7 +3077,7 @@ void UHiggsBosonComponent::Cofew(uint32_t InIter)
 // Function HiggsBoson.HiggsBosonComponent.ClientSwiftHawkWithParams
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// TArray<unsigned char>          Hawks                          (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> Hawks (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::ClientSwiftHawkWithParams(TArray<unsigned char> Hawks)
 {
@@ -3004,8 +3101,8 @@ void UHiggsBosonComponent::ClientSwiftHawkWithParams(TArray<unsigned char> Hawks
 // Function HiggsBoson.HiggsBosonComponent.ClientSwiftHawk
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// unsigned char                  Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SequenceID                     (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char Type (Parm, ZeroConstructor, IsPlainOldData)
+// int SequenceID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ClientSwiftHawk(unsigned char Type, int SequenceID)
 {
@@ -3030,7 +3127,7 @@ void UHiggsBosonComponent::ClientSwiftHawk(unsigned char Type, int SequenceID)
 // Function HiggsBoson.HiggsBosonComponent.ClientReceiveEx
 // (Final, Net, Native, Event, Private, NetClient, NetValidate)
 // Parameters:
-// TArray<unsigned char>          RPCConstArray                  (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<unsigned char> RPCConstArray (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::ClientReceiveEx(TArray<unsigned char> RPCConstArray)
 {
@@ -3054,7 +3151,7 @@ void UHiggsBosonComponent::ClientReceiveEx(TArray<unsigned char> RPCConstArray)
 // Function HiggsBoson.HiggsBosonComponent.ClientDoJT
 // (Final, Native, Public)
 // Parameters:
-// bool                           bDelayUntilShot                (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDelayUntilShot (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ClientDoJT(bool bDelayUntilShot)
 {
@@ -3078,8 +3175,8 @@ void UHiggsBosonComponent::ClientDoJT(bool bDelayUntilShot)
 // Function HiggsBoson.HiggsBosonComponent.ClientCloseBaziUI
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// TArray<struct FBazi>           Bazi                           (ConstParm, Parm, ZeroConstructor, ReferenceParm)
-// TArray<struct FChori>          Chori                          (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<struct FBazi> Bazi (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<struct FChori> Chori (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UHiggsBosonComponent::ClientCloseBaziUI(TArray<struct FBazi> Bazi, TArray<struct FChori> Chori)
 {
@@ -3104,7 +3201,7 @@ void UHiggsBosonComponent::ClientCloseBaziUI(TArray<struct FBazi> Bazi, TArray<s
 // Function HiggsBoson.HiggsBosonComponent.ClientAccom
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// uint16_t                       Owea                           (Parm, ZeroConstructor, IsPlainOldData)
+// uint16_t Owea (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHiggsBosonComponent::ClientAccom(uint16_t Owea)
 {
@@ -3128,7 +3225,7 @@ void UHiggsBosonComponent::ClientAccom(uint16_t Owea)
 // Function HiggsBoson.HiggsBosonComponent.C2SSendAlert
 // (Final, Net, NetReliable, Native, Event, Private, NetServer, NetValidate)
 // Parameters:
-// struct FString                 Param1                         (Parm, ZeroConstructor)
+// struct FString Param1 (Parm, ZeroConstructor)
 
 void UHiggsBosonComponent::C2SSendAlert(const struct FString& Param1)
 {
@@ -3146,6 +3243,59 @@ void UHiggsBosonComponent::C2SSendAlert(const struct FString& Param1)
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+}
+
+
+// Function HiggsBoson.HiggsBosonScriptHelper.FileCRCGuard_UnregisterFile
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString InFilePath (Parm, ZeroConstructor)
+
+void UHiggsBosonScriptHelper::FileCRCGuard_UnregisterFile(const struct FString& InFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonScriptHelper.FileCRCGuard_UnregisterFile");
+
+	UHiggsBosonScriptHelper_FileCRCGuard_UnregisterFile_Params params;
+	params.InFilePath = InFilePath;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function HiggsBoson.HiggsBosonScriptHelper.FileCRCGuard_RegisterFile
+// (Final, Native, Static, Public)
+// Parameters:
+// struct FString InFilePath (Parm, ZeroConstructor)
+// struct FString InTag (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UHiggsBosonScriptHelper::FileCRCGuard_RegisterFile(const struct FString& InFilePath, const struct FString& InTag)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function HiggsBoson.HiggsBosonScriptHelper.FileCRCGuard_RegisterFile");
+
+	UHiggsBosonScriptHelper_FileCRCGuard_RegisterFile_Params params;
+	params.InFilePath = InFilePath;
+	params.InTag = InTag;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -3173,8 +3323,8 @@ void UMarginIntervalCharacterTicker::Reset()
 // Function HiggsBoson.SecurityAvatarSystem.OnAvatarRectifyDataChange
 // (Final, Native, Public)
 // Parameters:
-// class AUAECharacter*           CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AUAECharacter* CharacterOwner (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void USecurityAvatarSystem::OnAvatarRectifyDataChange(class AUAECharacter* CharacterOwner, int ItemId)
 {
@@ -3199,10 +3349,10 @@ void USecurityAvatarSystem::OnAvatarRectifyDataChange(class AUAECharacter* Chara
 // Function HiggsBoson.SecurityAvatarSystem.OnAvatarEquipped
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class AUAECharacter*           CharacterOwner                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SlotID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemDefineID           NewItemID                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FItemDefineID           OldItemID                      (ConstParm, Parm, OutParm, ReferenceParm)
+// class AUAECharacter* CharacterOwner (Parm, ZeroConstructor, IsPlainOldData)
+// int SlotID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID NewItemID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID OldItemID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void USecurityAvatarSystem::OnAvatarEquipped(class AUAECharacter* CharacterOwner, int SlotID, const struct FItemDefineID& NewItemID, const struct FItemDefineID& OldItemID)
 {
@@ -3229,7 +3379,7 @@ void USecurityAvatarSystem::OnAvatarEquipped(class AUAECharacter* CharacterOwner
 // Function HiggsBoson.SecurityImprisonComp.ReleaseTeammate
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// uint64_t                       PlayerUID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USecurityImprisonComp::ReleaseTeammate(uint64_t PlayerUID)
 {
@@ -3253,8 +3403,8 @@ void USecurityImprisonComp::ReleaseTeammate(uint64_t PlayerUID)
 // Function HiggsBoson.SecurityImprisonComp.ImprisonmentUIUpdate
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// uint64_t                       PlayerUID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsImprison                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsImprison (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USecurityImprisonComp::ImprisonmentUIUpdate(uint64_t PlayerUID, bool bIsImprison)
 {
@@ -3279,8 +3429,8 @@ void USecurityImprisonComp::ImprisonmentUIUpdate(uint64_t PlayerUID, bool bIsImp
 // Function HiggsBoson.SecurityImprisonComp.ImprisonmentTeammate
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// uint64_t                       PlayerUID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIscomplaint                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bIscomplaint (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USecurityImprisonComp::ImprisonmentTeammate(uint64_t PlayerUID, bool bIscomplaint)
 {
@@ -3305,7 +3455,7 @@ void USecurityImprisonComp::ImprisonmentTeammate(uint64_t PlayerUID, bool bIscom
 // Function HiggsBoson.SecurityImprisonComp.ImprisonmentReport
 // (Final, Native, Public)
 // Parameters:
-// uint64_t                       PlayerUID                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t PlayerUID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USecurityImprisonComp::ImprisonmentReport(uint64_t PlayerUID)
 {
@@ -3350,12 +3500,12 @@ void UTimeIntervalPawnStateHistorySystem::UpdateParams()
 // Function HiggsBoson.TimeIntervalPawnStateHistorySystem.QueryHistoryMaxVelocity
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// uint64_t                       UID                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          CenterTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          MarginTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          OutMaxZVelocity                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          OutMaxXYVelocity               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint64_t UID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float CenterTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float MarginTime (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float OutMaxZVelocity (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float OutMaxXYVelocity (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTimeIntervalPawnStateHistorySystem::QueryHistoryMaxVelocity(uint64_t UID, float CenterTime, float MarginTime, float* OutMaxZVelocity, float* OutMaxXYVelocity)
 {

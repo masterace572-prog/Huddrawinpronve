@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,32 +13,31 @@ namespace SDK
 class AAIController : public AController
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0518(0x0038) MISSED OFFSET
-	unsigned char                                      bStopAILogicOnUnposses : 1;                               // 0x0550(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bLOSflag : 1;                                             // 0x0550(0x0001)
-	unsigned char                                      bSkipExtraLOSChecks : 1;                                  // 0x0550(0x0001)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x0550(0x0001)
-	unsigned char                                      bWantsPlayerState : 1;                                    // 0x0550(0x0001)
-	unsigned char                                      bSetControlRotationFromPawnOrientation : 1;               // 0x0550(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0551(0x0007) MISSED OFFSET
-	class UPathFollowingComponent*                     PathFollowingComponent;                                   // 0x0558(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UBrainComponent*                             BrainComponent;                                           // 0x0560(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAIPerceptionComponent*                      PerceptionComponent;                                      // 0x0568(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UPawnActionsComponent*                       ActionsComp;                                              // 0x0570(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlackboardComponent*                        Blackboard;                                               // 0x0578(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UGameplayTasksComponent*                     CachedGameplayTasksComponent;                             // 0x0580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClass*                                      DefaultNavigationFilterClass;                             // 0x0588(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    ReceiveMoveCompleted;                                     // 0x0590(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x05A0(0x0001) MISSED OFFSET
-	bool                                               UseGameplayTasksComponent;                                // 0x05A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bShareNavigationSystem;                                   // 0x05A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x05A3(0x0001) MISSED OFFSET
-	struct FVector                                     ShareNavSysOffset;                                        // 0x05A4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bEnableActiveRegion;                                      // 0x05B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x05B1(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x38]; // 0x0518(0x0038) MISSED OFFSET
+	unsigned char bStopAILogicOnUnposses : 1; // 0x0550(0x0001) (Edit, BlueprintVisible)
+	unsigned char bLOSflag : 1; // 0x0550(0x0001)
+	unsigned char bSkipExtraLOSChecks : 1; // 0x0550(0x0001)
+	unsigned char bAllowStrafe : 1; // 0x0550(0x0001)
+	unsigned char bWantsPlayerState : 1; // 0x0550(0x0001)
+	unsigned char bSetControlRotationFromPawnOrientation : 1; // 0x0550(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData01[0x7]; // 0x0551(0x0007) MISSED OFFSET
+	class UPathFollowingComponent* PathFollowingComponent; // 0x0558(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UBrainComponent* BrainComponent; // 0x0560(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAIPerceptionComponent* PerceptionComponent; // 0x0568(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UPawnActionsComponent* ActionsComp; // 0x0570(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlackboardComponent* Blackboard; // 0x0578(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UGameplayTasksComponent* CachedGameplayTasksComponent; // 0x0580(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UClass* DefaultNavigationFilterClass; // 0x0588(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate ReceiveMoveCompleted; // 0x0590(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData02[0x1]; // 0x05A0(0x0001) MISSED OFFSET
+	bool UseGameplayTasksComponent; // 0x05A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bShareNavigationSystem; // 0x05A2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x1]; // 0x05A3(0x0001) MISSED OFFSET
+	struct FVector ShareNavSysOffset; // 0x05A4(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	bool bEnableActiveRegion; // 0x05B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x05B1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIController");
@@ -76,14 +75,13 @@ public:
 class UBTNode : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FString                                     NodeName;                                                 // 0x0030(0x0010) (Edit, ZeroConstructor)
-	class UBehaviorTree*                               TreeAsset;                                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBTCompositeNode*                            ParentNode;                                               // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	struct FString NodeName; // 0x0030(0x0010) (Edit, ZeroConstructor)
+	class UBehaviorTree* TreeAsset; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBTCompositeNode* ParentNode; // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0050(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTNode");
@@ -99,8 +97,7 @@ class UBTAuxiliaryNode : public UBTNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTAuxiliaryNode");
@@ -115,14 +112,13 @@ public:
 class UBTService : public UBTAuxiliaryNode
 {
 public:
-	float                                              Interval;                                                 // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              RandomDeviation;                                          // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bCallTickOnSearchStart : 1;                               // 0x0060(0x0001) (Edit)
-	unsigned char                                      bRestartTimerOnEachActivation : 1;                        // 0x0060(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
+	float Interval; // 0x0058(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float RandomDeviation; // 0x005C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bCallTickOnSearchStart : 1; // 0x0060(0x0001) (Edit)
+	unsigned char bRestartTimerOnEachActivation : 1; // 0x0060(0x0001) (Edit)
+	unsigned char UnknownData00[0x7]; // 0x0061(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTService");
@@ -137,10 +133,9 @@ public:
 class UBTService_BlackboardBase : public UBTService
 {
 public:
-	struct FBlackboardKeySelector                      BlackBoardKey;                                            // 0x0068(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackBoardKey; // 0x0068(0x0028) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTService_BlackboardBase");
@@ -155,12 +150,11 @@ public:
 class UBTTaskNode : public UBTNode
 {
 public:
-	TArray<class UBTService*>                          Services;                                                 // 0x0058(0x0010) (ZeroConstructor)
-	unsigned char                                      bIgnoreRestartSelf : 1;                                   // 0x0068(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
+	TArray<class UBTService*> Services; // 0x0058(0x0010) (ZeroConstructor)
+	unsigned char bIgnoreRestartSelf : 1; // 0x0068(0x0001) (Edit)
+	unsigned char UnknownData00[0x7]; // 0x0069(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTaskNode");
@@ -175,10 +169,9 @@ public:
 class UBTTask_BlackboardBase : public UBTTaskNode
 {
 public:
-	struct FBlackboardKeySelector                      BlackBoardKey;                                            // 0x0070(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackBoardKey; // 0x0070(0x0028) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_BlackboardBase");
@@ -193,23 +186,22 @@ public:
 class UBTTask_MoveTo : public UBTTask_BlackboardBase
 {
 public:
-	float                                              AcceptableRadius;                                         // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
-	class UClass*                                      FilterClass;                                              // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ObservedBlackboardValueTolerance;                         // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bObserveBlackboardValue : 1;                              // 0x00AC(0x0001)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bAllowPartialPath : 1;                                    // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bTrackMovingGoal : 1;                                     // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bProjectGoalLocation : 1;                                 // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bReachTestIncludesAgentRadius : 1;                        // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bReachTestIncludesGoalRadius : 1;                         // 0x00AC(0x0001) (Edit)
-	unsigned char                                      bStopOnOverlap : 1;                                       // 0x00AC(0x0001) (Edit, DisableEditOnTemplate, EditConst)
-	unsigned char                                      bStopOnOverlapNeedsUpdate : 1;                            // 0x00AD(0x0001)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x00AE(0x0002) MISSED OFFSET
+	float AcceptableRadius; // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x009C(0x0004) MISSED OFFSET
+	class UClass* FilterClass; // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float ObservedBlackboardValueTolerance; // 0x00A8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bObserveBlackboardValue : 1; // 0x00AC(0x0001)
+	unsigned char bAllowStrafe : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bAllowPartialPath : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bTrackMovingGoal : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bProjectGoalLocation : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bReachTestIncludesAgentRadius : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bReachTestIncludesGoalRadius : 1; // 0x00AC(0x0001) (Edit)
+	unsigned char bStopOnOverlap : 1; // 0x00AC(0x0001) (Edit, DisableEditOnTemplate, EditConst)
+	unsigned char bStopOnOverlapNeedsUpdate : 1; // 0x00AD(0x0001)
+	unsigned char UnknownData01[0x2]; // 0x00AE(0x0002) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_MoveTo");
@@ -225,8 +217,7 @@ class UBTTask_MoveDirectlyToward : public UBTTask_MoveTo
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_MoveDirectlyToward");
@@ -241,14 +232,13 @@ public:
 class UBlackboardComponent : public UActorComponent
 {
 public:
-	class UBrainComponent*                             BrainComp;                                                // 0x0178(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UBlackboardData*                             BlackboardAsset;                                          // 0x0180(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0188(0x0020) MISSED OFFSET
-	TArray<class UBlackboardKeyType*>                  KeyInstances;                                             // 0x01A8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x01B8(0x00B8) MISSED OFFSET
+	class UBrainComponent* BrainComp; // 0x0178(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UBlackboardData* BlackboardAsset; // 0x0180(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x20]; // 0x0188(0x0020) MISSED OFFSET
+	TArray<class UBlackboardKeyType*> KeyInstances; // 0x01A8(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData01[0xB8]; // 0x01B8(0x00B8) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardComponent");
@@ -288,14 +278,13 @@ public:
 class UPathFollowingComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0178(0x0048) MISSED OFFSET
-	class UNavMovementComponent*                       MovementComp;                                             // 0x01C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x01C8(0x0008) MISSED OFFSET
-	class ANavigationData*                             MyNavData;                                                // 0x01D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x170];                                     // 0x01D8(0x0170) MISSED OFFSET
+	unsigned char UnknownData00[0x48]; // 0x0178(0x0048) MISSED OFFSET
+	class UNavMovementComponent* MovementComp; // 0x01C0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x01C8(0x0008) MISSED OFFSET
+	class ANavigationData* MyNavData; // 0x01D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData02[0x170]; // 0x01D8(0x0170) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PathFollowingComponent");
@@ -315,13 +304,12 @@ public:
 class UBTDecorator : public UBTAuxiliaryNode
 {
 public:
-	unsigned char                                      UnknownData00 : 7;                                        // 0x0058(0x0001)
-	unsigned char                                      bInverseCondition : 1;                                    // 0x0058(0x0001) (Edit)
-	TEnumAsByte<enum EBTFlowAbortMode>                 FlowAbortMode;                                            // 0x0059(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
+	unsigned char UnknownData00 : 7; // 0x0058(0x0001)
+	unsigned char bInverseCondition : 1; // 0x0058(0x0001) (Edit)
+	TEnumAsByte<enum EBTFlowAbortMode> FlowAbortMode; // 0x0059(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x005A(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator");
@@ -336,16 +324,15 @@ public:
 class UAISense : public UObject
 {
 public:
-	float                                              DefaultExpirationAge;                                     // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
-	EAISenseNotifyType                                 NotifyType;                                               // 0x002C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      bWantsNewPawnNotification : 1;                            // 0x002D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance)
-	unsigned char                                      bAutoRegisterAllPawnsAsSources : 1;                       // 0x002D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002E(0x0002) MISSED OFFSET
-	class UAIPerceptionSystem*                         PerceptionSystemInstance;                                 // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0038(0x0048) MISSED OFFSET
+	float DefaultExpirationAge; // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
+	EAISenseNotifyType NotifyType; // 0x002C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char bWantsNewPawnNotification : 1; // 0x002D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance)
+	unsigned char bAutoRegisterAllPawnsAsSources : 1; // 0x002D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance)
+	unsigned char UnknownData00[0x2]; // 0x002E(0x0002) MISSED OFFSET
+	class UAIPerceptionSystem* PerceptionSystemInstance; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x48]; // 0x0038(0x0048) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense");
@@ -360,13 +347,12 @@ public:
 class UAISenseConfig : public UObject
 {
 public:
-	struct FColor                                      DebugColor;                                               // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	float                                              MaxAge;                                                   // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      bStartsEnabled : 1;                                       // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x17];                                      // 0x0031(0x0017) MISSED OFFSET
+	struct FColor DebugColor; // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	float MaxAge; // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char bStartsEnabled : 1; // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	unsigned char UnknownData00[0x17]; // 0x0031(0x0017) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig");
@@ -382,8 +368,7 @@ class UAISenseEvent : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseEvent");
@@ -398,17 +383,16 @@ public:
 class UCrowdFollowingComponent : public UPathFollowingComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0348(0x0008) MISSED OFFSET
-	struct FVector                                     CrowdAgentMoveDirection;                                  // 0x0350(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x035C(0x0004) MISSED OFFSET
-	class UCharacterMovementComponent*                 CharacterMovement;                                        // 0x0360(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x0368(0x0004) (Deprecated, IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x036C(0x0004) (Deprecated, IsPlainOldData)
-	struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x0370(0x0004) (Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x24];                                      // 0x0374(0x0024) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0348(0x0008) MISSED OFFSET
+	struct FVector CrowdAgentMoveDirection; // 0x0350(0x000C) (IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x035C(0x0004) MISSED OFFSET
+	class UCharacterMovementComponent* CharacterMovement; // 0x0360(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	struct FNavAvoidanceMask AvoidanceGroup; // 0x0368(0x0004) (Deprecated, IsPlainOldData)
+	struct FNavAvoidanceMask GroupsToAvoid; // 0x036C(0x0004) (Deprecated, IsPlainOldData)
+	struct FNavAvoidanceMask GroupsToIgnore; // 0x0370(0x0004) (Deprecated, IsPlainOldData)
+	unsigned char UnknownData02[0x24]; // 0x0374(0x0024) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.CrowdFollowingComponent");
@@ -425,25 +409,24 @@ public:
 class UCrowdManager : public UCrowdManagerBase
 {
 public:
-	unsigned char                                      EnabledCrowd : 1;                                         // 0x0028(0x0001) (Config)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	class ANavigationData*                             MyNavData;                                                // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FCrowdAvoidanceConfig>               AvoidanceConfig;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FCrowdAvoidanceSamplingPattern>      SamplingPatterns;                                         // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	int                                                MaxAgents;                                                // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              MaxAgentRadius;                                           // 0x005C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxAvoidedAgents;                                         // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                MaxAvoidedWalls;                                          // 0x0064(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              NavmeshCheckInterval;                                     // 0x0068(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PathOptimizationInterval;                                 // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              SeparationDirClamp;                                       // 0x0070(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	float                                              PathOffsetRadiusMultiplier;                               // 0x0074(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01 : 4;                                        // 0x0078(0x0001)
-	unsigned char                                      bResolveCollisions : 1;                                   // 0x0078(0x0001) (Edit, Config)
-	unsigned char                                      UnknownData02[0x7F];                                      // 0x0079(0x007F) MISSED OFFSET
+	unsigned char EnabledCrowd : 1; // 0x0028(0x0001) (Config)
+	unsigned char UnknownData00[0x7]; // 0x0029(0x0007) MISSED OFFSET
+	class ANavigationData* MyNavData; // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<struct FCrowdAvoidanceConfig> AvoidanceConfig; // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FCrowdAvoidanceSamplingPattern> SamplingPatterns; // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	int MaxAgents; // 0x0058(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float MaxAgentRadius; // 0x005C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxAvoidedAgents; // 0x0060(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int MaxAvoidedWalls; // 0x0064(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float NavmeshCheckInterval; // 0x0068(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float PathOptimizationInterval; // 0x006C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float SeparationDirClamp; // 0x0070(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	float PathOffsetRadiusMultiplier; // 0x0074(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01 : 4; // 0x0078(0x0001)
+	unsigned char bResolveCollisions : 1; // 0x0078(0x0001) (Edit, Config)
+	unsigned char UnknownData02[0x7F]; // 0x0079(0x007F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.CrowdManager");
@@ -458,13 +441,12 @@ public:
 class UBrainComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0178(0x0008) MISSED OFFSET
-	class UBlackboardComponent*                        BlackboardComp;                                           // 0x0180(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class AAIController*                               AIOwner;                                                  // 0x0188(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0190(0x0048) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0178(0x0008) MISSED OFFSET
+	class UBlackboardComponent* BlackboardComp; // 0x0180(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class AAIController* AIOwner; // 0x0188(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x48]; // 0x0190(0x0048) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BrainComponent");
@@ -484,12 +466,11 @@ public:
 class UBehaviorTreeComponent : public UBrainComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x01D8(0x0020) MISSED OFFSET
-	TArray<class UBTNode*>                             NodeInstances;                                            // 0x01F8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x108];                                     // 0x0208(0x0108) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x01D8(0x0020) MISSED OFFSET
+	TArray<class UBTNode*> NodeInstances; // 0x01F8(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData01[0x108]; // 0x0208(0x0108) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BehaviorTreeComponent");
@@ -508,10 +489,9 @@ public:
 class UBTDecorator_BlackboardBase : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      BlackBoardKey;                                            // 0x0060(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackBoardKey; // 0x0060(0x0028) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_BlackboardBase");
@@ -527,8 +507,7 @@ class UBTDecorator_Cooldown : public UBTDecorator
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_Cooldown");
@@ -543,11 +522,10 @@ public:
 class UBTService_DefaultFocus : public UBTService_BlackboardBase
 {
 public:
-	unsigned char                                      FocusPriority;                                            // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	unsigned char FocusPriority; // 0x0090(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0091(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTService_DefaultFocus");
@@ -562,11 +540,10 @@ public:
 class UBTTask_Wait : public UBTTaskNode
 {
 public:
-	float                                              RandomDeviation;                                          // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
+	float RandomDeviation; // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0074(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_Wait");
@@ -581,12 +558,11 @@ public:
 class UAIAsyncTaskBlueprintProxy : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFail;                                                   // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
+	struct FScriptMulticastDelegate OnSuccess; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnFail; // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x20]; // 0x0048(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIAsyncTaskBlueprintProxy");
@@ -604,8 +580,7 @@ class UAIBlueprintHelperLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIBlueprintHelperLibrary");
@@ -633,8 +608,7 @@ class UAIDataProvider : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIDataProvider");
@@ -649,14 +623,13 @@ public:
 class UAIDataProvider_QueryParams : public UAIDataProvider
 {
 public:
-	struct FName                                       ParamName;                                                // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FloatValue;                                               // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                IntValue;                                                 // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               BoolValue;                                                // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	struct FName ParamName; // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float FloatValue; // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	int IntValue; // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool BoolValue; // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0039(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIDataProvider_QueryParams");
@@ -671,12 +644,11 @@ public:
 class UAIDataProvider_Random : public UAIDataProvider_QueryParams
 {
 public:
-	float                                              Max;                                                      // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bInteger : 1;                                             // 0x0044(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
+	float Max; // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bInteger : 1; // 0x0044(0x0001) (Edit)
+	unsigned char UnknownData00[0x3]; // 0x0045(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIDataProvider_Random");
@@ -692,8 +664,7 @@ class UAIHotSpotManager : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIHotSpotManager");
@@ -708,17 +679,16 @@ public:
 class UAIPerceptionComponent : public UActorComponent
 {
 public:
-	TArray<class UAISenseConfig*>                      SensesConfig;                                             // 0x0178(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      DominantSense;                                            // 0x0188(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0190(0x0010) MISSED OFFSET
-	class AAIController*                               AIOwner;                                                  // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x80];                                      // 0x01A8(0x0080) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnPerceptionUpdated;                                      // 0x0228(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTargetPerceptionUpdated;                                // 0x0238(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0248(0x0008) MISSED OFFSET
+	TArray<class UAISenseConfig*> SensesConfig; // 0x0178(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	class UClass* DominantSense; // 0x0188(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0190(0x0010) MISSED OFFSET
+	class AAIController* AIOwner; // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x80]; // 0x01A8(0x0080) MISSED OFFSET
+	struct FScriptMulticastDelegate OnPerceptionUpdated; // 0x0228(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTargetPerceptionUpdated; // 0x0238(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData02[0x8]; // 0x0248(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIPerceptionComponent");
@@ -743,8 +713,7 @@ class UAIPerceptionListenerInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIPerceptionListenerInterface");
@@ -759,12 +728,11 @@ public:
 class UAIPerceptionStimuliSourceComponent : public UActorComponent
 {
 public:
-	unsigned char                                      bAutoRegisterAsSource : 1;                                // 0x0178(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0179(0x0007) MISSED OFFSET
-	TArray<class UClass*>                              RegisterAsSourceForSenses;                                // 0x0180(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char bAutoRegisterAsSource : 1; // 0x0178(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, Config)
+	unsigned char UnknownData00[0x7]; // 0x0179(0x0007) MISSED OFFSET
+	TArray<class UClass*> RegisterAsSourceForSenses; // 0x0180(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIPerceptionStimuliSourceComponent");
@@ -784,13 +752,12 @@ public:
 class UAIPerceptionSystem : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-	TArray<class UAISense*>                            Senses;                                                   // 0x0080(0x0010) (ZeroConstructor)
-	float                                              PerceptionAgingRate;                                      // 0x0090(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x9C];                                      // 0x0094(0x009C) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0028(0x0058) MISSED OFFSET
+	TArray<class UAISense*> Senses; // 0x0080(0x0010) (ZeroConstructor)
+	float PerceptionAgingRate; // 0x0090(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0x9C]; // 0x0094(0x009C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIPerceptionSystem");
@@ -812,8 +779,7 @@ class UAIResourceInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIResourceInterface");
@@ -829,8 +795,7 @@ class UAIResource_Movement : public UGameplayTaskResource
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIResource_Movement");
@@ -846,8 +811,7 @@ class UAIResource_Logic : public UGameplayTaskResource
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AIResource_Logic");
@@ -862,12 +826,11 @@ public:
 class UAISense_Blueprint : public UAISense
 {
 public:
-	class UClass*                                      ListenerDataType;                                         // 0x0080(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UAIPerceptionComponent*>              ListenerContainer;                                        // 0x0088(0x0010) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
-	TArray<class UAISenseEvent*>                       UnprocessedEvents;                                        // 0x0098(0x0010) (ZeroConstructor)
+	class UClass* ListenerDataType; // 0x0080(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UAIPerceptionComponent*> ListenerContainer; // 0x0088(0x0010) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UAISenseEvent*> UnprocessedEvents; // 0x0098(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Blueprint");
@@ -890,10 +853,9 @@ public:
 class UAISense_Damage : public UAISense
 {
 public:
-	TArray<struct FAIDamageEvent>                      RegisteredEvents;                                         // 0x0080(0x0010) (ZeroConstructor)
+	TArray<struct FAIDamageEvent> RegisteredEvents; // 0x0080(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Damage");
@@ -910,12 +872,11 @@ public:
 class UAISense_Hearing : public UAISense
 {
 public:
-	TArray<struct FAINoiseEvent>                       NoiseEvents;                                              // 0x0080(0x0010) (ZeroConstructor)
-	float                                              SpeedOfSoundSq;                                           // 0x0090(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x54];                                      // 0x0094(0x0054) MISSED OFFSET
+	TArray<struct FAINoiseEvent> NoiseEvents; // 0x0080(0x0010) (ZeroConstructor)
+	float SpeedOfSoundSq; // 0x0090(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x54]; // 0x0094(0x0054) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Hearing");
@@ -932,10 +893,9 @@ public:
 class UAISense_Prediction : public UAISense
 {
 public:
-	TArray<struct FAIPredictionEvent>                  RegisteredEvents;                                         // 0x0080(0x0010) (ZeroConstructor)
+	TArray<struct FAIPredictionEvent> RegisteredEvents; // 0x0080(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Prediction");
@@ -953,18 +913,17 @@ public:
 class UAISense_Sight : public UAISense
 {
 public:
-	unsigned char                                      UnknownData00[0xB0];                                      // 0x0080(0x00B0) MISSED OFFSET
-	int                                                MaxTracesPerTick;                                         // 0x0130(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	int                                                MinQueriesPerTimeSliceCheck;                              // 0x0134(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	double                                             MaxTimeSlicePerTick;                                      // 0x0138(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              HighImportanceQueryDistanceThreshold;                     // 0x0140(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0144(0x0004) MISSED OFFSET
-	float                                              MaxQueryImportance;                                       // 0x0148(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              SightLimitQueryImportance;                                // 0x014C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0xB0]; // 0x0080(0x00B0) MISSED OFFSET
+	int MaxTracesPerTick; // 0x0130(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	int MinQueriesPerTimeSliceCheck; // 0x0134(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	double MaxTimeSlicePerTick; // 0x0138(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float HighImportanceQueryDistanceThreshold; // 0x0140(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0144(0x0004) MISSED OFFSET
+	float MaxQueryImportance; // 0x0148(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float SightLimitQueryImportance; // 0x014C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData02[0x8]; // 0x0150(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Sight");
@@ -979,10 +938,9 @@ public:
 class UAISense_Team : public UAISense
 {
 public:
-	TArray<struct FAITeamStimulusEvent>                RegisteredEvents;                                         // 0x0080(0x0010) (ZeroConstructor)
+	TArray<struct FAITeamStimulusEvent> RegisteredEvents; // 0x0080(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Team");
@@ -997,10 +955,9 @@ public:
 class UAISense_Touch : public UAISense
 {
 public:
-	TArray<struct FAITouchEvent>                       RegisteredEvents;                                         // 0x0080(0x0010) (ZeroConstructor)
+	TArray<struct FAITouchEvent> RegisteredEvents; // 0x0080(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISense_Touch");
@@ -1016,8 +973,7 @@ class UAISenseBlueprintListener : public UUserDefinedStruct
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseBlueprintListener");
@@ -1032,10 +988,9 @@ public:
 class UAISenseConfig_Blueprint : public UAISenseConfig
 {
 public:
-	class UClass*                                      Implementation;                                           // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
+	class UClass* Implementation; // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Blueprint");
@@ -1050,10 +1005,9 @@ public:
 class UAISenseConfig_Damage : public UAISenseConfig
 {
 public:
-	class UClass*                                      Implementation;                                           // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
+	class UClass* Implementation; // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Damage");
@@ -1068,15 +1022,14 @@ public:
 class UAISenseConfig_Hearing : public UAISenseConfig
 {
 public:
-	class UClass*                                      Implementation;                                           // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
-	float                                              HearingRange;                                             // 0x0050(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LoSHearingRange;                                          // 0x0054(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      bUseLoSHearing : 1;                                       // 0x0058(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
-	struct FAISenseAffiliationFilter                   DetectionByAffiliation;                                   // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, IsPlainOldData)
+	class UClass* Implementation; // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
+	float HearingRange; // 0x0050(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float LoSHearingRange; // 0x0054(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char bUseLoSHearing : 1; // 0x0058(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char UnknownData00[0x3]; // 0x0059(0x0003) MISSED OFFSET
+	struct FAISenseAffiliationFilter DetectionByAffiliation; // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Hearing");
@@ -1092,8 +1045,7 @@ class UAISenseConfig_Prediction : public UAISenseConfig
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Prediction");
@@ -1108,16 +1060,15 @@ public:
 class UAISenseConfig_Sight : public UAISenseConfig
 {
 public:
-	class UClass*                                      Implementation;                                           // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
-	float                                              SightRadius;                                              // 0x0050(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              LoseSightRadius;                                          // 0x0054(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              PeripheralVisionAngleDegrees;                             // 0x0058(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	struct FAISenseAffiliationFilter                   DetectionByAffiliation;                                   // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, IsPlainOldData)
-	float                                              AutoSuccessRangeFromLastSeenLocation;                     // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	class UClass* Implementation; // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, NoClear, IsPlainOldData)
+	float SightRadius; // 0x0050(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float LoseSightRadius; // 0x0054(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	float PeripheralVisionAngleDegrees; // 0x0058(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	struct FAISenseAffiliationFilter DetectionByAffiliation; // 0x005C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, Config, DisableEditOnInstance, IsPlainOldData)
+	float AutoSuccessRangeFromLastSeenLocation; // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0064(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Sight");
@@ -1133,8 +1084,7 @@ class UAISenseConfig_Team : public UAISenseConfig
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Team");
@@ -1150,8 +1100,7 @@ class UAISenseConfig_Touch : public UAISenseConfig
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseConfig_Touch");
@@ -1166,10 +1115,9 @@ public:
 class UAISenseEvent_Damage : public UAISenseEvent
 {
 public:
-	struct FAIDamageEvent                              Event;                                                    // 0x0028(0x0030) (Edit, BlueprintVisible)
+	struct FAIDamageEvent Event; // 0x0028(0x0030) (Edit, BlueprintVisible)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseEvent_Damage");
@@ -1184,10 +1132,9 @@ public:
 class UAISenseEvent_Hearing : public UAISenseEvent
 {
 public:
-	struct FAINoiseEvent                               Event;                                                    // 0x0028(0x0030) (Edit, BlueprintVisible)
+	struct FAINoiseEvent Event; // 0x0028(0x0030) (Edit, BlueprintVisible)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISenseEvent_Hearing");
@@ -1203,8 +1150,7 @@ class UAISightTargetInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISightTargetInterface");
@@ -1219,29 +1165,28 @@ public:
 class UAISystem : public UAISystemBase
 {
 public:
-	struct FSoftClassPath                              PerceptionSystemClassName;                                // 0x0050(0x0018) (Edit, Config, GlobalConfig)
-	struct FSoftClassPath                              HotSpotManagerClassName;                                  // 0x0068(0x0018) (Edit, Config, GlobalConfig)
-	float                                              AcceptanceRadius;                                         // 0x0080(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	float                                              PathfollowingRegularPathPointAcceptanceRadius;            // 0x0084(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	float                                              PathfollowingNavLinkAcceptanceRadius;                     // 0x0088(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bFinishMoveOnGoalOverlap;                                 // 0x008C(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bAcceptPartialPaths;                                      // 0x008D(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bAllowStrafing;                                           // 0x008E(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bEnableBTAITasks;                                         // 0x008F(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bAllowControllersAsEQSQuerier;                            // 0x0090(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	bool                                               bEnableDebuggerPlugin;                                    // 0x0091(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
-	TEnumAsByte<enum ECollisionChannel>                DefaultSightCollisionChannel;                             // 0x0092(0x0001) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x0093(0x0005) MISSED OFFSET
-	class UBehaviorTreeManager*                        BehaviorTreeManager;                                      // 0x0098(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UEnvQueryManager*                            EnvironmentQueryManager;                                  // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UAIPerceptionSystem*                         PerceptionSystem;                                         // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class UAIAsyncTaskBlueprintProxy*>          AllProxyObjects;                                          // 0x00B0(0x0010) (ZeroConstructor, Transient)
-	class UAIHotSpotManager*                           HotSpotManager;                                           // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UNavLocalGridManager*                        NavLocalGrids;                                            // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x00D0(0x0058) MISSED OFFSET
+	struct FSoftClassPath PerceptionSystemClassName; // 0x0050(0x0018) (Edit, Config, GlobalConfig)
+	struct FSoftClassPath HotSpotManagerClassName; // 0x0068(0x0018) (Edit, Config, GlobalConfig)
+	float AcceptanceRadius; // 0x0080(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	float PathfollowingRegularPathPointAcceptanceRadius; // 0x0084(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	float PathfollowingNavLinkAcceptanceRadius; // 0x0088(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bFinishMoveOnGoalOverlap; // 0x008C(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bAcceptPartialPaths; // 0x008D(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bAllowStrafing; // 0x008E(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bEnableBTAITasks; // 0x008F(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bAllowControllersAsEQSQuerier; // 0x0090(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	bool bEnableDebuggerPlugin; // 0x0091(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData)
+	TEnumAsByte<enum ECollisionChannel> DefaultSightCollisionChannel; // 0x0092(0x0001) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
+	unsigned char UnknownData00[0x5]; // 0x0093(0x0005) MISSED OFFSET
+	class UBehaviorTreeManager* BehaviorTreeManager; // 0x0098(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UEnvQueryManager* EnvironmentQueryManager; // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UAIPerceptionSystem* PerceptionSystem; // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class UAIAsyncTaskBlueprintProxy*> AllProxyObjects; // 0x00B0(0x0010) (ZeroConstructor, Transient)
+	class UAIHotSpotManager* HotSpotManager; // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UNavLocalGridManager* NavLocalGrids; // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x58]; // 0x00D0(0x0058) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AISystem");
@@ -1259,10 +1204,9 @@ public:
 class UAITask : public UGameplayTask
 {
 public:
-	class AAIController*                               OwnerController;                                          // 0x0060(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AAIController* OwnerController; // 0x0060(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AITask");
@@ -1278,8 +1222,7 @@ class UAITask_LockLogic : public UAITask
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AITask_LockLogic");
@@ -1294,13 +1237,12 @@ public:
 class UAITask_MoveTo : public UAITask
 {
 public:
-	struct FScriptMulticastDelegate                    OnRequestFailed;                                          // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMoveFinished;                                           // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FAIMoveRequest                              MoveRequest;                                              // 0x0088(0x0040)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00C8(0x0040) MISSED OFFSET
+	struct FScriptMulticastDelegate OnRequestFailed; // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnMoveFinished; // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FAIMoveRequest MoveRequest; // 0x0088(0x0040)
+	unsigned char UnknownData00[0x40]; // 0x00C8(0x0040) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AITask_MoveTo");
@@ -1317,10 +1259,9 @@ public:
 class UAITask_RunEQS : public UAITask
 {
 public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0068(0x0078) MISSED OFFSET
+	unsigned char UnknownData00[0x78]; // 0x0068(0x0078) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.AITask_RunEQS");
@@ -1337,14 +1278,13 @@ public:
 class UBehaviorTree : public UObject
 {
 public:
-	class UBTCompositeNode*                            RootNode;                                                 // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlackboardData*                             BlackboardAsset;                                          // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UBTDecorator*>                        RootDecorators;                                           // 0x0038(0x0010) (ZeroConstructor)
-	TArray<struct FBTDecoratorLogic>                   RootDecoratorOps;                                         // 0x0048(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
+	class UBTCompositeNode* RootNode; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlackboardData* BlackboardAsset; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UBTDecorator*> RootDecorators; // 0x0038(0x0010) (ZeroConstructor)
+	TArray<struct FBTDecoratorLogic> RootDecoratorOps; // 0x0048(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x0058(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BehaviorTree");
@@ -1359,13 +1299,12 @@ public:
 class UBehaviorTreeManager : public UObject
 {
 public:
-	int                                                MaxDebuggerSteps;                                         // 0x0028(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FBehaviorTreeTemplateInfo>           LoadedTemplates;                                          // 0x0030(0x0010) (ZeroConstructor)
-	TArray<class UBehaviorTreeComponent*>              ActiveComponents;                                         // 0x0040(0x0010) (ExportObject, ZeroConstructor)
+	int MaxDebuggerSteps; // 0x0028(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
+	TArray<struct FBehaviorTreeTemplateInfo> LoadedTemplates; // 0x0030(0x0010) (ZeroConstructor)
+	TArray<class UBehaviorTreeComponent*> ActiveComponents; // 0x0040(0x0010) (ExportObject, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BehaviorTreeManager");
@@ -1381,8 +1320,7 @@ class UBehaviorTreeTypes : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BehaviorTreeTypes");
@@ -1397,13 +1335,12 @@ public:
 class UBlackboardData : public UDataAsset
 {
 public:
-	class UBlackboardData*                             Parent;                                                   // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FBlackboardEntry>                    Keys;                                                     // 0x0038(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      bHasSynchronizedKeys : 1;                                 // 0x0048(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	class UBlackboardData* Parent; // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBlackboardEntry> Keys; // 0x0038(0x0010) (Edit, ZeroConstructor)
+	unsigned char bHasSynchronizedKeys : 1; // 0x0048(0x0001)
+	unsigned char UnknownData00[0x7]; // 0x0049(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardData");
@@ -1418,10 +1355,9 @@ public:
 class UBlackboardKeyType : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType");
@@ -1437,8 +1373,7 @@ class UBlackboardKeyType_Bool : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Bool");
@@ -1453,10 +1388,9 @@ public:
 class UBlackboardKeyType_Class : public UBlackboardKeyType
 {
 public:
-	class UClass*                                      BaseClass;                                                // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass* BaseClass; // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Class");
@@ -1471,13 +1405,12 @@ public:
 class UBlackboardKeyType_Enum : public UBlackboardKeyType
 {
 public:
-	class UEnum*                                       EnumType;                                                 // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FString                                     EnumName;                                                 // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      bIsEnumNameValid : 1;                                     // 0x0048(0x0001) (Edit, DisableEditOnInstance, EditConst)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	class UEnum* EnumType; // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FString EnumName; // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	unsigned char bIsEnumNameValid : 1; // 0x0048(0x0001) (Edit, DisableEditOnInstance, EditConst)
+	unsigned char UnknownData00[0x7]; // 0x0049(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Enum");
@@ -1493,8 +1426,7 @@ class UBlackboardKeyType_Float : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Float");
@@ -1510,8 +1442,7 @@ class UBlackboardKeyType_Int : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Int");
@@ -1527,8 +1458,7 @@ class UBlackboardKeyType_Name : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Name");
@@ -1543,11 +1473,10 @@ public:
 class UBlackboardKeyType_NativeEnum : public UBlackboardKeyType
 {
 public:
-	struct FString                                     EnumName;                                                 // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UEnum*                                       EnumType;                                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString EnumName; // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UEnum* EnumType; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_NativeEnum");
@@ -1562,10 +1491,9 @@ public:
 class UBlackboardKeyType_Object : public UBlackboardKeyType
 {
 public:
-	class UClass*                                      BaseClass;                                                // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass* BaseClass; // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Object");
@@ -1581,8 +1509,7 @@ class UBlackboardKeyType_Rotator : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Rotator");
@@ -1597,10 +1524,9 @@ public:
 class UBlackboardKeyType_String : public UBlackboardKeyType
 {
 public:
-	struct FString                                     StringValue;                                              // 0x0030(0x0010) (ZeroConstructor)
+	struct FString StringValue; // 0x0030(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_String");
@@ -1616,8 +1542,7 @@ class UBlackboardKeyType_Vector : public UBlackboardKeyType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BlackboardKeyType_Vector");
@@ -1632,12 +1557,11 @@ public:
 class UBTCompositeNode : public UBTNode
 {
 public:
-	TArray<struct FBTCompositeChild>                   Children;                                                 // 0x0058(0x0010) (ZeroConstructor)
-	TArray<class UBTService*>                          Services;                                                 // 0x0068(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0078(0x0018) MISSED OFFSET
+	TArray<struct FBTCompositeChild> Children; // 0x0058(0x0010) (ZeroConstructor)
+	TArray<class UBTService*> Services; // 0x0068(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x18]; // 0x0078(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTCompositeNode");
@@ -1653,8 +1577,7 @@ class UBTComposite_Selector : public UBTCompositeNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTComposite_Selector");
@@ -1670,8 +1593,7 @@ class UBTComposite_Sequence : public UBTCompositeNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTComposite_Sequence");
@@ -1687,8 +1609,7 @@ class UBTComposite_SimpleParallel : public UBTCompositeNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTComposite_SimpleParallel");
@@ -1703,16 +1624,15 @@ public:
 class UBTDecorator_Blackboard : public UBTDecorator_BlackboardBase
 {
 public:
-	int                                                IntValue;                                                 // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              FloatValue;                                               // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FString                                     StringValue;                                              // 0x0090(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     CachedDescription;                                        // 0x00A0(0x0010) (ZeroConstructor)
-	unsigned char                                      OperationType;                                            // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<enum EBTBlackboardRestart>             NotifyObserver;                                           // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x00B2(0x0006) MISSED OFFSET
+	int IntValue; // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float FloatValue; // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FString StringValue; // 0x0090(0x0010) (Edit, ZeroConstructor)
+	struct FString CachedDescription; // 0x00A0(0x0010) (ZeroConstructor)
+	unsigned char OperationType; // 0x00B0(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<enum EBTBlackboardRestart> NotifyObserver; // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x00B2(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_Blackboard");
@@ -1727,17 +1647,16 @@ public:
 class UBTDecorator_BlueprintBase : public UBTDecorator
 {
 public:
-	class AAIController*                               AIOwner;                                                  // 0x0060(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      ActorOwner;                                               // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FName>                               ObservedKeyNames;                                         // 0x0070(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0080(0x0010) MISSED OFFSET
-	unsigned char                                      bShowPropertyDetails : 1;                                 // 0x0090(0x0001) (Edit, DisableEditOnTemplate)
-	unsigned char                                      bCheckConditionOnlyBlackBoardChanges : 1;                 // 0x0090(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bIsObservingBB : 1;                                       // 0x0090(0x0001)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	class AAIController* AIOwner; // 0x0060(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor* ActorOwner; // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<struct FName> ObservedKeyNames; // 0x0070(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0080(0x0010) MISSED OFFSET
+	unsigned char bShowPropertyDetails : 1; // 0x0090(0x0001) (Edit, DisableEditOnTemplate)
+	unsigned char bCheckConditionOnlyBlackBoardChanges : 1; // 0x0090(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char bIsObservingBB : 1; // 0x0090(0x0001)
+	unsigned char UnknownData01[0x7]; // 0x0091(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_BlueprintBase");
@@ -1767,14 +1686,13 @@ public:
 class UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      ActorToCheck;                                             // 0x0060(0x0028) (Edit)
-	EGameplayContainerMatchType                        TagsToMatch;                                              // 0x0088(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
-	struct FGameplayTagContainer                       GameplayTags;                                             // 0x0090(0x0020) (Edit)
-	struct FString                                     CachedDescription;                                        // 0x00B0(0x0010) (ZeroConstructor)
+	struct FBlackboardKeySelector ActorToCheck; // 0x0060(0x0028) (Edit)
+	EGameplayContainerMatchType TagsToMatch; // 0x0088(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0089(0x0007) MISSED OFFSET
+	struct FGameplayTagContainer GameplayTags; // 0x0090(0x0020) (Edit)
+	struct FString CachedDescription; // 0x00B0(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_CheckGameplayTagsOnActor");
@@ -1789,11 +1707,10 @@ public:
 class UBTDecorator_CompareBBEntries : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      BlackboardKeyA;                                           // 0x0060(0x0028) (Edit)
-	struct FBlackboardKeySelector                      BlackboardKeyB;                                           // 0x0088(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackboardKeyA; // 0x0060(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackboardKeyB; // 0x0088(0x0028) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_CompareBBEntries");
@@ -1809,8 +1726,7 @@ class UBTDecorator_ConditionalLoop : public UBTDecorator_Blackboard
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_ConditionalLoop");
@@ -1825,13 +1741,12 @@ public:
 class UBTDecorator_ConeCheck : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      ConeOrigin;                                               // 0x0060(0x0028) (Edit)
-	struct FBlackboardKeySelector                      ConeDirection;                                            // 0x0088(0x0028) (Edit)
-	struct FBlackboardKeySelector                      Observed;                                                 // 0x00B0(0x0028) (Edit)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	struct FBlackboardKeySelector ConeOrigin; // 0x0060(0x0028) (Edit)
+	struct FBlackboardKeySelector ConeDirection; // 0x0088(0x0028) (Edit)
+	struct FBlackboardKeySelector Observed; // 0x00B0(0x0028) (Edit)
+	unsigned char UnknownData00[0x8]; // 0x00D8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_ConeCheck");
@@ -1846,15 +1761,14 @@ public:
 class UBTDecorator_DoesPathExist : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      BlackboardKeyA;                                           // 0x0060(0x0028) (Edit)
-	struct FBlackboardKeySelector                      BlackboardKeyB;                                           // 0x0088(0x0028) (Edit)
-	unsigned char                                      bUseSelf : 1;                                             // 0x00B0(0x0001)
-	TEnumAsByte<enum EPathExistanceQueryType>          PathQueryType;                                            // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x00B2(0x0006) MISSED OFFSET
-	class UClass*                                      FilterClass;                                              // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FBlackboardKeySelector BlackboardKeyA; // 0x0060(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackboardKeyB; // 0x0088(0x0028) (Edit)
+	unsigned char bUseSelf : 1; // 0x00B0(0x0001)
+	TEnumAsByte<enum EPathExistanceQueryType> PathQueryType; // 0x00B1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x00B2(0x0006) MISSED OFFSET
+	class UClass* FilterClass; // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_DoesPathExist");
@@ -1870,8 +1784,7 @@ class UBTDecorator_ForceSuccess : public UBTDecorator
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_ForceSuccess");
@@ -1886,17 +1799,16 @@ public:
 class UBTDecorator_IsAtLocation : public UBTDecorator_BlackboardBase
 {
 public:
-	float                                              AcceptableRadius;                                         // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
-	struct FAIDataProviderFloatValue                   ParametrizedAcceptableRadius;                             // 0x0090(0x0030) (Edit)
-	EFAIDistanceType                                   GeometricDistanceType;                                    // 0x00C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUseParametrizedRadius : 1;                               // 0x00C1(0x0001)
-	unsigned char                                      bUseNavAgentGoalLocation : 1;                             // 0x00C1(0x0001) (Edit)
-	unsigned char                                      bPathFindingBasedTest : 1;                                // 0x00C1(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x00C2(0x0006) MISSED OFFSET
+	float AcceptableRadius; // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x008C(0x0004) MISSED OFFSET
+	struct FAIDataProviderFloatValue ParametrizedAcceptableRadius; // 0x0090(0x0030) (Edit)
+	EFAIDistanceType GeometricDistanceType; // 0x00C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bUseParametrizedRadius : 1; // 0x00C1(0x0001)
+	unsigned char bUseNavAgentGoalLocation : 1; // 0x00C1(0x0001) (Edit)
+	unsigned char bPathFindingBasedTest : 1; // 0x00C1(0x0001) (Edit)
+	unsigned char UnknownData01[0x6]; // 0x00C2(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_IsAtLocation");
@@ -1911,10 +1823,9 @@ public:
 class UBTDecorator_IsBBEntryOfClass : public UBTDecorator_BlackboardBase
 {
 public:
-	class UClass*                                      TestClass;                                                // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* TestClass; // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_IsBBEntryOfClass");
@@ -1929,14 +1840,13 @@ public:
 class UBTDecorator_KeepInCone : public UBTDecorator
 {
 public:
-	struct FBlackboardKeySelector                      ConeOrigin;                                               // 0x0060(0x0028) (Edit)
-	struct FBlackboardKeySelector                      Observed;                                                 // 0x0088(0x0028) (Edit)
-	unsigned char                                      bUseSelfAsOrigin : 1;                                     // 0x00B0(0x0001)
-	unsigned char                                      bUseSelfAsObserved : 1;                                   // 0x00B0(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
+	struct FBlackboardKeySelector ConeOrigin; // 0x0060(0x0028) (Edit)
+	struct FBlackboardKeySelector Observed; // 0x0088(0x0028) (Edit)
+	unsigned char bUseSelfAsOrigin : 1; // 0x00B0(0x0001)
+	unsigned char bUseSelfAsObserved : 1; // 0x00B0(0x0001)
+	unsigned char UnknownData00[0x7]; // 0x00B1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_KeepInCone");
@@ -1951,12 +1861,11 @@ public:
 class UBTDecorator_Loop : public UBTDecorator
 {
 public:
-	bool                                               bInfiniteLoop;                                            // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0061(0x0003) MISSED OFFSET
-	float                                              InfiniteLoopTimeoutTime;                                  // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bInfiniteLoop; // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0061(0x0003) MISSED OFFSET
+	float InfiniteLoopTimeoutTime; // 0x0064(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_Loop");
@@ -1972,8 +1881,7 @@ class UBTDecorator_ReachedMoveGoal : public UBTDecorator
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_ReachedMoveGoal");
@@ -1988,13 +1896,12 @@ public:
 class UBTDecorator_SetTagCooldown : public UBTDecorator
 {
 public:
-	struct FGameplayTag                                CooldownTag;                                              // 0x0060(0x0008) (Edit)
-	float                                              CooldownDuration;                                         // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bAddToExistingDuration;                                   // 0x006C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
+	struct FGameplayTag CooldownTag; // 0x0060(0x0008) (Edit)
+	float CooldownDuration; // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bAddToExistingDuration; // 0x006C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x006D(0x0003) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_SetTagCooldown");
@@ -2009,14 +1916,13 @@ public:
 class UBTDecorator_TagCooldown : public UBTDecorator
 {
 public:
-	struct FGameplayTag                                CooldownTag;                                              // 0x0060(0x0008) (Edit)
-	float                                              CooldownDuration;                                         // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bAddToExistingDuration;                                   // 0x006C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bActivatesCooldown;                                       // 0x006D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x006E(0x0002) MISSED OFFSET
+	struct FGameplayTag CooldownTag; // 0x0060(0x0008) (Edit)
+	float CooldownDuration; // 0x0068(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bAddToExistingDuration; // 0x006C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bActivatesCooldown; // 0x006D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x006E(0x0002) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_TagCooldown");
@@ -2032,8 +1938,7 @@ class UBTDecorator_TimeLimit : public UBTDecorator
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTDecorator_TimeLimit");
@@ -2049,8 +1954,7 @@ class UBTFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTFunctionLibrary");
@@ -2093,15 +1997,14 @@ public:
 class UBTService_BlueprintBase : public UBTService
 {
 public:
-	class AAIController*                               AIOwner;                                                  // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      ActorOwner;                                               // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
-	unsigned char                                      bShowPropertyDetails : 1;                                 // 0x0088(0x0001) (Edit, DisableEditOnTemplate)
-	unsigned char                                      bShowEventDetails : 1;                                    // 0x0088(0x0001) (Edit, DisableEditOnTemplate)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
+	class AAIController* AIOwner; // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor* ActorOwner; // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0078(0x0010) MISSED OFFSET
+	unsigned char bShowPropertyDetails : 1; // 0x0088(0x0001) (Edit, DisableEditOnTemplate)
+	unsigned char bShowEventDetails : 1; // 0x0088(0x0001) (Edit, DisableEditOnTemplate)
+	unsigned char UnknownData01[0x7]; // 0x0089(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTService_BlueprintBase");
@@ -2126,11 +2029,10 @@ public:
 class UBTService_RunEQS : public UBTService_BlackboardBase
 {
 public:
-	struct FEQSParametrizedQueryExecutionRequest       EQSRequest;                                               // 0x0090(0x0048) (Edit)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
+	struct FEQSParametrizedQueryExecutionRequest EQSRequest; // 0x0090(0x0048) (Edit)
+	unsigned char UnknownData00[0x10]; // 0x00D8(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTService_RunEQS");
@@ -2145,14 +2047,13 @@ public:
 class UBTTask_BlueprintBase : public UBTTaskNode
 {
 public:
-	class AAIController*                               AIOwner;                                                  // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      ActorOwner;                                               // 0x0078(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
-	unsigned char                                      bShowPropertyDetails : 1;                                 // 0x0098(0x0001) (Edit, DisableEditOnTemplate)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+	class AAIController* AIOwner; // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor* ActorOwner; // 0x0078(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0080(0x0018) MISSED OFFSET
+	unsigned char bShowPropertyDetails : 1; // 0x0098(0x0001) (Edit, DisableEditOnTemplate)
+	unsigned char UnknownData01[0x7]; // 0x0099(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_BlueprintBase");
@@ -2181,8 +2082,7 @@ class UBTTask_GameplayTaskBase : public UBTTaskNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_GameplayTaskBase");
@@ -2198,8 +2098,7 @@ class UBTTask_MakeNoise : public UBTTaskNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_MakeNoise");
@@ -2215,8 +2114,7 @@ class UBTTask_PawnActionBase : public UBTTaskNode
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_PawnActionBase");
@@ -2231,16 +2129,15 @@ public:
 class UBTTask_PlayAnimation : public UBTTaskNode
 {
 public:
-	class UAnimationAsset*                             AnimationToPlay;                                          // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bLooping : 1;                                             // 0x0078(0x0001) (Edit)
-	unsigned char                                      bNonBlocking : 1;                                         // 0x0078(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
-	class UBehaviorTreeComponent*                      MyOwnerComp;                                              // 0x0080(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      CachedSkelMesh;                                           // 0x0088(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
+	class UAnimationAsset* AnimationToPlay; // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bLooping : 1; // 0x0078(0x0001) (Edit)
+	unsigned char bNonBlocking : 1; // 0x0078(0x0001) (Edit)
+	unsigned char UnknownData00[0x7]; // 0x0079(0x0007) MISSED OFFSET
+	class UBehaviorTreeComponent* MyOwnerComp; // 0x0080(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent* CachedSkelMesh; // 0x0088(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData01[0x20]; // 0x0090(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_PlayAnimation");
@@ -2255,10 +2152,9 @@ public:
 class UBTTask_PlaySound : public UBTTaskNode
 {
 public:
-	class USoundCue*                                   SoundToPlay;                                              // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class USoundCue* SoundToPlay; // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_PlaySound");
@@ -2273,10 +2169,9 @@ public:
 class UBTTask_PushPawnAction : public UBTTask_PawnActionBase
 {
 public:
-	class UPawnAction*                                 Action;                                                   // 0x0070(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPawnAction* Action; // 0x0070(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_PushPawnAction");
@@ -2291,11 +2186,10 @@ public:
 class UBTTask_RotateToFaceBBEntry : public UBTTask_BlackboardBase
 {
 public:
-	float                                              Precision;                                                // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	float Precision; // 0x0098(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x009C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_RotateToFaceBBEntry");
@@ -2310,10 +2204,9 @@ public:
 class UBTTask_RunBehavior : public UBTTaskNode
 {
 public:
-	class UBehaviorTree*                               BehaviorAsset;                                            // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBehaviorTree* BehaviorAsset; // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_RunBehavior");
@@ -2328,12 +2221,11 @@ public:
 class UBTTask_RunBehaviorDynamic : public UBTTaskNode
 {
 public:
-	struct FGameplayTag                                InjectionTag;                                             // 0x0070(0x0008) (Edit)
-	class UBehaviorTree*                               DefaultBehaviorAsset;                                     // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBehaviorTree*                               BehaviorAsset;                                            // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGameplayTag InjectionTag; // 0x0070(0x0008) (Edit)
+	class UBehaviorTree* DefaultBehaviorAsset; // 0x0078(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBehaviorTree* BehaviorAsset; // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_RunBehaviorDynamic");
@@ -2348,19 +2240,18 @@ public:
 class UBTTask_RunEQSQuery : public UBTTask_BlackboardBase
 {
 public:
-	class UEnvQuery*                                   QueryTemplate;                                            // 0x0098(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	TArray<struct FEnvNamedValue>                      QueryParams;                                              // 0x00A0(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<struct FAIDynamicParam>                     QueryConfig;                                              // 0x00B0(0x0010) (Edit, ZeroConstructor, EditConst)
-	TEnumAsByte<enum EEnvQueryRunMode>                 RunMode;                                                  // 0x00C0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00C1(0x0007) MISSED OFFSET
-	struct FBlackboardKeySelector                      EQSQueryBlackboardKey;                                    // 0x00C8(0x0028) (Edit, EditConst)
-	bool                                               bUseBBKey;                                                // 0x00F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
-	struct FEQSParametrizedQueryExecutionRequest       EQSRequest;                                               // 0x00F8(0x0048) (Edit)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
+	class UEnvQuery* QueryTemplate; // 0x0098(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	TArray<struct FEnvNamedValue> QueryParams; // 0x00A0(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<struct FAIDynamicParam> QueryConfig; // 0x00B0(0x0010) (Edit, ZeroConstructor, EditConst)
+	TEnumAsByte<enum EEnvQueryRunMode> RunMode; // 0x00C0(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x00C1(0x0007) MISSED OFFSET
+	struct FBlackboardKeySelector EQSQueryBlackboardKey; // 0x00C8(0x0028) (Edit, EditConst)
+	bool bUseBBKey; // 0x00F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x00F1(0x0007) MISSED OFFSET
+	struct FEQSParametrizedQueryExecutionRequest EQSRequest; // 0x00F8(0x0048) (Edit)
+	unsigned char UnknownData02[0x10]; // 0x0140(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_RunEQSQuery");
@@ -2375,13 +2266,12 @@ public:
 class UBTTask_SetTagCooldown : public UBTTaskNode
 {
 public:
-	struct FGameplayTag                                CooldownTag;                                              // 0x0070(0x0008) (Edit)
-	bool                                               bAddToExistingDuration;                                   // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0079(0x0003) MISSED OFFSET
-	float                                              CooldownDuration;                                         // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FGameplayTag CooldownTag; // 0x0070(0x0008) (Edit)
+	bool bAddToExistingDuration; // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0079(0x0003) MISSED OFFSET
+	float CooldownDuration; // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_SetTagCooldown");
@@ -2396,10 +2286,9 @@ public:
 class UBTTask_WaitBlackboardTime : public UBTTask_Wait
 {
 public:
-	struct FBlackboardKeySelector                      BlackBoardKey;                                            // 0x0078(0x0028) (Edit)
+	struct FBlackboardKeySelector BlackBoardKey; // 0x0078(0x0028) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.BTTask_WaitBlackboardTime");
@@ -2415,8 +2304,7 @@ class UCrowdAgentInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.CrowdAgentInterface");
@@ -2432,8 +2320,7 @@ class ADetourCrowdAIController : public AAIController
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.DetourCrowdAIController");
@@ -2448,11 +2335,10 @@ public:
 class UEnvQuery : public UDataAsset
 {
 public:
-	struct FName                                       QueryName;                                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UEnvQueryOption*>                     Options;                                                  // 0x0038(0x0010) (ZeroConstructor)
+	struct FName QueryName; // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UEnvQueryOption*> Options; // 0x0038(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQuery");
@@ -2468,8 +2354,7 @@ class UEnvQueryContext : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryContext");
@@ -2484,10 +2369,9 @@ public:
 class UEnvQueryContext_BlueprintBase : public UEnvQueryContext
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryContext_BlueprintBase");
@@ -2508,8 +2392,7 @@ class UEnvQueryContext_Item : public UEnvQueryContext
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryContext_Item");
@@ -2525,8 +2408,7 @@ class UEnvQueryContext_Querier : public UEnvQueryContext
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryContext_Querier");
@@ -2542,8 +2424,7 @@ class UEnvQueryDebugHelpers : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryDebugHelpers");
@@ -2558,11 +2439,10 @@ public:
 class UEnvQueryNode : public UObject
 {
 public:
-	int                                                VerNum;                                                   // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	int VerNum; // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryNode");
@@ -2577,13 +2457,12 @@ public:
 class UEnvQueryGenerator : public UEnvQueryNode
 {
 public:
-	struct FString                                     OptionName;                                               // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UClass*                                      itemType;                                                 // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bAutoSortTests : 1;                                       // 0x0048(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	struct FString OptionName; // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass* itemType; // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char bAutoSortTests : 1; // 0x0048(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char UnknownData00[0x7]; // 0x0049(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator");
@@ -2598,13 +2477,12 @@ public:
 class UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator
 {
 public:
-	class UClass*                                      SearchedActorClass;                                       // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FAIDataProviderBoolValue                    GenerateOnlyActorsInRadius;                               // 0x0058(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   SearchRadius;                                             // 0x0088(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      SearchCenter;                                             // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* SearchedActorClass; // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAIDataProviderBoolValue GenerateOnlyActorsInRadius; // 0x0058(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue SearchRadius; // 0x0088(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* SearchCenter; // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_ActorsOfClass");
@@ -2619,13 +2497,12 @@ public:
 class UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator
 {
 public:
-	struct FText                                       GeneratorsActionDescription;                              // 0x0050(0x0018) (Edit)
-	class UClass*                                      Context;                                                  // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      GeneratedItemType;                                        // 0x0070(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
+	struct FText GeneratorsActionDescription; // 0x0050(0x0018) (Edit)
+	class UClass* Context; // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* GeneratedItemType; // 0x0070(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0078(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_BlueprintBase");
@@ -2645,14 +2522,13 @@ public:
 class UEnvQueryGenerator_Composite : public UEnvQueryGenerator
 {
 public:
-	TArray<class UEnvQueryGenerator*>                  Generators;                                               // 0x0050(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	unsigned char                                      bAllowDifferentItemTypes : 1;                             // 0x0060(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bHasMatchingItemType : 1;                                 // 0x0060(0x0001)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-	class UClass*                                      ForcedItemType;                                           // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UEnvQueryGenerator*> Generators; // 0x0050(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	unsigned char bAllowDifferentItemTypes : 1; // 0x0060(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char bHasMatchingItemType : 1; // 0x0060(0x0001)
+	unsigned char UnknownData00[0x7]; // 0x0061(0x0007) MISSED OFFSET
+	class UClass* ForcedItemType; // 0x0068(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_Composite");
@@ -2667,10 +2543,9 @@ public:
 class UEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator
 {
 public:
-	struct FEnvTraceData                               ProjectionData;                                           // 0x0050(0x0030) (Edit, DisableEditOnInstance)
+	struct FEnvTraceData ProjectionData; // 0x0050(0x0030) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_ProjectedPoints");
@@ -2685,16 +2560,15 @@ public:
 class UEnvQueryGenerator_Cone : public UEnvQueryGenerator_ProjectedPoints
 {
 public:
-	struct FAIDataProviderFloatValue                   AlignedPointsDistance;                                    // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ConeDegrees;                                              // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   AngleStep;                                                // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   Range;                                                    // 0x0110(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      CenterActor;                                              // 0x0140(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIncludeContextLocation : 1;                              // 0x0148(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0149(0x0007) MISSED OFFSET
+	struct FAIDataProviderFloatValue AlignedPointsDistance; // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ConeDegrees; // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue AngleStep; // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue Range; // 0x0110(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* CenterActor; // 0x0140(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bIncludeContextLocation : 1; // 0x0148(0x0001) (Edit)
+	unsigned char UnknownData00[0x7]; // 0x0149(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_Cone");
@@ -2709,10 +2583,9 @@ public:
 class UEnvQueryGenerator_CurrentLocation : public UEnvQueryGenerator
 {
 public:
-	class UClass*                                      QueryContext;                                             // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass* QueryContext; // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_CurrentLocation");
@@ -2727,20 +2600,19 @@ public:
 class UEnvQueryGenerator_Donut : public UEnvQueryGenerator_ProjectedPoints
 {
 public:
-	struct FAIDataProviderFloatValue                   InnerRadius;                                              // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   OuterRadius;                                              // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderIntValue                     NumberOfRings;                                            // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderIntValue                     PointsPerRing;                                            // 0x0110(0x0030) (Edit, DisableEditOnInstance)
-	struct FEnvDirection                               ArcDirection;                                             // 0x0140(0x0020) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ArcAngle;                                                 // 0x0160(0x0030) (Edit, DisableEditOnInstance)
-	bool                                               bUseSpiralPattern;                                        // 0x0190(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
-	class UClass*                                      Center;                                                   // 0x0198(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bDefineArc : 1;                                           // 0x01A0(0x0001) (Edit)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x01A1(0x0007) MISSED OFFSET
+	struct FAIDataProviderFloatValue InnerRadius; // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue OuterRadius; // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderIntValue NumberOfRings; // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderIntValue PointsPerRing; // 0x0110(0x0030) (Edit, DisableEditOnInstance)
+	struct FEnvDirection ArcDirection; // 0x0140(0x0020) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ArcAngle; // 0x0160(0x0030) (Edit, DisableEditOnInstance)
+	bool bUseSpiralPattern; // 0x0190(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0191(0x0007) MISSED OFFSET
+	class UClass* Center; // 0x0198(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bDefineArc : 1; // 0x01A0(0x0001) (Edit)
+	unsigned char UnknownData01[0x7]; // 0x01A1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_Donut");
@@ -2755,25 +2627,24 @@ public:
 class UEnvQueryGenerator_OnCircle : public UEnvQueryGenerator_ProjectedPoints
 {
 public:
-	struct FAIDataProviderFloatValue                   CircleRadius;                                             // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   SpaceBetween;                                             // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderIntValue                     NumberOfPoints;                                           // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
-	EPointOnCircleSpacingMethod                        PointOnCircleSpacingMethod;                               // 0x0110(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
-	struct FEnvDirection                               ArcDirection;                                             // 0x0118(0x0020) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ArcAngle;                                                 // 0x0138(0x0030) (Edit, DisableEditOnInstance)
-	float                                              AngleRadians;                                             // 0x0168(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x016C(0x0004) MISSED OFFSET
-	class UClass*                                      CircleCenter;                                             // 0x0170(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bIgnoreAnyContextActorsWhenGeneratingCircle;              // 0x0178(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0179(0x0007) MISSED OFFSET
-	struct FAIDataProviderFloatValue                   CircleCenterZOffset;                                      // 0x0180(0x0030) (Edit)
-	struct FEnvTraceData                               TraceData;                                                // 0x01B0(0x0030) (Edit)
-	unsigned char                                      bDefineArc : 1;                                           // 0x01E0(0x0001) (Edit)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x01E1(0x0007) MISSED OFFSET
+	struct FAIDataProviderFloatValue CircleRadius; // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue SpaceBetween; // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderIntValue NumberOfPoints; // 0x00E0(0x0030) (Edit, DisableEditOnInstance)
+	EPointOnCircleSpacingMethod PointOnCircleSpacingMethod; // 0x0110(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0111(0x0007) MISSED OFFSET
+	struct FEnvDirection ArcDirection; // 0x0118(0x0020) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ArcAngle; // 0x0138(0x0030) (Edit, DisableEditOnInstance)
+	float AngleRadians; // 0x0168(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x016C(0x0004) MISSED OFFSET
+	class UClass* CircleCenter; // 0x0170(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool bIgnoreAnyContextActorsWhenGeneratingCircle; // 0x0178(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x0179(0x0007) MISSED OFFSET
+	struct FAIDataProviderFloatValue CircleCenterZOffset; // 0x0180(0x0030) (Edit)
+	struct FEnvTraceData TraceData; // 0x01B0(0x0030) (Edit)
+	unsigned char bDefineArc : 1; // 0x01E0(0x0001) (Edit)
+	unsigned char UnknownData03[0x7]; // 0x01E1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_OnCircle");
@@ -2788,12 +2659,11 @@ public:
 class UEnvQueryGenerator_SimpleGrid : public UEnvQueryGenerator_ProjectedPoints
 {
 public:
-	struct FAIDataProviderFloatValue                   GridSize;                                                 // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   SpaceBetween;                                             // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      GenerateAround;                                           // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAIDataProviderFloatValue GridSize; // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue SpaceBetween; // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* GenerateAround; // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_SimpleGrid");
@@ -2808,12 +2678,11 @@ public:
 class UEnvQueryGenerator_PathingGrid : public UEnvQueryGenerator_SimpleGrid
 {
 public:
-	struct FAIDataProviderBoolValue                    PathToItem;                                               // 0x00E8(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      NavigationFilter;                                         // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FAIDataProviderFloatValue                   ScanRangeMultiplier;                                      // 0x0120(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderBoolValue PathToItem; // 0x00E8(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* NavigationFilter; // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAIDataProviderFloatValue ScanRangeMultiplier; // 0x0120(0x0030) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryGenerator_PathingGrid");
@@ -2828,16 +2697,15 @@ public:
 class UEnvQueryInstanceBlueprintWrapper : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	int                                                QueryID;                                                  // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x24];                                      // 0x0034(0x0024) MISSED OFFSET
-	class UClass*                                      itemType;                                                 // 0x0058(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                OptionIndex;                                              // 0x0060(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnQueryFinishedEvent;                                     // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	int QueryID; // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x24]; // 0x0034(0x0024) MISSED OFFSET
+	class UClass* itemType; // 0x0058(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int OptionIndex; // 0x0060(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x0064(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate OnQueryFinishedEvent; // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryInstanceBlueprintWrapper");
@@ -2858,10 +2726,9 @@ public:
 class UEnvQueryItemType : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType");
@@ -2877,8 +2744,7 @@ class UEnvQueryItemType_VectorBase : public UEnvQueryItemType
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType_VectorBase");
@@ -2894,8 +2760,7 @@ class UEnvQueryItemType_ActorBase : public UEnvQueryItemType_VectorBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType_ActorBase");
@@ -2911,8 +2776,7 @@ class UEnvQueryItemType_Actor : public UEnvQueryItemType_ActorBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType_Actor");
@@ -2928,8 +2792,7 @@ class UEnvQueryItemType_Direction : public UEnvQueryItemType_VectorBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType_Direction");
@@ -2945,8 +2808,7 @@ class UEnvQueryItemType_Point : public UEnvQueryItemType_VectorBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryItemType_Point");
@@ -2961,19 +2823,18 @@ public:
 class UEnvQueryManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0028(0x0078) MISSED OFFSET
-	TArray<struct FEnvQueryInstanceCache>              InstanceCache;                                            // 0x00A0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UEnvQueryContext*>                    LocalContexts;                                            // 0x00B0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UEnvQueryInstanceBlueprintWrapper*>   GCShieldedWrappers;                                       // 0x00C0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x54];                                      // 0x00D0(0x0054) MISSED OFFSET
-	float                                              MaxAllowedTestingTime;                                    // 0x0124(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bTestQueriesUsingBreadth;                                 // 0x0128(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0129(0x0003) MISSED OFFSET
-	int                                                QueryCountWarningThreshold;                               // 0x012C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	double                                             QueryCountWarningInterval;                                // 0x0130(0x0008) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x78]; // 0x0028(0x0078) MISSED OFFSET
+	TArray<struct FEnvQueryInstanceCache> InstanceCache; // 0x00A0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UEnvQueryContext*> LocalContexts; // 0x00B0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UEnvQueryInstanceBlueprintWrapper*> GCShieldedWrappers; // 0x00C0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData01[0x54]; // 0x00D0(0x0054) MISSED OFFSET
+	float MaxAllowedTestingTime; // 0x0124(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	bool bTestQueriesUsingBreadth; // 0x0128(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0129(0x0003) MISSED OFFSET
+	int QueryCountWarningThreshold; // 0x012C(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	double QueryCountWarningInterval; // 0x0130(0x0008) (ZeroConstructor, Config, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryManager");
@@ -2990,11 +2851,10 @@ public:
 class UEnvQueryOption : public UObject
 {
 public:
-	class UEnvQueryGenerator*                          Generator;                                                // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UEnvQueryTest*>                       Tests;                                                    // 0x0030(0x0010) (ZeroConstructor)
+	class UEnvQueryGenerator* Generator; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UEnvQueryTest*> Tests; // 0x0030(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryOption");
@@ -3009,33 +2869,32 @@ public:
 class UEnvQueryTest : public UEnvQueryNode
 {
 public:
-	TEnumAsByte<enum EEnvTestPurpose>                  TestPurpose;                                              // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	struct FString                                     TestComment;                                              // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TEnumAsByte<enum EEnvTestFilterOperator>           MultipleContextFilterOp;                                  // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<enum EEnvTestScoreOperator>            MultipleContextScoreOp;                                   // 0x0049(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<enum EEnvTestFilterType>               FilterType;                                               // 0x004A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5];                                       // 0x004B(0x0005) MISSED OFFSET
-	struct FAIDataProviderBoolValue                    BoolValue;                                                // 0x0050(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   FloatValueMin;                                            // 0x0080(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   FloatValueMax;                                            // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x00E0(0x0001) MISSED OFFSET
-	TEnumAsByte<enum EEnvTestScoreEquation>            ScoringEquation;                                          // 0x00E1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<enum EEnvQueryTestClamping>            ClampMinType;                                             // 0x00E2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<enum EEnvQueryTestClamping>            ClampMaxType;                                             // 0x00E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	EEQSNormalizationType                              NormalizationType;                                        // 0x00E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x00E5(0x0003) MISSED OFFSET
-	struct FAIDataProviderFloatValue                   ScoreClampMin;                                            // 0x00E8(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ScoreClampMax;                                            // 0x0118(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ScoringFactor;                                            // 0x0148(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ReferenceValue;                                           // 0x0178(0x0030) (Edit, DisableEditOnInstance)
-	bool                                               bDefineReferenceValue;                                    // 0x01A8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0xF];                                       // 0x01A9(0x000F) MISSED OFFSET
-	unsigned char                                      bWorkOnFloatValues : 1;                                   // 0x01B8(0x0001)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
+	TEnumAsByte<enum EEnvTestPurpose> TestPurpose; // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0031(0x0007) MISSED OFFSET
+	struct FString TestComment; // 0x0038(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TEnumAsByte<enum EEnvTestFilterOperator> MultipleContextFilterOp; // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<enum EEnvTestScoreOperator> MultipleContextScoreOp; // 0x0049(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<enum EEnvTestFilterType> FilterType; // 0x004A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData01[0x5]; // 0x004B(0x0005) MISSED OFFSET
+	struct FAIDataProviderBoolValue BoolValue; // 0x0050(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue FloatValueMin; // 0x0080(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue FloatValueMax; // 0x00B0(0x0030) (Edit, DisableEditOnInstance)
+	unsigned char UnknownData02[0x1]; // 0x00E0(0x0001) MISSED OFFSET
+	TEnumAsByte<enum EEnvTestScoreEquation> ScoringEquation; // 0x00E1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<enum EEnvQueryTestClamping> ClampMinType; // 0x00E2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<enum EEnvQueryTestClamping> ClampMaxType; // 0x00E3(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	EEQSNormalizationType NormalizationType; // 0x00E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData03[0x3]; // 0x00E5(0x0003) MISSED OFFSET
+	struct FAIDataProviderFloatValue ScoreClampMin; // 0x00E8(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ScoreClampMax; // 0x0118(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ScoringFactor; // 0x0148(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ReferenceValue; // 0x0178(0x0030) (Edit, DisableEditOnInstance)
+	bool bDefineReferenceValue; // 0x01A8(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData04[0xF]; // 0x01A9(0x000F) MISSED OFFSET
+	unsigned char bWorkOnFloatValues : 1; // 0x01B8(0x0001)
+	unsigned char UnknownData05[0x7]; // 0x01B9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest");
@@ -3050,10 +2909,9 @@ public:
 class UEnvQueryTest_Distance : public UEnvQueryTest
 {
 public:
-	class UClass*                                      DistanceTo;                                               // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass* DistanceTo; // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Distance");
@@ -3068,14 +2926,13 @@ public:
 class UEnvQueryTest_Dot : public UEnvQueryTest
 {
 public:
-	struct FEnvDirection                               LineA;                                                    // 0x01C0(0x0020) (Edit, DisableEditOnInstance)
-	struct FEnvDirection                               LineB;                                                    // 0x01E0(0x0020) (Edit, DisableEditOnInstance)
-	EEnvTestDot                                        TestMode;                                                 // 0x0200(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bAbsoluteValue;                                           // 0x0201(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0202(0x0006) MISSED OFFSET
+	struct FEnvDirection LineA; // 0x01C0(0x0020) (Edit, DisableEditOnInstance)
+	struct FEnvDirection LineB; // 0x01E0(0x0020) (Edit, DisableEditOnInstance)
+	EEnvTestDot TestMode; // 0x0200(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool bAbsoluteValue; // 0x0201(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x0202(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Dot");
@@ -3090,14 +2947,13 @@ public:
 class UEnvQueryTest_GameplayTags : public UEnvQueryTest
 {
 public:
-	struct FGameplayTagQuery                           TagQueryToMatch;                                          // 0x01C0(0x0048) (Edit)
-	bool                                               bUpdatedToUseQuery;                                       // 0x0208(0x0001) (ZeroConstructor, IsPlainOldData)
-	EGameplayContainerMatchType                        TagsToMatch;                                              // 0x0209(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x020A(0x0006) MISSED OFFSET
-	struct FGameplayTagContainer                       GameplayTags;                                             // 0x0210(0x0020)
+	struct FGameplayTagQuery TagQueryToMatch; // 0x01C0(0x0048) (Edit)
+	bool bUpdatedToUseQuery; // 0x0208(0x0001) (ZeroConstructor, IsPlainOldData)
+	EGameplayContainerMatchType TagsToMatch; // 0x0209(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x020A(0x0006) MISSED OFFSET
+	struct FGameplayTagContainer GameplayTags; // 0x0210(0x0020)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_GameplayTags");
@@ -3112,10 +2968,9 @@ public:
 class UEnvQueryTest_Overlap : public UEnvQueryTest
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x01C0(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x01C0(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Overlap");
@@ -3130,13 +2985,12 @@ public:
 class UEnvQueryTest_Pathfinding : public UEnvQueryTest
 {
 public:
-	class UClass*                                      Context;                                                  // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FAIDataProviderBoolValue                    PathFromContext;                                          // 0x01C8(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderBoolValue                    SkipUnreachable;                                          // 0x01F8(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      FilterClass;                                              // 0x0228(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass* Context; // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAIDataProviderBoolValue PathFromContext; // 0x01C8(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderBoolValue SkipUnreachable; // 0x01F8(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* FilterClass; // 0x0228(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Pathfinding");
@@ -3151,10 +3005,9 @@ public:
 class UEnvQueryTest_PathfindingBatch : public UEnvQueryTest_Pathfinding
 {
 public:
-	struct FAIDataProviderFloatValue                   ScanRangeMultiplier;                                      // 0x0230(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ScanRangeMultiplier; // 0x0230(0x0030) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_PathfindingBatch");
@@ -3169,10 +3022,9 @@ public:
 class UEnvQueryTest_Project : public UEnvQueryTest
 {
 public:
-	struct FEnvTraceData                               ProjectionData;                                           // 0x01C0(0x0030) (Edit, DisableEditOnInstance)
+	struct FEnvTraceData ProjectionData; // 0x01C0(0x0030) (Edit, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Project");
@@ -3188,8 +3040,7 @@ class UEnvQueryTest_Random : public UEnvQueryTest
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Random");
@@ -3204,14 +3055,13 @@ public:
 class UEnvQueryTest_Trace : public UEnvQueryTest
 {
 public:
-	struct FEnvTraceData                               TraceData;                                                // 0x01C0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderBoolValue                    TraceFromContext;                                         // 0x01F0(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ItemHeightOffset;                                         // 0x0220(0x0030) (Edit, DisableEditOnInstance)
-	struct FAIDataProviderFloatValue                   ContextHeightOffset;                                      // 0x0250(0x0030) (Edit, DisableEditOnInstance)
-	class UClass*                                      Context;                                                  // 0x0280(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FEnvTraceData TraceData; // 0x01C0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderBoolValue TraceFromContext; // 0x01F0(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ItemHeightOffset; // 0x0220(0x0030) (Edit, DisableEditOnInstance)
+	struct FAIDataProviderFloatValue ContextHeightOffset; // 0x0250(0x0030) (Edit, DisableEditOnInstance)
+	class UClass* Context; // 0x0280(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTest_Trace");
@@ -3227,8 +3077,7 @@ class UEnvQueryTypes : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EnvQueryTypes");
@@ -3244,8 +3093,7 @@ class UEQSQueryResultSourceInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EQSQueryResultSourceInterface");
@@ -3256,14 +3104,13 @@ public:
 
 
 // Class AIModule.EQSRenderingComponent
-// 0x0040 (0x0960 - 0x0920)
+// 0x0040 (0x0980 - 0x0940)
 class UEQSRenderingComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0920(0x0040) MISSED OFFSET
+	unsigned char UnknownData00[0x40]; // 0x0940(0x0040) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EQSRenderingComponent");
@@ -3278,22 +3125,21 @@ public:
 class AEQSTestingPawn : public ACharacter
 {
 public:
-	class UEnvQuery*                                   QueryTemplate;                                            // 0x08F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FEnvNamedValue>                      QueryParams;                                              // 0x08F8(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<struct FAIDynamicParam>                     QueryConfig;                                              // 0x0908(0x0010) (Edit, ZeroConstructor)
-	float                                              TimeLimitPerStep;                                         // 0x0918(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                StepToDebugDraw;                                          // 0x091C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	EEnvQueryHightlightMode                            HighlightMode;                                            // 0x0920(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bDrawLabels : 1;                                          // 0x0921(0x0001) (Edit)
-	unsigned char                                      bDrawFailedItems : 1;                                     // 0x0921(0x0001) (Edit)
-	unsigned char                                      bReRunQueryOnlyOnFinishedMove : 1;                        // 0x0921(0x0001) (Edit)
-	unsigned char                                      bShouldBeVisibleInGame : 1;                               // 0x0921(0x0001) (Edit)
-	unsigned char                                      bTickDuringGame : 1;                                      // 0x0921(0x0001) (Edit)
-	TEnumAsByte<enum EEnvQueryRunMode>                 QueryingMode;                                             // 0x0922(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2D];                                      // 0x0923(0x002D) MISSED OFFSET
+	class UEnvQuery* QueryTemplate; // 0x08F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FEnvNamedValue> QueryParams; // 0x08F8(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<struct FAIDynamicParam> QueryConfig; // 0x0908(0x0010) (Edit, ZeroConstructor)
+	float TimeLimitPerStep; // 0x0918(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int StepToDebugDraw; // 0x091C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	EEnvQueryHightlightMode HighlightMode; // 0x0920(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char bDrawLabels : 1; // 0x0921(0x0001) (Edit)
+	unsigned char bDrawFailedItems : 1; // 0x0921(0x0001) (Edit)
+	unsigned char bReRunQueryOnlyOnFinishedMove : 1; // 0x0921(0x0001) (Edit)
+	unsigned char bShouldBeVisibleInGame : 1; // 0x0921(0x0001) (Edit)
+	unsigned char bTickDuringGame : 1; // 0x0921(0x0001) (Edit)
+	TEnumAsByte<enum EEnvQueryRunMode> QueryingMode; // 0x0922(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2D]; // 0x0923(0x002D) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.EQSTestingPawn");
@@ -3309,8 +3155,7 @@ class UGenericTeamAgentInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.GenericTeamAgentInterface");
@@ -3326,8 +3171,7 @@ class AGridPathAIController : public AAIController
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.GridPathAIController");
@@ -3342,11 +3186,10 @@ public:
 class UGridPathFollowingComponent : public UPathFollowingComponent
 {
 public:
-	class UNavLocalGridManager*                        GridManager;                                              // 0x0348(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0350(0x0028) MISSED OFFSET
+	class UNavLocalGridManager* GridManager; // 0x0348(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x28]; // 0x0350(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.GridPathFollowingComponent");
@@ -3362,8 +3205,7 @@ class UNavFilter_AIControllerDefault : public UNavigationQueryFilter
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.NavFilter_AIControllerDefault");
@@ -3378,10 +3220,9 @@ public:
 class UNavLocalGridManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0028(0x0030) MISSED OFFSET
+	unsigned char UnknownData00[0x30]; // 0x0028(0x0030) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.NavLocalGridManager");
@@ -3404,20 +3245,19 @@ public:
 class UPawnAction : public UObject
 {
 public:
-	class UPawnAction*                                 ChildAction;                                              // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPawnAction*                                 ParentAction;                                             // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UPawnActionsComponent*                       OwnerComponent;                                           // 0x0038(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UObject*                                     Instigator;                                               // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBrainComponent*                             BrainComp;                                                // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0050(0x0030) MISSED OFFSET
-	unsigned char                                      bAllowNewSameClassInstance : 1;                           // 0x0080(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	unsigned char                                      bReplaceActiveSameClassInstance : 1;                      // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      bShouldPauseMovement : 1;                                 // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      bAlwaysNotifyOnFinished : 1;                              // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x17];                                      // 0x0081(0x0017) MISSED OFFSET
+	class UPawnAction* ChildAction; // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPawnAction* ParentAction; // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UPawnActionsComponent* OwnerComponent; // 0x0038(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UObject* Instigator; // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBrainComponent* BrainComp; // 0x0048(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x30]; // 0x0050(0x0030) MISSED OFFSET
+	unsigned char bAllowNewSameClassInstance : 1; // 0x0080(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	unsigned char bReplaceActiveSameClassInstance : 1; // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char bShouldPauseMovement : 1; // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char bAlwaysNotifyOnFinished : 1; // 0x0080(0x0001) (Edit, BlueprintVisible, DisableEditOnInstance)
+	unsigned char UnknownData01[0x17]; // 0x0081(0x0017) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction");
@@ -3437,8 +3277,7 @@ class UPawnAction_BlueprintBase : public UPawnAction
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction_BlueprintBase");
@@ -3459,21 +3298,20 @@ public:
 class UPawnAction_Move : public UPawnAction
 {
 public:
-	class AActor*                                      GoalActor;                                                // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     GoalLocation;                                             // 0x00A0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              AcceptableRadius;                                         // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      FilterClass;                                              // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bAllowStrafe : 1;                                         // 0x00B8(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bFinishOnOverlap : 1;                                     // 0x00B8(0x0001)
-	unsigned char                                      bUsePathfinding : 1;                                      // 0x00B8(0x0001)
-	unsigned char                                      bAllowPartialPath : 1;                                    // 0x00B8(0x0001)
-	unsigned char                                      bProjectGoalToNavigation : 1;                             // 0x00B8(0x0001)
-	unsigned char                                      bUpdatePathToGoal : 1;                                    // 0x00B8(0x0001)
-	unsigned char                                      bAbortChildActionOnPathChange : 1;                        // 0x00B8(0x0001)
-	unsigned char                                      UnknownData00[0x2F];                                      // 0x00B9(0x002F) MISSED OFFSET
+	class AActor* GoalActor; // 0x0098(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector GoalLocation; // 0x00A0(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
+	float AcceptableRadius; // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass* FilterClass; // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bAllowStrafe : 1; // 0x00B8(0x0001) (Edit, BlueprintVisible)
+	unsigned char bFinishOnOverlap : 1; // 0x00B8(0x0001)
+	unsigned char bUsePathfinding : 1; // 0x00B8(0x0001)
+	unsigned char bAllowPartialPath : 1; // 0x00B8(0x0001)
+	unsigned char bProjectGoalToNavigation : 1; // 0x00B8(0x0001)
+	unsigned char bUpdatePathToGoal : 1; // 0x00B8(0x0001)
+	unsigned char bAbortChildActionOnPathChange : 1; // 0x00B8(0x0001)
+	unsigned char UnknownData00[0x2F]; // 0x00B9(0x002F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction_Move");
@@ -3488,13 +3326,12 @@ public:
 class UPawnAction_Repeat : public UPawnAction
 {
 public:
-	class UPawnAction*                                 ActionToRepeat;                                           // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPawnAction*                                 RecentActionCopy;                                         // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<enum EPawnActionFailHandling>          ChildFailureHandlingMode;                                 // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x00A9(0x000F) MISSED OFFSET
+	class UPawnAction* ActionToRepeat; // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPawnAction* RecentActionCopy; // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<enum EPawnActionFailHandling> ChildFailureHandlingMode; // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xF]; // 0x00A9(0x000F) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction_Repeat");
@@ -3509,14 +3346,13 @@ public:
 class UPawnAction_Sequence : public UPawnAction
 {
 public:
-	TArray<class UPawnAction*>                         ActionSequence;                                           // 0x0098(0x0010) (ZeroConstructor)
-	TEnumAsByte<enum EPawnActionFailHandling>          ChildFailureHandlingMode;                                 // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
-	class UPawnAction*                                 RecentActionCopy;                                         // 0x00B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x00B8(0x0008) MISSED OFFSET
+	TArray<class UPawnAction*> ActionSequence; // 0x0098(0x0010) (ZeroConstructor)
+	TEnumAsByte<enum EPawnActionFailHandling> ChildFailureHandlingMode; // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x00A9(0x0007) MISSED OFFSET
+	class UPawnAction* RecentActionCopy; // 0x00B0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x00B8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction_Sequence");
@@ -3531,10 +3367,9 @@ public:
 class UPawnAction_Wait : public UPawnAction
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0098(0x0010) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0098(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnAction_Wait");
@@ -3549,14 +3384,13 @@ public:
 class UPawnActionsComponent : public UActorComponent
 {
 public:
-	class APawn*                                       ControlledPawn;                                           // 0x0178(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPawnActionStack>                    ActionStacks;                                             // 0x0180(0x0010) (ZeroConstructor)
-	TArray<struct FPawnActionEvent>                    ActionEvents;                                             // 0x0190(0x0010) (ZeroConstructor)
-	class UPawnAction*                                 CurrentAction;                                            // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x01A8(0x0008) MISSED OFFSET
+	class APawn* ControlledPawn; // 0x0178(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FPawnActionStack> ActionStacks; // 0x0180(0x0010) (ZeroConstructor)
+	TArray<struct FPawnActionEvent> ActionEvents; // 0x0190(0x0010) (ZeroConstructor)
+	class UPawnAction* CurrentAction; // 0x01A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x01A8(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnActionsComponent");
@@ -3576,23 +3410,22 @@ public:
 class UPawnSensingComponent : public UActorComponent
 {
 public:
-	float                                              HearingThreshold;                                         // 0x0178(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              LOSHearingThreshold;                                      // 0x017C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SightRadius;                                              // 0x0180(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              SensingInterval;                                          // 0x0184(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              HearingMaxSoundAge;                                       // 0x0188(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bEnableSensingUpdates : 1;                                // 0x018C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bOnlySensePlayers : 1;                                    // 0x018C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bSeePawns : 1;                                            // 0x018C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      bHearNoises : 1;                                          // 0x018C(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x018D(0x000B) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnSeePawn;                                                // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnHearNoise;                                              // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	float                                              PeripheralVisionAngle;                                    // 0x01B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              PeripheralVisionCosine;                                   // 0x01BC(0x0004) (ZeroConstructor, IsPlainOldData)
+	float HearingThreshold; // 0x0178(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float LOSHearingThreshold; // 0x017C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float SightRadius; // 0x0180(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float SensingInterval; // 0x0184(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float HearingMaxSoundAge; // 0x0188(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bEnableSensingUpdates : 1; // 0x018C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char bOnlySensePlayers : 1; // 0x018C(0x0001) (Edit, BlueprintVisible)
+	unsigned char bSeePawns : 1; // 0x018C(0x0001) (Edit, BlueprintVisible)
+	unsigned char bHearNoises : 1; // 0x018C(0x0001) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0xB]; // 0x018D(0x000B) MISSED OFFSET
+	struct FScriptMulticastDelegate OnSeePawn; // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnHearNoise; // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	float PeripheralVisionAngle; // 0x01B8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float PeripheralVisionCosine; // 0x01BC(0x0004) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.PawnSensingComponent");
@@ -3616,8 +3449,7 @@ class UVisualLoggerExtension : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AIModule.VisualLoggerExtension");

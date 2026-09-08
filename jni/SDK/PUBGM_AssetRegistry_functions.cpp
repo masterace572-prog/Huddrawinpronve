@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function AssetRegistry.AssetRegistryHelpers.ToSoftObjectPath
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FSoftObjectPath         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSoftObjectPath ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAssetData& InAssetData)
 {
@@ -38,9 +38,9 @@ struct FSoftObjectPath UAssetRegistryHelpers::ToSoftObjectPath(const struct FAss
 // Function AssetRegistry.AssetRegistryHelpers.SetFilterTagsAndValues
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FARFilter               InFilter                       (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FTagAndValue>    InTagsAndValues                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FARFilter               ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FARFilter InFilter (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FTagAndValue> InTagsAndValues (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FARFilter ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARFilter& InFilter, TArray<struct FTagAndValue> InTagsAndValues)
 {
@@ -67,8 +67,8 @@ struct FARFilter UAssetRegistryHelpers::SetFilterTagsAndValues(const struct FARF
 // Function AssetRegistry.AssetRegistryHelpers.IsValid
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
 {
@@ -94,8 +94,8 @@ bool UAssetRegistryHelpers::IsValid(const struct FAssetData& InAssetData)
 // Function AssetRegistry.AssetRegistryHelpers.IsUAsset
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
 {
@@ -121,8 +121,8 @@ bool UAssetRegistryHelpers::IsUAsset(const struct FAssetData& InAssetData)
 // Function AssetRegistry.AssetRegistryHelpers.IsRedirector
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
 {
@@ -148,8 +148,8 @@ bool UAssetRegistryHelpers::IsRedirector(const struct FAssetData& InAssetData)
 // Function AssetRegistry.AssetRegistryHelpers.IsAssetLoaded
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
 {
@@ -175,10 +175,10 @@ bool UAssetRegistryHelpers::IsAssetLoaded(const struct FAssetData& InAssetData)
 // Function AssetRegistry.AssetRegistryHelpers.GetTagValue
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   InTagName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 OutTagValue                    (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName InTagName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString OutTagValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, const struct FName& InTagName, struct FString* OutTagValue)
 {
@@ -208,8 +208,8 @@ bool UAssetRegistryHelpers::GetTagValue(const struct FAssetData& InAssetData, co
 // Function AssetRegistry.AssetRegistryHelpers.GetFullName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAssetData)
 {
@@ -235,8 +235,8 @@ struct FString UAssetRegistryHelpers::GetFullName(const struct FAssetData& InAss
 // Function AssetRegistry.AssetRegistryHelpers.GetExportTextName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData& InAssetData)
 {
@@ -262,8 +262,8 @@ struct FString UAssetRegistryHelpers::GetExportTextName(const struct FAssetData&
 // Function AssetRegistry.AssetRegistryHelpers.GetClass
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetData)
 {
@@ -289,7 +289,7 @@ class UClass* UAssetRegistryHelpers::GetClass(const struct FAssetData& InAssetDa
 // Function AssetRegistry.AssetRegistryHelpers.GetAssetRegistry
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TScriptInterface<class UAssetRegistry> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UAssetRegistry> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TScriptInterface<class UAssetRegistry> UAssetRegistryHelpers::GetAssetRegistry()
 {
@@ -314,8 +314,8 @@ TScriptInterface<class UAssetRegistry> UAssetRegistryHelpers::GetAssetRegistry()
 // Function AssetRegistry.AssetRegistryHelpers.GetAsset
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FAssetData              InAssetData                    (ConstParm, Parm, OutParm, ReferenceParm)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAssetData InAssetData (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetData)
 {
@@ -341,9 +341,9 @@ class UObject* UAssetRegistryHelpers::GetAsset(const struct FAssetData& InAssetD
 // Function AssetRegistry.AssetRegistryHelpers.CreateAssetData
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 InAsset                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowBlueprintClass           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAssetData              ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UObject* InAsset (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllowBlueprintClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAssetData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass)
 {
@@ -370,8 +370,8 @@ struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset,
 // Function AssetRegistry.AssetRegistry.RunAssetsThroughFilter
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FAssetData>      AssetDataList                  (Parm, OutParm, ZeroConstructor)
-// struct FARFilter               filter                         (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FAssetData> AssetDataList (Parm, OutParm, ZeroConstructor)
+// struct FARFilter filter (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UAssetRegistry::RunAssetsThroughFilter(const struct FARFilter& filter, TArray<struct FAssetData>* AssetDataList)
 {
@@ -398,7 +398,7 @@ void UAssetRegistry::RunAssetsThroughFilter(const struct FARFilter& filter, TArr
 // Function AssetRegistry.AssetRegistry.IsLoadingAssets
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::IsLoadingAssets()
 {
@@ -423,9 +423,9 @@ bool UAssetRegistry::IsLoadingAssets()
 // Function AssetRegistry.AssetRegistry.HasAssets
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   PackagePath                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRecursive                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName PackagePath (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRecursive (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::HasAssets(const struct FName& PackagePath, bool bRecursive)
 {
@@ -452,9 +452,9 @@ bool UAssetRegistry::HasAssets(const struct FName& PackagePath, bool bRecursive)
 // Function AssetRegistry.AssetRegistry.GetSubPaths
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 InBasePath                     (Parm, ZeroConstructor)
-// TArray<struct FString>         OutPathList                    (Parm, OutParm, ZeroConstructor)
-// bool                           bInRecurse                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InBasePath (Parm, ZeroConstructor)
+// TArray<struct FString> OutPathList (Parm, OutParm, ZeroConstructor)
+// bool bInRecurse (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAssetRegistry::GetSubPaths(const struct FString& InBasePath, bool bInRecurse, TArray<struct FString>* OutPathList)
 {
@@ -482,11 +482,11 @@ void UAssetRegistry::GetSubPaths(const struct FString& InBasePath, bool bInRecur
 // Function AssetRegistry.AssetRegistry.GetAssetsByPath
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   PackagePath                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAssetData>      OutAssetData                   (Parm, OutParm, ZeroConstructor)
-// bool                           bRecursive                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIncludeOnlyOnDiskAssets       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName PackagePath (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAssetData> OutAssetData (Parm, OutParm, ZeroConstructor)
+// bool bRecursive (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIncludeOnlyOnDiskAssets (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::GetAssetsByPath(const struct FName& PackagePath, bool bRecursive, bool bIncludeOnlyOnDiskAssets, TArray<struct FAssetData>* OutAssetData)
 {
@@ -517,10 +517,10 @@ bool UAssetRegistry::GetAssetsByPath(const struct FName& PackagePath, bool bRecu
 // Function AssetRegistry.AssetRegistry.GetAssetsByPackageName
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   PackageName                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAssetData>      OutAssetData                   (Parm, OutParm, ZeroConstructor)
-// bool                           bIncludeOnlyOnDiskAssets       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName PackageName (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAssetData> OutAssetData (Parm, OutParm, ZeroConstructor)
+// bool bIncludeOnlyOnDiskAssets (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::GetAssetsByPackageName(const struct FName& PackageName, bool bIncludeOnlyOnDiskAssets, TArray<struct FAssetData>* OutAssetData)
 {
@@ -550,10 +550,10 @@ bool UAssetRegistry::GetAssetsByPackageName(const struct FName& PackageName, boo
 // Function AssetRegistry.AssetRegistry.GetAssetsByClass
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   ClassName                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FAssetData>      OutAssetData                   (Parm, OutParm, ZeroConstructor)
-// bool                           bSearchSubClasses              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName ClassName (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FAssetData> OutAssetData (Parm, OutParm, ZeroConstructor)
+// bool bSearchSubClasses (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::GetAssetsByClass(const struct FName& ClassName, bool bSearchSubClasses, TArray<struct FAssetData>* OutAssetData)
 {
@@ -583,9 +583,9 @@ bool UAssetRegistry::GetAssetsByClass(const struct FName& ClassName, bool bSearc
 // Function AssetRegistry.AssetRegistry.GetAssets
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FARFilter               filter                         (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FAssetData>      OutAssetData                   (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FARFilter filter (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FAssetData> OutAssetData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::GetAssets(const struct FARFilter& filter, TArray<struct FAssetData>* OutAssetData)
 {
@@ -614,9 +614,9 @@ bool UAssetRegistry::GetAssets(const struct FARFilter& filter, TArray<struct FAs
 // Function AssetRegistry.AssetRegistry.GetAssetByObjectPath
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   ObjectPath                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIncludeOnlyOnDiskAssets       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAssetData              ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FName ObjectPath (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bIncludeOnlyOnDiskAssets (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAssetData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FAssetData UAssetRegistry::GetAssetByObjectPath(const struct FName& ObjectPath, bool bIncludeOnlyOnDiskAssets)
 {
@@ -643,7 +643,7 @@ struct FAssetData UAssetRegistry::GetAssetByObjectPath(const struct FName& Objec
 // Function AssetRegistry.AssetRegistry.GetAllCachedPaths
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FString>         OutPathList                    (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> OutPathList (Parm, OutParm, ZeroConstructor)
 
 void UAssetRegistry::GetAllCachedPaths(TArray<struct FString>* OutPathList)
 {
@@ -669,9 +669,9 @@ void UAssetRegistry::GetAllCachedPaths(TArray<struct FString>* OutPathList)
 // Function AssetRegistry.AssetRegistry.GetAllAssets
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FAssetData>      OutAssetData                   (Parm, OutParm, ZeroConstructor)
-// bool                           bIncludeOnlyOnDiskAssets       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FAssetData> OutAssetData (Parm, OutParm, ZeroConstructor)
+// bool bIncludeOnlyOnDiskAssets (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAssetRegistry::GetAllAssets(bool bIncludeOnlyOnDiskAssets, TArray<struct FAssetData>* OutAssetData)
 {

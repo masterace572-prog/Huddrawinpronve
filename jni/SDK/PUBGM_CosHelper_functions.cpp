@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function CosHelper.CosBase.GetContent
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<unsigned char>          ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<unsigned char> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<unsigned char> UCosBase::GetContent()
 {
@@ -36,12 +36,12 @@ TArray<unsigned char> UCosBase::GetContent()
 // Function CosHelper.CosHelperBlueprintLibrary.UploadFileMemory
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UCosHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          FileMemoryBuffer               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 URIPathName                    (Parm, ZeroConstructor)
-// struct FString                 URLParameters                  (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnCosRequestCompleted          (Parm, ZeroConstructor)
-// class UCosRequest*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCosHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> FileMemoryBuffer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString URIPathName (Parm, ZeroConstructor)
+// struct FString URLParameters (Parm, ZeroConstructor)
+// struct FScriptDelegate OnCosRequestCompleted (Parm, ZeroConstructor)
+// class UCosRequest* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCosRequest* UCosHelperBlueprintLibrary::UploadFileMemory(class UCosHelper* CosHelper, TArray<unsigned char> FileMemoryBuffer, const struct FString& URIPathName, const struct FString& URLParameters, const struct FScriptDelegate& OnCosRequestCompleted)
 {
@@ -71,12 +71,12 @@ class UCosRequest* UCosHelperBlueprintLibrary::UploadFileMemory(class UCosHelper
 // Function CosHelper.CosHelperBlueprintLibrary.UploadFile
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UCosHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FilePathName                   (Parm, ZeroConstructor)
-// struct FString                 URIPathName                    (Parm, ZeroConstructor)
-// struct FString                 URLParameters                  (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnCosRequestCompleted          (Parm, ZeroConstructor)
-// class UCosRequest*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCosHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FilePathName (Parm, ZeroConstructor)
+// struct FString URIPathName (Parm, ZeroConstructor)
+// struct FString URLParameters (Parm, ZeroConstructor)
+// struct FScriptDelegate OnCosRequestCompleted (Parm, ZeroConstructor)
+// class UCosRequest* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCosRequest* UCosHelperBlueprintLibrary::UploadFile(class UCosHelper* CosHelper, const struct FString& FilePathName, const struct FString& URIPathName, const struct FString& URLParameters, const struct FScriptDelegate& OnCosRequestCompleted)
 {
@@ -106,8 +106,8 @@ class UCosRequest* UCosHelperBlueprintLibrary::UploadFile(class UCosHelper* CosH
 // Function CosHelper.CosHelperBlueprintLibrary.InitCosInfo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Section                        (Parm, ZeroConstructor)
-// struct FCosHelperInitializeInfo ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Section (Parm, ZeroConstructor)
+// struct FCosHelperInitializeInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FCosHelperInitializeInfo UCosHelperBlueprintLibrary::InitCosInfo(const struct FString& Section)
 {
@@ -133,12 +133,12 @@ struct FCosHelperInitializeInfo UCosHelperBlueprintLibrary::InitCosInfo(const st
 // Function CosHelper.CosHelperBlueprintLibrary.GetFileInfo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UCosHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 URIPathName                    (Parm, ZeroConstructor)
-// struct FString                 URLParameters                  (Parm, ZeroConstructor)
-// int                            FileInfoType                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FScriptDelegate         OnCosRequestCompleted          (Parm, ZeroConstructor)
-// class UCosRequest*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCosHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString URIPathName (Parm, ZeroConstructor)
+// struct FString URLParameters (Parm, ZeroConstructor)
+// int FileInfoType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FScriptDelegate OnCosRequestCompleted (Parm, ZeroConstructor)
+// class UCosRequest* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCosRequest* UCosHelperBlueprintLibrary::GetFileInfo(class UCosHelper* CosHelper, const struct FString& URIPathName, const struct FString& URLParameters, int FileInfoType, const struct FScriptDelegate& OnCosRequestCompleted)
 {
@@ -168,12 +168,12 @@ class UCosRequest* UCosHelperBlueprintLibrary::GetFileInfo(class UCosHelper* Cos
 // Function CosHelper.CosHelperBlueprintLibrary.DownloadFile
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UCosHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 URIPathName                    (Parm, ZeroConstructor)
-// struct FString                 URLParameters                  (Parm, ZeroConstructor)
-// struct FString                 SavedPathName                  (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnCosRequestCompleted          (Parm, ZeroConstructor)
-// class UCosRequest*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCosHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString URIPathName (Parm, ZeroConstructor)
+// struct FString URLParameters (Parm, ZeroConstructor)
+// struct FString SavedPathName (Parm, ZeroConstructor)
+// struct FScriptDelegate OnCosRequestCompleted (Parm, ZeroConstructor)
+// class UCosRequest* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCosRequest* UCosHelperBlueprintLibrary::DownloadFile(class UCosHelper* CosHelper, const struct FString& URIPathName, const struct FString& URLParameters, const struct FString& SavedPathName, const struct FScriptDelegate& OnCosRequestCompleted)
 {
@@ -203,7 +203,7 @@ class UCosRequest* UCosHelperBlueprintLibrary::DownloadFile(class UCosHelper* Co
 // Function CosHelper.CosHelperBlueprintLibrary.DestroyCosHelper
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UCosHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UCosHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCosHelperBlueprintLibrary::DestroyCosHelper(class UCosHelper* CosHelper)
 {
@@ -227,8 +227,8 @@ void UCosHelperBlueprintLibrary::DestroyCosHelper(class UCosHelper* CosHelper)
 // Function CosHelper.CosHelperBlueprintLibrary.ConstructCosHelper
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCosHelperInitializeInfo InitializeInfo                 (ConstParm, Parm, OutParm, ReferenceParm)
-// class UCosHelper*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FCosHelperInitializeInfo InitializeInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// class UCosHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCosHelper* UCosHelperBlueprintLibrary::ConstructCosHelper(const struct FCosHelperInitializeInfo& InitializeInfo)
 {
@@ -254,7 +254,7 @@ class UCosHelper* UCosHelperBlueprintLibrary::ConstructCosHelper(const struct FC
 // Function CosHelper.CosResponse.IsOK
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCosResponse::IsOK()
 {
@@ -279,7 +279,7 @@ bool UCosResponse::IsOK()
 // Function CosHelper.CosResponse.GetResponseCode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCosResponse::GetResponseCode()
 {
@@ -304,7 +304,7 @@ int UCosResponse::GetResponseCode()
 // Function CosHelper.CosResponse.GetRequestURL
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCosResponse::GetRequestURL()
 {
@@ -329,8 +329,8 @@ struct FString UCosResponse::GetRequestURL()
 // Function CosHelper.CosResponse.GetFileInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ECosHelperFileInfoType         InFileInfoType                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// ECosHelperFileInfoType InFileInfoType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCosResponse::GetFileInfo(ECosHelperFileInfoType InFileInfoType)
 {
@@ -356,7 +356,7 @@ struct FString UCosResponse::GetFileInfo(ECosHelperFileInfoType InFileInfoType)
 // Function CosHelper.CosResponse.GetContentAsString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCosResponse::GetContentAsString()
 {

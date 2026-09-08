@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function AIGCKit.AIGCAnimInstance.GetCurrentFrameIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAIGCAnimInstance::GetCurrentFrameIndex()
 {
@@ -36,11 +36,11 @@ int UAIGCAnimInstance::GetCurrentFrameIndex()
 // Function AIGCKit.AIGCKitFunctionLibrary.GetAnimData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          CompressData                   (Parm, OutParm, ZeroConstructor)
-// int                            FrameRate                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            FrameNum                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSkeletonNodeInfo       SkeletonNodeInfo               (ConstParm, Parm, OutParm, ReferenceParm)
-// class UAIGCAnimData*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> CompressData (Parm, OutParm, ZeroConstructor)
+// int FrameRate (Parm, ZeroConstructor, IsPlainOldData)
+// int FrameNum (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSkeletonNodeInfo SkeletonNodeInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// class UAIGCAnimData* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAIGCAnimData* UAIGCKitFunctionLibrary::GetAnimData(int FrameRate, int FrameNum, const struct FSkeletonNodeInfo& SkeletonNodeInfo, TArray<unsigned char>* CompressData)
 {
@@ -71,12 +71,12 @@ class UAIGCAnimData* UAIGCKitFunctionLibrary::GetAnimData(int FrameRate, int Fra
 // Function AIGCKit.AIGCKitFunctionLibrary.DecompressBone
 // (Final, Native, Static, Private, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            TrackIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              OutAtom                        (Parm, OutParm, IsPlainOldData)
-// TArray<unsigned char>          RawAnimData                    (Parm, OutParm, ZeroConstructor)
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RelativePos                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TrackIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform OutAtom (Parm, OutParm, IsPlainOldData)
+// TArray<unsigned char> RawAnimData (Parm, OutParm, ZeroConstructor)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
+// float RelativePos (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIGCKitFunctionLibrary::DecompressBone(int TrackIndex, float Time, float RelativePos, struct FTransform* OutAtom, TArray<unsigned char>* RawAnimData)
 {
@@ -109,12 +109,12 @@ bool UAIGCKitFunctionLibrary::DecompressBone(int TrackIndex, float Time, float R
 // Function AIGCKit.AIGCKitFunctionLibrary.DecompressAnimData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAIGCAnimData*           OutAnimData                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          RawAnimData                    (Parm, OutParm, ZeroConstructor)
-// int                            FrameNum                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TargetFramerate                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSkeletonNodeInfo       SkeletonNodeInfo               (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAIGCAnimData* OutAnimData (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> RawAnimData (Parm, OutParm, ZeroConstructor)
+// int FrameNum (Parm, ZeroConstructor, IsPlainOldData)
+// float TargetFramerate (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSkeletonNodeInfo SkeletonNodeInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIGCKitFunctionLibrary::DecompressAnimData(class UAIGCAnimData* OutAnimData, int FrameNum, float TargetFramerate, const struct FSkeletonNodeInfo& SkeletonNodeInfo, TArray<unsigned char>* RawAnimData)
 {

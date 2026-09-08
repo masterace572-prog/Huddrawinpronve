@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,16 +11,16 @@ namespace SDK
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 RootPos                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 JointPos                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndPos                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 JointTarget                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 Effector                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 OutJointPos                    (Parm, OutParm, IsPlainOldData)
-// struct FVector                 OutEndPos                      (Parm, OutParm, IsPlainOldData)
-// bool                           bAllowStretching               (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartStretchRatio              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxStretchScale                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector RootPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector JointPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector EndPos (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector JointTarget (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Effector (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector OutJointPos (Parm, OutParm, IsPlainOldData)
+// struct FVector OutEndPos (Parm, OutParm, IsPlainOldData)
+// bool bAllowStretching (Parm, ZeroConstructor, IsPlainOldData)
+// float StartStretchRatio (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxStretchScale (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, float MaxStretchScale, float StartStretchRatio, bool bAllowStretching, struct FVector* OutEndPos, struct FVector* OutJointPos)
 {
@@ -56,13 +56,13 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(const struct FVector& RootPos, const 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FTransform              CurrentTransform               (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 TargetPosition                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 LookAtVector                   (Parm, IsPlainOldData)
-// bool                           bUseUpVector                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 UpVector                       (Parm, IsPlainOldData)
-// float                          ClampConeInDegree              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FTransform CurrentTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector TargetPosition (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector LookAtVector (Parm, IsPlainOldData)
+// bool bUseUpVector (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector UpVector (Parm, IsPlainOldData)
+// float ClampConeInDegree (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree)
 {
@@ -93,8 +93,8 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(const struct FTransform& Cu
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName NotifyName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
 {
@@ -119,8 +119,8 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(const struct FName& NotifyNa
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FName                   NotifyName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName NotifyName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBranchingPointNotifyPayload BranchingPointNotifyPayload (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload)
 {
@@ -145,8 +145,8 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(const struct FName& Notify
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
 // (Final, Native, Protected)
 // Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage* Montage (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInterrupted (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
 {
@@ -171,8 +171,8 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
 // (Final, Native, Protected)
 // Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInterrupted                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage* Montage (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInterrupted (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
 {
@@ -197,12 +197,12 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class USkeletalMeshComponent*  InSkeletalMeshComponent        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UAnimMontage*            MontageToPlay                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PlayRate                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StartingPosition               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StartingSection                (Parm, ZeroConstructor, IsPlainOldData)
-// class UPlayMontageCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class USkeletalMeshComponent* InSkeletalMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UAnimMontage* MontageToPlay (Parm, ZeroConstructor, IsPlainOldData)
+// float PlayRate (Parm, ZeroConstructor, IsPlainOldData)
+// float StartingPosition (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName StartingSection (Parm, ZeroConstructor, IsPlainOldData)
+// class UPlayMontageCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, const struct FName& StartingSection)
 {

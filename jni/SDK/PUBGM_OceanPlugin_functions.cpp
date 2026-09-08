@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,10 +11,10 @@ namespace SDK
 // Function OceanPlugin.AdvancedBuoyancyComponent.TriangleArea
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 A                              (Parm, IsPlainOldData)
-// struct FVector                 B                              (Parm, IsPlainOldData)
-// struct FVector                 C                              (Parm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector A (Parm, IsPlainOldData)
+// struct FVector B (Parm, IsPlainOldData)
+// struct FVector C (Parm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAdvancedBuoyancyComponent::TriangleArea(const struct FVector& A, const struct FVector& B, const struct FVector& C)
 {
@@ -42,11 +42,11 @@ float UAdvancedBuoyancyComponent::TriangleArea(const struct FVector& A, const st
 // Function OceanPlugin.AdvancedBuoyancyComponent.SplitTriangle
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FBuoyancyVertex         H                              (Parm)
-// struct FBuoyancyVertex         M                              (Parm)
-// struct FBuoyancyVertex         L                              (Parm)
-// struct FVector                 InArrow                        (Parm, IsPlainOldData)
-// TArray<struct FForceTriangle>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBuoyancyVertex H (Parm)
+// struct FBuoyancyVertex M (Parm)
+// struct FBuoyancyVertex L (Parm)
+// struct FVector InArrow (Parm, IsPlainOldData)
+// TArray<struct FForceTriangle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FForceTriangle> UAdvancedBuoyancyComponent::SplitTriangle(const struct FBuoyancyVertex& H, const struct FBuoyancyVertex& M, const struct FBuoyancyVertex& L, const struct FVector& InArrow)
 {
@@ -75,8 +75,8 @@ TArray<struct FForceTriangle> UAdvancedBuoyancyComponent::SplitTriangle(const st
 // Function OceanPlugin.AdvancedBuoyancyComponent.SetMeshDensity
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewDensity                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          NewWaterDensity                (Parm, ZeroConstructor, IsPlainOldData)
+// float NewDensity (Parm, ZeroConstructor, IsPlainOldData)
+// float NewWaterDensity (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAdvancedBuoyancyComponent::SetMeshDensity(float NewDensity, float NewWaterDensity)
 {
@@ -101,9 +101,9 @@ void UAdvancedBuoyancyComponent::SetMeshDensity(float NewDensity, float NewWater
 // Function OceanPlugin.AdvancedBuoyancyComponent.GetOceanDepthFromGrid
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Position                       (Parm, IsPlainOldData)
-// bool                           bJustGetHeightAtLocation       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Position (Parm, IsPlainOldData)
+// bool bJustGetHeightAtLocation (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAdvancedBuoyancyComponent::GetOceanDepthFromGrid(const struct FVector& Position, bool bJustGetHeightAtLocation)
 {
@@ -151,8 +151,8 @@ void UAdvancedBuoyancyComponent::GetOcean()
 // Function OceanPlugin.AdvancedBuoyancyComponent.DrawDebugStuff
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FForceTriangle          TriForce                       (Parm)
-// struct FColor                  DebugColor                     (Parm, IsPlainOldData)
+// struct FForceTriangle TriForce (Parm)
+// struct FColor DebugColor (Parm, IsPlainOldData)
 
 void UAdvancedBuoyancyComponent::DrawDebugStuff(const struct FForceTriangle& TriForce, const struct FColor& DebugColor)
 {
@@ -177,8 +177,8 @@ void UAdvancedBuoyancyComponent::DrawDebugStuff(const struct FForceTriangle& Tri
 // Function OceanPlugin.AdvancedBuoyancyComponent.ApplySlamForce
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 SlamForce                      (Parm, IsPlainOldData)
-// struct FVector                 TriCenter                      (Parm, IsPlainOldData)
+// struct FVector SlamForce (Parm, IsPlainOldData)
+// struct FVector TriCenter (Parm, IsPlainOldData)
 
 void UAdvancedBuoyancyComponent::ApplySlamForce(const struct FVector& SlamForce, const struct FVector& TriCenter)
 {
@@ -203,7 +203,7 @@ void UAdvancedBuoyancyComponent::ApplySlamForce(const struct FVector& SlamForce,
 // Function OceanPlugin.AdvancedBuoyancyComponent.ApplyForce
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FForceTriangle          TriForce                       (Parm)
+// struct FForceTriangle TriForce (Parm)
 
 void UAdvancedBuoyancyComponent::ApplyForce(const struct FForceTriangle& TriForce)
 {
@@ -227,7 +227,7 @@ void UAdvancedBuoyancyComponent::ApplyForce(const struct FForceTriangle& TriForc
 // Function OceanPlugin.BuoyancyForceComponent.SetUpdatedComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         NewUpdatedComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USceneComponent* NewUpdatedComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBuoyancyForceComponent::SetUpdatedComponent(class USceneComponent* NewUpdatedComponent)
 {
@@ -251,7 +251,7 @@ void UBuoyancyForceComponent::SetUpdatedComponent(class USceneComponent* NewUpda
 // DelegateFunction OceanPlugin.BuoyancyForceComponent.OnEnterWaterDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// bool                           IsUnderWater                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsUnderWater (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuoyancyForceComponent::OnEnterWaterDelegate__DelegateSignature(bool IsUnderWater)
 {
@@ -274,7 +274,7 @@ void UBuoyancyForceComponent::OnEnterWaterDelegate__DelegateSignature(bool IsUnd
 // DelegateFunction OceanPlugin.BuoyancyForceComponent.OnContactWaterDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// bool                           IsContactingWater              (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsContactingWater (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuoyancyForceComponent::OnContactWaterDelegate__DelegateSignature(bool IsContactingWater)
 {
@@ -297,7 +297,7 @@ void UBuoyancyForceComponent::OnContactWaterDelegate__DelegateSignature(bool IsC
 // Function OceanPlugin.BuoyancyForceComponent.NativeSetEnableCustomWaveForce
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuoyancyForceComponent::NativeSetEnableCustomWaveForce(bool bEnable)
 {
@@ -321,7 +321,7 @@ void UBuoyancyForceComponent::NativeSetEnableCustomWaveForce(bool bEnable)
 // Function OceanPlugin.BuoyancyForceComponent.IsGerstnerWaveEnabled
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuoyancyForceComponent::IsGerstnerWaveEnabled()
 {
@@ -346,7 +346,7 @@ bool UBuoyancyForceComponent::IsGerstnerWaveEnabled()
 // Function OceanPlugin.BuoyancyForceComponent.IsFloatingOnWater
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuoyancyForceComponent::IsFloatingOnWater()
 {
@@ -371,7 +371,7 @@ bool UBuoyancyForceComponent::IsFloatingOnWater()
 // Function OceanPlugin.BuoyancyForceComponent.IsEntirelyUnderWater
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuoyancyForceComponent::IsEntirelyUnderWater()
 {
@@ -396,7 +396,7 @@ bool UBuoyancyForceComponent::IsEntirelyUnderWater()
 // Function OceanPlugin.BuoyancyForceComponent.IsContactedWater
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuoyancyForceComponent::IsContactedWater()
 {
@@ -421,7 +421,7 @@ bool UBuoyancyForceComponent::IsContactedWater()
 // Function OceanPlugin.BuoyancyForceComponent.GetSeaLevel
 // (Final, Native, Public)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBuoyancyForceComponent::GetSeaLevel()
 {
@@ -446,7 +446,7 @@ float UBuoyancyForceComponent::GetSeaLevel()
 // Function OceanPlugin.BuoyancyForceComponent.GetOceanManager
 // (Final, Native, Public)
 // Parameters:
-// class AOceanManager*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AOceanManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AOceanManager* UBuoyancyForceComponent::GetOceanManager()
 {
@@ -471,7 +471,7 @@ class AOceanManager* UBuoyancyForceComponent::GetOceanManager()
 // Function OceanPlugin.BuoyancyForceComponent.EndableUprightConstraint
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuoyancyForceComponent::EndableUprightConstraint(bool bEnable)
 {
@@ -495,9 +495,9 @@ void UBuoyancyForceComponent::EndableUprightConstraint(bool bEnable)
 // Function OceanPlugin.BuoyancyForceComponent.CheckPointInWater
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Point                          (Parm, IsPlainOldData)
-// bool                           isWorldPosition                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Point (Parm, IsPlainOldData)
+// bool isWorldPosition (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBuoyancyForceComponent::CheckPointInWater(const struct FVector& Point, bool isWorldPosition)
 {
@@ -545,10 +545,10 @@ void UBuoyancyForceComponent::CacheDampingProperties()
 // Function OceanPlugin.FlockFish.OnEndOverlap
 // (Final, Native, Protected)
 // Parameters:
-// class UPrimitiveComponent*     activatedComp                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* activatedComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int OtherBodyIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void AFlockFish::OnEndOverlap(class UPrimitiveComponent* activatedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
@@ -575,12 +575,12 @@ void AFlockFish::OnEndOverlap(class UPrimitiveComponent* activatedComp, class AA
 // Function OceanPlugin.FlockFish.OnBeginOverlap
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// class UPrimitiveComponent*     activatedComp                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPrimitiveComponent* activatedComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent* OtherComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int OtherBodyIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFromSweep (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult SweepResult (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void AFlockFish::OnBeginOverlap(class UPrimitiveComponent* activatedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -609,7 +609,7 @@ void AFlockFish::OnBeginOverlap(class UPrimitiveComponent* activatedComp, class 
 // Function OceanPlugin.OceanManager.LoadLandscapeHeightmap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTexture2D*              Tex2D                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UTexture2D* Tex2D (Parm, ZeroConstructor, IsPlainOldData)
 
 void AOceanManager::LoadLandscapeHeightmap(class UTexture2D* Tex2D)
 {
@@ -633,9 +633,9 @@ void AOceanManager::LoadLandscapeHeightmap(class UTexture2D* Tex2D)
 // Function OceanPlugin.OceanManager.GetHeightmapPixel
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          U                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          V                              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// float U (Parm, ZeroConstructor, IsPlainOldData)
+// float V (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor AOceanManager::GetHeightmapPixel(float U, float V)
 {
@@ -662,7 +662,7 @@ struct FLinearColor AOceanManager::GetHeightmapPixel(float U, float V)
 // Function OceanPlugin.SegmentOceanManager.RemoveBoxComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWaterBoxComponent*      InBoxComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWaterBoxComponent* InBoxComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void ASegmentOceanManager::RemoveBoxComponent(class UWaterBoxComponent* InBoxComponent)
 {
@@ -686,8 +686,8 @@ void ASegmentOceanManager::RemoveBoxComponent(class UWaterBoxComponent* InBoxCom
 // Function OceanPlugin.SegmentOceanManager.AddBoxComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWaterBoxComponent*      InBoxComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class USplineComponent*        InDirectionSpline              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UWaterBoxComponent* InBoxComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USplineComponent* InDirectionSpline (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void ASegmentOceanManager::AddBoxComponent(class UWaterBoxComponent* InBoxComponent, class USplineComponent* InDirectionSpline)
 {
@@ -712,7 +712,7 @@ void ASegmentOceanManager::AddBoxComponent(class UWaterBoxComponent* InBoxCompon
 // Function OceanPlugin.TimeManager.SetCurrentLocalTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
 
 void ATimeManager::SetCurrentLocalTime(float Time)
 {
@@ -736,8 +736,8 @@ void ATimeManager::SetCurrentLocalTime(float Time)
 // Function OceanPlugin.TimeManager.IsLeapYear
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Year                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Year (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ATimeManager::IsLeapYear(int Year)
 {
@@ -763,7 +763,7 @@ bool ATimeManager::IsLeapYear(int Year)
 // Function OceanPlugin.TimeManager.InitializeCalendar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FTimeDate               Time                           (Parm)
+// struct FTimeDate Time (Parm)
 
 void ATimeManager::InitializeCalendar(const struct FTimeDate& Time)
 {
@@ -787,7 +787,7 @@ void ATimeManager::InitializeCalendar(const struct FTimeDate& Time)
 // Function OceanPlugin.TimeManager.IncrementTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void ATimeManager::IncrementTime(float DeltaSeconds)
 {
@@ -811,7 +811,7 @@ void ATimeManager::IncrementTime(float DeltaSeconds)
 // Function OceanPlugin.TimeManager.GetYearPhase
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ATimeManager::GetYearPhase()
 {
@@ -836,7 +836,7 @@ float ATimeManager::GetYearPhase()
 // Function OceanPlugin.TimeManager.GetElapsedDayInMinutes
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ATimeManager::GetElapsedDayInMinutes()
 {
@@ -861,8 +861,8 @@ float ATimeManager::GetElapsedDayInMinutes()
 // Function OceanPlugin.TimeManager.GetDaysInYear
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Year                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Year (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ATimeManager::GetDaysInYear(int Year)
 {
@@ -888,9 +888,9 @@ int ATimeManager::GetDaysInYear(int Year)
 // Function OceanPlugin.TimeManager.GetDaysInMonth
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Year                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Month                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Year (Parm, ZeroConstructor, IsPlainOldData)
+// int Month (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ATimeManager::GetDaysInMonth(int Year, int Month)
 {
@@ -917,7 +917,7 @@ int ATimeManager::GetDaysInMonth(int Year, int Month)
 // Function OceanPlugin.TimeManager.GetDayPhase
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ATimeManager::GetDayPhase()
 {
@@ -942,8 +942,8 @@ float ATimeManager::GetDayPhase()
 // Function OceanPlugin.TimeManager.GetDayOfYear
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FTimeDate               Time                           (Parm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTimeDate Time (Parm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ATimeManager::GetDayOfYear(const struct FTimeDate& Time)
 {
@@ -969,7 +969,7 @@ int ATimeManager::GetDayOfYear(const struct FTimeDate& Time)
 // Function OceanPlugin.TimeManager.CalculateSunAngle
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator ATimeManager::CalculateSunAngle()
 {
@@ -994,7 +994,7 @@ struct FRotator ATimeManager::CalculateSunAngle()
 // Function OceanPlugin.TimeManager.CalculateMoonPhase
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float ATimeManager::CalculateMoonPhase()
 {
@@ -1019,7 +1019,7 @@ float ATimeManager::CalculateMoonPhase()
 // Function OceanPlugin.TimeManager.CalculateMoonAngle
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator ATimeManager::CalculateMoonAngle()
 {

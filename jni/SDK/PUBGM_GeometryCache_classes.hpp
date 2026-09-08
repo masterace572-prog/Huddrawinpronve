@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class UGeometryCache : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TArray<class UMaterialInterface*>                  Materials;                                                // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
-	TArray<class UGeometryCacheTrack*>                 Tracks;                                                   // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0050(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	TArray<class UMaterialInterface*> Materials; // 0x0030(0x0010) (Edit, ZeroConstructor, EditConst)
+	TArray<class UGeometryCacheTrack*> Tracks; // 0x0040(0x0010) (Edit, ZeroConstructor, EditConst)
+	unsigned char UnknownData01[0x18]; // 0x0050(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCache");
@@ -34,10 +33,9 @@ public:
 class AGeometryCacheActor : public AActor
 {
 public:
-	class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UGeometryCacheComponent* GeometryCacheComponent; // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheActor");
@@ -50,21 +48,20 @@ public:
 
 
 // Class GeometryCache.GeometryCacheComponent
-// 0x0070 (0x09F0 - 0x0980)
+// 0x0070 (0x0A10 - 0x09A0)
 class UGeometryCacheComponent : public UMeshComponent
 {
 public:
-	bool                                               bRunning;                                                 // 0x0980(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x0981(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0982(0x0002) MISSED OFFSET
-	float                                              StartTimeOffset;                                          // 0x0984(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PlaybackSpeed;                                            // 0x0988(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                NumTracks;                                                // 0x098C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              ElapsedTime;                                              // 0x0990(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5C];                                      // 0x0994(0x005C) MISSED OFFSET
+	bool bRunning; // 0x09A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bLooping; // 0x09A1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x09A2(0x0002) MISSED OFFSET
+	float StartTimeOffset; // 0x09A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float PlaybackSpeed; // 0x09A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int NumTracks; // 0x09AC(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float ElapsedTime; // 0x09B0(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData01[0x5C]; // 0x09B4(0x005C) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheComponent");
@@ -95,10 +92,9 @@ public:
 class UGeometryCacheTrack : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	unsigned char UnknownData00[0x28]; // 0x0028(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheTrack");
@@ -113,10 +109,9 @@ public:
 class UGeometryCacheTrack_FlipbookAnimation : public UGeometryCacheTrack
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0050(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0050(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_FlipbookAnimation");
@@ -133,10 +128,9 @@ public:
 class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0050(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x0050(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformAnimation");
@@ -153,10 +147,9 @@ public:
 class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0050(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x50]; // 0x0050(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation");

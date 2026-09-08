@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function ReAutomatic.AutomaticCommonHelper.IsClassOf
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Object                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  Class                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Object (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* Class (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutomaticCommonHelper::IsClassOf(class UObject* Object, class UClass* Class)
 {
@@ -40,7 +40,7 @@ bool UAutomaticCommonHelper::IsClassOf(class UObject* Object, class UClass* Clas
 // Function ReAutomatic.AutomaticPlatformHelper.GetDeviceName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutomaticPlatformHelper::GetDeviceName()
 {
@@ -65,9 +65,9 @@ struct FString UAutomaticPlatformHelper::GetDeviceName()
 // Function ReAutomatic.AutomaticUIHelper.IsWidgetVisibleWithUICondition
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// struct FFindUICondition        Condition                      (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FFindUICondition Condition (ConstParm, Parm, OutParm, ReferenceParm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutomaticUIHelper::IsWidgetVisibleWithUICondition(const struct FFindUICondition& Condition, int Index)
 {
@@ -94,8 +94,8 @@ bool UAutomaticUIHelper::IsWidgetVisibleWithUICondition(const struct FFindUICond
 // Function ReAutomatic.AutomaticUIHelper.IsWidgetVisible
 // (Final, Native, Static, Public)
 // Parameters:
-// class UWidget*                 Widget                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* Widget (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutomaticUIHelper::IsWidgetVisible(class UWidget* Widget)
 {
@@ -121,9 +121,9 @@ bool UAutomaticUIHelper::IsWidgetVisible(class UWidget* Widget)
 // Function ReAutomatic.AutomaticUIHelper.IsWidgetTextMatchRegex
 // (Final, Native, Static, Public)
 // Parameters:
-// class UWidget*                 Widget                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 Text                           (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* Widget (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString Text (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutomaticUIHelper::IsWidgetTextMatchRegex(class UWidget* Widget, const struct FString& Text)
 {
@@ -150,9 +150,9 @@ bool UAutomaticUIHelper::IsWidgetTextMatchRegex(class UWidget* Widget, const str
 // Function ReAutomatic.AutomaticUIHelper.IsWidgetMatchType
 // (Final, Native, Static, Public)
 // Parameters:
-// class UWidget*                 Widget                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// EUIType                        Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWidget* Widget (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// EUIType Type (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutomaticUIHelper::IsWidgetMatchType(class UWidget* Widget, EUIType Type)
 {
@@ -179,9 +179,9 @@ bool UAutomaticUIHelper::IsWidgetMatchType(class UWidget* Widget, EUIType Type)
 // Function ReAutomatic.AutomaticUIHelper.FindWidgetObjectWithUICondition
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// struct FFindUICondition        Condition                      (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FFindUICondition Condition (ConstParm, Parm, OutParm, ReferenceParm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UWidget* UAutomaticUIHelper::FindWidgetObjectWithUICondition(const struct FFindUICondition& Condition, int Index)
 {
@@ -208,9 +208,9 @@ class UWidget* UAutomaticUIHelper::FindWidgetObjectWithUICondition(const struct 
 // Function ReAutomatic.AutomaticUIHelper.FindUWidgetObject
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UWidget*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// class UWidget* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UWidget* UAutomaticUIHelper::FindUWidgetObject(const struct FString& Name, int Index)
 {

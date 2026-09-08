@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void AAkAcousticPortal::OpenPortal()
 // Function AkAudio.AkAcousticPortal.GetCurrentState
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// EAkAcousticPortalState         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EAkAcousticPortalState ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 EAkAcousticPortalState AAkAcousticPortal::GetCurrentState()
 {
@@ -120,8 +120,8 @@ void AAkAmbientSound::StartAmbientSound()
 // Function AkAudio.AkAreaCheckComponent.UnRegistAKAreaVolume
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  AreaVolume                     (Parm, ZeroConstructor, IsPlainOldData)
-// ECustomAKAreaType              AreaType                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* AreaVolume (Parm, ZeroConstructor, IsPlainOldData)
+// ECustomAKAreaType AreaType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAreaCheckComponent::UnRegistAKAreaVolume(class AActor* AreaVolume, ECustomAKAreaType AreaType)
 {
@@ -146,8 +146,8 @@ void UAkAreaCheckComponent::UnRegistAKAreaVolume(class AActor* AreaVolume, ECust
 // Function AkAudio.AkAreaCheckComponent.RegistAKAreaVolume
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  AreaVolume                     (Parm, ZeroConstructor, IsPlainOldData)
-// ECustomAKAreaType              AreaType                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* AreaVolume (Parm, ZeroConstructor, IsPlainOldData)
+// ECustomAKAreaType AreaType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAreaCheckComponent::RegistAKAreaVolume(class AActor* AreaVolume, ECustomAKAreaType AreaType)
 {
@@ -172,8 +172,8 @@ void UAkAreaCheckComponent::RegistAKAreaVolume(class AActor* AreaVolume, ECustom
 // Function AkAudio.AkAreaCheckComponent.CheckVoiceAvailable
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 VoicePostion                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector VoicePostion (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkAreaCheckComponent::CheckVoiceAvailable(const struct FVector& VoicePostion)
 {
@@ -199,8 +199,8 @@ bool UAkAreaCheckComponent::CheckVoiceAvailable(const struct FVector& VoicePosti
 // Function AkAudio.AkAreaCheckVolume.IsInsideVolume
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 OrignPosition                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector OrignPosition (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AAkAreaCheckVolume::IsInsideVolume(const struct FVector& OrignPosition)
 {
@@ -226,7 +226,7 @@ bool AAkAreaCheckVolume::IsInsideVolume(const struct FVector& OrignPosition)
 // Function AkAudio.AkAreaCheckVolume.GetAKAreaType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ECustomAKAreaType              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ECustomAKAreaType ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ECustomAKAreaType AAkAreaCheckVolume::GetAKAreaType()
 {
@@ -272,7 +272,7 @@ void UAkAudioDeviceSettings::InitConfig()
 // Function AkAudio.AkAudioMonitor.UpdateAkComponentInfo
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TMap<struct FString, struct FAkCombinedInfo> OutList                        (Parm, OutParm, ZeroConstructor)
+// TMap<struct FString, struct FAkCombinedInfo> OutList (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitor::UpdateAkComponentInfo(TMap<struct FString, struct FAkCombinedInfo>* OutList)
 {
@@ -298,7 +298,7 @@ void UAkAudioMonitor::UpdateAkComponentInfo(TMap<struct FString, struct FAkCombi
 // Function AkAudio.AkAudioMonitor.Update
 // (Final, Native, Static, Public)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitor::Update(float DeltaTime)
 {
@@ -322,7 +322,7 @@ void UAkAudioMonitor::Update(float DeltaTime)
 // Function AkAudio.AkAudioMonitor.SetUpdateInterval
 // (Final, Native, Static, Public)
 // Parameters:
-// float                          NewUpdateInterval              (Parm, ZeroConstructor, IsPlainOldData)
+// float NewUpdateInterval (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitor::SetUpdateInterval(float NewUpdateInterval)
 {
@@ -346,9 +346,9 @@ void UAkAudioMonitor::SetUpdateInterval(float NewUpdateInterval)
 // Function AkAudio.AkAudioMonitor.SetMonitorFlag
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InFlags                        (Parm, OutParm, ZeroConstructor)
-// unsigned char                  TotalPlayCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  ObjectPlayCount                (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> InFlags (Parm, OutParm, ZeroConstructor)
+// unsigned char TotalPlayCount (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char ObjectPlayCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitor::SetMonitorFlag(unsigned char TotalPlayCount, unsigned char ObjectPlayCount, TArray<unsigned char>* InFlags)
 {
@@ -376,10 +376,10 @@ void UAkAudioMonitor::SetMonitorFlag(unsigned char TotalPlayCount, unsigned char
 // Function AkAudio.AkAudioMonitor.OnReportError
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 FunctionName                   (ConstParm, Parm, ZeroConstructor)
-// unsigned char                  ErrorAkCode                    (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       NumericParam                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 StrParam                       (Parm, ZeroConstructor)
+// struct FString FunctionName (ConstParm, Parm, ZeroConstructor)
+// unsigned char ErrorAkCode (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t NumericParam (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString StrParam (Parm, ZeroConstructor)
 
 void UAkAudioMonitor::OnReportError(const struct FString& FunctionName, unsigned char ErrorAkCode, uint64_t NumericParam, const struct FString& StrParam)
 {
@@ -406,8 +406,8 @@ void UAkAudioMonitor::OnReportError(const struct FString& FunctionName, unsigned
 // Function AkAudio.AkAudioMonitor.OnAkAudioEventTrigger
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// int                            code                           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// int code (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitor::OnAkAudioEventTrigger(const struct FString& Name, int code)
 {
@@ -432,9 +432,9 @@ void UAkAudioMonitor::OnAkAudioEventTrigger(const struct FString& Name, int code
 // Function AkAudio.AkAudioMonitor.OnAkAudioBankTrigger
 // (Final, Native, Static, Public)
 // Parameters:
-// bool                           bUnload                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BankName                       (Parm, ZeroConstructor)
-// int8_t                         RefCount                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUnload (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BankName (Parm, ZeroConstructor)
+// int8_t RefCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitor::OnAkAudioBankTrigger(bool bUnload, const struct FString& BankName, int8_t RefCount)
 {
@@ -460,7 +460,7 @@ void UAkAudioMonitor::OnAkAudioBankTrigger(bool bUnload, const struct FString& B
 // Function AkAudio.AkAudioMonitor.IsMonitorInit
 // (Final, Native, Static, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkAudioMonitor::IsMonitorInit()
 {
@@ -485,9 +485,9 @@ bool UAkAudioMonitor::IsMonitorInit()
 // Function AkAudio.AkAudioMonitor.IsAkOutOfAttenuation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            AkComp                         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          Attenuation                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkComponent* AkComp (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float Attenuation (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkAudioMonitor::IsAkOutOfAttenuation(class UAkComponent* AkComp, float Attenuation)
 {
@@ -535,7 +535,7 @@ void UAkAudioMonitor::InitMonitorDataPtr()
 // Function AkAudio.AkAudioMonitor.GetTotalPlayRecord
 // (Final, Native, Static, Public)
 // Parameters:
-// TArray<uint16_t>               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<uint16_t> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<uint16_t> UAkAudioMonitor::GetTotalPlayRecord()
 {
@@ -560,9 +560,9 @@ TArray<uint16_t> UAkAudioMonitor::GetTotalPlayRecord()
 // Function AkAudio.AkAudioMonitor.GetSwitchValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 SwitchName                     (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString SwitchName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAkAudioMonitor::GetSwitchValue(class UAkComponent* Component, const struct FString& SwitchName)
 {
@@ -589,8 +589,8 @@ struct FString UAkAudioMonitor::GetSwitchValue(class UAkComponent* Component, co
 // Function AkAudio.AkAudioMonitor.GetSwitchNames
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UAkAudioMonitor::GetSwitchNames(class UAkComponent* Component)
 {
@@ -616,9 +616,9 @@ TArray<struct FString> UAkAudioMonitor::GetSwitchNames(class UAkComponent* Compo
 // Function AkAudio.AkAudioMonitor.GetRTPCValueByID
 // (Final, Native, Static, Public)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// uint32_t                       RTPCID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// uint32_t RTPCID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAkAudioMonitor::GetRTPCValueByID(class UAkComponent* Component, uint32_t RTPCID)
 {
@@ -645,9 +645,9 @@ float UAkAudioMonitor::GetRTPCValueByID(class UAkComponent* Component, uint32_t 
 // Function AkAudio.AkAudioMonitor.GetRTPCValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 RTPCName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString RTPCName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAkAudioMonitor::GetRTPCValue(class UAkComponent* Component, const struct FString& RTPCName)
 {
@@ -674,8 +674,8 @@ float UAkAudioMonitor::GetRTPCValue(class UAkComponent* Component, const struct 
 // Function AkAudio.AkAudioMonitor.GetRTPCNames
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UAkAudioMonitor::GetRTPCNames(class UAkComponent* Component)
 {
@@ -701,8 +701,8 @@ TArray<struct FString> UAkAudioMonitor::GetRTPCNames(class UAkComponent* Compone
 // Function AkAudio.AkAudioMonitor.GetRTPCIDs
 // (Final, Native, Static, Public)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TArray<uint32_t>               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<uint32_t> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<uint32_t> UAkAudioMonitor::GetRTPCIDs(class UAkComponent* Component)
 {
@@ -728,7 +728,7 @@ TArray<uint32_t> UAkAudioMonitor::GetRTPCIDs(class UAkComponent* Component)
 // Function AkAudio.AkAudioMonitor.GetReportErrorRecord
 // (Final, Native, Static, Public)
 // Parameters:
-// TMap<unsigned char, struct FAKErrorInfo> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<unsigned char, struct FAKErrorInfo> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<unsigned char, struct FAKErrorInfo> UAkAudioMonitor::GetReportErrorRecord()
 {
@@ -753,8 +753,8 @@ TMap<unsigned char, struct FAKErrorInfo> UAkAudioMonitor::GetReportErrorRecord()
 // Function AkAudio.AkAudioMonitor.GetPostion
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAkAudioMonitor::GetPostion(class UAkComponent* Component)
 {
@@ -780,8 +780,8 @@ struct FVector UAkAudioMonitor::GetPostion(class UAkComponent* Component)
 // Function AkAudio.AkAudioMonitor.GetPlayingID
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UAkAudioMonitor::GetPlayingID(class UAkComponent* Component)
 {
@@ -807,9 +807,9 @@ TArray<int> UAkAudioMonitor::GetPlayingID(class UAkComponent* Component)
 // Function AkAudio.AkAudioMonitor.GetPlayEventName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkComponent*            Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            PlayID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UAkComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int PlayID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAkAudioMonitor::GetPlayEventName(class UAkComponent* Component, int PlayID)
 {
@@ -836,7 +836,7 @@ struct FString UAkAudioMonitor::GetPlayEventName(class UAkComponent* Component, 
 // Function AkAudio.AkAudioMonitor.GetObjectPlayRecord
 // (Final, Native, Static, Public)
 // Parameters:
-// TMap<struct FString, unsigned char> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, unsigned char> UAkAudioMonitor::GetObjectPlayRecord()
 {
@@ -861,8 +861,8 @@ TMap<struct FString, unsigned char> UAkAudioMonitor::GetObjectPlayRecord()
 // Function AkAudio.AkAudioMonitor.GetObjectNameByObjectID
 // (Final, Native, Static, Public)
 // Parameters:
-// uint64_t                       ObjectID                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// uint64_t ObjectID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAkAudioMonitor::GetObjectNameByObjectID(uint64_t ObjectID)
 {
@@ -888,7 +888,7 @@ struct FString UAkAudioMonitor::GetObjectNameByObjectID(uint64_t ObjectID)
 // Function AkAudio.AkAudioMonitor.GetMonitorDataPtr
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioMonitorData*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioMonitorData* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAkAudioMonitorData* UAkAudioMonitor::GetMonitorDataPtr()
 {
@@ -913,8 +913,8 @@ class UAkAudioMonitorData* UAkAudioMonitor::GetMonitorDataPtr()
 // Function AkAudio.AkAudioMonitor.GetGlobalSwitchValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SwitchName                     (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString SwitchName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAkAudioMonitor::GetGlobalSwitchValue(const struct FString& SwitchName)
 {
@@ -940,7 +940,7 @@ struct FString UAkAudioMonitor::GetGlobalSwitchValue(const struct FString& Switc
 // Function AkAudio.AkAudioMonitor.GetGlobalSwitchNames
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UAkAudioMonitor::GetGlobalSwitchNames()
 {
@@ -965,8 +965,8 @@ TArray<struct FString> UAkAudioMonitor::GetGlobalSwitchNames()
 // Function AkAudio.AkAudioMonitor.GetGlobalRTPCValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 RTPCName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString RTPCName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAkAudioMonitor::GetGlobalRTPCValue(const struct FString& RTPCName)
 {
@@ -992,7 +992,7 @@ float UAkAudioMonitor::GetGlobalRTPCValue(const struct FString& RTPCName)
 // Function AkAudio.AkAudioMonitor.GetGlobalRTPCNames
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UAkAudioMonitor::GetGlobalRTPCNames()
 {
@@ -1017,7 +1017,7 @@ TArray<struct FString> UAkAudioMonitor::GetGlobalRTPCNames()
 // Function AkAudio.AkAudioMonitor.GetEventList
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TArray<struct FString>         OutRes                         (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> OutRes (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitor::GetEventList(TArray<struct FString>* OutRes)
 {
@@ -1043,9 +1043,9 @@ void UAkAudioMonitor::GetEventList(TArray<struct FString>* OutRes)
 // Function AkAudio.AkAudioMonitor.GetEventInMemoryByName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<class UAkAudioEvent*>   AllAk                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 AkName                         (Parm, ZeroConstructor)
-// class UAkAudioEvent*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<class UAkAudioEvent*> AllAk (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString AkName (Parm, ZeroConstructor)
+// class UAkAudioEvent* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAkAudioEvent* UAkAudioMonitor::GetEventInMemoryByName(TArray<class UAkAudioEvent*> AllAk, const struct FString& AkName)
 {
@@ -1072,7 +1072,7 @@ class UAkAudioEvent* UAkAudioMonitor::GetEventInMemoryByName(TArray<class UAkAud
 // Function AkAudio.AkAudioMonitor.GetDetailErrorCodeRecord
 // (Final, Native, Static, Public)
 // Parameters:
-// TMap<uint32_t, struct FAKErrorInfo> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<uint32_t, struct FAKErrorInfo> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<uint32_t, struct FAKErrorInfo> UAkAudioMonitor::GetDetailErrorCodeRecord()
 {
@@ -1097,7 +1097,7 @@ TMap<uint32_t, struct FAKErrorInfo> UAkAudioMonitor::GetDetailErrorCodeRecord()
 // Function AkAudio.AkAudioMonitor.GetBankRefList
 // (Final, Native, Static, Public, HasOutParms)
 // Parameters:
-// TMap<struct FString, int8_t>   OutRes                         (Parm, OutParm, ZeroConstructor)
+// TMap<struct FString, int8_t> OutRes (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitor::GetBankRefList(TMap<struct FString, int8_t>* OutRes)
 {
@@ -1123,8 +1123,8 @@ void UAkAudioMonitor::GetBankRefList(TMap<struct FString, int8_t>* OutRes)
 // Function AkAudio.AkAudioMonitor.GetAllEventNameInMemory
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContent                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContent (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FName> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FName> UAkAudioMonitor::GetAllEventNameInMemory(class UObject* WorldContent)
 {
@@ -1150,8 +1150,8 @@ TArray<struct FName> UAkAudioMonitor::GetAllEventNameInMemory(class UObject* Wor
 // Function AkAudio.AkAudioMonitor.GetAllEventInMemory
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContent                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UAkAudioEvent*>   AllAk                          (Parm, OutParm, ZeroConstructor)
+// class UObject* WorldContent (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UAkAudioEvent*> AllAk (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitor::GetAllEventInMemory(class UObject* WorldContent, TArray<class UAkAudioEvent*>* AllAk)
 {
@@ -1178,8 +1178,8 @@ void UAkAudioMonitor::GetAllEventInMemory(class UObject* WorldContent, TArray<cl
 // Function AkAudio.AkAudioMonitor.GetAllAkComponentFormDevice
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<class UAkComponent*>    AkList                         (Parm, OutParm, ZeroConstructor)
-// TArray<class UAkComponent*>    recycledAkList                 (Parm, OutParm, ZeroConstructor)
+// TArray<class UAkComponent*> AkList (Parm, OutParm, ZeroConstructor)
+// TArray<class UAkComponent*> recycledAkList (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitor::GetAllAkComponentFormDevice(TArray<class UAkComponent*>* AkList, TArray<class UAkComponent*>* recycledAkList)
 {
@@ -1207,7 +1207,7 @@ void UAkAudioMonitor::GetAllAkComponentFormDevice(TArray<class UAkComponent*>* A
 // Function AkAudio.AkAudioMonitor.GetActiveObjCount
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkAudioMonitor::GetActiveObjCount()
 {
@@ -1232,7 +1232,7 @@ int UAkAudioMonitor::GetActiveObjCount()
 // Function AkAudio.AkAudioMonitor.GetActiveEventCount
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkAudioMonitor::GetActiveEventCount()
 {
@@ -1257,7 +1257,7 @@ int UAkAudioMonitor::GetActiveEventCount()
 // Function AkAudio.AkAudioMonitor.GetActiveBankCount
 // (Final, Native, Static, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkAudioMonitor::GetActiveBankCount()
 {
@@ -1282,8 +1282,8 @@ int UAkAudioMonitor::GetActiveBankCount()
 // Function AkAudio.AkAudioMonitorData.UpdateEventList
 // (Final, Native, Public)
 // Parameters:
-// bool                           bStop                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 InEventName                    (Parm, ZeroConstructor)
+// bool bStop (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InEventName (Parm, ZeroConstructor)
 
 void UAkAudioMonitorData::UpdateEventList(bool bStop, const struct FString& InEventName)
 {
@@ -1308,9 +1308,9 @@ void UAkAudioMonitorData::UpdateEventList(bool bStop, const struct FString& InEv
 // Function AkAudio.AkAudioMonitorData.UpdateBankRefList
 // (Final, Native, Public)
 // Parameters:
-// bool                           bUnload                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BankName                       (Parm, ZeroConstructor)
-// int8_t                         RefCount                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUnload (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BankName (Parm, ZeroConstructor)
+// int8_t RefCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitorData::UpdateBankRefList(bool bUnload, const struct FString& BankName, int8_t RefCount)
 {
@@ -1336,7 +1336,7 @@ void UAkAudioMonitorData::UpdateBankRefList(bool bUnload, const struct FString& 
 // Function AkAudio.AkAudioMonitorData.UpdateAkComponentInfo
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TMap<struct FString, struct FAkCombinedInfo> OutList                        (Parm, OutParm, ZeroConstructor)
+// TMap<struct FString, struct FAkCombinedInfo> OutList (Parm, OutParm, ZeroConstructor)
 
 void UAkAudioMonitorData::UpdateAkComponentInfo(TMap<struct FString, struct FAkCombinedInfo>* OutList)
 {
@@ -1362,9 +1362,9 @@ void UAkAudioMonitorData::UpdateAkComponentInfo(TMap<struct FString, struct FAkC
 // Function AkAudio.AkAudioMonitorData.SetMonitorFlagInternal
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TArray<unsigned char>          InFlags                        (Parm, OutParm, ZeroConstructor)
-// unsigned char                  TotalPlayCount                 (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  ObjectPlayCount                (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> InFlags (Parm, OutParm, ZeroConstructor)
+// unsigned char TotalPlayCount (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char ObjectPlayCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkAudioMonitorData::SetMonitorFlagInternal(unsigned char TotalPlayCount, unsigned char ObjectPlayCount, TArray<unsigned char>* InFlags)
 {
@@ -1392,10 +1392,10 @@ void UAkAudioMonitorData::SetMonitorFlagInternal(unsigned char TotalPlayCount, u
 // Function AkAudio.AkAudioMonitorData.OnReportErrorInternal
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 FunctionName                   (ConstParm, Parm, ZeroConstructor)
-// unsigned char                  ErrorAkCode                    (Parm, ZeroConstructor, IsPlainOldData)
-// uint64_t                       NumericParam                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 StrParam                       (Parm, ZeroConstructor)
+// struct FString FunctionName (ConstParm, Parm, ZeroConstructor)
+// unsigned char ErrorAkCode (Parm, ZeroConstructor, IsPlainOldData)
+// uint64_t NumericParam (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString StrParam (Parm, ZeroConstructor)
 
 void UAkAudioMonitorData::OnReportErrorInternal(const struct FString& FunctionName, unsigned char ErrorAkCode, uint64_t NumericParam, const struct FString& StrParam)
 {
@@ -1485,7 +1485,7 @@ void UAkAudioVisualComponent::ResetOfflineTime()
 // Function AkAudio.AkAudioVisualComponent.OnTickVisualInfo
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<float>                  VisualInfo                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> VisualInfo (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAkAudioVisualComponent::OnTickVisualInfo(TArray<float> VisualInfo)
 {
@@ -1508,7 +1508,7 @@ void UAkAudioVisualComponent::OnTickVisualInfo(TArray<float> VisualInfo)
 // Function AkAudio.AkAudioVisualComponent.OnTickOfflineVisualInfo
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FAudioOfflineVisualBeatData VisualInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FAudioOfflineVisualBeatData VisualInfo (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UAkAudioVisualComponent::OnTickOfflineVisualInfo(const struct FAudioOfflineVisualBeatData& VisualInfo)
 {
@@ -1531,7 +1531,7 @@ void UAkAudioVisualComponent::OnTickOfflineVisualInfo(const struct FAudioOffline
 // Function AkAudio.AkAudioVisualComponent.InitOfflineDataWithBeatTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<float>                  Datas                          (Parm, ZeroConstructor)
+// TArray<float> Datas (Parm, ZeroConstructor)
 
 void UAkAudioVisualComponent::InitOfflineDataWithBeatTime(TArray<float> Datas)
 {
@@ -1555,7 +1555,7 @@ void UAkAudioVisualComponent::InitOfflineDataWithBeatTime(TArray<float> Datas)
 // Function AkAudio.AkAudioVisualComponent.InitOfflineData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FAudioOfflineVisualBeatData> Datas                          (Parm, ZeroConstructor)
+// TArray<struct FAudioOfflineVisualBeatData> Datas (Parm, ZeroConstructor)
 
 void UAkAudioVisualComponent::InitOfflineData(TArray<struct FAudioOfflineVisualBeatData> Datas)
 {
@@ -1579,8 +1579,8 @@ void UAkAudioVisualComponent::InitOfflineData(TArray<struct FAudioOfflineVisualB
 // Function AkAudio.AkAudioVisualComponent.GetCurrentBeat
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FAudioOfflineVisualBeatData Result                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAudioOfflineVisualBeatData Result (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkAudioVisualComponent::GetCurrentBeat(struct FAudioOfflineVisualBeatData* Result)
 {
@@ -1608,7 +1608,7 @@ bool UAkAudioVisualComponent::GetCurrentBeat(struct FAudioOfflineVisualBeatData*
 // Function AkAudio.AkComponent.UseReverbVolumes
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           inUseReverbVolumes             (Parm, ZeroConstructor, IsPlainOldData)
+// bool inUseReverbVolumes (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::UseReverbVolumes(bool inUseReverbVolumes)
 {
@@ -1632,15 +1632,15 @@ void UAkComponent::UseReverbVolumes(bool inUseReverbVolumes)
 // Function AkAudio.AkComponent.UseEarlyReflections
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAkAuxBus*               AuxBus                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Left                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Right                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           floor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ceiling                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Back                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Front                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           SpotReflectors                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AuxBusName                     (Parm, ZeroConstructor)
+// class UAkAuxBus* AuxBus (Parm, ZeroConstructor, IsPlainOldData)
+// bool Left (Parm, ZeroConstructor, IsPlainOldData)
+// bool Right (Parm, ZeroConstructor, IsPlainOldData)
+// bool floor (Parm, ZeroConstructor, IsPlainOldData)
+// bool Ceiling (Parm, ZeroConstructor, IsPlainOldData)
+// bool Back (Parm, ZeroConstructor, IsPlainOldData)
+// bool Front (Parm, ZeroConstructor, IsPlainOldData)
+// bool SpotReflectors (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AuxBusName (Parm, ZeroConstructor)
 
 void UAkComponent::UseEarlyReflections(class UAkAuxBus* AuxBus, bool Left, bool Right, bool floor, bool Ceiling, bool Back, bool Front, bool SpotReflectors, const struct FString& AuxBusName)
 {
@@ -1669,10 +1669,31 @@ void UAkComponent::UseEarlyReflections(class UAkAuxBus* AuxBus, bool Left, bool 
 }
 
 
+// Function AkAudio.AkComponent.UpdateGameObjectPosition
+// (Final, Native, Public)
+
+void UAkComponent::UpdateGameObjectPosition()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.UpdateGameObjectPosition");
+
+	UAkComponent_UpdateGameObjectPosition_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function AkAudio.AkComponent.TriggerEventWithRangedEmitter
 // (Final, Native, Public)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::TriggerEventWithRangedEmitter(bool bEnable)
 {
@@ -1696,7 +1717,7 @@ void UAkComponent::TriggerEventWithRangedEmitter(bool bEnable)
 // Function AkAudio.AkComponent.StopPlayingID
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            StopEventID                    (Parm, ZeroConstructor, IsPlainOldData)
+// int StopEventID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::StopPlayingID(int StopEventID)
 {
@@ -1762,9 +1783,9 @@ void UAkComponent::Stop()
 // Function AkAudio.AkComponent.SetSwitch
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SwitchGroup                    (Parm, ZeroConstructor)
-// struct FString                 SwitchState                    (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString SwitchGroup (Parm, ZeroConstructor)
+// struct FString SwitchState (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkComponent::SetSwitch(const struct FString& SwitchGroup, const struct FString& SwitchState)
 {
@@ -1791,7 +1812,7 @@ int UAkComponent::SetSwitch(const struct FString& SwitchGroup, const struct FStr
 // Function AkAudio.AkComponent.SetStopWhenOwnerDestroyed
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bStopWhenOwnerDestroyed        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenOwnerDestroyed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetStopWhenOwnerDestroyed(bool bStopWhenOwnerDestroyed)
 {
@@ -1815,8 +1836,8 @@ void UAkComponent::SetStopWhenOwnerDestroyed(bool bStopWhenOwnerDestroyed)
 // Function AkAudio.AkComponent.SetRTPCValueGlobally
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 RTPC                           (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString RTPC (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetRTPCValueGlobally(const struct FString& RTPC, float Value)
 {
@@ -1841,9 +1862,9 @@ void UAkComponent::SetRTPCValueGlobally(const struct FString& RTPC, float Value)
 // Function AkAudio.AkComponent.SetRTPCValue
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 RTPC                           (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InterpolationTimeMs            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString RTPC (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// int InterpolationTimeMs (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetRTPCValue(const struct FString& RTPC, float Value, int InterpolationTimeMs)
 {
@@ -1869,7 +1890,7 @@ void UAkComponent::SetRTPCValue(const struct FString& RTPC, float Value, int Int
 // Function AkAudio.AkComponent.SetOutputBusVolume
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          BusVolume                      (Parm, ZeroConstructor, IsPlainOldData)
+// float BusVolume (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetOutputBusVolume(float BusVolume)
 {
@@ -1893,7 +1914,7 @@ void UAkComponent::SetOutputBusVolume(float BusVolume)
 // Function AkAudio.AkComponent.SetListeners
 // (Final, BlueprintCosmetic, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<class UAkComponent*>    Listeners                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UAkComponent*> Listeners (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAkComponent::SetListeners(TArray<class UAkComponent*> Listeners)
 {
@@ -1917,7 +1938,7 @@ void UAkComponent::SetListeners(TArray<class UAkComponent*> Listeners)
 // Function AkAudio.AkComponent.SetEarlyReflectionOrder
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewEarlyReflectionOrder        (Parm, ZeroConstructor, IsPlainOldData)
+// int NewEarlyReflectionOrder (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetEarlyReflectionOrder(int NewEarlyReflectionOrder)
 {
@@ -1941,7 +1962,7 @@ void UAkComponent::SetEarlyReflectionOrder(int NewEarlyReflectionOrder)
 // Function AkAudio.AkComponent.SetAutoDestroy
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           in_AutoDestroy                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool in_AutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetAutoDestroy(bool in_AutoDestroy)
 {
@@ -1965,7 +1986,7 @@ void UAkComponent::SetAutoDestroy(bool in_AutoDestroy)
 // Function AkAudio.AkComponent.SetAttenuationScalingFactor
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::SetAttenuationScalingFactor(float Value)
 {
@@ -1989,9 +2010,9 @@ void UAkComponent::SetAttenuationScalingFactor(float Value)
 // Function AkAudio.AkComponent.SeekOnEvent
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 in_EventName                   (Parm, ZeroConstructor)
-// int                            in_iPosition                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString in_EventName (Parm, ZeroConstructor)
+// int in_iPosition (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkComponent::SeekOnEvent(const struct FString& in_EventName, int in_iPosition)
 {
@@ -2018,7 +2039,7 @@ int UAkComponent::SeekOnEvent(const struct FString& in_EventName, int in_iPositi
 // Function AkAudio.AkComponent.PostTrigger
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Trigger                        (Parm, ZeroConstructor)
+// struct FString Trigger (Parm, ZeroConstructor)
 
 void UAkComponent::PostTrigger(const struct FString& Trigger)
 {
@@ -2042,8 +2063,8 @@ void UAkComponent::PostTrigger(const struct FString& Trigger)
 // Function AkAudio.AkComponent.PostEventInRange
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeSquare                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// float RangeSquare (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkComponent::PostEventInRange(class UAkAudioEvent* AkEvent, float RangeSquare)
 {
@@ -2065,16 +2086,16 @@ void UAkComponent::PostEventInRange(class UAkAudioEvent* AkEvent, float RangeSqu
 }
 
 
-// Function AkAudio.AkComponent.PostAssociatedAkEventInRage
+// Function AkAudio.AkComponent.PostAssociatedAkEventInRange
 // (Final, Native, Public, BlueprintCallable)
 
-void UAkComponent::PostAssociatedAkEventInRage()
+void UAkComponent::PostAssociatedAkEventInRange()
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEventInRage");
+		pFunc  = UObject::FindObject<UFunction>("Function AkAudio.AkComponent.PostAssociatedAkEventInRange");
 
-	UAkComponent_PostAssociatedAkEventInRage_Params params;
+	UAkComponent_PostAssociatedAkEventInRange_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -2089,7 +2110,7 @@ void UAkComponent::PostAssociatedAkEventInRage()
 // Function AkAudio.AkComponent.PostAssociatedAkEvent
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkComponent::PostAssociatedAkEvent()
 {
@@ -2114,8 +2135,8 @@ int UAkComponent::PostAssociatedAkEvent()
 // Function AkAudio.AkComponent.PostAkEventByName
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 in_EventName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString in_EventName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkComponent::PostAkEventByName(const struct FString& in_EventName)
 {
@@ -2141,9 +2162,9 @@ int UAkComponent::PostAkEventByName(const struct FString& in_EventName)
 // Function AkAudio.AkComponent.PostAkEvent
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 in_EventName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString in_EventName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkComponent::PostAkEvent(class UAkAudioEvent* AkEvent, const struct FString& in_EventName)
 {
@@ -2170,7 +2191,7 @@ int UAkComponent::PostAkEvent(class UAkAudioEvent* AkEvent, const struct FString
 // Function AkAudio.AkComponent.GetAttenuationRadius
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAkComponent::GetAttenuationRadius()
 {
@@ -2195,7 +2216,7 @@ float UAkComponent::GetAttenuationRadius()
 // Function AkAudio.AkComponent.GetAkGameObjectName
 // (Final, Native, Public, HasOutParms, Const)
 // Parameters:
-// struct FString                 Name                           (Parm, OutParm, ZeroConstructor)
+// struct FString Name (Parm, OutParm, ZeroConstructor)
 
 void UAkComponent::GetAkGameObjectName(struct FString* Name)
 {
@@ -2242,8 +2263,8 @@ void UAkGameplayStatics::WakeupFromSuspend()
 // Function AkAudio.AkGameplayStatics.UseReverbVolumes
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           inUseReverbVolumes             (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool inUseReverbVolumes (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, class AActor* Actor)
 {
@@ -2268,16 +2289,16 @@ void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, class AActor*
 // Function AkAudio.AkGameplayStatics.UseEarlyReflections
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkAuxBus*               AuxBus                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Left                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Right                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           floor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Ceiling                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Back                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Front                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           SpotReflectors                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 AuxBusName                     (Parm, ZeroConstructor)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAuxBus* AuxBus (Parm, ZeroConstructor, IsPlainOldData)
+// bool Left (Parm, ZeroConstructor, IsPlainOldData)
+// bool Right (Parm, ZeroConstructor, IsPlainOldData)
+// bool floor (Parm, ZeroConstructor, IsPlainOldData)
+// bool Ceiling (Parm, ZeroConstructor, IsPlainOldData)
+// bool Back (Parm, ZeroConstructor, IsPlainOldData)
+// bool Front (Parm, ZeroConstructor, IsPlainOldData)
+// bool SpotReflectors (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AuxBusName (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::UseEarlyReflections(class AActor* Actor, class UAkAuxBus* AuxBus, bool Left, bool Right, bool floor, bool Ceiling, bool Back, bool Front, bool SpotReflectors, const struct FString& AuxBusName)
 {
@@ -2310,7 +2331,7 @@ void UAkGameplayStatics::UseEarlyReflections(class AActor* Actor, class UAkAuxBu
 // Function AkAudio.AkGameplayStatics.UnloadBankByName
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BankName                       (Parm, ZeroConstructor)
+// struct FString BankName (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::UnloadBankByName(const struct FString& BankName)
 {
@@ -2334,8 +2355,8 @@ void UAkGameplayStatics::UnloadBankByName(const struct FString& BankName)
 // Function AkAudio.AkGameplayStatics.UnloadBank
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioBank*            Bank                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BankName                       (Parm, ZeroConstructor)
+// class UAkAudioBank* Bank (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BankName (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::UnloadBank(class UAkAudioBank* Bank, const struct FString& BankName)
 {
@@ -2402,7 +2423,7 @@ void UAkGameplayStatics::StopProfilerCapture()
 // Function AkAudio.AkGameplayStatics.StopPlayingID
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            PlayingID                      (Parm, ZeroConstructor, IsPlainOldData)
+// int PlayingID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::StopPlayingID(int PlayingID)
 {
@@ -2447,7 +2468,7 @@ void UAkGameplayStatics::StopOutputCapture()
 // Function AkAudio.AkGameplayStatics.StopAllAmbientSounds
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::StopAllAmbientSounds(class UObject* WorldContextObject)
 {
@@ -2492,7 +2513,7 @@ void UAkGameplayStatics::StopAll()
 // Function AkAudio.AkGameplayStatics.StopAkEventByID
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::StopAkEventByID(int ID)
 {
@@ -2516,7 +2537,7 @@ void UAkGameplayStatics::StopAkEventByID(int ID)
 // Function AkAudio.AkGameplayStatics.StopActor
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::StopActor(class AActor* Actor)
 {
@@ -2540,7 +2561,7 @@ void UAkGameplayStatics::StopActor(class AActor* Actor)
 // Function AkAudio.AkGameplayStatics.StartProfilerCapture
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::StartProfilerCapture(const struct FString& Filename)
 {
@@ -2564,7 +2585,7 @@ void UAkGameplayStatics::StartProfilerCapture(const struct FString& Filename)
 // Function AkAudio.AkGameplayStatics.StartOutputCapture
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::StartOutputCapture(const struct FString& Filename)
 {
@@ -2588,7 +2609,7 @@ void UAkGameplayStatics::StartOutputCapture(const struct FString& Filename)
 // Function AkAudio.AkGameplayStatics.StartAllAmbientSounds
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::StartAllAmbientSounds(class UObject* WorldContextObject)
 {
@@ -2612,16 +2633,16 @@ void UAkGameplayStatics::StartAllAmbientSounds(class UObject* WorldContextObject
 // Function AkAudio.AkGameplayStatics.SpawnAkComponentAtLocation
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkAuxBus*               EarlyReflectionsBus            (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Orientation                    (Parm, IsPlainOldData)
-// bool                           AutoPost                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// struct FString                 EarlyReflectionsBusName        (Parm, ZeroConstructor)
-// bool                           AutoDestroy                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkComponent*            ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkAuxBus* EarlyReflectionsBus (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Orientation (Parm, IsPlainOldData)
+// bool AutoPost (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// struct FString EarlyReflectionsBusName (Parm, ZeroConstructor)
+// bool AutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class UAkAuxBus* EarlyReflectionsBus, const struct FVector& Location, const struct FRotator& Orientation, bool AutoPost, const struct FString& EventName, const struct FString& EarlyReflectionsBusName, bool AutoDestroy)
 {
@@ -2655,7 +2676,7 @@ class UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(class UObject
 // Function AkAudio.AkGameplayStatics.ShowAKComponentPosition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           _IsShow                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool _IsShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::ShowAKComponentPosition(bool _IsShow)
 {
@@ -2679,9 +2700,9 @@ void UAkGameplayStatics::ShowAKComponentPosition(bool _IsShow)
 // Function AkAudio.AkGameplayStatics.ShouldPostEvent
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 VoicePosition                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector VoicePosition (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkGameplayStatics::ShouldPostEvent(class UObject* WorldContext, const struct FVector& VoicePosition)
 {
@@ -2708,8 +2729,8 @@ bool UAkGameplayStatics::ShouldPostEvent(class UObject* WorldContext, const stru
 // Function AkAudio.AkGameplayStatics.SetSwitchWithDummyActor
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SwitchGroup                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SwitchState                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SwitchGroup (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SwitchState (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetSwitchWithDummyActor(const struct FName& SwitchGroup, const struct FName& SwitchState)
 {
@@ -2734,9 +2755,9 @@ void UAkGameplayStatics::SetSwitchWithDummyActor(const struct FName& SwitchGroup
 // Function AkAudio.AkGameplayStatics.SetSwitch
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   SwitchGroup                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SwitchState                    (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SwitchGroup (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SwitchState (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetSwitch(const struct FName& SwitchGroup, const struct FName& SwitchState, class AActor* Actor)
 {
@@ -2762,9 +2783,9 @@ void UAkGameplayStatics::SetSwitch(const struct FName& SwitchGroup, const struct
 // Function AkAudio.AkGameplayStatics.SetState
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   StateGroup                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   State                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName StateGroup (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName State (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::SetState(const struct FName& StateGroup, const struct FName& State)
 {
@@ -2791,10 +2812,10 @@ int UAkGameplayStatics::SetState(const struct FName& StateGroup, const struct FN
 // Function AkAudio.AkGameplayStatics.SetRTPCValue
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   RTPC                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InterpolationTimeMs            (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName RTPC (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// int InterpolationTimeMs (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetRTPCValue(const struct FName& RTPC, float Value, int InterpolationTimeMs, class AActor* Actor)
 {
@@ -2821,7 +2842,7 @@ void UAkGameplayStatics::SetRTPCValue(const struct FName& RTPC, float Value, int
 // Function AkAudio.AkGameplayStatics.SetRegionIpMute
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           bMuted                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMuted (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetRegionIpMute(bool bMuted)
 {
@@ -2845,7 +2866,7 @@ void UAkGameplayStatics::SetRegionIpMute(bool bMuted)
 // Function AkAudio.AkGameplayStatics.SetPanningRule
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EPanningRule                   PanRule                        (Parm, ZeroConstructor, IsPlainOldData)
+// EPanningRule PanRule (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetPanningRule(EPanningRule PanRule)
 {
@@ -2869,8 +2890,8 @@ void UAkGameplayStatics::SetPanningRule(EPanningRule PanRule)
 // Function AkAudio.AkGameplayStatics.SetOutputBusVolume
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          BusVolume                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// float BusVolume (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetOutputBusVolume(float BusVolume, class AActor* Actor)
 {
@@ -2895,7 +2916,7 @@ void UAkGameplayStatics::SetOutputBusVolume(float BusVolume, class AActor* Actor
 // Function AkAudio.AkGameplayStatics.SetOcclusionScalingFactor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          ScalingFactor                  (Parm, ZeroConstructor, IsPlainOldData)
+// float ScalingFactor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetOcclusionScalingFactor(float ScalingFactor)
 {
@@ -2919,8 +2940,8 @@ void UAkGameplayStatics::SetOcclusionScalingFactor(float ScalingFactor)
 // Function AkAudio.AkGameplayStatics.SetOcclusionRefreshInterval
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          RefreshInterval                (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// float RefreshInterval (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetOcclusionRefreshInterval(float RefreshInterval, class AActor* Actor)
 {
@@ -2945,8 +2966,8 @@ void UAkGameplayStatics::SetOcclusionRefreshInterval(float RefreshInterval, clas
 // Function AkAudio.AkGameplayStatics.SetMultiplePositions
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FTransform>      InTransforms                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UAkComponent*            AkComponent                    (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// TArray<struct FTransform> InTransforms (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAkComponent* AkComponent (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UAkGameplayStatics::SetMultiplePositions(TArray<struct FTransform> InTransforms, class UAkComponent* AkComponent)
 {
@@ -2971,8 +2992,8 @@ void UAkGameplayStatics::SetMultiplePositions(TArray<struct FTransform> InTransf
 // Function AkAudio.AkGameplayStatics.SetBusConfig
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BusName                        (Parm, ZeroConstructor)
-// EAkChannelConfiguration        ChannelConfiguration           (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BusName (Parm, ZeroConstructor)
+// EAkChannelConfiguration ChannelConfiguration (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::SetBusConfig(const struct FString& BusName, EAkChannelConfiguration ChannelConfiguration)
 {
@@ -2997,12 +3018,12 @@ void UAkGameplayStatics::SetBusConfig(const struct FString& BusName, EAkChannelC
 // Function AkAudio.AkGameplayStatics.SeekOnEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           in_pAkEvent                    (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  in_pActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            in_iPosition                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// bool                           in_bSeekToNearestMarker        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* in_pAkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* in_pActor (Parm, ZeroConstructor, IsPlainOldData)
+// int in_iPosition (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// bool in_bSeekToNearestMarker (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::SeekOnEvent(class UAkAudioEvent* in_pAkEvent, class AActor* in_pActor, int in_iPosition, const struct FString& EventName, bool in_bSeekToNearestMarker)
 {
@@ -3053,8 +3074,8 @@ void UAkGameplayStatics::RefreshModDirectories()
 // Function AkAudio.AkGameplayStatics.PostTrigger
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   Trigger                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Trigger (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::PostTrigger(const struct FName& Trigger, class AActor* Actor)
 {
@@ -3079,12 +3100,12 @@ void UAkGameplayStatics::PostTrigger(const struct FName& Trigger, class AActor* 
 // Function AkAudio.AkGameplayStatics.PostEventWithVolume
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenAttachedToDestroyed (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// float Volume (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEventWithVolume(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName, float Volume)
 {
@@ -3114,10 +3135,10 @@ int UAkGameplayStatics::PostEventWithVolume(class UAkAudioEvent* AkEvent, class 
 // Function AkAudio.AkGameplayStatics.PostEventWithDummyActor
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEventWithDummyActor(class UAkAudioEvent* AkEvent, const struct FString& EventName, class UObject* WorldContextObject)
 {
@@ -3145,10 +3166,10 @@ int UAkGameplayStatics::PostEventWithDummyActor(class UAkAudioEvent* AkEvent, co
 // Function AkAudio.AkGameplayStatics.PostEventInRange
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeSquare                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkComponent*            ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// float RangeSquare (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAkComponent* UAkGameplayStatics::PostEventInRange(class UAkAudioEvent* AkEvent, class AActor* Actor, float RangeSquare)
 {
@@ -3176,9 +3197,9 @@ class UAkComponent* UAkGameplayStatics::PostEventInRange(class UAkAudioEvent* Ak
 // Function AkAudio.AkGameplayStatics.PostEventByName
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenAttachedToDestroyed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::PostEventByName(const struct FString& EventName, class AActor* Actor, bool bStopWhenAttachedToDestroyed)
 {
@@ -3204,12 +3225,12 @@ void UAkGameplayStatics::PostEventByName(const struct FString& EventName, class 
 // Function AkAudio.AkGameplayStatics.PostEventAttached
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName AttachPointName (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenAttachedToDestroyed (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEventAttached(class UAkAudioEvent* AkEvent, class AActor* Actor, const struct FName& AttachPointName, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
 {
@@ -3239,13 +3260,13 @@ int UAkGameplayStatics::PostEventAttached(class UAkAudioEvent* AkEvent, class AA
 // Function AkAudio.AkGameplayStatics.PostEventAtLocationWithVolume
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Orientation                    (Parm, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Orientation (Parm, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// float Volume (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEventAtLocationWithVolume(class UAkAudioEvent* AkEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject, float Volume)
 {
@@ -3276,10 +3297,10 @@ int UAkGameplayStatics::PostEventAtLocationWithVolume(class UAkAudioEvent* AkEve
 // Function AkAudio.AkGameplayStatics.PostEventAtLocationByName
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Orientation                    (Parm, IsPlainOldData)
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Orientation (Parm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::PostEventAtLocationByName(const struct FString& EventName, const struct FVector& Location, const struct FRotator& Orientation, class UObject* WorldContextObject)
 {
@@ -3306,12 +3327,12 @@ void UAkGameplayStatics::PostEventAtLocationByName(const struct FString& EventNa
 // Function AkAudio.AkGameplayStatics.PostEventAtLocation
 // (Final, BlueprintCosmetic, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Orientation                    (Parm, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Orientation (Parm, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEventAtLocation(class UAkAudioEvent* AkEvent, const struct FVector& Location, const struct FRotator& Orientation, const struct FString& EventName, class UObject* WorldContextObject)
 {
@@ -3341,11 +3362,11 @@ int UAkGameplayStatics::PostEventAtLocation(class UAkAudioEvent* AkEvent, const 
 // Function AkAudio.AkGameplayStatics.PostEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioEvent*           AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopWhenAttachedToDestroyed   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EventName                      (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAkAudioEvent* AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopWhenAttachedToDestroyed (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::PostEvent(class UAkAudioEvent* AkEvent, class AActor* Actor, bool bStopWhenAttachedToDestroyed, const struct FString& EventName)
 {
@@ -3374,8 +3395,8 @@ int UAkGameplayStatics::PostEvent(class UAkAudioEvent* AkEvent, class AActor* Ac
 // Function AkAudio.AkGameplayStatics.MuteListener
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            WindowID                       (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* Controller (Parm, ZeroConstructor, IsPlainOldData)
+// int WindowID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::MuteListener(class APlayerController* Controller, int WindowID)
 {
@@ -3421,8 +3442,8 @@ void UAkGameplayStatics::LoadInitBank()
 // Function AkAudio.AkGameplayStatics.LoadBanks
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<class UAkAudioBank*>    SoundBanks                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           SynchronizeSoundBanks          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UAkAudioBank*> SoundBanks (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool SynchronizeSoundBanks (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::LoadBanks(TArray<class UAkAudioBank*> SoundBanks, bool SynchronizeSoundBanks)
 {
@@ -3447,7 +3468,7 @@ void UAkGameplayStatics::LoadBanks(TArray<class UAkAudioBank*> SoundBanks, bool 
 // Function AkAudio.AkGameplayStatics.LoadBankByName
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BankName                       (Parm, ZeroConstructor)
+// struct FString BankName (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::LoadBankByName(const struct FString& BankName)
 {
@@ -3471,8 +3492,8 @@ void UAkGameplayStatics::LoadBankByName(const struct FString& BankName)
 // Function AkAudio.AkGameplayStatics.LoadBank
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAkAudioBank*            Bank                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BankName                       (Parm, ZeroConstructor)
+// class UAkAudioBank* Bank (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BankName (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::LoadBank(class UAkAudioBank* Bank, const struct FString& BankName)
 {
@@ -3497,8 +3518,8 @@ void UAkGameplayStatics::LoadBank(class UAkAudioBank* Bank, const struct FString
 // Function AkAudio.AkGameplayStatics.IsGame
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkGameplayStatics::IsGame(class UObject* WorldContextObject)
 {
@@ -3524,7 +3545,7 @@ bool UAkGameplayStatics::IsGame(class UObject* WorldContextObject)
 // Function AkAudio.AkGameplayStatics.IsEditor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkGameplayStatics::IsEditor()
 {
@@ -3549,8 +3570,8 @@ bool UAkGameplayStatics::IsEditor()
 // Function AkAudio.AkGameplayStatics.GetSourcePlayPosition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            AkEvent                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int AkEvent (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAkGameplayStatics::GetSourcePlayPosition(int AkEvent)
 {
@@ -3576,7 +3597,7 @@ int UAkGameplayStatics::GetSourcePlayPosition(int AkEvent)
 // Function AkAudio.AkGameplayStatics.GetOcclusionScalingFactor
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAkGameplayStatics::GetOcclusionScalingFactor()
 {
@@ -3601,9 +3622,9 @@ float UAkGameplayStatics::GetOcclusionScalingFactor()
 // Function AkAudio.AkGameplayStatics.GetDefaultListenerLocation
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OutLocation (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAkGameplayStatics::GetDefaultListenerLocation(class UObject* WorldContextObject, struct FVector* OutLocation)
 {
@@ -3632,11 +3653,11 @@ bool UAkGameplayStatics::GetDefaultListenerLocation(class UObject* WorldContextO
 // Function AkAudio.AkGameplayStatics.GetAkComponent
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// TEnumAsByte<enum EAttachLocation> LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UAkComponent*            ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USceneComponent* AttachToComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName AttachPointName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// TEnumAsByte<enum EAttachLocation> LocationType (Parm, ZeroConstructor, IsPlainOldData)
+// class UAkComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAkComponent* UAkGameplayStatics::GetAkComponent(class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, TEnumAsByte<enum EAttachLocation> LocationType)
 {
@@ -3686,9 +3707,9 @@ void UAkGameplayStatics::ClearBanks()
 // Function AkAudio.AkGameplayStatics.AKSetRTPCValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 RTPC                           (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           in_bBypassInternalValueInterpolation (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString RTPC (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool in_bBypassInternalValueInterpolation (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAkGameplayStatics::AKSetRTPCValue(const struct FString& RTPC, float Value, bool in_bBypassInternalValueInterpolation)
 {
@@ -3714,7 +3735,7 @@ void UAkGameplayStatics::AKSetRTPCValue(const struct FString& RTPC, float Value,
 // Function AkAudio.AkGameplayStatics.AddOutputCaptureMarker
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 MarkerText                     (Parm, ZeroConstructor)
+// struct FString MarkerText (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::AddOutputCaptureMarker(const struct FString& MarkerText)
 {
@@ -3738,7 +3759,7 @@ void UAkGameplayStatics::AddOutputCaptureMarker(const struct FString& MarkerText
 // Function AkAudio.AkGameplayStatics.AddModDirectory
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UAkGameplayStatics::AddModDirectory(const struct FString& Path)
 {
@@ -3867,7 +3888,7 @@ void UAkSurfaceReflectorSetComponent::RemoveSurfaceReflectorSet()
 // Function AkAudio.AudioOfflineVisual.StartBeatOffset
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Offset                         (Parm, ZeroConstructor, IsPlainOldData)
+// float Offset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioOfflineVisual::StartBeatOffset(float Offset)
 {
@@ -3933,7 +3954,7 @@ void UAudioOfflineVisual::ResetBeatTime()
 // Function AkAudio.AudioOfflineVisual.InitWithBeatTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<float>                  Datas                          (Parm, ZeroConstructor)
+// TArray<float> Datas (Parm, ZeroConstructor)
 
 void UAudioOfflineVisual::InitWithBeatTime(TArray<float> Datas)
 {
@@ -3957,7 +3978,7 @@ void UAudioOfflineVisual::InitWithBeatTime(TArray<float> Datas)
 // Function AkAudio.AudioOfflineVisual.Init
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FAudioOfflineVisualBeatData> Datas                          (Parm, ZeroConstructor)
+// TArray<struct FAudioOfflineVisualBeatData> Datas (Parm, ZeroConstructor)
 
 void UAudioOfflineVisual::Init(TArray<struct FAudioOfflineVisualBeatData> Datas)
 {
@@ -3981,9 +4002,9 @@ void UAudioOfflineVisual::Init(TArray<struct FAudioOfflineVisualBeatData> Datas)
 // Function AkAudio.AudioOfflineVisual.GetCurrentBeatByCustomTime
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// float                          InBeatSecondTime               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAudioOfflineVisualBeatData Result                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float InBeatSecondTime (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAudioOfflineVisualBeatData Result (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAudioOfflineVisual::GetCurrentBeatByCustomTime(float InBeatSecondTime, struct FAudioOfflineVisualBeatData* Result)
 {
@@ -4012,8 +4033,8 @@ bool UAudioOfflineVisual::GetCurrentBeatByCustomTime(float InBeatSecondTime, str
 // Function AkAudio.AudioOfflineVisual.GetCurrentBeat
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FAudioOfflineVisualBeatData Result                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FAudioOfflineVisualBeatData Result (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAudioOfflineVisual::GetCurrentBeat(struct FAudioOfflineVisualBeatData* Result)
 {
@@ -4041,7 +4062,7 @@ bool UAudioOfflineVisual::GetCurrentBeat(struct FAudioOfflineVisualBeatData* Res
 // Function AkAudio.AudioVisual.TryInit
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAudioVisual::TryInit()
 {
@@ -4087,7 +4108,7 @@ void UAudioVisual::Reset()
 // Function AkAudio.AudioVisual.IsInited
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAudioVisual::IsInited()
 {
@@ -4112,7 +4133,7 @@ bool UAudioVisual::IsInited()
 // Function AkAudio.AudioVisual.GetRMS
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAudioVisual::GetRMS()
 {
@@ -4137,7 +4158,7 @@ float UAudioVisual::GetRMS()
 // Function AkAudio.AudioVisual.GetInstantEnergy
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAudioVisual::GetInstantEnergy()
 {
@@ -4162,8 +4183,8 @@ float UAudioVisual::GetInstantEnergy()
 // Function AkAudio.AudioVisual.GetFrequencyVol
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EFrequencyRange                freqRange                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EFrequencyRange freqRange (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAudioVisual::GetFrequencyVol(EFrequencyRange freqRange)
 {
@@ -4189,11 +4210,11 @@ float UAudioVisual::GetFrequencyVol(EFrequencyRange freqRange)
 // Function AkAudio.AudioVisual.GetFrequencyDataWithBin
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  pFreqData                      (Parm, OutParm, ZeroConstructor)
-// EFrequencyRange                freqRange                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            nBin                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAbsolute                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<float> pFreqData (Parm, OutParm, ZeroConstructor)
+// EFrequencyRange freqRange (Parm, ZeroConstructor, IsPlainOldData)
+// int nBin (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAbsolute (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAudioVisual::GetFrequencyDataWithBin(EFrequencyRange freqRange, int nBin, bool bAbsolute, TArray<float>* pFreqData)
 {
@@ -4224,9 +4245,9 @@ int UAudioVisual::GetFrequencyDataWithBin(EFrequencyRange freqRange, int nBin, b
 // Function AkAudio.AudioVisual.GetFrequencyData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  pFreqData                      (Parm, OutParm, ZeroConstructor)
-// EFrequencyRange                freqRange                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<float> pFreqData (Parm, OutParm, ZeroConstructor)
+// EFrequencyRange freqRange (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAudioVisual::GetFrequencyData(EFrequencyRange freqRange, TArray<float>* pFreqData)
 {
@@ -4255,10 +4276,10 @@ int UAudioVisual::GetFrequencyData(EFrequencyRange freqRange, TArray<float>* pFr
 // Function AkAudio.AudioVisual.GetAudioSamplesWithBin
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  pAudioData                     (Parm, OutParm, ZeroConstructor)
-// int                            nBin                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAbsolute                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<float> pAudioData (Parm, OutParm, ZeroConstructor)
+// int nBin (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAbsolute (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAudioVisual::GetAudioSamplesWithBin(int nBin, bool bAbsolute, TArray<float>* pAudioData)
 {
@@ -4288,8 +4309,8 @@ int UAudioVisual::GetAudioSamplesWithBin(int nBin, bool bAbsolute, TArray<float>
 // Function AkAudio.AudioVisual.GetAudioSamples
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  pAudioData                     (Parm, OutParm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<float> pAudioData (Parm, OutParm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAudioVisual::GetAudioSamples(TArray<float>* pAudioData)
 {
@@ -4317,8 +4338,8 @@ int UAudioVisual::GetAudioSamples(TArray<float>* pAudioData)
 // Function AkAudio.AudioVisualBlueprintLibrary.GetAudioVisual
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UAudioVisual*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class UAudioVisual* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAudioVisual* UAudioVisualBlueprintLibrary::GetAudioVisual(class UObject* Outer)
 {
@@ -4344,8 +4365,8 @@ class UAudioVisual* UAudioVisualBlueprintLibrary::GetAudioVisual(class UObject* 
 // Function AkAudio.AudioVisualBlueprintLibrary.GetAudioOfflineVisual
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UAudioOfflineVisual*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class UAudioOfflineVisual* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAudioOfflineVisual* UAudioVisualBlueprintLibrary::GetAudioOfflineVisual(class UObject* Outer)
 {

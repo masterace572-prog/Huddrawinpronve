@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,11 +13,10 @@ namespace SDK
 class UWidgetCaptureComponent2D : public USceneCaptureComponent2D
 {
 public:
-	class ASceneCaptureCameraActor*                    OwnerCameraActor;                                         // 0x0A10(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0A18(0x0018) MISSED OFFSET
+	class ASceneCaptureCameraActor* OwnerCameraActor; // 0x0A10(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0A18(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SceneCaptureWidgetPlugin.WidgetCaptureComponent2D");
@@ -32,11 +31,10 @@ public:
 class ASceneCaptureCameraActor : public ACameraActor
 {
 public:
-	class UWidgetCaptureComponent2D*                   SceneCaptureComponent;                                    // 0x0A40(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0A48(0x0008) MISSED OFFSET
+	class UWidgetCaptureComponent2D* SceneCaptureComponent; // 0x0A40(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0A48(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SceneCaptureWidgetPlugin.SceneCaptureCameraActor");
@@ -51,12 +49,11 @@ public:
 class USceneCaptureWidget : public UWidget
 {
 public:
-	struct FSlateBrush                                 Brush;                                                    // 0x0100(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
-	class ASceneCaptureCameraActor*                    SceneCaptureCameraActor;                                  // 0x01B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x01C0(0x0020) MISSED OFFSET
+	struct FSlateBrush Brush; // 0x0100(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class ASceneCaptureCameraActor* SceneCaptureCameraActor; // 0x01B8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x20]; // 0x01C0(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SceneCaptureWidgetPlugin.SceneCaptureWidget");

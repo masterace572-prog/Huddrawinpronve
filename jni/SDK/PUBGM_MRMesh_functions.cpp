@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -74,7 +74,7 @@ void UMeshReconstructorBase::PauseReconstruction()
 // Function MRMesh.MeshReconstructorBase.IsReconstructionStarted
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMeshReconstructorBase::IsReconstructionStarted()
 {
@@ -99,7 +99,7 @@ bool UMeshReconstructorBase::IsReconstructionStarted()
 // Function MRMesh.MeshReconstructorBase.IsReconstructionPaused
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UMeshReconstructorBase::IsReconstructionPaused()
 {
@@ -145,8 +145,8 @@ void UMeshReconstructorBase::DisconnectMRMesh()
 // Function MRMesh.MeshReconstructorBase.ConnectMRMesh
 // (Native, Public)
 // Parameters:
-// class UMRMeshComponent*        Mesh                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FMRMeshConfiguration    ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UMRMeshComponent* Mesh (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FMRMeshConfiguration ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FMRMeshConfiguration UMeshReconstructorBase::ConnectMRMesh(class UMRMeshComponent* Mesh)
 {
@@ -172,7 +172,7 @@ struct FMRMeshConfiguration UMeshReconstructorBase::ConnectMRMesh(class UMRMeshC
 // Function MRMesh.MRMeshComponent.GetReconstructor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UMeshReconstructorBase*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UMeshReconstructorBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UMeshReconstructorBase* UMRMeshComponent::GetReconstructor()
 {
@@ -197,7 +197,7 @@ class UMeshReconstructorBase* UMRMeshComponent::GetReconstructor()
 // Function MRMesh.MRMeshComponent.ConnectReconstructor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UMeshReconstructorBase*  Reconstructor                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UMeshReconstructorBase* Reconstructor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UMRMeshComponent::ConnectReconstructor(class UMeshReconstructorBase* Reconstructor)
 {

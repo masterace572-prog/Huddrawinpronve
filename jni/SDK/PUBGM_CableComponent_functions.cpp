@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function CableComponent.CableComponent.SetAttachEndTo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ComponentProperty              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ComponentProperty (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SocketName (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCableComponent::SetAttachEndTo(class AActor* Actor, const struct FName& ComponentProperty, const struct FName& SocketName)
 {
@@ -39,7 +39,7 @@ void UCableComponent::SetAttachEndTo(class AActor* Actor, const struct FName& Co
 // Function CableComponent.CableComponent.GetCableParticleLocations
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FVector>         Locations                      (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Locations (Parm, OutParm, ZeroConstructor)
 
 void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Locations)
 {
@@ -65,7 +65,7 @@ void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Location
 // Function CableComponent.CableComponent.GetAttachedComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class USceneComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USceneComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USceneComponent* UCableComponent::GetAttachedComponent()
 {
@@ -90,7 +90,7 @@ class USceneComponent* UCableComponent::GetAttachedComponent()
 // Function CableComponent.CableComponent.GetAttachedActor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UCableComponent::GetAttachedActor()
 {

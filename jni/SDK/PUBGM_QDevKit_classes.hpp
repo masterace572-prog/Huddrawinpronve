@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -8,15 +8,37 @@ namespace SDK
 //Classes
 //---------------------By BangJO---------------------------
 
+// Class QDevKit.FilePicker
+// 0x0010 (0x0038 - 0x0028)
+class UFilePicker : public UObject
+{
+public:
+	struct FScriptMulticastDelegate OnFileSelectionComplete; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class QDevKit.FilePicker");
+		return pStaticClass;
+	}
+
+
+	static void UnInitialize();
+	bool OpenFilePicker(const struct FString& InParamJson);
+	void Initialize();
+	static class UFilePicker* GetInstance();
+	void FileSelectionCompleteDelegate__DelegateSignature(const struct FString& ResultJson);
+};
+
+
 // Class QDevKit.FirebaseHelper
 // 0x0030 (0x0058 - 0x0028)
 class UFirebaseHelper : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0028(0x0030) MISSED OFFSET
+	unsigned char UnknownData00[0x30]; // 0x0028(0x0030) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class QDevKit.FirebaseHelper");
@@ -40,12 +62,11 @@ public:
 class UFirebaseRemoteConfigImpl : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TArray<struct FString>                             QueryConfigNamesArray;                                    // 0x0030(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData01[0x78];                                      // 0x0040(0x0078) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
+	TArray<struct FString> QueryConfigNamesArray; // 0x0030(0x0010) (ZeroConstructor, Config)
+	unsigned char UnknownData01[0x78]; // 0x0040(0x0078) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class QDevKit.FirebaseRemoteConfigImpl");
@@ -64,10 +85,9 @@ public:
 class ULocationHelper : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    LocationCompleteCallback;                                 // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate LocationCompleteCallback; // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class QDevKit.LocationHelper");
@@ -87,12 +107,11 @@ public:
 class UPhotoAlbumHelper : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    FetchAlbumImageInfoCompleteCallback;                      // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    GenerateImageFromAlbumCompleteCallback;                   // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    ScreenCapturedCompleteCallback;                           // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate FetchAlbumImageInfoCompleteCallback; // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate GenerateImageFromAlbumCompleteCallback; // 0x0038(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate ScreenCapturedCompleteCallback; // 0x0048(0x0010) (ZeroConstructor, InstancedReference)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class QDevKit.PhotoAlbumHelper");
@@ -109,16 +128,35 @@ public:
 };
 
 
+// Class QDevKit.StoreKit
+// 0x0000 (0x0028 - 0x0028)
+class UStoreKit : public UObject
+{
+public:
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class QDevKit.StoreKit");
+		return pStaticClass;
+	}
+
+
+	static void RequestReview(bool bForceOpenStoreInTestEnv);
+	static void OpenStorePage(const struct FString& storeParam);
+	static void GetCountryCode(const struct FScriptDelegate& Callback);
+};
+
+
 // Class QDevKit.SystemPermissionHelper
 // 0x0060 (0x0088 - 0x0028)
 class USystemPermissionHelper : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    RequestPermissionResultCallback;                          // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
+	struct FScriptMulticastDelegate RequestPermissionResultCallback; // 0x0028(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData00[0x50]; // 0x0038(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class QDevKit.SystemPermissionHelper");
@@ -129,11 +167,36 @@ public:
 	bool RequestPermissions(int InPermissionType, int InRequestCode);
 	bool IsPermissionGranted(int InPermissionType);
 	void Initialize();
+	int GetPermissionStatus(int InPermissionType);
 	static class USystemPermissionHelper* GetInstance();
 	bool AndroidShouldShowRequestPermissionRationale(const struct FString& InPermission);
 	bool AndroidRequestPermissions(const struct FString& InPermission, int InRequestCode);
 	bool AndroidIsPermissionGranted(const struct FString& InPermission);
 	bool AndroidHasDefinePermission(const struct FString& InPermssionName);
+};
+
+
+// Class QDevKit.TouchTransmission
+// 0x0010 (0x0038 - 0x0028)
+class UTouchTransmission : public UObject
+{
+public:
+	struct FScriptMulticastDelegate OnTransmissionComplete; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass() {
+        static UClass *pStaticClass = nullptr;
+        if (!pStaticClass)
+            pStaticClass = UObject::FindClass("Class QDevKit.TouchTransmission");
+		return pStaticClass;
+	}
+
+
+	static void UnInitialize();
+	void TransmissionCompleteDelegate__DelegateSignature(const struct FString& ResultJson);
+	void Initialize();
+	bool HandleReceivedPakFiles(const struct FString& InParamJson);
+	struct FString GetTransmissionRawJsonContent();
+	static class UTouchTransmission* GetInstance();
 };
 
 

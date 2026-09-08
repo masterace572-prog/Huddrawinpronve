@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,11 +11,11 @@ namespace SDK
 // Function SGameplayAbilities.AbilityTask_Tick_WaitAbilityActivate.WaitForAbilityActivateWithTagRequirementsInTick
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UGameplayAbility*        OwningAbility                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTagRequirements TagRequirements                (Parm)
-// bool                           IncludeTriggeredAbilities      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           TriggerOnce                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameplayAbility* OwningAbility (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTagRequirements TagRequirements (Parm)
+// bool IncludeTriggeredAbilities (Parm, ZeroConstructor, IsPlainOldData)
+// bool TriggerOnce (Parm, ZeroConstructor, IsPlainOldData)
+// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActivate::WaitForAbilityActivateWithTagRequirementsInTick(class UGameplayAbility* OwningAbility, const struct FGameplayTagRequirements& TagRequirements, bool IncludeTriggeredAbilities, bool TriggerOnce)
 {
@@ -44,11 +44,11 @@ class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActiva
 // Function SGameplayAbilities.AbilityTask_Tick_WaitAbilityActivate.WaitForAbilityActivateInTick_Query
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UGameplayAbility*        OwningAbility                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTagQuery       Query                          (Parm)
-// bool                           IncludeTriggeredAbilities      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           TriggerOnce                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameplayAbility* OwningAbility (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTagQuery Query (Parm)
+// bool IncludeTriggeredAbilities (Parm, ZeroConstructor, IsPlainOldData)
+// bool TriggerOnce (Parm, ZeroConstructor, IsPlainOldData)
+// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActivate::WaitForAbilityActivateInTick_Query(class UGameplayAbility* OwningAbility, const struct FGameplayTagQuery& Query, bool IncludeTriggeredAbilities, bool TriggerOnce)
 {
@@ -77,12 +77,12 @@ class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActiva
 // Function SGameplayAbilities.AbilityTask_Tick_WaitAbilityActivate.WaitForAbilityActivateInTick
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UGameplayAbility*        OwningAbility                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            WithTag                        (Parm)
-// struct FGameplayTag            WithoutTag                     (Parm)
-// bool                           IncludeTriggeredAbilities      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           TriggerOnce                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UGameplayAbility* OwningAbility (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTag WithTag (Parm)
+// struct FGameplayTag WithoutTag (Parm)
+// bool IncludeTriggeredAbilities (Parm, ZeroConstructor, IsPlainOldData)
+// bool TriggerOnce (Parm, ZeroConstructor, IsPlainOldData)
+// class UAbilityTask_Tick_WaitAbilityActivate* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActivate::WaitForAbilityActivateInTick(class UGameplayAbility* OwningAbility, const struct FGameplayTag& WithTag, const struct FGameplayTag& WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce)
 {
@@ -112,9 +112,9 @@ class UAbilityTask_Tick_WaitAbilityActivate* UAbilityTask_Tick_WaitAbilityActiva
 // Function SGameplayAbilities.SAbilitySystemBlueprintLibrary.RequestGameplayTag
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InTagName                      (Parm, ZeroConstructor)
-// bool                           ErrorIfNotFound                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString InTagName (Parm, ZeroConstructor)
+// bool ErrorIfNotFound (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTag ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTag USAbilitySystemBlueprintLibrary::RequestGameplayTag(const struct FString& InTagName, bool ErrorIfNotFound)
 {
@@ -141,8 +141,8 @@ struct FGameplayTag USAbilitySystemBlueprintLibrary::RequestGameplayTag(const st
 // Function SGameplayAbilities.SAbilitySystemBlueprintLibrary.CreateGameplayTagContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FGameplayTag>    SourceTags                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FGameplayTagContainer   ReturnValue                    (Parm, OutParm, ReturnParm)
+// TArray<struct FGameplayTag> SourceTags (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FGameplayTagContainer ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTagContainer USAbilitySystemBlueprintLibrary::CreateGameplayTagContainer(TArray<struct FGameplayTag> SourceTags)
 {
@@ -168,9 +168,9 @@ struct FGameplayTagContainer USAbilitySystemBlueprintLibrary::CreateGameplayTagC
 // Function SGameplayAbilities.SAbilitySystemComponent.TryActivateAbilitiesByTagString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AbilityTag                     (ConstParm, Parm, ZeroConstructor)
-// bool                           bAllowRemoteActivation         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AbilityTag (ConstParm, Parm, ZeroConstructor)
+// bool bAllowRemoteActivation (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USAbilitySystemComponent::TryActivateAbilitiesByTagString(const struct FString& AbilityTag, bool bAllowRemoteActivation)
 {
@@ -218,8 +218,8 @@ void USAbilitySystemComponent::ReloadAbilities()
 // Function SGameplayAbilities.SAbilitySystemComponent.GiveAbilityByClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  AbilityClass                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayAbilitySpecHandle ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UClass* AbilityClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayAbilitySpecHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayAbilitySpecHandle USAbilitySystemComponent::GiveAbilityByClass(class UClass* AbilityClass)
 {
@@ -245,7 +245,7 @@ struct FGameplayAbilitySpecHandle USAbilitySystemComponent::GiveAbilityByClass(c
 // Function SGameplayAbilities.SAbilitySystemComponent.CancelAbilitiesByTagString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AbilityTag                     (ConstParm, Parm, ZeroConstructor)
+// struct FString AbilityTag (ConstParm, Parm, ZeroConstructor)
 
 void USAbilitySystemComponent::CancelAbilitiesByTagString(const struct FString& AbilityTag)
 {
@@ -269,8 +269,8 @@ void USAbilitySystemComponent::CancelAbilitiesByTagString(const struct FString& 
 // Function SGameplayAbilities.SGameplayAbility.K2_OnGiveAbility
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityActorInfo ActorInfo                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayAbilitySpec    Spec                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayAbilityActorInfo ActorInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayAbilitySpec Spec (ConstParm, Parm, OutParm, ReferenceParm)
 
 void USGameplayAbility::K2_OnGiveAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpec& Spec)
 {
@@ -294,7 +294,7 @@ void USGameplayAbility::K2_OnGiveAbility(const struct FGameplayAbilityActorInfo&
 // Function SGameplayAbilities.SGameplayAbility.AddTargetRequiredTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddTargetRequiredTag(const struct FString& TagName)
 {
@@ -318,7 +318,7 @@ void USGameplayAbility::AddTargetRequiredTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddTargetBlockedTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddTargetBlockedTag(const struct FString& TagName)
 {
@@ -342,7 +342,7 @@ void USGameplayAbility::AddTargetBlockedTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddSourceRequiredTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddSourceRequiredTag(const struct FString& TagName)
 {
@@ -366,7 +366,7 @@ void USGameplayAbility::AddSourceRequiredTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddSourceBlockedTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddSourceBlockedTag(const struct FString& TagName)
 {
@@ -390,7 +390,7 @@ void USGameplayAbility::AddSourceBlockedTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddCancelAbilityTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddCancelAbilityTag(const struct FString& TagName)
 {
@@ -414,7 +414,7 @@ void USGameplayAbility::AddCancelAbilityTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddBlockAbilityTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddBlockAbilityTag(const struct FString& TagName)
 {
@@ -438,7 +438,7 @@ void USGameplayAbility::AddBlockAbilityTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddActivationRequiredTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddActivationRequiredTag(const struct FString& TagName)
 {
@@ -462,7 +462,7 @@ void USGameplayAbility::AddActivationRequiredTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddActivationOwnedTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddActivationOwnedTag(const struct FString& TagName)
 {
@@ -486,7 +486,7 @@ void USGameplayAbility::AddActivationOwnedTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddActivationBlockedTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddActivationBlockedTag(const struct FString& TagName)
 {
@@ -510,7 +510,7 @@ void USGameplayAbility::AddActivationBlockedTag(const struct FString& TagName)
 // Function SGameplayAbilities.SGameplayAbility.AddAbilityTag
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 TagName                        (Parm, ZeroConstructor)
+// struct FString TagName (Parm, ZeroConstructor)
 
 void USGameplayAbility::AddAbilityTag(const struct FString& TagName)
 {

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,12 +11,12 @@ namespace SDK
 // Function AWSHelper.AWSHelperBlueprintLibrary.UploadFile
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FromFilePath                   (Parm, ZeroConstructor)
-// struct FString                 ToURL                          (Parm, ZeroConstructor)
-// struct FString                 NoneMatchHeader                (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnComplete                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FScriptDelegate         OnProgress                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAWSHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FromFilePath (Parm, ZeroConstructor)
+// struct FString ToURL (Parm, ZeroConstructor)
+// struct FString NoneMatchHeader (Parm, ZeroConstructor)
+// struct FScriptDelegate OnComplete (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FScriptDelegate OnProgress (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAWSHelperBlueprintLibrary::UploadFile(class UAWSHelper* CosHelper, const struct FString& FromFilePath, const struct FString& ToURL, const struct FString& NoneMatchHeader, const struct FScriptDelegate& OnComplete, const struct FScriptDelegate& OnProgress)
 {
@@ -45,12 +45,12 @@ void UAWSHelperBlueprintLibrary::UploadFile(class UAWSHelper* CosHelper, const s
 // Function AWSHelper.AWSHelperBlueprintLibrary.UploadBinary
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<unsigned char>          FromBinaries                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 ToURL                          (Parm, ZeroConstructor)
-// struct FString                 NoneMatchHeader                (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnComplete                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FScriptDelegate         OnProgress                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAWSHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> FromBinaries (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString ToURL (Parm, ZeroConstructor)
+// struct FString NoneMatchHeader (Parm, ZeroConstructor)
+// struct FScriptDelegate OnComplete (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FScriptDelegate OnProgress (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAWSHelperBlueprintLibrary::UploadBinary(class UAWSHelper* CosHelper, TArray<unsigned char> FromBinaries, const struct FString& ToURL, const struct FString& NoneMatchHeader, const struct FScriptDelegate& OnComplete, const struct FScriptDelegate& OnProgress)
 {
@@ -79,11 +79,11 @@ void UAWSHelperBlueprintLibrary::UploadBinary(class UAWSHelper* CosHelper, TArra
 // Function AWSHelper.AWSHelperBlueprintLibrary.DownloadFile
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FromURL                        (Parm, ZeroConstructor)
-// struct FString                 ToFilePath                     (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnComplete                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FScriptDelegate         OnProgress                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAWSHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FromURL (Parm, ZeroConstructor)
+// struct FString ToFilePath (Parm, ZeroConstructor)
+// struct FScriptDelegate OnComplete (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FScriptDelegate OnProgress (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAWSHelperBlueprintLibrary::DownloadFile(class UAWSHelper* CosHelper, const struct FString& FromURL, const struct FString& ToFilePath, const struct FScriptDelegate& OnComplete, const struct FScriptDelegate& OnProgress)
 {
@@ -111,10 +111,10 @@ void UAWSHelperBlueprintLibrary::DownloadFile(class UAWSHelper* CosHelper, const
 // Function AWSHelper.AWSHelperBlueprintLibrary.DownloadBinary
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              CosHelper                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FromURL                        (Parm, ZeroConstructor)
-// struct FScriptDelegate         OnComplete                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FScriptDelegate         OnProgress                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UAWSHelper* CosHelper (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FromURL (Parm, ZeroConstructor)
+// struct FScriptDelegate OnComplete (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FScriptDelegate OnProgress (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAWSHelperBlueprintLibrary::DownloadBinary(class UAWSHelper* CosHelper, const struct FString& FromURL, const struct FScriptDelegate& OnComplete, const struct FScriptDelegate& OnProgress)
 {
@@ -141,7 +141,7 @@ void UAWSHelperBlueprintLibrary::DownloadBinary(class UAWSHelper* CosHelper, con
 // Function AWSHelper.AWSHelperBlueprintLibrary.DestroyAWSHelper
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              AWSHelper                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UAWSHelper* AWSHelper (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAWSHelperBlueprintLibrary::DestroyAWSHelper(class UAWSHelper* AWSHelper)
 {
@@ -165,7 +165,7 @@ void UAWSHelperBlueprintLibrary::DestroyAWSHelper(class UAWSHelper* AWSHelper)
 // Function AWSHelper.AWSHelperBlueprintLibrary.ConstructAWSHelper
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAWSHelper*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAWSHelper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAWSHelper* UAWSHelperBlueprintLibrary::ConstructAWSHelper()
 {
@@ -190,7 +190,7 @@ class UAWSHelper* UAWSHelperBlueprintLibrary::ConstructAWSHelper()
 // Function AWSHelper.AWSResponse.IsOK
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAWSResponse::IsOK()
 {
@@ -215,7 +215,7 @@ bool UAWSResponse::IsOK()
 // Function AWSHelper.AWSResponse.GetResponseCode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAWSResponse::GetResponseCode()
 {
@@ -240,7 +240,7 @@ int UAWSResponse::GetResponseCode()
 // Function AWSHelper.AWSResponse.GetRequestURL
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAWSResponse::GetRequestURL()
 {
@@ -265,7 +265,7 @@ struct FString UAWSResponse::GetRequestURL()
 // Function AWSHelper.AWSResponse.GetErrorMessage
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAWSResponse::GetErrorMessage()
 {
@@ -290,7 +290,7 @@ struct FString UAWSResponse::GetErrorMessage()
 // Function AWSHelper.AWSResponse.GetErrorCode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAWSResponse::GetErrorCode()
 {
@@ -315,7 +315,7 @@ struct FString UAWSResponse::GetErrorCode()
 // Function AWSHelper.AWSResponse.GetContentAsString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAWSResponse::GetContentAsString()
 {
@@ -340,7 +340,7 @@ struct FString UAWSResponse::GetContentAsString()
 // Function AWSHelper.AWSResponse.GetContent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<unsigned char>          ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<unsigned char> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<unsigned char> UAWSResponse::GetContent()
 {

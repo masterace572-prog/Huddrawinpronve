@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UAssetRegistryImpl : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x6D0];                                     // 0x0028(0x06D0) MISSED OFFSET
+	unsigned char UnknownData00[0x6D0]; // 0x0028(0x06D0) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AssetRegistry.AssetRegistryImpl");
@@ -32,8 +31,7 @@ class UAssetRegistryHelpers : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AssetRegistry.AssetRegistryHelpers");
@@ -63,8 +61,7 @@ class UAssetRegistry : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class AssetRegistry.AssetRegistry");

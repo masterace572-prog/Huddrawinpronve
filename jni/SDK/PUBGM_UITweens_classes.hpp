@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class UTweenManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	unsigned char UnknownData00[0x28]; // 0x0028(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class UITweens.TweenManager");
@@ -24,9 +23,9 @@ public:
 	}
 
 
-	void TweenScale(class UWidget* Widget, const struct FVector2D& from, const struct FVector2D& to, float Timespan, int Type);
-	void TweenPosition(class UWidget* Widget, const struct FVector2D& from, const struct FVector2D& to, float Timespan, int Type);
-	void TweenAlpha(class UWidget* Widget, float from, float to, float Timespan, int Type);
+	void TweenScale(class UWidget* Widget, const struct FVector2D& From, const struct FVector2D& To, float Timespan, int Type);
+	void TweenPosition(class UWidget* Widget, const struct FVector2D& From, const struct FVector2D& To, float Timespan, int Type);
+	void TweenAlpha(class UWidget* Widget, float From, float To, float Timespan, int Type);
 	void Tick(float DeltaTime);
 };
 

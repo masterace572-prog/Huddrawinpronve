@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,13 +13,12 @@ namespace SDK
 class USpineAtlasAsset : public UObject
 {
 public:
-	TArray<class UTexture2D*>                          atlasPages;                                               // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-	struct FString                                     rawData;                                                  // 0x0040(0x0010) (ZeroConstructor)
-	struct FName                                       atlasFileName;                                            // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UTexture2D*> atlasPages; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x0038(0x0008) MISSED OFFSET
+	struct FString rawData; // 0x0040(0x0010) (ZeroConstructor)
+	struct FName atlasFileName; // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineAtlasAsset");
@@ -34,16 +33,15 @@ public:
 class USpineBoneDriverComponent : public USceneComponent
 {
 public:
-	class AActor*                                      Target;                                                   // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     BoneName;                                                 // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               UseComponentTransform;                                    // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UsePosition;                                              // 0x03B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseRotation;                                              // 0x03BA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseScale;                                                 // 0x03BB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x03BC(0x0014) MISSED OFFSET
+	class AActor* Target; // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString BoneName; // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool UseComponentTransform; // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UsePosition; // 0x03B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UseRotation; // 0x03BA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UseScale; // 0x03BB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x14]; // 0x03BC(0x0014) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineBoneDriverComponent");
@@ -60,16 +58,15 @@ public:
 class USpineBoneFollowerComponent : public USceneComponent
 {
 public:
-	class AActor*                                      Target;                                                   // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     BoneName;                                                 // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               UseComponentTransform;                                    // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UsePosition;                                              // 0x03B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseRotation;                                              // 0x03BA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               UseScale;                                                 // 0x03BB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
+	class AActor* Target; // 0x03A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString BoneName; // 0x03A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool UseComponentTransform; // 0x03B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UsePosition; // 0x03B9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UseRotation; // 0x03BA(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool UseScale; // 0x03BB(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x03BC(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineBoneFollowerComponent");
@@ -84,16 +81,15 @@ public:
 class UTrackEntry : public UObject
 {
 public:
-	struct FScriptMulticastDelegate                    animationStart;                                           // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationInterrupt;                                       // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationEvent;                                           // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationComplete;                                        // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    animationEnd;                                             // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationDispose;                                         // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate animationStart; // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationInterrupt; // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationEvent; // 0x0048(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationComplete; // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate animationEnd; // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationDispose; // 0x0078(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x8]; // 0x0088(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.TrackEntry");
@@ -141,14 +137,13 @@ public:
 class USpineSkeletonComponent : public UActorComponent
 {
 public:
-	class USpineAtlasAsset*                            Atlas;                                                    // 0x0178(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USpineSkeletonDataAsset*                     SkeletonData;                                             // 0x0180(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    BeforeUpdateWorldTransform;                               // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AfterUpdateWorldTransform;                                // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x01A8(0x0028) MISSED OFFSET
+	class USpineAtlasAsset* Atlas; // 0x0178(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USpineSkeletonDataAsset* SkeletonData; // 0x0180(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate BeforeUpdateWorldTransform; // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AfterUpdateWorldTransform; // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData00[0x28]; // 0x01A8(0x0028) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineSkeletonComponent");
@@ -187,21 +182,20 @@ public:
 class USpineSkeletonAnimationComponent : public USpineSkeletonComponent
 {
 public:
-	struct FScriptMulticastDelegate                    animationStart;                                           // 0x01D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationInterrupt;                                       // 0x01E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationEvent;                                           // 0x01F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationComplete;                                        // 0x0200(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    animationEnd;                                             // 0x0210(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationDispose;                                         // 0x0220(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FString                                     PreviewAnimation;                                         // 0x0230(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     PreviewSkin;                                              // 0x0240(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0250(0x0008) MISSED OFFSET
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0250(0x0050) UNKNOWN PROPERTY: SetProperty SpinePlugin.SpineSkeletonAnimationComponent.trackEntries
-	bool                                               bAutoPlaying;                                             // 0x02A8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x27];                                      // 0x02A9(0x0027) MISSED OFFSET
+	struct FScriptMulticastDelegate animationStart; // 0x01D0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationInterrupt; // 0x01E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationEvent; // 0x01F0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationComplete; // 0x0200(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate animationEnd; // 0x0210(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationDispose; // 0x0220(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FString PreviewAnimation; // 0x0230(0x0010) (Edit, ZeroConstructor)
+	struct FString PreviewSkin; // 0x0240(0x0010) (Edit, ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x0250(0x0008) MISSED OFFSET
+	unsigned char UnknownData01[0x50]; // 0x0250(0x0050) UNKNOWN PROPERTY: SetProperty SpinePlugin.SpineSkeletonAnimationComponent.trackEntries
+	bool bAutoPlaying; // 0x02A8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x27]; // 0x02A9(0x0027) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineSkeletonAnimationComponent");
@@ -228,20 +222,19 @@ public:
 class USpineSkeletonDataAsset : public UObject
 {
 public:
-	float                                              DefaultMix;                                               // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FSpineAnimationStateMixData>         MixData;                                                  // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             Bones;                                                    // 0x0040(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
-	TArray<struct FString>                             Slots;                                                    // 0x0050(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
-	TArray<struct FString>                             Skins;                                                    // 0x0060(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
-	TArray<struct FString>                             Animations;                                               // 0x0070(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
-	TArray<struct FString>                             Events;                                                   // 0x0080(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
-	TArray<unsigned char>                              rawData;                                                  // 0x0090(0x0010) (ZeroConstructor)
-	struct FName                                       skeletonDataFileName;                                     // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x00A8(0x0050) MISSED OFFSET
+	float DefaultMix; // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x002C(0x0004) MISSED OFFSET
+	TArray<struct FSpineAnimationStateMixData> MixData; // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FString> Bones; // 0x0040(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
+	TArray<struct FString> Slots; // 0x0050(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
+	TArray<struct FString> Skins; // 0x0060(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
+	TArray<struct FString> Animations; // 0x0070(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
+	TArray<struct FString> Events; // 0x0080(0x0010) (Edit, ZeroConstructor, Transient, EditConst)
+	TArray<unsigned char> rawData; // 0x0090(0x0010) (ZeroConstructor)
+	struct FName skeletonDataFileName; // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x50]; // 0x00A8(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineSkeletonDataAsset");
@@ -252,31 +245,30 @@ public:
 
 
 // Class SpinePlugin.SpineSkeletonRendererComponent
-// 0x03C0 (0x0DA0 - 0x09E0)
+// 0x03C0 (0x0DC0 - 0x0A00)
 class USpineSkeletonRendererComponent : public UProceduralMeshComponent
 {
 public:
-	class UMaterialInterface*                          NormalBlendMaterial;                                      // 0x09E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          AdditiveBlendMaterial;                                    // 0x09E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          MultiplyBlendMaterial;                                    // 0x09F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          ScreenBlendMaterial;                                      // 0x09F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstanceDynamic*>            atlasNormalBlendMaterials;                                // 0x0A00(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0A10(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasAdditiveBlendMaterials;                              // 0x0A60(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0A70(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasMultiplyBlendMaterials;                              // 0x0AC0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0AD0(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasScreenBlendMaterials;                                // 0x0B20(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0B30(0x0050) MISSED OFFSET
-	float                                              DepthOffset;                                              // 0x0B80(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x0B84(0x0004) MISSED OFFSET
-	struct FName                                       TextureParameterName;                                     // 0x0B88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // 0x0B90(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bCreateCollision;                                         // 0x0BA0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x1FF];                                     // 0x0BA1(0x01FF) MISSED OFFSET
+	class UMaterialInterface* NormalBlendMaterial; // 0x0A00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* AdditiveBlendMaterial; // 0x0A08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* MultiplyBlendMaterial; // 0x0A10(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* ScreenBlendMaterial; // 0x0A18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UMaterialInstanceDynamic*> atlasNormalBlendMaterials; // 0x0A20(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData00[0x50]; // 0x0A30(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasAdditiveBlendMaterials; // 0x0A80(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData01[0x50]; // 0x0A90(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasMultiplyBlendMaterials; // 0x0AE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData02[0x50]; // 0x0AF0(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasScreenBlendMaterials; // 0x0B40(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData03[0x50]; // 0x0B50(0x0050) MISSED OFFSET
+	float DepthOffset; // 0x0BA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData04[0x4]; // 0x0BA4(0x0004) MISSED OFFSET
+	struct FName TextureParameterName; // 0x0BA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor Color; // 0x0BB0(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	bool bCreateCollision; // 0x0BC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x1FF]; // 0x0BC1(0x01FF) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineSkeletonRendererComponent");
@@ -291,47 +283,46 @@ public:
 class USpineWidget : public UWidget
 {
 public:
-	float                                              Scale;                                                    // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0104(0x0004) MISSED OFFSET
-	struct FString                                     InitialSkin;                                              // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class USpineAtlasAsset*                            Atlas;                                                    // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USpineSkeletonDataAsset*                     SkeletonData;                                             // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          NormalBlendMaterial;                                      // 0x0128(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          AdditiveBlendMaterial;                                    // 0x0130(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          MultiplyBlendMaterial;                                    // 0x0138(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          ScreenBlendMaterial;                                      // 0x0140(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TMap<struct FName, class UMaterialInterface*>      CustomMaterials;                                          // 0x0148(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FName, struct FName>                   Sockets;                                                  // 0x0198(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x01E8(0x0050) MISSED OFFSET
-	struct FName                                       TextureParameterName;                                     // 0x0238(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              DepthOffset;                                              // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // 0x0244(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0254(0x0004) MISSED OFFSET
-	struct FSlateBrush                                 Brush;                                                    // 0x0258(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FScriptMulticastDelegate                    BeforeUpdateWorldTransform;                               // 0x0310(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AfterUpdateWorldTransform;                                // 0x0320(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    animationStart;                                           // 0x0330(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationInterrupt;                                       // 0x0340(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationEvent;                                           // 0x0350(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationComplete;                                        // 0x0360(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    animationEnd;                                             // 0x0370(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    AnimationDispose;                                         // 0x0380(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData03[0x40];                                      // 0x0390(0x0040) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasNormalBlendMaterials;                                // 0x03D0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData04[0x50];                                      // 0x03E0(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasAdditiveBlendMaterials;                              // 0x0430(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData05[0x50];                                      // 0x0440(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasMultiplyBlendMaterials;                              // 0x0490(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData06[0x50];                                      // 0x04A0(0x0050) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            atlasScreenBlendMaterials;                                // 0x04F0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData07[0x240];                                     // 0x0500(0x0240) MISSED OFFSET
-	unsigned char                                      UnknownData08[0x50];                                      // 0x0500(0x0050) UNKNOWN PROPERTY: SetProperty SpinePlugin.SpineWidget.trackEntries
-	unsigned char                                      UnknownData09[0x50];                                      // 0x0790(0x0050) MISSED OFFSET
-	bool                                               bAutoPlaying;                                             // 0x07E0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x7];                                       // 0x07E1(0x0007) MISSED OFFSET
+	float Scale; // 0x0100(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0104(0x0004) MISSED OFFSET
+	struct FString InitialSkin; // 0x0108(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class USpineAtlasAsset* Atlas; // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USpineSkeletonDataAsset* SkeletonData; // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* NormalBlendMaterial; // 0x0128(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* AdditiveBlendMaterial; // 0x0130(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* MultiplyBlendMaterial; // 0x0138(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface* ScreenBlendMaterial; // 0x0140(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TMap<struct FName, class UMaterialInterface*> CustomMaterials; // 0x0148(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FName, struct FName> Sockets; // 0x0198(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char UnknownData01[0x50]; // 0x01E8(0x0050) MISSED OFFSET
+	struct FName TextureParameterName; // 0x0238(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float DepthOffset; // 0x0240(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor Color; // 0x0244(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x0254(0x0004) MISSED OFFSET
+	struct FSlateBrush Brush; // 0x0258(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FScriptMulticastDelegate BeforeUpdateWorldTransform; // 0x0310(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AfterUpdateWorldTransform; // 0x0320(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate animationStart; // 0x0330(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationInterrupt; // 0x0340(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationEvent; // 0x0350(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationComplete; // 0x0360(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate animationEnd; // 0x0370(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate AnimationDispose; // 0x0380(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData03[0x40]; // 0x0390(0x0040) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasNormalBlendMaterials; // 0x03D0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData04[0x50]; // 0x03E0(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasAdditiveBlendMaterials; // 0x0430(0x0010) (ZeroConstructor)
+	unsigned char UnknownData05[0x50]; // 0x0440(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasMultiplyBlendMaterials; // 0x0490(0x0010) (ZeroConstructor)
+	unsigned char UnknownData06[0x50]; // 0x04A0(0x0050) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*> atlasScreenBlendMaterials; // 0x04F0(0x0010) (ZeroConstructor)
+	unsigned char UnknownData07[0x240]; // 0x0500(0x0240) MISSED OFFSET
+	unsigned char UnknownData08[0x50]; // 0x0500(0x0050) UNKNOWN PROPERTY: SetProperty SpinePlugin.SpineWidget.trackEntries
+	unsigned char UnknownData09[0x50]; // 0x0790(0x0050) MISSED OFFSET
+	bool bAutoPlaying; // 0x07E0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData10[0x7]; // 0x07E1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class SpinePlugin.SpineWidget");

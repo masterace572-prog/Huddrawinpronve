@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function Niagara.NiagaraComponent.SetSeekDelta
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InSeekDelta                    (Parm, ZeroConstructor, IsPlainOldData)
+// float InSeekDelta (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
 {
@@ -35,7 +35,7 @@ void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
 // Function Niagara.NiagaraComponent.SetRenderingEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInRenderingEnabled            (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInRenderingEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
 {
@@ -59,8 +59,8 @@ void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
 // Function Niagara.NiagaraComponent.SetPreviewLODDistance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnablePreviewLODDistance      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PreviewLODDistance             (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnablePreviewLODDistance (Parm, ZeroConstructor, IsPlainOldData)
+// float PreviewLODDistance (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance)
 {
@@ -85,8 +85,8 @@ void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, fl
 // Function Niagara.NiagaraComponent.SetPreviewDetailLevel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnablePreviewDetailLevel      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PreviewDetailLevel             (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnablePreviewDetailLevel (Parm, ZeroConstructor, IsPlainOldData)
+// int PreviewDetailLevel (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetPreviewDetailLevel(bool bEnablePreviewDetailLevel, int PreviewDetailLevel)
 {
@@ -111,7 +111,7 @@ void UNiagaraComponent::SetPreviewDetailLevel(bool bEnablePreviewDetailLevel, in
 // Function Niagara.NiagaraComponent.SetPaused
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInPaused                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInPaused (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetPaused(bool bInPaused)
 {
@@ -135,8 +135,8 @@ void UNiagaraComponent::SetPaused(bool bInPaused)
 // Function Niagara.NiagaraComponent.SetNiagaraVariableVec4
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector4                InValue                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector4 InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableVec4(const struct FString& InVariableName, const struct FVector4& InValue)
 {
@@ -161,8 +161,8 @@ void UNiagaraComponent::SetNiagaraVariableVec4(const struct FString& InVariableN
 // Function Niagara.NiagaraComponent.SetNiagaraVariableVec3
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector                 InValue                        (Parm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector InValue (Parm, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableVec3(const struct FString& InVariableName, const struct FVector& InValue)
 {
@@ -187,8 +187,8 @@ void UNiagaraComponent::SetNiagaraVariableVec3(const struct FString& InVariableN
 // Function Niagara.NiagaraComponent.SetNiagaraVariableVec2
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector2D               InValue                        (Parm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector2D InValue (Parm, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableVec2(const struct FString& InVariableName, const struct FVector2D& InValue)
 {
@@ -213,8 +213,8 @@ void UNiagaraComponent::SetNiagaraVariableVec2(const struct FString& InVariableN
 // Function Niagara.NiagaraComponent.SetNiagaraVariableQuat
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FQuat                   InValue                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FQuat InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableQuat(const struct FString& InVariableName, const struct FQuat& InValue)
 {
@@ -239,8 +239,8 @@ void UNiagaraComponent::SetNiagaraVariableQuat(const struct FString& InVariableN
 // Function Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FLinearColor            InValue                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FLinearColor InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableLinearColor(const struct FString& InVariableName, const struct FLinearColor& InValue)
 {
@@ -265,8 +265,8 @@ void UNiagaraComponent::SetNiagaraVariableLinearColor(const struct FString& InVa
 // Function Niagara.NiagaraComponent.SetNiagaraVariableInt
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// int                            InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// int InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableInt(const struct FString& InVariableName, int InValue)
 {
@@ -291,8 +291,8 @@ void UNiagaraComponent::SetNiagaraVariableInt(const struct FString& InVariableNa
 // Function Niagara.NiagaraComponent.SetNiagaraVariableFloat
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// float                          InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// float InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableFloat(const struct FString& InVariableName, float InValue)
 {
@@ -317,8 +317,8 @@ void UNiagaraComponent::SetNiagaraVariableFloat(const struct FString& InVariable
 // Function Niagara.NiagaraComponent.SetNiagaraVariableBool
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// bool                           InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// bool InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableBool(const struct FString& InVariableName, bool InValue)
 {
@@ -343,8 +343,8 @@ void UNiagaraComponent::SetNiagaraVariableBool(const struct FString& InVariableN
 // Function Niagara.NiagaraComponent.SetNiagaraVariableActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetNiagaraVariableActor(const struct FString& InVariableName, class AActor* Actor)
 {
@@ -369,7 +369,7 @@ void UNiagaraComponent::SetNiagaraVariableActor(const struct FString& InVariable
 // Function Niagara.NiagaraComponent.SetMaxSimTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InMaxTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float InMaxTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
 {
@@ -393,7 +393,7 @@ void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
 // Function Niagara.NiagaraComponent.SetForceSolo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInForceSolo                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInForceSolo (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
 {
@@ -417,7 +417,7 @@ void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
 // Function Niagara.NiagaraComponent.SetDesiredAge
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InDesiredAge                   (Parm, ZeroConstructor, IsPlainOldData)
+// float InDesiredAge (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
 {
@@ -441,7 +441,7 @@ void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
 // Function Niagara.NiagaraComponent.SetCanRenderWhileSeeking
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInCanRenderWhileSeeking       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInCanRenderWhileSeeking (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
 {
@@ -465,7 +465,7 @@ void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
 // Function Niagara.NiagaraComponent.SetAutoDestroy
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInAutoDestroy                 (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInAutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
 {
@@ -489,11 +489,11 @@ void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
 // Function Niagara.NiagaraComponent.SetAutoAttachmentParameters
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         Parent                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   SocketName                     (Parm, ZeroConstructor, IsPlainOldData)
-// EAttachmentRule                LocationRule                   (Parm, ZeroConstructor, IsPlainOldData)
-// EAttachmentRule                RotationRule                   (Parm, ZeroConstructor, IsPlainOldData)
-// EAttachmentRule                ScaleRule                      (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* Parent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName SocketName (Parm, ZeroConstructor, IsPlainOldData)
+// EAttachmentRule LocationRule (Parm, ZeroConstructor, IsPlainOldData)
+// EAttachmentRule RotationRule (Parm, ZeroConstructor, IsPlainOldData)
+// EAttachmentRule ScaleRule (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetAutoAttachmentParameters(class USceneComponent* Parent, const struct FName& SocketName, EAttachmentRule LocationRule, EAttachmentRule RotationRule, EAttachmentRule ScaleRule)
 {
@@ -521,7 +521,7 @@ void UNiagaraComponent::SetAutoAttachmentParameters(class USceneComponent* Paren
 // Function Niagara.NiagaraComponent.SetAsset
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraSystem*          InAsset                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraSystem* InAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
 {
@@ -545,7 +545,7 @@ void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
 // Function Niagara.NiagaraComponent.SetAgeUpdateMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ENiagaraAgeUpdateMode          InAgeUpdateMode                (Parm, ZeroConstructor, IsPlainOldData)
+// ENiagaraAgeUpdateMode InAgeUpdateMode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
 {
@@ -569,7 +569,7 @@ void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
 // Function Niagara.NiagaraComponent.SeekToDesiredAge
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InDesiredAge                   (Parm, ZeroConstructor, IsPlainOldData)
+// float InDesiredAge (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::SeekToDesiredAge(float InDesiredAge)
 {
@@ -635,7 +635,7 @@ void UNiagaraComponent::ReinitializeSystem()
 // Function Niagara.NiagaraComponent.IsPaused
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNiagaraComponent::IsPaused()
 {
@@ -660,7 +660,7 @@ bool UNiagaraComponent::IsPaused()
 // Function Niagara.NiagaraComponent.GetSeekDelta
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UNiagaraComponent::GetSeekDelta()
 {
@@ -685,9 +685,9 @@ float UNiagaraComponent::GetSeekDelta()
 // Function Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InEmitterName                  (Parm, ZeroConstructor)
-// struct FString                 InValueName                    (Parm, ZeroConstructor)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InEmitterName (Parm, ZeroConstructor)
+// struct FString InValueName (Parm, ZeroConstructor)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(const struct FString& InEmitterName, const struct FString& InValueName)
 {
@@ -714,9 +714,9 @@ TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(
 // Function Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InEmitterName                  (Parm, ZeroConstructor)
-// struct FString                 InValueName                    (Parm, ZeroConstructor)
-// TArray<float>                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InEmitterName (Parm, ZeroConstructor)
+// struct FString InValueName (Parm, ZeroConstructor)
+// TArray<float> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const struct FString& InEmitterName, const struct FString& InValueName)
 {
@@ -743,8 +743,8 @@ TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const struct
 // Function Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InEmitterName                  (Parm, ZeroConstructor)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InEmitterName (Parm, ZeroConstructor)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(const struct FString& InEmitterName)
 {
@@ -770,7 +770,7 @@ TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(
 // Function Niagara.NiagaraComponent.GetMaxSimTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UNiagaraComponent::GetMaxSimTime()
 {
@@ -795,7 +795,7 @@ float UNiagaraComponent::GetMaxSimTime()
 // Function Niagara.NiagaraComponent.GetForceSolo
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNiagaraComponent::GetForceSolo()
 {
@@ -820,7 +820,7 @@ bool UNiagaraComponent::GetForceSolo()
 // Function Niagara.NiagaraComponent.GetDesiredAge
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UNiagaraComponent::GetDesiredAge()
 {
@@ -845,7 +845,7 @@ float UNiagaraComponent::GetDesiredAge()
 // Function Niagara.NiagaraComponent.GetAsset
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UNiagaraSystem*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UNiagaraSystem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UNiagaraSystem* UNiagaraComponent::GetAsset()
 {
@@ -870,7 +870,7 @@ class UNiagaraSystem* UNiagaraComponent::GetAsset()
 // Function Niagara.NiagaraComponent.GetAgeUpdateMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ENiagaraAgeUpdateMode          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ENiagaraAgeUpdateMode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ENiagaraAgeUpdateMode UNiagaraComponent::GetAgeUpdateMode()
 {
@@ -916,8 +916,8 @@ void UNiagaraComponent::DeactivateImmediate()
 // Function Niagara.NiagaraComponent.AdvanceSimulationByTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          SimulateTime                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TickDeltaSeconds               (Parm, ZeroConstructor, IsPlainOldData)
+// float SimulateTime (Parm, ZeroConstructor, IsPlainOldData)
+// float TickDeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds)
 {
@@ -942,8 +942,8 @@ void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDe
 // Function Niagara.NiagaraComponent.AdvanceSimulation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            TickCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TickDeltaSeconds               (Parm, ZeroConstructor, IsPlainOldData)
+// int TickCount (Parm, ZeroConstructor, IsPlainOldData)
+// float TickDeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraComponent::AdvanceSimulation(int TickCount, float TickDeltaSeconds)
 {
@@ -968,14 +968,14 @@ void UNiagaraComponent::AdvanceSimulation(int TickCount, float TickDeltaSeconds)
 // Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UNiagaraSystem*          SystemTemplate                 (Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   AttachPointName                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, IsPlainOldData)
-// TEnumAsByte<enum EAttachLocation> LocationType                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UNiagaraComponent*       ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UNiagaraSystem* SystemTemplate (Parm, ZeroConstructor, IsPlainOldData)
+// class USceneComponent* AttachToComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName AttachPointName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Rotation (Parm, IsPlainOldData)
+// TEnumAsByte<enum EAttachLocation> LocationType (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<enum EAttachLocation> LocationType, bool bAutoDestroy)
 {
@@ -1007,12 +1007,12 @@ class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNia
 // Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UNiagaraSystem*          SystemTemplate                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, IsPlainOldData)
-// bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UNiagaraComponent*       ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraSystem* SystemTemplate (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Rotation (Parm, IsPlainOldData)
+// bool bAutoDestroy (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy)
 {
@@ -1042,9 +1042,9 @@ class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UO
 // Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraComponent*       NiagaraSystem                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 OverrideName                   (Parm, ZeroConstructor)
-// class UStaticMeshComponent*    StaticMeshComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UNiagaraComponent* NiagaraSystem (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString OverrideName (Parm, ZeroConstructor)
+// class UStaticMeshComponent* StaticMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const struct FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent)
 {
@@ -1070,9 +1070,9 @@ void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(clas
 // Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraComponent*       NiagaraSystem                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 OverrideName                   (Parm, ZeroConstructor)
-// class UStaticMesh*             StaticMesh                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraComponent* NiagaraSystem (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString OverrideName (Parm, ZeroConstructor)
+// class UStaticMesh* StaticMesh (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const struct FString& OverrideName, class UStaticMesh* StaticMesh)
 {
@@ -1098,9 +1098,9 @@ void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagar
 // Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UNiagaraComponent*       NiagaraSystem                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 OverrideName                   (Parm, ZeroConstructor)
-// class USkeletalMeshComponent*  SkeletalMeshComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UNiagaraComponent* NiagaraSystem (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString OverrideName (Parm, ZeroConstructor)
+// class USkeletalMeshComponent* SkeletalMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const struct FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent)
 {
@@ -1126,8 +1126,8 @@ void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(cl
 // Function Niagara.NiagaraFunctionLibrary.IsAllowNiagaraGPUParticles
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNiagaraFunctionLibrary::IsAllowNiagaraGPUParticles(class UObject* WorldContextObject)
 {
@@ -1153,7 +1153,7 @@ bool UNiagaraFunctionLibrary::IsAllowNiagaraGPUParticles(class UObject* WorldCon
 // Function Niagara.NiagaraFunctionLibrary.GetReadbackParticleCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraFunctionLibrary::GetReadbackParticleCount()
 {
@@ -1178,9 +1178,9 @@ int UNiagaraFunctionLibrary::GetReadbackParticleCount()
 // Function Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UNiagaraParameterCollection* Collection                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UNiagaraParameterCollectionInstance* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraParameterCollection* Collection (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraParameterCollectionInstance* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection)
 {
@@ -1207,7 +1207,7 @@ class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraPa
 // Function Niagara.NiagaraFunctionLibrary.GetGPUReadbackDelay
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraFunctionLibrary::GetGPUReadbackDelay()
 {
@@ -1232,7 +1232,7 @@ int UNiagaraFunctionLibrary::GetGPUReadbackDelay()
 // Function Niagara.NiagaraFunctionLibrary.GetGPUParticleCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraFunctionLibrary::GetGPUParticleCount()
 {
@@ -1257,7 +1257,7 @@ int UNiagaraFunctionLibrary::GetGPUParticleCount()
 // Function Niagara.NiagaraFunctionLibrary.GetDeadParticleCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraFunctionLibrary::GetDeadParticleCount()
 {
@@ -1282,7 +1282,7 @@ int UNiagaraFunctionLibrary::GetDeadParticleCount()
 // Function Niagara.NiagaraFunctionLibrary.GetCPUParticleCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraFunctionLibrary::GetCPUParticleCount()
 {
@@ -1307,8 +1307,8 @@ int UNiagaraFunctionLibrary::GetCPUParticleCount()
 // Function Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector                 InValue                        (Parm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector InValue (Parm, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetVectorParameter(const struct FString& InVariableName, const struct FVector& InValue)
 {
@@ -1333,8 +1333,8 @@ void UNiagaraParameterCollectionInstance::SetVectorParameter(const struct FStrin
 // Function Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector4                InValue                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector4 InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetVector4Parameter(const struct FString& InVariableName, const struct FVector4& InValue)
 {
@@ -1359,8 +1359,8 @@ void UNiagaraParameterCollectionInstance::SetVector4Parameter(const struct FStri
 // Function Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector2D               InValue                        (Parm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector2D InValue (Parm, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetVector2DParameter(const struct FString& InVariableName, const struct FVector2D& InValue)
 {
@@ -1385,8 +1385,8 @@ void UNiagaraParameterCollectionInstance::SetVector2DParameter(const struct FStr
 // Function Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FQuat                   InValue                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FQuat InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetQuatParameter(const struct FString& InVariableName, const struct FQuat& InValue)
 {
@@ -1411,8 +1411,8 @@ void UNiagaraParameterCollectionInstance::SetQuatParameter(const struct FString&
 // Function Niagara.NiagaraParameterCollectionInstance.SetIntParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// int                            InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// int InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetIntParameter(const struct FString& InVariableName, int InValue)
 {
@@ -1437,8 +1437,8 @@ void UNiagaraParameterCollectionInstance::SetIntParameter(const struct FString& 
 // Function Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// float                          InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// float InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetFloatParameter(const struct FString& InVariableName, float InValue)
 {
@@ -1463,8 +1463,8 @@ void UNiagaraParameterCollectionInstance::SetFloatParameter(const struct FString
 // Function Niagara.NiagaraParameterCollectionInstance.SetColorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FLinearColor            InValue                        (Parm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FLinearColor InValue (Parm, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetColorParameter(const struct FString& InVariableName, const struct FLinearColor& InValue)
 {
@@ -1489,8 +1489,8 @@ void UNiagaraParameterCollectionInstance::SetColorParameter(const struct FString
 // Function Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// bool                           InValue                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// bool InValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNiagaraParameterCollectionInstance::SetBoolParameter(const struct FString& InVariableName, bool InValue)
 {
@@ -1515,8 +1515,8 @@ void UNiagaraParameterCollectionInstance::SetBoolParameter(const struct FString&
 // Function Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const struct FString& InVariableName)
 {
@@ -1542,8 +1542,8 @@ struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const str
 // Function Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector4                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector4 ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const struct FString& InVariableName)
 {
@@ -1569,8 +1569,8 @@ struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const s
 // Function Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const struct FString& InVariableName)
 {
@@ -1596,8 +1596,8 @@ struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const
 // Function Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FQuat                   ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FQuat ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const struct FString& InVariableName)
 {
@@ -1623,8 +1623,8 @@ struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const struct 
 // Function Niagara.NiagaraParameterCollectionInstance.GetIntParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraParameterCollectionInstance::GetIntParameter(const struct FString& InVariableName)
 {
@@ -1650,8 +1650,8 @@ int UNiagaraParameterCollectionInstance::GetIntParameter(const struct FString& I
 // Function Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UNiagaraParameterCollectionInstance::GetFloatParameter(const struct FString& InVariableName)
 {
@@ -1677,8 +1677,8 @@ float UNiagaraParameterCollectionInstance::GetFloatParameter(const struct FStrin
 // Function Niagara.NiagaraParameterCollectionInstance.GetColorParameter
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const struct FString& InVariableName)
 {
@@ -1704,8 +1704,8 @@ struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const
 // Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InVariableName                 (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InVariableName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNiagaraParameterCollectionInstance::GetBoolParameter(const struct FString& InVariableName)
 {
@@ -1731,7 +1731,7 @@ bool UNiagaraParameterCollectionInstance::GetBoolParameter(const struct FString&
 // Function Niagara.NiagaraPreviewBase.SetSystem
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UNiagaraSystem*          InSystem                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UNiagaraSystem* InSystem (Parm, ZeroConstructor, IsPlainOldData)
 
 void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
 {
@@ -1754,8 +1754,8 @@ void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
 // Function Niagara.NiagaraPreviewBase.SetLabelText
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   InXAxisText                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   InYAxisText                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText InXAxisText (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText InYAxisText (ConstParm, Parm, OutParm, ReferenceParm)
 
 void ANiagaraPreviewBase::SetLabelText(const struct FText& InXAxisText, const struct FText& InYAxisText)
 {
@@ -1779,7 +1779,7 @@ void ANiagaraPreviewBase::SetLabelText(const struct FText& InXAxisText, const st
 // Function Niagara.NiagaraPreviewAxis.Num
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNiagaraPreviewAxis::Num()
 {
@@ -1804,10 +1804,10 @@ int UNiagaraPreviewAxis::Num()
 // Function Niagara.NiagaraPreviewAxis.ApplyToPreview
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// class UNiagaraComponent*       PreviewComponent               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            PreviewIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsXAxis                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 OutLabelText                   (Parm, OutParm, ZeroConstructor)
+// class UNiagaraComponent* PreviewComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int PreviewIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsXAxis (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString OutLabelText (Parm, OutParm, ZeroConstructor)
 
 void UNiagaraPreviewAxis::ApplyToPreview(class UNiagaraComponent* PreviewComponent, int PreviewIndex, bool bIsXAxis, struct FString* OutLabelText)
 {
@@ -1857,7 +1857,7 @@ void ANiagaraPreviewGrid::DeactivatePreviews()
 // Function Niagara.NiagaraPreviewGrid.ActivatePreviews
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void ANiagaraPreviewGrid::ActivatePreviews(bool bReset)
 {

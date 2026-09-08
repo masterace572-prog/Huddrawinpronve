@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function GameplayTags.BlueprintGameplayTagLibrary.RemoveGameplayTag
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (Parm, OutParm, ReferenceParm)
-// struct FGameplayTag            Tag                            (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (Parm, OutParm, ReferenceParm)
+// struct FGameplayTag Tag (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::RemoveGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer)
 {
@@ -42,9 +42,9 @@ bool UBlueprintGameplayTagLibrary::RemoveGameplayTag(const struct FGameplayTag& 
 // Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            A                              (Parm)
-// struct FString                 B                              (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag A (Parm)
+// struct FString B (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::NotEqual_TagTag(const struct FGameplayTag& A, const struct FString& B)
 {
@@ -71,9 +71,9 @@ bool UBlueprintGameplayTagLibrary::NotEqual_TagTag(const struct FGameplayTag& A,
 // Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagContainerTagContainer
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   A                              (Parm)
-// struct FString                 B                              (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer A (Parm)
+// struct FString B (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::NotEqual_TagContainerTagContainer(const struct FGameplayTagContainer& A, const struct FString& B)
 {
@@ -100,9 +100,9 @@ bool UBlueprintGameplayTagLibrary::NotEqual_TagContainerTagContainer(const struc
 // Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTagContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   A                              (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer   B                              (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer A (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer B (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::NotEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B)
 {
@@ -129,9 +129,9 @@ bool UBlueprintGameplayTagLibrary::NotEqual_GameplayTagContainer(const struct FG
 // Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            A                              (Parm)
-// struct FGameplayTag            B                              (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag A (Parm)
+// struct FGameplayTag B (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::NotEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B)
 {
@@ -158,10 +158,10 @@ bool UBlueprintGameplayTagLibrary::NotEqual_GameplayTag(const struct FGameplayTa
 // Function GameplayTags.BlueprintGameplayTagLibrary.MatchesTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            TagOne                         (Parm)
-// struct FGameplayTag            TagTwo                         (Parm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag TagOne (Parm)
+// struct FGameplayTag TagTwo (Parm)
+// bool bExactMatch (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::MatchesTag(const struct FGameplayTag& TagOne, const struct FGameplayTag& TagTwo, bool bExactMatch)
 {
@@ -189,10 +189,10 @@ bool UBlueprintGameplayTagLibrary::MatchesTag(const struct FGameplayTag& TagOne,
 // Function GameplayTags.BlueprintGameplayTagLibrary.MatchesAnyTags
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            TagOne                         (Parm)
-// struct FGameplayTagContainer   OtherContainer                 (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag TagOne (Parm)
+// struct FGameplayTagContainer OtherContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool bExactMatch (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::MatchesAnyTags(const struct FGameplayTag& TagOne, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch)
 {
@@ -220,8 +220,8 @@ bool UBlueprintGameplayTagLibrary::MatchesAnyTags(const struct FGameplayTag& Tag
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTagContainer
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   Value                          (Parm)
-// struct FGameplayTagContainer   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameplayTagContainer Value (Parm)
+// struct FGameplayTagContainer ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeLiteralGameplayTagContainer(const struct FGameplayTagContainer& Value)
 {
@@ -247,8 +247,8 @@ struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeLiteralGameplayTa
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            Value                          (Parm)
-// struct FGameplayTag            ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameplayTag Value (Parm)
+// struct FGameplayTag ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTag UBlueprintGameplayTagLibrary::MakeLiteralGameplayTag(const struct FGameplayTag& Value)
 {
@@ -274,8 +274,8 @@ struct FGameplayTag UBlueprintGameplayTagLibrary::MakeLiteralGameplayTag(const s
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagQuery
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagQuery       TagQuery                       (Parm)
-// struct FGameplayTagQuery       ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameplayTagQuery TagQuery (Parm)
+// struct FGameplayTagQuery ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTagQuery UBlueprintGameplayTagLibrary::MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery)
 {
@@ -301,8 +301,8 @@ struct FGameplayTagQuery UBlueprintGameplayTagLibrary::MakeGameplayTagQuery(cons
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            SingleTag                      (Parm)
-// struct FGameplayTagContainer   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FGameplayTag SingleTag (Parm)
+// struct FGameplayTagContainer ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeGameplayTagContainerFromTag(const struct FGameplayTag& SingleTag)
 {
@@ -328,8 +328,8 @@ struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeGameplayTagContai
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromArray
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FGameplayTag>    GameplayTags                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FGameplayTagContainer   ReturnValue                    (Parm, OutParm, ReturnParm)
+// TArray<struct FGameplayTag> GameplayTags (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FGameplayTagContainer ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeGameplayTagContainerFromArray(TArray<struct FGameplayTag> GameplayTags)
 {
@@ -355,8 +355,8 @@ struct FGameplayTagContainer UBlueprintGameplayTagLibrary::MakeGameplayTagContai
 // Function GameplayTags.BlueprintGameplayTagLibrary.IsGameplayTagValid
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            GameplayTag                    (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag GameplayTag (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::IsGameplayTagValid(const struct FGameplayTag& GameplayTag)
 {
@@ -382,10 +382,10 @@ bool UBlueprintGameplayTagLibrary::IsGameplayTagValid(const struct FGameplayTag&
 // Function GameplayTags.BlueprintGameplayTagLibrary.HasTag
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTag            Tag                            (Parm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTag Tag (Parm)
+// bool bExactMatch (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch)
 {
@@ -413,10 +413,10 @@ bool UBlueprintGameplayTagLibrary::HasTag(const struct FGameplayTagContainer& Ta
 // Function GameplayTags.BlueprintGameplayTagLibrary.HasAnyTags
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer   OtherContainer                 (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer OtherContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool bExactMatch (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch)
 {
@@ -444,10 +444,10 @@ bool UBlueprintGameplayTagLibrary::HasAnyTags(const struct FGameplayTagContainer
 // Function GameplayTags.BlueprintGameplayTagLibrary.HasAllTags
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer   OtherContainer                 (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           bExactMatch                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer OtherContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool bExactMatch (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::HasAllTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch)
 {
@@ -475,9 +475,9 @@ bool UBlueprintGameplayTagLibrary::HasAllTags(const struct FGameplayTagContainer
 // Function GameplayTags.BlueprintGameplayTagLibrary.HasAllMatchingGameplayTags
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTagContainer   OtherContainer                 (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTagContainer OtherContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTagContainer& OtherContainer)
 {
@@ -504,8 +504,8 @@ bool UBlueprintGameplayTagLibrary::HasAllMatchingGameplayTags(const TScriptInter
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetTagName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            GameplayTag                    (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag GameplayTag (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UBlueprintGameplayTagLibrary::GetTagName(const struct FGameplayTag& GameplayTag)
 {
@@ -531,8 +531,8 @@ struct FName UBlueprintGameplayTagLibrary::GetTagName(const struct FGameplayTag&
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetNumGameplayTagsInContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlueprintGameplayTagLibrary::GetNumGameplayTagsInContainer(const struct FGameplayTagContainer& TagContainer)
 {
@@ -558,8 +558,8 @@ int UBlueprintGameplayTagLibrary::GetNumGameplayTagsInContainer(const struct FGa
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTagContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlueprintGameplayTagLibrary::GetDebugStringFromGameplayTagContainer(const struct FGameplayTagContainer& TagContainer)
 {
@@ -585,8 +585,8 @@ struct FString UBlueprintGameplayTagLibrary::GetDebugStringFromGameplayTagContai
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            GameplayTag                    (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FGameplayTag GameplayTag (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlueprintGameplayTagLibrary::GetDebugStringFromGameplayTag(const struct FGameplayTag& GameplayTag)
 {
@@ -612,10 +612,10 @@ struct FString UBlueprintGameplayTagLibrary::GetDebugStringFromGameplayTag(const
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetAllActorsOfClassMatchingTagQuery
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ActorClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTagQuery       GameplayTagQuery               (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ActorClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTagQuery GameplayTagQuery (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UBlueprintGameplayTagLibrary::GetAllActorsOfClassMatchingTagQuery(class UObject* WorldContextObject, class UClass* ActorClass, const struct FGameplayTagQuery& GameplayTagQuery, TArray<class AActor*>* OutActors)
 {
@@ -644,9 +644,9 @@ void UBlueprintGameplayTagLibrary::GetAllActorsOfClassMatchingTagQuery(class UOb
 // Function GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTagContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   A                              (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer   B                              (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer A (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer B (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::EqualEqual_GameplayTagContainer(const struct FGameplayTagContainer& A, const struct FGameplayTagContainer& B)
 {
@@ -673,9 +673,9 @@ bool UBlueprintGameplayTagLibrary::EqualEqual_GameplayTagContainer(const struct 
 // Function GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTag            A                              (Parm)
-// struct FGameplayTag            B                              (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag A (Parm)
+// struct FGameplayTag B (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::EqualEqual_GameplayTag(const struct FGameplayTag& A, const struct FGameplayTag& B)
 {
@@ -702,9 +702,9 @@ bool UBlueprintGameplayTagLibrary::EqualEqual_GameplayTag(const struct FGameplay
 // Function GameplayTags.BlueprintGameplayTagLibrary.DoesTagAssetInterfaceHaveTag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameplayTag            Tag                            (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTag Tag (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTag& Tag)
 {
@@ -731,9 +731,9 @@ bool UBlueprintGameplayTagLibrary::DoesTagAssetInterfaceHaveTag(const TScriptInt
 // Function GameplayTags.BlueprintGameplayTagLibrary.DoesContainerMatchTagQuery
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FGameplayTagQuery       TagQuery                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagQuery TagQuery (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlueprintGameplayTagLibrary::DoesContainerMatchTagQuery(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagQuery& TagQuery)
 {
@@ -760,8 +760,8 @@ bool UBlueprintGameplayTagLibrary::DoesContainerMatchTagQuery(const struct FGame
 // Function GameplayTags.BlueprintGameplayTagLibrary.BreakGameplayTagContainer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer   GameplayTagContainer           (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<struct FGameplayTag>    GameplayTags                   (Parm, OutParm, ZeroConstructor)
+// struct FGameplayTagContainer GameplayTagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FGameplayTag> GameplayTags (Parm, OutParm, ZeroConstructor)
 
 void UBlueprintGameplayTagLibrary::BreakGameplayTagContainer(const struct FGameplayTagContainer& GameplayTagContainer, TArray<struct FGameplayTag>* GameplayTags)
 {
@@ -788,8 +788,8 @@ void UBlueprintGameplayTagLibrary::BreakGameplayTagContainer(const struct FGamep
 // Function GameplayTags.BlueprintGameplayTagLibrary.AppendGameplayTagContainers
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGameplayTagContainer   InOutTagContainer              (Parm, OutParm, ReferenceParm)
-// struct FGameplayTagContainer   InTagContainer                 (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer InOutTagContainer (Parm, OutParm, ReferenceParm)
+// struct FGameplayTagContainer InTagContainer (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlueprintGameplayTagLibrary::AppendGameplayTagContainers(const struct FGameplayTagContainer& InTagContainer, struct FGameplayTagContainer* InOutTagContainer)
 {
@@ -816,8 +816,8 @@ void UBlueprintGameplayTagLibrary::AppendGameplayTagContainers(const struct FGam
 // Function GameplayTags.BlueprintGameplayTagLibrary.AddGameplayTag
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (Parm, OutParm, ReferenceParm)
-// struct FGameplayTag            Tag                            (Parm)
+// struct FGameplayTagContainer TagContainer (Parm, OutParm, ReferenceParm)
+// struct FGameplayTag Tag (Parm)
 
 void UBlueprintGameplayTagLibrary::AddGameplayTag(const struct FGameplayTag& Tag, struct FGameplayTagContainer* TagContainer)
 {
@@ -844,8 +844,8 @@ void UBlueprintGameplayTagLibrary::AddGameplayTag(const struct FGameplayTag& Tag
 // Function GameplayTags.GameplayTagAssetInterface.HasMatchingGameplayTag
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTag            TagToCheck                     (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag TagToCheck (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck)
 {
@@ -871,8 +871,8 @@ bool UGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTa
 // Function GameplayTags.GameplayTagAssetInterface.HasAnyMatchingGameplayTags
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGameplayTagAssetInterface::HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
 {
@@ -898,8 +898,8 @@ bool UGameplayTagAssetInterface::HasAnyMatchingGameplayTags(const struct FGamepl
 // Function GameplayTags.GameplayTagAssetInterface.HasAllMatchingGameplayTags
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTagContainer TagContainer (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGameplayTagAssetInterface::HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer)
 {
@@ -925,7 +925,7 @@ bool UGameplayTagAssetInterface::HasAllMatchingGameplayTags(const struct FGamepl
 // Function GameplayTags.GameplayTagAssetInterface.GetOwnedGameplayTags
 // (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTagContainer   TagContainer                   (Parm, OutParm)
+// struct FGameplayTagContainer TagContainer (Parm, OutParm)
 
 void UGameplayTagAssetInterface::GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer)
 {

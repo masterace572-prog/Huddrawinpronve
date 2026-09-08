@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,10 +13,9 @@ namespace SDK
 class AMediaPlane : public AActor
 {
 public:
-	class UMediaPlaneComponent*                        MediaPlane;                                               // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UMediaPlaneComponent* MediaPlane; // 0x04B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MediaCompositing.MediaPlane");
@@ -27,15 +26,14 @@ public:
 
 
 // Class MediaCompositing.MediaPlaneComponent
-// 0x00D0 (0x09F0 - 0x0920)
+// 0x00D0 (0x0A10 - 0x0940)
 class UMediaPlaneComponent : public UPrimitiveComponent
 {
 public:
-	struct FMediaPlaneParameters                       Plane;                                                    // 0x0920(0x0038) (Edit)
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0958(0x0098) MISSED OFFSET
+	struct FMediaPlaneParameters Plane; // 0x0940(0x0038) (Edit)
+	unsigned char UnknownData00[0x98]; // 0x0978(0x0098) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MediaCompositing.MediaPlaneComponent");
@@ -50,13 +48,12 @@ public:
 
 
 // Class MediaCompositing.MediaPlaneFrustumComponent
-// 0x0000 (0x0920 - 0x0920)
+// 0x0000 (0x0940 - 0x0940)
 class UMediaPlaneFrustumComponent : public UPrimitiveComponent
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MediaCompositing.MediaPlaneFrustumComponent");
@@ -71,18 +68,17 @@ public:
 class UMovieSceneMediaSection : public UMovieSceneSection
 {
 public:
-	class UMediaSource*                                MediaSource;                                              // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x00B9(0x0003) MISSED OFFSET
-	float                                              StartTimeOffset;                                          // 0x00BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMediaTexture*                               MediaTexture;                                             // 0x00C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMediaSoundComponent*                        MediaSoundComponent;                                      // 0x00C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bUseExternalMediaPlayer;                                  // 0x00D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
-	class UMediaPlayer*                                ExternalMediaPlayer;                                      // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMediaSource* MediaSource; // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bLooping; // 0x00B8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x00B9(0x0003) MISSED OFFSET
+	float StartTimeOffset; // 0x00BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMediaTexture* MediaTexture; // 0x00C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMediaSoundComponent* MediaSoundComponent; // 0x00C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bUseExternalMediaPlayer; // 0x00D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x00D1(0x0007) MISSED OFFSET
+	class UMediaPlayer* ExternalMediaPlayer; // 0x00D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MediaCompositing.MovieSceneMediaSection");
@@ -98,8 +94,7 @@ class UMovieSceneMediaTrack : public UMovieScenePropertyTrack
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");

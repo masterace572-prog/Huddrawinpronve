@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,14 +13,13 @@ namespace SDK
 class UKantanChart : public UWidget
 {
 public:
-	struct FMargin                                     Margins;                                                  // 0x0100(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FText                                       ChartTitle;                                               // 0x0110(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FMargin                                     TitlePadding;                                             // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	float                                              UpdateTickRate;                                           // 0x0138(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x013C(0x0014) MISSED OFFSET
+	struct FMargin Margins; // 0x0100(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FText ChartTitle; // 0x0110(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FMargin TitlePadding; // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	float UpdateTickRate; // 0x0138(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x14]; // 0x013C(0x0014) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanChart");
@@ -40,13 +39,12 @@ public:
 class UKantanCategoryChart : public UKantanChart
 {
 public:
-	bool                                               bAutoPerCategoryStyles;                                   // 0x0150(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0151(0x0007) MISSED OFFSET
-	class UKantanCategoryStyleSet*                     CategoryStyleSet;                                         // 0x0158(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FCategoryStyleManualMapping>         ManualStyleMappings;                                      // 0x0160(0x0010) (Edit, ZeroConstructor)
+	bool bAutoPerCategoryStyles; // 0x0150(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0151(0x0007) MISSED OFFSET
+	class UKantanCategoryStyleSet* CategoryStyleSet; // 0x0158(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FCategoryStyleManualMapping> ManualStyleMappings; // 0x0160(0x0010) (Edit, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanCategoryChart");
@@ -63,19 +61,18 @@ public:
 class UKantanBarChartBase : public UKantanCategoryChart
 {
 public:
-	struct FKantanBarChartStyle                        WidgetStyle;                                              // 0x0170(0x0158) (Edit, BlueprintVisible)
-	EKantanBarChartOrientation                         Orientation;                                              // 0x02C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02C9(0x0003) MISSED OFFSET
-	float                                              MaxBarValue;                                              // 0x02CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	EKantanBarLabelPosition                            LabelPosition;                                            // 0x02D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x02D1(0x0003) MISSED OFFSET
-	float                                              BarToGapRatio;                                            // 0x02D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	EKantanBarValueExtents                             ValueExtentsDisplay;                                      // 0x02D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x02D9(0x0007) MISSED OFFSET
-	struct FCartesianAxisConfig                        ValueAxisCfg;                                             // 0x02E0(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FKantanBarChartStyle WidgetStyle; // 0x0170(0x0158) (Edit, BlueprintVisible)
+	EKantanBarChartOrientation Orientation; // 0x02C8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x02C9(0x0003) MISSED OFFSET
+	float MaxBarValue; // 0x02CC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	EKantanBarLabelPosition LabelPosition; // 0x02D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x02D1(0x0003) MISSED OFFSET
+	float BarToGapRatio; // 0x02D4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	EKantanBarValueExtents ValueExtentsDisplay; // 0x02D8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x02D9(0x0007) MISSED OFFSET
+	struct FCartesianAxisConfig ValueAxisCfg; // 0x02E0(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanBarChartBase");
@@ -97,10 +94,9 @@ public:
 class UBarChart : public UKantanBarChartBase
 {
 public:
-	class UObject*                                     DataSource;                                               // 0x0328(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject* DataSource; // 0x0328(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.BarChart");
@@ -117,20 +113,19 @@ public:
 class UKantanCartesianChartBase : public UKantanChart
 {
 public:
-	struct FKantanCartesianChartStyle                  WidgetStyle;                                              // 0x0150(0x0158) (Edit, BlueprintVisible)
-	struct FKantanCartesianPlotScale                   PlotScale;                                                // 0x02A8(0x0024) (Edit)
-	TEnumAsByte<enum EKantanDataPointSize>             DataPointSize;                                            // 0x02CC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02CD(0x0003) MISSED OFFSET
-	struct FCartesianAxisConfig                        XAxisCfg;                                                 // 0x02D0(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FCartesianAxisConfig                        YAxisCfg;                                                 // 0x0318(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FMargin                                     AxisTitlePadding;                                         // 0x0360(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	class UKantanSeriesStyleSet*                       SeriesStyleSet;                                           // 0x0370(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FSeriesStyleManualMapping>           ManualStyleMappings;                                      // 0x0378(0x0010) (Edit, ZeroConstructor)
-	bool                                               bAntiAlias;                                               // 0x0388(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
+	struct FKantanCartesianChartStyle WidgetStyle; // 0x0150(0x0158) (Edit, BlueprintVisible)
+	struct FKantanCartesianPlotScale PlotScale; // 0x02A8(0x0024) (Edit)
+	TEnumAsByte<enum EKantanDataPointSize> DataPointSize; // 0x02CC(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x02CD(0x0003) MISSED OFFSET
+	struct FCartesianAxisConfig XAxisCfg; // 0x02D0(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FCartesianAxisConfig YAxisCfg; // 0x0318(0x0048) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FMargin AxisTitlePadding; // 0x0360(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	class UKantanSeriesStyleSet* SeriesStyleSet; // 0x0370(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FSeriesStyleManualMapping> ManualStyleMappings; // 0x0378(0x0010) (Edit, ZeroConstructor)
+	bool bAntiAlias; // 0x0388(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0389(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanCartesianChartBase");
@@ -156,8 +151,7 @@ class UKantanCartesianPlotBase : public UKantanCartesianChartBase
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanCartesianPlotBase");
@@ -172,10 +166,9 @@ public:
 class UCartesianPlot : public UKantanCartesianPlotBase
 {
 public:
-	class UObject*                                     DataSource;                                               // 0x0390(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject* DataSource; // 0x0390(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.CartesianPlot");
@@ -192,15 +185,14 @@ public:
 class UKantanChartLegend : public UWidget
 {
 public:
-	struct FMargin                                     Margins;                                                  // 0x0100(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FMargin                                     SeriesPadding;                                            // 0x0110(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FSlateBrush                                 Background;                                               // 0x0120(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
-	int                                                FontSize;                                                 // 0x01D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UKantanCartesianChartBase>    Chart;                                                    // 0x01DC(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x01E4(0x0014) MISSED OFFSET
+	struct FMargin Margins; // 0x0100(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FMargin SeriesPadding; // 0x0110(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FSlateBrush Background; // 0x0120(0x00B8) (Edit, BlueprintVisible, BlueprintReadOnly)
+	int FontSize; // 0x01D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UKantanCartesianChartBase> Chart; // 0x01DC(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x14]; // 0x01E4(0x0014) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanChartLegend");
@@ -221,13 +213,12 @@ public:
 class UKantanTimeSeriesPlotBase : public UKantanCartesianChartBase
 {
 public:
-	struct FCartesianRangeBound                        LowerTimeBound;                                           // 0x0390(0x0008) (Edit)
-	struct FCartesianRangeBound                        UpperTimeBound;                                           // 0x0398(0x0008) (Edit)
-	struct FCartesianRangeBound                        LowerValueBound;                                          // 0x03A0(0x0008) (Edit)
-	struct FCartesianRangeBound                        UpperValueBound;                                          // 0x03A8(0x0008) (Edit)
+	struct FCartesianRangeBound LowerTimeBound; // 0x0390(0x0008) (Edit)
+	struct FCartesianRangeBound UpperTimeBound; // 0x0398(0x0008) (Edit)
+	struct FCartesianRangeBound LowerValueBound; // 0x03A0(0x0008) (Edit)
+	struct FCartesianRangeBound UpperValueBound; // 0x03A8(0x0008) (Edit)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.KantanTimeSeriesPlotBase");
@@ -242,10 +233,9 @@ public:
 class USimpleBarChart : public UKantanBarChartBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0328(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0328(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.SimpleBarChart");
@@ -266,10 +256,9 @@ public:
 class USimpleCartesianPlot : public UKantanCartesianPlotBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0390(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0390(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.SimpleCartesianPlot");
@@ -290,10 +279,9 @@ public:
 class USimpleTimeSeriesPlot : public UKantanTimeSeriesPlotBase
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x03B0(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x03B0(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.SimpleTimeSeriesPlot");
@@ -315,10 +303,9 @@ public:
 class UTimeSeriesPlot : public UKantanTimeSeriesPlotBase
 {
 public:
-	class UObject*                                     DataSource;                                               // 0x03B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UObject* DataSource; // 0x03B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class KantanChartsUMG.TimeSeriesPlot");

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,7 +32,7 @@ void UCreativeLuaVM::Step()
 // Function UgcLua.CreativeLuaVM.SetPerformanceLog
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::SetPerformanceLog(bool bEnable)
 {
@@ -56,7 +56,7 @@ void UCreativeLuaVM::SetPerformanceLog(bool bEnable)
 // Function UgcLua.CreativeLuaVM.SetNowRC
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::SetNowRC(int idx)
 {
@@ -80,7 +80,7 @@ void UCreativeLuaVM::SetNowRC(int idx)
 // Function UgcLua.CreativeLuaVM.SetCodeOutputDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UCreativeLuaVM::SetCodeOutputDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -104,7 +104,7 @@ void UCreativeLuaVM::SetCodeOutputDelegate(const struct FScriptDelegate& InDeleg
 // Function UgcLua.CreativeLuaVM.SetCodeFinishDelegate
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         InDelegate                     (Parm, ZeroConstructor)
+// struct FScriptDelegate InDelegate (Parm, ZeroConstructor)
 
 void UCreativeLuaVM::SetCodeFinishDelegate(const struct FScriptDelegate& InDelegate)
 {
@@ -170,8 +170,8 @@ void UCreativeLuaVM::RequireMain()
 // Function UgcLua.CreativeLuaVM.RegisterLuaFunctions
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// TArray<struct FString>         OpenFunctions                  (Parm, ZeroConstructor)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// TArray<struct FString> OpenFunctions (Parm, ZeroConstructor)
 
 void UCreativeLuaVM::RegisterLuaFunctions(const struct FString& ModuleName, TArray<struct FString> OpenFunctions)
 {
@@ -196,9 +196,9 @@ void UCreativeLuaVM::RegisterLuaFunctions(const struct FString& ModuleName, TArr
 // Function UgcLua.CreativeLuaVM.RegisterLuaAPIStringValue
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UCreativeLuaVM::RegisterLuaAPIStringValue(const struct FString& ModuleName, const struct FString& Name, const struct FString& Value)
 {
@@ -224,9 +224,9 @@ void UCreativeLuaVM::RegisterLuaAPIStringValue(const struct FString& ModuleName,
 // Function UgcLua.CreativeLuaVM.RegisterLuaAPINumberValue
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// struct FString Name (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::RegisterLuaAPINumberValue(const struct FString& ModuleName, const struct FString& Name, float Value)
 {
@@ -252,9 +252,9 @@ void UCreativeLuaVM::RegisterLuaAPINumberValue(const struct FString& ModuleName,
 // Function UgcLua.CreativeLuaVM.RegisterLuaAPIBoolValue
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ModuleName                     (Parm, ZeroConstructor)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModuleName (Parm, ZeroConstructor)
+// struct FString Name (Parm, ZeroConstructor)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::RegisterLuaAPIBoolValue(const struct FString& ModuleName, const struct FString& Name, bool Value)
 {
@@ -322,7 +322,7 @@ void UCreativeLuaVM::PostInit()
 // Function UgcLua.CreativeLuaVM.LogBlockExecuteTime
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
+// struct FString blockId (Parm, ZeroConstructor)
 
 void UCreativeLuaVM::LogBlockExecuteTime(const struct FString& blockId)
 {
@@ -346,8 +346,8 @@ void UCreativeLuaVM::LogBlockExecuteTime(const struct FString& blockId)
 // Function UgcLua.CreativeLuaVM.KillJob
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            JobId                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// int JobId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::KillJob(int JobId, bool bReset)
 {
@@ -372,7 +372,7 @@ void UCreativeLuaVM::KillJob(int JobId, bool bReset)
 // Function UgcLua.CreativeLuaVM.InitEditMods
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         mods                           (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> mods (Parm, OutParm, ZeroConstructor)
 
 void UCreativeLuaVM::InitEditMods(TArray<struct FString>* mods)
 {
@@ -398,7 +398,7 @@ void UCreativeLuaVM::InitEditMods(TArray<struct FString>* mods)
 // Function UgcLua.CreativeLuaVM.Init
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            MemLimit                       (Parm, ZeroConstructor, IsPlainOldData)
+// int MemLimit (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::Init(int MemLimit)
 {
@@ -422,7 +422,7 @@ void UCreativeLuaVM::Init(int MemLimit)
 // Function UgcLua.CreativeLuaVM.GetNowRC
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeLuaVM::GetNowRC()
 {
@@ -447,7 +447,7 @@ int UCreativeLuaVM::GetNowRC()
 // Function UgcLua.CreativeLuaVM.GetMemoryUsed
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeLuaVM::GetMemoryUsed()
 {
@@ -472,7 +472,7 @@ int UCreativeLuaVM::GetMemoryUsed()
 // Function UgcLua.CreativeLuaVM.GetLastCommentInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeLuaVM::GetLastCommentInfo()
 {
@@ -497,7 +497,7 @@ struct FString UCreativeLuaVM::GetLastCommentInfo()
 // Function UgcLua.CreativeLuaVM.FreezeGameTime
 // (Final, Native, Public)
 // Parameters:
-// bool                           bCond                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCond (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::FreezeGameTime(bool bCond)
 {
@@ -521,8 +521,8 @@ void UCreativeLuaVM::FreezeGameTime(bool bCond)
 // Function UgcLua.CreativeLuaVM.ExtractCurrentCode
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            CodeIdx                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FString                 code                           (Parm, OutParm, ZeroConstructor)
+// int CodeIdx (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FString code (Parm, OutParm, ZeroConstructor)
 
 void UCreativeLuaVM::ExtractCurrentCode(int* CodeIdx, struct FString* code)
 {
@@ -571,9 +571,9 @@ void UCreativeLuaVM::ExeCodeUntilSuspended()
 // Function UgcLua.CreativeLuaVM.EnqueueCode
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 RuntimeCode                    (Parm, OutParm, ZeroConstructor)
-// int                            CodeUID                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString RuntimeCode (Parm, OutParm, ZeroConstructor)
+// int CodeUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCreativeLuaVM::EnqueueCode(struct FString* RuntimeCode, int* CodeUID)
 {
@@ -603,7 +603,7 @@ int UCreativeLuaVM::EnqueueCode(struct FString* RuntimeCode, int* CodeUID)
 // Function UgcLua.CreativeLuaVM.DescribeLuaThread
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreativeLuaVM::DescribeLuaThread()
 {
@@ -649,7 +649,7 @@ void UCreativeLuaVM::Close()
 // Function UgcLua.CreativeLuaVM.AllowRequire
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bAllow                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeLuaVM::AllowRequire(bool bAllow)
 {
@@ -673,8 +673,8 @@ void UCreativeLuaVM::AllowRequire(bool bAllow)
 // Function UgcLua.CreativeEntityInterface.UUID2UObject
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UCreativeEntityInterface::UUID2UObject(int64_t* UUID)
 {
@@ -702,10 +702,10 @@ class UObject* UCreativeEntityInterface::UUID2UObject(int64_t* UUID)
 // Function UgcLua.CreativeEntityInterface.UUID2Type
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCreativeEntityInterface::UUID2Type(int64_t* UUID, EEntityType* Type, unsigned char* SubType)
 {
@@ -737,8 +737,8 @@ bool UCreativeEntityInterface::UUID2Type(int64_t* UUID, EEntityType* Type, unsig
 // Function UgcLua.CreativeEntityInterface.UUID2Key
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UCreativeEntityInterface::UUID2Key(int64_t* UUID)
 {
@@ -766,7 +766,7 @@ uint32_t UCreativeEntityInterface::UUID2Key(int64_t* UUID)
 // Function UgcLua.CreativeEntityInterface.RemoveUUID
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UCreativeEntityInterface::RemoveUUID(int64_t* UUID)
 {
@@ -792,8 +792,8 @@ void UCreativeEntityInterface::RemoveUUID(int64_t* UUID)
 // Function UgcLua.CreativeEntityInterface.GetInstanceObjectUUID
 // (Native, Public, HasOutParms)
 // Parameters:
-// int64_t                        UUID                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int64_t UUID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeEntityInterface::GetInstanceObjectUUID(int64_t* UUID)
 {
@@ -821,10 +821,10 @@ int64_t UCreativeEntityInterface::GetInstanceObjectUUID(int64_t* UUID)
 // Function UgcLua.CreativeEntityInterface.CreateEntityIfNotExistsFromUObject
 // (Native, Public, HasOutParms)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeEntityInterface::CreateEntityIfNotExistsFromUObject(class UObject* Object, EEntityType* Type, unsigned char* SubType)
 {
@@ -855,10 +855,10 @@ int64_t UCreativeEntityInterface::CreateEntityIfNotExistsFromUObject(class UObje
 // Function UgcLua.CreativeEntityInterface.CreateEntityIfNotExistsFromKey
 // (Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       Key                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// EEntityType                    Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  SubType                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t Key (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// EEntityType Type (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// unsigned char SubType (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UCreativeEntityInterface::CreateEntityIfNotExistsFromKey(uint32_t* Key, EEntityType* Type, unsigned char* SubType)
 {

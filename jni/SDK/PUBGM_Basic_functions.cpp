@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function Basic.UAENetActor.ReceivedPlayerActiveRegionsChanged
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           bEnter                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnter (Parm, ZeroConstructor, IsPlainOldData)
 
 void AUAENetActor::ReceivedPlayerActiveRegionsChanged(bool bEnter)
 {
@@ -34,8 +34,8 @@ void AUAENetActor::ReceivedPlayerActiveRegionsChanged(bool bEnter)
 // Function Basic.ItemHandleBase.SetAssociation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            AssociationType                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemAssociation        Association                    (Parm)
+// int AssociationType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemAssociation Association (Parm)
 
 void UItemHandleBase::SetAssociation(int AssociationType, const struct FItemAssociation& Association)
 {
@@ -60,7 +60,7 @@ void UItemHandleBase::SetAssociation(int AssociationType, const struct FItemAsso
 // Function Basic.ItemHandleBase.RemoveAssociation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            AssociationType                (Parm, ZeroConstructor, IsPlainOldData)
+// int AssociationType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemHandleBase::RemoveAssociation(int AssociationType)
 {
@@ -84,7 +84,7 @@ void UItemHandleBase::RemoveAssociation(int AssociationType)
 // Function Basic.ItemHandleBase.Init
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           InDefineID                     (Parm)
+// struct FItemDefineID InDefineID (Parm)
 
 void UItemHandleBase::Init(const struct FItemDefineID& InDefineID)
 {
@@ -108,7 +108,7 @@ void UItemHandleBase::Init(const struct FItemDefineID& InDefineID)
 // Function Basic.ItemHandleBase.GetDefineID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemDefineID UItemHandleBase::GetDefineID()
 {
@@ -133,7 +133,7 @@ struct FItemDefineID UItemHandleBase::GetDefineID()
 // Function Basic.ItemHandleBase.GetAssociationMap
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TMap<int, struct FItemAssociation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<int, struct FItemAssociation> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<int, struct FItemAssociation> UItemHandleBase::GetAssociationMap()
 {
@@ -158,8 +158,8 @@ TMap<int, struct FItemAssociation> UItemHandleBase::GetAssociationMap()
 // Function Basic.ItemHandleBase.GetAssociationListByTargetType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FItemAssociation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FItemAssociation> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FItemAssociation> UItemHandleBase::GetAssociationListByTargetType(int Type)
 {
@@ -185,8 +185,8 @@ TArray<struct FItemAssociation> UItemHandleBase::GetAssociationListByTargetType(
 // Function Basic.ItemHandleBase.GetAssociationByTargetDefineID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FItemDefineID           TargetDefineID                 (Parm)
-// struct FItemAssociation        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FItemDefineID TargetDefineID (Parm)
+// struct FItemAssociation ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemAssociation UItemHandleBase::GetAssociationByTargetDefineID(const struct FItemDefineID& TargetDefineID)
 {
@@ -212,8 +212,8 @@ struct FItemAssociation UItemHandleBase::GetAssociationByTargetDefineID(const st
 // Function Basic.ItemHandleBase.GetAssociation
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            AssociationType                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemAssociation        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int AssociationType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemAssociation ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemAssociation UItemHandleBase::GetAssociation(int AssociationType)
 {
@@ -239,7 +239,7 @@ struct FItemAssociation UItemHandleBase::GetAssociation(int AssociationType)
 // Function Basic.ItemHandleBase.Constuct
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           InDefineID                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID InDefineID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemHandleBase::Constuct(const struct FItemDefineID& InDefineID)
 {
@@ -263,7 +263,7 @@ void UItemHandleBase::Constuct(const struct FItemDefineID& InDefineID)
 // Function Basic.ItemHandleBase.CollectionNeedLoadSoftPath
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<struct FSoftObjectPath> OutSoftPathList                (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FSoftObjectPath> OutSoftPathList (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UItemHandleBase::CollectionNeedLoadSoftPath(TArray<struct FSoftObjectPath>* OutSoftPathList)
 {
@@ -289,8 +289,8 @@ void UItemHandleBase::CollectionNeedLoadSoftPath(TArray<struct FSoftObjectPath>*
 // Function Basic.ItemHandleBase.AddAssociation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            AssociationType                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemAssociation        Association                    (Parm)
+// int AssociationType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemAssociation Association (Parm)
 
 void UItemHandleBase::AddAssociation(int AssociationType, const struct FItemAssociation& Association)
 {
@@ -315,7 +315,7 @@ void UItemHandleBase::AddAssociation(int AssociationType, const struct FItemAsso
 // Function Basic.BattleItemHandleBase.UpdateAttributeModify
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBattleItemHandleBase::UpdateAttributeModify(bool bEnable)
 {
@@ -339,7 +339,7 @@ void UBattleItemHandleBase::UpdateAttributeModify(bool bEnable)
 // Function Basic.BattleItemHandleBase.UnEquip
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::UnEquip()
 {
@@ -364,12 +364,12 @@ bool UBattleItemHandleBase::UnEquip()
 // Function Basic.BattleItemHandleBase.ShouldDropInDisuse
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UItemContainerInterface> ItemContainer                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FItemDefineID           CurrentPickupItemDefineID      (Parm)
-// struct FItemDefineID           ThisItemDefineID               (Parm)
-// int                            KeptCount                      (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemDisuseReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UItemContainerInterface> ItemContainer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FItemDefineID CurrentPickupItemDefineID (Parm)
+// struct FItemDefineID ThisItemDefineID (Parm)
+// int KeptCount (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemDisuseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::ShouldDropInDisuse(const TScriptInterface<class UItemContainerInterface>& ItemContainer, const struct FItemDefineID& CurrentPickupItemDefineID, const struct FItemDefineID& ThisItemDefineID, int KeptCount, EBattleItemDisuseReason Reason)
 {
@@ -399,8 +399,8 @@ bool UBattleItemHandleBase::ShouldDropInDisuse(const TScriptInterface<class UIte
 // Function Basic.BattleItemHandleBase.HanldePickupAssociationData
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FBattleItemAdditionalData> PickupAdditionalData           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FBattleItemAdditionalData> PickupAdditionalData (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HanldePickupAssociationData(TArray<struct FBattleItemAdditionalData> PickupAdditionalData)
 {
@@ -426,7 +426,7 @@ bool UBattleItemHandleBase::HanldePickupAssociationData(TArray<struct FBattleIte
 // Function Basic.BattleItemHandleBase.HanldeDropAssociationData
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HanldeDropAssociationData()
 {
@@ -451,7 +451,7 @@ bool UBattleItemHandleBase::HanldeDropAssociationData()
 // Function Basic.BattleItemHandleBase.HanldeCleared
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HanldeCleared()
 {
@@ -476,9 +476,9 @@ bool UBattleItemHandleBase::HanldeCleared()
 // Function Basic.BattleItemHandleBase.HandleUse
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FBattleItemUseTarget    Target                         (Parm)
-// EBattleItemUseReason           Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBattleItemUseTarget Target (Parm)
+// EBattleItemUseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleUse(const struct FBattleItemUseTarget& Target, EBattleItemUseReason Reason)
 {
@@ -505,10 +505,10 @@ bool UBattleItemHandleBase::HandleUse(const struct FBattleItemUseTarget& Target,
 // Function Basic.BattleItemHandleBase.HandlePickup
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UItemContainerInterface> ItemContainer                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FBattleItemPickupInfo   PickupInfo                     (Parm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UItemContainerInterface> ItemContainer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FBattleItemPickupInfo PickupInfo (Parm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandlePickup(const TScriptInterface<class UItemContainerInterface>& ItemContainer, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason)
 {
@@ -536,8 +536,8 @@ bool UBattleItemHandleBase::HandlePickup(const TScriptInterface<class UItemConta
 // Function Basic.BattleItemHandleBase.HandleEnable
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleEnable(bool bEnable)
 {
@@ -563,9 +563,9 @@ bool UBattleItemHandleBase::HandleEnable(bool bEnable)
 // Function Basic.BattleItemHandleBase.HandleDrop
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int                            InCount                        (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemDropReason          Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InCount (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemDropReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleDrop(int InCount, EBattleItemDropReason Reason)
 {
@@ -592,8 +592,8 @@ bool UBattleItemHandleBase::HandleDrop(int InCount, EBattleItemDropReason Reason
 // Function Basic.BattleItemHandleBase.HandleDisuse
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EBattleItemDisuseReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EBattleItemDisuseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleDisuse(EBattleItemDisuseReason Reason)
 {
@@ -619,8 +619,8 @@ bool UBattleItemHandleBase::HandleDisuse(EBattleItemDisuseReason Reason)
 // Function Basic.BattleItemHandleBase.HandleChangeItemStoreArea
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleChangeItemStoreArea(EItemStoreArea InItemStoreArea)
 {
@@ -646,7 +646,7 @@ bool UBattleItemHandleBase::HandleChangeItemStoreArea(EItemStoreArea InItemStore
 // Function Basic.BattleItemHandleBase.HandleBindToTargetItem
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::HandleBindToTargetItem()
 {
@@ -671,7 +671,7 @@ bool UBattleItemHandleBase::HandleBindToTargetItem()
 // Function Basic.BattleItemHandleBase.GetWorldInternal
 // (Native, Event, Protected, BlueprintEvent, Const)
 // Parameters:
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UBattleItemHandleBase::GetWorldInternal()
 {
@@ -696,7 +696,7 @@ class UWorld* UBattleItemHandleBase::GetWorldInternal()
 // Function Basic.BattleItemHandleBase.GetCurrentWorld
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UWorld*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UWorld* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UWorld* UBattleItemHandleBase::GetCurrentWorld()
 {
@@ -721,7 +721,7 @@ class UWorld* UBattleItemHandleBase::GetCurrentWorld()
 // Function Basic.BattleItemHandleBase.ExtractItemData
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FBattleItemData         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBattleItemData ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBattleItemData UBattleItemHandleBase::ExtractItemData()
 {
@@ -746,7 +746,7 @@ struct FBattleItemData UBattleItemHandleBase::ExtractItemData()
 // Function Basic.BattleItemHandleBase.ClearAdditionalDataByType
 // (Final, Native, Public)
 // Parameters:
-// EBattleItemAdditionalDataType  DataType                       (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemAdditionalDataType DataType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBattleItemHandleBase::ClearAdditionalDataByType(EBattleItemAdditionalDataType DataType)
 {
@@ -791,10 +791,10 @@ void UBattleItemHandleBase::ClearAdditionalData()
 // Function Basic.BattleItemHandleBase.CheckCanUse
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TScriptInterface<class UItemContainerInterface> ItemContainer                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FBattleItemUseTarget    Target                         (Parm)
-// EBattleItemUseReason           Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TScriptInterface<class UItemContainerInterface> ItemContainer (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FBattleItemUseTarget Target (Parm)
+// EBattleItemUseReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBattleItemHandleBase::CheckCanUse(const TScriptInterface<class UItemContainerInterface>& ItemContainer, const struct FBattleItemUseTarget& Target, EBattleItemUseReason Reason)
 {
@@ -822,7 +822,7 @@ bool UBattleItemHandleBase::CheckCanUse(const TScriptInterface<class UItemContai
 // Function Basic.UAEGameInstance.SetModeID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InModeID                       (Parm, ZeroConstructor, IsPlainOldData)
+// int InModeID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEGameInstance::SetModeID(int InModeID)
 {
@@ -846,7 +846,7 @@ void UUAEGameInstance::SetModeID(int InModeID)
 // Function Basic.UAEGameInstance.SetLuaStateWrapper
 // (Final, Native, Public)
 // Parameters:
-// class ULuaStateWrapper*        TLuaStateWrapper               (Parm, ZeroConstructor, IsPlainOldData)
+// class ULuaStateWrapper* TLuaStateWrapper (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAEGameInstance::SetLuaStateWrapper(class ULuaStateWrapper* TLuaStateWrapper)
 {
@@ -870,7 +870,7 @@ void UUAEGameInstance::SetLuaStateWrapper(class ULuaStateWrapper* TLuaStateWrapp
 // Function Basic.UAEGameInstance.SetExtraModules
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         InExtraModules                 (Parm, ZeroConstructor)
+// TArray<struct FString> InExtraModules (Parm, ZeroConstructor)
 
 void UUAEGameInstance::SetExtraModules(TArray<struct FString> InExtraModules)
 {
@@ -956,7 +956,7 @@ void UUAEGameInstance::LuaLeakDetect()
 // Function Basic.UAEGameInstance.LuaDoString
 // (Final, Exec, Native, Public, Const)
 // Parameters:
-// struct FString                 LuaString                      (Parm, ZeroConstructor)
+// struct FString LuaString (Parm, ZeroConstructor)
 
 void UUAEGameInstance::LuaDoString(const struct FString& LuaString)
 {
@@ -980,7 +980,7 @@ void UUAEGameInstance::LuaDoString(const struct FString& LuaString)
 // Function Basic.UAEGameInstance.GetWeatherTime
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUAEGameInstance::GetWeatherTime()
 {
@@ -1005,7 +1005,7 @@ float UUAEGameInstance::GetWeatherTime()
 // Function Basic.UAEGameInstance.GetWeatherLevelName
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetWeatherLevelName()
 {
@@ -1030,7 +1030,7 @@ struct FString UUAEGameInstance::GetWeatherLevelName()
 // Function Basic.UAEGameInstance.GetWeatherID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAEGameInstance::GetWeatherID()
 {
@@ -1055,7 +1055,7 @@ int UUAEGameInstance::GetWeatherID()
 // Function Basic.UAEGameInstance.GetModType2
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetModType2()
 {
@@ -1080,7 +1080,7 @@ struct FString UUAEGameInstance::GetModType2()
 // Function Basic.UAEGameInstance.GetModType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetModType()
 {
@@ -1105,7 +1105,7 @@ struct FString UUAEGameInstance::GetModType()
 // Function Basic.UAEGameInstance.GetModeID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAEGameInstance::GetModeID()
 {
@@ -1130,7 +1130,7 @@ int UUAEGameInstance::GetModeID()
 // Function Basic.UAEGameInstance.GetLuaStateWrapper
 // (Final, Native, Public)
 // Parameters:
-// class ULuaStateWrapper*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class ULuaStateWrapper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULuaStateWrapper* UUAEGameInstance::GetLuaStateWrapper()
 {
@@ -1155,8 +1155,8 @@ class ULuaStateWrapper* UUAEGameInstance::GetLuaStateWrapper()
 // Function Basic.UAEGameInstance.GetLoadWeatherName
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InWeatherName                  (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InWeatherName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetLoadWeatherName(const struct FString& InWeatherName)
 {
@@ -1182,8 +1182,8 @@ struct FString UUAEGameInstance::GetLoadWeatherName(const struct FString& InWeat
 // Function Basic.UAEGameInstance.GetIsHighWeatherLevel
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InWeatherLevelName             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InWeatherLevelName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAEGameInstance::GetIsHighWeatherLevel(const struct FString& InWeatherLevelName)
 {
@@ -1209,7 +1209,7 @@ bool UUAEGameInstance::GetIsHighWeatherLevel(const struct FString& InWeatherLeve
 // Function Basic.UAEGameInstance.GetGameID
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetGameID()
 {
@@ -1234,7 +1234,7 @@ struct FString UUAEGameInstance::GetGameID()
 // Function Basic.UAEGameInstance.GetExtraModulesString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEGameInstance::GetExtraModulesString()
 {
@@ -1259,7 +1259,7 @@ struct FString UUAEGameInstance::GetExtraModulesString()
 // Function Basic.UAEGameInstance.GetExtraModules
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UUAEGameInstance::GetExtraModules()
 {
@@ -1284,7 +1284,7 @@ TArray<struct FString> UUAEGameInstance::GetExtraModules()
 // Function Basic.UAEGameInstance.GetDeviceLevel
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAEGameInstance::GetDeviceLevel()
 {
@@ -1309,8 +1309,8 @@ int UUAEGameInstance::GetDeviceLevel()
 // Function Basic.UAEGameInstance.GetDataTable_Mod
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAEGameInstance::GetDataTable_Mod(const struct FString& tableName)
 {
@@ -1336,8 +1336,8 @@ class UUAEDataTable* UUAEGameInstance::GetDataTable_Mod(const struct FString& ta
 // Function Basic.UAEGameInstance.GetDataTable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAEGameInstance::GetDataTable(const struct FString& tableName)
 {
@@ -1363,7 +1363,7 @@ class UUAEDataTable* UUAEGameInstance::GetDataTable(const struct FString& tableN
 // Function Basic.UAEGameInstance.GetAssociatedFrontendHUD
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UFrontendHUD*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendHUD* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFrontendHUD* UUAEGameInstance::GetAssociatedFrontendHUD()
 {
@@ -1409,9 +1409,9 @@ void UUAEGameInstance::CloseAssetLoadLog()
 // Function Basic.AttrModifyComponent.SwitchAttrModifier
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrModifyItemName             (Parm, ZeroConstructor)
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrModifyItemName (Parm, ZeroConstructor)
+// bool Enable (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::SwitchAttrModifier(const struct FString& AttrModifyItemName, bool Enable)
 {
@@ -1438,7 +1438,7 @@ bool UAttrModifyComponent::SwitchAttrModifier(const struct FString& AttrModifyIt
 // Function Basic.AttrModifyComponent.StartTimerToSyncRecordAttrValue
 // (Final, Native, Public)
 // Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::StartTimerToSyncRecordAttrValue(float Time)
 {
@@ -1462,9 +1462,9 @@ void UAttrModifyComponent::StartTimerToSyncRecordAttrValue(float Time)
 // Function Basic.AttrModifyComponent.SetValueToAttributeSafety
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModifyRecordType               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// int ModifyRecordType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::SetValueToAttributeSafety(const struct FString& AttrName, float Value, int ModifyRecordType)
 {
@@ -1490,8 +1490,8 @@ void UAttrModifyComponent::SetValueToAttributeSafety(const struct FString& AttrN
 // Function Basic.AttrModifyComponent.SetOrignalValueToAttribute
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::SetOrignalValueToAttribute(const struct FString& AttrName, float Value)
 {
@@ -1513,11 +1513,37 @@ void UAttrModifyComponent::SetOrignalValueToAttribute(const struct FString& Attr
 }
 
 
+// Function Basic.AttrModifyComponent.SetOrignalValueAndBaseValue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAttrModifyComponent::SetOrignalValueAndBaseValue(const struct FString& AttrName, float Value)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.AttrModifyComponent.SetOrignalValueAndBaseValue");
+
+	UAttrModifyComponent_SetOrignalValueAndBaseValue_Params params;
+	params.AttrName = AttrName;
+	params.Value = Value;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.AttrModifyComponent.SetAttrModifyStateValue
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::SetAttrModifyStateValue(int Index, bool Value)
 {
@@ -1542,8 +1568,8 @@ void UAttrModifyComponent::SetAttrModifyStateValue(int Index, bool Value)
 // Function Basic.AttrModifyComponent.SetAttributeMinValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          MinValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float MinValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::SetAttributeMinValue(const struct FString& AttrName, float MinValue)
 {
@@ -1568,8 +1594,8 @@ void UAttrModifyComponent::SetAttributeMinValue(const struct FString& AttrName, 
 // Function Basic.AttrModifyComponent.SetAttributeMaxValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          MaxValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float MaxValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::SetAttributeMaxValue(const struct FString& AttrName, float MaxValue)
 {
@@ -1594,8 +1620,8 @@ void UAttrModifyComponent::SetAttributeMaxValue(const struct FString& AttrName, 
 // Function Basic.AttrModifyComponent.ServerSendExceptionType
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// int                            ExceptionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// int ExceptionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::ServerSendExceptionType(const struct FString& AttrName, int ExceptionType)
 {
@@ -1620,7 +1646,7 @@ void UAttrModifyComponent::ServerSendExceptionType(const struct FString& AttrNam
 // Function Basic.AttrModifyComponent.ServerRequestRecordAttrValue
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
+// struct FString AttrName (Parm, ZeroConstructor)
 
 void UAttrModifyComponent::ServerRequestRecordAttrValue(const struct FString& AttrName)
 {
@@ -1644,8 +1670,8 @@ void UAttrModifyComponent::ServerRequestRecordAttrValue(const struct FString& At
 // Function Basic.AttrModifyComponent.ResponeAttrValue
 // (Net, NetReliable, Native, Event, Public, NetClient, NetValidate)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          FinalValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float FinalValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::ResponeAttrValue(const struct FString& AttrName, float FinalValue)
 {
@@ -1670,7 +1696,7 @@ void UAttrModifyComponent::ResponeAttrValue(const struct FString& AttrName, floa
 // Function Basic.AttrModifyComponent.RequestAttrValue
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
+// struct FString AttrName (Parm, ZeroConstructor)
 
 void UAttrModifyComponent::RequestAttrValue(const struct FString& AttrName)
 {
@@ -1694,8 +1720,8 @@ void UAttrModifyComponent::RequestAttrValue(const struct FString& AttrName)
 // Function Basic.AttrModifyComponent.RemoveModifyItemFromCache
 // (Final, Native, Public)
 // Parameters:
-// uint32_t                       ModifyUID                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t ModifyUID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::RemoveModifyItemFromCache(uint32_t ModifyUID)
 {
@@ -1721,8 +1747,8 @@ bool UAttrModifyComponent::RemoveModifyItemFromCache(uint32_t ModifyUID)
 // Function Basic.AttrModifyComponent.RemoveAttrListener
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// struct FSluaBPVar              Listener                       (Parm)
+// struct FString AttrName (Parm, ZeroConstructor)
+// struct FSluaBPVar Listener (Parm)
 
 void UAttrModifyComponent::RemoveAttrListener(const struct FString& AttrName, const struct FSluaBPVar& Listener)
 {
@@ -1747,7 +1773,7 @@ void UAttrModifyComponent::RemoveAttrListener(const struct FString& AttrName, co
 // Function Basic.AttrModifyComponent.RemoveAllDynamicModifier
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForce (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::RemoveAllDynamicModifier(bool bForce)
 {
@@ -1771,9 +1797,9 @@ void UAttrModifyComponent::RemoveAllDynamicModifier(bool bForce)
 // Function Basic.AttrModifyComponent.RegisterModifyAbleAttr
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FAttrRegisterItem> AttrRegists                    (Parm, OutParm, ZeroConstructor)
-// bool                           bSetAttrByOrigin               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FAttrRegisterItem> AttrRegists (Parm, OutParm, ZeroConstructor)
+// bool bSetAttrByOrigin (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::RegisterModifyAbleAttr(bool bSetAttrByOrigin, TArray<struct FAttrRegisterItem>* AttrRegists)
 {
@@ -1802,8 +1828,8 @@ bool UAttrModifyComponent::RegisterModifyAbleAttr(bool bSetAttrByOrigin, TArray<
 // Function Basic.AttrModifyComponent.RegistAttrModifyRecordList
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// int                            RecordLen                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// int RecordLen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::RegistAttrModifyRecordList(const struct FString& AttrName, int RecordLen)
 {
@@ -1846,14 +1872,38 @@ void UAttrModifyComponent::RegCurrentModAttrs()
 }
 
 
+// Function Basic.AttrModifyComponent.RefreshAttributeModify
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString AttrName (Parm, ZeroConstructor)
+
+void UAttrModifyComponent::RefreshAttributeModify(const struct FString& AttrName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.AttrModifyComponent.RefreshAttributeModify");
+
+	UAttrModifyComponent_RefreshAttributeModify_Params params;
+	params.AttrName = AttrName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.AttrModifyComponent.PushAttrModifyRecordItem
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          PreValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CurValue                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModifyRecordType               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ModifyDesc                     (Parm, ZeroConstructor)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float PreValue (Parm, ZeroConstructor, IsPlainOldData)
+// float CurValue (Parm, ZeroConstructor, IsPlainOldData)
+// int ModifyRecordType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModifyDesc (Parm, ZeroConstructor)
 
 void UAttrModifyComponent::PushAttrModifyRecordItem(const struct FString& AttrName, float PreValue, float CurValue, int ModifyRecordType, const struct FString& ModifyDesc)
 {
@@ -1985,7 +2035,7 @@ void UAttrModifyComponent::OnNeedSetSpeedOverLimit__DelegateSignature()
 // DelegateFunction Basic.AttrModifyComponent.OnAttrModifiedEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate, HasOutParms)
 // Parameters:
-// TArray<struct FAttrAffected>   AffectedAttrS                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAttrAffected> AffectedAttrS (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UAttrModifyComponent::OnAttrModifiedEvent__DelegateSignature(TArray<struct FAttrAffected> AffectedAttrS)
 {
@@ -2008,8 +2058,8 @@ void UAttrModifyComponent::OnAttrModifiedEvent__DelegateSignature(TArray<struct 
 // Function Basic.AttrModifyComponent.LuaSetValueToAttributeSafety
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::LuaSetValueToAttributeSafety(const struct FString& AttrName, float Value)
 {
@@ -2034,8 +2084,8 @@ void UAttrModifyComponent::LuaSetValueToAttributeSafety(const struct FString& At
 // Function Basic.AttrModifyComponent.IsAttrModifyStateValidIndex
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::IsAttrModifyStateValidIndex(int Index)
 {
@@ -2082,8 +2132,8 @@ void UAttrModifyComponent::InitializeRelateAttributeExpands()
 // Function Basic.AttrModifyComponent.HasDynamicModifier
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 AttrModifyId                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrModifyId (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::HasDynamicModifier(const struct FString& AttrModifyId)
 {
@@ -2109,8 +2159,8 @@ bool UAttrModifyComponent::HasDynamicModifier(const struct FString& AttrModifyId
 // Function Basic.AttrModifyComponent.HandleExceptionAttrModify
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// int                            ExceptionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// int ExceptionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::HandleExceptionAttrModify(const struct FString& AttrName, int ExceptionType)
 {
@@ -2135,7 +2185,7 @@ void UAttrModifyComponent::HandleExceptionAttrModify(const struct FString& AttrN
 // Function Basic.AttrModifyComponent.GetSubsystem
 // (Final, Native, Public)
 // Parameters:
-// class UAttrModifyModDataSubsystem* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UAttrModifyModDataSubsystem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAttrModifyModDataSubsystem* UAttrModifyComponent::GetSubsystem()
 {
@@ -2160,8 +2210,8 @@ class UAttrModifyModDataSubsystem* UAttrModifyComponent::GetSubsystem()
 // Function Basic.AttrModifyComponent.GetMaxAttrName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString AttrName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAttrModifyComponent::GetMaxAttrName(const struct FString& AttrName)
 {
@@ -2187,8 +2237,8 @@ struct FString UAttrModifyComponent::GetMaxAttrName(const struct FString& AttrNa
 // Function Basic.AttrModifyComponent.GetAttrModifyStateValue
 // (Final, Native, Public)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::GetAttrModifyStateValue(int Index)
 {
@@ -2214,7 +2264,7 @@ bool UAttrModifyComponent::GetAttrModifyStateValue(int Index)
 // Function Basic.AttrModifyComponent.GetAttrModifyStateNum
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAttrModifyComponent::GetAttrModifyStateNum()
 {
@@ -2239,8 +2289,8 @@ int UAttrModifyComponent::GetAttrModifyStateNum()
 // Function Basic.AttrModifyComponent.GetAttrModifyItemByItemName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ItemName                       (Parm, ZeroConstructor)
-// struct FAttrModifyItem         ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString ItemName (Parm, ZeroConstructor)
+// struct FAttrModifyItem ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FAttrModifyItem UAttrModifyComponent::GetAttrModifyItemByItemName(const struct FString& ItemName)
 {
@@ -2266,8 +2316,8 @@ struct FAttrModifyItem UAttrModifyComponent::GetAttrModifyItemByItemName(const s
 // Function Basic.AttrModifyComponent.GetAttributeValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAttrModifyComponent::GetAttributeValue(const struct FString& AttrName)
 {
@@ -2293,8 +2343,8 @@ float UAttrModifyComponent::GetAttributeValue(const struct FString& AttrName)
 // Function Basic.AttrModifyComponent.GetAttributeOrignalValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAttrModifyComponent::GetAttributeOrignalValue(const struct FString& AttrName)
 {
@@ -2320,8 +2370,8 @@ float UAttrModifyComponent::GetAttributeOrignalValue(const struct FString& AttrN
 // Function Basic.AttrModifyComponent.GetAttributeMaxValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAttrModifyComponent::GetAttributeMaxValue(const struct FString& AttrName)
 {
@@ -2347,8 +2397,8 @@ float UAttrModifyComponent::GetAttributeMaxValue(const struct FString& AttrName)
 // Function Basic.AttrModifyComponent.GetAttrDynamicModifyTargetString
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FAttrDynamicModifyTarget DynamicModifyTarget            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FAttrDynamicModifyTarget DynamicModifyTarget (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAttrModifyComponent::GetAttrDynamicModifyTargetString(const struct FAttrDynamicModifyTarget& DynamicModifyTarget)
 {
@@ -2374,8 +2424,8 @@ struct FString UAttrModifyComponent::GetAttrDynamicModifyTargetString(const stru
 // Function Basic.AttrModifyComponent.GetAttrDynamicModifyItemString
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FAttrDynamicModifyItem  DynamicModifyItem              (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FAttrDynamicModifyItem DynamicModifyItem (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAttrModifyComponent::GetAttrDynamicModifyItemString(const struct FAttrDynamicModifyItem& DynamicModifyItem)
 {
@@ -2401,8 +2451,8 @@ struct FString UAttrModifyComponent::GetAttrDynamicModifyItemString(const struct
 // Function Basic.AttrModifyComponent.EnableAttrModifierByIndex
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ModifyConfigIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ModifyConfigIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::EnableAttrModifierByIndex(int ModifyConfigIndex)
 {
@@ -2428,8 +2478,8 @@ bool UAttrModifyComponent::EnableAttrModifierByIndex(int ModifyConfigIndex)
 // Function Basic.AttrModifyComponent.EnableAttrModifier
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrModifyItemName             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrModifyItemName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::EnableAttrModifier(const struct FString& AttrModifyItemName)
 {
@@ -2455,8 +2505,8 @@ bool UAttrModifyComponent::EnableAttrModifier(const struct FString& AttrModifyIt
 // Function Basic.AttrModifyComponent.DisableAttrModifierByIndex
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ModifyConfigIndex              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ModifyConfigIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::DisableAttrModifierByIndex(int ModifyConfigIndex)
 {
@@ -2482,8 +2532,8 @@ bool UAttrModifyComponent::DisableAttrModifierByIndex(int ModifyConfigIndex)
 // Function Basic.AttrModifyComponent.DisableAttrModifier
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrModifyItemName             (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrModifyItemName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::DisableAttrModifier(const struct FString& AttrModifyItemName)
 {
@@ -2509,8 +2559,8 @@ bool UAttrModifyComponent::DisableAttrModifier(const struct FString& AttrModifyI
 // Function Basic.AttrModifyComponent.DisableAllAttrModifier
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bForce                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bForce (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAttrModifyComponent::DisableAllAttrModifier(bool bForce)
 {
@@ -2557,7 +2607,7 @@ void UAttrModifyComponent::ConditionSyncRecordAttrValue()
 // Function Basic.AttrModifyComponent.ClientSyncRecordAttrValue
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// TArray<struct FAttrDesc>       AttrDescs                      (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// TArray<struct FAttrDesc> AttrDescs (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
 void UAttrModifyComponent::ClientSyncRecordAttrValue(TArray<struct FAttrDesc> AttrDescs)
 {
@@ -2581,8 +2631,8 @@ void UAttrModifyComponent::ClientSyncRecordAttrValue(TArray<struct FAttrDesc> At
 // Function Basic.AttrModifyComponent.ClientSendRecordData
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// struct FAttrModifyRecordItem   RecordItem                     (ConstParm, Parm, ReferenceParm)
-// int                            ExceptionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAttrModifyRecordItem RecordItem (ConstParm, Parm, ReferenceParm)
+// int ExceptionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::ClientSendRecordData(const struct FAttrModifyRecordItem& RecordItem, int ExceptionType)
 {
@@ -2628,8 +2678,8 @@ void UAttrModifyComponent::ClearAllAttrModify()
 // Function Basic.AttrModifyComponent.AddValueToAttribute
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::AddValueToAttribute(const struct FString& AttrName, float Value)
 {
@@ -2654,13 +2704,13 @@ void UAttrModifyComponent::AddValueToAttribute(const struct FString& AttrName, f
 // Function Basic.AttrModifyComponent.AddModifyItemAndCache
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// EAttrModifyRefType             CModifyType                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOldModify                     (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// EAttrModifyRefType CModifyType (Parm, ZeroConstructor, IsPlainOldData)
+// float CValue (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOldModify (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAttrModifyComponent::AddModifyItemAndCache(const struct FString& AttrName, EAttrModifyRefType CModifyType, float CValue, bool bEnable, class UObject* Causer, bool bOldModify)
 {
@@ -2691,8 +2741,8 @@ uint32_t UAttrModifyComponent::AddModifyItemAndCache(const struct FString& AttrN
 // Function Basic.AttrModifyComponent.AddDynamicModifier
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FAttrModifyItem         AttrModifyItem                 (Parm, OutParm)
-// bool                           RepOnlyOwner                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAttrModifyItem AttrModifyItem (Parm, OutParm)
+// bool RepOnlyOwner (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyComponent::AddDynamicModifier(bool RepOnlyOwner, struct FAttrModifyItem* AttrModifyItem)
 {
@@ -2719,11 +2769,11 @@ void UAttrModifyComponent::AddDynamicModifier(bool RepOnlyOwner, struct FAttrMod
 // Function Basic.AttrModifyComponent.AddBModifyAndCacheWithCParam
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// EAttrModifyRefType             CModifyType                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CValue                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ClientSimulate                 (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// EAttrModifyRefType CModifyType (Parm, ZeroConstructor, IsPlainOldData)
+// float CValue (Parm, ZeroConstructor, IsPlainOldData)
+// bool ClientSimulate (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAttrModifyComponent::AddBModifyAndCacheWithCParam(const struct FString& AttrName, EAttrModifyRefType CModifyType, float CValue, bool ClientSimulate)
 {
@@ -2752,11 +2802,11 @@ uint32_t UAttrModifyComponent::AddBModifyAndCacheWithCParam(const struct FString
 // Function Basic.AttrModifyComponent.AddBModifyAndCache
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// EAttrOperator                  ModifyType                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ClientSimulate                 (Parm, ZeroConstructor, IsPlainOldData)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// EAttrOperator ModifyType (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool ClientSimulate (Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UAttrModifyComponent::AddBModifyAndCache(const struct FString& AttrName, EAttrOperator ModifyType, float Value, bool ClientSimulate)
 {
@@ -2785,8 +2835,8 @@ uint32_t UAttrModifyComponent::AddBModifyAndCache(const struct FString& AttrName
 // Function Basic.AttrModifyComponent.AddAttrListener
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// struct FSluaBPVar              Listener                       (Parm)
+// struct FString AttrName (Parm, ZeroConstructor)
+// struct FSluaBPVar Listener (Parm)
 
 void UAttrModifyComponent::AddAttrListener(const struct FString& AttrName, const struct FSluaBPVar& Listener)
 {
@@ -2811,9 +2861,9 @@ void UAttrModifyComponent::AddAttrListener(const struct FString& AttrName, const
 // Function Basic.AttrModifyInterface.SetAttrValue
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          NewVal                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float NewVal (Parm, ZeroConstructor, IsPlainOldData)
+// int Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyInterface::SetAttrValue(const struct FString& AttrName, float NewVal, int Reason)
 {
@@ -2839,7 +2889,7 @@ void UAttrModifyInterface::SetAttrValue(const struct FString& AttrName, float Ne
 // Function Basic.AttrModifyInterface.RequestAttrValue
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
+// struct FString AttrName (Parm, ZeroConstructor)
 
 void UAttrModifyInterface::RequestAttrValue(const struct FString& AttrName)
 {
@@ -2884,8 +2934,8 @@ void UAttrModifyInterface::RegisterModifiedAttributes()
 // Function Basic.AttrModifyInterface.GetAttrValue
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAttrModifyInterface::GetAttrValue(const struct FString& AttrName)
 {
@@ -2911,7 +2961,7 @@ float UAttrModifyInterface::GetAttrValue(const struct FString& AttrName)
 // Function Basic.AttrModifyInterface.GetAttrModifyRelevantActors
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> UAttrModifyInterface::GetAttrModifyRelevantActors()
 {
@@ -2936,7 +2986,7 @@ TArray<class AActor*> UAttrModifyInterface::GetAttrModifyRelevantActors()
 // Function Basic.AttrModifyInterface.GetAttrModifyComponent
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UAttrModifyComponent*    ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAttrModifyComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAttrModifyComponent* UAttrModifyInterface::GetAttrModifyComponent()
 {
@@ -2961,8 +3011,8 @@ class UAttrModifyComponent* UAttrModifyInterface::GetAttrModifyComponent()
 // Function Basic.AttrModifyInterface.GetAttributeValue
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAttrModifyInterface::GetAttributeValue(const struct FString& AttrName)
 {
@@ -2988,9 +3038,9 @@ float UAttrModifyInterface::GetAttributeValue(const struct FString& AttrName)
 // Function Basic.AttrModifyInterface.AddAttrValue
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 AttrName                       (Parm, ZeroConstructor)
-// float                          AddVal                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Reason                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString AttrName (Parm, ZeroConstructor)
+// float AddVal (Parm, ZeroConstructor, IsPlainOldData)
+// int Reason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAttrModifyInterface::AddAttrValue(const struct FString& AttrName, float AddVal, int Reason)
 {
@@ -3016,9 +3066,9 @@ void UAttrModifyInterface::AddAttrValue(const struct FString& AttrName, float Ad
 // Function Basic.BPClassManager.ModifyClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  InNativeClass                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 BPClassPath                    (Parm, ZeroConstructor)
-// struct FString                 ModTag                         (Parm, ZeroConstructor)
+// class UClass* InNativeClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString BPClassPath (Parm, ZeroConstructor)
+// struct FString ModTag (Parm, ZeroConstructor)
 
 void UBPClassManager::ModifyClass(class UClass* InNativeClass, const struct FString& BPClassPath, const struct FString& ModTag)
 {
@@ -3044,8 +3094,8 @@ void UBPClassManager::ModifyClass(class UClass* InNativeClass, const struct FStr
 // Function Basic.BPClassManager.GetUClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            KeyIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int KeyIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPClassManager::GetUClass(int KeyIndex)
 {
@@ -3071,9 +3121,9 @@ class UClass* UBPClassManager::GetUClass(int KeyIndex)
 // Function Basic.BPClassManager.GetBPClassOverrideByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ClassTagName                   (Parm, ZeroConstructor)
-// struct FString                 ModTag                         (Parm, ZeroConstructor)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ClassTagName (Parm, ZeroConstructor)
+// struct FString ModTag (Parm, ZeroConstructor)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPClassManager::GetBPClassOverrideByName(const struct FString& ClassTagName, const struct FString& ModTag)
 {
@@ -3100,9 +3150,9 @@ class UClass* UBPClassManager::GetBPClassOverrideByName(const struct FString& Cl
 // Function Basic.BPClassManager.GetBPClassOverride
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  InNativeClass                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ModTag                         (Parm, ZeroConstructor)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UClass* InNativeClass (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModTag (Parm, ZeroConstructor)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPClassManager::GetBPClassOverride(class UClass* InNativeClass, const struct FString& ModTag)
 {
@@ -3129,7 +3179,7 @@ class UClass* UBPClassManager::GetBPClassOverride(class UClass* InNativeClass, c
 // Function Basic.BPClassManager.Get
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBPClassManager*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBPClassManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBPClassManager* UBPClassManager::Get()
 {
@@ -3154,7 +3204,7 @@ class UBPClassManager* UBPClassManager::Get()
 // Function Basic.BuffConfigSubsystem.ReloadTable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWorld* World (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBuffConfigSubsystem::ReloadTable(class UWorld* World)
 {
@@ -3199,19 +3249,19 @@ void UBuffConfigSubsystem::ClearTable()
 // Function Basic.BuffUtils.IsRoleOK
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum ENetRole>     Role                           (Parm, ZeroConstructor, IsPlainOldData)
-// EBuffEnabledRole               EnabledRole                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EBuffEnabledRole EnabledRole (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* OwnerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBuffUtils::IsRoleOK(TEnumAsByte<enum ENetRole> Role, EBuffEnabledRole EnabledRole)
+bool UBuffUtils::IsRoleOK(EBuffEnabledRole EnabledRole, class UActorComponent* OwnerComponent)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Basic.BuffUtils.IsRoleOK");
 
 	UBuffUtils_IsRoleOK_Params params;
-	params.Role = Role;
 	params.EnabledRole = EnabledRole;
+	params.OwnerComponent = OwnerComponent;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -3270,8 +3320,8 @@ void UDelayReplicationInterface::ReCallRepAfterBeginPlay()
 // Function Basic.GameModeEnvUtil.GetModeID
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 GameModeClassPath              (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString GameModeClassPath (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UGameModeEnvUtil::GetModeID(const struct FString& GameModeClassPath)
 {
@@ -3297,9 +3347,9 @@ int UGameModeEnvUtil::GetModeID(const struct FString& GameModeClassPath)
 // Function Basic.GameModeEnvUtil.GetGameModeEnvData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            InModeID                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGameModeEnvData        OutData                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InModeID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameModeEnvData OutData (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UGameModeEnvUtil::GetGameModeEnvData(int InModeID, struct FGameModeEnvData* OutData)
 {
@@ -3328,7 +3378,7 @@ bool UGameModeEnvUtil::GetGameModeEnvData(int InModeID, struct FGameModeEnvData*
 // Function Basic.ItemContainerInterface.GetOwningObject
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UItemContainerInterface::GetOwningObject()
 {
@@ -3353,8 +3403,8 @@ class UObject* UItemContainerInterface::GetOwningObject()
 // Function Basic.ItemContainerInterface.GetItemHandleListByDefineID
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// TArray<class UItemHandleBase*> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<class UItemHandleBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UItemHandleBase*> UItemContainerInterface::GetItemHandleListByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -3380,8 +3430,8 @@ TArray<class UItemHandleBase*> UItemContainerInterface::GetItemHandleListByDefin
 // Function Basic.ItemContainerInterface.GetItemHandleByDefineID
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UItemHandleBase*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// class UItemHandleBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UItemHandleBase* UItemContainerInterface::GetItemHandleByDefineID(const struct FItemDefineID& DefineID)
 {
@@ -3407,7 +3457,7 @@ class UItemHandleBase* UItemContainerInterface::GetItemHandleByDefineID(const st
 // Function Basic.ItemContainerInterface.GetItemDefineIDList
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FItemDefineID>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FItemDefineID> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FItemDefineID> UItemContainerInterface::GetItemDefineIDList()
 {
@@ -3432,8 +3482,8 @@ TArray<struct FItemDefineID> UItemContainerInterface::GetItemDefineIDList()
 // Function Basic.ItemContainerInterface.GetFirstItemDefineBySpecificID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FItemDefineID           ReturnValue                    (Parm, OutParm, ReturnParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FItemDefineID ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FItemDefineID UItemContainerInterface::GetFirstItemDefineBySpecificID(int ID)
 {
@@ -3459,10 +3509,10 @@ struct FItemDefineID UItemContainerInterface::GetFirstItemDefineBySpecificID(int
 // Function Basic.ItemContainerOwnerInterface.NotifyUpdateCustomAccessoriesData
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            WeaponItemId                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bIsSetOrRemove                 (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsSetOrRemove (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemContainerOwnerInterface::NotifyUpdateCustomAccessoriesData(int WeaponItemId, int Index, int ItemId, bool bIsSetOrRemove)
 {
@@ -3489,10 +3539,10 @@ void UItemContainerOwnerInterface::NotifyUpdateCustomAccessoriesData(int WeaponI
 // Function Basic.ItemContainerOwnerInterface.NotifyUpdateCapacity
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// float                          InBackPackCapacity             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InOccupiedCapacity             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InSafetyBoxCapacity            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InSafetyBoxOccupiedCapacity    (Parm, ZeroConstructor, IsPlainOldData)
+// float InBackPackCapacity (Parm, ZeroConstructor, IsPlainOldData)
+// float InOccupiedCapacity (Parm, ZeroConstructor, IsPlainOldData)
+// float InSafetyBoxCapacity (Parm, ZeroConstructor, IsPlainOldData)
+// float InSafetyBoxOccupiedCapacity (Parm, ZeroConstructor, IsPlainOldData)
 
 void UItemContainerOwnerInterface::NotifyUpdateCapacity(float InBackPackCapacity, float InOccupiedCapacity, float InSafetyBoxCapacity, float InSafetyBoxOccupiedCapacity)
 {
@@ -3519,8 +3569,8 @@ void UItemContainerOwnerInterface::NotifyUpdateCapacity(float InBackPackCapacity
 // Function Basic.ItemContainerOwnerInterface.NotifyItemUpdated
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemContainerOwnerInterface::NotifyItemUpdated(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -3545,8 +3595,8 @@ void UItemContainerOwnerInterface::NotifyItemUpdated(const struct FItemDefineID&
 // Function Basic.ItemContainerOwnerInterface.NotifyItemRemoved
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemContainerOwnerInterface::NotifyItemRemoved(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -3592,8 +3642,8 @@ void UItemContainerOwnerInterface::NotifyItemEmpty()
 // Function Basic.ItemContainerOwnerInterface.NotifyItemAdded
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemData         ItemData                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemData ItemData (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UItemContainerOwnerInterface::NotifyItemAdded(const struct FItemDefineID& DefineID, const struct FBattleItemData& ItemData)
 {
@@ -3618,10 +3668,10 @@ void UItemContainerOwnerInterface::NotifyItemAdded(const struct FItemDefineID& D
 // Function Basic.LuaAsyncTasksSubsystem.IsNeedClear
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// float                          ClearMemorySize                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ClearArrayObjectSize           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              Callback                       (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ClearMemorySize (Parm, ZeroConstructor, IsPlainOldData)
+// float ClearArrayObjectSize (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar Callback (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaAsyncTasksSubsystem::IsNeedClear(float ClearMemorySize, float ClearArrayObjectSize, const struct FSluaBPVar& Callback)
 {
@@ -3649,9 +3699,9 @@ bool ULuaAsyncTasksSubsystem::IsNeedClear(float ClearMemorySize, float ClearArra
 // Function Basic.LuaAsyncTaskSubsystem.IsNeedClear
 // (Final, Native, Public)
 // Parameters:
-// class UFrontendHUD*            FrontendHUD                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSluaBPVar              Callback                       (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UFrontendHUD* FrontendHUD (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSluaBPVar Callback (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaAsyncTaskSubsystem::IsNeedClear(class UFrontendHUD* FrontendHUD, const struct FSluaBPVar& Callback)
 {
@@ -3678,7 +3728,7 @@ bool ULuaAsyncTaskSubsystem::IsNeedClear(class UFrontendHUD* FrontendHUD, const 
 // Function Basic.LuaEventBridgeFunction.UnRegisterEventByTarget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 ObjContext                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ObjContext (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaEventBridgeFunction::UnRegisterEventByTarget(class UObject* ObjContext)
 {
@@ -3702,10 +3752,10 @@ void ULuaEventBridgeFunction::UnRegisterEventByTarget(class UObject* ObjContext)
 // Function Basic.LuaEventBridgeFunction.UnRegisterEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FEventType                     (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// class UObject*                 ObjContext                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EventHandle                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FEventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// class UObject* ObjContext (Parm, ZeroConstructor, IsPlainOldData)
+// int EventHandle (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaEventBridgeFunction::UnRegisterEvent(const struct FString& FEventType, const struct FString& EventID, class UObject* ObjContext, int EventHandle)
 {
@@ -3732,11 +3782,11 @@ void ULuaEventBridgeFunction::UnRegisterEvent(const struct FString& FEventType, 
 // Function Basic.LuaEventBridgeFunction.RegistEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// class UObject*                 ObjContext                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// class UObject* ObjContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULuaEventBridgeFunction::RegistEvent(const struct FString& EventType, const struct FString& EventID, class UObject* ObjContext, const struct FString& FunctionName)
 {
@@ -3765,9 +3815,9 @@ int ULuaEventBridgeFunction::RegistEvent(const struct FString& EventType, const 
 // Function Basic.LuaEventBridge.SyncLuaRegisterEventNum
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// int                            Number                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// int Number (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaEventBridge::SyncLuaRegisterEventNum(const struct FString& EventType, const struct FString& EventID, int Number)
 {
@@ -3793,7 +3843,7 @@ void ULuaEventBridge::SyncLuaRegisterEventNum(const struct FString& EventType, c
 // Function Basic.LuaEventBridge.GetCurrentParam
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<class ULuaTemBPData*>   ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<class ULuaTemBPData*> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<class ULuaTemBPData*> ULuaEventBridge::GetCurrentParam()
 {
@@ -3818,7 +3868,7 @@ TArray<class ULuaTemBPData*> ULuaEventBridge::GetCurrentParam()
 // Function Basic.LuaEventBridge.DeactivateEventsByFilterKey
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       FilterKey                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// uint32_t FilterKey (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
 void ULuaEventBridge::DeactivateEventsByFilterKey(uint32_t FilterKey)
 {
@@ -3842,11 +3892,11 @@ void ULuaEventBridge::DeactivateEventsByFilterKey(uint32_t FilterKey)
 // Function Basic.LuaEventBridge.CheckNeedPostEventWithFilterKey
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       FilterKey                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// bool                           bCheckNeedPostLua              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// uint32_t FilterKey (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// bool bCheckNeedPostLua (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULuaEventBridge::CheckNeedPostEventWithFilterKey(uint32_t FilterKey, const struct FString& EventType, const struct FString& EventID, bool bCheckNeedPostLua)
 {
@@ -3875,10 +3925,10 @@ bool ULuaEventBridge::CheckNeedPostEventWithFilterKey(uint32_t FilterKey, const 
 // Function Basic.LuaEventBridge.ActiveEventByFilterKey
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// uint32_t                       FilterKey                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// bool                           bActive                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// uint32_t FilterKey (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString EventType (Parm, ZeroConstructor)
+// struct FString EventID (Parm, ZeroConstructor)
+// bool bActive (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaEventBridge::ActiveEventByFilterKey(uint32_t FilterKey, const struct FString& EventType, const struct FString& EventID, bool bActive)
 {
@@ -3905,7 +3955,7 @@ void ULuaEventBridge::ActiveEventByFilterKey(uint32_t FilterKey, const struct FS
 // Function Basic.LuaEventSubsystem.UnRegistEvent
 // (Final, Native, Public)
 // Parameters:
-// int                            EventHandle                    (Parm, ZeroConstructor, IsPlainOldData)
+// int EventHandle (Parm, ZeroConstructor, IsPlainOldData)
 
 void ULuaEventSubsystem::UnRegistEvent(int EventHandle)
 {
@@ -3929,10 +3979,10 @@ void ULuaEventSubsystem::UnRegistEvent(int EventHandle)
 // Function Basic.LuaEventSubsystem.SetBridgeFunction
 // (Final, Native, Public)
 // Parameters:
-// struct FSluaBPVar              OnRegistEvent                  (Parm)
-// struct FSluaBPVar              OnUnRegistEvent                (Parm)
-// struct FSluaBPVar              OnPostEvent                    (Parm)
-// struct FSluaBPVar              OnPostBlueprintEvent           (Parm)
+// struct FSluaBPVar OnRegistEvent (Parm)
+// struct FSluaBPVar OnUnRegistEvent (Parm)
+// struct FSluaBPVar OnPostEvent (Parm)
+// struct FSluaBPVar OnPostBlueprintEvent (Parm)
 
 void ULuaEventSubsystem::SetBridgeFunction(const struct FSluaBPVar& OnRegistEvent, const struct FSluaBPVar& OnUnRegistEvent, const struct FSluaBPVar& OnPostEvent, const struct FSluaBPVar& OnPostBlueprintEvent)
 {
@@ -3959,11 +4009,11 @@ void ULuaEventSubsystem::SetBridgeFunction(const struct FSluaBPVar& OnRegistEven
 // Function Basic.LuaEventSubsystem.RegistEvent
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 EventID                        (Parm, ZeroConstructor)
-// struct FString                 EventType                      (Parm, ZeroConstructor)
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FunctionName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString EventID (Parm, ZeroConstructor)
+// struct FString EventType (Parm, ZeroConstructor)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FunctionName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int ULuaEventSubsystem::RegistEvent(const struct FString& EventID, const struct FString& EventType, class UObject* Object, const struct FString& FunctionName)
 {
@@ -3992,7 +4042,7 @@ int ULuaEventSubsystem::RegistEvent(const struct FString& EventID, const struct 
 // Function Basic.PlayerReliableSequentialSyncActor.OnActorSpawned
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
 
 void APlayerReliableSequentialSyncActor::OnActorSpawned(class AActor* Actor)
 {
@@ -4016,7 +4066,7 @@ void APlayerReliableSequentialSyncActor::OnActorSpawned(class AActor* Actor)
 // Function Basic.RenderFunctionLibrary.MarkComponentRenderStateDirty
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UActorComponent*         comp                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* comp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void URenderFunctionLibrary::MarkComponentRenderStateDirty(class UActorComponent* comp)
 {
@@ -4037,13 +4087,42 @@ void URenderFunctionLibrary::MarkComponentRenderStateDirty(class UActorComponent
 }
 
 
+// Function Basic.STBaseBuffCarrierInterface.SetEndTime
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float EndTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBaseBuffCarrierInterface::SetEndTime(int InstID, float EndTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBaseBuffCarrierInterface.SetEndTime");
+
+	USTBaseBuffCarrierInterface_SetEndTime_Params params;
+	params.InstID = InstID;
+	params.EndTime = EndTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBaseBuffCarrierInterface.RemoveBuffBySkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::RemoveBuffBySkill(int SkillID, int LayerCount, class AActor* Causer)
 {
@@ -4071,11 +4150,11 @@ bool USTBaseBuffCarrierInterface::RemoveBuffBySkill(int SkillID, int LayerCount,
 // Function Basic.STBaseBuffCarrierInterface.RemoveBuffByID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::RemoveBuffByID(int BuffID, class AActor* Causer, int LayerCount, int CauseSkillID)
 {
@@ -4104,8 +4183,8 @@ bool USTBaseBuffCarrierInterface::RemoveBuffByID(int BuffID, class AActor* Cause
 // Function Basic.STBaseBuffCarrierInterface.HasSkillID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::HasSkillID(int SkillID)
 {
@@ -4131,8 +4210,8 @@ bool USTBaseBuffCarrierInterface::HasSkillID(int SkillID)
 // Function Basic.STBaseBuffCarrierInterface.HasBuffID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::HasBuffID(int BuffID)
 {
@@ -4158,8 +4237,8 @@ bool USTBaseBuffCarrierInterface::HasBuffID(int BuffID)
 // Function Basic.STBaseBuffCarrierInterface.GetBuffIDsBySkillID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<int> USTBaseBuffCarrierInterface::GetBuffIDsBySkillID(int SkillID)
 {
@@ -4185,9 +4264,9 @@ TArray<int> USTBaseBuffCarrierInterface::GetBuffIDsBySkillID(int SkillID)
 // Function Basic.STBaseBuffCarrierInterface.GetBuffDuration
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USTBaseBuffCarrierInterface::GetBuffDuration(int InstID, int CauseSkillID)
 {
@@ -4214,7 +4293,7 @@ float USTBaseBuffCarrierInterface::GetBuffDuration(int InstID, int CauseSkillID)
 // Function Basic.STBaseBuffCarrierInterface.GetBuffComponent
 // (Native, Public, Const)
 // Parameters:
-// class USTBuffSystemComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class USTBuffSystemComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USTBuffSystemComponent* USTBaseBuffCarrierInterface::GetBuffComponent()
 {
@@ -4239,9 +4318,9 @@ class USTBuffSystemComponent* USTBaseBuffCarrierInterface::GetBuffComponent()
 // Function Basic.STBaseBuffCarrierInterface.ChangeBuffDuration
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float Duration (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::ChangeBuffDuration(int InstID, float Duration)
 {
@@ -4268,11 +4347,11 @@ bool USTBaseBuffCarrierInterface::ChangeBuffDuration(int InstID, float Duration)
 // Function Basic.STBaseBuffCarrierInterface.AddBuffBySkill
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int Level (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBaseBuffCarrierInterface::AddBuffBySkill(int SkillID, int LayerCount, class AActor* Causer, int Level)
 {
@@ -4301,12 +4380,12 @@ bool USTBaseBuffCarrierInterface::AddBuffBySkill(int SkillID, int LayerCount, cl
 // Function Basic.STBaseBuffCarrierInterface.AddBuffByID
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int Level (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTBaseBuffCarrierInterface::AddBuffByID(int BuffID, class AActor* Causer, int LayerCount, int CauseSkillID, int Level)
 {
@@ -4333,41 +4412,16 @@ int USTBaseBuffCarrierInterface::AddBuffByID(int BuffID, class AActor* Causer, i
 }
 
 
-// Function Basic.STBuff.TryGetParams
+// Function Basic.STBuff.Tick
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// TMap<int, struct FString>      ActionParamMap                 (Parm, OutParm, ZeroConstructor)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
+// float TimeSeconds (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> TickActionList (Parm, OutParm, ZeroConstructor)
 
-void USTBuff::TryGetParams(TMap<int, struct FString>* ActionParamMap)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuff.TryGetParams");
-
-	USTBuff_TryGetParams_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	if (ActionParamMap != nullptr)
-		*ActionParamMap = params.ActionParamMap;
-}
-
-
-// Function Basic.STBuff.Tick
-// (Final, Native, Public)
-// Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          TimeSeconds                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void USTBuff::Tick(class UActorComponent* BuffSystemComponent, int InstID, float DetalTime, float TimeSeconds)
+void USTBuff::Tick(class UActorComponent* BuffSystemComponent, int InstID, float DetalTime, float TimeSeconds, TArray<int>* TickActionList)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -4386,14 +4440,17 @@ void USTBuff::Tick(class UActorComponent* BuffSystemComponent, int InstID, float
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+
+	if (TickActionList != nullptr)
+		*TickActionList = params.TickActionList;
 }
 
 
 // Function Basic.STBuff.ResetActionExecute
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuff::ResetActionExecute(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4418,8 +4475,8 @@ void USTBuff::ResetActionExecute(class UActorComponent* BuffSystemComponent, int
 // Function Basic.STBuff.OnCreate
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuff::OnCreate(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4444,8 +4501,8 @@ void USTBuff::OnCreate(class UActorComponent* BuffSystemComponent, int InstID)
 // Function Basic.STBuff.Initialize
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuff::Initialize(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4491,8 +4548,8 @@ void USTBuff::InitBuffAction()
 // Function Basic.STBuff.End
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuff::End(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4517,8 +4574,8 @@ void USTBuff::End(class UActorComponent* BuffSystemComponent, int InstID)
 // Function Basic.STBuff.Destroy
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuff::Destroy(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4543,10 +4600,11 @@ void USTBuff::Destroy(class UActorComponent* BuffSystemComponent, int InstID)
 // Function Basic.STBuff.ChangeNotify
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void USTBuff::ChangeNotify(class UActorComponent* BuffSystemComponent, int InstID)
+bool USTBuff::ChangeNotify(class UActorComponent* BuffSystemComponent, int InstID)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -4563,13 +4621,15 @@ void USTBuff::ChangeNotify(class UActorComponent* BuffSystemComponent, int InstI
 	currentObj->ProcessEvent(pFunc, &params);
 
 	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
 // Function Basic.STBuffNodeInstanceData.GetBuffInstLevel
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTBuffNodeInstanceData::GetBuffInstLevel()
 {
@@ -4591,18 +4651,18 @@ int USTBuffNodeInstanceData::GetBuffInstLevel()
 }
 
 
-// Function Basic.STBuffAction.TryGetParams
-// (Final, Native, Public, HasOutParms)
+// Function Basic.STBuffAction.ToString
+// (Native, Public)
 // Parameters:
-// TMap<int, struct FString>      ActionParamMap                 (Parm, OutParm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-void USTBuffAction::TryGetParams(TMap<int, struct FString>* ActionParamMap)
+struct FString USTBuffAction::ToString()
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction.TryGetParams");
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction.ToString");
 
-	USTBuffAction_TryGetParams_Params params;
+	USTBuffAction_ToString_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -4612,17 +4672,44 @@ void USTBuffAction::TryGetParams(TMap<int, struct FString>* ActionParamMap)
 
 	pFunc->FunctionFlags = flags;
 
-	if (ActionParamMap != nullptr)
-		*ActionParamMap = params.ActionParamMap;
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffAction.Tick2
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffAction::Tick2(class UActorComponent* BuffSystemComponent, int InstID, float DetalTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction.Tick2");
+
+	USTBuffAction_Tick2_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+	params.DetalTime = DetalTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
 // Function Basic.STBuffAction.Tick
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::Tick(class UActorComponent* BuffSystemComponent, int InstID, float DetalTime)
 {
@@ -4648,9 +4735,9 @@ void USTBuffAction::Tick(class UActorComponent* BuffSystemComponent, int InstID,
 // Function Basic.STBuffAction.SetEnabled
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Enabled                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool Enabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::SetEnabled(class UActorComponent* BuffSystemComponent, int InstID, bool Enabled)
 {
@@ -4676,9 +4763,9 @@ void USTBuffAction::SetEnabled(class UActorComponent* BuffSystemComponent, int I
 // Function Basic.STBuffAction.ResetExecute
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IgnoreEnd                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IgnoreEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::ResetExecute(class UActorComponent* BuffSystemComponent, int InstID, bool IgnoreEnd)
 {
@@ -4704,7 +4791,7 @@ void USTBuffAction::ResetExecute(class UActorComponent* BuffSystemComponent, int
 // Function Basic.STBuffAction.OnTick
 // (Native, Protected)
 // Parameters:
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::OnTick(float DetalTime)
 {
@@ -4728,7 +4815,7 @@ void USTBuffAction::OnTick(float DetalTime)
 // Function Basic.STBuffAction.OnResetExecute
 // (Native, Protected)
 // Parameters:
-// bool                           IgnoreEnd                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool IgnoreEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::OnResetExecute(bool IgnoreEnd)
 {
@@ -4899,15 +4986,17 @@ void USTBuffAction::OnAsyncLoadSoftPathDone()
 // Function Basic.STBuffAction.IsRoleOK
 // (Final, Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UActorComponent* OwnerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool USTBuffAction::IsRoleOK()
+bool USTBuffAction::IsRoleOK(class UActorComponent* OwnerComponent)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction.IsRoleOK");
 
 	USTBuffAction_IsRoleOK_Params params;
+	params.OwnerComponent = OwnerComponent;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -4924,8 +5013,8 @@ bool USTBuffAction::IsRoleOK()
 // Function Basic.STBuffAction.Initialize
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::Initialize(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -4947,35 +5036,10 @@ void USTBuffAction::Initialize(class UActorComponent* BuffSystemComponent, int I
 }
 
 
-// Function Basic.STBuffAction.GetTargetSharedActors
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class AActor*> USTBuffAction::GetTargetSharedActors()
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction.GetTargetSharedActors");
-
-	USTBuffAction_GetTargetSharedActors_Params params;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Basic.STBuffAction.GetRealOwnerRole
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum ENetRole>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum ENetRole> USTBuffAction::GetRealOwnerRole()
 {
@@ -5000,7 +5064,7 @@ TEnumAsByte<enum ENetRole> USTBuffAction::GetRealOwnerRole()
 // Function Basic.STBuffAction.GetOwner
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USTBuffAction::GetOwner()
 {
@@ -5025,7 +5089,7 @@ class AActor* USTBuffAction::GetOwner()
 // Function Basic.STBuffAction.GetCauser
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USTBuffAction::GetCauser()
 {
@@ -5050,8 +5114,8 @@ class AActor* USTBuffAction::GetCauser()
 // Function Basic.STBuffAction.Execute
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::Execute(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5076,8 +5140,8 @@ void USTBuffAction::Execute(class UActorComponent* BuffSystemComponent, int Inst
 // Function Basic.STBuffAction.End
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::End(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5102,8 +5166,8 @@ void USTBuffAction::End(class UActorComponent* BuffSystemComponent, int InstID)
 // Function Basic.STBuffAction.Destroy
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::Destroy(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5128,8 +5192,8 @@ void USTBuffAction::Destroy(class UActorComponent* BuffSystemComponent, int Inst
 // Function Basic.STBuffAction.CheckLinkActionEnabled
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::CheckLinkActionEnabled(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5154,8 +5218,8 @@ void USTBuffAction::CheckLinkActionEnabled(class UActorComponent* BuffSystemComp
 // Function Basic.STBuffAction.ChangeNotify
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction::ChangeNotify(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5177,10 +5241,35 @@ void USTBuffAction::ChangeNotify(class UActorComponent* BuffSystemComponent, int
 }
 
 
+// Function Basic.STBuffAction_Lua.ToString
+// (Native, Public)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString USTBuffAction_Lua::ToString()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffAction_Lua.ToString");
+
+	USTBuffAction_Lua_ToString_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffAction_Lua.OnTick
 // (Native, Public)
 // Parameters:
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffAction_Lua::OnTick(float DetalTime)
 {
@@ -5309,9 +5398,9 @@ void USTBuffAction_Lua::OnChangeNotify()
 // Function Basic.STBuffCheckConditionWrapper.Tick
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::Tick(class UActorComponent* BuffSystemComponent, int InstID, float DetalTime)
 {
@@ -5334,40 +5423,12 @@ void USTBuffCheckConditionWrapper::Tick(class UActorComponent* BuffSystemCompone
 }
 
 
-// Function Basic.STBuffCheckConditionWrapper.SetEnabled
-// (Final, Native, Public)
-// Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Enabled                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void USTBuffCheckConditionWrapper::SetEnabled(class UActorComponent* BuffSystemComponent, int InstID, bool Enabled)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.SetEnabled");
-
-	USTBuffCheckConditionWrapper_SetEnabled_Params params;
-	params.BuffSystemComponent = BuffSystemComponent;
-	params.InstID = InstID;
-	params.Enabled = Enabled;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
 // Function Basic.STBuffCheckConditionWrapper.ResetExecute
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IgnoreEnd                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IgnoreEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::ResetExecute(class UActorComponent* BuffSystemComponent, int InstID, bool IgnoreEnd)
 {
@@ -5393,7 +5454,7 @@ void USTBuffCheckConditionWrapper::ResetExecute(class UActorComponent* BuffSyste
 // Function Basic.STBuffCheckConditionWrapper.OnTick
 // (Native, Protected)
 // Parameters:
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::OnTick(float DetalTime)
 {
@@ -5519,11 +5580,64 @@ void USTBuffCheckConditionWrapper::OnChangeNotify()
 }
 
 
+// Function Basic.STBuffCheckConditionWrapper.IsRoleOK
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* OwnerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffCheckConditionWrapper::IsRoleOK(class UActorComponent* OwnerComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.IsRoleOK");
+
+	USTBuffCheckConditionWrapper_IsRoleOK_Params params;
+	params.OwnerComponent = OwnerComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffCheckConditionWrapper.InitLinkActionEnableState
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffCheckConditionWrapper::InitLinkActionEnableState(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.InitLinkActionEnableState");
+
+	USTBuffCheckConditionWrapper_InitLinkActionEnableState_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.STBuffCheckConditionWrapper.Initialize
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::Initialize(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5545,11 +5659,36 @@ void USTBuffCheckConditionWrapper::Initialize(class UActorComponent* BuffSystemC
 }
 
 
+// Function Basic.STBuffCheckConditionWrapper.GetRealOwnerRole
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum ENetRole> USTBuffCheckConditionWrapper::GetRealOwnerRole()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.GetRealOwnerRole");
+
+	USTBuffCheckConditionWrapper_GetRealOwnerRole_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffCheckConditionWrapper.Execute
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::Execute(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5574,8 +5713,8 @@ void USTBuffCheckConditionWrapper::Execute(class UActorComponent* BuffSystemComp
 // Function Basic.STBuffCheckConditionWrapper.End
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::End(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5600,8 +5739,8 @@ void USTBuffCheckConditionWrapper::End(class UActorComponent* BuffSystemComponen
 // Function Basic.STBuffCheckConditionWrapper.Destroy
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::Destroy(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5610,32 +5749,6 @@ void USTBuffCheckConditionWrapper::Destroy(class UActorComponent* BuffSystemComp
 		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.Destroy");
 
 	USTBuffCheckConditionWrapper_Destroy_Params params;
-	params.BuffSystemComponent = BuffSystemComponent;
-	params.InstID = InstID;
-
-	auto flags = pFunc->FunctionFlags;
-	pFunc->FunctionFlags |= 0x400;
-
-	UObject *currentObj = (UObject *) this;
-	currentObj->ProcessEvent(pFunc, &params);
-
-	pFunc->FunctionFlags = flags;
-}
-
-
-// Function Basic.STBuffCheckConditionWrapper.CheckLinkActionEnabled
-// (Final, Native, Public)
-// Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void USTBuffCheckConditionWrapper::CheckLinkActionEnabled(class UActorComponent* BuffSystemComponent, int InstID)
-{
-	static UFunction *pFunc = nullptr;
-	if (!pFunc)
-		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCheckConditionWrapper.CheckLinkActionEnabled");
-
-	USTBuffCheckConditionWrapper_CheckLinkActionEnabled_Params params;
 	params.BuffSystemComponent = BuffSystemComponent;
 	params.InstID = InstID;
 
@@ -5673,8 +5786,8 @@ void USTBuffCheckConditionWrapper::CheckCondition()
 // Function Basic.STBuffCheckConditionWrapper.ChangeNotify
 // (Final, Native, Public)
 // Parameters:
-// class UActorComponent*         BuffSystemComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCheckConditionWrapper::ChangeNotify(class UActorComponent* BuffSystemComponent, int InstID)
 {
@@ -5699,7 +5812,7 @@ void USTBuffCheckConditionWrapper::ChangeNotify(class UActorComponent* BuffSyste
 // Function Basic.STBuffCondition.OnResetExecute
 // (Native, Protected)
 // Parameters:
-// bool                           IgnoreEnd                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool IgnoreEnd (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffCondition::OnResetExecute(bool IgnoreEnd)
 {
@@ -5786,7 +5899,7 @@ void USTBuffCondition::OnDestroy()
 // Function Basic.STBuffCondition.GetOwner
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USTBuffCondition::GetOwner()
 {
@@ -5811,7 +5924,7 @@ class AActor* USTBuffCondition::GetOwner()
 // Function Basic.STBuffCondition.GetCauser
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* USTBuffCondition::GetCauser()
 {
@@ -5836,8 +5949,8 @@ class AActor* USTBuffCondition::GetCauser()
 // Function Basic.STBuffCondition.Copy
 // (Native, Public)
 // Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class USTBuffCondition*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuffCondition* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USTBuffCondition* USTBuffCondition::Copy(class UObject* Outer)
 {
@@ -5863,7 +5976,7 @@ class USTBuffCondition* USTBuffCondition::Copy(class UObject* Outer)
 // Function Basic.STBuffCondition.CheckIsTrue
 // (Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffCondition::CheckIsTrue()
 {
@@ -5882,6 +5995,27 @@ bool USTBuffCondition::CheckIsTrue()
 	pFunc->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffCondition.ChangeNotify
+// (Native, Protected)
+
+void USTBuffCondition::ChangeNotify()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffCondition.ChangeNotify");
+
+	USTBuffCondition_ChangeNotify_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
 }
 
 
@@ -5930,8 +6064,8 @@ void USTBuffConditionComplex::OnDestroy()
 // Function Basic.STBuffConditionComplex.Copy
 // (Native, Public)
 // Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class USTBuffCondition*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuffCondition* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USTBuffCondition* USTBuffConditionComplex::Copy(class UObject* Outer)
 {
@@ -5957,7 +6091,7 @@ class USTBuffCondition* USTBuffConditionComplex::Copy(class UObject* Outer)
 // Function Basic.STBuffConditionComplex.CheckIsTrue
 // (Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffConditionComplex::CheckIsTrue()
 {
@@ -6024,8 +6158,8 @@ void USTBuffConditionNot::OnDestroy()
 // Function Basic.STBuffConditionNot.Copy
 // (Native, Public)
 // Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// class USTBuffCondition*        ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuffCondition* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USTBuffCondition* USTBuffConditionNot::Copy(class UObject* Outer)
 {
@@ -6051,7 +6185,7 @@ class USTBuffCondition* USTBuffConditionNot::Copy(class UObject* Outer)
 // Function Basic.STBuffConditionNot.CheckIsTrue
 // (Native, Protected)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffConditionNot::CheckIsTrue()
 {
@@ -6118,7 +6252,7 @@ void USTBuffCondition_Lua::OnDestroy()
 // Function Basic.STBuffCondition_Lua.CheckIsTrue
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffCondition_Lua::CheckIsTrue()
 {
@@ -6143,7 +6277,7 @@ bool USTBuffCondition_Lua::CheckIsTrue()
 // Function Basic.STBuffConditionAction.OnTick
 // (Native, Protected)
 // Parameters:
-// float                          DetalTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// float DetalTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffConditionAction::OnTick(float DetalTime)
 {
@@ -6290,10 +6424,975 @@ void USTBuffConditionAction::CheckCondition()
 }
 
 
+// Function Basic.STBuffEvent.TriggerEvent
+// (Native, Public)
+
+void USTBuffEvent::TriggerEvent()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.TriggerEvent");
+
+	USTBuffEvent_TriggerEvent_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.ToString
+// (Native, Public)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString USTBuffEvent::ToString()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.ToString");
+
+	USTBuffEvent_ToString_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.SetTimer
+// (Final, Native, Public)
+// Parameters:
+// struct FName FunctionName (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
+// bool InbLoop (Parm, ZeroConstructor, IsPlainOldData)
+// float InFirstDelay (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffEvent::SetTimer(const struct FName& FunctionName, float InRate, bool InbLoop, float InFirstDelay)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.SetTimer");
+
+	USTBuffEvent_SetTimer_Params params;
+	params.FunctionName = FunctionName;
+	params.InRate = InRate;
+	params.InbLoop = InbLoop;
+	params.InFirstDelay = InFirstDelay;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.OnInitialize
+// (Native, Public)
+
+void USTBuffEvent::OnInitialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.OnInitialize");
+
+	USTBuffEvent_OnInitialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.OnEnd
+// (Native, Public)
+
+void USTBuffEvent::OnEnd()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.OnEnd");
+
+	USTBuffEvent_OnEnd_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.OnDestroy
+// (Native, Public)
+
+void USTBuffEvent::OnDestroy()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.OnDestroy");
+
+	USTBuffEvent_OnDestroy_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.IsRoleOK
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* OwnerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffEvent::IsRoleOK(class UActorComponent* OwnerComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.IsRoleOK");
+
+	USTBuffEvent_IsRoleOK_Params params;
+	params.OwnerComponent = OwnerComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.GetRealOwnerRole
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum ENetRole> USTBuffEvent::GetRealOwnerRole()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.GetRealOwnerRole");
+
+	USTBuffEvent_GetRealOwnerRole_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.GetOwner
+// (Final, Native, Public)
+// Parameters:
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* USTBuffEvent::GetOwner()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.GetOwner");
+
+	USTBuffEvent_GetOwner_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.GetCauser
+// (Final, Native, Public)
+// Parameters:
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* USTBuffEvent::GetCauser()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.GetCauser");
+
+	USTBuffEvent_GetCauser_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.Copy
+// (Native, Public)
+// Parameters:
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuffEvent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USTBuffEvent* USTBuffEvent::Copy(class UObject* Outer)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.Copy");
+
+	USTBuffEvent_Copy_Params params;
+	params.Outer = Outer;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent.ClearTimer
+// (Final, Native, Public)
+// Parameters:
+// struct FName FunctionName (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffEvent::ClearTimer(const struct FName& FunctionName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.ClearTimer");
+
+	USTBuffEvent_ClearTimer_Params params;
+	params.FunctionName = FunctionName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent.ClearAllTimer
+// (Final, Native, Public)
+
+void USTBuffEvent::ClearAllTimer()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent.ClearAllTimer");
+
+	USTBuffEvent_ClearAllTimer_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent_Lua.ToString
+// (Native, Public)
+// Parameters:
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString USTBuffEvent_Lua::ToString()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent_Lua.ToString");
+
+	USTBuffEvent_Lua_ToString_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffEvent_Multi.OnInitialize
+// (Native, Public)
+
+void USTBuffEvent_Multi::OnInitialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent_Multi.OnInitialize");
+
+	USTBuffEvent_Multi_OnInitialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent_Multi.OnEnd
+// (Native, Public)
+
+void USTBuffEvent_Multi::OnEnd()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent_Multi.OnEnd");
+
+	USTBuffEvent_Multi_OnEnd_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent_Multi.OnDestroy
+// (Native, Public)
+
+void USTBuffEvent_Multi::OnDestroy()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent_Multi.OnDestroy");
+
+	USTBuffEvent_Multi_OnDestroy_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffEvent_Multi.Copy
+// (Native, Public)
+// Parameters:
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuffEvent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class USTBuffEvent* USTBuffEvent_Multi::Copy(class UObject* Outer)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffEvent_Multi.Copy");
+
+	USTBuffEvent_Multi_Copy_Params params;
+	params.Outer = Outer;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetVectorShared
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FVector InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void USTBuffSharedInterface::SetVectorShared(const struct FString& SharedName, const struct FVector& InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetVectorShared");
+
+	USTBuffSharedInterface_SetVectorShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetUInt8Shared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// unsigned char InValue (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSharedInterface::SetUInt8Shared(const struct FString& SharedName, unsigned char InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetUInt8Shared");
+
+	USTBuffSharedInterface_SetUInt8Shared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetTargetShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// TArray<class AActor*> InActors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void USTBuffSharedInterface::SetTargetShared(const struct FString& SharedName, TArray<class AActor*> InActors)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetTargetShared");
+
+	USTBuffSharedInterface_SetTargetShared_Params params;
+	params.SharedName = SharedName;
+	params.InActors = InActors;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetStringShared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FString InValue (Parm, ZeroConstructor)
+
+void USTBuffSharedInterface::SetStringShared(const struct FString& SharedName, const struct FString& InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetStringShared");
+
+	USTBuffSharedInterface_SetStringShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetRotatorShared
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FRotator InValue (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void USTBuffSharedInterface::SetRotatorShared(const struct FString& SharedName, const struct FRotator& InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetRotatorShared");
+
+	USTBuffSharedInterface_SetRotatorShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetNameShared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FName InValue (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSharedInterface::SetNameShared(const struct FString& SharedName, const struct FName& InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetNameShared");
+
+	USTBuffSharedInterface_SetNameShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetInt32Shared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// int InValue (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSharedInterface::SetInt32Shared(const struct FString& SharedName, int InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetInt32Shared");
+
+	USTBuffSharedInterface_SetInt32Shared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetFloatShared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// float InValue (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSharedInterface::SetFloatShared(const struct FString& SharedName, float InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetFloatShared");
+
+	USTBuffSharedInterface_SetFloatShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.SetBooleanShared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// bool InValue (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSharedInterface::SetBooleanShared(const struct FString& SharedName, bool InValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.SetBooleanShared");
+
+	USTBuffSharedInterface_SetBooleanShared_Params params;
+	params.SharedName = SharedName;
+	params.InValue = InValue;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.RemoveShared
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+
+void USTBuffSharedInterface::RemoveShared(const struct FString& SharedName)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.RemoveShared");
+
+	USTBuffSharedInterface_RemoveShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetVectorShared
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FVector OutValue (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetVectorShared(const struct FString& SharedName, struct FVector* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetVectorShared");
+
+	USTBuffSharedInterface_GetVectorShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetUInt8Shared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// unsigned char OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetUInt8Shared(const struct FString& SharedName, unsigned char* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetUInt8Shared");
+
+	USTBuffSharedInterface_GetUInt8Shared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetTargetShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetTargetShared(const struct FString& SharedName, TArray<class AActor*>* OutActors)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetTargetShared");
+
+	USTBuffSharedInterface_GetTargetShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutActors != nullptr)
+		*OutActors = params.OutActors;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetStringShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FString OutValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetStringShared(const struct FString& SharedName, struct FString* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetStringShared");
+
+	USTBuffSharedInterface_GetStringShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetRotatorShared
+// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FRotator OutValue (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetRotatorShared(const struct FString& SharedName, struct FRotator* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetRotatorShared");
+
+	USTBuffSharedInterface_GetRotatorShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetNameShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// struct FName OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetNameShared(const struct FString& SharedName, struct FName* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetNameShared");
+
+	USTBuffSharedInterface_GetNameShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetInt32Shared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// int OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetInt32Shared(const struct FString& SharedName, int* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetInt32Shared");
+
+	USTBuffSharedInterface_GetInt32Shared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetFloatShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// float OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetFloatShared(const struct FString& SharedName, float* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetFloatShared");
+
+	USTBuffSharedInterface_GetFloatShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSharedInterface.GetBooleanShared
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FString SharedName (Parm, ZeroConstructor)
+// bool OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSharedInterface::GetBooleanShared(const struct FString& SharedName, bool* OutValue)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSharedInterface.GetBooleanShared");
+
+	USTBuffSharedInterface_GetBooleanShared_Params params;
+	params.SharedName = SharedName;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutValue != nullptr)
+		*OutValue = params.OutValue;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffSystemComponent.UpdateClientBuff
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// struct FBuffSyncBrief          Brief                          (Parm, OutParm)
+// struct FBuffSyncBrief Brief (Parm, OutParm)
 
 void USTBuffSystemComponent::UpdateClientBuff(struct FBuffSyncBrief* Brief)
 {
@@ -6316,13 +7415,71 @@ void USTBuffSystemComponent::UpdateClientBuff(struct FBuffSyncBrief* Brief)
 }
 
 
+// Function Basic.STBuffSystemComponent.SetEndTime
+// (Final, Native, Public)
+// Parameters:
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float EndTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSystemComponent::SetEndTime(int InstID, float EndTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSystemComponent.SetEndTime");
+
+	USTBuffSystemComponent_SetEndTime_Params params;
+	params.InstID = InstID;
+	params.EndTime = EndTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffSystemComponent.SetBuffReplaceData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FBuffReplaceData From (Parm)
+// struct FBuffReplaceData To (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSystemComponent::SetBuffReplaceData(const struct FBuffReplaceData& From, const struct FBuffReplaceData& To)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSystemComponent.SetBuffReplaceData");
+
+	USTBuffSystemComponent_SetBuffReplaceData_Params params;
+	params.From = From;
+	params.To = To;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffSystemComponent.RemoveBuffBySkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::RemoveBuffBySkill(int SkillID, int LayerCount, class AActor* Causer)
 {
@@ -6350,10 +7507,10 @@ bool USTBuffSystemComponent::RemoveBuffBySkill(int SkillID, int LayerCount, clas
 // Function Basic.STBuffSystemComponent.RemoveBuff
 // (Final, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::RemoveBuff(int BuffID, int LayerCount, class AActor* Causer, int CauseSkillID)
 {
@@ -6380,7 +7537,7 @@ void USTBuffSystemComponent::RemoveBuff(int BuffID, int LayerCount, class AActor
 // Function Basic.STBuffSystemComponent.RemoveAllBuffsWithExcludeArray
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InExcludeArry                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InExcludeArry (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void USTBuffSystemComponent::RemoveAllBuffsWithExcludeArray(TArray<int> InExcludeArry)
 {
@@ -6404,7 +7561,7 @@ void USTBuffSystemComponent::RemoveAllBuffsWithExcludeArray(TArray<int> InExclud
 // Function Basic.STBuffSystemComponent.RemoveAllBuffs
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bClearAll                      (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClearAll (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::RemoveAllBuffs(bool bClearAll)
 {
@@ -6417,6 +7574,33 @@ void USTBuffSystemComponent::RemoveAllBuffs(bool bClearAll)
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// DelegateFunction Basic.STBuffSystemComponent.OnUpdateBuffEvent__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffSystemComponent::OnUpdateBuffEvent__DelegateSignature(int BuffID, int SkillID, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("DelegateFunction Basic.STBuffSystemComponent.OnUpdateBuffEvent__DelegateSignature");
+
+	USTBuffSystemComponent_OnUpdateBuffEvent__DelegateSignature_Params params;
+	params.BuffID = BuffID;
+	params.SkillID = SkillID;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
 
 	UObject *currentObj = (UObject *) this;
 	currentObj->ProcessEvent(pFunc, &params);
@@ -6470,9 +7654,9 @@ void USTBuffSystemComponent::OnRep_OwnerSyncBriefs()
 // DelegateFunction Basic.STBuffSystemComponent.OnRemoveBuffEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::OnRemoveBuffEvent__DelegateSignature(int BuffID, int SkillID, int InstID)
 {
@@ -6497,9 +7681,9 @@ void USTBuffSystemComponent::OnRemoveBuffEvent__DelegateSignature(int BuffID, in
 // DelegateFunction Basic.STBuffSystemComponent.OnClientUpdateBuffEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::OnClientUpdateBuffEvent__DelegateSignature(int BuffID, int SkillID, int InstID)
 {
@@ -6524,9 +7708,9 @@ void USTBuffSystemComponent::OnClientUpdateBuffEvent__DelegateSignature(int Buff
 // DelegateFunction Basic.STBuffSystemComponent.OnClientRemoveBuffEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::OnClientRemoveBuffEvent__DelegateSignature(int BuffID, int SkillID, int InstID)
 {
@@ -6551,9 +7735,9 @@ void USTBuffSystemComponent::OnClientRemoveBuffEvent__DelegateSignature(int Buff
 // DelegateFunction Basic.STBuffSystemComponent.OnClientAddBuffEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::OnClientAddBuffEvent__DelegateSignature(int BuffID, int SkillID, int InstID)
 {
@@ -6578,10 +7762,10 @@ void USTBuffSystemComponent::OnClientAddBuffEvent__DelegateSignature(int BuffID,
 // DelegateFunction Basic.STBuffSystemComponent.OnAddBuffEvent__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsExist                        (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsExist (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::OnAddBuffEvent__DelegateSignature(int BuffID, int SkillID, bool IsExist, class AActor* Causer)
 {
@@ -6607,9 +7791,9 @@ void USTBuffSystemComponent::OnAddBuffEvent__DelegateSignature(int BuffID, int S
 // Function Basic.STBuffSystemComponent.IsCDOK
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::IsCDOK(int InstID, int Index)
 {
@@ -6636,8 +7820,8 @@ bool USTBuffSystemComponent::IsCDOK(int InstID, int Index)
 // Function Basic.STBuffSystemComponent.IsBuffInstExist
 // (Final, Native, Public)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::IsBuffInstExist(int InstID)
 {
@@ -6663,8 +7847,8 @@ bool USTBuffSystemComponent::IsBuffInstExist(int InstID)
 // Function Basic.STBuffSystemComponent.HasSkillID
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::HasSkillID(int SkillID)
 {
@@ -6690,8 +7874,8 @@ bool USTBuffSystemComponent::HasSkillID(int SkillID)
 // Function Basic.STBuffSystemComponent.HasBuff
 // (Final, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::HasBuff(int BuffID)
 {
@@ -6717,7 +7901,7 @@ bool USTBuffSystemComponent::HasBuff(int BuffID)
 // Function Basic.STBuffSystemComponent.GetSubsystem
 // (Final, Native, Public)
 // Parameters:
-// class UBuffConfigSubsystem*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBuffConfigSubsystem* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBuffConfigSubsystem* USTBuffSystemComponent::GetSubsystem()
 {
@@ -6742,8 +7926,8 @@ class UBuffConfigSubsystem* USTBuffSystemComponent::GetSubsystem()
 // Function Basic.STBuffSystemComponent.GetSTBuffByBuffID
 // (Final, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// class USTBuff*                 ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// class USTBuff* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class USTBuff* USTBuffSystemComponent::GetSTBuffByBuffID(int BuffID)
 {
@@ -6769,7 +7953,7 @@ class USTBuff* USTBuffSystemComponent::GetSTBuffByBuffID(int BuffID)
 // Function Basic.STBuffSystemComponent.GetRealOwnerRoleSafety
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum ENetRole>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum ENetRole> USTBuffSystemComponent::GetRealOwnerRoleSafety()
 {
@@ -6791,12 +7975,41 @@ TEnumAsByte<enum ENetRole> USTBuffSystemComponent::GetRealOwnerRoleSafety()
 }
 
 
+// Function Basic.STBuffSystemComponent.GetBuffReplaceDataByID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBuffInst (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBuffReplaceData ReturnValue (Parm, OutParm, ReturnParm)
+
+struct FBuffReplaceData USTBuffSystemComponent::GetBuffReplaceDataByID(int ID, bool bBuffInst)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSystemComponent.GetBuffReplaceDataByID");
+
+	USTBuffSystemComponent_GetBuffReplaceDataByID_Params params;
+	params.ID = ID;
+	params.bBuffInst = bBuffInst;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffSystemComponent.GetBuffLayerCount
 // (Final, Native, Public)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTBuffSystemComponent::GetBuffLayerCount(int InstID, int CauseSkillID)
 {
@@ -6823,8 +8036,8 @@ int USTBuffSystemComponent::GetBuffLayerCount(int InstID, int CauseSkillID)
 // Function Basic.STBuffSystemComponent.GetBuffInfoBySkillID
 // (Final, Native, Public)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FBuffSyncBrief>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FBuffSyncBrief> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetBuffInfoBySkillID(int SkillID)
 {
@@ -6850,8 +8063,8 @@ TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetBuffInfoBySkillID(int S
 // Function Basic.STBuffSystemComponent.GetBuffInfoByBuffID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FBuffSyncBrief>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FBuffSyncBrief> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetBuffInfoByBuffID(int BuffID)
 {
@@ -6877,9 +8090,9 @@ TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetBuffInfoByBuffID(int Bu
 // Function Basic.STBuffSystemComponent.GetBuffInfo
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBuffSyncBrief          OutBuff                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBuffSyncBrief OutBuff (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::GetBuffInfo(int InstID, struct FBuffSyncBrief* OutBuff)
 {
@@ -6908,8 +8121,8 @@ bool USTBuffSystemComponent::GetBuffInfo(int InstID, struct FBuffSyncBrief* OutB
 // Function Basic.STBuffSystemComponent.GetBuffIDsBySkillID
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<int> USTBuffSystemComponent::GetBuffIDsBySkillID(int SkillID)
 {
@@ -6935,9 +8148,9 @@ TArray<int> USTBuffSystemComponent::GetBuffIDsBySkillID(int SkillID)
 // Function Basic.STBuffSystemComponent.GetBuffDuration
 // (Final, Native, Public)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USTBuffSystemComponent::GetBuffDuration(int InstID, int CauseSkillID)
 {
@@ -6964,9 +8177,9 @@ float USTBuffSystemComponent::GetBuffDuration(int InstID, int CauseSkillID)
 // Function Basic.STBuffSystemComponent.GetBuffDSEndTime
 // (Final, Native, Public)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float USTBuffSystemComponent::GetBuffDSEndTime(int InstID, int CauseSkillID)
 {
@@ -6993,8 +8206,8 @@ float USTBuffSystemComponent::GetBuffDSEndTime(int InstID, int CauseSkillID)
 // Function Basic.STBuffSystemComponent.GetBuffCDInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<float>                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<float> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<float> USTBuffSystemComponent::GetBuffCDInfo(int InstID)
 {
@@ -7020,7 +8233,7 @@ TArray<float> USTBuffSystemComponent::GetBuffCDInfo(int InstID)
 // Function Basic.STBuffSystemComponent.GetAllBuffInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FBuffSyncBrief>  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FBuffSyncBrief> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetAllBuffInfo()
 {
@@ -7045,9 +8258,9 @@ TArray<struct FBuffSyncBrief> USTBuffSystemComponent::GetAllBuffInfo()
 // Function Basic.STBuffSystemComponent.DoCooldown
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReset                         (Parm, ZeroConstructor, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReset (Parm, ZeroConstructor, IsPlainOldData)
 
 void USTBuffSystemComponent::DoCooldown(int InstID, int Index, bool bReset)
 {
@@ -7091,12 +8304,41 @@ void USTBuffSystemComponent::ClearBuffs()
 }
 
 
+// Function Basic.STBuffSystemComponent.ChangeLevel
+// (Final, Native, Public)
+// Parameters:
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// int NewLevel (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffSystemComponent::ChangeLevel(int InstID, int NewLevel)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffSystemComponent.ChangeLevel");
+
+	USTBuffSystemComponent_ChangeLevel_Params params;
+	params.InstID = InstID;
+	params.NewLevel = NewLevel;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.STBuffSystemComponent.ChangeDuration
 // (Final, Native, Public)
 // Parameters:
-// int                            InstID                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Duration                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float Duration (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::ChangeDuration(int InstID, float Duration)
 {
@@ -7123,11 +8365,11 @@ bool USTBuffSystemComponent::ChangeDuration(int InstID, float Duration)
 // Function Basic.STBuffSystemComponent.AddBuffBySkill
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int Level (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USTBuffSystemComponent::AddBuffBySkill(int SkillID, int LayerCount, class AActor* Causer, int Level)
 {
@@ -7156,12 +8398,12 @@ bool USTBuffSystemComponent::AddBuffBySkill(int SkillID, int LayerCount, class A
 // Function Basic.STBuffSystemComponent.AddBuff
 // (Final, Native, Public)
 // Parameters:
-// int                            BuffID                         (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Causer                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerCount                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            CauseSkillID                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Level                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int BuffID (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Causer (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerCount (Parm, ZeroConstructor, IsPlainOldData)
+// int CauseSkillID (Parm, ZeroConstructor, IsPlainOldData)
+// int Level (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int USTBuffSystemComponent::AddBuff(int BuffID, class AActor* Causer, int LayerCount, int CauseSkillID, int Level)
 {
@@ -7188,14 +8430,383 @@ int USTBuffSystemComponent::AddBuff(int BuffID, class AActor* Causer, int LayerC
 }
 
 
+// Function Basic.STBuffTriggerBase.Tick
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::Tick(class UActorComponent* BuffSystemComponent, int InstID, float DeltaTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.Tick");
+
+	USTBuffTriggerBase_Tick_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.ResetExecute
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::ResetExecute(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.ResetExecute");
+
+	USTBuffTriggerBase_ResetExecute_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnTriggerCreate
+// (Native, Protected)
+
+void USTBuffTriggerBase::OnTriggerCreate()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnTriggerCreate");
+
+	USTBuffTriggerBase_OnTriggerCreate_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnTick
+// (Native, Protected)
+// Parameters:
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::OnTick(float DeltaTime)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnTick");
+
+	USTBuffTriggerBase_OnTick_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnInitialize
+// (Native, Protected)
+
+void USTBuffTriggerBase::OnInitialize()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnInitialize");
+
+	USTBuffTriggerBase_OnInitialize_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnEnd
+// (Native, Protected)
+
+void USTBuffTriggerBase::OnEnd()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnEnd");
+
+	USTBuffTriggerBase_OnEnd_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnDestroy
+// (Native, Protected)
+
+void USTBuffTriggerBase::OnDestroy()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnDestroy");
+
+	USTBuffTriggerBase_OnDestroy_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.OnCreate
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::OnCreate(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.OnCreate");
+
+	USTBuffTriggerBase_OnCreate_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.IsRoleOK
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* OwnerComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffTriggerBase::IsRoleOK(class UActorComponent* OwnerComponent)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.IsRoleOK");
+
+	USTBuffTriggerBase_IsRoleOK_Params params;
+	params.OwnerComponent = OwnerComponent;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffTriggerBase.IsNeedTick
+// (Native, Public, Const)
+// Parameters:
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool USTBuffTriggerBase::IsNeedTick()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.IsNeedTick");
+
+	USTBuffTriggerBase_IsNeedTick_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffTriggerBase.InitLinkActionEnableState
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::InitLinkActionEnableState(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.InitLinkActionEnableState");
+
+	USTBuffTriggerBase_InitLinkActionEnableState_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.Initialize
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::Initialize(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.Initialize");
+
+	USTBuffTriggerBase_Initialize_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.GetRealOwnerRole
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<enum ENetRole> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<enum ENetRole> USTBuffTriggerBase::GetRealOwnerRole()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.GetRealOwnerRole");
+
+	USTBuffTriggerBase_GetRealOwnerRole_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Basic.STBuffTriggerBase.End
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::End(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.End");
+
+	USTBuffTriggerBase_End_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.STBuffTriggerBase.Destroy
+// (Final, Native, Public)
+// Parameters:
+// class UActorComponent* BuffSystemComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int InstID (Parm, ZeroConstructor, IsPlainOldData)
+
+void USTBuffTriggerBase::Destroy(class UActorComponent* BuffSystemComponent, int InstID)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.STBuffTriggerBase.Destroy");
+
+	USTBuffTriggerBase_Destroy_Params params;
+	params.BuffSystemComponent = BuffSystemComponent;
+	params.InstID = InstID;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.TableManagerSubsystem.SetTableStringDataField
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   tableName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FString                 Field                          (Parm, ZeroConstructor)
-// struct FString                 NewValue                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName tableName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FString Field (Parm, ZeroConstructor)
+// struct FString NewValue (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTableManagerSubsystem::SetTableStringDataField(const struct FName& tableName, const struct FString& Key, const struct FString& Field, const struct FString& NewValue)
 {
@@ -7224,7 +8835,7 @@ bool UTableManagerSubsystem::SetTableStringDataField(const struct FName& tableNa
 // Function Basic.TableManagerSubsystem.SetModName
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 ModName                        (Parm, ZeroConstructor)
+// struct FString ModName (Parm, ZeroConstructor)
 
 void UTableManagerSubsystem::SetModName(const struct FString& ModName)
 {
@@ -7248,11 +8859,11 @@ void UTableManagerSubsystem::SetModName(const struct FString& ModName)
 // Function Basic.TableManagerSubsystem.GetTableProxy
 // (Final, Native, Public)
 // Parameters:
-// struct FName                   tableName                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTempory                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SystemName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SubModName                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UDataTableProxy*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName tableName (Parm, ZeroConstructor, IsPlainOldData)
+// bool bTempory (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SystemName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SubModName (Parm, ZeroConstructor, IsPlainOldData)
+// class UDataTableProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UDataTableProxy* UTableManagerSubsystem::GetTableProxy(const struct FName& tableName, bool bTempory, const struct FName& SystemName, const struct FName& SubModName)
 {
@@ -7281,11 +8892,11 @@ class UDataTableProxy* UTableManagerSubsystem::GetTableProxy(const struct FName&
 // Function Basic.TableManagerSubsystem.GetTableDataField
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// struct FTableRowBase           Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 Field                          (Parm, ZeroConstructor)
-// struct FTableRowBase           Out                            (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// struct FTableRowBase Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString Field (Parm, ZeroConstructor)
+// struct FTableRowBase Out (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTableManagerSubsystem::GetTableDataField(const struct FString& tableName, const struct FTableRowBase& Key, const struct FString& Field, struct FTableRowBase* Out)
 {
@@ -7316,10 +8927,10 @@ bool UTableManagerSubsystem::GetTableDataField(const struct FString& tableName, 
 // Function Basic.TableManagerSubsystem.GetTableData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FTableRowBase           OutRow                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FTableRowBase OutRow (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTableManagerSubsystem::GetTableData(const struct FString& tableName, const struct FString& Key, struct FTableRowBase* OutRow)
 {
@@ -7349,7 +8960,7 @@ bool UTableManagerSubsystem::GetTableData(const struct FString& tableName, const
 // Function Basic.TickOptimizationAnimComponent.ShouldForceEnableAnimUpdateRateOptimizations
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationAnimComponent::ShouldForceEnableAnimUpdateRateOptimizations()
 {
@@ -7374,7 +8985,7 @@ bool UTickOptimizationAnimComponent::ShouldForceEnableAnimUpdateRateOptimization
 // Function Basic.TickOptimizationAnimComponent.SetNonRenderedFramesSkipped
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InNonRenderedFramesSkipped     (Parm, ZeroConstructor, IsPlainOldData)
+// int InNonRenderedFramesSkipped (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationAnimComponent::SetNonRenderedFramesSkipped(int InNonRenderedFramesSkipped)
 {
@@ -7398,7 +9009,7 @@ void UTickOptimizationAnimComponent::SetNonRenderedFramesSkipped(int InNonRender
 // Function Basic.TickOptimizationAnimComponent.SetMaxFramesSkippedForInterpolation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InMaxFramesSkippedForInterpolation (Parm, ZeroConstructor, IsPlainOldData)
+// int InMaxFramesSkippedForInterpolation (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationAnimComponent::SetMaxFramesSkippedForInterpolation(int InMaxFramesSkippedForInterpolation)
 {
@@ -7422,7 +9033,7 @@ void UTickOptimizationAnimComponent::SetMaxFramesSkippedForInterpolation(int InM
 // Function Basic.TickOptimizationAnimComponent.SetLODToFramesSkipped
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    InLODToFramesSkipped           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> InLODToFramesSkipped (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTickOptimizationAnimComponent::SetLODToFramesSkipped(TArray<int> InLODToFramesSkipped)
 {
@@ -7446,7 +9057,7 @@ void UTickOptimizationAnimComponent::SetLODToFramesSkipped(TArray<int> InLODToFr
 // Function Basic.TickOptimizationAnimComponent.SetFramesSkippedScreenSizeThresholds
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  InFramesSkippedScreenSizeThresholds (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> InFramesSkippedScreenSizeThresholds (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTickOptimizationAnimComponent::SetFramesSkippedScreenSizeThresholds(TArray<float> InFramesSkippedScreenSizeThresholds)
 {
@@ -7470,7 +9081,7 @@ void UTickOptimizationAnimComponent::SetFramesSkippedScreenSizeThresholds(TArray
 // Function Basic.TickOptimizationAnimComponent.SetForceEnableAnimUpdateRateOptimizations
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInForceEnableAnimUpdateRateOptimizations (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInForceEnableAnimUpdateRateOptimizations (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationAnimComponent::SetForceEnableAnimUpdateRateOptimizations(bool bInForceEnableAnimUpdateRateOptimizations)
 {
@@ -7494,7 +9105,7 @@ void UTickOptimizationAnimComponent::SetForceEnableAnimUpdateRateOptimizations(b
 // Function Basic.TickOptimizationAnimComponent.SetAnimUpdateRateOptimizationsMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ETickOptimizationAnimUROMode   InAnimUpdateRateOptimizationsMode (Parm, ZeroConstructor, IsPlainOldData)
+// ETickOptimizationAnimUROMode InAnimUpdateRateOptimizationsMode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationAnimComponent::SetAnimUpdateRateOptimizationsMode(ETickOptimizationAnimUROMode InAnimUpdateRateOptimizationsMode)
 {
@@ -7518,7 +9129,7 @@ void UTickOptimizationAnimComponent::SetAnimUpdateRateOptimizationsMode(ETickOpt
 // Function Basic.TickOptimizationAnimComponent.RegisterDynamicSkinnedMeshComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USkinnedMeshComponent*   SkinnedMeshComponent           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class USkinnedMeshComponent* SkinnedMeshComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UTickOptimizationAnimComponent::RegisterDynamicSkinnedMeshComponent(class USkinnedMeshComponent* SkinnedMeshComponent)
 {
@@ -7542,7 +9153,7 @@ void UTickOptimizationAnimComponent::RegisterDynamicSkinnedMeshComponent(class U
 // Function Basic.TickOptimizationAnimComponent.GetNonRenderedFramesSkipped
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTickOptimizationAnimComponent::GetNonRenderedFramesSkipped()
 {
@@ -7567,7 +9178,7 @@ int UTickOptimizationAnimComponent::GetNonRenderedFramesSkipped()
 // Function Basic.TickOptimizationAnimComponent.GetMaxFramesSkippedForInterpolation
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTickOptimizationAnimComponent::GetMaxFramesSkippedForInterpolation()
 {
@@ -7592,7 +9203,7 @@ int UTickOptimizationAnimComponent::GetMaxFramesSkippedForInterpolation()
 // Function Basic.TickOptimizationAnimComponent.GetLODToFramesSkipped
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<int>                    ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<int> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<int> UTickOptimizationAnimComponent::GetLODToFramesSkipped()
 {
@@ -7617,7 +9228,7 @@ TArray<int> UTickOptimizationAnimComponent::GetLODToFramesSkipped()
 // Function Basic.TickOptimizationAnimComponent.GetFramesSkippedScreenSizeThresholds
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<float>                  ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<float> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<float> UTickOptimizationAnimComponent::GetFramesSkippedScreenSizeThresholds()
 {
@@ -7642,7 +9253,7 @@ TArray<float> UTickOptimizationAnimComponent::GetFramesSkippedScreenSizeThreshol
 // Function Basic.TickOptimizationAnimComponent.GetAnimUpdateRateOptimizationsMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ETickOptimizationAnimUROMode   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ETickOptimizationAnimUROMode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ETickOptimizationAnimUROMode UTickOptimizationAnimComponent::GetAnimUpdateRateOptimizationsMode()
 {
@@ -7667,7 +9278,7 @@ ETickOptimizationAnimUROMode UTickOptimizationAnimComponent::GetAnimUpdateRateOp
 // Function Basic.TickOptimizationFocusComponent.ShouldTrack
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationFocusComponent::ShouldTrack()
 {
@@ -7692,7 +9303,7 @@ bool UTickOptimizationFocusComponent::ShouldTrack()
 // Function Basic.TickOptimizationTargetComponent.ShouldForceExecuteFirstTick
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationTargetComponent::ShouldForceExecuteFirstTick()
 {
@@ -7717,7 +9328,7 @@ bool UTickOptimizationTargetComponent::ShouldForceExecuteFirstTick()
 // Function Basic.TickOptimizationTargetComponent.SetTickSettings
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FTickOptimizationTickSettings> InTickSettings                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FTickOptimizationTickSettings> InTickSettings (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTickOptimizationTargetComponent::SetTickSettings(TArray<struct FTickOptimizationTickSettings> InTickSettings)
 {
@@ -7741,7 +9352,7 @@ void UTickOptimizationTargetComponent::SetTickSettings(TArray<struct FTickOptimi
 // Function Basic.TickOptimizationTargetComponent.SetSphereRadius
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRadius                       (Parm, ZeroConstructor, IsPlainOldData)
+// float InRadius (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetSphereRadius(float InRadius)
 {
@@ -7765,7 +9376,7 @@ void UTickOptimizationTargetComponent::SetSphereRadius(float InRadius)
 // Function Basic.TickOptimizationTargetComponent.SetMidZoneSizes
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<float>                  InMidZoneSizes                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<float> InMidZoneSizes (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UTickOptimizationTargetComponent::SetMidZoneSizes(TArray<float> InMidZoneSizes)
 {
@@ -7789,7 +9400,7 @@ void UTickOptimizationTargetComponent::SetMidZoneSizes(TArray<float> InMidZoneSi
 // Function Basic.TickOptimizationTargetComponent.SetForceExecuteFirstTick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInForceExecuteFirstTick       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInForceExecuteFirstTick (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetForceExecuteFirstTick(bool bInForceExecuteFirstTick)
 {
@@ -7813,7 +9424,7 @@ void UTickOptimizationTargetComponent::SetForceExecuteFirstTick(bool bInForceExe
 // Function Basic.TickOptimizationTargetComponent.SetDistanceMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ETickOptimizationDistanceMode  InDistanceMode                 (Parm, ZeroConstructor, IsPlainOldData)
+// ETickOptimizationDistanceMode InDistanceMode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetDistanceMode(ETickOptimizationDistanceMode InDistanceMode)
 {
@@ -7837,7 +9448,7 @@ void UTickOptimizationTargetComponent::SetDistanceMode(ETickOptimizationDistance
 // Function Basic.TickOptimizationTargetComponent.SetComponentsTickControl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInComponentsTickControl       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInComponentsTickControl (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetComponentsTickControl(bool bInComponentsTickControl)
 {
@@ -7861,7 +9472,7 @@ void UTickOptimizationTargetComponent::SetComponentsTickControl(bool bInComponen
 // Function Basic.TickOptimizationTargetComponent.SetBufferSize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InBufferSize                   (Parm, ZeroConstructor, IsPlainOldData)
+// float InBufferSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetBufferSize(float InBufferSize)
 {
@@ -7885,7 +9496,7 @@ void UTickOptimizationTargetComponent::SetBufferSize(float InBufferSize)
 // Function Basic.TickOptimizationTargetComponent.SetActorTickControl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bInActorTickControl            (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInActorTickControl (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::SetActorTickControl(bool bInActorTickControl)
 {
@@ -7909,7 +9520,7 @@ void UTickOptimizationTargetComponent::SetActorTickControl(bool bInActorTickCont
 // Function Basic.TickOptimizationTargetComponent.RemoveComponentTickControl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UActorComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::RemoveComponentTickControl(class UActorComponent* Component)
 {
@@ -7954,7 +9565,7 @@ void UTickOptimizationTargetComponent::Release()
 // Function Basic.TickOptimizationTargetComponent.IsForced
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationTargetComponent::IsForced()
 {
@@ -7979,7 +9590,7 @@ bool UTickOptimizationTargetComponent::IsForced()
 // Function Basic.TickOptimizationTargetComponent.IsComponentsTickControl
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationTargetComponent::IsComponentsTickControl()
 {
@@ -8004,7 +9615,7 @@ bool UTickOptimizationTargetComponent::IsComponentsTickControl()
 // Function Basic.TickOptimizationTargetComponent.IsActorTickControl
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTickOptimizationTargetComponent::IsActorTickControl()
 {
@@ -8029,7 +9640,7 @@ bool UTickOptimizationTargetComponent::IsActorTickControl()
 // Function Basic.TickOptimizationTargetComponent.GetTickZone
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UTickOptimizationTargetComponent::GetTickZone()
 {
@@ -8054,7 +9665,7 @@ int UTickOptimizationTargetComponent::GetTickZone()
 // Function Basic.TickOptimizationTargetComponent.GetTickSettings
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FTickOptimizationTickSettings> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<struct FTickOptimizationTickSettings> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<struct FTickOptimizationTickSettings> UTickOptimizationTargetComponent::GetTickSettings()
 {
@@ -8079,7 +9690,7 @@ TArray<struct FTickOptimizationTickSettings> UTickOptimizationTargetComponent::G
 // Function Basic.TickOptimizationTargetComponent.GetSphereRadius
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTickOptimizationTargetComponent::GetSphereRadius()
 {
@@ -8104,7 +9715,7 @@ float UTickOptimizationTargetComponent::GetSphereRadius()
 // Function Basic.TickOptimizationTargetComponent.GetMidZoneSizes
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<float>                  ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
+// TArray<float> ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
 TArray<float> UTickOptimizationTargetComponent::GetMidZoneSizes()
 {
@@ -8129,7 +9740,7 @@ TArray<float> UTickOptimizationTargetComponent::GetMidZoneSizes()
 // Function Basic.TickOptimizationTargetComponent.GetDistanceMode
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ETickOptimizationDistanceMode  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// ETickOptimizationDistanceMode ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 ETickOptimizationDistanceMode UTickOptimizationTargetComponent::GetDistanceMode()
 {
@@ -8154,7 +9765,7 @@ ETickOptimizationDistanceMode UTickOptimizationTargetComponent::GetDistanceMode(
 // Function Basic.TickOptimizationTargetComponent.GetBufferSize
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UTickOptimizationTargetComponent::GetBufferSize()
 {
@@ -8179,7 +9790,7 @@ float UTickOptimizationTargetComponent::GetBufferSize()
 // Function Basic.TickOptimizationTargetComponent.Force
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InZone                         (Parm, ZeroConstructor, IsPlainOldData)
+// int InZone (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::Force(int InZone)
 {
@@ -8203,7 +9814,7 @@ void UTickOptimizationTargetComponent::Force(int InZone)
 // Function Basic.TickOptimizationTargetComponent.AddComponentTickControl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UActorComponent*         Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UActorComponent* Component (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UTickOptimizationTargetComponent::AddComponentTickControl(class UActorComponent* Component)
 {
@@ -8227,8 +9838,8 @@ void UTickOptimizationTargetComponent::AddComponentTickControl(class UActorCompo
 // Function Basic.BPTable.GetWrapperPath
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBPTable::GetWrapperPath(int ID)
 {
@@ -8254,8 +9865,8 @@ struct FString UBPTable::GetWrapperPath(int ID)
 // Function Basic.BPTable.GetWrapperClass
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPTable::GetWrapperClass(int ID)
 {
@@ -8281,10 +9892,10 @@ class UClass* UBPTable::GetWrapperClass(int ID)
 // Function Basic.BPTable.GetPath
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForceLobby                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceLobby (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBPTable::GetPath(int ID, bool IsLobby, bool bForceLobby)
 {
@@ -8312,11 +9923,11 @@ struct FString UBPTable::GetPath(int ID, bool IsLobby, bool bForceLobby)
 // Function Basic.BPTable.GetObject
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLowDevice                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLowDevice (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UBPTable::GetObject(int ID, class UObject* Outer, bool IsLobby, bool IsLowDevice)
 {
@@ -8345,10 +9956,10 @@ class UObject* UBPTable::GetObject(int ID, class UObject* Outer, bool IsLobby, b
 // Function Basic.BPTable.GetModObject
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UBPTable::GetModObject(int ID, class UObject* Outer, bool IsLobby)
 {
@@ -8376,9 +9987,9 @@ class UObject* UBPTable::GetModObject(int ID, class UObject* Outer, bool IsLobby
 // Function Basic.BPTable.GetModClass
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPTable::GetModClass(int ID, bool IsLobby)
 {
@@ -8405,8 +10016,8 @@ class UClass* UBPTable::GetModClass(int ID, bool IsLobby)
 // Function Basic.BPTable.GetCustom1Class
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPTable::GetCustom1Class(int ID)
 {
@@ -8432,10 +10043,10 @@ class UClass* UBPTable::GetCustom1Class(int ID)
 // Function Basic.BPTable.GetClass
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLowDevice                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLowDevice (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBPTable::GetClass(int ID, bool IsLobby, bool IsLowDevice)
 {
@@ -8463,7 +10074,7 @@ class UClass* UBPTable::GetClass(int ID, bool IsLobby, bool IsLowDevice)
 // Function Basic.BPTable.ConvertPath
 // (Final, Native, Public)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBPTable::ConvertPath(int ID)
 {
@@ -8569,7 +10180,7 @@ void UUAELoadedClassManager::InitBPTableMap()
 // Function Basic.UAELoadedClassManager.HandleTableModNameChanged
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 InModName                      (Parm, ZeroConstructor)
+// struct FString InModName (Parm, ZeroConstructor)
 
 void UUAELoadedClassManager::HandleTableModNameChanged(const struct FString& InModName)
 {
@@ -8593,9 +10204,9 @@ void UUAELoadedClassManager::HandleTableModNameChanged(const struct FString& InM
 // Function Basic.UAELoadedClassManager.GetWrapperPath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAELoadedClassManager::GetWrapperPath(const struct FString& BPTableName, int ID)
 {
@@ -8622,9 +10233,9 @@ struct FString UUAELoadedClassManager::GetWrapperPath(const struct FString& BPTa
 // Function Basic.UAELoadedClassManager.GetWrapperClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUAELoadedClassManager::GetWrapperClass(const struct FString& BPTableName, int ID)
 {
@@ -8651,11 +10262,11 @@ class UClass* UUAELoadedClassManager::GetWrapperClass(const struct FString& BPTa
 // Function Basic.UAELoadedClassManager.GetPath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bForceLobby                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool bForceLobby (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAELoadedClassManager::GetPath(const struct FString& BPTableName, int ID, bool IsLobby, bool bForceLobby)
 {
@@ -8684,12 +10295,12 @@ struct FString UUAELoadedClassManager::GetPath(const struct FString& BPTableName
 // Function Basic.UAELoadedClassManager.GetObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLowDevice                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Outer (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLowDevice (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UUAELoadedClassManager::GetObject(const struct FString& BPTableName, int ID, class UObject* Outer, bool IsLobby, bool IsLowDevice)
 {
@@ -8719,7 +10330,7 @@ class UObject* UUAELoadedClassManager::GetObject(const struct FString& BPTableNa
 // Function Basic.UAELoadedClassManager.GetExactDeviceLevel
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAELoadedClassManager::GetExactDeviceLevel()
 {
@@ -8744,7 +10355,7 @@ int UUAELoadedClassManager::GetExactDeviceLevel()
 // Function Basic.UAELoadedClassManager.GetDeviceLevel
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAELoadedClassManager::GetDeviceLevel()
 {
@@ -8769,9 +10380,9 @@ int UUAELoadedClassManager::GetDeviceLevel()
 // Function Basic.UAELoadedClassManager.GetCustom1Class
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUAELoadedClassManager::GetCustom1Class(const struct FString& BPTableName, int ID)
 {
@@ -8795,14 +10406,45 @@ class UClass* UUAELoadedClassManager::GetCustom1Class(const struct FString& BPTa
 }
 
 
+// Function Basic.UAELoadedClassManager.GetClassLoadingPath
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UUAELoadedClassManager::GetClassLoadingPath(const struct FString& BPTableName, int ID, bool IsLobby)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.UAELoadedClassManager.GetClassLoadingPath");
+
+	UUAELoadedClassManager_GetClassLoadingPath_Params params;
+	params.BPTableName = BPTableName;
+	params.ID = ID;
+	params.IsLobby = IsLobby;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.UAELoadedClassManager.GetClass
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLobby                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsLowDevice                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLobby (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsLowDevice (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UUAELoadedClassManager::GetClass(const struct FString& BPTableName, int ID, bool IsLobby, bool IsLowDevice)
 {
@@ -8831,8 +10473,8 @@ class UClass* UUAELoadedClassManager::GetClass(const struct FString& BPTableName
 // Function Basic.UAELoadedClassManager.GetBPTableName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAELoadedClassManager::GetBPTableName(int Type)
 {
@@ -8858,8 +10500,8 @@ struct FString UUAELoadedClassManager::GetBPTableName(int Type)
 // Function Basic.UAELoadedClassManager.GetAssetByAssetReferenceAsync
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FSoftObjectPath         AssetReference                 (Parm)
-// struct FScriptDelegate         AssetLoadSuccessDelegate       (Parm, ZeroConstructor)
+// struct FSoftObjectPath AssetReference (Parm)
+// struct FScriptDelegate AssetLoadSuccessDelegate (Parm, ZeroConstructor)
 
 void UUAELoadedClassManager::GetAssetByAssetReferenceAsync(const struct FSoftObjectPath& AssetReference, const struct FScriptDelegate& AssetLoadSuccessDelegate)
 {
@@ -8884,9 +10526,9 @@ void UUAELoadedClassManager::GetAssetByAssetReferenceAsync(const struct FSoftObj
 // Function Basic.UAELoadedClassManager.GetAssetAsyncWithStringForManage
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FSoftObjectPath         AssetReference                 (Parm)
-// struct FString                 InputString                    (Parm, ZeroConstructor)
-// struct FScriptDelegate         AssetLoadSuccessDelegate       (Parm, ZeroConstructor)
+// struct FSoftObjectPath AssetReference (Parm)
+// struct FString InputString (Parm, ZeroConstructor)
+// struct FScriptDelegate AssetLoadSuccessDelegate (Parm, ZeroConstructor)
 
 void UUAELoadedClassManager::GetAssetAsyncWithStringForManage(const struct FSoftObjectPath& AssetReference, const struct FString& InputString, const struct FScriptDelegate& AssetLoadSuccessDelegate)
 {
@@ -8912,7 +10554,7 @@ void UUAELoadedClassManager::GetAssetAsyncWithStringForManage(const struct FSoft
 // Function Basic.UAELoadedClassManager.Get
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UUAELoadedClassManager*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUAELoadedClassManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAELoadedClassManager* UUAELoadedClassManager::Get()
 {
@@ -8937,8 +10579,8 @@ class UUAELoadedClassManager* UUAELoadedClassManager::Get()
 // Function Basic.UAELoadedClassManager.CreateAndAddBPTable_Mod
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// class UBPTable*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// class UBPTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBPTable* UUAELoadedClassManager::CreateAndAddBPTable_Mod(const struct FString& BPTableName)
 {
@@ -8964,8 +10606,8 @@ class UBPTable* UUAELoadedClassManager::CreateAndAddBPTable_Mod(const struct FSt
 // Function Basic.UAELoadedClassManager.CreateAndAddBPTable
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FString                 BPTableName                    (Parm, ZeroConstructor)
-// class UBPTable*                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString BPTableName (Parm, ZeroConstructor)
+// class UBPTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBPTable* UUAELoadedClassManager::CreateAndAddBPTable(const struct FString& BPTableName)
 {
@@ -9054,7 +10696,7 @@ void UUAELoadedClassManager::ClearBPTable()
 // Function Basic.UAELoadedClassManager.ClearAssetByAssetReferenceAsync
 // (Final, Native, Public)
 // Parameters:
-// struct FScriptDelegate         AssetLoadSuccessDelegate       (Parm, ZeroConstructor)
+// struct FScriptDelegate AssetLoadSuccessDelegate (Parm, ZeroConstructor)
 
 void UUAELoadedClassManager::ClearAssetByAssetReferenceAsync(const struct FScriptDelegate& AssetLoadSuccessDelegate)
 {
@@ -9117,10 +10759,55 @@ void UUAELoadedClassManager::ClearAllData()
 }
 
 
+// Function Basic.UAEMeshComponent.TriggerCacheMaterialParameterNameIndices
+// (Final, Native, Public, BlueprintCallable)
+
+void UUAEMeshComponent::TriggerCacheMaterialParameterNameIndices()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.UAEMeshComponent.TriggerCacheMaterialParameterNameIndices");
+
+	UUAEMeshComponent_TriggerCacheMaterialParameterNameIndices_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
+// Function Basic.UAEMeshComponent.RemoveDisableClothRequest
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InSource (Parm, ZeroConstructor)
+
+void UUAEMeshComponent::RemoveDisableClothRequest(const struct FString& InSource)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.UAEMeshComponent.RemoveDisableClothRequest");
+
+	UUAEMeshComponent_RemoveDisableClothRequest_Params params;
+	params.InSource = InSource;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.UAEMeshComponent.GetPredictedLODLevel
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUAEMeshComponent::GetPredictedLODLevel()
 {
@@ -9145,7 +10832,7 @@ int UUAEMeshComponent::GetPredictedLODLevel()
 // Function Basic.UAEMeshComponent.GetAnimUpdateParamsInfo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAEMeshComponent::GetAnimUpdateParamsInfo()
 {
@@ -9167,10 +10854,34 @@ struct FString UUAEMeshComponent::GetAnimUpdateParamsInfo()
 }
 
 
+// Function Basic.UAEMeshComponent.AddDisableClothRequest
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString InSource (Parm, ZeroConstructor)
+
+void UUAEMeshComponent::AddDisableClothRequest(const struct FString& InSource)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.UAEMeshComponent.AddDisableClothRequest");
+
+	UUAEMeshComponent_AddDisableClothRequest_Params params;
+	params.InSource = InSource;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function Basic.UAENetConnection.IsClosed
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAENetConnection::IsClosed()
 {
@@ -9195,9 +10906,9 @@ bool UUAENetConnection::IsClosed()
 // Function Basic.UAENetConnection.HasSameRegion
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 OldLoc                         (Parm, IsPlainOldData)
-// struct FVector                 NewLoc                         (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector OldLoc (Parm, IsPlainOldData)
+// struct FVector NewLoc (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAENetConnection::HasSameRegion(const struct FVector& OldLoc, const struct FVector& NewLoc)
 {
@@ -9224,7 +10935,7 @@ bool UUAENetConnection::HasSameRegion(const struct FVector& OldLoc, const struct
 // Function Basic.UAENetConnection.ForceRefreshRegionWeakNetUpdateObjects
 // (Final, Native, Public)
 // Parameters:
-// float                          WeakNetConsiderFrequency       (Parm, ZeroConstructor, IsPlainOldData)
+// float WeakNetConsiderFrequency (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAENetConnection::ForceRefreshRegionWeakNetUpdateObjects(float WeakNetConsiderFrequency)
 {
@@ -9248,7 +10959,7 @@ void UUAENetConnection::ForceRefreshRegionWeakNetUpdateObjects(float WeakNetCons
 // Function Basic.UAETableManager.ReleaseTable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   TableFName                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName TableFName (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUAETableManager::ReleaseTable(const struct FName& TableFName)
 {
@@ -9272,8 +10983,8 @@ void UUAETableManager::ReleaseTable(const struct FName& TableFName)
 // Function Basic.UAETableManager.GetTablePtr_Mod
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   tableName                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName tableName (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAETableManager::GetTablePtr_Mod(const struct FName& tableName)
 {
@@ -9299,9 +11010,9 @@ class UUAEDataTable* UUAETableManager::GetTablePtr_Mod(const struct FName& table
 // Function Basic.UAETableManager.GetTablePtr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   tableName                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCheckModTable                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName tableName (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCheckModTable (Parm, ZeroConstructor, IsPlainOldData)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAETableManager::GetTablePtr(const struct FName& tableName, bool bCheckModTable)
 {
@@ -9328,8 +11039,8 @@ class UUAEDataTable* UUAETableManager::GetTablePtr(const struct FName& tableName
 // Function Basic.UAETableManager.GetTableMap
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// class UBaseTableResMap*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// class UBaseTableResMap* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBaseTableResMap* UUAETableManager::GetTableMap(const struct FString& tableName)
 {
@@ -9355,10 +11066,10 @@ class UBaseTableResMap* UUAETableManager::GetTableMap(const struct FString& tabl
 // Function Basic.UAETableManager.GetTableData
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// struct FTableRowBase           OutRow                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// struct FString Key (Parm, ZeroConstructor)
+// struct FTableRowBase OutRow (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUAETableManager::GetTableData(const struct FString& tableName, const struct FString& Key, struct FTableRowBase* OutRow)
 {
@@ -9388,7 +11099,7 @@ bool UUAETableManager::GetTableData(const struct FString& tableName, const struc
 // Function Basic.UAETableManager.GetInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UUAETableManager*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUAETableManager* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAETableManager* UUAETableManager::GetInstance()
 {
@@ -9413,8 +11124,8 @@ class UUAETableManager* UUAETableManager::GetInstance()
 // Function Basic.UAETableManager.GetDomainByID
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUAETableManager::GetDomainByID(int ID)
 {
@@ -9440,8 +11151,8 @@ struct FString UUAETableManager::GetDomainByID(int ID)
 // Function Basic.UAETableManager.GetDataTableStatic_Mod
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAETableManager::GetDataTableStatic_Mod(const struct FString& tableName)
 {
@@ -9467,8 +11178,8 @@ class UUAEDataTable* UUAETableManager::GetDataTableStatic_Mod(const struct FStri
 // Function Basic.UAETableManager.GetDataTableStatic
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 tableName                      (Parm, ZeroConstructor)
-// class UUAEDataTable*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString tableName (Parm, ZeroConstructor)
+// class UUAEDataTable* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UUAEDataTable* UUAETableManager::GetDataTableStatic(const struct FString& tableName)
 {
@@ -9494,11 +11205,11 @@ class UUAEDataTable* UUAETableManager::GetDataTableStatic(const struct FString& 
 // Function Basic.UAETableManager.GetDataTableProxy
 // (Final, Native, Public)
 // Parameters:
-// struct FName                   tableName                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTempory                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SystemName                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SubModName                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UDataTableProxy*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName tableName (Parm, ZeroConstructor, IsPlainOldData)
+// bool bTempory (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SystemName (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SubModName (Parm, ZeroConstructor, IsPlainOldData)
+// class UDataTableProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UDataTableProxy* UUAETableManager::GetDataTableProxy(const struct FName& tableName, bool bTempory, const struct FName& SystemName, const struct FName& SubModName)
 {
@@ -9527,7 +11238,7 @@ class UDataTableProxy* UUAETableManager::GetDataTableProxy(const struct FName& t
 // Function Basic.UELanguageUtilityMethods.SetDownLoadLanguageName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Language                       (Parm, ZeroConstructor)
+// struct FString Language (Parm, ZeroConstructor)
 
 void UUELanguageUtilityMethods::SetDownLoadLanguageName(const struct FString& Language)
 {
@@ -9551,7 +11262,7 @@ void UUELanguageUtilityMethods::SetDownLoadLanguageName(const struct FString& La
 // Function Basic.UELanguageUtilityMethods.IsJaguar
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUELanguageUtilityMethods::IsJaguar()
 {
@@ -9576,7 +11287,7 @@ bool UUELanguageUtilityMethods::IsJaguar()
 // Function Basic.UELanguageUtilityMethods.GetPublishRegion
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUELanguageUtilityMethods::GetPublishRegion()
 {
@@ -9601,7 +11312,7 @@ struct FString UUELanguageUtilityMethods::GetPublishRegion()
 // Function Basic.UELanguageUtilityMethods.GetDownLoadLanguageName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUELanguageUtilityMethods::GetDownLoadLanguageName()
 {
@@ -9626,7 +11337,7 @@ struct FString UUELanguageUtilityMethods::GetDownLoadLanguageName()
 // Function Basic.UELanguageUtilityMethods.GetCurrentLanguageName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUELanguageUtilityMethods::GetCurrentLanguageName()
 {
@@ -9648,10 +11359,37 @@ struct FString UUELanguageUtilityMethods::GetCurrentLanguageName()
 }
 
 
+// Function Basic.UELanguageUtilityMethods.ConvertLanguageName
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FString prelanguage (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UUELanguageUtilityMethods::ConvertLanguageName(const struct FString& prelanguage)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function Basic.UELanguageUtilityMethods.ConvertLanguageName");
+
+	UUELanguageUtilityMethods_ConvertLanguageName_Params params;
+	params.prelanguage = prelanguage;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	static auto defaultObj = StaticClass()->GetDefaultObject();
+	defaultObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Basic.UELanguageUtilityMethods.CheckLocalizationExist
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUELanguageUtilityMethods::CheckLocalizationExist()
 {
@@ -9676,9 +11414,9 @@ bool UUELanguageUtilityMethods::CheckLocalizationExist()
 // Function Basic.UEMathUtilityMethods.VectorNormalizeMultiple
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Out                            (Parm, OutParm, IsPlainOldData)
-// struct FVector                 v1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Multiple                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Out (Parm, OutParm, IsPlainOldData)
+// struct FVector v1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Multiple (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUEMathUtilityMethods::VectorNormalizeMultiple(const struct FVector& v1, float Multiple, struct FVector* Out)
 {
@@ -9706,9 +11444,9 @@ void UUEMathUtilityMethods::VectorNormalizeMultiple(const struct FVector& v1, fl
 // Function Basic.UEMathUtilityMethods.VectorMultiple
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Out                            (Parm, OutParm, IsPlainOldData)
-// struct FVector                 v1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Multiple                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Out (Parm, OutParm, IsPlainOldData)
+// struct FVector v1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Multiple (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUEMathUtilityMethods::VectorMultiple(const struct FVector& v1, float Multiple, struct FVector* Out)
 {
@@ -9736,9 +11474,9 @@ void UUEMathUtilityMethods::VectorMultiple(const struct FVector& v1, float Multi
 // Function Basic.UEMathUtilityMethods.VectorMinus
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Out                            (Parm, OutParm, IsPlainOldData)
-// struct FVector                 v1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 v2                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Out (Parm, OutParm, IsPlainOldData)
+// struct FVector v1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector v2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UUEMathUtilityMethods::VectorMinus(const struct FVector& v1, const struct FVector& v2, struct FVector* Out)
 {
@@ -9766,9 +11504,9 @@ void UUEMathUtilityMethods::VectorMinus(const struct FVector& v1, const struct F
 // Function Basic.UEMathUtilityMethods.VectorAdditive
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 Out                            (Parm, OutParm, IsPlainOldData)
-// struct FVector                 v1                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 v2                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Out (Parm, OutParm, IsPlainOldData)
+// struct FVector v1 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector v2 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UUEMathUtilityMethods::VectorAdditive(const struct FVector& v1, const struct FVector& v2, struct FVector* Out)
 {
@@ -9796,10 +11534,10 @@ void UUEMathUtilityMethods::VectorAdditive(const struct FVector& v1, const struc
 // Function Basic.UEMathUtilityMethods.FilterOKForCurrentMode
 // (Final, Native, Static, Public)
 // Parameters:
-// unsigned char                  ModeType                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModeOpenFlag                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ModeTypes                      (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// unsigned char ModeType (Parm, ZeroConstructor, IsPlainOldData)
+// int ModeOpenFlag (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ModeTypes (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUEMathUtilityMethods::FilterOKForCurrentMode(unsigned char ModeType, int ModeOpenFlag, const struct FString& ModeTypes)
 {
@@ -9827,8 +11565,8 @@ bool UUEMathUtilityMethods::FilterOKForCurrentMode(unsigned char ModeType, int M
 // Function Basic.UEMathUtilityMethods.Conv_VectorToRotator
 // (Final, Native, Static, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FRotator                Out                            (Parm, OutParm, IsPlainOldData)
-// struct FVector                 Vec                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FRotator Out (Parm, OutParm, IsPlainOldData)
+// struct FVector Vec (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UUEMathUtilityMethods::Conv_VectorToRotator(const struct FVector& Vec, struct FRotator* Out)
 {
@@ -9855,11 +11593,11 @@ void UUEMathUtilityMethods::Conv_VectorToRotator(const struct FVector& Vec, stru
 // Function Basic.UEMathUtilityMethods.CalculateAngleToTargetAngle
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          StartAngle                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          targetAngle                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          StepAngle                      (Parm, ZeroConstructor, IsPlainOldData)
-// EAngleRotationDirectionType    Dir                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float StartAngle (Parm, ZeroConstructor, IsPlainOldData)
+// float targetAngle (Parm, ZeroConstructor, IsPlainOldData)
+// float StepAngle (Parm, ZeroConstructor, IsPlainOldData)
+// EAngleRotationDirectionType Dir (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUEMathUtilityMethods::CalculateAngleToTargetAngle(float StartAngle, float targetAngle, float StepAngle, EAngleRotationDirectionType Dir)
 {
@@ -9888,9 +11626,9 @@ float UUEMathUtilityMethods::CalculateAngleToTargetAngle(float StartAngle, float
 // Function Basic.UEMathUtilityMethods.BKDRHash
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 StrToHash                      (Parm, ZeroConstructor)
-// int                            Mod                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString StrToHash (Parm, ZeroConstructor)
+// int Mod (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UUEMathUtilityMethods::BKDRHash(const struct FString& StrToHash, int Mod)
 {
@@ -9917,9 +11655,9 @@ int UUEMathUtilityMethods::BKDRHash(const struct FString& StrToHash, int Mod)
 // Function Basic.UEMathUtilityMethods.AngleDis
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          angleA                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          angleB                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float angleA (Parm, ZeroConstructor, IsPlainOldData)
+// float angleB (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UUEMathUtilityMethods::AngleDis(float angleA, float angleB)
 {
@@ -9946,8 +11684,8 @@ float UUEMathUtilityMethods::AngleDis(float angleA, float angleB)
 // Function Basic.UEPathUtilityMethods.IsPathExist
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 HandlePath                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString HandlePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUEPathUtilityMethods::IsPathExist(const struct FString& HandlePath)
 {
@@ -9973,9 +11711,9 @@ bool UUEPathUtilityMethods::IsPathExist(const struct FString& HandlePath)
 // Function Basic.UEPathUtilityMethods.IsAvatarResPathExistRetODPakName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 HandlePath                     (Parm, ZeroConstructor)
-// struct FString                 OutODPakName                   (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString HandlePath (Parm, ZeroConstructor)
+// struct FString OutODPakName (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUEPathUtilityMethods::IsAvatarResPathExistRetODPakName(const struct FString& HandlePath, struct FString* OutODPakName)
 {
@@ -10004,8 +11742,8 @@ bool UUEPathUtilityMethods::IsAvatarResPathExistRetODPakName(const struct FStrin
 // Function Basic.UEPathUtilityMethods.IsAvatarResPathExist
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 HandlePath                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString HandlePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUEPathUtilityMethods::IsAvatarResPathExist(const struct FString& HandlePath)
 {
@@ -10031,7 +11769,7 @@ bool UUEPathUtilityMethods::IsAvatarResPathExist(const struct FString& HandlePat
 // Function Basic.UEPathUtilityMethods.GetPassiveDownloadResourcePaths
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UUEPathUtilityMethods::GetPassiveDownloadResourcePaths()
 {
@@ -10056,7 +11794,7 @@ TArray<struct FString> UUEPathUtilityMethods::GetPassiveDownloadResourcePaths()
 // Function Basic.UEPathUtilityMethods.GetPassiveDownloadResourceIDList
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UUEPathUtilityMethods::GetPassiveDownloadResourceIDList()
 {
@@ -10081,8 +11819,8 @@ TArray<int> UUEPathUtilityMethods::GetPassiveDownloadResourceIDList()
 // Function Basic.UEPathUtilityMethods.GetODPakFileName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InODPakPath                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InODPakPath (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUEPathUtilityMethods::GetODPakFileName(const struct FString& InODPakPath)
 {
@@ -10108,8 +11846,8 @@ struct FString UUEPathUtilityMethods::GetODPakFileName(const struct FString& InO
 // Function Basic.UEPathUtilityMethods.GetModName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UUEPathUtilityMethods::GetModName(class UObject* WorldContext)
 {
@@ -10135,9 +11873,9 @@ struct FString UUEPathUtilityMethods::GetModName(class UObject* WorldContext)
 // Function Basic.UEPathUtilityMethods.GetFullModName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MainMod                        (Parm, OutParm, ZeroConstructor)
-// struct FString                 SubMod                         (Parm, OutParm, ZeroConstructor)
+// class UObject* WorldContext (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MainMod (Parm, OutParm, ZeroConstructor)
+// struct FString SubMod (Parm, OutParm, ZeroConstructor)
 
 void UUEPathUtilityMethods::GetFullModName(class UObject* WorldContext, struct FString* MainMod, struct FString* SubMod)
 {
@@ -10166,12 +11904,12 @@ void UUEPathUtilityMethods::GetFullModName(class UObject* WorldContext, struct F
 // Function Basic.UEPathUtilityMethods.FilterOKForCurrentModeString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 CurrentModeString              (Parm, ZeroConstructor)
-// struct FString                 CurrentExtraModeString         (Parm, ZeroConstructor)
-// struct FString                 ModStringInfo                  (Parm, ZeroConstructor)
-// unsigned char                  ModeType                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ModeOpenFlag                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString CurrentModeString (Parm, ZeroConstructor)
+// struct FString CurrentExtraModeString (Parm, ZeroConstructor)
+// struct FString ModStringInfo (Parm, ZeroConstructor)
+// unsigned char ModeType (Parm, ZeroConstructor, IsPlainOldData)
+// int ModeOpenFlag (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UUEPathUtilityMethods::FilterOKForCurrentModeString(const struct FString& CurrentModeString, const struct FString& CurrentExtraModeString, const struct FString& ModStringInfo, unsigned char ModeType, int ModeOpenFlag)
 {
@@ -10243,7 +11981,7 @@ void UUEPathUtilityMethods::ClearPassiveDownloadResourceIDList()
 // Function Basic.UEPathUtilityMethods.AddPassiveResourceDownloadFlag
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUEPathUtilityMethods::AddPassiveResourceDownloadFlag(int ItemId)
 {

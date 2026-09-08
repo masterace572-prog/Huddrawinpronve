@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ImgMedia.ImgMediaSource.SetSequencePath
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
+// struct FString Path (Parm, ZeroConstructor)
 
 void UImgMediaSource::SetSequencePath(const struct FString& Path)
 {
@@ -35,7 +35,7 @@ void UImgMediaSource::SetSequencePath(const struct FString& Path)
 // Function ImgMedia.ImgMediaSource.GetSequencePath
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UImgMediaSource::GetSequencePath()
 {
@@ -60,7 +60,7 @@ struct FString UImgMediaSource::GetSequencePath()
 // Function ImgMedia.ImgMediaSource.GetProxies
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FString>         OutProxies                     (Parm, OutParm, ZeroConstructor)
+// TArray<struct FString> OutProxies (Parm, OutParm, ZeroConstructor)
 
 void UImgMediaSource::GetProxies(TArray<struct FString>* OutProxies)
 {

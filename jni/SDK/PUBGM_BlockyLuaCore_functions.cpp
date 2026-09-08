@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function BlockyLuaCore.BlockBase.SetIsDisable
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Disable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool Disable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockBase::SetIsDisable(bool Disable)
 {
@@ -35,7 +35,7 @@ void UBlockBase::SetIsDisable(bool Disable)
 // Function BlockyLuaCore.BlockBase.IsEvent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockBase::IsEvent()
 {
@@ -60,7 +60,7 @@ bool UBlockBase::IsEvent()
 // Function BlockyLuaCore.BlockBase.GetCenterPos
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UBlockBase::GetCenterPos()
 {
@@ -85,7 +85,7 @@ struct FVector2D UBlockBase::GetCenterPos()
 // Function BlockyLuaCore.Executeable.SupportFuncVar
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UExecuteable::SupportFuncVar()
 {
@@ -110,7 +110,7 @@ bool UExecuteable::SupportFuncVar()
 // Function BlockyLuaCore.Executeable.ReEditFuncVar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNamedVar*               var                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UNamedVar* var (Parm, ZeroConstructor, IsPlainOldData)
 
 void UExecuteable::ReEditFuncVar(class UNamedVar* var)
 {
@@ -134,7 +134,7 @@ void UExecuteable::ReEditFuncVar(class UNamedVar* var)
 // Function BlockyLuaCore.Executeable.DeleteFuncVar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UNamedVar*               var                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UNamedVar* var (Parm, ZeroConstructor, IsPlainOldData)
 
 void UExecuteable::DeleteFuncVar(class UNamedVar* var)
 {
@@ -179,7 +179,7 @@ void UExecuteable::CreateFuncVar()
 // Function BlockyLuaCore.ExpressionBase.ReleaseExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
 
 void UExpressionBase::ReleaseExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -203,7 +203,7 @@ void UExpressionBase::ReleaseExpression(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.ExpressionBase.CreateExpressionBase
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UExpressionBase::CreateExpressionBase()
 {
@@ -228,8 +228,8 @@ struct FBlockyLuaHandle UExpressionBase::CreateExpressionBase()
 // Function BlockyLuaCore.ArrayLengthExpression.SetTarget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Target                         (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Target (Parm)
 
 void UArrayLengthExpression::SetTarget(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Target)
 {
@@ -254,8 +254,8 @@ void UArrayLengthExpression::SetTarget(const struct FBlockyLuaHandle& ptr, const
 // Function BlockyLuaCore.ArrayLengthExpression.GetTarget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UArrayLengthExpression::GetTarget(const struct FBlockyLuaHandle& ptr)
 {
@@ -281,7 +281,7 @@ struct FBlockyLuaHandle UArrayLengthExpression::GetTarget(const struct FBlockyLu
 // Function BlockyLuaCore.ArrayLengthExpression.CreateArrayLengthExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UArrayLengthExpression::CreateArrayLengthExpression()
 {
@@ -306,7 +306,7 @@ struct FBlockyLuaHandle UArrayLengthExpression::CreateArrayLengthExpression()
 // Function BlockyLuaCore.NamedVar.UpdateColor
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor            Color                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FLinearColor Color (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNamedVar::UpdateColor(const struct FLinearColor& Color)
 {
@@ -329,7 +329,7 @@ void UNamedVar::UpdateColor(const struct FLinearColor& Color)
 // Function BlockyLuaCore.NamedVar.SetNameVarColor
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            Color                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FLinearColor Color (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UNamedVar::SetNameVarColor(const struct FLinearColor& Color)
 {
@@ -353,7 +353,7 @@ void UNamedVar::SetNameVarColor(const struct FLinearColor& Color)
 // Function BlockyLuaCore.NamedVar.SetIsArray
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           IsArray                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsArray (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNamedVar::SetIsArray(bool IsArray)
 {
@@ -377,7 +377,7 @@ void UNamedVar::SetIsArray(bool IsArray)
 // Function BlockyLuaCore.NamedVar.SetInitValueString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UNamedVar::SetInitValueString(const struct FString& Value)
 {
@@ -401,7 +401,7 @@ void UNamedVar::SetInitValueString(const struct FString& Value)
 // Function BlockyLuaCore.NamedVar.SetDefiner
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UVarDefiner*             Definer                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UVarDefiner* Definer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNamedVar::SetDefiner(class UVarDefiner* Definer)
 {
@@ -425,7 +425,7 @@ void UNamedVar::SetDefiner(class UVarDefiner* Definer)
 // Function BlockyLuaCore.NamedVar.SetAccessType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EBlockyAccessType> Access                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBlockyAccessType> Access (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNamedVar::SetAccessType(TEnumAsByte<enum EBlockyAccessType> Access)
 {
@@ -449,7 +449,7 @@ void UNamedVar::SetAccessType(TEnumAsByte<enum EBlockyAccessType> Access)
 // Function BlockyLuaCore.NamedVar.IsGlobalVar
 // (Final, Native, Public, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNamedVar::IsGlobalVar()
 {
@@ -474,7 +474,7 @@ bool UNamedVar::IsGlobalVar()
 // Function BlockyLuaCore.NamedVar.IsCustomColor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNamedVar::IsCustomColor()
 {
@@ -499,7 +499,7 @@ bool UNamedVar::IsCustomColor()
 // Function BlockyLuaCore.NamedVar.IsArray
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNamedVar::IsArray()
 {
@@ -545,9 +545,9 @@ void UNamedVar::InitColorDesc()
 // Function BlockyLuaCore.NamedVar.GetNameVarColorDesc
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsArray                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UColorDesc*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsArray (Parm, ZeroConstructor, IsPlainOldData)
+// class UColorDesc* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UColorDesc* UNamedVar::GetNameVarColorDesc(int idx, bool IsArray)
 {
@@ -574,9 +574,9 @@ class UColorDesc* UNamedVar::GetNameVarColorDesc(int idx, bool IsArray)
 // Function BlockyLuaCore.NamedVar.GetNameVarColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsArray                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsArray (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UNamedVar::GetNameVarColor(int idx, bool IsArray)
 {
@@ -603,7 +603,7 @@ struct FLinearColor UNamedVar::GetNameVarColor(int idx, bool IsArray)
 // Function BlockyLuaCore.NamedVar.GetInitValueString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UNamedVar::GetInitValueString()
 {
@@ -628,7 +628,7 @@ struct FString UNamedVar::GetInitValueString()
 // Function BlockyLuaCore.NamedVar.GetDefiner
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UVarDefiner*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UVarDefiner* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UVarDefiner* UNamedVar::GetDefiner()
 {
@@ -653,9 +653,9 @@ class UVarDefiner* UNamedVar::GetDefiner()
 // Function BlockyLuaCore.NamedVar.GetColorStr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsArray                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsArray (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UNamedVar::GetColorStr(int idx, bool IsArray)
 {
@@ -682,7 +682,7 @@ struct FString UNamedVar::GetColorStr(int idx, bool IsArray)
 // Function BlockyLuaCore.NamedVar.GetAccessType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EBlockyAccessType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBlockyAccessType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyAccessType> UNamedVar::GetAccessType()
 {
@@ -707,8 +707,8 @@ TEnumAsByte<enum EBlockyAccessType> UNamedVar::GetAccessType()
 // Function BlockyLuaCore.NamedVar.CallCustomSelectObject
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsArray                        (Parm, ZeroConstructor, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsArray (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNamedVar::CallCustomSelectObject(int idx, bool IsArray)
 {
@@ -754,8 +754,8 @@ void UNamedVar::AddColorToArray()
 // Function BlockyLuaCore.BinaryOperatorExpression.SetWithParentheses
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBinaryOperatorExpression::SetWithParentheses(const struct FBlockyLuaHandle& ptr, bool Value)
 {
@@ -780,8 +780,8 @@ void UBinaryOperatorExpression::SetWithParentheses(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.BinaryOperatorExpression.SetRight
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UBinaryOperatorExpression::SetRight(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -806,8 +806,8 @@ void UBinaryOperatorExpression::SetRight(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.BinaryOperatorExpression.SetOperation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyBinaryOperation> BlockyOp                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyBinaryOperation> BlockyOp (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBinaryOperatorExpression::SetOperation(const struct FBlockyLuaHandle& ptr, TEnumAsByte<enum EBlockyBinaryOperation> BlockyOp)
 {
@@ -832,8 +832,8 @@ void UBinaryOperatorExpression::SetOperation(const struct FBlockyLuaHandle& ptr,
 // Function BlockyLuaCore.BinaryOperatorExpression.SetLeft
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UBinaryOperatorExpression::SetLeft(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -858,8 +858,8 @@ void UBinaryOperatorExpression::SetLeft(const struct FBlockyLuaHandle& ptr, cons
 // Function BlockyLuaCore.BinaryOperatorExpression.GetWithParentheses
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBinaryOperatorExpression::GetWithParentheses(const struct FBlockyLuaHandle& ptr)
 {
@@ -885,8 +885,8 @@ bool UBinaryOperatorExpression::GetWithParentheses(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.BinaryOperatorExpression.GetRight
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBinaryOperatorExpression::GetRight(const struct FBlockyLuaHandle& ptr)
 {
@@ -912,8 +912,8 @@ struct FBlockyLuaHandle UBinaryOperatorExpression::GetRight(const struct FBlocky
 // Function BlockyLuaCore.BinaryOperatorExpression.GetOperation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyBinaryOperation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyBinaryOperation> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyBinaryOperation> UBinaryOperatorExpression::GetOperation(const struct FBlockyLuaHandle& ptr)
 {
@@ -939,8 +939,8 @@ TEnumAsByte<enum EBlockyBinaryOperation> UBinaryOperatorExpression::GetOperation
 // Function BlockyLuaCore.BinaryOperatorExpression.GetLeft
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBinaryOperatorExpression::GetLeft(const struct FBlockyLuaHandle& ptr)
 {
@@ -966,7 +966,7 @@ struct FBlockyLuaHandle UBinaryOperatorExpression::GetLeft(const struct FBlockyL
 // Function BlockyLuaCore.BinaryOperatorExpression.CreateBinaryOperatorExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBinaryOperatorExpression::CreateBinaryOperatorExpression()
 {
@@ -991,7 +991,7 @@ struct FBlockyLuaHandle UBinaryOperatorExpression::CreateBinaryOperatorExpressio
 // Function BlockyLuaCore.CategoryDefiner.GetCurrentLocateShowName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCategoryDefiner::GetCurrentLocateShowName()
 {
@@ -1016,7 +1016,7 @@ struct FString UCategoryDefiner::GetCurrentLocateShowName()
 // Function BlockyLuaCore.BlockyCategoryItemObject.SetShowRedDotVar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           var                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool var (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyCategoryItemObject::SetShowRedDotVar(bool var)
 {
@@ -1040,7 +1040,7 @@ void UBlockyCategoryItemObject::SetShowRedDotVar(bool var)
 // Function BlockyLuaCore.BlockyCategoryItemObject.InitShowRedDotVar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 BlockName                      (Parm, ZeroConstructor)
+// struct FString BlockName (Parm, ZeroConstructor)
 
 void UBlockyCategoryItemObject::InitShowRedDotVar(const struct FString& BlockName)
 {
@@ -1064,7 +1064,7 @@ void UBlockyCategoryItemObject::InitShowRedDotVar(const struct FString& BlockNam
 // Function BlockyLuaCore.BlockyCategoryItemObject.GetSelectedIconBrush
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FSlateBrush ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSlateBrush UBlockyCategoryItemObject::GetSelectedIconBrush()
 {
@@ -1089,7 +1089,7 @@ struct FSlateBrush UBlockyCategoryItemObject::GetSelectedIconBrush()
 // Function BlockyLuaCore.BlockyCategoryItemObject.GetNewBlockNums
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyCategoryItemObject::GetNewBlockNums()
 {
@@ -1114,7 +1114,7 @@ int UBlockyCategoryItemObject::GetNewBlockNums()
 // Function BlockyLuaCore.BlockyCategoryItemObject.GetIconBrush
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FSlateBrush ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSlateBrush UBlockyCategoryItemObject::GetIconBrush()
 {
@@ -1160,7 +1160,7 @@ void UBlockyGraph::UpdateCustomBlockName()
 // Function BlockyLuaCore.BlockyGraph.TryAdjustingBlockIntoView
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyGraphData*        GraphData                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraphData* GraphData (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraph::TryAdjustingBlockIntoView(class UBlockyGraphData* GraphData)
 {
@@ -1184,7 +1184,7 @@ void UBlockyGraph::TryAdjustingBlockIntoView(class UBlockyGraphData* GraphData)
 // Function BlockyLuaCore.BlockyGraph.SetIsDisable
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Disable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool Disable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraph::SetIsDisable(bool Disable)
 {
@@ -1208,8 +1208,8 @@ void UBlockyGraph::SetIsDisable(bool Disable)
 // Function BlockyLuaCore.BlockyGraph.SaveGraphToFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
-// bool                           IsNewFile                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Filename (Parm, ZeroConstructor)
+// bool IsNewFile (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraph::SaveGraphToFile(const struct FString& Filename, bool IsNewFile)
 {
@@ -1234,16 +1234,47 @@ void UBlockyGraph::SaveGraphToFile(const struct FString& Filename, bool IsNewFil
 // Function BlockyLuaCore.BlockyGraph.SaveGraphAsTemplate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          OutData                        (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<unsigned char> OutData (Parm, OutParm, ZeroConstructor)
+// class UCustomConfig* CustomConfig (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBlockyGraph::SaveGraphAsTemplate(TArray<unsigned char>* OutData)
+bool UBlockyGraph::SaveGraphAsTemplate(class UCustomConfig* CustomConfig, TArray<unsigned char>* OutData)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
 		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraph.SaveGraphAsTemplate");
 
 	UBlockyGraph_SaveGraphAsTemplate_Params params;
+	params.CustomConfig = CustomConfig;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutData != nullptr)
+		*OutData = params.OutData;
+
+	return params.ReturnValue;
+}
+
+
+// Function BlockyLuaCore.BlockyGraph.SaveCsutomGraphAsTemplate
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<unsigned char> OutData (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBlockyGraph::SaveCsutomGraphAsTemplate(TArray<unsigned char>* OutData)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraph.SaveCsutomGraphAsTemplate");
+
+	UBlockyGraph_SaveCsutomGraphAsTemplate_Params params;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -1263,8 +1294,8 @@ bool UBlockyGraph::SaveGraphAsTemplate(TArray<unsigned char>* OutData)
 // Function BlockyLuaCore.BlockyGraph.LoadGraphFromTemplate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          Data                           (Parm, ZeroConstructor)
-// bool                           IsLoadPresetsInGraph           (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<unsigned char> Data (Parm, ZeroConstructor)
+// bool IsLoadPresetsInGraph (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraph::LoadGraphFromTemplate(TArray<unsigned char> Data, bool IsLoadPresetsInGraph)
 {
@@ -1289,7 +1320,7 @@ void UBlockyGraph::LoadGraphFromTemplate(TArray<unsigned char> Data, bool IsLoad
 // Function BlockyLuaCore.BlockyGraph.IsCustomTemplateGraph
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::IsCustomTemplateGraph()
 {
@@ -1314,7 +1345,7 @@ bool UBlockyGraph::IsCustomTemplateGraph()
 // Function BlockyLuaCore.BlockyGraph.IsCustomGraph
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::IsCustomGraph()
 {
@@ -1339,7 +1370,7 @@ bool UBlockyGraph::IsCustomGraph()
 // Function BlockyLuaCore.BlockyGraph.IsBasicTemplateGraph
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::IsBasicTemplateGraph()
 {
@@ -1364,7 +1395,7 @@ bool UBlockyGraph::IsBasicTemplateGraph()
 // Function BlockyLuaCore.BlockyGraph.GetTriggerItemsByRootBlocks
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UBlockBase*>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UBlockBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockBase*> UBlockyGraph::GetTriggerItemsByRootBlocks()
 {
@@ -1389,7 +1420,7 @@ TArray<class UBlockBase*> UBlockyGraph::GetTriggerItemsByRootBlocks()
 // Function BlockyLuaCore.BlockyGraph.GetTotalBlockNum
 // (Final, Native, Public)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyGraph::GetTotalBlockNum()
 {
@@ -1414,9 +1445,9 @@ int UBlockyGraph::GetTotalBlockNum()
 // Function BlockyLuaCore.BlockyGraph.CaptureScreenWithShot
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UUserWidget*             Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FVector2D               rect                           (Parm, IsPlainOldData)
-// class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UUserWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FVector2D rect (Parm, IsPlainOldData)
+// class UTexture2D* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UTexture2D* UBlockyGraph::CaptureScreenWithShot(class UUserWidget* Widget, const struct FVector2D& rect)
 {
@@ -1443,7 +1474,7 @@ class UTexture2D* UBlockyGraph::CaptureScreenWithShot(class UUserWidget* Widget,
 // Function BlockyLuaCore.BlockyGraph.CaptureScreenShot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UUserWidget*             Widget                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UUserWidget* Widget (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UBlockyGraph::CaptureScreenShot(class UUserWidget* Widget)
 {
@@ -1467,8 +1498,8 @@ void UBlockyGraph::CaptureScreenShot(class UUserWidget* Widget)
 // Function BlockyLuaCore.BlockyGraph.CanSaveAsTemplate
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FString                 OutFailedReason                (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString OutFailedReason (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::CanSaveAsTemplate(struct FString* OutFailedReason)
 {
@@ -1496,8 +1527,8 @@ bool UBlockyGraph::CanSaveAsTemplate(struct FString* OutFailedReason)
 // Function BlockyLuaCore.BlockyGraph.CanBeRemove
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBlockyGraphData*        GraphData                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBlockyGraphData* GraphData (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::CanBeRemove(class UBlockyGraphData* GraphData)
 {
@@ -1523,7 +1554,7 @@ bool UBlockyGraph::CanBeRemove(class UBlockyGraphData* GraphData)
 // Function BlockyLuaCore.BlockyGraph.CanBeDuplicated
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraph::CanBeDuplicated()
 {
@@ -1548,7 +1579,7 @@ bool UBlockyGraph::CanBeDuplicated()
 // Function BlockyLuaCore.BlockyGraphData.UseTemplate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyGraph*            templateGraph                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraph* templateGraph (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::UseTemplate(class UBlockyGraph* templateGraph)
 {
@@ -1593,7 +1624,7 @@ void UBlockyGraphData::UpdateVariableMenu()
 // Function BlockyLuaCore.BlockyGraphData.UpdateVariableItemNames
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FText>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FText> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FText> UBlockyGraphData::UpdateVariableItemNames()
 {
@@ -1639,7 +1670,7 @@ void UBlockyGraphData::UpdateCustomMenu()
 // Function BlockyLuaCore.BlockyGraphData.UpdateCustomItemNames
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FText>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FText> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FText> UBlockyGraphData::UpdateCustomItemNames()
 {
@@ -1748,7 +1779,7 @@ void UBlockyGraphData::TryCloseItemList()
 // Function BlockyLuaCore.BlockyGraphData.ShowTips
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   Tips                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText Tips (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyGraphData::ShowTips(const struct FText& Tips)
 {
@@ -1793,7 +1824,7 @@ void UBlockyGraphData::ShowBlockSettingPop()
 // Function BlockyLuaCore.BlockyGraphData.SetSlotString
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FBlockySlotString       slotStr                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBlockySlotString slotStr (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyGraphData::SetSlotString(const struct FBlockySlotString& slotStr)
 {
@@ -1817,7 +1848,7 @@ void UBlockyGraphData::SetSlotString(const struct FBlockySlotString& slotStr)
 // Function BlockyLuaCore.BlockyGraphData.SetGraphStrings
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FGraphString            graphStr                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FGraphString graphStr (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyGraphData::SetGraphStrings(const struct FGraphString& graphStr)
 {
@@ -1841,7 +1872,7 @@ void UBlockyGraphData::SetGraphStrings(const struct FGraphString& graphStr)
 // Function BlockyLuaCore.BlockyGraphData.SetCustomVariableString
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCustomVariableString   variableStr                    (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCustomVariableString variableStr (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyGraphData::SetCustomVariableString(const struct FCustomVariableString& variableStr)
 {
@@ -1865,7 +1896,7 @@ void UBlockyGraphData::SetCustomVariableString(const struct FCustomVariableStrin
 // Function BlockyLuaCore.BlockyGraphData.SetCustomConfigString
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCustomConfigString     configStr                      (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCustomConfigString configStr (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyGraphData::SetCustomConfigString(const struct FCustomConfigString& configStr)
 {
@@ -1889,7 +1920,7 @@ void UBlockyGraphData::SetCustomConfigString(const struct FCustomConfigString& c
 // Function BlockyLuaCore.BlockyGraphData.SetCurrentSubGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UBlockyGraphData::SetCurrentSubGraph(const struct FString& InName)
 {
@@ -1913,7 +1944,7 @@ void UBlockyGraphData::SetCurrentSubGraph(const struct FString& InName)
 // Function BlockyLuaCore.BlockyGraphData.SetCacheData
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, struct FString> Data                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<struct FString, struct FString> Data (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UBlockyGraphData::SetCacheData(TMap<struct FString, struct FString> Data)
 {
@@ -1937,10 +1968,10 @@ void UBlockyGraphData::SetCacheData(TMap<struct FString, struct FString> Data)
 // Function BlockyLuaCore.BlockyGraphData.SetBlockLogText
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EBlockyLogMsgMode              Mode                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              BlockSource                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 SlotID                         (Parm, ZeroConstructor)
-// struct FString                 Info                           (Parm, ZeroConstructor)
+// EBlockyLogMsgMode Mode (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* BlockSource (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString SlotID (Parm, ZeroConstructor)
+// struct FString Info (Parm, ZeroConstructor)
 
 void UBlockyGraphData::SetBlockLogText(EBlockyLogMsgMode Mode, class UBlockBase* BlockSource, const struct FString& SlotID, const struct FString& Info)
 {
@@ -1967,8 +1998,8 @@ void UBlockyGraphData::SetBlockLogText(EBlockyLogMsgMode Mode, class UBlockBase*
 // Function BlockyLuaCore.BlockyGraphData.SetBlockLogTabNum
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Mode                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Mode (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::SetBlockLogTabNum(int Mode, int Num)
 {
@@ -1993,8 +2024,8 @@ void UBlockyGraphData::SetBlockLogTabNum(int Mode, int Num)
 // Function BlockyLuaCore.BlockyGraphData.SetBlockLogNum
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Mode                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Mode (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::SetBlockLogNum(int Mode, int Num)
 {
@@ -2019,7 +2050,7 @@ void UBlockyGraphData::SetBlockLogNum(int Mode, int Num)
 // Function BlockyLuaCore.BlockyGraphData.SaveGraphToJsonText
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyGraphData::SaveGraphToJsonText()
 {
@@ -2044,7 +2075,7 @@ struct FString UBlockyGraphData::SaveGraphToJsonText()
 // Function BlockyLuaCore.BlockyGraphData.SaveGraphToBinFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UBlockyGraphData::SaveGraphToBinFile(const struct FString& FilePath)
 {
@@ -2068,7 +2099,7 @@ void UBlockyGraphData::SaveGraphToBinFile(const struct FString& FilePath)
 // Function BlockyLuaCore.BlockyGraphData.SaveGraphToBin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UBlockyGraphData::SaveGraphToBin()
 {
@@ -2093,7 +2124,7 @@ TArray<unsigned char> UBlockyGraphData::SaveGraphToBin()
 // Function BlockyLuaCore.BlockyGraphData.SaveGlobalVarToJsonText
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyGraphData::SaveGlobalVarToJsonText()
 {
@@ -2118,7 +2149,7 @@ struct FString UBlockyGraphData::SaveGlobalVarToJsonText()
 // Function BlockyLuaCore.BlockyGraphData.SaveGlobalVarToBin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<unsigned char> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<unsigned char> UBlockyGraphData::SaveGlobalVarToBin()
 {
@@ -2248,7 +2279,7 @@ void UBlockyGraphData::ResetGraph()
 // Function BlockyLuaCore.BlockyGraphData.RemoveSubGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
+// struct FString InName (Parm, ZeroConstructor)
 
 void UBlockyGraphData::RemoveSubGraph(const struct FString& InName)
 {
@@ -2293,7 +2324,7 @@ void UBlockyGraphData::RefreshFont()
 // Function BlockyLuaCore.BlockyGraphData.ReEditVariable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::ReEditVariable(int Index)
 {
@@ -2338,7 +2369,7 @@ void UBlockyGraphData::Redo()
 // Function BlockyLuaCore.BlockyGraphData.QuoteVariable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::QuoteVariable(int Index)
 {
@@ -2488,7 +2519,7 @@ void UBlockyGraphData::MarkGraphDirty()
 // Function BlockyLuaCore.BlockyGraphData.LoadGraphFromJsonText
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 JsonStr                        (ConstParm, Parm, ZeroConstructor)
+// struct FString JsonStr (ConstParm, Parm, ZeroConstructor)
 
 void UBlockyGraphData::LoadGraphFromJsonText(const struct FString& JsonStr)
 {
@@ -2512,7 +2543,7 @@ void UBlockyGraphData::LoadGraphFromJsonText(const struct FString& JsonStr)
 // Function BlockyLuaCore.BlockyGraphData.LoadGraphFromBinFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
 
 void UBlockyGraphData::LoadGraphFromBinFile(const struct FString& FilePath)
 {
@@ -2536,7 +2567,7 @@ void UBlockyGraphData::LoadGraphFromBinFile(const struct FString& FilePath)
 // Function BlockyLuaCore.BlockyGraphData.LoadGlobalVarFromJsonText
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 JsonStr                        (ConstParm, Parm, ZeroConstructor)
+// struct FString JsonStr (ConstParm, Parm, ZeroConstructor)
 
 void UBlockyGraphData::LoadGlobalVarFromJsonText(const struct FString& JsonStr)
 {
@@ -2602,9 +2633,9 @@ void UBlockyGraphData::Load()
 // Function BlockyLuaCore.BlockyGraphData.JumpToFocusSlotByIdStrAndIdx
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// unsigned char                  idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// unsigned char idx (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UBlockyGraphData::JumpToFocusSlotByIdStrAndIdx(const struct FString& blockId, unsigned char idx)
 {
@@ -2631,9 +2662,9 @@ class UBlockBase* UBlockyGraphData::JumpToFocusSlotByIdStrAndIdx(const struct FS
 // Function BlockyLuaCore.BlockyGraphData.JumpToFocusSlotByIdStr
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// struct FString                 TargetSlotIdStr                (Parm, ZeroConstructor)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// struct FString TargetSlotIdStr (Parm, ZeroConstructor)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UBlockyGraphData::JumpToFocusSlotByIdStr(const struct FString& blockId, const struct FString& TargetSlotIdStr)
 {
@@ -2660,8 +2691,8 @@ class UBlockBase* UBlockyGraphData::JumpToFocusSlotByIdStr(const struct FString&
 // Function BlockyLuaCore.BlockyGraphData.JumpToFocusBlockByIdStr
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UBlockyGraphData::JumpToFocusBlockByIdStr(const struct FString& blockId)
 {
@@ -2687,8 +2718,8 @@ class UBlockBase* UBlockyGraphData::JumpToFocusBlockByIdStr(const struct FString
 // Function BlockyLuaCore.BlockyGraphData.ItemHasOpend
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ItemStringName                 (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString ItemStringName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::ItemHasOpend(const struct FString& ItemStringName)
 {
@@ -2714,7 +2745,7 @@ bool UBlockyGraphData::ItemHasOpend(const struct FString& ItemStringName)
 // Function BlockyLuaCore.BlockyGraphData.IsGraphChanged
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::IsGraphChanged()
 {
@@ -2739,7 +2770,7 @@ bool UBlockyGraphData::IsGraphChanged()
 // Function BlockyLuaCore.BlockyGraphData.IsFirstGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::IsFirstGraph()
 {
@@ -2764,7 +2795,7 @@ bool UBlockyGraphData::IsFirstGraph()
 // Function BlockyLuaCore.BlockyGraphData.IsBlockGuideButton
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::IsBlockGuideButton()
 {
@@ -2789,7 +2820,7 @@ bool UBlockyGraphData::IsBlockGuideButton()
 // Function BlockyLuaCore.BlockyGraphData.HasExecutableCode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::HasExecutableCode()
 {
@@ -2798,6 +2829,35 @@ bool UBlockyGraphData::HasExecutableCode()
 		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraphData.HasExecutableCode");
 
 	UBlockyGraphData_HasExecutableCode_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BlockyLuaCore.BlockyGraphData.GM_LoadGraph_DS_FromFiles
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString GraphFilePath (Parm, ZeroConstructor)
+// struct FString GlobalVarsFilePath (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBlockyGraphData::GM_LoadGraph_DS_FromFiles(const struct FString& GraphFilePath, const struct FString& GlobalVarsFilePath)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraphData.GM_LoadGraph_DS_FromFiles");
+
+	UBlockyGraphData_GM_LoadGraph_DS_FromFiles_Params params;
+	params.GraphFilePath = GraphFilePath;
+	params.GlobalVarsFilePath = GlobalVarsFilePath;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -2835,8 +2895,8 @@ void UBlockyGraphData::GM_LoadGraph_DS()
 // Function BlockyLuaCore.BlockyGraphData.GM_GenerateAllBlocks
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            CombinedBlocksNum              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            GraphBlocksNum                 (Parm, ZeroConstructor, IsPlainOldData)
+// int CombinedBlocksNum (Parm, ZeroConstructor, IsPlainOldData)
+// int GraphBlocksNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::GM_GenerateAllBlocks(int CombinedBlocksNum, int GraphBlocksNum)
 {
@@ -2861,7 +2921,7 @@ void UBlockyGraphData::GM_GenerateAllBlocks(int CombinedBlocksNum, int GraphBloc
 // Function BlockyLuaCore.BlockyGraphData.GetTriggerList
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UBlockyGraphData::GetTriggerList()
 {
@@ -2886,7 +2946,7 @@ TArray<struct FString> UBlockyGraphData::GetTriggerList()
 // Function BlockyLuaCore.BlockyGraphData.GetTLogType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UBlockyGraphData::GetTLogType()
 {
@@ -2911,7 +2971,7 @@ TArray<struct FString> UBlockyGraphData::GetTLogType()
 // Function BlockyLuaCore.BlockyGraphData.GetTLog
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, struct FString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, struct FString> UBlockyGraphData::GetTLog()
 {
@@ -2936,8 +2996,8 @@ TMap<struct FString, struct FString> UBlockyGraphData::GetTLog()
 // Function BlockyLuaCore.BlockyGraphData.GetQuoteVariableItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyGraph*            Graph                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UBlockBase*>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyGraph* Graph (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UBlockBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockBase*> UBlockyGraphData::GetQuoteVariableItem(class UBlockyGraph* Graph)
 {
@@ -2963,8 +3023,8 @@ TArray<class UBlockBase*> UBlockyGraphData::GetQuoteVariableItem(class UBlockyGr
 // Function BlockyLuaCore.BlockyGraphData.GetQuoteVariableGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UBlockyGraph*>    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UBlockyGraph*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockyGraph*> UBlockyGraphData::GetQuoteVariableGraph(int Index)
 {
@@ -2990,8 +3050,8 @@ TArray<class UBlockyGraph*> UBlockyGraphData::GetQuoteVariableGraph(int Index)
 // Function BlockyLuaCore.BlockyGraphData.GetPresetDescArray
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           LocalOnly                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UPresetDesc*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// bool LocalOnly (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UPresetDesc*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UPresetDesc*> UBlockyGraphData::GetPresetDescArray(bool LocalOnly)
 {
@@ -3017,8 +3077,8 @@ TArray<class UPresetDesc*> UBlockyGraphData::GetPresetDescArray(bool LocalOnly)
 // Function BlockyLuaCore.BlockyGraphData.GetNewBlocksNumWithMenu
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 menuItemName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString menuItemName (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyGraphData::GetNewBlocksNumWithMenu(const struct FString& menuItemName)
 {
@@ -3044,7 +3104,7 @@ int UBlockyGraphData::GetNewBlocksNumWithMenu(const struct FString& menuItemName
 // Function BlockyLuaCore.BlockyGraphData.GetIsDisableComment
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::GetIsDisableComment()
 {
@@ -3069,7 +3129,7 @@ bool UBlockyGraphData::GetIsDisableComment()
 // Function BlockyLuaCore.BlockyGraphData.GetGraphStrings
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FGraphString>    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FGraphString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FGraphString> UBlockyGraphData::GetGraphStrings()
 {
@@ -3094,7 +3154,7 @@ TArray<struct FGraphString> UBlockyGraphData::GetGraphStrings()
 // Function BlockyLuaCore.BlockyGraphData.GetGraphMap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, struct FString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, struct FString> UBlockyGraphData::GetGraphMap()
 {
@@ -3119,7 +3179,7 @@ TMap<struct FString, struct FString> UBlockyGraphData::GetGraphMap()
 // Function BlockyLuaCore.BlockyGraphData.GetFunctionDescArray
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UFunctionDesc*>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UFunctionDesc*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UFunctionDesc*> UBlockyGraphData::GetFunctionDescArray()
 {
@@ -3144,7 +3204,7 @@ TArray<class UFunctionDesc*> UBlockyGraphData::GetFunctionDescArray()
 // Function BlockyLuaCore.BlockyGraphData.GetDeleteBlockUIRect
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRectWidth                    (Parm, ZeroConstructor, IsPlainOldData)
+// float InRectWidth (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::GetDeleteBlockUIRect(float InRectWidth)
 {
@@ -3168,7 +3228,7 @@ void UBlockyGraphData::GetDeleteBlockUIRect(float InRectWidth)
 // Function BlockyLuaCore.BlockyGraphData.GetCustomVariableStrings
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FCustomVariableString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCustomVariableString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FCustomVariableString> UBlockyGraphData::GetCustomVariableStrings()
 {
@@ -3193,7 +3253,7 @@ TArray<struct FCustomVariableString> UBlockyGraphData::GetCustomVariableStrings(
 // Function BlockyLuaCore.BlockyGraphData.GetCustomNames
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FText>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FText> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FText> UBlockyGraphData::GetCustomNames()
 {
@@ -3218,8 +3278,8 @@ TArray<struct FText> UBlockyGraphData::GetCustomNames()
 // Function BlockyLuaCore.BlockyGraphData.GetCustomEventConfigs
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           isCloudGameEvent               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UCustomConfig*>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// bool isCloudGameEvent (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UCustomConfig*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UCustomConfig*> UBlockyGraphData::GetCustomEventConfigs(bool isCloudGameEvent)
 {
@@ -3245,7 +3305,7 @@ TArray<class UCustomConfig*> UBlockyGraphData::GetCustomEventConfigs(bool isClou
 // Function BlockyLuaCore.BlockyGraphData.GetCustomConfigStrings
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FCustomConfigString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FCustomConfigString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FCustomConfigString> UBlockyGraphData::GetCustomConfigStrings()
 {
@@ -3270,8 +3330,8 @@ TArray<struct FCustomConfigString> UBlockyGraphData::GetCustomConfigStrings()
 // Function BlockyLuaCore.BlockyGraphData.GetCurrentGraphBlockyNumberByType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EBlockyCurrentGraphBlockyNumberType Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EBlockyCurrentGraphBlockyNumberType Type (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyGraphData::GetCurrentGraphBlockyNumberByType(EBlockyCurrentGraphBlockyNumberType Type)
 {
@@ -3297,7 +3357,7 @@ int UBlockyGraphData::GetCurrentGraphBlockyNumberByType(EBlockyCurrentGraphBlock
 // Function BlockyLuaCore.BlockyGraphData.GetCurrentGraph
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UBlockyGraph*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBlockyGraph* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockyGraph* UBlockyGraphData::GetCurrentGraph()
 {
@@ -3322,9 +3382,9 @@ class UBlockyGraph* UBlockyGraphData::GetCurrentGraph()
 // Function BlockyLuaCore.BlockyGraphData.GetCurrentBlockyNumByMune
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Menu                           (Parm, ZeroConstructor)
-// struct FString                 Category                       (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Menu (Parm, ZeroConstructor)
+// struct FString Category (Parm, ZeroConstructor)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyGraphData::GetCurrentBlockyNumByMune(const struct FString& Menu, const struct FString& Category)
 {
@@ -3351,7 +3411,7 @@ int UBlockyGraphData::GetCurrentBlockyNumByMune(const struct FString& Menu, cons
 // Function BlockyLuaCore.BlockyGraphData.GetCacheData
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TMap<struct FString, struct FString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, struct FString> UBlockyGraphData::GetCacheData()
 {
@@ -3373,10 +3433,39 @@ TMap<struct FString, struct FString> UBlockyGraphData::GetCacheData()
 }
 
 
+// Function BlockyLuaCore.BlockyGraphData.GetBlockyStringDatasInPairWithBlocks
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// TArray<struct FBlockySlotString> OutSlotStrings (Parm, OutParm, ZeroConstructor)
+// TArray<class UBlockBase*> OutBlocks (Parm, OutParm, ZeroConstructor)
+
+void UBlockyGraphData::GetBlockyStringDatasInPairWithBlocks(TArray<struct FBlockySlotString>* OutSlotStrings, TArray<class UBlockBase*>* OutBlocks)
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraphData.GetBlockyStringDatasInPairWithBlocks");
+
+	UBlockyGraphData_GetBlockyStringDatasInPairWithBlocks_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	if (OutSlotStrings != nullptr)
+		*OutSlotStrings = params.OutSlotStrings;
+	if (OutBlocks != nullptr)
+		*OutBlocks = params.OutBlocks;
+}
+
+
 // Function BlockyLuaCore.BlockyGraphData.GetBlockyStringDatasInPair
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FBlockySlotString> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FBlockySlotString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockySlotString> UBlockyGraphData::GetBlockyStringDatasInPair()
 {
@@ -3401,7 +3490,7 @@ TArray<struct FBlockySlotString> UBlockyGraphData::GetBlockyStringDatasInPair()
 // Function BlockyLuaCore.BlockyGraphData.GetBlocks
 // (Final, Native, Public, Const)
 // Parameters:
-// TArray<class UBlockBase*>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UBlockBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockBase*> UBlockyGraphData::GetBlocks()
 {
@@ -3426,7 +3515,7 @@ TArray<class UBlockBase*> UBlockyGraphData::GetBlocks()
 // Function BlockyLuaCore.BlockyGraphData.GetAllBlockyInGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UBlockBase*>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UBlockBase*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockBase*> UBlockyGraphData::GetAllBlockyInGraph()
 {
@@ -3448,10 +3537,35 @@ TArray<class UBlockBase*> UBlockyGraphData::GetAllBlockyInGraph()
 }
 
 
+// Function BlockyLuaCore.BlockyGraphData.GetAllBlockIdStrings
+// (Final, Native, Public)
+// Parameters:
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UBlockyGraphData::GetAllBlockIdStrings()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyGraphData.GetAllBlockIdStrings");
+
+	UBlockyGraphData_GetAllBlockIdStrings_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BlockyLuaCore.BlockyGraphData.GetAllBlockByKeyName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TMap<struct FString, int>      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TMap<struct FString, int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TMap<struct FString, int> UBlockyGraphData::GetAllBlockByKeyName()
 {
@@ -3476,8 +3590,8 @@ TMap<struct FString, int> UBlockyGraphData::GetAllBlockByKeyName()
 // Function BlockyLuaCore.BlockyGraphData.FocusToSlotByBlockySlotId
 // (Final, Native, Public)
 // Parameters:
-// struct FBlockySlotString       SlotID                         (Parm)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockySlotString SlotID (Parm)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UBlockyGraphData::FocusToSlotByBlockySlotId(const struct FBlockySlotString& SlotID)
 {
@@ -3503,8 +3617,8 @@ class UBlockBase* UBlockyGraphData::FocusToSlotByBlockySlotId(const struct FBloc
 // Function BlockyLuaCore.BlockyGraphData.FocusToSlot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockBase*              TargetBlock                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 TargetSlotIdStr                (Parm, ZeroConstructor)
+// class UBlockBase* TargetBlock (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString TargetSlotIdStr (Parm, ZeroConstructor)
 
 void UBlockyGraphData::FocusToSlot(class UBlockBase* TargetBlock, const struct FString& TargetSlotIdStr)
 {
@@ -3529,7 +3643,7 @@ void UBlockyGraphData::FocusToSlot(class UBlockBase* TargetBlock, const struct F
 // Function BlockyLuaCore.BlockyGraphData.FocusTo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockBase*              TargetBlock                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* TargetBlock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::FocusTo(class UBlockBase* TargetBlock)
 {
@@ -3553,8 +3667,8 @@ void UBlockyGraphData::FocusTo(class UBlockBase* TargetBlock)
 // Function BlockyLuaCore.BlockyGraphData.FinishVariableEdit
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bSaveVar                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bReEdit                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSaveVar (Parm, ZeroConstructor, IsPlainOldData)
+// bool bReEdit (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::FinishVariableEdit(bool bSaveVar, bool bReEdit)
 {
@@ -3579,7 +3693,7 @@ void UBlockyGraphData::FinishVariableEdit(bool bSaveVar, bool bReEdit)
 // Function BlockyLuaCore.BlockyGraphData.FinishCustomEdit
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bSave                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSave (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::FinishCustomEdit(bool bSave)
 {
@@ -3603,7 +3717,7 @@ void UBlockyGraphData::FinishCustomEdit(bool bSave)
 // Function BlockyLuaCore.BlockyGraphData.FinishBlockSetting
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bSaveVar                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSaveVar (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::FinishBlockSetting(bool bSaveVar)
 {
@@ -3627,8 +3741,8 @@ void UBlockyGraphData::FinishBlockSetting(bool bSaveVar)
 // Function BlockyLuaCore.BlockyGraphData.FindBlockByIdStr
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 blockId                        (Parm, ZeroConstructor)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString blockId (Parm, ZeroConstructor)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UBlockyGraphData::FindBlockByIdStr(const struct FString& blockId)
 {
@@ -3759,7 +3873,7 @@ void UBlockyGraphData::EditCustom()
 // Function BlockyLuaCore.BlockyGraphData.DuplicateSubGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 SrcName                        (Parm, ZeroConstructor)
+// struct FString SrcName (Parm, ZeroConstructor)
 
 void UBlockyGraphData::DuplicateSubGraph(const struct FString& SrcName)
 {
@@ -3783,7 +3897,7 @@ void UBlockyGraphData::DuplicateSubGraph(const struct FString& SrcName)
 // Function BlockyLuaCore.BlockyGraphData.DuplicateBlock
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DuplicateBlock(class UBlockBase* bLock)
 {
@@ -3828,7 +3942,7 @@ void UBlockyGraphData::Disable()
 // Function BlockyLuaCore.BlockyGraphData.DeleteVariableListItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DeleteVariableListItem(int Index)
 {
@@ -3915,8 +4029,8 @@ void UBlockyGraphData::DeleteBlocks()
 // Function BlockyLuaCore.BlockyGraphData.DeleteBlockInGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyGraph*            InGraph                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraph* InGraph (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DeleteBlockInGraph(class UBlockyGraph* InGraph, class UBlockBase* bLock)
 {
@@ -3941,8 +4055,8 @@ void UBlockyGraphData::DeleteBlockInGraph(class UBlockyGraph* InGraph, class UBl
 // Function BlockyLuaCore.BlockyGraphData.DeleteBlockAndNextInGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockyGraph*            InGraph                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraph* InGraph (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DeleteBlockAndNextInGraph(class UBlockyGraph* InGraph, class UBlockBase* bLock)
 {
@@ -3967,7 +4081,7 @@ void UBlockyGraphData::DeleteBlockAndNextInGraph(class UBlockyGraph* InGraph, cl
 // Function BlockyLuaCore.BlockyGraphData.DeleteBlockAndNext
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DeleteBlockAndNext(class UBlockBase* bLock)
 {
@@ -3991,7 +4105,7 @@ void UBlockyGraphData::DeleteBlockAndNext(class UBlockBase* bLock)
 // Function BlockyLuaCore.BlockyGraphData.DeleteBlock
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyGraphData::DeleteBlock(class UBlockBase* bLock)
 {
@@ -4057,8 +4171,8 @@ void UBlockyGraphData::Define()
 // Function BlockyLuaCore.BlockyGraphData.CustomNumByType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum ECustomBlockType> CustomType                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ECustomBlockType> CustomType (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyGraphData::CustomNumByType(TEnumAsByte<enum ECustomBlockType> CustomType)
 {
@@ -4084,7 +4198,7 @@ int UBlockyGraphData::CustomNumByType(TEnumAsByte<enum ECustomBlockType> CustomT
 // Function BlockyLuaCore.BlockyGraphData.CurSelectSubBlockyGraphs
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UBlockyGraph*>    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UBlockyGraph*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UBlockyGraph*> UBlockyGraphData::CurSelectSubBlockyGraphs()
 {
@@ -4256,7 +4370,7 @@ void UBlockyGraphData::ClearBlockLog()
 // Function BlockyLuaCore.BlockyGraphData.CheckReports
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyGraphData::CheckReports()
 {
@@ -4281,8 +4395,8 @@ bool UBlockyGraphData::CheckReports()
 // Function BlockyLuaCore.BlockyGraphData.AsyncLoadGraphFromBinFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FilePath                       (Parm, ZeroConstructor)
-// struct FScriptDelegate         Callback                       (Parm, ZeroConstructor)
+// struct FString FilePath (Parm, ZeroConstructor)
+// struct FScriptDelegate Callback (Parm, ZeroConstructor)
 
 void UBlockyGraphData::AsyncLoadGraphFromBinFile(const struct FString& FilePath, const struct FScriptDelegate& Callback)
 {
@@ -4307,9 +4421,9 @@ void UBlockyGraphData::AsyncLoadGraphFromBinFile(const struct FString& FilePath,
 // Function BlockyLuaCore.BlockyGraphData.AddSubGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// struct FString                 InType                         (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString InName (Parm, ZeroConstructor)
+// struct FString InType (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyGraphData::AddSubGraph(const struct FString& InName, const struct FString& InType)
 {
@@ -4336,7 +4450,7 @@ struct FString UBlockyGraphData::AddSubGraph(const struct FString& InName, const
 // Function BlockyLuaCore.BlockyGraphData.AddOpendNameToArr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ItemStringName                 (Parm, ZeroConstructor)
+// struct FString ItemStringName (Parm, ZeroConstructor)
 
 void UBlockyGraphData::AddOpendNameToArr(const struct FString& ItemStringName)
 {
@@ -4360,9 +4474,9 @@ void UBlockyGraphData::AddOpendNameToArr(const struct FString& ItemStringName)
 // Function BlockyLuaCore.BlockyGraphData.AddGraph
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// struct FString                 InType                         (Parm, ZeroConstructor)
-// class UBlockyGraph*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
+// struct FString InType (Parm, ZeroConstructor)
+// class UBlockyGraph* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockyGraph* UBlockyGraphData::AddGraph(const struct FString& InName, const struct FString& InType)
 {
@@ -4410,7 +4524,7 @@ void UBlockyGraphData::AddGlobalComment()
 // Function BlockyLuaCore.BlockyLuaConfig.SetCustomDefaultFont
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FSlateFontInfo          DefaultFont                    (Parm, OutParm)
+// struct FSlateFontInfo DefaultFont (Parm, OutParm)
 
 void UBlockyLuaConfig::SetCustomDefaultFont(struct FSlateFontInfo* DefaultFont)
 {
@@ -4436,8 +4550,8 @@ void UBlockyLuaConfig::SetCustomDefaultFont(struct FSlateFontInfo* DefaultFont)
 // Function BlockyLuaCore.BlockyLuaConfig.ReplaceChCharToMaskChar
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 Source                         (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Source (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaConfig::ReplaceChCharToMaskChar(const struct FString& Source)
 {
@@ -4463,7 +4577,7 @@ struct FString UBlockyLuaConfig::ReplaceChCharToMaskChar(const struct FString& S
 // Function BlockyLuaCore.BlockyLuaConfig.PlayPresetSound
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
-// struct FString                 SoundPath                      (Parm, ZeroConstructor)
+// struct FString SoundPath (Parm, ZeroConstructor)
 
 void UBlockyLuaConfig::PlayPresetSound(const struct FString& SoundPath)
 {
@@ -4487,8 +4601,8 @@ void UBlockyLuaConfig::PlayPresetSound(const struct FString& SoundPath)
 // Function BlockyLuaCore.BlockyLuaConfig.IsNameStringValid
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 NameString                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString NameString (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyLuaConfig::IsNameStringValid(const struct FString& NameString)
 {
@@ -4514,8 +4628,8 @@ bool UBlockyLuaConfig::IsNameStringValid(const struct FString& NameString)
 // Function BlockyLuaCore.BlockyLuaConfig.IsBlackboardVar
 // (Final, Native, Public, Const)
 // Parameters:
-// class UVarDefiner*             Definer                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UVarDefiner* Definer (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyLuaConfig::IsBlackboardVar(class UVarDefiner* Definer)
 {
@@ -4541,8 +4655,8 @@ bool UBlockyLuaConfig::IsBlackboardVar(class UVarDefiner* Definer)
 // Function BlockyLuaCore.BlockyLuaConfig.GetValidString
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 CheckString                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString CheckString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaConfig::GetValidString(const struct FString& CheckString)
 {
@@ -4568,8 +4682,8 @@ struct FString UBlockyLuaConfig::GetValidString(const struct FString& CheckStrin
 // Function BlockyLuaCore.BlockyLuaConfig.GetTranslateStringTest
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaConfig::GetTranslateStringTest(const struct FString& KeyString)
 {
@@ -4595,8 +4709,8 @@ struct FString UBlockyLuaConfig::GetTranslateStringTest(const struct FString& Ke
 // Function BlockyLuaCore.BlockyLuaConfig.GetTranslateString
 // (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaConfig::GetTranslateString(const struct FString& KeyString)
 {
@@ -4622,8 +4736,8 @@ struct FString UBlockyLuaConfig::GetTranslateString(const struct FString& KeyStr
 // Function BlockyLuaCore.BlockyLuaConfig.GetLocaleString
 // (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaConfig::GetLocaleString(const struct FString& KeyString)
 {
@@ -4649,8 +4763,8 @@ struct FString UBlockyLuaConfig::GetLocaleString(const struct FString& KeyString
 // Function BlockyLuaCore.BlockyLuaConfig.GetBlackboardDefiner
 // (Final, Native, Public, Const)
 // Parameters:
-// class UVarDefiner*             Definer                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlackboardDefiner*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UVarDefiner* Definer (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlackboardDefiner* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlackboardDefiner* UBlockyLuaConfig::GetBlackboardDefiner(class UVarDefiner* Definer)
 {
@@ -4718,8 +4832,8 @@ void UBlockyLuaConfig::ClearAsyncTextureHandleMap()
 // Function BlockyLuaCore.BlockyLuaConfig.CheckStringValidTest
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// struct FString                 CheckString                    (Parm, ZeroConstructor)
-// struct FCheckStringHandleData  Data                           (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString CheckString (Parm, ZeroConstructor)
+// struct FCheckStringHandleData Data (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBlockyLuaConfig::CheckStringValidTest(const struct FString& CheckString, const struct FCheckStringHandleData& Data)
 {
@@ -4744,8 +4858,8 @@ void UBlockyLuaConfig::CheckStringValidTest(const struct FString& CheckString, c
 // Function BlockyLuaCore.BlockyLuaUtility.WriteUInt8
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// unsigned char                  Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// unsigned char Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteUInt8(const struct FBlockyLuaHandle& ar, unsigned char Value)
 {
@@ -4770,8 +4884,8 @@ void UBlockyLuaUtility::WriteUInt8(const struct FBlockyLuaHandle& ar, unsigned c
 // Function BlockyLuaCore.BlockyLuaUtility.WriteUInt64
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint64_t                       Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint64_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteUInt64(const struct FBlockyLuaHandle& ar, uint64_t Value)
 {
@@ -4796,8 +4910,8 @@ void UBlockyLuaUtility::WriteUInt64(const struct FBlockyLuaHandle& ar, uint64_t 
 // Function BlockyLuaCore.BlockyLuaUtility.WriteUInt32
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint32_t                       Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint32_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteUInt32(const struct FBlockyLuaHandle& ar, uint32_t Value)
 {
@@ -4822,8 +4936,8 @@ void UBlockyLuaUtility::WriteUInt32(const struct FBlockyLuaHandle& ar, uint32_t 
 // Function BlockyLuaCore.BlockyLuaUtility.WriteUInt16
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint16_t                       Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint16_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteUInt16(const struct FBlockyLuaHandle& ar, uint16_t Value)
 {
@@ -4848,8 +4962,8 @@ void UBlockyLuaUtility::WriteUInt16(const struct FBlockyLuaHandle& ar, uint16_t 
 // Function BlockyLuaCore.BlockyLuaUtility.WriteString
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ar (Parm)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UBlockyLuaUtility::WriteString(const struct FBlockyLuaHandle& ar, const struct FString& Value)
 {
@@ -4874,8 +4988,8 @@ void UBlockyLuaUtility::WriteString(const struct FBlockyLuaHandle& ar, const str
 // Function BlockyLuaCore.BlockyLuaUtility.WriteSingle
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteSingle(const struct FBlockyLuaHandle& ar, float Value)
 {
@@ -4900,8 +5014,8 @@ void UBlockyLuaUtility::WriteSingle(const struct FBlockyLuaHandle& ar, float Val
 // Function BlockyLuaCore.BlockyLuaUtility.WriteObjectPtr
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// class UObject*                 Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// class UObject* Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteObjectPtr(const struct FBlockyLuaHandle& ar, class UObject* Value)
 {
@@ -4926,8 +5040,8 @@ void UBlockyLuaUtility::WriteObjectPtr(const struct FBlockyLuaHandle& ar, class 
 // Function BlockyLuaCore.BlockyLuaUtility.WriteInt8
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int8_t                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int8_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteInt8(const struct FBlockyLuaHandle& ar, int8_t Value)
 {
@@ -4952,8 +5066,8 @@ void UBlockyLuaUtility::WriteInt8(const struct FBlockyLuaHandle& ar, int8_t Valu
 // Function BlockyLuaCore.BlockyLuaUtility.WriteInt64
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int64_t                        Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int64_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteInt64(const struct FBlockyLuaHandle& ar, int64_t Value)
 {
@@ -4978,8 +5092,8 @@ void UBlockyLuaUtility::WriteInt64(const struct FBlockyLuaHandle& ar, int64_t Va
 // Function BlockyLuaCore.BlockyLuaUtility.WriteInt32
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteInt32(const struct FBlockyLuaHandle& ar, int Value)
 {
@@ -5004,8 +5118,8 @@ void UBlockyLuaUtility::WriteInt32(const struct FBlockyLuaHandle& ar, int Value)
 // Function BlockyLuaCore.BlockyLuaUtility.WriteInt16
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int16_t                        Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int16_t Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteInt16(const struct FBlockyLuaHandle& ar, int16_t Value)
 {
@@ -5030,8 +5144,8 @@ void UBlockyLuaUtility::WriteInt16(const struct FBlockyLuaHandle& ar, int16_t Va
 // Function BlockyLuaCore.BlockyLuaUtility.WriteHandle
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ar (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UBlockyLuaUtility::WriteHandle(const struct FBlockyLuaHandle& ar, const struct FBlockyLuaHandle& Value)
 {
@@ -5056,8 +5170,8 @@ void UBlockyLuaUtility::WriteHandle(const struct FBlockyLuaHandle& ar, const str
 // Function BlockyLuaCore.BlockyLuaUtility.WriteDouble
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// double                         Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// double Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteDouble(const struct FBlockyLuaHandle& ar, double Value)
 {
@@ -5082,8 +5196,8 @@ void UBlockyLuaUtility::WriteDouble(const struct FBlockyLuaHandle& ar, double Va
 // Function BlockyLuaCore.BlockyLuaUtility.WriteBool
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyLuaUtility::WriteBool(const struct FBlockyLuaHandle& ar, bool Value)
 {
@@ -5108,8 +5222,8 @@ void UBlockyLuaUtility::WriteBool(const struct FBlockyLuaHandle& ar, bool Value)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadUInt8
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char UBlockyLuaUtility::ReadUInt8(const struct FBlockyLuaHandle& ar)
 {
@@ -5135,8 +5249,8 @@ unsigned char UBlockyLuaUtility::ReadUInt8(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadUInt64
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint64_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint64_t UBlockyLuaUtility::ReadUInt64(const struct FBlockyLuaHandle& ar)
 {
@@ -5162,8 +5276,8 @@ uint64_t UBlockyLuaUtility::ReadUInt64(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadUInt32
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint32_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint32_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint32_t UBlockyLuaUtility::ReadUInt32(const struct FBlockyLuaHandle& ar)
 {
@@ -5189,8 +5303,8 @@ uint32_t UBlockyLuaUtility::ReadUInt32(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadUInt16
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// uint16_t                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// uint16_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 uint16_t UBlockyLuaUtility::ReadUInt16(const struct FBlockyLuaHandle& ar)
 {
@@ -5216,8 +5330,8 @@ uint16_t UBlockyLuaUtility::ReadUInt16(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadString
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ar (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlockyLuaUtility::ReadString(const struct FBlockyLuaHandle& ar)
 {
@@ -5243,8 +5357,8 @@ struct FString UBlockyLuaUtility::ReadString(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadSingle
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBlockyLuaUtility::ReadSingle(const struct FBlockyLuaHandle& ar)
 {
@@ -5270,8 +5384,8 @@ float UBlockyLuaUtility::ReadSingle(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadObjectPtr
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UBlockyLuaUtility::ReadObjectPtr(const struct FBlockyLuaHandle& ar)
 {
@@ -5297,8 +5411,8 @@ class UObject* UBlockyLuaUtility::ReadObjectPtr(const struct FBlockyLuaHandle& a
 // Function BlockyLuaCore.BlockyLuaUtility.ReadInt8
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int8_t                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int8_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int8_t UBlockyLuaUtility::ReadInt8(const struct FBlockyLuaHandle& ar)
 {
@@ -5324,8 +5438,8 @@ int8_t UBlockyLuaUtility::ReadInt8(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadInt64
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int64_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int64_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int64_t UBlockyLuaUtility::ReadInt64(const struct FBlockyLuaHandle& ar)
 {
@@ -5351,8 +5465,8 @@ int64_t UBlockyLuaUtility::ReadInt64(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadInt32
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlockyLuaUtility::ReadInt32(const struct FBlockyLuaHandle& ar)
 {
@@ -5378,8 +5492,8 @@ int UBlockyLuaUtility::ReadInt32(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadInt16
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// int16_t                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// int16_t ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int16_t UBlockyLuaUtility::ReadInt16(const struct FBlockyLuaHandle& ar)
 {
@@ -5405,8 +5519,8 @@ int16_t UBlockyLuaUtility::ReadInt16(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadHandle
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ar (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBlockyLuaUtility::ReadHandle(const struct FBlockyLuaHandle& ar)
 {
@@ -5432,8 +5546,8 @@ struct FBlockyLuaHandle UBlockyLuaUtility::ReadHandle(const struct FBlockyLuaHan
 // Function BlockyLuaCore.BlockyLuaUtility.ReadDouble
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// double                         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// double ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 double UBlockyLuaUtility::ReadDouble(const struct FBlockyLuaHandle& ar)
 {
@@ -5459,8 +5573,8 @@ double UBlockyLuaUtility::ReadDouble(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.ReadBool
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ar                             (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ar (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyLuaUtility::ReadBool(const struct FBlockyLuaHandle& ar)
 {
@@ -5486,7 +5600,7 @@ bool UBlockyLuaUtility::ReadBool(const struct FBlockyLuaHandle& ar)
 // Function BlockyLuaCore.BlockyLuaUtility.DestroyReturnWriter
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
 
 void UBlockyLuaUtility::DestroyReturnWriter(const struct FBlockyLuaHandle& ptr)
 {
@@ -5510,7 +5624,7 @@ void UBlockyLuaUtility::DestroyReturnWriter(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.BlockyLuaUtility.DestroyArgumentsReader
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
 
 void UBlockyLuaUtility::DestroyArgumentsReader(const struct FBlockyLuaHandle& ptr)
 {
@@ -5534,8 +5648,8 @@ void UBlockyLuaUtility::DestroyArgumentsReader(const struct FBlockyLuaHandle& pt
 // Function BlockyLuaCore.BlockyLuaUtility.CreateReturnWriter
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        stubHandle                     (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle stubHandle (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBlockyLuaUtility::CreateReturnWriter(const struct FBlockyLuaHandle& stubHandle)
 {
@@ -5561,8 +5675,8 @@ struct FBlockyLuaHandle UBlockyLuaUtility::CreateReturnWriter(const struct FBloc
 // Function BlockyLuaCore.BlockyLuaUtility.CreateArgumentsReader
 // (Final, Native, Static, Public)
 // Parameters:
-// struct FBlockyLuaHandle        stubHandle                     (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle stubHandle (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBlockyLuaUtility::CreateArgumentsReader(const struct FBlockyLuaHandle& stubHandle)
 {
@@ -5588,7 +5702,7 @@ struct FBlockyLuaHandle UBlockyLuaUtility::CreateArgumentsReader(const struct FB
 // Function BlockyLuaCore.BlockyMenuItemObject.SetShowRedDotVar
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           var                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool var (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyMenuItemObject::SetShowRedDotVar(bool var)
 {
@@ -5654,7 +5768,7 @@ void UBlockyMenuItemObject_Custom::NewCustom()
 // Function BlockyLuaCore.BlockyMenuItemObject_Custom.IsCurrentCategoryEmpty
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyMenuItemObject_Custom::IsCurrentCategoryEmpty()
 {
@@ -5679,7 +5793,7 @@ bool UBlockyMenuItemObject_Custom::IsCurrentCategoryEmpty()
 // Function BlockyLuaCore.BlockyMenuItemObject_Custom.GetCustomType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum ECustomBlockType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum ECustomBlockType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum ECustomBlockType> UBlockyMenuItemObject_Custom::GetCustomType()
 {
@@ -5743,10 +5857,31 @@ void UBlockyMenuItemObject_Variable::NewVariable()
 }
 
 
+// Function BlockyLuaCore.BlockyMenuItemObject_Variable.NewCustomVariable
+// (Final, Native, Public, BlueprintCallable)
+
+void UBlockyMenuItemObject_Variable::NewCustomVariable()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.BlockyMenuItemObject_Variable.NewCustomVariable");
+
+	UBlockyMenuItemObject_Variable_NewCustomVariable_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+}
+
+
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.IsSlotCustomVarToShow
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyMenuItemObject_Variable::IsSlotCustomVarToShow()
 {
@@ -5771,7 +5906,7 @@ bool UBlockyMenuItemObject_Variable::IsSlotCustomVarToShow()
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.IsPlayerBlackboard
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyMenuItemObject_Variable::IsPlayerBlackboard()
 {
@@ -5796,7 +5931,7 @@ bool UBlockyMenuItemObject_Variable::IsPlayerBlackboard()
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.IsCurrentCategoryEmpty
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyMenuItemObject_Variable::IsCurrentCategoryEmpty()
 {
@@ -5821,7 +5956,7 @@ bool UBlockyMenuItemObject_Variable::IsCurrentCategoryEmpty()
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.IsBlackBoardVariable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlockyMenuItemObject_Variable::IsBlackBoardVariable()
 {
@@ -5846,7 +5981,7 @@ bool UBlockyMenuItemObject_Variable::IsBlackBoardVariable()
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.FilterBlackboard
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bIsPlayerVar                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool bIsPlayerVar (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyMenuItemObject_Variable::FilterBlackboard(bool bIsPlayerVar)
 {
@@ -5870,7 +6005,7 @@ void UBlockyMenuItemObject_Variable::FilterBlackboard(bool bIsPlayerVar)
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.FilterAccess
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EBlockyAccessType> InAccess                       (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBlockyAccessType> InAccess (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyMenuItemObject_Variable::FilterAccess(TEnumAsByte<enum EBlockyAccessType> InAccess)
 {
@@ -5894,9 +6029,9 @@ void UBlockyMenuItemObject_Variable::FilterAccess(TEnumAsByte<enum EBlockyAccess
 // Function BlockyLuaCore.BlockyMenuItemObject_Variable.CanSeeCustomVar
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// bool                           IsConfigContain                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsOnlyShowCustom               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           IsHiddenCustom                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool IsConfigContain (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool IsOnlyShowCustom (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool IsHiddenCustom (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UBlockyMenuItemObject_Variable::CanSeeCustomVar(bool* IsConfigContain, bool* IsOnlyShowCustom, bool* IsHiddenCustom)
 {
@@ -5926,8 +6061,8 @@ void UBlockyMenuItemObject_Variable::CanSeeCustomVar(bool* IsConfigContain, bool
 // Function BlockyLuaCore.CastExpression.SetTargetType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Target                         (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Target (Parm)
 
 void UCastExpression::SetTargetType(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Target)
 {
@@ -5952,8 +6087,8 @@ void UCastExpression::SetTargetType(const struct FBlockyLuaHandle& ptr, const st
 // Function BlockyLuaCore.CastExpression.SetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Target                         (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Target (Parm)
 
 void UCastExpression::SetExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Target)
 {
@@ -5978,8 +6113,8 @@ void UCastExpression::SetExpression(const struct FBlockyLuaHandle& ptr, const st
 // Function BlockyLuaCore.CastExpression.GetTargetType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCastExpression::GetTargetType(const struct FBlockyLuaHandle& ptr)
 {
@@ -6005,8 +6140,8 @@ struct FBlockyLuaHandle UCastExpression::GetTargetType(const struct FBlockyLuaHa
 // Function BlockyLuaCore.CastExpression.GetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCastExpression::GetExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -6032,9 +6167,9 @@ struct FBlockyLuaHandle UCastExpression::GetExpression(const struct FBlockyLuaHa
 // Function BlockyLuaCore.CastExpression.CreateCastExpression2
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        TargetType                     (Parm)
-// struct FBlockyLuaHandle        expression                     (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle TargetType (Parm)
+// struct FBlockyLuaHandle expression (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCastExpression::CreateCastExpression2(const struct FBlockyLuaHandle& TargetType, const struct FBlockyLuaHandle& expression)
 {
@@ -6061,7 +6196,7 @@ struct FBlockyLuaHandle UCastExpression::CreateCastExpression2(const struct FBlo
 // Function BlockyLuaCore.CastExpression.CreateCastExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCastExpression::CreateCastExpression()
 {
@@ -6086,8 +6221,8 @@ struct FBlockyLuaHandle UCastExpression::CreateCastExpression()
 // Function BlockyLuaCore.ClassReferenceExpression.SetClass
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        klass                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle klass (Parm)
 
 void UClassReferenceExpression::SetClass(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& klass)
 {
@@ -6112,8 +6247,8 @@ void UClassReferenceExpression::SetClass(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.ClassReferenceExpression.GetClass
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UClassReferenceExpression::GetClass(const struct FBlockyLuaHandle& ptr)
 {
@@ -6139,8 +6274,8 @@ struct FBlockyLuaHandle UClassReferenceExpression::GetClass(const struct FBlocky
 // Function BlockyLuaCore.ClassReferenceExpression.CreateClassReferenceExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        klass                          (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle klass (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UClassReferenceExpression::CreateClassReferenceExpression(const struct FBlockyLuaHandle& klass)
 {
@@ -6166,8 +6301,8 @@ struct FBlockyLuaHandle UClassReferenceExpression::CreateClassReferenceExpressio
 // Function BlockyLuaCore.ColorDesc.NameContainsString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 filter                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString filter (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UColorDesc::NameContainsString(const struct FString& filter)
 {
@@ -6193,7 +6328,7 @@ bool UColorDesc::NameContainsString(const struct FString& filter)
 // Function BlockyLuaCore.ColorDesc.IsNameEmpty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UColorDesc::IsNameEmpty()
 {
@@ -6218,7 +6353,7 @@ bool UColorDesc::IsNameEmpty()
 // Function BlockyLuaCore.ColorDesc.IsCodeNameEmpty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UColorDesc::IsCodeNameEmpty()
 {
@@ -6243,7 +6378,7 @@ bool UColorDesc::IsCodeNameEmpty()
 // Function BlockyLuaCore.ColorDesc.GetType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FType                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FType ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FType UColorDesc::GetType()
 {
@@ -6268,7 +6403,7 @@ struct FType UColorDesc::GetType()
 // Function BlockyLuaCore.ColorDesc.GetLocaleName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UColorDesc::GetLocaleName()
 {
@@ -6293,7 +6428,7 @@ struct FString UColorDesc::GetLocaleName()
 // Function BlockyLuaCore.ColorDesc.GetHSVStr
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UColorDesc::GetHSVStr()
 {
@@ -6318,7 +6453,7 @@ struct FString UColorDesc::GetHSVStr()
 // Function BlockyLuaCore.ColorDesc.GetColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UColorDesc::GetColor()
 {
@@ -6343,8 +6478,8 @@ struct FLinearColor UColorDesc::GetColor()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.VarDefinerTypeCanBeArray
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UVarDefiner*             Definer                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UVarDefiner* Definer (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::VarDefinerTypeCanBeArray(class UVarDefiner* Definer)
 {
@@ -6370,7 +6505,7 @@ bool UCommonUIFunctionLibrary::VarDefinerTypeCanBeArray(class UVarDefiner* Defin
 // Function BlockyLuaCore.CommonUIFunctionLibrary.SetIsVirtualKeyboardVisible
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           Visible                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool Visible (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCommonUIFunctionLibrary::SetIsVirtualKeyboardVisible(bool Visible)
 {
@@ -6394,10 +6529,10 @@ void UCommonUIFunctionLibrary::SetIsVirtualKeyboardVisible(bool Visible)
 // Function BlockyLuaCore.CommonUIFunctionLibrary.LimitTextLength
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FText                   InputText                      (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            MaxCharCount                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   OutText                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FText InputText (ConstParm, Parm, OutParm, ReferenceParm)
+// int MaxCharCount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText OutText (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::LimitTextLength(const struct FText& InputText, int MaxCharCount, struct FText* OutText)
 {
@@ -6427,8 +6562,8 @@ bool UCommonUIFunctionLibrary::LimitTextLength(const struct FText& InputText, in
 // Function BlockyLuaCore.CommonUIFunctionLibrary.LimitTextEmojiInput
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FText                   InputText                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FText InputText (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FText UCommonUIFunctionLibrary::LimitTextEmojiInput(const struct FText& InputText)
 {
@@ -6454,8 +6589,8 @@ struct FText UCommonUIFunctionLibrary::LimitTextEmojiInput(const struct FText& I
 // Function BlockyLuaCore.CommonUIFunctionLibrary.IsNameStringValid
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 NameString                     (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString NameString (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::IsNameStringValid(const struct FString& NameString)
 {
@@ -6481,8 +6616,8 @@ bool UCommonUIFunctionLibrary::IsNameStringValid(const struct FString& NameStrin
 // Function BlockyLuaCore.CommonUIFunctionLibrary.IsFuncDisabled
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 FuncName                       (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString FuncName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::IsFuncDisabled(const struct FString& FuncName)
 {
@@ -6508,7 +6643,7 @@ bool UCommonUIFunctionLibrary::IsFuncDisabled(const struct FString& FuncName)
 // Function BlockyLuaCore.CommonUIFunctionLibrary.IsDeveloperMode
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::IsDeveloperMode()
 {
@@ -6533,8 +6668,8 @@ bool UCommonUIFunctionLibrary::IsDeveloperMode()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetTranslateString_BP
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GetTranslateString_BP(const struct FString& KeyString)
 {
@@ -6560,8 +6695,8 @@ struct FString UCommonUIFunctionLibrary::GetTranslateString_BP(const struct FStr
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetTranslateString
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GetTranslateString(const struct FString& KeyString)
 {
@@ -6587,8 +6722,8 @@ struct FString UCommonUIFunctionLibrary::GetTranslateString(const struct FString
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetTextLen
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FText                   Text                           (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FText Text (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCommonUIFunctionLibrary::GetTextLen(const struct FText& Text)
 {
@@ -6614,8 +6749,8 @@ int UCommonUIFunctionLibrary::GetTextLen(const struct FText& Text)
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetPresetDescs
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UVarDefiner*             Definer                        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UPresetDesc*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UVarDefiner* Definer (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UPresetDesc*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UPresetDesc*> UCommonUIFunctionLibrary::GetPresetDescs(class UVarDefiner* Definer)
 {
@@ -6641,8 +6776,8 @@ TArray<class UPresetDesc*> UCommonUIFunctionLibrary::GetPresetDescs(class UVarDe
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetLocaleText
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FText                   KeyString                      (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FText KeyString (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FText UCommonUIFunctionLibrary::GetLocaleText(const struct FText& KeyString)
 {
@@ -6668,8 +6803,8 @@ struct FText UCommonUIFunctionLibrary::GetLocaleText(const struct FText& KeyStri
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetLocaleString
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GetLocaleString(const struct FString& KeyString)
 {
@@ -6695,7 +6830,7 @@ struct FString UCommonUIFunctionLibrary::GetLocaleString(const struct FString& K
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetIsVirtualKeyboardVisible
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::GetIsVirtualKeyboardVisible()
 {
@@ -6720,7 +6855,7 @@ bool UCommonUIFunctionLibrary::GetIsVirtualKeyboardVisible()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetCustomVarNum
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UCommonUIFunctionLibrary::GetCustomVarNum()
 {
@@ -6745,7 +6880,7 @@ int UCommonUIFunctionLibrary::GetCustomVarNum()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetArrayInitStringStart
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GetArrayInitStringStart()
 {
@@ -6770,7 +6905,7 @@ struct FString UCommonUIFunctionLibrary::GetArrayInitStringStart()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetArrayInitStringEnd
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GetArrayInitStringEnd()
 {
@@ -6795,7 +6930,7 @@ struct FString UCommonUIFunctionLibrary::GetArrayInitStringEnd()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GetAllDefiners
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// TArray<class UVarDefiner*>     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class UVarDefiner*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class UVarDefiner*> UCommonUIFunctionLibrary::GetAllDefiners()
 {
@@ -6820,10 +6955,10 @@ TArray<class UVarDefiner*> UCommonUIFunctionLibrary::GetAllDefiners()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.GenerateNextNameWithSuffix
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FString>         ExistingNames                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FString                 InputName                      (Parm, ZeroConstructor)
-// bool                           InDuplicate                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ExistingNames (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// struct FString InputName (Parm, ZeroConstructor)
+// bool InDuplicate (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::GenerateNextNameWithSuffix(TArray<struct FString> ExistingNames, const struct FString& InputName, bool InDuplicate)
 {
@@ -6851,8 +6986,8 @@ struct FString UCommonUIFunctionLibrary::GenerateNextNameWithSuffix(TArray<struc
 // Function BlockyLuaCore.CommonUIFunctionLibrary.FormatNumber
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 Input                          (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Input (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::FormatNumber(const struct FString& Input)
 {
@@ -6878,8 +7013,8 @@ struct FString UCommonUIFunctionLibrary::FormatNumber(const struct FString& Inpu
 // Function BlockyLuaCore.CommonUIFunctionLibrary.DisplayNameToTranslate
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommonUIFunctionLibrary::DisplayNameToTranslate(class UBlockBase* bLock)
 {
@@ -6926,9 +7061,9 @@ void UCommonUIFunctionLibrary::CollectAllObjects()
 // Function BlockyLuaCore.CommonUIFunctionLibrary.CheckNameValid
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// struct FText                   ErrorMsg                       (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
+// struct FText ErrorMsg (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::CheckNameValid(const struct FString& InName, struct FText* ErrorMsg)
 {
@@ -6957,8 +7092,8 @@ bool UCommonUIFunctionLibrary::CheckNameValid(const struct FString& InName, stru
 // Function BlockyLuaCore.CommonUIFunctionLibrary.CheckNameHasInvalidChar
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 InName                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString InName (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommonUIFunctionLibrary::CheckNameHasInvalidChar(const struct FString& InName)
 {
@@ -6984,7 +7119,7 @@ bool UCommonUIFunctionLibrary::CheckNameHasInvalidChar(const struct FString& InN
 // Function BlockyLuaCore.ConfigDataAsset.SaveToAsset
 // (Final, Native, Public)
 // Parameters:
-// struct FString                 PackageName                    (Parm, ZeroConstructor)
+// struct FString PackageName (Parm, ZeroConstructor)
 
 void UConfigDataAsset::SaveToAsset(const struct FString& PackageName)
 {
@@ -7008,8 +7143,8 @@ void UConfigDataAsset::SaveToAsset(const struct FString& PackageName)
 // Function BlockyLuaCore.CreateObjectExpression.SetTypeName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UCreateObjectExpression::SetTypeName(const struct FBlockyLuaHandle& ptr, const struct FString& Value)
 {
@@ -7034,8 +7169,8 @@ void UCreateObjectExpression::SetTypeName(const struct FBlockyLuaHandle& ptr, co
 // Function BlockyLuaCore.CreateObjectExpression.SetParameters
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> Value (Parm, ZeroConstructor)
 
 void UCreateObjectExpression::SetParameters(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> Value)
 {
@@ -7060,8 +7195,8 @@ void UCreateObjectExpression::SetParameters(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.CreateObjectExpression.GetTypeName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCreateObjectExpression::GetTypeName(const struct FBlockyLuaHandle& ptr)
 {
@@ -7087,8 +7222,8 @@ struct FString UCreateObjectExpression::GetTypeName(const struct FBlockyLuaHandl
 // Function BlockyLuaCore.CreateObjectExpression.GetParameters
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UCreateObjectExpression::GetParameters(const struct FBlockyLuaHandle& ptr)
 {
@@ -7114,8 +7249,8 @@ TArray<struct FBlockyLuaHandle> UCreateObjectExpression::GetParameters(const str
 // Function BlockyLuaCore.CreateObjectExpression.CreateCreateObjectExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 TypeName                       (Parm, ZeroConstructor)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString TypeName (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCreateObjectExpression::CreateCreateObjectExpression(const struct FString& TypeName)
 {
@@ -7141,7 +7276,7 @@ struct FBlockyLuaHandle UCreateObjectExpression::CreateCreateObjectExpression(co
 // Function BlockyLuaCore.CustomParam.CopyFrom
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCustomParam*            Other                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomParam* Other (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomParam::CopyFrom(class UCustomParam* Other)
 {
@@ -7186,7 +7321,7 @@ void UCustomConfig::UpdateDesc()
 // Function BlockyLuaCore.CustomConfig.SetParamNum
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            paramNum                       (Parm, ZeroConstructor, IsPlainOldData)
+// int paramNum (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomConfig::SetParamNum(int paramNum)
 {
@@ -7210,7 +7345,7 @@ void UCustomConfig::SetParamNum(int paramNum)
 // Function BlockyLuaCore.CustomConfig.InitResult
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCustomParam*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UCustomParam* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCustomParam* UCustomConfig::InitResult()
 {
@@ -7256,8 +7391,8 @@ void UCustomConfig::Init()
 // Function BlockyLuaCore.CustomConfig.GetParam
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            idx                            (Parm, ZeroConstructor, IsPlainOldData)
-// class UCustomParam*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int idx (Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomParam* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCustomParam* UCustomConfig::GetParam(int idx)
 {
@@ -7283,7 +7418,7 @@ class UCustomParam* UCustomConfig::GetParam(int idx)
 // Function BlockyLuaCore.CustomConfig.GetCustomGraphName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCustomConfig::GetCustomGraphName()
 {
@@ -7308,7 +7443,7 @@ struct FString UCustomConfig::GetCustomGraphName()
 // Function BlockyLuaCore.CustomConfig.CopyFrom
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCustomConfig*           Other                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UCustomConfig* Other (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UCustomConfig::CopyFrom(class UCustomConfig* Other)
 {
@@ -7332,8 +7467,8 @@ void UCustomConfig::CopyFrom(class UCustomConfig* Other)
 // Function BlockyLuaCore.DefaultValueExpression.SetType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Type                           (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Type (Parm)
 
 void UDefaultValueExpression::SetType(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Type)
 {
@@ -7358,8 +7493,8 @@ void UDefaultValueExpression::SetType(const struct FBlockyLuaHandle& ptr, const 
 // Function BlockyLuaCore.DefaultValueExpression.GetType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UDefaultValueExpression::GetType(const struct FBlockyLuaHandle& ptr)
 {
@@ -7385,8 +7520,8 @@ struct FBlockyLuaHandle UDefaultValueExpression::GetType(const struct FBlockyLua
 // Function BlockyLuaCore.DefaultValueExpression.CreateDefaultValueExpression2
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        typeRef                        (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle typeRef (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UDefaultValueExpression::CreateDefaultValueExpression2(const struct FBlockyLuaHandle& typeRef)
 {
@@ -7412,8 +7547,8 @@ struct FBlockyLuaHandle UDefaultValueExpression::CreateDefaultValueExpression2(c
 // Function BlockyLuaCore.DefaultValueExpression.CreateDefaultValueExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        typeClass                      (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle typeClass (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UDefaultValueExpression::CreateDefaultValueExpression(const struct FBlockyLuaHandle& typeClass)
 {
@@ -7439,8 +7574,8 @@ struct FBlockyLuaHandle UDefaultValueExpression::CreateDefaultValueExpression(co
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.SetOperationType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyFunctionArgumentAttribute> Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyFunctionArgumentAttribute> Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UFunctionInvokeArgumentExpression::SetOperationType(const struct FBlockyLuaHandle& ptr, TEnumAsByte<enum EBlockyFunctionArgumentAttribute> Value)
 {
@@ -7465,8 +7600,8 @@ void UFunctionInvokeArgumentExpression::SetOperationType(const struct FBlockyLua
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.SetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UFunctionInvokeArgumentExpression::SetExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -7491,8 +7626,8 @@ void UFunctionInvokeArgumentExpression::SetExpression(const struct FBlockyLuaHan
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.SetAdditionPostCode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UFunctionInvokeArgumentExpression::SetAdditionPostCode(const struct FBlockyLuaHandle& ptr, const struct FString& Value)
 {
@@ -7517,8 +7652,8 @@ void UFunctionInvokeArgumentExpression::SetAdditionPostCode(const struct FBlocky
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.GetOperationType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyFunctionArgumentAttribute> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyFunctionArgumentAttribute> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyFunctionArgumentAttribute> UFunctionInvokeArgumentExpression::GetOperationType(const struct FBlockyLuaHandle& ptr)
 {
@@ -7544,8 +7679,8 @@ TEnumAsByte<enum EBlockyFunctionArgumentAttribute> UFunctionInvokeArgumentExpres
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.GetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeArgumentExpression::GetExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -7571,8 +7706,8 @@ struct FBlockyLuaHandle UFunctionInvokeArgumentExpression::GetExpression(const s
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.GetAdditionPostCode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFunctionInvokeArgumentExpression::GetAdditionPostCode(const struct FBlockyLuaHandle& ptr)
 {
@@ -7598,7 +7733,7 @@ struct FString UFunctionInvokeArgumentExpression::GetAdditionPostCode(const stru
 // Function BlockyLuaCore.FunctionInvokeArgumentExpression.CreateFunctionInvokeArgumentExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeArgumentExpression::CreateFunctionInvokeArgumentExpression()
 {
@@ -7623,8 +7758,8 @@ struct FBlockyLuaHandle UFunctionInvokeArgumentExpression::CreateFunctionInvokeA
 // Function BlockyLuaCore.FunctionInvokeExpression.SetReturnValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UFunctionInvokeExpression::SetReturnValue(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -7649,8 +7784,8 @@ void UFunctionInvokeExpression::SetReturnValue(const struct FBlockyLuaHandle& pt
 // Function BlockyLuaCore.FunctionInvokeExpression.SetHost
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UFunctionInvokeExpression::SetHost(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -7675,8 +7810,8 @@ void UFunctionInvokeExpression::SetHost(const struct FBlockyLuaHandle& ptr, cons
 // Function BlockyLuaCore.FunctionInvokeExpression.SetFunctionName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UFunctionInvokeExpression::SetFunctionName(const struct FBlockyLuaHandle& ptr, const struct FString& Value)
 {
@@ -7701,8 +7836,8 @@ void UFunctionInvokeExpression::SetFunctionName(const struct FBlockyLuaHandle& p
 // Function BlockyLuaCore.FunctionInvokeExpression.SetComment
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UFunctionInvokeExpression::SetComment(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -7727,8 +7862,8 @@ void UFunctionInvokeExpression::SetComment(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.FunctionInvokeExpression.SetArguments
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> Value (Parm, ZeroConstructor)
 
 void UFunctionInvokeExpression::SetArguments(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> Value)
 {
@@ -7753,8 +7888,8 @@ void UFunctionInvokeExpression::SetArguments(const struct FBlockyLuaHandle& ptr,
 // Function BlockyLuaCore.FunctionInvokeExpression.GetReturnValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeExpression::GetReturnValue(const struct FBlockyLuaHandle& ptr)
 {
@@ -7780,8 +7915,8 @@ struct FBlockyLuaHandle UFunctionInvokeExpression::GetReturnValue(const struct F
 // Function BlockyLuaCore.FunctionInvokeExpression.GetHost
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeExpression::GetHost(const struct FBlockyLuaHandle& ptr)
 {
@@ -7807,8 +7942,8 @@ struct FBlockyLuaHandle UFunctionInvokeExpression::GetHost(const struct FBlockyL
 // Function BlockyLuaCore.FunctionInvokeExpression.GetFunctionName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFunctionInvokeExpression::GetFunctionName(const struct FBlockyLuaHandle& ptr)
 {
@@ -7834,8 +7969,8 @@ struct FString UFunctionInvokeExpression::GetFunctionName(const struct FBlockyLu
 // Function BlockyLuaCore.FunctionInvokeExpression.GetComment
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeExpression::GetComment(const struct FBlockyLuaHandle& ptr)
 {
@@ -7861,8 +7996,8 @@ struct FBlockyLuaHandle UFunctionInvokeExpression::GetComment(const struct FBloc
 // Function BlockyLuaCore.FunctionInvokeExpression.GetArguments
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UFunctionInvokeExpression::GetArguments(const struct FBlockyLuaHandle& ptr)
 {
@@ -7888,7 +8023,7 @@ TArray<struct FBlockyLuaHandle> UFunctionInvokeExpression::GetArguments(const st
 // Function BlockyLuaCore.FunctionInvokeExpression.CreateFunctionInvokeExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UFunctionInvokeExpression::CreateFunctionInvokeExpression()
 {
@@ -7913,8 +8048,8 @@ struct FBlockyLuaHandle UFunctionInvokeExpression::CreateFunctionInvokeExpressio
 // Function BlockyLuaCore.HotfixUtility.UVarDefiner_GetCurrentLocateShowName
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UVarDefiner*             pThis                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UVarDefiner* pThis (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UVarDefiner_GetCurrentLocateShowName(class UVarDefiner* pThis)
 {
@@ -7940,8 +8075,8 @@ struct FString UHotfixUtility::UVarDefiner_GetCurrentLocateShowName(class UVarDe
 // Function BlockyLuaCore.HotfixUtility.UPresetDesc_GetLocaleName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UPresetDesc*             PresetDesc                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UPresetDesc* PresetDesc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UPresetDesc_GetLocaleName(class UPresetDesc* PresetDesc)
 {
@@ -7967,9 +8102,9 @@ struct FString UHotfixUtility::UPresetDesc_GetLocaleName(class UPresetDesc* Pres
 // Function BlockyLuaCore.HotfixUtility.UNumFromTo_UpdateParameterDisplayName_Index_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNumFromTo_UpdateParameterDisplayName_Index_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -7996,9 +8131,9 @@ struct FString UHotfixUtility::UNumFromTo_UpdateParameterDisplayName_Index_Displ
 // Function BlockyLuaCore.HotfixUtility.UNumFromTo_UpdateParameterDisplayName_CurrNum_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNumFromTo_UpdateParameterDisplayName_CurrNum_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8025,10 +8160,10 @@ struct FString UHotfixUtility::UNumFromTo_UpdateParameterDisplayName_CurrNum_Dis
 // Function BlockyLuaCore.HotfixUtility.UNumFromTo_SetFunctionDesc_NamedVarBlock_DisplayName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamIdx                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ParamIdx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNumFromTo_SetFunctionDesc_NamedVarBlock_DisplayName(class UFunctionDesc* Desc, int ParamIdx, const struct FString& DisplayName)
 {
@@ -8056,9 +8191,9 @@ struct FString UHotfixUtility::UNumFromTo_SetFunctionDesc_NamedVarBlock_DisplayN
 // Function BlockyLuaCore.HotfixUtility.UNumFromTo_InitializeBlock_IndexBlock_Name
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UNumFromTo*              NumFromTo                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UNumFromTo* NumFromTo (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNumFromTo_InitializeBlock_IndexBlock_Name(class UNumFromTo* NumFromTo, const struct FString& Name)
 {
@@ -8085,9 +8220,9 @@ struct FString UHotfixUtility::UNumFromTo_InitializeBlock_IndexBlock_Name(class 
 // Function BlockyLuaCore.HotfixUtility.UNumFromTo_InitializeBlock_CurrentBlock_Name
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UNumFromTo*              NumFromTo                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UNumFromTo* NumFromTo (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNumFromTo_InitializeBlock_CurrentBlock_Name(class UNumFromTo* NumFromTo, const struct FString& Name)
 {
@@ -8114,8 +8249,8 @@ struct FString UHotfixUtility::UNumFromTo_InitializeBlock_CurrentBlock_Name(clas
 // Function BlockyLuaCore.HotfixUtility.UNamedVar_UpdateFormater_VarFormatNameText
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UNamedVar*               var                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UNamedVar* var (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UNamedVar_UpdateFormater_VarFormatNameText(class UNamedVar* var)
 {
@@ -8141,9 +8276,9 @@ struct FString UHotfixUtility::UNamedVar_UpdateFormater_VarFormatNameText(class 
 // Function BlockyLuaCore.HotfixUtility.UForEach_UpdateParameterDisplayName_ForeachIndex_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ForeachIndex_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8170,9 +8305,9 @@ struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ForeachIndex_
 // Function BlockyLuaCore.HotfixUtility.UForEach_UpdateParameterDisplayName_ForeachElement_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ForeachElement_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8199,9 +8334,9 @@ struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ForeachElemen
 // Function BlockyLuaCore.HotfixUtility.UForEach_UpdateParameterDisplayName_ElementNormalDisplay
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ElementNormalDisplay(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8228,9 +8363,9 @@ struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ElementNormal
 // Function BlockyLuaCore.HotfixUtility.UForEach_UpdateParameterDisplayName_ElementDisableDisplay
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ElementDisableDisplay(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8257,9 +8392,9 @@ struct FString UHotfixUtility::UForEach_UpdateParameterDisplayName_ElementDisabl
 // Function BlockyLuaCore.HotfixUtility.UForEach_SetFunctionDesc_ForeachIndex_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_SetFunctionDesc_ForeachIndex_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8286,9 +8421,9 @@ struct FString UHotfixUtility::UForEach_SetFunctionDesc_ForeachIndex_DisplayName
 // Function BlockyLuaCore.HotfixUtility.UForEach_SetFunctionDesc_ForeachElement_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_SetFunctionDesc_ForeachElement_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8315,9 +8450,9 @@ struct FString UHotfixUtility::UForEach_SetFunctionDesc_ForeachElement_DisplayNa
 // Function BlockyLuaCore.HotfixUtility.UForEach_SetFunctionDesc_ElementNormalDisplay
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_SetFunctionDesc_ElementNormalDisplay(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8344,9 +8479,9 @@ struct FString UHotfixUtility::UForEach_SetFunctionDesc_ElementNormalDisplay(cla
 // Function BlockyLuaCore.HotfixUtility.UForEach_SetFunctionDesc_ElementDisableDisplay
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UForEach_SetFunctionDesc_ElementDisableDisplay(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8373,10 +8508,10 @@ struct FString UHotfixUtility::UForEach_SetFunctionDesc_ElementDisableDisplay(cl
 // Function BlockyLuaCore.HotfixUtility.UExecuteable_SetFunctionDesc_ParamDisplayName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamIdx                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ParamDisplayName               (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ParamIdx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ParamDisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UExecuteable_SetFunctionDesc_ParamDisplayName(class UFunctionDesc* Desc, int ParamIdx, const struct FString& ParamDisplayName)
 {
@@ -8404,11 +8539,11 @@ struct FString UHotfixUtility::UExecuteable_SetFunctionDesc_ParamDisplayName(cla
 // Function BlockyLuaCore.HotfixUtility.UEnumDesc_GetCurrentLocaleEnumValueName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UEnumDesc*               EnumDesc                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   enumValueName                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 enumValueLocName               (Parm, ZeroConstructor)
-// bool                           useDefaultWhenNotFound         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UEnumDesc* EnumDesc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName enumValueName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString enumValueLocName (Parm, ZeroConstructor)
+// bool useDefaultWhenNotFound (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UEnumDesc_GetCurrentLocaleEnumValueName(class UEnumDesc* EnumDesc, const struct FName& enumValueName, const struct FString& enumValueLocName, bool useDefaultWhenNotFound)
 {
@@ -8437,10 +8572,10 @@ struct FString UHotfixUtility::UEnumDesc_GetCurrentLocaleEnumValueName(class UEn
 // Function BlockyLuaCore.HotfixUtility.UEnumDesc_GetCurrentLocaleEnumTypeName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UEnumDesc*               EnumDesc                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 EnumTypeName                   (Parm, ZeroConstructor)
-// bool                           useDefaultWhenNotFound         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UEnumDesc* EnumDesc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString EnumTypeName (Parm, ZeroConstructor)
+// bool useDefaultWhenNotFound (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UEnumDesc_GetCurrentLocaleEnumTypeName(class UEnumDesc* EnumDesc, const struct FString& EnumTypeName, bool useDefaultWhenNotFound)
 {
@@ -8468,9 +8603,9 @@ struct FString UHotfixUtility::UEnumDesc_GetCurrentLocaleEnumTypeName(class UEnu
 // Function BlockyLuaCore.HotfixUtility.UDoNum_UpdateParameterDisplayName_CurrentIndexSlotDisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 CurrentIndexDisplayName        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString CurrentIndexDisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UDoNum_UpdateParameterDisplayName_CurrentIndexSlotDisplayName(class UFunctionDesc* Desc, const struct FString& CurrentIndexDisplayName)
 {
@@ -8497,9 +8632,9 @@ struct FString UHotfixUtility::UDoNum_UpdateParameterDisplayName_CurrentIndexSlo
 // Function BlockyLuaCore.HotfixUtility.UDoNum_SetFunctionDesc_CurrentIndexSlotDisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 CurrentIndexDisplayName        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString CurrentIndexDisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UDoNum_SetFunctionDesc_CurrentIndexSlotDisplayName(class UFunctionDesc* Desc, const struct FString& CurrentIndexDisplayName)
 {
@@ -8526,10 +8661,10 @@ struct FString UHotfixUtility::UDoNum_SetFunctionDesc_CurrentIndexSlotDisplayNam
 // Function BlockyLuaCore.HotfixUtility.UDefineFunction_SetFunctionDesc_ParamName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamIdx                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ParamName                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ParamIdx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ParamName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UDefineFunction_SetFunctionDesc_ParamName(class UFunctionDesc* Desc, int ParamIdx, const struct FString& ParamName)
 {
@@ -8557,8 +8692,8 @@ struct FString UHotfixUtility::UDefineFunction_SetFunctionDesc_ParamName(class U
 // Function BlockyLuaCore.HotfixUtility.UCommonUIFunctionLibrary_GetTranslateString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UCommonUIFunctionLibrary_GetTranslateString(const struct FString& KeyString)
 {
@@ -8584,8 +8719,8 @@ struct FString UHotfixUtility::UCommonUIFunctionLibrary_GetTranslateString(const
 // Function BlockyLuaCore.HotfixUtility.UCommonUIFunctionLibrary_GetLocaleString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UCommonUIFunctionLibrary_GetLocaleString(const struct FString& KeyString)
 {
@@ -8611,8 +8746,8 @@ struct FString UHotfixUtility::UCommonUIFunctionLibrary_GetLocaleString(const st
 // Function BlockyLuaCore.HotfixUtility.UColorDesc_GetLocaleName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UColorDesc*              ColorDesc                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UColorDesc* ColorDesc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UColorDesc_GetLocaleName(class UColorDesc* ColorDesc)
 {
@@ -8638,9 +8773,9 @@ struct FString UHotfixUtility::UColorDesc_GetLocaleName(class UColorDesc* ColorD
 // Function BlockyLuaCore.HotfixUtility.UBlockyTimer_UpdateParameterDisplayName_CurrentCount_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyTimer_UpdateParameterDisplayName_CurrentCount_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8667,9 +8802,9 @@ struct FString UHotfixUtility::UBlockyTimer_UpdateParameterDisplayName_CurrentCo
 // Function BlockyLuaCore.HotfixUtility.UBlockyTimer_SetFunctionDesc_CurrentCount_DisplayName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyTimer_SetFunctionDesc_CurrentCount_DisplayName(class UFunctionDesc* Desc, const struct FString& DisplayName)
 {
@@ -8696,8 +8831,8 @@ struct FString UHotfixUtility::UBlockyTimer_SetFunctionDesc_CurrentCount_Display
 // Function BlockyLuaCore.HotfixUtility.UBlockySearchWidget_RefreshTabContainerView_ContentName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UUserWidget*             pThis                          (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UUserWidget* pThis (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockySearchWidget_RefreshTabContainerView_ContentName(class UUserWidget* pThis)
 {
@@ -8723,9 +8858,9 @@ struct FString UHotfixUtility::UBlockySearchWidget_RefreshTabContainerView_Conte
 // Function BlockyLuaCore.HotfixUtility.UBlockySearchWidget_RefreshTabContainerView_CategoryName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UUserWidget*             pThis                          (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UBlockyCategoryItemObject* Category                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UUserWidget* pThis (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UBlockyCategoryItemObject* Category (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockySearchWidget_RefreshTabContainerView_CategoryName(class UUserWidget* pThis, class UBlockyCategoryItemObject* Category)
 {
@@ -8752,9 +8887,9 @@ struct FString UHotfixUtility::UBlockySearchWidget_RefreshTabContainerView_Categ
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuWidget_UpdateMenus_MenuWidgetName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UUserWidget*             pThis                          (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UBlockyMenuItemObject*   MenuItem                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UUserWidget* pThis (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UBlockyMenuItemObject* MenuItem (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuWidget_UpdateMenus_MenuWidgetName(class UUserWidget* pThis, class UBlockyMenuItemObject* MenuItem)
 {
@@ -8781,9 +8916,9 @@ struct FString UHotfixUtility::UBlockyMenuWidget_UpdateMenus_MenuWidgetName(clas
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Search_SearchMatchingResults_ItemObjectString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyMenuItemObject_Search* MenuItem                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockyBlockListItemObject* ItemObject                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyMenuItemObject_Search* MenuItem (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyBlockListItemObject* ItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Search_SearchMatchingResults_ItemObjectString(class UBlockyMenuItemObject_Search* MenuItem, class UBlockyBlockListItemObject* ItemObject)
 {
@@ -8810,9 +8945,9 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Search_SearchMatchingResult
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Search_PaintSearchedItems_CategoryName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyMenuItemObject_Search* MenuItem                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockyCategoryItemObject* CategoryItem                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyMenuItemObject_Search* MenuItem (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyCategoryItemObject* CategoryItem (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Search_PaintSearchedItems_CategoryName(class UBlockyMenuItemObject_Search* MenuItem, class UBlockyCategoryItemObject* CategoryItem)
 {
@@ -8839,7 +8974,7 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Search_PaintSearchedItems_C
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Search_PaintSearchedContentTitle
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Search_PaintSearchedContentTitle()
 {
@@ -8864,8 +8999,8 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Search_PaintSearchedContent
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Search_GetBlockSearchString_NamedVarName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UNamedVar*               var                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UNamedVar* var (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Search_GetBlockSearchString_NamedVarName(class UNamedVar* var)
 {
@@ -8891,8 +9026,8 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Search_GetBlockSearchString
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Search_GetBlockSearchString_Block
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              InBlock                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* InBlock (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Search_GetBlockSearchString_Block(class UBlockBase* InBlock)
 {
@@ -8918,9 +9053,9 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Search_GetBlockSearchString
 // Function BlockyLuaCore.HotfixUtility.UBlockyMenuItemObject_Paint_CategoryName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyMenuItemObject*   MenuItem                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockyCategoryItemObject* CategoryItem                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyMenuItemObject* MenuItem (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyCategoryItemObject* CategoryItem (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyMenuItemObject_Paint_CategoryName(class UBlockyMenuItemObject* MenuItem, class UBlockyCategoryItemObject* CategoryItem)
 {
@@ -8947,8 +9082,8 @@ struct FString UHotfixUtility::UBlockyMenuItemObject_Paint_CategoryName(class UB
 // Function BlockyLuaCore.HotfixUtility.UBlockyGraphData_GetCustomNames_CustomName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UCustomConfig*           Custom                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UCustomConfig* Custom (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyGraphData_GetCustomNames_CustomName(class UCustomConfig* Custom)
 {
@@ -8974,8 +9109,8 @@ struct FString UHotfixUtility::UBlockyGraphData_GetCustomNames_CustomName(class 
 // Function BlockyLuaCore.HotfixUtility.UBlockyGraph_LoadGraphFromXnd_OnLocalVarBlockLoaded
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyGraph*            pThis                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UNamedVar*               bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraph* pThis (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UNamedVar* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHotfixUtility::UBlockyGraph_LoadGraphFromXnd_OnLocalVarBlockLoaded(class UBlockyGraph* pThis, class UNamedVar* bLock)
 {
@@ -9000,8 +9135,8 @@ void UHotfixUtility::UBlockyGraph_LoadGraphFromXnd_OnLocalVarBlockLoaded(class U
 // Function BlockyLuaCore.HotfixUtility.UBlockyGraph_LoadGraphFromXnd_OnBlockLoaded
 // (Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyGraph*            pThis                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              bLock                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockyGraph* pThis (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* bLock (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHotfixUtility::UBlockyGraph_LoadGraphFromXnd_OnBlockLoaded(class UBlockyGraph* pThis, class UBlockBase* bLock)
 {
@@ -9026,10 +9161,10 @@ void UHotfixUtility::UBlockyGraph_LoadGraphFromXnd_OnBlockLoaded(class UBlockyGr
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_TypeFilterMenuName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 menuName                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString menuName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_TypeFilterMenuName(class UBlockBase* slotHost, const struct FHotFixSlotHandle& Handle, const struct FString& menuName)
 {
@@ -9057,10 +9192,10 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_TypeFilterMenuName(clas
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_TypeFilterCategoryName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString CategoryName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_TypeFilterCategoryName(class UBlockBase* slotHost, const struct FHotFixSlotHandle& Handle, const struct FString& CategoryName)
 {
@@ -9088,10 +9223,10 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_TypeFilterCategoryName(
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_SelectFromSceneWidget_DefaultShowName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 slotCustomClickTypeName        (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString slotCustomClickTypeName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_SelectFromSceneWidget_DefaultShowName(class UBlockBase* slotHost, const struct FHotFixSlotHandle& Handle, const struct FString& slotCustomClickTypeName)
 {
@@ -9119,11 +9254,11 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_SelectFromSceneWidget_D
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_EnumName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UEnumDesc*               EnumDesc                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   EnumName                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 EnumString                     (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UEnumDesc* EnumDesc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FName EnumName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString EnumString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_EnumName(class UBlockBase* slotHost, class UEnumDesc* EnumDesc, const struct FName& EnumName, const struct FString& EnumString)
 {
@@ -9152,9 +9287,9 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_EnumName(class UBlockBa
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_CategoryItemName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString CategoryName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_CategoryItemName(class UBlockBase* slotHost, const struct FString& CategoryName)
 {
@@ -9181,9 +9316,9 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_CategoryItemName(class 
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_OnClickSlot_BPMenuItemName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              slotHost                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 menuName                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* slotHost (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString menuName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_BPMenuItemName(class UBlockBase* slotHost, const struct FString& menuName)
 {
@@ -9210,8 +9345,8 @@ struct FString UHotfixUtility::UBlockyEditor_OnClickSlot_BPMenuItemName(class UB
 // Function BlockyLuaCore.HotfixUtility.UBlockyEditor_GetLocaleString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 KeyString                      (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString KeyString (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyEditor_GetLocaleString(const struct FString& KeyString)
 {
@@ -9237,9 +9372,9 @@ struct FString UHotfixUtility::UBlockyEditor_GetLocaleString(const struct FStrin
 // Function BlockyLuaCore.HotfixUtility.UBlockyCategoryWidget_FilterWithBlockyMenuItem_WidgetName
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UUserWidget*             pThis                          (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UBlockyCategoryItemObject* Category                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UUserWidget* pThis (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UBlockyCategoryItemObject* Category (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyCategoryWidget_FilterWithBlockyMenuItem_WidgetName(class UUserWidget* pThis, class UBlockyCategoryItemObject* Category)
 {
@@ -9266,8 +9401,8 @@ struct FString UHotfixUtility::UBlockyCategoryWidget_FilterWithBlockyMenuItem_Wi
 // Function BlockyLuaCore.HotfixUtility.UBlockyBlockListItemObject_Variable_GetStingUsedToSearch
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyBlockListItemObject_Variable* ItemObject                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyBlockListItemObject_Variable* ItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyBlockListItemObject_Variable_GetStingUsedToSearch(class UBlockyBlockListItemObject_Variable* ItemObject)
 {
@@ -9293,8 +9428,8 @@ struct FString UHotfixUtility::UBlockyBlockListItemObject_Variable_GetStingUsedT
 // Function BlockyLuaCore.HotfixUtility.UBlockyBlockListItemObject_GetStingUsedToSearch
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyBlockListItemObject* ItemObject                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyBlockListItemObject* ItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyBlockListItemObject_GetStingUsedToSearch(class UBlockyBlockListItemObject* ItemObject)
 {
@@ -9320,8 +9455,8 @@ struct FString UHotfixUtility::UBlockyBlockListItemObject_GetStingUsedToSearch(c
 // Function BlockyLuaCore.HotfixUtility.UBlockyBlockListItemObject_Custom_GetStingUsedToSearch
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyBlockListItemObject_Custom* ItemObject                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyBlockListItemObject_Custom* ItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::UBlockyBlockListItemObject_Custom_GetStingUsedToSearch(class UBlockyBlockListItemObject_Custom* ItemObject)
 {
@@ -9347,9 +9482,9 @@ struct FString UHotfixUtility::UBlockyBlockListItemObject_Custom_GetStingUsedToS
 // Function BlockyLuaCore.HotfixUtility.Slot_IsValidPreset
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UPresetDesc*             Preset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UPresetDesc* Preset (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_IsValidPreset(const struct FHotFixSlotHandle& Handle, class UPresetDesc* Preset)
 {
@@ -9376,9 +9511,9 @@ bool UHotfixUtility::Slot_IsValidPreset(const struct FHotFixSlotHandle& Handle, 
 // Function BlockyLuaCore.HotfixUtility.Slot_IsValidItem
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBlockyBlockListItemObject* Item                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBlockyBlockListItemObject* Item (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_IsValidItem(const struct FHotFixSlotHandle& Handle, class UBlockyBlockListItemObject* Item)
 {
@@ -9405,8 +9540,8 @@ bool UHotfixUtility::Slot_IsValidItem(const struct FHotFixSlotHandle& Handle, cl
 // Function BlockyLuaCore.HotfixUtility.Slot_IsValidHandle
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_IsValidHandle(const struct FHotFixSlotHandle& Handle)
 {
@@ -9432,9 +9567,9 @@ bool UHotfixUtility::Slot_IsValidHandle(const struct FHotFixSlotHandle& Handle)
 // Function BlockyLuaCore.HotfixUtility.Slot_IsValidBlock
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBlockBase*              blk                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBlockBase* blk (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_IsValidBlock(const struct FHotFixSlotHandle& Handle, class UBlockBase* blk)
 {
@@ -9461,9 +9596,9 @@ bool UHotfixUtility::Slot_IsValidBlock(const struct FHotFixSlotHandle& Handle, c
 // Function BlockyLuaCore.HotfixUtility.Slot_HasClickType
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Type                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// int Type (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_HasClickType(const struct FHotFixSlotHandle& Handle, int Type)
 {
@@ -9490,8 +9625,8 @@ bool UHotfixUtility::Slot_HasClickType(const struct FHotFixSlotHandle& Handle, i
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotPresetDesc
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UPresetDesc*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UPresetDesc* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPresetDesc* UHotfixUtility::Slot_GetSlotPresetDesc(const struct FHotFixSlotHandle& Handle)
 {
@@ -9517,9 +9652,9 @@ class UPresetDesc* UHotfixUtility::Slot_GetSlotPresetDesc(const struct FHotFixSl
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FText                   OutValue                       (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText OutValue (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotName(const struct FHotFixSlotHandle& Handle, struct FText* OutValue)
 {
@@ -9548,9 +9683,9 @@ bool UHotfixUtility::Slot_GetSlotName(const struct FHotFixSlotHandle& Handle, st
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotItemType
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FType                   OutValue                       (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FType OutValue (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotItemType(const struct FHotFixSlotHandle& Handle, struct FType* OutValue)
 {
@@ -9579,9 +9714,9 @@ bool UHotfixUtility::Slot_GetSlotItemType(const struct FHotFixSlotHandle& Handle
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotGetColorValue
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLinearColor            OutValue                       (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FLinearColor OutValue (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotGetColorValue(const struct FHotFixSlotHandle& Handle, struct FLinearColor* OutValue)
 {
@@ -9610,9 +9745,9 @@ bool UHotfixUtility::Slot_GetSlotGetColorValue(const struct FHotFixSlotHandle& H
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotDisplayName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 OutValue                       (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString OutValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotDisplayName(const struct FHotFixSlotHandle& Handle, struct FString* OutValue)
 {
@@ -9641,9 +9776,9 @@ bool UHotfixUtility::Slot_GetSlotDisplayName(const struct FHotFixSlotHandle& Han
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotDefaultValue
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 OutValue                       (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString OutValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotDefaultValue(const struct FHotFixSlotHandle& Handle, struct FString* OutValue)
 {
@@ -9672,9 +9807,9 @@ bool UHotfixUtility::Slot_GetSlotDefaultValue(const struct FHotFixSlotHandle& Ha
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotCustomClickTypeName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 OutValue                       (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString OutValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotCustomClickTypeName(const struct FHotFixSlotHandle& Handle, struct FString* OutValue)
 {
@@ -9703,9 +9838,9 @@ bool UHotfixUtility::Slot_GetSlotCustomClickTypeName(const struct FHotFixSlotHan
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotCustomClickType
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 OutValue                       (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString OutValue (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotCustomClickType(const struct FHotFixSlotHandle& Handle, struct FString* OutValue)
 {
@@ -9734,8 +9869,8 @@ bool UHotfixUtility::Slot_GetSlotCustomClickType(const struct FHotFixSlotHandle&
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotColorDesc
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UColorDesc*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UColorDesc* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UColorDesc* UHotfixUtility::Slot_GetSlotColorDesc(const struct FHotFixSlotHandle& Handle)
 {
@@ -9761,9 +9896,9 @@ class UColorDesc* UHotfixUtility::Slot_GetSlotColorDesc(const struct FHotFixSlot
 // Function BlockyLuaCore.HotfixUtility.Slot_GetSlotClickType
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// int OutValue (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_GetSlotClickType(const struct FHotFixSlotHandle& Handle, int* OutValue)
 {
@@ -9792,8 +9927,8 @@ bool UHotfixUtility::Slot_GetSlotClickType(const struct FHotFixSlotHandle& Handl
 // Function BlockyLuaCore.HotfixUtility.Slot_GetHostBlock
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBlockBase*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBlockBase* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBlockBase* UHotfixUtility::Slot_GetHostBlock(const struct FHotFixSlotHandle& Handle)
 {
@@ -9819,10 +9954,10 @@ class UBlockBase* UHotfixUtility::Slot_GetHostBlock(const struct FHotFixSlotHand
 // Function BlockyLuaCore.HotfixUtility.Slot_CanSetBlock
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// class UBlockBase*              Host                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlockBase*              blk                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBlockBase* Host (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlockBase* blk (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UHotfixUtility::Slot_CanSetBlock(const struct FHotFixSlotHandle& Handle, class UBlockBase* Host, class UBlockBase* blk)
 {
@@ -9850,8 +9985,8 @@ bool UHotfixUtility::Slot_CanSetBlock(const struct FHotFixSlotHandle& Handle, cl
 // Function BlockyLuaCore.HotfixUtility.SetTypeValue
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FType                   Type                           (Parm, OutParm)
-// int                            NewValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FType Type (Parm, OutParm)
+// int NewValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UHotfixUtility::SetTypeValue(int NewValue, struct FType* Type)
 {
@@ -9878,8 +10013,8 @@ void UHotfixUtility::SetTypeValue(int NewValue, struct FType* Type)
 // Function BlockyLuaCore.HotfixUtility.GetTypeValue
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FType                   Type                           (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FType Type (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UHotfixUtility::GetTypeValue(const struct FType& Type)
 {
@@ -9905,8 +10040,8 @@ int UHotfixUtility::GetTypeValue(const struct FType& Type)
 // Function BlockyLuaCore.HotfixUtility.GetTranslateString_ShowTips
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 Tip                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString Tip (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::GetTranslateString_ShowTips(const struct FString& Tip)
 {
@@ -9932,8 +10067,8 @@ struct FString UHotfixUtility::GetTranslateString_ShowTips(const struct FString&
 // Function BlockyLuaCore.HotfixUtility.GetTranslateString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 String                         (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString String (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::GetTranslateString(const struct FString& String)
 {
@@ -9959,10 +10094,10 @@ struct FString UHotfixUtility::GetTranslateString(const struct FString& String)
 // Function BlockyLuaCore.HotfixUtility.GetDisplayNameString_SlotDisplayName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FHotFixSlotHandle       Handle                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 slotDisplayName                (Parm, ZeroConstructor)
-// struct FString                 SlotName                       (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FHotFixSlotHandle Handle (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString slotDisplayName (Parm, ZeroConstructor)
+// struct FString SlotName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::GetDisplayNameString_SlotDisplayName(const struct FHotFixSlotHandle& Handle, const struct FString& slotDisplayName, const struct FString& SlotName)
 {
@@ -9990,8 +10125,8 @@ struct FString UHotfixUtility::GetDisplayNameString_SlotDisplayName(const struct
 // Function BlockyLuaCore.HotfixUtility.FPresetTypeData_GetLocalTypeName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// struct FPresetTypeData         PresetTypeData                 (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FPresetTypeData PresetTypeData (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FPresetTypeData_GetLocalTypeName(const struct FPresetTypeData& PresetTypeData)
 {
@@ -10017,10 +10152,10 @@ struct FString UHotfixUtility::FPresetTypeData_GetLocalTypeName(const struct FPr
 // Function BlockyLuaCore.HotfixUtility.FMsgData_CreateMessageData_InfoString_ReplaceTriggerName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UFunctionDesc*           Desc                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ListItemFormatString           (Parm, ZeroConstructor)
-// struct FString                 InfoString                     (Parm, OutParm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UFunctionDesc* Desc (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ListItemFormatString (Parm, ZeroConstructor)
+// struct FString InfoString (Parm, OutParm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FMsgData_CreateMessageData_InfoString_ReplaceTriggerName(class UFunctionDesc* Desc, const struct FString& ListItemFormatString, struct FString* InfoString)
 {
@@ -10050,10 +10185,10 @@ struct FString UHotfixUtility::FMsgData_CreateMessageData_InfoString_ReplaceTrig
 // Function BlockyLuaCore.HotfixUtility.FMsgData_CreateMessageData_InfoString_ReplaceBlockName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              bLock                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ListItemFormatString           (Parm, ZeroConstructor)
-// struct FString                 InfoString                     (Parm, OutParm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* bLock (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ListItemFormatString (Parm, ZeroConstructor)
+// struct FString InfoString (Parm, OutParm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FMsgData_CreateMessageData_InfoString_ReplaceBlockName(class UBlockBase* bLock, const struct FString& ListItemFormatString, struct FString* InfoString)
 {
@@ -10083,10 +10218,10 @@ struct FString UHotfixUtility::FMsgData_CreateMessageData_InfoString_ReplaceBloc
 // Function BlockyLuaCore.HotfixUtility.FMsgData_CreateMessageData_GetInfoTranslateString
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockBase*              bLock                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FHotFixSlotHandle       Slot                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 Info                           (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockBase* bLock (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FHotFixSlotHandle Slot (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString Info (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FMsgData_CreateMessageData_GetInfoTranslateString(class UBlockBase* bLock, const struct FHotFixSlotHandle& Slot, const struct FString& Info)
 {
@@ -10114,8 +10249,8 @@ struct FString UHotfixUtility::FMsgData_CreateMessageData_GetInfoTranslateString
 // Function BlockyLuaCore.HotfixUtility.FLocaleFormatter_UpdateVarFormatters_SeparatorStr
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 str                            (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString str (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FLocaleFormatter_UpdateVarFormatters_SeparatorStr(const struct FString& str)
 {
@@ -10141,9 +10276,9 @@ struct FString UHotfixUtility::FLocaleFormatter_UpdateVarFormatters_SeparatorStr
 // Function BlockyLuaCore.HotfixUtility.FLocaleFormatter_InitializeListItemFormats_ListItemFormatString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 ListItemFormatString           (Parm, ZeroConstructor)
-// bool                           bNeedLocalization              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ListItemFormatString (Parm, ZeroConstructor)
+// bool bNeedLocalization (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FLocaleFormatter_InitializeListItemFormats_ListItemFormatString(const struct FString& ListItemFormatString, bool bNeedLocalization)
 {
@@ -10170,9 +10305,9 @@ struct FString UHotfixUtility::FLocaleFormatter_InitializeListItemFormats_ListIt
 // Function BlockyLuaCore.HotfixUtility.FLocaleFormatter_InitializeFormats_FormatString
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// struct FString                 FormatString                   (Parm, ZeroConstructor)
-// bool                           bNeedLocalization              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString FormatString (Parm, ZeroConstructor)
+// bool bNeedLocalization (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FLocaleFormatter_InitializeFormats_FormatString(const struct FString& FormatString, bool bNeedLocalization)
 {
@@ -10199,10 +10334,10 @@ struct FString UHotfixUtility::FLocaleFormatter_InitializeFormats_FormatString(c
 // Function BlockyLuaCore.HotfixUtility.FLocaleFormatter_FFormatData_SlotIdx_OnPaintListItem_ParamDisplayName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyBlockListItemObject* ListItemObject                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamIdx                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyBlockListItemObject* ListItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ParamIdx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FLocaleFormatter_FFormatData_SlotIdx_OnPaintListItem_ParamDisplayName(class UBlockyBlockListItemObject* ListItemObject, int ParamIdx, const struct FString& DisplayName)
 {
@@ -10230,10 +10365,10 @@ struct FString UHotfixUtility::FLocaleFormatter_FFormatData_SlotIdx_OnPaintListI
 // Function BlockyLuaCore.HotfixUtility.FLocaleFormatter_FFormatData_SlotIdx_OnArrangeListItem_ParamDisplayName
 // (RequiredAPI, Native, Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UBlockyBlockListItemObject* ListItemObject                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            ParamIdx                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 DisplayName                    (Parm, ZeroConstructor)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBlockyBlockListItemObject* ListItemObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ParamIdx (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString DisplayName (Parm, ZeroConstructor)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UHotfixUtility::FLocaleFormatter_FFormatData_SlotIdx_OnArrangeListItem_ParamDisplayName(class UBlockyBlockListItemObject* ListItemObject, int ParamIdx, const struct FString& DisplayName)
 {
@@ -10261,8 +10396,8 @@ struct FString UHotfixUtility::FLocaleFormatter_FFormatData_SlotIdx_OnArrangeLis
 // Function BlockyLuaCore.IndexerOperatorExpression.SetTarget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UIndexerOperatorExpression::SetTarget(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -10287,8 +10422,8 @@ void UIndexerOperatorExpression::SetTarget(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.IndexerOperatorExpression.SetIndices
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> Value (Parm, ZeroConstructor)
 
 void UIndexerOperatorExpression::SetIndices(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> Value)
 {
@@ -10313,8 +10448,8 @@ void UIndexerOperatorExpression::SetIndices(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.IndexerOperatorExpression.GetTarget
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIndexerOperatorExpression::GetTarget(const struct FBlockyLuaHandle& ptr)
 {
@@ -10340,8 +10475,8 @@ struct FBlockyLuaHandle UIndexerOperatorExpression::GetTarget(const struct FBloc
 // Function BlockyLuaCore.IndexerOperatorExpression.GetIndices
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UIndexerOperatorExpression::GetIndices(const struct FBlockyLuaHandle& ptr)
 {
@@ -10367,7 +10502,7 @@ TArray<struct FBlockyLuaHandle> UIndexerOperatorExpression::GetIndices(const str
 // Function BlockyLuaCore.IndexerOperatorExpression.CreateIndexerOperatorExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIndexerOperatorExpression::CreateIndexerOperatorExpression()
 {
@@ -10392,7 +10527,7 @@ struct FBlockyLuaHandle UIndexerOperatorExpression::CreateIndexerOperatorExpress
 // Function BlockyLuaCore.NullExpression.CreateNullExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UNullExpression::CreateNullExpression()
 {
@@ -10417,8 +10552,8 @@ struct FBlockyLuaHandle UNullExpression::CreateNullExpression()
 // Function BlockyLuaCore.PresetDesc.NameContainsString
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 filter                         (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString filter (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPresetDesc::NameContainsString(const struct FString& filter)
 {
@@ -10444,7 +10579,7 @@ bool UPresetDesc::NameContainsString(const struct FString& filter)
 // Function BlockyLuaCore.PresetDesc.IsNameEmpty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPresetDesc::IsNameEmpty()
 {
@@ -10469,7 +10604,7 @@ bool UPresetDesc::IsNameEmpty()
 // Function BlockyLuaCore.PresetDesc.IsCodeNameEmpty
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPresetDesc::IsCodeNameEmpty()
 {
@@ -10494,7 +10629,7 @@ bool UPresetDesc::IsCodeNameEmpty()
 // Function BlockyLuaCore.PresetDesc.HasIcon
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPresetDesc::HasIcon()
 {
@@ -10519,7 +10654,7 @@ bool UPresetDesc::HasIcon()
 // Function BlockyLuaCore.PresetDesc.GetType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FType                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FType ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FType UPresetDesc::GetType()
 {
@@ -10541,10 +10676,35 @@ struct FType UPresetDesc::GetType()
 }
 
 
+// Function BlockyLuaCore.PresetDesc.GetPresetValidityDurationValue
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPresetDesc::GetPresetValidityDurationValue()
+{
+	static UFunction *pFunc = nullptr;
+	if (!pFunc)
+		pFunc  = UObject::FindObject<UFunction>("Function BlockyLuaCore.PresetDesc.GetPresetValidityDurationValue");
+
+	UPresetDesc_GetPresetValidityDurationValue_Params params;
+
+	auto flags = pFunc->FunctionFlags;
+	pFunc->FunctionFlags |= 0x400;
+
+	UObject *currentObj = (UObject *) this;
+	currentObj->ProcessEvent(pFunc, &params);
+
+	pFunc->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BlockyLuaCore.PresetDesc.GetLocaleName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UPresetDesc::GetLocaleName()
 {
@@ -10569,8 +10729,8 @@ struct FString UPresetDesc::GetLocaleName()
 // Function BlockyLuaCore.PrimitiveExpression.GetValueType
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyValueType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyValueType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyValueType> UPrimitiveExpression::GetValueType(const struct FBlockyLuaHandle& ptr)
 {
@@ -10596,8 +10756,8 @@ TEnumAsByte<enum EBlockyValueType> UPrimitiveExpression::GetValueType(const stru
 // Function BlockyLuaCore.PrimitiveExpression.GetValueString
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 str                            (Parm, OutParm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString str (Parm, OutParm, ZeroConstructor)
 
 void UPrimitiveExpression::GetValueString(const struct FBlockyLuaHandle& ptr, struct FString* str)
 {
@@ -10624,8 +10784,8 @@ void UPrimitiveExpression::GetValueString(const struct FBlockyLuaHandle& ptr, st
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_UInt8
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt8(int Value)
 {
@@ -10651,8 +10811,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt8(in
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_UInt64
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Value                          (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle Value (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt64(const struct FBlockyLuaHandle& Value)
 {
@@ -10678,8 +10838,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt64(c
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_UInt32
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt32(int Value)
 {
@@ -10705,8 +10865,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt32(i
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_UInt16
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt16(int Value)
 {
@@ -10732,8 +10892,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_UInt16(i
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Str
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Value                          (Parm, ZeroConstructor)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Value (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Str(const struct FString& Value)
 {
@@ -10759,8 +10919,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Str(cons
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Int8
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int8(int Value)
 {
@@ -10786,8 +10946,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int8(int
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Int64
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Value                          (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle Value (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int64(const struct FBlockyLuaHandle& Value)
 {
@@ -10813,8 +10973,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int64(co
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Int32
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int32(int Value)
 {
@@ -10840,8 +11000,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int32(in
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Int16
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int16(int Value)
 {
@@ -10867,8 +11027,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Int16(in
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Float
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Float(float Value)
 {
@@ -10894,8 +11054,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Float(fl
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Double
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Value                          (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle Value (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Double(const struct FBlockyLuaHandle& Value)
 {
@@ -10921,8 +11081,8 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Double(c
 // Function BlockyLuaCore.PrimitiveExpression.CreatePrimitiveExpression_Bool
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Bool(bool Value)
 {
@@ -10948,7 +11108,7 @@ struct FBlockyLuaHandle UPrimitiveExpression::CreatePrimitiveExpression_Bool(boo
 // Function BlockyLuaCore.PrimitiveExpression.Clear
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
 
 void UPrimitiveExpression::Clear(const struct FBlockyLuaHandle& ptr)
 {
@@ -10972,7 +11132,7 @@ void UPrimitiveExpression::Clear(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.SelectionData.IsCurrentSlot
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USelectionData::IsCurrentSlot()
 {
@@ -10997,7 +11157,7 @@ bool USelectionData::IsCurrentSlot()
 // Function BlockyLuaCore.SelfReferenceExpression.CreateSelfReferenceExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle USelfReferenceExpression::CreateSelfReferenceExpression()
 {
@@ -11022,8 +11182,8 @@ struct FBlockyLuaHandle USelfReferenceExpression::CreateSelfReferenceExpression(
 // Function BlockyLuaCore.SnippetExpression.GetSnippetString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString USnippetExpression::GetSnippetString(const struct FBlockyLuaHandle& ptr)
 {
@@ -11049,8 +11209,8 @@ struct FString USnippetExpression::GetSnippetString(const struct FBlockyLuaHandl
 // Function BlockyLuaCore.SnippetExpression.GetParameters
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> USnippetExpression::GetParameters(const struct FBlockyLuaHandle& ptr)
 {
@@ -11076,7 +11236,7 @@ TArray<struct FBlockyLuaHandle> USnippetExpression::GetParameters(const struct F
 // Function BlockyLuaCore.SnippetExpression.CreateDefaultValueExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle USnippetExpression::CreateDefaultValueExpression()
 {
@@ -11101,8 +11261,8 @@ struct FBlockyLuaHandle USnippetExpression::CreateDefaultValueExpression()
 // Function BlockyLuaCore.StatementBase.SetNextExpr
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        nextExpr                       (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle nextExpr (Parm)
 
 void UStatementBase::SetNextExpr(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& nextExpr)
 {
@@ -11127,7 +11287,7 @@ void UStatementBase::SetNextExpr(const struct FBlockyLuaHandle& ptr, const struc
 // Function BlockyLuaCore.StatementBase.ReleaseExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
 
 void UStatementBase::ReleaseExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -11151,8 +11311,8 @@ void UStatementBase::ReleaseExpression(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.StatementBase.GetNextExpr
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UStatementBase::GetNextExpr(const struct FBlockyLuaHandle& ptr)
 {
@@ -11178,7 +11338,7 @@ struct FBlockyLuaHandle UStatementBase::GetNextExpr(const struct FBlockyLuaHandl
 // Function BlockyLuaCore.StatementBase.CreateStatementBase
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UStatementBase::CreateStatementBase()
 {
@@ -11203,8 +11363,8 @@ struct FBlockyLuaHandle UStatementBase::CreateStatementBase()
 // Function BlockyLuaCore.VariableDeclaration.SetVisitMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyVisitMode> visitMode                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyVisitMode> visitMode (Parm, ZeroConstructor, IsPlainOldData)
 
 void UVariableDeclaration::SetVisitMode(const struct FBlockyLuaHandle& ptr, TEnumAsByte<enum EBlockyVisitMode> visitMode)
 {
@@ -11229,8 +11389,8 @@ void UVariableDeclaration::SetVisitMode(const struct FBlockyLuaHandle& ptr, TEnu
 // Function BlockyLuaCore.VariableDeclaration.SetVariableName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UVariableDeclaration::SetVariableName(const struct FBlockyLuaHandle& ptr, const struct FString& Name)
 {
@@ -11255,8 +11415,8 @@ void UVariableDeclaration::SetVariableName(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.VariableDeclaration.SetInitValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        initValue                      (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle initValue (Parm)
 
 void UVariableDeclaration::SetInitValue(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& initValue)
 {
@@ -11281,8 +11441,8 @@ void UVariableDeclaration::SetInitValue(const struct FBlockyLuaHandle& ptr, cons
 // Function BlockyLuaCore.VariableDeclaration.SetComment
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Comment                        (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Comment (Parm)
 
 void UVariableDeclaration::SetComment(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Comment)
 {
@@ -11307,8 +11467,8 @@ void UVariableDeclaration::SetComment(const struct FBlockyLuaHandle& ptr, const 
 // Function BlockyLuaCore.VariableDeclaration.GetVisitMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyVisitMode> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyVisitMode> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyVisitMode> UVariableDeclaration::GetVisitMode(const struct FBlockyLuaHandle& ptr)
 {
@@ -11334,8 +11494,8 @@ TEnumAsByte<enum EBlockyVisitMode> UVariableDeclaration::GetVisitMode(const stru
 // Function BlockyLuaCore.VariableDeclaration.GetVariableName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVariableDeclaration::GetVariableName(const struct FBlockyLuaHandle& ptr)
 {
@@ -11361,8 +11521,8 @@ struct FString UVariableDeclaration::GetVariableName(const struct FBlockyLuaHand
 // Function BlockyLuaCore.VariableDeclaration.GetInitValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableDeclaration::GetInitValue(const struct FBlockyLuaHandle& ptr)
 {
@@ -11388,8 +11548,8 @@ struct FBlockyLuaHandle UVariableDeclaration::GetInitValue(const struct FBlockyL
 // Function BlockyLuaCore.VariableDeclaration.GetComment
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableDeclaration::GetComment(const struct FBlockyLuaHandle& ptr)
 {
@@ -11415,7 +11575,7 @@ struct FBlockyLuaHandle UVariableDeclaration::GetComment(const struct FBlockyLua
 // Function BlockyLuaCore.VariableDeclaration.CreateVariableDeclaration
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableDeclaration::CreateVariableDeclaration()
 {
@@ -11440,10 +11600,10 @@ struct FBlockyLuaHandle UVariableDeclaration::CreateVariableDeclaration()
 // Function BlockyLuaCore.AssignOperatorStatement.SetTo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        to                             (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle To (Parm)
 
-void UAssignOperatorStatement::SetTo(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& to)
+void UAssignOperatorStatement::SetTo(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& To)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -11451,7 +11611,7 @@ void UAssignOperatorStatement::SetTo(const struct FBlockyLuaHandle& ptr, const s
 
 	UAssignOperatorStatement_SetTo_Params params;
 	params.ptr = ptr;
-	params.to = to;
+	params.To = To;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -11466,10 +11626,10 @@ void UAssignOperatorStatement::SetTo(const struct FBlockyLuaHandle& ptr, const s
 // Function BlockyLuaCore.AssignOperatorStatement.SetFrom
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        from                           (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle From (Parm)
 
-void UAssignOperatorStatement::SetFrom(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& from)
+void UAssignOperatorStatement::SetFrom(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& From)
 {
 	static UFunction *pFunc = nullptr;
 	if (!pFunc)
@@ -11477,7 +11637,7 @@ void UAssignOperatorStatement::SetFrom(const struct FBlockyLuaHandle& ptr, const
 
 	UAssignOperatorStatement_SetFrom_Params params;
 	params.ptr = ptr;
-	params.from = from;
+	params.From = From;
 
 	auto flags = pFunc->FunctionFlags;
 	pFunc->FunctionFlags |= 0x400;
@@ -11492,8 +11652,8 @@ void UAssignOperatorStatement::SetFrom(const struct FBlockyLuaHandle& ptr, const
 // Function BlockyLuaCore.AssignOperatorStatement.GetTo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UAssignOperatorStatement::GetTo(const struct FBlockyLuaHandle& ptr)
 {
@@ -11519,8 +11679,8 @@ struct FBlockyLuaHandle UAssignOperatorStatement::GetTo(const struct FBlockyLuaH
 // Function BlockyLuaCore.AssignOperatorStatement.GetFrom
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UAssignOperatorStatement::GetFrom(const struct FBlockyLuaHandle& ptr)
 {
@@ -11546,7 +11706,7 @@ struct FBlockyLuaHandle UAssignOperatorStatement::GetFrom(const struct FBlockyLu
 // Function BlockyLuaCore.AssignOperatorStatement.CreateAssignOperatorStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UAssignOperatorStatement::CreateAssignOperatorStatement()
 {
@@ -11571,8 +11731,8 @@ struct FBlockyLuaHandle UAssignOperatorStatement::CreateAssignOperatorStatement(
 // Function BlockyLuaCore.ExecuteSequenceStatement.SetSequence
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> Sequence                       (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> Sequence (Parm, ZeroConstructor)
 
 void UExecuteSequenceStatement::SetSequence(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> Sequence)
 {
@@ -11597,8 +11757,8 @@ void UExecuteSequenceStatement::SetSequence(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.ExecuteSequenceStatement.GetSequence
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UExecuteSequenceStatement::GetSequence(const struct FBlockyLuaHandle& ptr)
 {
@@ -11624,7 +11784,7 @@ TArray<struct FBlockyLuaHandle> UExecuteSequenceStatement::GetSequence(const str
 // Function BlockyLuaCore.ExecuteSequenceStatement.CreateExecuteSequenceStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UExecuteSequenceStatement::CreateExecuteSequenceStatement()
 {
@@ -11649,7 +11809,7 @@ struct FBlockyLuaHandle UExecuteSequenceStatement::CreateExecuteSequenceStatemen
 // Function BlockyLuaCore.ReturnStatement.CreateReturnStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UReturnStatement::CreateReturnStatement()
 {
@@ -11674,8 +11834,8 @@ struct FBlockyLuaHandle UReturnStatement::CreateReturnStatement()
 // Function BlockyLuaCore.IfStatement.SetTrueStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        trueStatement                  (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle trueStatement (Parm)
 
 void UIfStatement::SetTrueStatement(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& trueStatement)
 {
@@ -11700,8 +11860,8 @@ void UIfStatement::SetTrueStatement(const struct FBlockyLuaHandle& ptr, const st
 // Function BlockyLuaCore.IfStatement.SetFalseStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        falseStatement                 (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle falseStatement (Parm)
 
 void UIfStatement::SetFalseStatement(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& falseStatement)
 {
@@ -11726,8 +11886,8 @@ void UIfStatement::SetFalseStatement(const struct FBlockyLuaHandle& ptr, const s
 // Function BlockyLuaCore.IfStatement.SetElseIfs
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> elseIfs                        (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> elseIfs (Parm, ZeroConstructor)
 
 void UIfStatement::SetElseIfs(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> elseIfs)
 {
@@ -11752,8 +11912,8 @@ void UIfStatement::SetElseIfs(const struct FBlockyLuaHandle& ptr, TArray<struct 
 // Function BlockyLuaCore.IfStatement.SetCondition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Condition                      (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Condition (Parm)
 
 void UIfStatement::SetCondition(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Condition)
 {
@@ -11778,8 +11938,8 @@ void UIfStatement::SetCondition(const struct FBlockyLuaHandle& ptr, const struct
 // Function BlockyLuaCore.IfStatement.GetTrueStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIfStatement::GetTrueStatement(const struct FBlockyLuaHandle& ptr)
 {
@@ -11805,8 +11965,8 @@ struct FBlockyLuaHandle UIfStatement::GetTrueStatement(const struct FBlockyLuaHa
 // Function BlockyLuaCore.IfStatement.GetFalseStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIfStatement::GetFalseStatement(const struct FBlockyLuaHandle& ptr)
 {
@@ -11832,8 +11992,8 @@ struct FBlockyLuaHandle UIfStatement::GetFalseStatement(const struct FBlockyLuaH
 // Function BlockyLuaCore.IfStatement.GetElseIfs
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UIfStatement::GetElseIfs(const struct FBlockyLuaHandle& ptr)
 {
@@ -11859,8 +12019,8 @@ TArray<struct FBlockyLuaHandle> UIfStatement::GetElseIfs(const struct FBlockyLua
 // Function BlockyLuaCore.IfStatement.GetCondition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIfStatement::GetCondition(const struct FBlockyLuaHandle& ptr)
 {
@@ -11886,7 +12046,7 @@ struct FBlockyLuaHandle UIfStatement::GetCondition(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.IfStatement.CreateIfStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UIfStatement::CreateIfStatement()
 {
@@ -11911,8 +12071,8 @@ struct FBlockyLuaHandle UIfStatement::CreateIfStatement()
 // Function BlockyLuaCore.ForLoopStatement.SetStepExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        stepExpression                 (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle stepExpression (Parm)
 
 void UForLoopStatement::SetStepExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& stepExpression)
 {
@@ -11937,8 +12097,8 @@ void UForLoopStatement::SetStepExpression(const struct FBlockyLuaHandle& ptr, co
 // Function BlockyLuaCore.ForLoopStatement.SetLoopIndexName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 loopIndexName                  (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString loopIndexName (Parm, ZeroConstructor)
 
 void UForLoopStatement::SetLoopIndexName(const struct FBlockyLuaHandle& ptr, const struct FString& loopIndexName)
 {
@@ -11963,8 +12123,8 @@ void UForLoopStatement::SetLoopIndexName(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.ForLoopStatement.SetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        loopBody                       (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle loopBody (Parm)
 
 void UForLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& loopBody)
 {
@@ -11989,8 +12149,8 @@ void UForLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, const st
 // Function BlockyLuaCore.ForLoopStatement.SetEndExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        endExpression                  (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle endExpression (Parm)
 
 void UForLoopStatement::SetEndExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& endExpression)
 {
@@ -12015,8 +12175,8 @@ void UForLoopStatement::SetEndExpression(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.ForLoopStatement.SetBeginExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        beginExpression                (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle beginExpression (Parm)
 
 void UForLoopStatement::SetBeginExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& beginExpression)
 {
@@ -12041,8 +12201,8 @@ void UForLoopStatement::SetBeginExpression(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.ForLoopStatement.GetStepExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForLoopStatement::GetStepExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -12068,8 +12228,8 @@ struct FBlockyLuaHandle UForLoopStatement::GetStepExpression(const struct FBlock
 // Function BlockyLuaCore.ForLoopStatement.GetLoopIndexName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UForLoopStatement::GetLoopIndexName(const struct FBlockyLuaHandle& ptr)
 {
@@ -12095,8 +12255,8 @@ struct FString UForLoopStatement::GetLoopIndexName(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.ForLoopStatement.GetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForLoopStatement::GetLoopBody(const struct FBlockyLuaHandle& ptr)
 {
@@ -12122,8 +12282,8 @@ struct FBlockyLuaHandle UForLoopStatement::GetLoopBody(const struct FBlockyLuaHa
 // Function BlockyLuaCore.ForLoopStatement.GetEndExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForLoopStatement::GetEndExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -12149,8 +12309,8 @@ struct FBlockyLuaHandle UForLoopStatement::GetEndExpression(const struct FBlocky
 // Function BlockyLuaCore.ForLoopStatement.GetBeginExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForLoopStatement::GetBeginExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -12176,7 +12336,7 @@ struct FBlockyLuaHandle UForLoopStatement::GetBeginExpression(const struct FBloc
 // Function BlockyLuaCore.ForLoopStatement.CreateForLoopStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForLoopStatement::CreateForLoopStatement()
 {
@@ -12201,8 +12361,8 @@ struct FBlockyLuaHandle UForLoopStatement::CreateForLoopStatement()
 // Function BlockyLuaCore.ForeachLoopStatement.SetLoopItemName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 loopIndexName                  (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString loopIndexName (Parm, ZeroConstructor)
 
 void UForeachLoopStatement::SetLoopItemName(const struct FBlockyLuaHandle& ptr, const struct FString& loopIndexName)
 {
@@ -12227,8 +12387,8 @@ void UForeachLoopStatement::SetLoopItemName(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.ForeachLoopStatement.SetLoopItemExp
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        loopItemExp                    (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle loopItemExp (Parm)
 
 void UForeachLoopStatement::SetLoopItemExp(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& loopItemExp)
 {
@@ -12253,8 +12413,8 @@ void UForeachLoopStatement::SetLoopItemExp(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.ForeachLoopStatement.SetLoopIndexName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 loopIndexName                  (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString loopIndexName (Parm, ZeroConstructor)
 
 void UForeachLoopStatement::SetLoopIndexName(const struct FBlockyLuaHandle& ptr, const struct FString& loopIndexName)
 {
@@ -12279,8 +12439,8 @@ void UForeachLoopStatement::SetLoopIndexName(const struct FBlockyLuaHandle& ptr,
 // Function BlockyLuaCore.ForeachLoopStatement.SetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        loopBody                       (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle loopBody (Parm)
 
 void UForeachLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& loopBody)
 {
@@ -12305,8 +12465,8 @@ void UForeachLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, cons
 // Function BlockyLuaCore.ForeachLoopStatement.GetLoopItemName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UForeachLoopStatement::GetLoopItemName(const struct FBlockyLuaHandle& ptr)
 {
@@ -12332,8 +12492,8 @@ struct FString UForeachLoopStatement::GetLoopItemName(const struct FBlockyLuaHan
 // Function BlockyLuaCore.ForeachLoopStatement.GetLoopItemExp
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForeachLoopStatement::GetLoopItemExp(const struct FBlockyLuaHandle& ptr)
 {
@@ -12359,8 +12519,8 @@ struct FBlockyLuaHandle UForeachLoopStatement::GetLoopItemExp(const struct FBloc
 // Function BlockyLuaCore.ForeachLoopStatement.GetLoopIndexName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UForeachLoopStatement::GetLoopIndexName(const struct FBlockyLuaHandle& ptr)
 {
@@ -12386,8 +12546,8 @@ struct FString UForeachLoopStatement::GetLoopIndexName(const struct FBlockyLuaHa
 // Function BlockyLuaCore.ForeachLoopStatement.GetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForeachLoopStatement::GetLoopBody(const struct FBlockyLuaHandle& ptr)
 {
@@ -12413,7 +12573,7 @@ struct FBlockyLuaHandle UForeachLoopStatement::GetLoopBody(const struct FBlockyL
 // Function BlockyLuaCore.ForeachLoopStatement.CreateForeachLoopStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UForeachLoopStatement::CreateForeachLoopStatement()
 {
@@ -12438,8 +12598,8 @@ struct FBlockyLuaHandle UForeachLoopStatement::CreateForeachLoopStatement()
 // Function BlockyLuaCore.WhileLoopStatement.SetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        loopBody                       (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle loopBody (Parm)
 
 void UWhileLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& loopBody)
 {
@@ -12464,8 +12624,8 @@ void UWhileLoopStatement::SetLoopBody(const struct FBlockyLuaHandle& ptr, const 
 // Function BlockyLuaCore.WhileLoopStatement.SetCondition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Condition                      (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Condition (Parm)
 
 void UWhileLoopStatement::SetCondition(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Condition)
 {
@@ -12490,8 +12650,8 @@ void UWhileLoopStatement::SetCondition(const struct FBlockyLuaHandle& ptr, const
 // Function BlockyLuaCore.WhileLoopStatement.GetLoopBody
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UWhileLoopStatement::GetLoopBody(const struct FBlockyLuaHandle& ptr)
 {
@@ -12517,8 +12677,8 @@ struct FBlockyLuaHandle UWhileLoopStatement::GetLoopBody(const struct FBlockyLua
 // Function BlockyLuaCore.WhileLoopStatement.GetCondition
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UWhileLoopStatement::GetCondition(const struct FBlockyLuaHandle& ptr)
 {
@@ -12544,7 +12704,7 @@ struct FBlockyLuaHandle UWhileLoopStatement::GetCondition(const struct FBlockyLu
 // Function BlockyLuaCore.WhileLoopStatement.CreateWhileLoopStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UWhileLoopStatement::CreateWhileLoopStatement()
 {
@@ -12569,7 +12729,7 @@ struct FBlockyLuaHandle UWhileLoopStatement::CreateWhileLoopStatement()
 // Function BlockyLuaCore.ContinueStatement.CreateContinueStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UContinueStatement::CreateContinueStatement()
 {
@@ -12594,7 +12754,7 @@ struct FBlockyLuaHandle UContinueStatement::CreateContinueStatement()
 // Function BlockyLuaCore.BreakStatement.CreateBreakStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UBreakStatement::CreateBreakStatement()
 {
@@ -12619,8 +12779,8 @@ struct FBlockyLuaHandle UBreakStatement::CreateBreakStatement()
 // Function BlockyLuaCore.CommentStatement.SetNewLine
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// bool                           newLine                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// bool newLine (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCommentStatement::SetNewLine(const struct FBlockyLuaHandle& ptr, bool newLine)
 {
@@ -12645,8 +12805,8 @@ void UCommentStatement::SetNewLine(const struct FBlockyLuaHandle& ptr, bool newL
 // Function BlockyLuaCore.CommentStatement.SetCommentString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 commentString                  (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString commentString (Parm, ZeroConstructor)
 
 void UCommentStatement::SetCommentString(const struct FBlockyLuaHandle& ptr, const struct FString& commentString)
 {
@@ -12671,8 +12831,8 @@ void UCommentStatement::SetCommentString(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.CommentStatement.GetNewLine
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCommentStatement::GetNewLine(const struct FBlockyLuaHandle& ptr)
 {
@@ -12698,8 +12858,8 @@ bool UCommentStatement::GetNewLine(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.CommentStatement.GetCommentString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCommentStatement::GetCommentString(const struct FBlockyLuaHandle& ptr)
 {
@@ -12725,7 +12885,7 @@ struct FString UCommentStatement::GetCommentString(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.CommentStatement.CreateCommentStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UCommentStatement::CreateCommentStatement()
 {
@@ -12750,8 +12910,8 @@ struct FBlockyLuaHandle UCommentStatement::CreateCommentStatement()
 // Function BlockyLuaCore.ExpressionStatement.SetNextStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        nextStatement                  (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle nextStatement (Parm)
 
 void UExpressionStatement::SetNextStatement(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& nextStatement)
 {
@@ -12776,8 +12936,8 @@ void UExpressionStatement::SetNextStatement(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.ExpressionStatement.SetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        expression                     (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle expression (Parm)
 
 void UExpressionStatement::SetExpression(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& expression)
 {
@@ -12802,8 +12962,8 @@ void UExpressionStatement::SetExpression(const struct FBlockyLuaHandle& ptr, con
 // Function BlockyLuaCore.ExpressionStatement.GetNextStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UExpressionStatement::GetNextStatement(const struct FBlockyLuaHandle& ptr)
 {
@@ -12829,8 +12989,8 @@ struct FBlockyLuaHandle UExpressionStatement::GetNextStatement(const struct FBlo
 // Function BlockyLuaCore.ExpressionStatement.GetExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UExpressionStatement::GetExpression(const struct FBlockyLuaHandle& ptr)
 {
@@ -12856,7 +13016,7 @@ struct FBlockyLuaHandle UExpressionStatement::GetExpression(const struct FBlocky
 // Function BlockyLuaCore.ExpressionStatement.CreateExpressionStatement
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UExpressionStatement::CreateExpressionStatement()
 {
@@ -12881,8 +13041,8 @@ struct FBlockyLuaHandle UExpressionStatement::CreateExpressionStatement()
 // Function BlockyLuaCore.StringAppendExpression.SetRight
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UStringAppendExpression::SetRight(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -12907,8 +13067,8 @@ void UStringAppendExpression::SetRight(const struct FBlockyLuaHandle& ptr, const
 // Function BlockyLuaCore.StringAppendExpression.SetLeft
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UStringAppendExpression::SetLeft(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -12933,8 +13093,8 @@ void UStringAppendExpression::SetLeft(const struct FBlockyLuaHandle& ptr, const 
 // Function BlockyLuaCore.StringAppendExpression.SetExtras
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> Value                          (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> Value (Parm, ZeroConstructor)
 
 void UStringAppendExpression::SetExtras(const struct FBlockyLuaHandle& ptr, TArray<struct FBlockyLuaHandle> Value)
 {
@@ -12959,8 +13119,8 @@ void UStringAppendExpression::SetExtras(const struct FBlockyLuaHandle& ptr, TArr
 // Function BlockyLuaCore.StringAppendExpression.GetRight
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UStringAppendExpression::GetRight(const struct FBlockyLuaHandle& ptr)
 {
@@ -12986,8 +13146,8 @@ struct FBlockyLuaHandle UStringAppendExpression::GetRight(const struct FBlockyLu
 // Function BlockyLuaCore.StringAppendExpression.GetLeft
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UStringAppendExpression::GetLeft(const struct FBlockyLuaHandle& ptr)
 {
@@ -13013,8 +13173,8 @@ struct FBlockyLuaHandle UStringAppendExpression::GetLeft(const struct FBlockyLua
 // Function BlockyLuaCore.StringAppendExpression.GetExtras
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TArray<struct FBlockyLuaHandle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// TArray<struct FBlockyLuaHandle> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FBlockyLuaHandle> UStringAppendExpression::GetExtras(const struct FBlockyLuaHandle& ptr)
 {
@@ -13040,7 +13200,7 @@ TArray<struct FBlockyLuaHandle> UStringAppendExpression::GetExtras(const struct 
 // Function BlockyLuaCore.StringAppendExpression.CreateStringAppendExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UStringAppendExpression::CreateStringAppendExpression()
 {
@@ -13065,8 +13225,8 @@ struct FBlockyLuaHandle UStringAppendExpression::CreateStringAppendExpression()
 // Function BlockyLuaCore.TypeReference.SetTypeName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Self                           (Parm)
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle Self (Parm)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UTypeReference::SetTypeName(const struct FBlockyLuaHandle& Self, const struct FString& Name)
 {
@@ -13091,7 +13251,7 @@ void UTypeReference::SetTypeName(const struct FBlockyLuaHandle& Self, const stru
 // Function BlockyLuaCore.TypeReference.ReleaseTypeReference
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Self                           (Parm)
+// struct FBlockyLuaHandle Self (Parm)
 
 void UTypeReference::ReleaseTypeReference(const struct FBlockyLuaHandle& Self)
 {
@@ -13115,8 +13275,8 @@ void UTypeReference::ReleaseTypeReference(const struct FBlockyLuaHandle& Self)
 // Function BlockyLuaCore.TypeReference.GetTypeName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Self                           (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle Self (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UTypeReference::GetTypeName(const struct FBlockyLuaHandle& Self)
 {
@@ -13142,8 +13302,8 @@ struct FString UTypeReference::GetTypeName(const struct FBlockyLuaHandle& Self)
 // Function BlockyLuaCore.TypeReference.FindClass
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UTypeReference::FindClass(const struct FString& Name)
 {
@@ -13169,10 +13329,10 @@ struct FBlockyLuaHandle UTypeReference::FindClass(const struct FString& Name)
 // Function BlockyLuaCore.TypeReference.CreateTypeReference3
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        klass                          (Parm)
-// int                            numOfPointer                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isRefer                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle klass (Parm)
+// int numOfPointer (Parm, ZeroConstructor, IsPlainOldData)
+// bool isRefer (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UTypeReference::CreateTypeReference3(const struct FBlockyLuaHandle& klass, int numOfPointer, bool isRefer)
 {
@@ -13200,7 +13360,7 @@ struct FBlockyLuaHandle UTypeReference::CreateTypeReference3(const struct FBlock
 // Function BlockyLuaCore.TypeReference.CreateTypeReference
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UTypeReference::CreateTypeReference()
 {
@@ -13225,8 +13385,8 @@ struct FBlockyLuaHandle UTypeReference::CreateTypeReference()
 // Function BlockyLuaCore.TypeReference.AsStub
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaStub          ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaStub ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaStub UTypeReference::AsStub(const struct FBlockyLuaHandle& ptr)
 {
@@ -13252,8 +13412,8 @@ struct FBlockyLuaStub UTypeReference::AsStub(const struct FBlockyLuaHandle& ptr)
 // Function BlockyLuaCore.UnaryOperatorExpression.SetValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Value                          (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Value (Parm)
 
 void UUnaryOperatorExpression::SetValue(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Value)
 {
@@ -13278,8 +13438,8 @@ void UUnaryOperatorExpression::SetValue(const struct FBlockyLuaHandle& ptr, cons
 // Function BlockyLuaCore.UnaryOperatorExpression.SetOperation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyUnaryOperation> Op                             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyUnaryOperation> Op (Parm, ZeroConstructor, IsPlainOldData)
 
 void UUnaryOperatorExpression::SetOperation(const struct FBlockyLuaHandle& ptr, TEnumAsByte<enum EBlockyUnaryOperation> Op)
 {
@@ -13304,8 +13464,8 @@ void UUnaryOperatorExpression::SetOperation(const struct FBlockyLuaHandle& ptr, 
 // Function BlockyLuaCore.UnaryOperatorExpression.GetValue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UUnaryOperatorExpression::GetValue(const struct FBlockyLuaHandle& ptr)
 {
@@ -13331,8 +13491,8 @@ struct FBlockyLuaHandle UUnaryOperatorExpression::GetValue(const struct FBlockyL
 // Function BlockyLuaCore.UnaryOperatorExpression.GetOperation
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// TEnumAsByte<enum EBlockyUnaryOperation> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlockyLuaHandle ptr (Parm)
+// TEnumAsByte<enum EBlockyUnaryOperation> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyUnaryOperation> UUnaryOperatorExpression::GetOperation(const struct FBlockyLuaHandle& ptr)
 {
@@ -13358,7 +13518,7 @@ TEnumAsByte<enum EBlockyUnaryOperation> UUnaryOperatorExpression::GetOperation(c
 // Function BlockyLuaCore.UnaryOperatorExpression.CreateUnaryOperatorExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UUnaryOperatorExpression::CreateUnaryOperatorExpression()
 {
@@ -13383,7 +13543,7 @@ struct FBlockyLuaHandle UUnaryOperatorExpression::CreateUnaryOperatorExpression(
 // Function BlockyLuaCore.VarDefiner.SetType
 // (Final, Native, Private, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FType                   Value                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FType Value (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UVarDefiner::SetType(const struct FType& Value)
 {
@@ -13407,7 +13567,7 @@ void UVarDefiner::SetType(const struct FType& Value)
 // Function BlockyLuaCore.VarDefiner.GetVarTypeEnum
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EBlockyVariableType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBlockyVariableType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyVariableType> UVarDefiner::GetVarTypeEnum()
 {
@@ -13432,7 +13592,7 @@ TEnumAsByte<enum EBlockyVariableType> UVarDefiner::GetVarTypeEnum()
 // Function BlockyLuaCore.VarDefiner.GetTypeEnum
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EBlockyListItemType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EBlockyListItemType> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EBlockyListItemType> UVarDefiner::GetTypeEnum()
 {
@@ -13457,7 +13617,7 @@ TEnumAsByte<enum EBlockyListItemType> UVarDefiner::GetTypeEnum()
 // Function BlockyLuaCore.VarDefiner.GetType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FType                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FType ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FType UVarDefiner::GetType()
 {
@@ -13482,7 +13642,7 @@ struct FType UVarDefiner::GetType()
 // Function BlockyLuaCore.VarDefiner.GetFirstShowName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVarDefiner::GetFirstShowName()
 {
@@ -13507,7 +13667,7 @@ struct FString UVarDefiner::GetFirstShowName()
 // Function BlockyLuaCore.VarDefiner.GetCurrentLocateShowName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVarDefiner::GetCurrentLocateShowName()
 {
@@ -13532,8 +13692,8 @@ struct FString UVarDefiner::GetCurrentLocateShowName()
 // Function BlockyLuaCore.VariableReferenceExpression.SetVariableName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 Name                           (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString Name (Parm, ZeroConstructor)
 
 void UVariableReferenceExpression::SetVariableName(const struct FBlockyLuaHandle& ptr, const struct FString& Name)
 {
@@ -13558,8 +13718,8 @@ void UVariableReferenceExpression::SetVariableName(const struct FBlockyLuaHandle
 // Function BlockyLuaCore.VariableReferenceExpression.SetHost
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        Host                           (Parm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle Host (Parm)
 
 void UVariableReferenceExpression::SetHost(const struct FBlockyLuaHandle& ptr, const struct FBlockyLuaHandle& Host)
 {
@@ -13584,8 +13744,8 @@ void UVariableReferenceExpression::SetHost(const struct FBlockyLuaHandle& ptr, c
 // Function BlockyLuaCore.VariableReferenceExpression.GetVariableName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UVariableReferenceExpression::GetVariableName(const struct FBlockyLuaHandle& ptr)
 {
@@ -13611,8 +13771,8 @@ struct FString UVariableReferenceExpression::GetVariableName(const struct FBlock
 // Function BlockyLuaCore.VariableReferenceExpression.GetHost
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        ptr                            (Parm)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle ptr (Parm)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableReferenceExpression::GetHost(const struct FBlockyLuaHandle& ptr)
 {
@@ -13638,9 +13798,9 @@ struct FBlockyLuaHandle UVariableReferenceExpression::GetHost(const struct FBloc
 // Function BlockyLuaCore.VariableReferenceExpression.CreateVariableReferenceExpression2
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FBlockyLuaHandle        Host                           (Parm)
-// struct FString                 VariableName                   (Parm, ZeroConstructor)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FBlockyLuaHandle Host (Parm)
+// struct FString VariableName (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableReferenceExpression::CreateVariableReferenceExpression2(const struct FBlockyLuaHandle& Host, const struct FString& VariableName)
 {
@@ -13667,8 +13827,8 @@ struct FBlockyLuaHandle UVariableReferenceExpression::CreateVariableReferenceExp
 // Function BlockyLuaCore.VariableReferenceExpression.CreateVariableReferenceExpression
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 VariableName                   (Parm, ZeroConstructor)
-// struct FBlockyLuaHandle        ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FString VariableName (Parm, ZeroConstructor)
+// struct FBlockyLuaHandle ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FBlockyLuaHandle UVariableReferenceExpression::CreateVariableReferenceExpression(const struct FString& VariableName)
 {

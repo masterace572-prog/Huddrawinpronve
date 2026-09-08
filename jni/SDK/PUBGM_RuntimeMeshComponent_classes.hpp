@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -9,29 +9,28 @@ namespace SDK
 //---------------------By BangJO---------------------------
 
 // Class RuntimeMeshComponent.RuntimeMeshComponent
-// 0x0170 (0x0AF0 - 0x0980)
+// 0x0170 (0x0B10 - 0x09A0)
 class URuntimeMeshComponent : public UMeshComponent
 {
 public:
-	struct FScriptMulticastDelegate                    CollisionUpdated;                                         // 0x0980(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	bool                                               bUseComplexAsSimpleCollision;                             // 0x0990(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseAsyncCooking;                                         // 0x0991(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bCanbeOccluded;                                           // 0x0992(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bShouldSerializeMeshData;                                 // 0x0993(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ERuntimeMeshCollisionCookingMode                   CollisionMode;                                            // 0x0994(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0995(0x0003) MISSED OFFSET
-	class UBodySetup*                                  BodySetup;                                                // 0x0998(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x09A0(0x0030) MISSED OFFSET
-	TArray<struct FRuntimeMeshCollisionSection>        MeshCollisionSections;                                    // 0x09D0(0x0010) (ZeroConstructor, Transient)
-	TArray<struct FRuntimeConvexCollisionSection>      ConvexCollisionSections;                                  // 0x09E0(0x0010) (ZeroConstructor, Transient)
-	struct FBoxSphereBounds                            LocalBounds;                                              // 0x09F0(0x001C) (Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0A0C(0x0004) MISSED OFFSET
-	struct FRuntimeMeshComponentPrePhysicsTickFunction PrePhysicsTick;                                           // 0x0A10(0x00B8) (Transient)
-	TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                      // 0x0AC8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x0AD8(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate CollisionUpdated; // 0x09A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	bool bUseComplexAsSimpleCollision; // 0x09B0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bUseAsyncCooking; // 0x09B1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bCanbeOccluded; // 0x09B2(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bShouldSerializeMeshData; // 0x09B3(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ERuntimeMeshCollisionCookingMode CollisionMode; // 0x09B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x09B5(0x0003) MISSED OFFSET
+	class UBodySetup* BodySetup; // 0x09B8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData01[0x30]; // 0x09C0(0x0030) MISSED OFFSET
+	TArray<struct FRuntimeMeshCollisionSection> MeshCollisionSections; // 0x09F0(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FRuntimeConvexCollisionSection> ConvexCollisionSections; // 0x0A00(0x0010) (ZeroConstructor, Transient)
+	struct FBoxSphereBounds LocalBounds; // 0x0A10(0x001C) (Transient, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x0A2C(0x0004) MISSED OFFSET
+	struct FRuntimeMeshComponentPrePhysicsTickFunction PrePhysicsTick; // 0x0A30(0x00B8) (Transient)
+	TArray<class UBodySetup*> AsyncBodySetupQueue; // 0x0AE8(0x0010) (ZeroConstructor, Transient)
+	unsigned char UnknownData03[0x18]; // 0x0AF8(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class RuntimeMeshComponent.RuntimeMeshComponent");
@@ -68,22 +67,21 @@ public:
 
 
 // Class RuntimeMeshComponent.RuntimeMeshLodComponent
-// 0x01A0 (0x0B20 - 0x0980)
+// 0x01A0 (0x0B40 - 0x09A0)
 class URuntimeMeshLodComponent : public UMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0980(0x0030) MISSED OFFSET
-	TArray<struct FRuntimeMeshCollisionSection>        MeshCollisionSections;                                    // 0x09B0(0x0010) (ZeroConstructor, Transient)
-	TArray<struct FRuntimeConvexCollisionSection>      ConvexCollisionSections;                                  // 0x09C0(0x0010) (ZeroConstructor, Transient)
-	struct FBoxSphereBounds                            LocalBounds;                                              // 0x09D0(0x001C) (Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x09EC(0x0004) MISSED OFFSET
-	struct FRuntimeMeshComponentPrePhysicsTickFunction PrePhysicsTick;                                           // 0x09F0(0x00B8) (Transient)
-	TArray<class UBodySetup*>                          AsyncBodySetupQueue;                                      // 0x0AA8(0x0010) (ZeroConstructor, Transient)
-	TMap<struct FIntPoint, int>                        LodSectionIndexs;                                         // 0x0AB8(0x0050) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x18];                                      // 0x0B08(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x30]; // 0x09A0(0x0030) MISSED OFFSET
+	TArray<struct FRuntimeMeshCollisionSection> MeshCollisionSections; // 0x09D0(0x0010) (ZeroConstructor, Transient)
+	TArray<struct FRuntimeConvexCollisionSection> ConvexCollisionSections; // 0x09E0(0x0010) (ZeroConstructor, Transient)
+	struct FBoxSphereBounds LocalBounds; // 0x09F0(0x001C) (Transient, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x0A0C(0x0004) MISSED OFFSET
+	struct FRuntimeMeshComponentPrePhysicsTickFunction PrePhysicsTick; // 0x0A10(0x00B8) (Transient)
+	TArray<class UBodySetup*> AsyncBodySetupQueue; // 0x0AC8(0x0010) (ZeroConstructor, Transient)
+	TMap<struct FIntPoint, int> LodSectionIndexs; // 0x0AD8(0x0050) (Edit, ZeroConstructor)
+	unsigned char UnknownData02[0x18]; // 0x0B28(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class RuntimeMeshComponent.RuntimeMeshLodComponent");
@@ -99,8 +97,7 @@ class URuntimeMeshLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class RuntimeMeshComponent.RuntimeMeshLibrary");

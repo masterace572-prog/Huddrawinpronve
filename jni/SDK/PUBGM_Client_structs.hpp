@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -39,9 +39,9 @@ enum class EReuseFallOverscrollState : uint8_t
 // Enum Client.EReuseListJumpStyle
 enum class EReuseListJumpStyle : uint8_t
 {
-	EReuseListJumpStyle__Middle    = 0,
-	EReuseListJumpStyle__Begin     = 1,
-	EReuseListJumpStyle__End       = 2,
+	EReuseListJumpStyle__Middle = 0,
+	EReuseListJumpStyle__Begin = 1,
+	EReuseListJumpStyle__End = 2,
 	EReuseListJumpStyle__EReuseListJumpStyle_MAX = 3
 };
 
@@ -49,9 +49,9 @@ enum class EReuseListJumpStyle : uint8_t
 // Enum Client.EReuseListStyle
 enum class EReuseListStyle : uint8_t
 {
-	EReuseListStyle__Vertical      = 0,
-	EReuseListStyle__Horizontal    = 1,
-	EReuseListStyle__VerticalGrid  = 2,
+	EReuseListStyle__Vertical = 0,
+	EReuseListStyle__Horizontal = 1,
+	EReuseListStyle__VerticalGrid = 2,
 	EReuseListStyle__HorizontalGrid = 3,
 	EReuseListStyle__EReuseListStyle_MAX = 4
 };
@@ -91,11 +91,11 @@ enum class EFDownloaderTypeEnum : uint8_t
 // Enum Client.ESubsideFeatureLevel
 enum class ESubsideFeatureLevel : uint8_t
 {
-	ELevel_Dafault                 = 0,
-	ELevel_OfficialB               = 1,
-	ELevel_Jaguar                  = 2,
-	ELevel_OfficialA               = 3,
-	ELevel_MAX                     = 4
+	ELevel_Dafault = 0,
+	ELevel_OfficialB = 1,
+	ELevel_Jaguar = 2,
+	ELevel_OfficialA = 3,
+	ELevel_MAX = 4
 };
 
 
@@ -126,41 +126,24 @@ enum class ECentauriMultiPayChannelSwitch : uint8_t
 // Enum Client.ESDKCallbackType
 enum class ESDKCallbackType : uint8_t
 {
-	ESDKCallbackType__SDK_CB_None  = 0,
+	ESDKCallbackType__SDK_CB_None = 0,
 	ESDKCallbackType__SDK_CB_VLINK_OPEN = 1,
 	ESDKCallbackType__SDK_CB_VLINK_CLOSE = 2,
 	ESDKCallbackType__SDK_CB_NET_TRACE = 3,
-	ESDKCallbackType__SDK_CB_MAX   = 4
+	ESDKCallbackType__SDK_CB_MAX = 4
 };
 
 
 // Enum Client.EUnifiedAccountType
 enum class EUnifiedAccountType : uint8_t
 {
-	EUnifiedAccountType__UA_None   = 0,
+	EUnifiedAccountType__UA_None = 0,
 	EUnifiedAccountType__UA_RequestVerifyCode = 1,
 	EUnifiedAccountType__UA_ChangePassword = 2,
 	EUnifiedAccountType__UA_ModifyAccount = 3,
 	EUnifiedAccountType__UA_CheckIsRegisted = 4,
 	EUnifiedAccountType__UA_CheckVerifyCodeValid = 5,
-	EUnifiedAccountType__UA_MAX    = 6
-};
-
-
-// Enum Client.EAnchorsType
-enum class EAnchorsType : uint8_t
-{
-	EAnchorsType__TopLeft          = 0,
-	EAnchorsType__TopCenter        = 1,
-	EAnchorsType__TopRight         = 2,
-	EAnchorsType__MidLeft          = 3,
-	EAnchorsType__MidCenter        = 4,
-	EAnchorsType__MidRight         = 5,
-	EAnchorsType__BottomLeft       = 6,
-	EAnchorsType__BottomCenter     = 7,
-	EAnchorsType__BottomRight      = 8,
-	EAnchorsType__Other            = 9,
-	EAnchorsType__EAnchorsType_MAX = 10
+	EUnifiedAccountType__UA_MAX = 6
 };
 
 
@@ -197,10 +180,10 @@ enum class EIMSDKNoticeType : uint8_t
 // Enum Client.EScreenDir
 enum class EScreenDir : uint8_t
 {
-	EScreenDir__kScreenDirSensor   = 0,
+	EScreenDir__kScreenDirSensor = 0,
 	EScreenDir__kScreenDirPortrait = 1,
 	EScreenDir__kScreenDirLandscape = 2,
-	EScreenDir__EScreenDir_MAX     = 3
+	EScreenDir__EScreenDir_MAX = 3
 };
 
 
@@ -209,7 +192,7 @@ enum class EContentType : uint8_t
 {
 	EContentType__kContentTypeText = 0,
 	EContentType__kContentTypeImage = 1,
-	EContentType__kContentTypeWeb  = 2,
+	EContentType__kContentTypeWeb = 2,
 	EContentType__EContentType_MAX = 3
 };
 
@@ -217,23 +200,23 @@ enum class EContentType : uint8_t
 // Enum Client.ENoticeType
 enum class ENoticeType : uint8_t
 {
-	ENoticeType__kNoticeTypeAlert  = 0,
+	ENoticeType__kNoticeTypeAlert = 0,
 	ENoticeType__kNoticeTypeScroll = 1,
-	ENoticeType__kNoticeTypeAll    = 2,
-	ENoticeType__ENoticeType_MAX   = 3
+	ENoticeType__kNoticeTypeAll = 2,
+	ENoticeType__ENoticeType_MAX = 3
 };
 
 
 // Enum Client.ELobbyBgMatType
 enum class ELobbyBgMatType : uint8_t
 {
-	ELBS                           = 0,
-	EMarketAppearance              = 1,
-	EMarketParachute               = 2,
-	EMarketWeapon                  = 3,
-	ESeasonPass                    = 4,
-	ELobbyBgMat_Max                = 5,
-	ELobbyBgMatType_MAX            = 6
+	ELBS = 0,
+	EMarketAppearance = 1,
+	EMarketParachute = 2,
+	EMarketWeapon = 3,
+	ESeasonPass = 4,
+	ELobbyBgMat_Max = 5,
+	ELobbyBgMatType_MAX = 6
 };
 
 
@@ -247,35 +230,25 @@ enum class ESDKCallbackMethodId : uint8_t
 };
 
 
-// Enum Client.ESCPDisplayState
-enum class ESCPDisplayState : uint8_t
-{
-	ESCPDisplayState__Foreground   = 0,
-	ESCPDisplayState__Background   = 1,
-	ESCPDisplayState__Hidden       = 2,
-	ESCPDisplayState__ESCPDisplayState_MAX = 3
-};
-
-
 // Enum Client.UserSettingsDataType
 enum class EUserSettingsDataType : uint8_t
 {
-	Bool                           = 0,
-	Enum                           = 1,
-	Int                            = 2,
-	Float                          = 3,
-	String                         = 4,
-	UserSettingsDataType_MAX       = 5
+	Bool = 0,
+	Enum = 1,
+	Int = 2,
+	Float = 3,
+	String = 4,
+	UserSettingsDataType_MAX = 5
 };
 
 
 // Enum Client.EVibrateStrengthLevel
 enum class EVibrateStrengthLevel : uint8_t
 {
-	EVibrateStrengthLevel__None    = 0,
-	EVibrateStrengthLevel__Low     = 1,
-	EVibrateStrengthLevel__Mid     = 2,
-	EVibrateStrengthLevel__High    = 3,
+	EVibrateStrengthLevel__None = 0,
+	EVibrateStrengthLevel__Low = 1,
+	EVibrateStrengthLevel__Mid = 2,
+	EVibrateStrengthLevel__High = 3,
 	EVibrateStrengthLevel__EVibrateStrengthLevel_MAX = 4
 };
 
@@ -398,7 +371,7 @@ enum class EWeaponSpecialSoundType : uint8_t
 // Enum Client.EButtonClickSoundTypes
 enum class EButtonClickSoundTypes : uint8_t
 {
-	EButtonClickSoundTypes__None   = 0,
+	EButtonClickSoundTypes__None = 0,
 	EButtonClickSoundTypes__Play_UI_Bnt_Confirm = 1,
 	EButtonClickSoundTypes__Play_UI_Bnt_Click = 2,
 	EButtonClickSoundTypes__Play_UI_Bnt_Tab = 3,
@@ -423,681 +396,665 @@ enum class EButtonClickSoundTypes : uint8_t
 // 0x0038
 struct FBattleGameInfo
 {
-	uint64_t                                           GameID;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     GameModeID;                                               // 0x0008(0x0010) (ZeroConstructor)
-	int                                                GameMapID;                                                // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                WeatherID;                                                // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     WeatherName;                                              // 0x0020(0x0010) (ZeroConstructor)
-	bool                                               bUsedSimulation;                                          // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bEnableClimbing;                                          // 0x0031(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+	uint64_t GameID; // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString GameModeID; // 0x0008(0x0010) (ZeroConstructor)
+	int GameMapID; // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	int WeatherID; // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString WeatherName; // 0x0020(0x0010) (ZeroConstructor)
+	bool bUsedSimulation; // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool bEnableClimbing; // 0x0031(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x6]; // 0x0032(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct Client.CDNDownloaderInfo
 // 0x0030
 struct FCDNDownloaderInfo
 {
-	EFCDNDownloaderStateEnum                           State;                                                    // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     FileSavePath;                                             // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               Result;                                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-	int                                                BytesSent;                                                // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                BytesReceived;                                            // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ContentType;                                              // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ResponseCode;                                             // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Client.DynamicCustomInfo
-// 0x0018
-struct FDynamicCustomInfo
-{
-	class UClass*                                      DynamicCustomAsset;                                       // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        CustomTypes;                                              // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
-// ScriptStruct Client.GameWidgetConfig
-// 0x0030
-struct FGameWidgetConfig
-{
-	struct FString                                     Path;                                                     // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     Container;                                                // 0x0010(0x0010) (ZeroConstructor)
-	int                                                ZOrder;                                                   // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	class UClass*                                      WidgetClass;                                              // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Client.NativeHUDTickContainer
-// 0x000C
-struct FNativeHUDTickContainer
-{
-	int                                                WidgetIndex;                                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UUAEUserWidget>               pWidget;                                                  // 0x0004(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	EFCDNDownloaderStateEnum State; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString FileSavePath; // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool Result; // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0019(0x0003) MISSED OFFSET
+	int BytesSent; // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int BytesReceived; // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ContentType; // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ResponseCode; // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Client.WebviewInfoWrapper
 // 0x0030
 struct FWebviewInfoWrapper
 {
-	int                                                ErrorCode;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     Reason;                                                   // 0x0008(0x0010) (ZeroConstructor)
-	int                                                extend;                                                   // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Extend2;                                                  // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     MsgData;                                                  // 0x0020(0x0010) (ZeroConstructor)
+	int ErrorCode; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FString Reason; // 0x0008(0x0010) (ZeroConstructor)
+	int extend; // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	int Extend2; // 0x001C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString MsgData; // 0x0020(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.UAAssistantInfoWrapper
 // 0x0028
 struct FUAAssistantInfoWrapper
 {
-	EUnifiedAccountType                                UAType;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	int                                                Result;                                                   // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     ExtraJson;                                                // 0x0008(0x0010) (ZeroConstructor)
-	struct FString                                     RetsultMsg;                                               // 0x0018(0x0010) (ZeroConstructor)
+	EUnifiedAccountType UAType; // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0001(0x0003) MISSED OFFSET
+	int Result; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString ExtraJson; // 0x0008(0x0010) (ZeroConstructor)
+	struct FString RetsultMsg; // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.SDKCallbackInfoWrapper
 // 0x0028
 struct FSDKCallbackInfoWrapper
 {
-	ESDKCallbackType                                   CallbackType;                                             // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     CallbackParameter;                                        // 0x0008(0x0010) (ZeroConstructor)
-	struct FString                                     ExtraJson;                                                // 0x0018(0x0010) (ZeroConstructor)
+	ESDKCallbackType CallbackType; // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString CallbackParameter; // 0x0008(0x0010) (ZeroConstructor)
+	struct FString ExtraJson; // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.WakeupInfoWrapper
 // 0x0050
 struct FWakeupInfoWrapper
 {
-	TMap<struct FString, struct FString>               FWakeupInfoMap;                                           // 0x0000(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString> FWakeupInfoMap; // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct Client.PlatformFriendInfoMap
 // 0x0058
 struct FPlatformFriendInfoMap
 {
-	int                                                page;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	TMap<struct FString, struct FString>               friendsInfo;                                              // 0x0008(0x0050) (ZeroConstructor)
+	int page; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	TMap<struct FString, struct FString> friendsInfo; // 0x0008(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct Client.NoschatGroupInfomation
 // 0x0030
 struct FNoschatGroupInfomation
 {
-	struct FString                                     OpenIdList;                                               // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     MemberNum;                                                // 0x0010(0x0010) (ZeroConstructor)
-	struct FString                                     ChatRoomURL;                                              // 0x0020(0x0010) (ZeroConstructor)
+	struct FString OpenIdList; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString MemberNum; // 0x0010(0x0010) (ZeroConstructor)
+	struct FString ChatRoomURL; // 0x0020(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.GroupInfoWrapper
 // 0x0050
 struct FGroupInfoWrapper
 {
-	int                                                SnsAction;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                flag;                                                     // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ErrorCode;                                                // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Platform;                                                 // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     Desc;                                                     // 0x0010(0x0010) (ZeroConstructor)
-	struct FNoschatGroupInfomation                     noschatGroupInfo;                                         // 0x0020(0x0030)
+	int SnsAction; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int flag; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int ErrorCode; // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	int Platform; // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString Desc; // 0x0010(0x0010) (ZeroConstructor)
+	struct FNoschatGroupInfomation noschatGroupInfo; // 0x0020(0x0030)
 };
 
 // ScriptStruct Client.DownloaderInfo
 // 0x0040
 struct FDownloaderInfo
 {
-	EFDownloaderStateEnum                              State;                                                    // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     FileSavePath;                                             // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               Result;                                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-	int                                                BytesSent;                                                // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                BytesReceived;                                            // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ContentType;                                              // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ResponseCode;                                             // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	struct FString                                     StringContent;                                            // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Client.IMSDKPictureInfomation
-// 0x0038
-struct FIMSDKPictureInfomation
-{
-	EIMSDKScreenDir                                    PicScreenDir;                                             // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     PicPath;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     HashValue;                                                // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     PicTitle;                                                 // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-};
-
-// ScriptStruct Client.IMSDKNoticeInfo
-// 0x00E0
-struct FIMSDKNoticeInfo
-{
-	struct FString                                     MsgID;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     OpenID;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgUrl;                                                   // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	EIMSDKNoticeType                                   MsgType;                                                  // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	struct FString                                     MsgScene;                                                 // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     StartTime;                                                // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     EndTime;                                                  // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	EIMSDKContentType                                  MsgContentType;                                           // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
-	struct FString                                     MsgOrder;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     ContentUrl;                                               // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FIMSDKPictureInfomation>             PicArray;                                                 // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgTitle;                                                 // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     msgContent;                                               // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgEditCond;                                              // 0x00C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     LoginTimes;                                               // 0x00D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-};
-
-// ScriptStruct Client.WidgetMountData
-// 0x0048
-struct FWidgetMountData
-{
-	struct FMargin                                     MarginData;                                               // 0x0000(0x0010) (IsPlainOldData)
-	struct FAnchors                                    AnchorsData;                                              // 0x0010(0x0010)
-	struct FVector2D                                   Position;                                                 // 0x0020(0x0008) (IsPlainOldData)
-	struct FString                                     MountName;                                                // 0x0028(0x0010) (ZeroConstructor)
-	struct FString                                     MountOuterName;                                           // 0x0038(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Client.InGameWidgetData
-// 0x0080
-struct FInGameWidgetData
-{
-	int                                                bAutoShow;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FGameWidgetConfig                           GameWidgetConfig;                                         // 0x0008(0x0030)
-	struct FWidgetMountData                            WidgetMountData;                                          // 0x0038(0x0048)
-};
-
-// ScriptStruct Client.DynamicWidgetData
-// 0x0098
-struct FDynamicWidgetData
-{
-	bool                                               bAutoDestory;                                             // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     MountModule;                                              // 0x0008(0x0010) (ZeroConstructor)
-	struct FInGameWidgetData                           InGameWidgetData;                                         // 0x0018(0x0080)
-};
-
-// ScriptStruct Client.DynamicWidgetAsyncLoadData
-// 0x00B8
-struct FDynamicWidgetAsyncLoadData
-{
-	struct FString                                     WidgetKey;                                                // 0x0000(0x0010) (ZeroConstructor)
-	struct FDynamicWidgetData                          DynamicWidgetData;                                        // 0x0010(0x0098)
-	struct FScriptDelegate                             Callback;                                                 // 0x00A8(0x0016) (ZeroConstructor, InstancedReference)
-};
-
-// ScriptStruct Client.LobbyBgMatData
-// 0x0010
-struct FLobbyBgMatData
-{
-	TEnumAsByte<enum ELobbyBgMatType>                  matType;                                                  // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UMaterialInstance*                           matPtr;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	EFDownloaderStateEnum State; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString FileSavePath; // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool Result; // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x3]; // 0x0019(0x0003) MISSED OFFSET
+	int BytesSent; // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int BytesReceived; // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ContentType; // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ResponseCode; // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x002C(0x0004) MISSED OFFSET
+	struct FString StringContent; // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Client.AABBBox
 // 0x0018
 struct FAABBBox
 {
-	struct FVector                                     Min;                                                      // 0x0000(0x000C) (IsPlainOldData)
-	struct FVector                                     Max;                                                      // 0x000C(0x000C) (IsPlainOldData)
+	struct FVector Min; // 0x0000(0x000C) (IsPlainOldData)
+	struct FVector Max; // 0x000C(0x000C) (IsPlainOldData)
 };
 
 // ScriptStruct Client.LuaBPVar
 // 0x0020
 struct FLuaBPVar
 {
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0000(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Client.ScatterPlotPoint
 // 0x000C
 struct FScatterPlotPoint
 {
-	struct FVector2D                                   Position;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D Position; // 0x0000(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	float Weight; // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Client.TouchInputRecord
 // 0x0030
 struct FTouchInputRecord
 {
-	TArray<float>                                      Times;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FVector2D>                           Positions;                                                // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<int>                                        Types;                                                    // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<float> Times; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FVector2D> Positions; // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<int> Types; // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Client.FightFriendChat
 // 0x0038
 struct FFightFriendChat
 {
-	struct FString                                     UID;                                                      // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     Name;                                                     // 0x0010(0x0010) (ZeroConstructor)
-	struct FString                                     Msg;                                                      // 0x0020(0x0010) (ZeroConstructor)
-	bool                                               selfMsg;                                                  // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct Client.PlayerFinishedGuide
-// 0x0008
-struct FPlayerFinishedGuide
-{
-	int                                                GuideID;                                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                FinishedCounts;                                           // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FString UID; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString Name; // 0x0010(0x0010) (ZeroConstructor)
+	struct FString Msg; // 0x0020(0x0010) (ZeroConstructor)
+	bool selfMsg; // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Client.SavFileData
 // 0x0018
 struct FSavFileData
 {
-	int                                                CompressedSize;                                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                UnCompressedSize;                                         // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<unsigned char>                              ByteArray;                                                // 0x0008(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Client.CustomSettingSaveGame
-// 0x0018
-struct FCustomSettingSaveGame
-{
-	struct FString                                     LayoutSlotName;                                           // 0x0000(0x0010) (ZeroConstructor)
-	class USaveGame*                                   SaveGame;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Client.AssetAsyncRequest
-// 0x0020
-struct FAssetAsyncRequest
-{
-	struct FString                                     Path;                                                     // 0x0000(0x0010) (ZeroConstructor)
-	struct FScriptDelegate                             Callback;                                                 // 0x0010(0x0016) (ZeroConstructor, InstancedReference)
+	int CompressedSize; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int UncompressedSize; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<unsigned char> ByteArray; // 0x0008(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.MetaDataHolder
 // 0x0050
 struct FMetaDataHolder
 {
-	TMap<struct FString, struct FString>               MetaData;                                                 // 0x0000(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-};
-
-// ScriptStruct Client.PingServerInfo
-// 0x0030
-struct FPingServerInfo
-{
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
-};
-
-// ScriptStruct Client.VibrateEntity
-// 0x0048
-struct FVibrateEntity
-{
-	int                                                AssetId;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     AssetAbsPath;                                             // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                PlayAmplitude;                                            // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	struct FString                                     PlayKeyParam;                                             // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                PlayPriority;                                             // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PlayDuration;                                             // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsLoop;                                                  // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsValid;                                                 // 0x0039(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x003A(0x0002) MISSED OFFSET
-	float                                              PushTime;                                                 // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EVibrateTriggerEventType                           EventType;                                                // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	TMap<struct FString, struct FString> MetaData; // 0x0000(0x0050) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct Client.VibrateTriggerMainItem
 // 0x0018
 struct FVibrateTriggerMainItem
 {
-	EVibrateTriggerMainItemType                        MainItemType;                                             // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Client.VibrateTriggerSubItem
-// 0x0018
-struct FVibrateTriggerSubItem
-{
-	EVibrateTriggerSubItemType                         SubItemType;                                              // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     Data;                                                     // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EVibrateTriggerMainItemType MainItemType; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString Data; // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Client.VibrateTriggerAction
 // 0x0038
 struct FVibrateTriggerAction
 {
-	int                                                VibrateAmplitude;                                         // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FVibrateTriggerMainItem                     TriggerMainItem;                                          // 0x0008(0x0018) (Edit, BlueprintVisible)
-	TArray<struct FVibrateTriggerSubItem>              TriggerSubItemList;                                       // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	EVibrateTriggerEventType                           TriggerEventType;                                         // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EVibrateTriggerActionType                          TriggerActionType;                                        // 0x0031(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
+	int VibrateAmplitude; // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FVibrateTriggerMainItem TriggerMainItem; // 0x0008(0x0018) (Edit, BlueprintVisible)
+	TArray<struct FVibrateTriggerSubItem> TriggerSubItemList; // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EVibrateTriggerEventType TriggerEventType; // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EVibrateTriggerActionType TriggerActionType; // 0x0031(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x0032(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Client.VibrateEntity
+// 0x0048
+struct FVibrateEntity
+{
+	int AssetId; // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FString AssetAbsPath; // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int PlayAmplitude; // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x001C(0x0004) MISSED OFFSET
+	struct FString PlayKeyParam; // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int PlayPriority; // 0x0030(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float PlayDuration; // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsLoop; // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bIsValid; // 0x0039(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x2]; // 0x003A(0x0002) MISSED OFFSET
+	float PushTime; // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EVibrateTriggerEventType EventType; // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x7]; // 0x0041(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct Client.PingServerInfo
+// 0x0030
+struct FPingServerInfo
+{
+	unsigned char UnknownData00[0x30]; // 0x0000(0x0030) MISSED OFFSET
 };
 
 // ScriptStruct Client.VerInfoWrapper
 // 0x0050
 struct FVerInfoWrapper
 {
-	TMap<struct FString, struct FString>               VerData;                                                  // 0x0000(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FString> VerData; // 0x0000(0x0050) (ZeroConstructor)
+};
+
+// ScriptStruct Client.PlayerFinishedGuide
+// 0x0008
+struct FPlayerFinishedGuide
+{
+	int GuideID; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int FinishedCounts; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Client.LoadTaskCfg
 // 0x0018
 struct FLoadTaskCfg
 {
-	struct FString                                     ObjectPath;                                               // 0x0000(0x0010) (ZeroConstructor)
-	int                                                LoadPriority;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FString ObjectPath; // 0x0000(0x0010) (ZeroConstructor)
+	int LoadPriority; // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Client.VersionConfig
 // 0x0100
 struct FVersionConfig
 {
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0000(0x0100) MISSED OFFSET
+	unsigned char UnknownData00[0x100]; // 0x0000(0x0100) MISSED OFFSET
 };
 
 // ScriptStruct Client.Version
 // 0x0090
 struct FVersion
 {
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0000(0x0090) MISSED OFFSET
+	unsigned char UnknownData00[0x90]; // 0x0000(0x0090) MISSED OFFSET
 };
 
 // ScriptStruct Client.PatchConfig
 // 0x0080
 struct FPatchConfig
 {
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0000(0x0080) MISSED OFFSET
+	unsigned char UnknownData00[0x80]; // 0x0000(0x0080) MISSED OFFSET
 };
 
 // ScriptStruct Client.PatchURL
 // 0x0028
 struct FPatchURL
 {
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) MISSED OFFSET
+	unsigned char UnknownData00[0x28]; // 0x0000(0x0028) MISSED OFFSET
 };
 
 // ScriptStruct Client.CentauriPack
 // 0x0058
 struct FCentauriPack
 {
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0000(0x0058) MISSED OFFSET
+	unsigned char UnknownData00[0x58]; // 0x0000(0x0058) MISSED OFFSET
 };
 
 // ScriptStruct Client.UploadFinishCallbackInfoWrapper
 // 0x0018
 struct FUploadFinishCallbackInfoWrapper
 {
-	int                                                Result;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     URL;                                                      // 0x0008(0x0010) (ZeroConstructor)
+	int Result; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FString URL; // 0x0008(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.OnRequestPermissionResultWrapper
 // 0x0028
 struct FOnRequestPermissionResultWrapper
 {
-	int                                                code;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     permission;                                               // 0x0008(0x0010) (ZeroConstructor)
-	struct FString                                     grantResult;                                              // 0x0018(0x0010) (ZeroConstructor)
+	int code; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FString permission; // 0x0008(0x0010) (ZeroConstructor)
+	struct FString grantResult; // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.GameMasterInfoWrapper
 // 0x0018
 struct FGameMasterInfoWrapper
 {
-	struct FString                                     EventName;                                                // 0x0000(0x0010) (ZeroConstructor)
-	int                                                Result;                                                   // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FString EventName; // 0x0000(0x0010) (ZeroConstructor)
+	int Result; // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Client.GetTicketInfoWrapper
 // 0x0010
 struct FGetTicketInfoWrapper
 {
-	struct FString                                     Ticket;                                                   // 0x0000(0x0010) (ZeroConstructor)
+	struct FString Ticket; // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.ShortURLInfoWrapper
 // 0x0028
 struct FShortURLInfoWrapper
 {
-	int                                                ErrorCode;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FString                                     Reason;                                                   // 0x0008(0x0010) (ZeroConstructor)
-	struct FString                                     ShortUrl;                                                 // 0x0018(0x0010) (ZeroConstructor)
+	int ErrorCode; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FString Reason; // 0x0008(0x0010) (ZeroConstructor)
+	struct FString ShortUrl; // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.WebviewActionInfo
 // 0x0010
 struct FWebviewActionInfo
 {
-	struct FString                                     URL;                                                      // 0x0000(0x0010) (ZeroConstructor)
+	struct FString URL; // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.PlatformFriendInfo
 // 0x0040
 struct FPlatformFriendInfo
 {
-	struct FString                                     userID;                                                   // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     UserName;                                                 // 0x0010(0x0010) (ZeroConstructor)
-	struct FString                                     headportraitURL;                                          // 0x0020(0x0010) (ZeroConstructor)
-	struct FString                                     OpenID;                                                   // 0x0030(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct Client.DynamicCustomConfig
-// 0x0002
-struct FDynamicCustomConfig
-{
-	bool                                               bIsShowInLobby;                                           // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	bool                                               bIgnoreDPIScale;                                          // 0x0001(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	struct FString UserId; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString UserName; // 0x0010(0x0010) (ZeroConstructor)
+	struct FString headportraitURL; // 0x0020(0x0010) (ZeroConstructor)
+	struct FString OpenID; // 0x0030(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.DelayLoadInlineTextImageStyle
 // 0x00E8 (0x00F0 - 0x0008)
 struct FDelayLoadInlineTextImageStyle : public FSlateWidgetStyle
 {
-	struct FSlateBrush                                 Image;                                                    // 0x0008(0x00B8) (Edit)
-	int16_t                                            Baseline;                                                 // 0x00C0(0x0002) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2E];                                      // 0x00C2(0x002E) MISSED OFFSET
+	struct FSlateBrush Image; // 0x0008(0x00B8) (Edit)
+	int16_t Baseline; // 0x00C0(0x0002) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2E]; // 0x00C2(0x002E) MISSED OFFSET
+};
+
+// ScriptStruct Client.GameWidgetConfig
+// 0x0030
+struct FGameWidgetConfig
+{
+	struct FString Path; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString Container; // 0x0010(0x0010) (ZeroConstructor)
+	int ZOrder; // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0024(0x0004) MISSED OFFSET
+	class UClass* WidgetClass; // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Client.NativeHUDTickContainer
+// 0x000C
+struct FNativeHUDTickContainer
+{
+	int WidgetIndex; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UUAEUserWidget> pWidget; // 0x0004(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct Client.TimeStamp
 // 0x0020
 struct FTimeStamp
 {
-	struct FString                                     Title;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                Priority;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                StartTime;                                                // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                EndTime;                                                  // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+	struct FString Title; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int Priority; // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int StartTime; // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int EndTime; // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Client.BatchDownloadPackHashes
 // 0x0010
 struct FBatchDownloadPackHashes
 {
-	TArray<struct FString>                             Hashes;                                                   // 0x0000(0x0010) (ZeroConstructor)
+	TArray<struct FString> Hashes; // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Client.BatchDownloadPack
 // 0x0030
 struct FBatchDownloadPack
 {
-	TArray<uint32_t>                                   ItemIDs;                                                  // 0x0000(0x0010) (ZeroConstructor)
-	TArray<uint32_t>                                   ErrorCodes;                                               // 0x0010(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
+	TArray<uint32_t> ItemIDs; // 0x0000(0x0010) (ZeroConstructor)
+	TArray<uint32_t> ErrorCodes; // 0x0010(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0020(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Client.PufferDownloadLastTaskStatus
 // 0x0018
 struct FPufferDownloadLastTaskStatus
 {
-	struct FDateTime                                   Time;                                                     // 0x0000(0x0008)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
+	struct FDateTime Time; // 0x0000(0x0008)
+	unsigned char UnknownData00[0x10]; // 0x0008(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Client.PufferObj
 // 0x0018
 struct FPufferObj
 {
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+	unsigned char UnknownData00[0x18]; // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct Client.PufferDownloadStates
 // 0x0030
 struct FPufferDownloadStates
 {
-	TArray<double>                                     speeds;                                                   // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     Filename;                                                 // 0x0010(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
+	TArray<double> speeds; // 0x0000(0x0010) (ZeroConstructor)
+	struct FString Filename; // 0x0010(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x10]; // 0x0020(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Client.IMSDKNoticeInfos
 // 0x0010
 struct FIMSDKNoticeInfos
 {
-	TArray<struct FIMSDKNoticeInfo>                    Infos;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FIMSDKNoticeInfo> Infos; // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
-// ScriptStruct Client.PictureInfomation
-// 0x0028
-struct FPictureInfomation
+// ScriptStruct Client.IMSDKNoticeInfo
+// 0x00E0
+struct FIMSDKNoticeInfo
 {
-	EScreenDir                                         PicScreenDir;                                             // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FString                                     PicPath;                                                  // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     HashValue;                                                // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgID; // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString OpenID; // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgUrl; // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	EIMSDKNoticeType MsgType; // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0031(0x0007) MISSED OFFSET
+	struct FString MsgScene; // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString StartTime; // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString EndTime; // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	EIMSDKContentType MsgContentType; // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0069(0x0007) MISSED OFFSET
+	struct FString MsgOrder; // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString ContentUrl; // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FIMSDKPictureInfomation> PicArray; // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgTitle; // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString msgContent; // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgEditCond; // 0x00C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString LoginTimes; // 0x00D0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
-// ScriptStruct Client.NoticeInfo
-// 0x00D0
-struct FNoticeInfo
+// ScriptStruct Client.IMSDKPictureInfomation
+// 0x0038
+struct FIMSDKPictureInfomation
 {
-	struct FString                                     MsgID;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     OpenID;                                                   // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgUrl;                                                   // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	ENoticeType                                        MsgType;                                                  // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	struct FString                                     MsgScene;                                                 // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     StartTime;                                                // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     EndTime;                                                  // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	EContentType                                       MsgContentType;                                           // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
-	struct FString                                     MsgOrder;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     ContentUrl;                                               // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FPictureInfomation>                  PicArray;                                                 // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgTitle;                                                 // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     msgContent;                                               // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FString                                     MsgEditCond;                                              // 0x00C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	EIMSDKScreenDir PicScreenDir; // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString PicPath; // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString HashValue; // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString PicTitle; // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct Client.NoticeInfos
 // 0x0010
 struct FNoticeInfos
 {
-	TArray<struct FNoticeInfo>                         Infos;                                                    // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FNoticeInfo> Infos; // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Client.NoticeInfo
+// 0x00D0
+struct FNoticeInfo
+{
+	struct FString MsgID; // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString OpenID; // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgUrl; // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	ENoticeType MsgType; // 0x0030(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0031(0x0007) MISSED OFFSET
+	struct FString MsgScene; // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString StartTime; // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString EndTime; // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	EContentType MsgContentType; // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0069(0x0007) MISSED OFFSET
+	struct FString MsgOrder; // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString ContentUrl; // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FPictureInfomation> PicArray; // 0x0090(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgTitle; // 0x00A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString msgContent; // 0x00B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString MsgEditCond; // 0x00C0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Client.PictureInfomation
+// 0x0028
+struct FPictureInfomation
+{
+	EScreenDir PicScreenDir; // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString PicPath; // 0x0008(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FString HashValue; // 0x0018(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+};
+
+// ScriptStruct Client.WidgetMountData
+// 0x0048
+struct FWidgetMountData
+{
+	struct FMargin MarginData; // 0x0000(0x0010) (IsPlainOldData)
+	struct FAnchors AnchorsData; // 0x0010(0x0010)
+	struct FVector2D Position; // 0x0020(0x0008) (IsPlainOldData)
+	struct FString MountName; // 0x0028(0x0010) (ZeroConstructor)
+	struct FString MountOuterName; // 0x0038(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Client.InGameWidgetData
+// 0x0080
+struct FInGameWidgetData
+{
+	int bAutoShow; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FGameWidgetConfig GameWidgetConfig; // 0x0008(0x0030)
+	struct FWidgetMountData WidgetMountData; // 0x0038(0x0048)
+};
+
+// ScriptStruct Client.DynamicWidgetData
+// 0x0098
+struct FDynamicWidgetData
+{
+	bool bAutoDestory; // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString MountModule; // 0x0008(0x0010) (ZeroConstructor)
+	struct FInGameWidgetData InGameWidgetData; // 0x0018(0x0080)
+};
+
+// ScriptStruct Client.DynamicWidgetAsyncLoadData
+// 0x00B8
+struct FDynamicWidgetAsyncLoadData
+{
+	struct FString WidgetKey; // 0x0000(0x0010) (ZeroConstructor)
+	struct FDynamicWidgetData DynamicWidgetData; // 0x0010(0x0098)
+	struct FScriptDelegate Callback; // 0x00A8(0x0010) (ZeroConstructor, InstancedReference)
 };
 
 // ScriptStruct Client.UEComplianceResult
-// 0x00A8
+// 0x00E0
 struct FUEComplianceResult
 {
-	int                                                AdultStatus;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ParentCertificateStatus;                                  // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                EUUserAgreeStatus;                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                AdultAge;                                                 // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                GameGrade;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                CertificateType;                                          // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEEA;                                                    // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-	int                                                MethodId;                                                 // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                RetCode;                                                  // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ThirdCode;                                                // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ThirdMsg;                                                 // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ParentCertificateStatusExpiration;                        // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     CountryCode;                                              // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     AdultStatusExpiration;                                    // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     TS;                                                       // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Region;                                                   // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     RetMsg;                                                   // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ExtraJson;                                                // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int AdultStatus; // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ParentCertificateStatus; // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int EUUserAgreeStatus; // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int AdultAge; // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int GameGrade; // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int CertificateType; // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsEEA; // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0019(0x0003) MISSED OFFSET
+	int MethodId; // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int RetCode; // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ThirdCode; // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString ThirdMsg; // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ParentCertificateStatusExpiration; // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString CountryCode; // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString AdultStatusExpiration; // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString TS; // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Region; // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString RetMsg; // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ExtraJson; // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int VoiceControlStatus; // 0x00A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int NeedAdultVerification; // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int AdultVerificationStatus; // 0x00B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int NeedParentAdultVerification; // 0x00B4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ParentAdultVerificationStatus; // 0x00B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x00BC(0x0004) MISSED OFFSET
+	struct FString AdultVerificationCompleteTS; // 0x00C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString ParentAdultVerificationCompleteTS; // 0x00D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct Client.LobbyBgMatData
+// 0x0010
+struct FLobbyBgMatData
+{
+	TEnumAsByte<enum ELobbyBgMatType> matType; // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	class UMaterialInstance* matPtr; // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Client.ArrayLuaBPVar
 // 0x0020
 struct FArrayLuaBPVar
 {
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0000(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Client.MapLuaBPVar
 // 0x0020
 struct FMapLuaBPVar
 {
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+	unsigned char UnknownData00[0x20]; // 0x0000(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Client.LobbyTeamState
 // 0x0008
 struct FLobbyTeamState
 {
-	int                                                UID;                                                      // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                team_state;                                               // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	int UID; // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	int team_state; // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Client.SDKCallbackWrapper
 // 0x0028
 struct FSDKCallbackWrapper
 {
-	ESDKCallbackMethodId                               MethodId;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
-	struct FString                                     RetJson;                                                  // 0x0008(0x0010) (ZeroConstructor)
-	struct FString                                     ExtraJson;                                                // 0x0018(0x0010) (ZeroConstructor)
+	ESDKCallbackMethodId MethodId; // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x1]; // 0x0000(0x0001) FIX WRONG TYPE SIZE OF PREVIOUS PROPERTY
+	unsigned char UnknownData01[0x6]; // 0x0002(0x0006) MISSED OFFSET
+	struct FString RetJson; // 0x0008(0x0010) (ZeroConstructor)
+	struct FString ExtraJson; // 0x0018(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Client.AssetAsyncRequest
+// 0x0020
+struct FAssetAsyncRequest
+{
+	struct FString Path; // 0x0000(0x0010) (ZeroConstructor)
+	struct FScriptDelegate Callback; // 0x0010(0x0010) (ZeroConstructor, InstancedReference)
+};
+
+// ScriptStruct Client.VibrateTriggerSubItem
+// 0x0018
+struct FVibrateTriggerSubItem
+{
+	EVibrateTriggerSubItemType SubItemType; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FString Data; // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Client.VibrateTriggerCondition
 // 0x0038
 struct FVibrateTriggerCondition
 {
-	bool                                               bOnlyMatchMainItemType;                                   // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	struct FVibrateTriggerMainItem                     TriggerMainItem;                                          // 0x0008(0x0018) (Edit, BlueprintVisible)
-	TArray<struct FVibrateTriggerSubItem>              TriggerSubItemList;                                       // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	EVibrateTriggerEventType                           TriggerEventType;                                         // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	bool bOnlyMatchMainItemType; // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0001(0x0007) MISSED OFFSET
+	struct FVibrateTriggerMainItem TriggerMainItem; // 0x0008(0x0018) (Edit, BlueprintVisible)
+	TArray<struct FVibrateTriggerSubItem> TriggerSubItemList; // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EVibrateTriggerEventType TriggerEventType; // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Client.VibrateAssetItemConfig
 // 0x0080
 struct FVibrateAssetItemConfig
 {
-	int                                                AssetId;                                                  // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FVibrateTriggerCondition                    TriggerCondition;                                         // 0x0008(0x0038) (Edit, BlueprintVisible)
-	struct FString                                     AssetPath;                                                // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     PlayKeyParam;                                             // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              AutoStopTime;                                             // 0x0060(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                PlayPriority;                                             // 0x0064(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              PlayDuration;                                             // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
-	struct FString                                     AbsPath;                                                  // 0x0070(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int AssetId; // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0004(0x0004) MISSED OFFSET
+	struct FVibrateTriggerCondition TriggerCondition; // 0x0008(0x0038) (Edit, BlueprintVisible)
+	struct FString AssetPath; // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString PlayKeyParam; // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float AutoStopTime; // 0x0060(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int PlayPriority; // 0x0064(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float PlayDuration; // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x006C(0x0004) MISSED OFFSET
+	struct FString AbsPath; // 0x0070(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 }

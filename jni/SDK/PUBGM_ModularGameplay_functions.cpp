@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function ModularGameplay.GameFrameworkComponentManager.RemoveReceiver
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Receiver                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Receiver (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGameFrameworkComponentManager::RemoveReceiver(class AActor* Receiver)
 {
@@ -35,8 +35,8 @@ void UGameFrameworkComponentManager::RemoveReceiver(class AActor* Receiver)
 // Function ModularGameplay.GameFrameworkComponentManager.AddReceiver
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Receiver                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAddOnlyInGameWorlds           (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Receiver (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAddOnlyInGameWorlds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UGameFrameworkComponentManager::AddReceiver(class AActor* Receiver, bool bAddOnlyInGameWorlds)
 {

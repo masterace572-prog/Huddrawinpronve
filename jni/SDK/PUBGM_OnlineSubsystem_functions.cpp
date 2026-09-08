@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 Match                          (Parm, ZeroConstructor)
-// bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Match (Parm, ZeroConstructor)
+// bool bDidBecomeActive (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, bool bDidBecomeActive)
 {
@@ -36,7 +36,7 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FString                 Match                          (Parm, ZeroConstructor)
+// struct FString Match (Parm, ZeroConstructor)
 
 void UTurnBasedMatchInterface::OnMatchEnded(const struct FString& Match)
 {

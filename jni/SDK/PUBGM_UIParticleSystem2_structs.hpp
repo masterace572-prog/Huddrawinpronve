@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -11,11 +11,11 @@ namespace SDK
 // Enum UIParticleSystem2.UIMeshProjectionMethod
 enum class EUIMeshProjectionMethod : uint8_t
 {
-	YOZOrtho                       = 0,
-	XOYOrtho                       = 1,
-	YOZPerspectiveFullScreen       = 2,
-	YOZPerspectiveLocal            = 3,
-	UIMeshProjectionMethod_MAX     = 4
+	YOZOrtho = 0,
+	XOYOrtho = 1,
+	YOZPerspectiveFullScreen = 2,
+	YOZPerspectiveLocal = 3,
+	UIMeshProjectionMethod_MAX = 4
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,12 +13,11 @@ namespace SDK
 class UNamedInterfaces : public UObject
 {
 public:
-	TArray<struct FNamedInterface>                     NamedInterfaces;                                          // 0x0028(0x0010) (ZeroConstructor)
-	TArray<struct FNamedInterfaceDef>                  NamedInterfaceDefs;                                       // 0x0038(0x0010) (ZeroConstructor, Config)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
+	TArray<struct FNamedInterface> NamedInterfaces; // 0x0028(0x0010) (ZeroConstructor)
+	TArray<struct FNamedInterfaceDef> NamedInterfaceDefs; // 0x0038(0x0010) (ZeroConstructor, Config)
+	unsigned char UnknownData00[0x18]; // 0x0048(0x0018) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
@@ -34,8 +33,7 @@ class UTurnBasedMatchInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");

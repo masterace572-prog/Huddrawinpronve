@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,19 +13,18 @@ namespace SDK
 class UBlocky3DVarWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsBPInit;                                                 // 0x0288(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
-	struct FString                                     X;                                                        // 0x0290(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Y;                                                        // 0x02A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Z;                                                        // 0x02B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                StartSlotIdx;                                             // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsBPInit; // 0x0288(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0289(0x0007) MISSED OFFSET
+	struct FString X; // 0x0290(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Y; // 0x02A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString Z; // 0x02B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int StartSlotIdx; // 0x02C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x4]; // 0x02C4(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.Blocky3DVarWidget");
@@ -44,14 +43,13 @@ public:
 class UBlockyBlockDisplayWidget : public UUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0260(0x0010) MISSED OFFSET
-	class UBlockyGraphData*                            BlockyGraphData;                                          // 0x0270(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   BlockSize;                                                // 0x0278(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	bool                                               Movable;                                                  // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0260(0x0010) MISSED OFFSET
+	class UBlockyGraphData* BlockyGraphData; // 0x0270(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FVector2D BlockSize; // 0x0278(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	bool Movable; // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0281(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockDisplayWidget");
@@ -66,12 +64,11 @@ public:
 class UBlockyBlockDisplayWidget_Custom : public UBlockyBlockDisplayWidget
 {
 public:
-	class UCustomConfig*                               Config;                                                   // 0x0288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     BlockName;                                                // 0x0290(0x0010) (ZeroConstructor)
-	TArray<struct FString>                             ParamName;                                                // 0x02A0(0x0010) (ZeroConstructor)
+	class UCustomConfig* Config; // 0x0288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString BlockName; // 0x0290(0x0010) (ZeroConstructor)
+	TArray<struct FString> ParamName; // 0x02A0(0x0010) (ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockDisplayWidget_Custom");
@@ -90,8 +87,7 @@ class UBlockyBlockDisplayWidget_Preset : public UBlockyBlockDisplayWidget
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockDisplayWidget_Preset");
@@ -108,14 +104,13 @@ public:
 class UBlockyBlockDisplayWidget_Variable : public UBlockyBlockDisplayWidget
 {
 public:
-	class UNamedVar*                                   NamedVar;                                                 // 0x0288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HasSettingIcon;                                           // 0x0290(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HasCopyIcon;                                              // 0x0291(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEditingDisplay;                                         // 0x0292(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x0293(0x0005) MISSED OFFSET
+	class UNamedVar* NamedVar; // 0x0288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool HasSettingIcon; // 0x0290(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool HasCopyIcon; // 0x0291(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsEditingDisplay; // 0x0292(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x5]; // 0x0293(0x0005) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockDisplayWidget_Variable");
@@ -133,16 +128,15 @@ public:
 class UBlockyBlockListWidget : public UUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0260(0x0028) MISSED OFFSET
-	class UBlockyBlockWindowWidget*                    HostWindow;                                               // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              HorizontalMoveCheckDelta;                                 // 0x0290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              VerticalMoveCheckDelta;                                   // 0x0294(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsOpenComment;                                            // 0x0298(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0299(0x0007) MISSED OFFSET
-	class UBlockyBlockListItemObject*                  PointAtListItem;                                          // 0x02A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x28]; // 0x0260(0x0028) MISSED OFFSET
+	class UBlockyBlockWindowWidget* HostWindow; // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float HorizontalMoveCheckDelta; // 0x0290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float VerticalMoveCheckDelta; // 0x0294(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsOpenComment; // 0x0298(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0299(0x0007) MISSED OFFSET
+	class UBlockyBlockListItemObject* PointAtListItem; // 0x02A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockListWidget");
@@ -157,12 +151,11 @@ public:
 class UBlockyBlockWindowWidget : public UUserWidget
 {
 public:
-	class UBlockyGraphData*                            GraphWidget;                                              // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlockyBlockListWidget*                      WidgetToPaint;                                            // 0x0268(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0270(0x0008) MISSED OFFSET
+	class UBlockyGraphData* GraphWidget; // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockyBlockListWidget* WidgetToPaint; // 0x0268(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x8]; // 0x0270(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBlockWindowWidget");
@@ -182,12 +175,11 @@ public:
 class UBlockyBooleanWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyBooleanWidget");
@@ -205,17 +197,16 @@ public:
 class UBlockyCategoryItemWidget : public UUserWidget
 {
 public:
-	int                                                Index;                                                    // 0x0260(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0264(0x0004) MISSED OFFSET
-	struct FText                                       Name;                                                     // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	bool                                               IsScrolling;                                              // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0281(0x000F) MISSED OFFSET
-	class UBlockyCategoryWidget*                       HostWidget;                                               // 0x0290(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UScrollBox*                                  SubScrollBox;                                             // 0x0298(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x02A0(0x0008) MISSED OFFSET
+	int Index; // 0x0260(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0264(0x0004) MISSED OFFSET
+	struct FText Name; // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	bool IsScrolling; // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0xF]; // 0x0281(0x000F) MISSED OFFSET
+	class UBlockyCategoryWidget* HostWidget; // 0x0290(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UScrollBox* SubScrollBox; // 0x0298(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData02[0x8]; // 0x02A0(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyCategoryItemWidget");
@@ -227,6 +218,7 @@ public:
 	void OnScroll();
 	void OnClick();
 	void InitWithItemObject(class UBlockyCategoryItemObject* Item);
+	void InitTextToShow();
 };
 
 
@@ -235,16 +227,15 @@ public:
 class UBlockyCategoryWidget : public UUserWidget
 {
 public:
-	class UBlockyGraphData*                            GraphWidget;                                              // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      CategoryItemWidgetType;                                   // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FText                                       CategoryName;                                             // 0x0270(0x0018) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0288(0x0008) MISSED OFFSET
-	class UScrollBox*                                  SubScrollBox;                                             // 0x0290(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              CurrentScrollOffset;                                      // 0x0298(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x029C(0x0004) MISSED OFFSET
+	class UBlockyGraphData* GraphWidget; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass* CategoryItemWidgetType; // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FText CategoryName; // 0x0270(0x0018) (Edit, BlueprintVisible)
+	unsigned char UnknownData00[0x8]; // 0x0288(0x0008) MISSED OFFSET
+	class UScrollBox* SubScrollBox; // 0x0290(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float CurrentScrollOffset; // 0x0298(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x029C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyCategoryWidget");
@@ -262,14 +253,13 @@ public:
 class UBlockyColorPickerWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FLinearColor>                        RecommendedColors;                                        // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FLinearColor>                        StoredColors;                                             // 0x0298(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FLinearColor> RecommendedColors; // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FLinearColor> StoredColors; // 0x0298(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyColorPickerWidget");
@@ -284,50 +274,50 @@ public:
 
 
 // Class BlockyLua.BlockyEditor
-// 0x0200 (0x0460 - 0x0260)
+// 0x0210 (0x0470 - 0x0260)
 class UBlockyEditor : public UUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0260(0x0008) MISSED OFFSET
-	class UBlockyGraphData*                            GraphData;                                                // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsSlotPreset;                                             // 0x0270(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsLastPresetCategory;                                     // 0x0271(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0272(0x0006) MISSED OFFSET
-	struct FString                                     LastPresetCategory;                                       // 0x0278(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UWidget*                                     MainPanel;                                                // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               IsCustomVarVisable;                                       // 0x0290(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0291(0x0007) MISSED OFFSET
-	class UBlockyEnumWidget*                           EnumWidget;                                               // 0x0298(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyStringWidget*                         StringWidget;                                             // 0x02A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyBooleanWidget*                        BooleanWidget;                                            // 0x02A8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyFloatWidget*                          FloatWidget;                                              // 0x02B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlocky3DVarWidget*                          Var3DWidget;                                              // 0x02B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyIntegerWidget*                        IntegerWidget;                                            // 0x02C0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyColorPickerWidget*                    ColorWidget;                                              // 0x02C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyPresetWidget*                         PresetWidget;                                             // 0x02D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockySelectFromSceneWidget*                SelectFromSceneWidget;                                    // 0x02D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<class UBlockyMenuItemObject*>               CurrentMenuItems;                                         // 0x02E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UBlockyMenuItemObject*                       CurrentSerchMenuItem;                                     // 0x02F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlockyBlockListItemObject*                  ListItemSerchAtPoint;                                     // 0x02F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterial*                                   AnimateMaterial;                                          // 0x0300(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           DeleteUIDockingMaterial;                                  // 0x0308(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           DeleteRangeUIDockingMaterial;                             // 0x0310(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstance*                           DeleteUIBgDockingMaterial;                                // 0x0318(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlockyMenuWidget*                           MenuWidget;                                               // 0x0320(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyCategoryWidget*                       CategoryWidget;                                           // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyBlockWindowWidget*                    BlockWindowWidget;                                        // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyLogWidget*                            BlockyLogWidget;                                          // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              PresetTagTitleY;                                          // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
-	class UBlockyMenuItemWidget*                       CurrentMenuItemWidget;                                    // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TMap<struct FString, class UBlockyBlockListItemObject*> TypeFilterItems;                                          // 0x0350(0x0050) (ZeroConstructor)
-	TMap<struct FString, class UBlockyBlockListItemObject*> TypeFilterArrayItems;                                     // 0x03A0(0x0050) (ZeroConstructor)
-	TArray<class UBlockyMenuItemObject_TypeFilter*>    TypeFilterMenus;                                          // 0x03F0(0x0010) (ZeroConstructor)
-	TArray<class UBlockyCategoryItemObject*>           CurrentSlotPresetCategorys;                               // 0x0400(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x50];                                      // 0x0410(0x0050) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0260(0x0008) MISSED OFFSET
+	class UBlockyGraphData* GraphData; // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsSlotPreset; // 0x0270(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsLastPresetCategory; // 0x0271(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x0272(0x0006) MISSED OFFSET
+	struct FString LastPresetCategory; // 0x0278(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UWidget* MainPanel; // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool IsCustomVarVisable; // 0x0290(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x0291(0x0007) MISSED OFFSET
+	class UBlockyEnumWidget* EnumWidget; // 0x0298(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyStringWidget* StringWidget; // 0x02A0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyBooleanWidget* BooleanWidget; // 0x02A8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyFloatWidget* FloatWidget; // 0x02B0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlocky3DVarWidget* Var3DWidget; // 0x02B8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyIntegerWidget* IntegerWidget; // 0x02C0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyColorPickerWidget* ColorWidget; // 0x02C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyPresetWidget* PresetWidget; // 0x02D0(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockySelectFromSceneWidget* SelectFromSceneWidget; // 0x02D8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UBlockyMenuItemObject*> CurrentMenuItems; // 0x02E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UBlockyMenuItemObject* CurrentSerchMenuItem; // 0x02F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockyBlockListItemObject* ListItemSerchAtPoint; // 0x02F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterial* AnimateMaterial; // 0x0300(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance* DeleteUIDockingMaterial; // 0x0308(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance* DeleteRangeUIDockingMaterial; // 0x0310(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstance* DeleteUIBgDockingMaterial; // 0x0318(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockyMenuWidget* MenuWidget; // 0x0320(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyCategoryWidget* CategoryWidget; // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyBlockWindowWidget* BlockWindowWidget; // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyLogWidget* BlockyLogWidget; // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<class UWidget*> ShortcutBlockingWidgets; // 0x0340(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
+	float PresetTagTitleY; // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x0354(0x0004) MISSED OFFSET
+	class UBlockyMenuItemWidget* CurrentMenuItemWidget; // 0x0358(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TMap<struct FString, class UBlockyBlockListItemObject*> TypeFilterItems; // 0x0360(0x0050) (ZeroConstructor)
+	TMap<struct FString, class UBlockyBlockListItemObject*> TypeFilterArrayItems; // 0x03B0(0x0050) (ZeroConstructor)
+	TArray<class UBlockyMenuItemObject_TypeFilter*> TypeFilterMenus; // 0x0400(0x0010) (ZeroConstructor)
+	TArray<class UBlockyCategoryItemObject*> CurrentSlotPresetCategorys; // 0x0410(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char UnknownData04[0x50]; // 0x0420(0x0050) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyEditor");
@@ -358,6 +348,7 @@ public:
 	class UBlockyMenuItemObject* GetCurrentMenuItem();
 	void CollectListItem(bool bCollect);
 	void BP_OnShowTools(TArray<EBlockyBPToolButtonType> ButtonTypes);
+	void BP_OnBlockyEditorShortcut(EBlockyEditorShortcutKey ShortcutKey);
 	void AddChildBluckyWidget(class UUserWidget* Widget);
 };
 
@@ -367,12 +358,11 @@ public:
 class UBlockyEnumWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyEnumWidget");
@@ -390,12 +380,11 @@ public:
 class UBlockyFloatWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyFloatWidget");
@@ -414,21 +403,20 @@ public:
 class UBlockyGraphWidget : public UUserWidget
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0260(0x0008) MISSED OFFSET
-	class UBlockyGraphData*                            BlockyGraphData;                                          // 0x0268(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UBlockyEditor*                               HostEditor;                                               // 0x0270(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FGraphSettingMap                            GraphSettingsMap;                                         // 0x0278(0x0050) (BlueprintVisible)
-	TArray<int>                                        defaultTags;                                              // 0x02C8(0x0010) (BlueprintVisible, ZeroConstructor)
-	bool                                               IsOnTouch;                                                // 0x02D8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsMoveGraphOnly;                                          // 0x02D9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x02DA(0x0006) MISSED OFFSET
-	struct FScriptDelegate                             OnAsyncLoadBinCompletedHandle;                            // 0x02E0(0x0016) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
-	class UDeleteBlockUI*                              DeleteBlockUI;                                            // 0x02F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsShowSaveTemplate;                                       // 0x02F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x02F9(0x0007) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0260(0x0008) MISSED OFFSET
+	class UBlockyGraphData* BlockyGraphData; // 0x0268(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UBlockyEditor* HostEditor; // 0x0270(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FGraphSettingMap GraphSettingsMap; // 0x0278(0x0050) (BlueprintVisible)
+	TArray<int> defaultTags; // 0x02C8(0x0010) (BlueprintVisible, ZeroConstructor)
+	bool IsOnTouch; // 0x02D8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsMoveGraphOnly; // 0x02D9(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x02DA(0x0006) MISSED OFFSET
+	struct FScriptDelegate OnAsyncLoadBinCompletedHandle; // 0x02E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference)
+	class UDeleteBlockUI* DeleteBlockUI; // 0x02F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsShowSaveTemplate; // 0x02F8(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x02F9(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyGraphWidget");
@@ -529,8 +517,7 @@ class UBlockyGroupItemWidget : public UUserWidget
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyGroupItemWidget");
@@ -545,11 +532,10 @@ public:
 class UBlockyGroupWidget : public UUserWidget
 {
 public:
-	class UButton*                                     BT_AddGroupItem;                                          // 0x0260(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0268(0x0010) MISSED OFFSET
+	class UButton* BT_AddGroupItem; // 0x0260(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0268(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyGroupWidget");
@@ -567,14 +553,13 @@ public:
 class UBlockyIntegerWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NegativeEnable;                                           // 0x0288(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool NegativeEnable; // 0x0288(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0289(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyIntegerWidget");
@@ -593,14 +578,13 @@ public:
 class UBlockyLogItemWidget : public UUserWidget
 {
 public:
-	class UBlockyGraphData*                            GraphWidget;                                              // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBlockyLogWidget*                            LogWidget;                                                // 0x0268(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockBase*                                  BlockBase;                                                // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FString                                     BlockSlotId;                                              // 0x0278(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0288(0x0020) MISSED OFFSET
+	class UBlockyGraphData* GraphWidget; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UBlockyLogWidget* LogWidget; // 0x0268(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockBase* BlockBase; // 0x0270(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FString BlockSlotId; // 0x0278(0x0010) (ZeroConstructor)
+	unsigned char UnknownData00[0x20]; // 0x0288(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLogItemWidget");
@@ -625,12 +609,11 @@ public:
 class UBlockyLogWidget : public UUserWidget
 {
 public:
-	class UBlockyGraphData*                            GraphWidget;                                              // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      LogItemWidgetType;                                        // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0270(0x0020) MISSED OFFSET
+	class UBlockyGraphData* GraphWidget; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass* LogItemWidgetType; // 0x0268(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x20]; // 0x0270(0x0020) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLogWidget");
@@ -659,19 +642,18 @@ public:
 class UBlockyLuaLoopScrollBase : public UScrollBox
 {
 public:
-	bool                                               bDelayLoad;                                               // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0B29(0x0003) MISSED OFFSET
-	float                                              BlockyLuaEdgePadding;                                     // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnRefreshItem;                                            // 0x0B30(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnItemCreated;                                            // 0x0B40(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnChangeData;                                             // 0x0B50(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0xD0];                                      // 0x0B60(0x00D0) MISSED OFFSET
-	class UClass*                                      itemType;                                                 // 0x0C30(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0C38(0x0010) MISSED OFFSET
-	class UCanvasPanel*                                CanvasPanel;                                              // 0x0C48(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bDelayLoad; // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0B29(0x0003) MISSED OFFSET
+	float BlockyLuaEdgePadding; // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate OnRefreshItem; // 0x0B30(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnItemCreated; // 0x0B40(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnChangeData; // 0x0B50(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData01[0xD0]; // 0x0B60(0x00D0) MISSED OFFSET
+	class UClass* itemType; // 0x0C30(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x10]; // 0x0C38(0x0010) MISSED OFFSET
+	class UCanvasPanel* CanvasPanel; // 0x0C48(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLuaLoopScrollBase");
@@ -705,17 +687,16 @@ public:
 class UBlockyLuaLoopScrollBase_MultiItem : public UScrollBox
 {
 public:
-	bool                                               bDelayLoad;                                               // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0B29(0x0003) MISSED OFFSET
-	float                                              BlockyLuaEdgePadding;                                     // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnRefreshItem;                                            // 0x0B30(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnItemCreated;                                            // 0x0B40(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnChangeData;                                             // 0x0B50(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x130];                                     // 0x0B60(0x0130) MISSED OFFSET
-	class UCanvasPanel*                                CanvasPanel;                                              // 0x0C90(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bDelayLoad; // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0B29(0x0003) MISSED OFFSET
+	float BlockyLuaEdgePadding; // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate OnRefreshItem; // 0x0B30(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnItemCreated; // 0x0B40(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnChangeData; // 0x0B50(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char UnknownData01[0x130]; // 0x0B60(0x0130) MISSED OFFSET
+	class UCanvasPanel* CanvasPanel; // 0x0C90(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLuaLoopScrollBase_MultiItem");
@@ -750,13 +731,12 @@ public:
 class UBlockyLuaLoopScrollBox : public UBlockyLuaLoopScrollBase
 {
 public:
-	float                                              ItemSize;                                                 // 0x0C50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Padding;                                                  // 0x0C54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAlignMagnetic;                                           // 0x0C58(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0C59(0x0007) MISSED OFFSET
+	float ItemSize; // 0x0C50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float Padding; // 0x0C54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bAlignMagnetic; // 0x0C58(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0C59(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLuaLoopScrollBox");
@@ -773,13 +753,12 @@ public:
 class UBlockyLuaLoopScrollBox_MultiItem : public UBlockyLuaLoopScrollBase_MultiItem
 {
 public:
-	TMap<class UClass*, float>                         WidgetSizeMap;                                            // 0x0C98(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	TMap<class UClass*, float>                         WidgetPaddingMap;                                         // 0x0CE8(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bAlignMagnetic;                                           // 0x0D38(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0D39(0x0007) MISSED OFFSET
+	TMap<class UClass*, float> WidgetSizeMap; // 0x0C98(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TMap<class UClass*, float> WidgetPaddingMap; // 0x0CE8(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	bool bAlignMagnetic; // 0x0D38(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0D39(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLuaLoopScrollBox_MultiItem");
@@ -799,14 +778,13 @@ public:
 class UBlockyLuaLoopScrollGrid : public UBlockyLuaLoopScrollBase
 {
 public:
-	struct FVector2D                                   ItemSize;                                                 // 0x0C50(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   Padding;                                                  // 0x0C58(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bAlignGrid;                                               // 0x0C60(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAlignAnimation;                                          // 0x0C61(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x16];                                      // 0x0C62(0x0016) MISSED OFFSET
+	struct FVector2D ItemSize; // 0x0C50(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D Padding; // 0x0C58(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	bool bAlignGrid; // 0x0C60(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bAlignAnimation; // 0x0C61(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x16]; // 0x0C62(0x0016) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLuaLoopScrollGrid");
@@ -823,14 +801,13 @@ public:
 class UBlockyMenuItemWidget : public UUserWidget
 {
 public:
-	int                                                Index;                                                    // 0x0260(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0264(0x0004) MISSED OFFSET
-	struct FText                                       Name;                                                     // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	class UBlockyMenuWidget*                           HostWidget;                                               // 0x0280(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockyCategoryItemWidget*                   CurrentCategoryItemWidget;                                // 0x0288(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int Index; // 0x0260(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0264(0x0004) MISSED OFFSET
+	struct FText Name; // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class UBlockyMenuWidget* HostWidget; // 0x0280(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockyCategoryItemWidget* CurrentCategoryItemWidget; // 0x0288(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyMenuItemWidget");
@@ -841,6 +818,7 @@ public:
 	void SetSelected(bool IsSelected);
 	void OnClick();
 	void InitWithItemObject(class UBlockyMenuItemObject* Item);
+	void InitTextToShow();
 };
 
 
@@ -849,12 +827,11 @@ public:
 class UBlockyMenuWidget : public UUserWidget
 {
 public:
-	class UClass*                                      MenuItemWidgetType;                                       // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0268(0x0010) MISSED OFFSET
-	class UBlockyGraphData*                            GraphWidget;                                              // 0x0278(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass* MenuItemWidgetType; // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x10]; // 0x0268(0x0010) MISSED OFFSET
+	class UBlockyGraphData* GraphWidget; // 0x0278(0x0008) (ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyMenuWidget");
@@ -873,13 +850,12 @@ public:
 class UBlockyPresetItemWidget : public UUserWidget
 {
 public:
-	class UPresetDesc*                                 Desc;                                                     // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlockyPresetWidget*                         Host;                                                     // 0x0268(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockySearchWidget*                         SearchHost;                                               // 0x0270(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UScrollBox*                                  SubScrollBox;                                             // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UPresetDesc* Desc; // 0x0260(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockyPresetWidget* Host; // 0x0268(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockySearchWidget* SearchHost; // 0x0270(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UScrollBox* SubScrollBox; // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyPresetItemWidget");
@@ -898,16 +874,15 @@ public:
 class UBlockyPresetWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyEditor*                               HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UButton*                                     Button_FilterAction;                                      // 0x0288(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FString                                     SlotTypeName;                                             // 0x0290(0x0010) (ZeroConstructor)
-	TMap<int, struct FIntArrayWrapper>                 CurrentTages;                                             // 0x02A0(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             CurrentTagesStr;                                          // 0x02F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyEditor* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UButton* Button_FilterAction; // 0x0288(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FString SlotTypeName; // 0x0290(0x0010) (ZeroConstructor)
+	TMap<int, struct FIntArrayWrapper> CurrentTages; // 0x02A0(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FString> CurrentTagesStr; // 0x02F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyPresetWidget");
@@ -934,15 +909,14 @@ public:
 class UBlockyRichTextBlock : public UTextLayoutWidget
 {
 public:
-	struct FText                                       Text;                                                     // 0x0128(0x0018) (Edit)
-	struct FScriptDelegate                             TextDelegate;                                             // 0x0140(0x0016) (ZeroConstructor, InstancedReference)
-	struct FSlateFontInfo                              Font;                                                     // 0x0150(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FLinearColor                                Color;                                                    // 0x01A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	TArray<class URichTextBlockDecorator*>             Decorators;                                               // 0x01B8(0x0010) (Edit, ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x260];                                     // 0x01C8(0x0260) MISSED OFFSET
+	struct FText Text; // 0x0128(0x0018) (Edit)
+	struct FScriptDelegate TextDelegate; // 0x0140(0x0010) (ZeroConstructor, InstancedReference)
+	struct FSlateFontInfo Font; // 0x0150(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FLinearColor Color; // 0x01A8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	TArray<class URichTextBlockDecorator*> Decorators; // 0x01B8(0x0010) (Edit, ExportObject, ZeroConstructor)
+	unsigned char UnknownData00[0x260]; // 0x01C8(0x0260) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyRichTextBlock");
@@ -960,44 +934,43 @@ public:
 class UBlockySearchResultPanel : public UUserWidget
 {
 public:
-	float                                              DrawBottomDelta;                                          // 0x0260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HorizontalMoveCheckDelta;                                 // 0x0264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              VerticalMoveCheckDelta;                                   // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              WhileRefreshBlockSizeY;                                   // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsDragging;                                               // 0x0270(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               IsHorizontalMove;                                         // 0x0271(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0272(0x0002) MISSED OFFSET
-	struct FVector2D                                   TouchStartPosition;                                       // 0x0274(0x0008) (BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   PointAtOffset;                                            // 0x027C(0x0008) (BlueprintVisible, IsPlainOldData)
-	int                                                CurrentCategoryIndex;                                     // 0x0284(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                YOffset;                                                  // 0x0288(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                TotalHeight_Blocks;                                       // 0x028C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                TotalHeight_Graphs;                                       // 0x0290(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                TotalHeight_GraphsTitle;                                  // 0x0294(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ViewHeight;                                               // 0x0298(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                totalHeight;                                              // 0x029C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bNeedUpdateTotalHeight_Graphs;                            // 0x02A0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
-	class UBlockyBlockListItemObject*                  ListItemAtPoint;                                          // 0x02A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UBlockyMenuItemObject_Search> FoundResults;                                             // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class USpacer*                                     BlocksContainer;                                          // 0x02B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBlockyLuaLoopScrollBox_MultiItem*           GraphBlocksContainer;                                     // 0x02C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UClass*                                      GraphBlocksWidgetType;                                    // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      GraphItemBlockWidgetType;                                 // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBlockyGraphData*                            GraphData;                                                // 0x02D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UScrollBox*                                  TabContainer;                                             // 0x02E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bShowComment;                                             // 0x02E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x02E9(0x0003) MISSED OFFSET
-	TWeakObjectPtr<class UBlockyGraph>                 LastSelectedGraph;                                        // 0x02EC(0x0008) (ZeroConstructor, IsPlainOldData)
-	TWeakObjectPtr<class UBlockBase>                   LastSelectedBlock;                                        // 0x02F4(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x02FC(0x0004) MISSED OFFSET
-	TArray<class UBlockyGraph*>                        CollapsedGraphs;                                          // 0x0300(0x0010) (ZeroConstructor)
-	TArray<class UObject*>                             ItemObjectList;                                           // 0x0310(0x0010) (ZeroConstructor)
-	ESearchResultVisibleType                           SearchResultVisibleType;                                  // 0x0320(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0321(0x0007) MISSED OFFSET
+	float DrawBottomDelta; // 0x0260(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float HorizontalMoveCheckDelta; // 0x0264(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float VerticalMoveCheckDelta; // 0x0268(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float WhileRefreshBlockSizeY; // 0x026C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsDragging; // 0x0270(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool IsHorizontalMove; // 0x0271(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x2]; // 0x0272(0x0002) MISSED OFFSET
+	struct FVector2D TouchStartPosition; // 0x0274(0x0008) (BlueprintVisible, IsPlainOldData)
+	struct FVector2D PointAtOffset; // 0x027C(0x0008) (BlueprintVisible, IsPlainOldData)
+	int CurrentCategoryIndex; // 0x0284(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int YOffset; // 0x0288(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int TotalHeight_Blocks; // 0x028C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int TotalHeight_Graphs; // 0x0290(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int TotalHeight_GraphsTitle; // 0x0294(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int ViewHeight; // 0x0298(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int totalHeight; // 0x029C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bNeedUpdateTotalHeight_Graphs; // 0x02A0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x02A1(0x0007) MISSED OFFSET
+	class UBlockyBlockListItemObject* ListItemAtPoint; // 0x02A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UBlockyMenuItemObject_Search> FoundResults; // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class USpacer* BlocksContainer; // 0x02B8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBlockyLuaLoopScrollBox_MultiItem* GraphBlocksContainer; // 0x02C0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UClass* GraphBlocksWidgetType; // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass* GraphItemBlockWidgetType; // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBlockyGraphData* GraphData; // 0x02D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UScrollBox* TabContainer; // 0x02E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bShowComment; // 0x02E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x02E9(0x0003) MISSED OFFSET
+	TWeakObjectPtr<class UBlockyGraph> LastSelectedGraph; // 0x02EC(0x0008) (ZeroConstructor, IsPlainOldData)
+	TWeakObjectPtr<class UBlockBase> LastSelectedBlock; // 0x02F4(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x4]; // 0x02FC(0x0004) MISSED OFFSET
+	TArray<class UBlockyGraph*> CollapsedGraphs; // 0x0300(0x0010) (ZeroConstructor)
+	TArray<class UObject*> ItemObjectList; // 0x0310(0x0010) (ZeroConstructor)
+	ESearchResultVisibleType SearchResultVisibleType; // 0x0320(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData04[0x7]; // 0x0321(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySearchResultPanel");
@@ -1021,19 +994,18 @@ public:
 class UBlockySearchResults_GraphItemWidget : public UUserWidget
 {
 public:
-	struct FVector2D                                   IconSize;                                                 // 0x0260(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FString                                     SearchingStr;                                             // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	struct FString                                     BlockDisplayString;                                       // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TWeakObjectPtr<class UBlockyGraph>                 BlockGraph;                                               // 0x0288(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	TWeakObjectPtr<class UBlockBase>                   bLock;                                                    // 0x0290(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	class UBlockySearchResultPanel*                    HostResultPanel;                                          // 0x0298(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bIsDragging;                                              // 0x02A0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
-	class UImage*                                      BlockIcon;                                                // 0x02A8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBlockyRichTextBlock*                        TextBlock_BlockDisplay;                                   // 0x02B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FVector2D IconSize; // 0x0260(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FString SearchingStr; // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString BlockDisplayString; // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TWeakObjectPtr<class UBlockyGraph> BlockGraph; // 0x0288(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	TWeakObjectPtr<class UBlockBase> bLock; // 0x0290(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	class UBlockySearchResultPanel* HostResultPanel; // 0x0298(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bIsDragging; // 0x02A0(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x02A1(0x0007) MISSED OFFSET
+	class UImage* BlockIcon; // 0x02A8(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBlockyRichTextBlock* TextBlock_BlockDisplay; // 0x02B0(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySearchResults_GraphItemWidget");
@@ -1054,15 +1026,14 @@ public:
 class UBlockySearchResults_GraphWidget : public UUserWidget
 {
 public:
-	class UClass*                                      GraphBlockItemWidgetType;                                 // 0x0260(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FString                                     GraphDisplayName;                                         // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	class UBlockySearchResultPanel*                    HostResultPanel;                                          // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UBlockyGraph>                 BlockGraph;                                               // 0x0280(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bIsDragging;                                              // 0x0288(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
+	class UClass* GraphBlockItemWidgetType; // 0x0260(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FString GraphDisplayName; // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	class UBlockySearchResultPanel* HostResultPanel; // 0x0278(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UBlockyGraph> BlockGraph; // 0x0280(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool bIsDragging; // 0x0288(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x7]; // 0x0289(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySearchResults_GraphWidget");
@@ -1081,16 +1052,15 @@ public:
 class UBlockySearchResultsTab : public UUserWidget
 {
 public:
-	bool                                               IsGraphCategory;                                          // 0x0260(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0261(0x0003) MISSED OFFSET
-	int                                                TabIndex;                                                 // 0x0264(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	struct FText                                       TabDisplayName;                                           // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	bool                                               IsPresetTab;                                              // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
-	class UBlockySearchWidget*                         SearchWidget;                                             // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	bool IsGraphCategory; // 0x0260(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0261(0x0003) MISSED OFFSET
+	int TabIndex; // 0x0264(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FText TabDisplayName; // 0x0268(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	bool IsPresetTab; // 0x0280(0x0001) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0281(0x0007) MISSED OFFSET
+	class UBlockySearchWidget* SearchWidget; // 0x0288(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySearchResultsTab");
@@ -1107,27 +1077,26 @@ public:
 class UBlockySearchWidget : public UUserWidget
 {
 public:
-	TMap<class UBlockyMenuItemObject*, bool>           MenuItemVisibility;                                       // 0x0260(0x0050) (ZeroConstructor)
-	TMap<class UBlockyCategoryItemObject*, bool>       CategoriesVisibility;                                     // 0x02B0(0x0050) (ZeroConstructor)
-	TMap<class UBlockyBlockListItemObject*, bool>      BlockItemsVisibility;                                     // 0x0300(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0350(0x0008) MISSED OFFSET
-	TArray<class UBlockyCategoryItemObject*>           PresetCategorysResults;                                   // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPresetDesc*>                         ResultPresets;                                            // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             PresetsCategorys;                                         // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               IsPresetsSearch;                                          // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
-	class UScrollBox*                                  TabContainer;                                             // 0x0390(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UBlockySearchResultPanel*                    SearchResultPanel;                                        // 0x0398(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FText                                       ContentTabText;                                           // 0x03A0(0x0018) (Edit)
-	class UClass*                                      SearchResultsTabType;                                     // 0x03B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBlockyMenuItemObject_Search*                SearchResults;                                            // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
-	class UBlockyGraphWidget*                          HostGraphWidget;                                          // 0x03C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	ESearchResultVisibleType                           SearchResultVisibleType;                                  // 0x03D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x03D1(0x0007) MISSED OFFSET
-	TArray<struct FString>                             SearchHistories;                                          // 0x03D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TMap<class UBlockyMenuItemObject*, bool> MenuItemVisibility; // 0x0260(0x0050) (ZeroConstructor)
+	TMap<class UBlockyCategoryItemObject*, bool> CategoriesVisibility; // 0x02B0(0x0050) (ZeroConstructor)
+	TMap<class UBlockyBlockListItemObject*, bool> BlockItemsVisibility; // 0x0300(0x0050) (ZeroConstructor)
+	unsigned char UnknownData00[0x8]; // 0x0350(0x0008) MISSED OFFSET
+	TArray<class UBlockyCategoryItemObject*> PresetCategorysResults; // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPresetDesc*> ResultPresets; // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FString> PresetsCategorys; // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool IsPresetsSearch; // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0389(0x0007) MISSED OFFSET
+	class UScrollBox* TabContainer; // 0x0390(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UBlockySearchResultPanel* SearchResultPanel; // 0x0398(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	struct FText ContentTabText; // 0x03A0(0x0018) (Edit)
+	class UClass* SearchResultsTabType; // 0x03B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UBlockyMenuItemObject_Search* SearchResults; // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
+	class UBlockyGraphWidget* HostGraphWidget; // 0x03C8(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	ESearchResultVisibleType SearchResultVisibleType; // 0x03D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char UnknownData02[0x7]; // 0x03D1(0x0007) MISSED OFFSET
+	TArray<struct FString> SearchHistories; // 0x03D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySearchWidget");
@@ -1175,16 +1144,15 @@ public:
 class UBlockySelectFromSceneWidget : public UUserWidget
 {
 public:
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0268(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPresetDesc*                                 PresetDesc;                                               // 0x0288(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UObjectDesc*>                         OtherPresetDescs;                                         // 0x0290(0x0010) (ZeroConstructor)
-	struct FText                                       DefaultShowName;                                          // 0x02A0(0x0018) (Edit, BlueprintVisible)
-	class UObjectDesc*                                 ObjectDesc;                                               // 0x02B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlockBase* LinkedSlotHost; // 0x0260(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x0268(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x0280(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPresetDesc* PresetDesc; // 0x0288(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UObjectDesc*> OtherPresetDescs; // 0x0290(0x0010) (ZeroConstructor)
+	struct FText DefaultShowName; // 0x02A0(0x0018) (Edit, BlueprintVisible)
+	class UObjectDesc* ObjectDesc; // 0x02B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockySelectFromSceneWidget");
@@ -1205,16 +1173,15 @@ public:
 class UBlockyStringWidget : public UUserWidget
 {
 public:
-	TMap<int, struct FSlotData>                        ResultSlotsMap;                                           // 0x0260(0x0050) (ZeroConstructor)
-	class UBlockBase*                                  LinkedSlotHost;                                           // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x02B8(0x0018) MISSED OFFSET
-	class UBlockyGraphData*                            HostWidget;                                               // 0x02D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   TextBoxSize;                                              // 0x02D8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               IsFinishedInput;                                          // 0x02E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x02E1(0x0007) MISSED OFFSET
+	TMap<int, struct FSlotData> ResultSlotsMap; // 0x0260(0x0050) (ZeroConstructor)
+	class UBlockBase* LinkedSlotHost; // 0x02B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x18]; // 0x02B8(0x0018) MISSED OFFSET
+	class UBlockyGraphData* HostWidget; // 0x02D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D TextBoxSize; // 0x02D8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	bool IsFinishedInput; // 0x02E0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x02E1(0x0007) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyStringWidget");
@@ -1230,21 +1197,20 @@ public:
 
 
 // Class BlockyLua.CustomizeEditableText
-// 0x00C0 (0x05A8 - 0x04E8)
+// 0x00C0 (0x05D0 - 0x0510)
 class UCustomizeEditableText : public UEditableText
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x04E8(0x0090) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnTextPreCommitted;                                       // 0x0578(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTextReceiveCommitted;                                   // 0x0588(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	int                                                TextCountLimit;                                           // 0x0598(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SerialId;                                                 // 0x059C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               LimitEmojiInput;                                          // 0x05A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsReceiveCheckStringResult;                               // 0x05A1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x05A2(0x0006) MISSED OFFSET
+	unsigned char UnknownData00[0x90]; // 0x0510(0x0090) MISSED OFFSET
+	struct FScriptMulticastDelegate OnTextPreCommitted; // 0x05A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTextReceiveCommitted; // 0x05B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	int TextCountLimit; // 0x05C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int SerialId; // 0x05C4(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool LimitEmojiInput; // 0x05C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool IsReceiveCheckStringResult; // 0x05C9(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x05CA(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.CustomizeEditableText");
@@ -1265,17 +1231,16 @@ public:
 class UCustomizeEditableTextBox : public UEditableTextBox
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0CB0(0x0090) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnTextPreCommitted;                                       // 0x0D40(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTextReceiveCommitted;                                   // 0x0D50(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	int                                                TextCountLimit;                                           // 0x0D60(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SerialId;                                                 // 0x0D64(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               LimitEmojiInput;                                          // 0x0D68(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsReceiveCheckStringResult;                               // 0x0D69(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0D6A(0x0006) MISSED OFFSET
+	unsigned char UnknownData00[0x90]; // 0x0CB0(0x0090) MISSED OFFSET
+	struct FScriptMulticastDelegate OnTextPreCommitted; // 0x0D40(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTextReceiveCommitted; // 0x0D50(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	int TextCountLimit; // 0x0D60(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int SerialId; // 0x0D64(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool LimitEmojiInput; // 0x0D68(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool IsReceiveCheckStringResult; // 0x0D69(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x0D6A(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.CustomizeEditableTextBox");
@@ -1295,17 +1260,16 @@ public:
 class UCustomizeMultiLineEditableTextBox : public UMultiLineEditableTextBox
 {
 public:
-	unsigned char                                      UnknownData00[0x90];                                      // 0x0EE8(0x0090) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnTextPreCommitted;                                       // 0x0F78(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTextReceiveCommitted;                                   // 0x0F88(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	int                                                TextCountLimit;                                           // 0x0F98(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                SerialId;                                                 // 0x0F9C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               LimitEmojiInput;                                          // 0x0FA0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsReceiveCheckStringResult;                               // 0x0FA1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x0FA2(0x0006) MISSED OFFSET
+	unsigned char UnknownData00[0x90]; // 0x0EE8(0x0090) MISSED OFFSET
+	struct FScriptMulticastDelegate OnTextPreCommitted; // 0x0F78(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate OnTextReceiveCommitted; // 0x0F88(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	int TextCountLimit; // 0x0F98(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int SerialId; // 0x0F9C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool LimitEmojiInput; // 0x0FA0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool IsReceiveCheckStringResult; // 0x0FA1(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x6]; // 0x0FA2(0x0006) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.CustomizeMultiLineEditableTextBox");
@@ -1326,15 +1290,14 @@ public:
 class UDeleteBlockUI : public UObject
 {
 public:
-	struct FBlockRect                                  rect;                                                     // 0x0028(0x0010)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
-	class UBrushData*                                  BrushBG;                                                  // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0050(0x000C) MISSED OFFSET
-	bool                                               IsInArrange;                                              // 0x005C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xB];                                       // 0x005D(0x000B) MISSED OFFSET
+	struct FBlockRect rect; // 0x0028(0x0010)
+	unsigned char UnknownData00[0x10]; // 0x0038(0x0010) MISSED OFFSET
+	class UBrushData* BrushBG; // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0xC]; // 0x0050(0x000C) MISSED OFFSET
+	bool IsInArrange; // 0x005C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0xB]; // 0x005D(0x000B) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.DeleteBlockUI");
@@ -1349,15 +1312,14 @@ public:
 class UBlockyAutoScrollBox : public UScrollBox
 {
 public:
-	EBLOCKYLUA_AUTO_SCROLL_TYPE                        AutoScrollType;                                           // 0x0B28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0B29(0x0003) MISSED OFFSET
-	float                                              RollSpeed;                                                // 0x0B2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StayTimeWhenStart;                                        // 0x0B30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StayTimeWhenEnd;                                          // 0x0B34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0B38(0x0010) MISSED OFFSET
+	EBLOCKYLUA_AUTO_SCROLL_TYPE AutoScrollType; // 0x0B28(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0B29(0x0003) MISSED OFFSET
+	float RollSpeed; // 0x0B2C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float StayTimeWhenStart; // 0x0B30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float StayTimeWhenEnd; // 0x0B34(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x10]; // 0x0B38(0x0010) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyAutoScrollBox");
@@ -1375,27 +1337,26 @@ public:
 class UBlockyLoopScrollBase : public UScrollBox
 {
 public:
-	bool                                               bDelayLoad;                                               // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0B29(0x0003) MISSED OFFSET
-	float                                              BlockyLuaEdgePadding;                                     // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnRefreshItem;                                            // 0x0B30(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnItemCreated;                                            // 0x0B40(0x0010) (ZeroConstructor, InstancedReference)
-	struct FScriptMulticastDelegate                    OnChangeData;                                             // 0x0B50(0x0010) (ZeroConstructor, InstancedReference)
-	unsigned char                                      UnknownData01[0xE8];                                      // 0x0B60(0x00E8) MISSED OFFSET
-	bool                                               bViewSizeInit;                                            // 0x0C48(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0C49(0x0003) MISSED OFFSET
-	float                                              LastPresetTitleOffset;                                    // 0x0C4C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x20];                                      // 0x0C50(0x0020) MISSED OFFSET
-	class UBlockyPresetWidget*                         Host;                                                     // 0x0C70(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBlockySearchWidget*                         SearchHost;                                               // 0x0C78(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x0C80(0x0008) MISSED OFFSET
-	class UClass*                                      ItemString;                                               // 0x0C88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ItemIcon;                                                 // 0x0C90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x10];                                      // 0x0C98(0x0010) MISSED OFFSET
-	class UCanvasPanel*                                CanvasPanel;                                              // 0x0CA8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool bDelayLoad; // 0x0B28(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0B29(0x0003) MISSED OFFSET
+	float BlockyLuaEdgePadding; // 0x0B2C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FScriptMulticastDelegate OnRefreshItem; // 0x0B30(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnItemCreated; // 0x0B40(0x0010) (ZeroConstructor, InstancedReference)
+	struct FScriptMulticastDelegate OnChangeData; // 0x0B50(0x0010) (ZeroConstructor, InstancedReference)
+	unsigned char UnknownData01[0xE8]; // 0x0B60(0x00E8) MISSED OFFSET
+	bool bViewSizeInit; // 0x0C48(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData02[0x3]; // 0x0C49(0x0003) MISSED OFFSET
+	float LastPresetTitleOffset; // 0x0C4C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData03[0x20]; // 0x0C50(0x0020) MISSED OFFSET
+	class UBlockyPresetWidget* Host; // 0x0C70(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlockySearchWidget* SearchHost; // 0x0C78(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char UnknownData04[0x8]; // 0x0C80(0x0008) MISSED OFFSET
+	class UClass* ItemString; // 0x0C88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass* ItemIcon; // 0x0C90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData05[0x10]; // 0x0C98(0x0010) MISSED OFFSET
+	class UCanvasPanel* CanvasPanel; // 0x0CA8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLoopScrollBase");
@@ -1430,15 +1391,14 @@ public:
 class UBlockyLoopScrollBox : public UBlockyLoopScrollBase
 {
 public:
-	struct FVector2D                                   StringItemSize;                                           // 0x0CB0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   IconItemSize;                                             // 0x0CB8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   StringItemPadding;                                        // 0x0CC0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   IconItemPadding;                                          // 0x0CC8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bAlignMagnetic;                                           // 0x0CD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x17];                                      // 0x0CD1(0x0017) MISSED OFFSET
+	struct FVector2D StringItemSize; // 0x0CB0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D IconItemSize; // 0x0CB8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D StringItemPadding; // 0x0CC0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D IconItemPadding; // 0x0CC8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	bool bAlignMagnetic; // 0x0CD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x17]; // 0x0CD1(0x0017) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLoopScrollBox");
@@ -1456,14 +1416,13 @@ public:
 class UBlockyLoopScrollGrid : public UBlockyLoopScrollBase
 {
 public:
-	struct FVector2D                                   ItemSize;                                                 // 0x0CB0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	struct FVector2D                                   Padding;                                                  // 0x0CB8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	bool                                               bAlignGrid;                                               // 0x0CC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bAlignAnimation;                                          // 0x0CC1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x16];                                      // 0x0CC2(0x0016) MISSED OFFSET
+	struct FVector2D ItemSize; // 0x0CB0(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	struct FVector2D Padding; // 0x0CB8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	bool bAlignGrid; // 0x0CC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool bAlignAnimation; // 0x0CC1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x16]; // 0x0CC2(0x0016) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class BlockyLua.BlockyLoopScrollGrid");

@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,11 +11,11 @@ namespace SDK
 // Function TPlanGame.BackpackComponentTPlan.PickupItemFromWrapperDetail
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// EBattleItemClientPickupType    BattleItemClientPickupType     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// EBattleItemClientPickupType BattleItemClientPickupType (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::PickupItemFromWrapperDetail(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason, EBattleItemClientPickupType BattleItemClientPickupType)
 {
@@ -44,10 +44,10 @@ bool UBackpackComponentTPlan::PickupItemFromWrapperDetail(const struct FItemDefi
 // Function TPlanGame.BackpackComponentTPlan.PickItem_IntoSafetyBox
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FBattleItemPickupInfo   PickupInfo                     (ConstParm, Parm, OutParm, ReferenceParm)
-// EBattleItemPickupReason        Reason                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FBattleItemPickupInfo PickupInfo (ConstParm, Parm, OutParm, ReferenceParm)
+// EBattleItemPickupReason Reason (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::PickItem_IntoSafetyBox(const struct FItemDefineID& DefineID, const struct FBattleItemPickupInfo& PickupInfo, EBattleItemPickupReason Reason)
 {
@@ -75,7 +75,7 @@ bool UBackpackComponentTPlan::PickItem_IntoSafetyBox(const struct FItemDefineID&
 // Function TPlanGame.BackpackComponentTPlan.NotifyItemUpdated
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBackpackComponentTPlan::NotifyItemUpdated(const struct FItemDefineID& DefineID)
 {
@@ -99,7 +99,7 @@ void UBackpackComponentTPlan::NotifyItemUpdated(const struct FItemDefineID& Defi
 // Function TPlanGame.BackpackComponentTPlan.NotifyItemRemoved
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FItemDefineID DefineID (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBackpackComponentTPlan::NotifyItemRemoved(const struct FItemDefineID& DefineID)
 {
@@ -144,10 +144,10 @@ void UBackpackComponentTPlan::NotifyItemListUpdated()
 // Function TPlanGame.BackpackComponentTPlan.ChangeItemStoreAreaNewInner
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::ChangeItemStoreAreaNewInner(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -175,10 +175,10 @@ bool UBackpackComponentTPlan::ChangeItemStoreAreaNewInner(const struct FItemDefi
 // Function TPlanGame.BackpackComponentTPlan.ChangeItemStoreAreaNew
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::ChangeItemStoreAreaNew(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -206,10 +206,10 @@ bool UBackpackComponentTPlan::ChangeItemStoreAreaNew(const struct FItemDefineID&
 // Function TPlanGame.BackpackComponentTPlan.ChangeItemStoreAreaInner
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::ChangeItemStoreAreaInner(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -237,10 +237,10 @@ bool UBackpackComponentTPlan::ChangeItemStoreAreaInner(const struct FItemDefineI
 // Function TPlanGame.BackpackComponentTPlan.ChangeItemStoreArea
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FItemDefineID           DefineID                       (Parm)
-// int                            InItemNum                      (Parm, ZeroConstructor, IsPlainOldData)
-// EItemStoreArea                 InItemStoreArea                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FItemDefineID DefineID (Parm)
+// int InItemNum (Parm, ZeroConstructor, IsPlainOldData)
+// EItemStoreArea InItemStoreArea (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBackpackComponentTPlan::ChangeItemStoreArea(const struct FItemDefineID& DefineID, int InItemNum, EItemStoreArea InItemStoreArea)
 {
@@ -310,7 +310,7 @@ void UBackpackTPlanUtils::RegisterInvokeClass()
 // Function TPlanGame.BackpackTPlanUtils.RealGetBPUtils
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBackpackBlueprintTPlanUtils* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBackpackBlueprintTPlanUtils* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UBackpackBlueprintTPlanUtils* UBackpackTPlanUtils::RealGetBPUtils()
 {
@@ -482,7 +482,7 @@ void UMetroStoreComponent::OnRep_BuyFrequence()
 // Function TPlanGame.XTGameMode.SetStateLeftTime
 // (Native, Public)
 // Parameters:
-// int                            LeftTime                       (Parm, ZeroConstructor, IsPlainOldData)
+// int LeftTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void AXTGameMode::SetStateLeftTime(int LeftTime)
 {
@@ -506,7 +506,7 @@ void AXTGameMode::SetStateLeftTime(int LeftTime)
 // Function TPlanGame.XTGameMode.SetPlayerStartOccupied
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  PlayerStart                    (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* PlayerStart (Parm, ZeroConstructor, IsPlainOldData)
 
 void AXTGameMode::SetPlayerStartOccupied(class AActor* PlayerStart)
 {
@@ -530,10 +530,10 @@ void AXTGameMode::SetPlayerStartOccupied(class AActor* PlayerStart)
 // Function TPlanGame.XTGameMode.RevisePlayerTombBoxDropWrapperList
 // (Native, Public, HasOutParms)
 // Parameters:
-// class ASTExtraBaseCharacter*   Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FPickUpItemData> OutItemDataList                (Parm, OutParm, ZeroConstructor)
-// class ASTExtraBaseCharacter*   DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InstanceIDCnt                  (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FPickUpItemData> OutItemDataList (Parm, OutParm, ZeroConstructor)
+// class ASTExtraBaseCharacter* DamageCauser (Parm, ZeroConstructor, IsPlainOldData)
+// int InstanceIDCnt (Parm, ZeroConstructor, IsPlainOldData)
 
 void AXTGameMode::RevisePlayerTombBoxDropWrapperList(class ASTExtraBaseCharacter* Character, class ASTExtraBaseCharacter* DamageCauser, int InstanceIDCnt, TArray<struct FPickUpItemData>* OutItemDataList)
 {
@@ -562,9 +562,9 @@ void AXTGameMode::RevisePlayerTombBoxDropWrapperList(class ASTExtraBaseCharacter
 // Function TPlanGame.XTGameMode.NotifyPlayerExitWhenNotStarted
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 Reason                         (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Reason (Parm, ZeroConstructor)
 
 void AXTGameMode::NotifyPlayerExitWhenNotStarted(uint32_t PlayerKey, const struct FName& PlayerType, const struct FString& Reason)
 {
@@ -590,14 +590,14 @@ void AXTGameMode::NotifyPlayerExitWhenNotStarted(uint32_t PlayerKey, const struc
 // Function TPlanGame.XTGameMode.NotifyPlayerExit
 // (Native, Public)
 // Parameters:
-// uint32_t                       PlayerKey                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   PlayerType                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDestroyPlayerController       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDestroyCharacter              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSendFailure                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 FailureMessage                 (Parm, ZeroConstructor)
-// struct FName                   ParamState                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 ParamReason                    (Parm, ZeroConstructor)
+// uint32_t PlayerKey (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName PlayerType (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDestroyPlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDestroyCharacter (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSendFailure (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString FailureMessage (Parm, ZeroConstructor)
+// struct FName ParamState (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString ParamReason (Parm, ZeroConstructor)
 
 void AXTGameMode::NotifyPlayerExit(uint32_t PlayerKey, const struct FName& PlayerType, bool bDestroyPlayerController, bool bDestroyCharacter, bool bSendFailure, const struct FString& FailureMessage, const struct FName& ParamState, const struct FString& ParamReason)
 {
@@ -670,8 +670,8 @@ void AXTGameMode::LoadMapFinished()
 // Function TPlanGame.XTGameMode.IsNeedRestPlayerStart
 // (Final, Native, Public)
 // Parameters:
-// class AController*             Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* Player (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AXTGameMode::IsNeedRestPlayerStart(class AController* Player)
 {
@@ -760,7 +760,7 @@ void AXTGameMode::GMShowAssetBox()
 // Function TPlanGame.XTGameMode.GMSetPVEAIMax
 // (Final, Exec, Native, Public)
 // Parameters:
-// int                            Num                            (Parm, ZeroConstructor, IsPlainOldData)
+// int Num (Parm, ZeroConstructor, IsPlainOldData)
 
 void AXTGameMode::GMSetPVEAIMax(int Num)
 {
@@ -784,7 +784,7 @@ void AXTGameMode::GMSetPVEAIMax(int Num)
 // Function TPlanGame.XTGameMode.GetOccupiedPlayerStartGroupList
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> AXTGameMode::GetOccupiedPlayerStartGroupList()
 {
@@ -809,7 +809,7 @@ TArray<class AActor*> AXTGameMode::GetOccupiedPlayerStartGroupList()
 // Function TPlanGame.XTGameMode.CheckNoHumanExist
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AXTGameMode::CheckNoHumanExist()
 {
@@ -918,7 +918,7 @@ void AXTGameState::OnRep_LastLeaveTime()
 // Function TPlanGame.XTGameState.GetPlayerMilitartyOnClient
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AXTGameState::GetPlayerMilitartyOnClient()
 {
@@ -943,8 +943,8 @@ int AXTGameState::GetPlayerMilitartyOnClient()
 // Function TPlanGame.XTGameState.CheckPreciousItemPrice
 // (Final, Native, Public)
 // Parameters:
-// int                            TypeSpecificID                 (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int TypeSpecificID (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int AXTGameState::CheckPreciousItemPrice(int TypeSpecificID)
 {
@@ -970,8 +970,8 @@ int AXTGameState::CheckPreciousItemPrice(int TypeSpecificID)
 // Function TPlanGame.XTGameState.BroadcastClimbHelicopter
 // (Net, NetReliable, Native, Event, NetMulticast, Public, NetValidate)
 // Parameters:
-// class ASTExtraPlayerCharacter* Character                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ExitActor                      (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraPlayerCharacter* Character (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ExitActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void AXTGameState::BroadcastClimbHelicopter(class ASTExtraPlayerCharacter* Character, class AActor* ExitActor)
 {
@@ -1243,7 +1243,7 @@ void AXTPlayerState::OnPlayerEscaped()
 // Function TPlanGame.XTPlayerState.IsInGame
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AXTPlayerState::IsInGame()
 {
@@ -1268,7 +1268,7 @@ bool AXTPlayerState::IsInGame()
 // Function TPlanGame.XTPlayerState.IsInBetrayState
 // (Native, Public)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AXTPlayerState::IsInBetrayState()
 {
@@ -1293,7 +1293,7 @@ bool AXTPlayerState::IsInBetrayState()
 // Function TPlanGame.XTPlayerState.GetAllPreciousItemsList
 // (Final, Native, Public)
 // Parameters:
-// TArray<struct FPreciousItem>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FPreciousItem> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FPreciousItem> AXTPlayerState::GetAllPreciousItemsList()
 {

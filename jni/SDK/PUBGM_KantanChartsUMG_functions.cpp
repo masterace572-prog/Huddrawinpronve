@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function KantanChartsUMG.KantanChart.SetUpdateTickRate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanChart::SetUpdateTickRate(float InRate)
 {
@@ -35,7 +35,7 @@ void UKantanChart::SetUpdateTickRate(float InRate)
 // Function KantanChartsUMG.KantanChart.SetMargins
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMargin                 InMargins                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMargin InMargins (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanChart::SetMargins(const struct FMargin& InMargins)
 {
@@ -59,7 +59,7 @@ void UKantanChart::SetMargins(const struct FMargin& InMargins)
 // Function KantanChartsUMG.KantanChart.SetChartTitlePadding
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMargin                 InPadding                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMargin InPadding (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanChart::SetChartTitlePadding(const struct FMargin& InPadding)
 {
@@ -83,7 +83,7 @@ void UKantanChart::SetChartTitlePadding(const struct FMargin& InPadding)
 // Function KantanChartsUMG.KantanChart.SetChartTitle
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   InTitle                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FText InTitle (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanChart::SetChartTitle(const struct FText& InTitle)
 {
@@ -107,8 +107,8 @@ void UKantanChart::SetChartTitle(const struct FText& InTitle)
 // Function KantanChartsUMG.KantanCategoryChart.AddCategoryStyleOverride
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// struct FName CategoryId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
 
 void UKantanCategoryChart::AddCategoryStyleOverride(const struct FName& CategoryId, const struct FLinearColor& Color)
 {
@@ -133,7 +133,7 @@ void UKantanCategoryChart::AddCategoryStyleOverride(const struct FName& Category
 // Function KantanChartsUMG.KantanBarChartBase.SetValueAxisConfig
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCartesianAxisConfig    InCfg                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCartesianAxisConfig InCfg (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanBarChartBase::SetValueAxisConfig(const struct FCartesianAxisConfig& InCfg)
 {
@@ -157,7 +157,7 @@ void UKantanBarChartBase::SetValueAxisConfig(const struct FCartesianAxisConfig& 
 // Function KantanChartsUMG.KantanBarChartBase.SetOrientation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EKantanBarChartOrientation     InOrientation                  (Parm, ZeroConstructor, IsPlainOldData)
+// EKantanBarChartOrientation InOrientation (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanBarChartBase::SetOrientation(EKantanBarChartOrientation InOrientation)
 {
@@ -181,7 +181,7 @@ void UKantanBarChartBase::SetOrientation(EKantanBarChartOrientation InOrientatio
 // Function KantanChartsUMG.KantanBarChartBase.SetMaxBarValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InMaxValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// float InMaxValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanBarChartBase::SetMaxBarValue(float InMaxValue)
 {
@@ -205,7 +205,7 @@ void UKantanBarChartBase::SetMaxBarValue(float InMaxValue)
 // Function KantanChartsUMG.KantanBarChartBase.SetLabelPosition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EKantanBarLabelPosition        InPosition                     (Parm, ZeroConstructor, IsPlainOldData)
+// EKantanBarLabelPosition InPosition (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanBarChartBase::SetLabelPosition(EKantanBarLabelPosition InPosition)
 {
@@ -229,7 +229,7 @@ void UKantanBarChartBase::SetLabelPosition(EKantanBarLabelPosition InPosition)
 // Function KantanChartsUMG.KantanBarChartBase.SetExtentsDisplay
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// EKantanBarValueExtents         InExtents                      (Parm, ZeroConstructor, IsPlainOldData)
+// EKantanBarValueExtents InExtents (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanBarChartBase::SetExtentsDisplay(EKantanBarValueExtents InExtents)
 {
@@ -253,7 +253,7 @@ void UKantanBarChartBase::SetExtentsDisplay(EKantanBarValueExtents InExtents)
 // Function KantanChartsUMG.KantanBarChartBase.SetBarToGapRatio
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRatio                        (Parm, ZeroConstructor, IsPlainOldData)
+// float InRatio (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanBarChartBase::SetBarToGapRatio(float InRatio)
 {
@@ -277,8 +277,8 @@ void UKantanBarChartBase::SetBarToGapRatio(float InRatio)
 // Function KantanChartsUMG.BarChart.SetDatasource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 InDatasource                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* InDatasource (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBarChart::SetDatasource(class UObject* InDatasource)
 {
@@ -304,7 +304,7 @@ bool UBarChart::SetDatasource(class UObject* InDatasource)
 // Function KantanChartsUMG.KantanCartesianChartBase.SetYAxisConfig
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCartesianAxisConfig    InCfg                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCartesianAxisConfig InCfg (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanCartesianChartBase::SetYAxisConfig(const struct FCartesianAxisConfig& InCfg)
 {
@@ -328,7 +328,7 @@ void UKantanCartesianChartBase::SetYAxisConfig(const struct FCartesianAxisConfig
 // Function KantanChartsUMG.KantanCartesianChartBase.SetXAxisConfig
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCartesianAxisConfig    InCfg                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCartesianAxisConfig InCfg (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanCartesianChartBase::SetXAxisConfig(const struct FCartesianAxisConfig& InCfg)
 {
@@ -352,8 +352,8 @@ void UKantanCartesianChartBase::SetXAxisConfig(const struct FCartesianAxisConfig
 // Function KantanChartsUMG.KantanCartesianChartBase.SetPlotScaleByRange
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FCartesianAxisRange     InRangeX                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FCartesianAxisRange     InRangeY                       (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCartesianAxisRange InRangeX (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCartesianAxisRange InRangeY (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanCartesianChartBase::SetPlotScaleByRange(const struct FCartesianAxisRange& InRangeX, const struct FCartesianAxisRange& InRangeY)
 {
@@ -378,8 +378,8 @@ void UKantanCartesianChartBase::SetPlotScaleByRange(const struct FCartesianAxisR
 // Function KantanChartsUMG.KantanCartesianChartBase.SetPlotScale
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               inScale                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector2D               InFocalCoords                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D inScale (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector2D InFocalCoords (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanCartesianChartBase::SetPlotScale(const struct FVector2D& inScale, const struct FVector2D& InFocalCoords)
 {
@@ -404,7 +404,7 @@ void UKantanCartesianChartBase::SetPlotScale(const struct FVector2D& inScale, co
 // Function KantanChartsUMG.KantanCartesianChartBase.SetDataPointSize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EKantanDataPointSize> InSize                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EKantanDataPointSize> InSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanCartesianChartBase::SetDataPointSize(TEnumAsByte<enum EKantanDataPointSize> InSize)
 {
@@ -428,7 +428,7 @@ void UKantanCartesianChartBase::SetDataPointSize(TEnumAsByte<enum EKantanDataPoi
 // Function KantanChartsUMG.KantanCartesianChartBase.SetAxisTitlePadding
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMargin                 InPadding                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMargin InPadding (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanCartesianChartBase::SetAxisTitlePadding(const struct FMargin& InPadding)
 {
@@ -452,8 +452,8 @@ void UKantanCartesianChartBase::SetAxisTitlePadding(const struct FMargin& InPadd
 // Function KantanChartsUMG.KantanCartesianChartBase.EnableSeries
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanCartesianChartBase::EnableSeries(const struct FName& ID, bool bEnable)
 {
@@ -478,9 +478,9 @@ void UKantanCartesianChartBase::EnableSeries(const struct FName& ID, bool bEnabl
 // Function KantanChartsUMG.KantanCartesianChartBase.ConfigureSeries
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDrawPoints                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bDrawLines                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDrawPoints (Parm, ZeroConstructor, IsPlainOldData)
+// bool bDrawLines (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanCartesianChartBase::ConfigureSeries(const struct FName& ID, bool bDrawPoints, bool bDrawLines)
 {
@@ -506,9 +506,9 @@ void UKantanCartesianChartBase::ConfigureSeries(const struct FName& ID, bool bDr
 // Function KantanChartsUMG.KantanCartesianChartBase.AddSeriesStyleOverride
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UKantanPointStyle*       PointStyle                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// struct FName SeriesId (Parm, ZeroConstructor, IsPlainOldData)
+// class UKantanPointStyle* PointStyle (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
 
 void UKantanCartesianChartBase::AddSeriesStyleOverride(const struct FName& SeriesId, class UKantanPointStyle* PointStyle, const struct FLinearColor& Color)
 {
@@ -534,8 +534,8 @@ void UKantanCartesianChartBase::AddSeriesStyleOverride(const struct FName& Serie
 // Function KantanChartsUMG.CartesianPlot.SetDatasource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 InDatasource                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* InDatasource (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UCartesianPlot::SetDatasource(class UObject* InDatasource)
 {
@@ -561,7 +561,7 @@ bool UCartesianPlot::SetDatasource(class UObject* InDatasource)
 // Function KantanChartsUMG.KantanChartLegend.SetSeriesPadding
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMargin                 InPadding                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMargin InPadding (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanChartLegend::SetSeriesPadding(const struct FMargin& InPadding)
 {
@@ -585,7 +585,7 @@ void UKantanChartLegend::SetSeriesPadding(const struct FMargin& InPadding)
 // Function KantanChartsUMG.KantanChartLegend.SetMargins
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FMargin                 InMargins                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FMargin InMargins (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UKantanChartLegend::SetMargins(const struct FMargin& InMargins)
 {
@@ -609,7 +609,7 @@ void UKantanChartLegend::SetMargins(const struct FMargin& InMargins)
 // Function KantanChartsUMG.KantanChartLegend.SetFontSize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InFontSize                     (Parm, ZeroConstructor, IsPlainOldData)
+// int InFontSize (Parm, ZeroConstructor, IsPlainOldData)
 
 void UKantanChartLegend::SetFontSize(int InFontSize)
 {
@@ -633,7 +633,7 @@ void UKantanChartLegend::SetFontSize(int InFontSize)
 // Function KantanChartsUMG.KantanChartLegend.SetChart
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UKantanCartesianChartBase* InChart                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UKantanCartesianChartBase* InChart (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UKantanChartLegend::SetChart(class UKantanCartesianChartBase* InChart)
 {
@@ -657,7 +657,7 @@ void UKantanChartLegend::SetChart(class UKantanCartesianChartBase* InChart)
 // Function KantanChartsUMG.KantanChartLegend.SetBackground
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSlateBrush             InBrush                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSlateBrush InBrush (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UKantanChartLegend::SetBackground(const struct FSlateBrush& InBrush)
 {
@@ -681,9 +681,9 @@ void UKantanChartLegend::SetBackground(const struct FSlateBrush& InBrush)
 // Function KantanChartsUMG.SimpleBarChart.BP_UpdateCategoryValue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleBarChart::BP_UpdateCategoryValue(const struct FName& ID, float Value, bool* bSuccess)
 {
@@ -711,8 +711,8 @@ void USimpleBarChart::BP_UpdateCategoryValue(const struct FName& ID, float Value
 // Function KantanChartsUMG.SimpleBarChart.BP_RemoveCategory
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleBarChart::BP_RemoveCategory(const struct FName& ID, bool* bSuccess)
 {
@@ -760,9 +760,9 @@ void USimpleBarChart::BP_RemoveAllCategories()
 // Function KantanChartsUMG.SimpleBarChart.BP_AddCategoryWithId
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleBarChart::BP_AddCategoryWithId(const struct FName& ID, const struct FText& Name, bool* bSuccess)
 {
@@ -790,8 +790,8 @@ void USimpleBarChart::BP_AddCategoryWithId(const struct FName& ID, const struct 
 // Function KantanChartsUMG.SimpleBarChart.BP_AddCategory
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   Name                           (Parm)
-// struct FName                   CatId                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// struct FName CatId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleBarChart::BP_AddCategory(const struct FText& Name, struct FName* CatId)
 {
@@ -818,8 +818,8 @@ void USimpleBarChart::BP_AddCategory(const struct FText& Name, struct FName* Cat
 // Function KantanChartsUMG.SimpleCartesianPlot.BP_RemoveSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleCartesianPlot::BP_RemoveSeries(const struct FName& ID, bool* bSuccess)
 {
@@ -867,12 +867,12 @@ void USimpleCartesianPlot::BP_RemoveAllSeries()
 // Function KantanChartsUMG.SimpleCartesianPlot.BP_AddSeriesWithId
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowPoints                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowLines                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowPoints (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowLines (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleCartesianPlot::BP_AddSeriesWithId(const struct FName& ID, const struct FText& Name, bool bEnabled, bool bShowPoints, bool bShowLines, bool* bSuccess)
 {
@@ -903,11 +903,11 @@ void USimpleCartesianPlot::BP_AddSeriesWithId(const struct FName& ID, const stru
 // Function KantanChartsUMG.SimpleCartesianPlot.BP_AddSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowPoints                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowLines                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowPoints (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowLines (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleCartesianPlot::BP_AddSeries(const struct FText& Name, bool bEnabled, bool bShowPoints, bool bShowLines, struct FName* SeriesId)
 {
@@ -937,9 +937,9 @@ void USimpleCartesianPlot::BP_AddSeries(const struct FText& Name, bool bEnabled,
 // Function KantanChartsUMG.SimpleCartesianPlot.BP_AddDatapoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleCartesianPlot::BP_AddDatapoint(const struct FName& SeriesId, const struct FVector2D& Point, bool* bSuccess)
 {
@@ -967,8 +967,8 @@ void USimpleCartesianPlot::BP_AddDatapoint(const struct FName& SeriesId, const s
 // Function KantanChartsUMG.SimpleTimeSeriesPlot.BP_RemoveSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleTimeSeriesPlot::BP_RemoveSeries(const struct FName& ID, bool* bSuccess)
 {
@@ -1016,12 +1016,12 @@ void USimpleTimeSeriesPlot::BP_RemoveAllSeries()
 // Function KantanChartsUMG.SimpleTimeSeriesPlot.BP_AddSeriesWithId
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowPoints                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowLines                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName ID (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowPoints (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowLines (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleTimeSeriesPlot::BP_AddSeriesWithId(const struct FName& ID, const struct FText& Name, bool bEnabled, bool bShowPoints, bool bShowLines, bool* bSuccess)
 {
@@ -1052,11 +1052,11 @@ void USimpleTimeSeriesPlot::BP_AddSeriesWithId(const struct FName& ID, const str
 // Function KantanChartsUMG.SimpleTimeSeriesPlot.BP_AddSeries
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Name                           (Parm)
-// bool                           bEnabled                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowPoints                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShowLines                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Name (Parm)
+// bool bEnabled (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowPoints (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShowLines (Parm, ZeroConstructor, IsPlainOldData)
 
 void USimpleTimeSeriesPlot::BP_AddSeries(const struct FText& Name, bool bEnabled, bool bShowPoints, bool bShowLines, struct FName* SeriesId)
 {
@@ -1086,9 +1086,9 @@ void USimpleTimeSeriesPlot::BP_AddSeries(const struct FText& Name, bool bEnabled
 // Function KantanChartsUMG.SimpleTimeSeriesPlot.BP_AddDatapointNow
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleTimeSeriesPlot::BP_AddDatapointNow(const struct FName& SeriesId, float Value, bool* bSuccess)
 {
@@ -1116,9 +1116,9 @@ void USimpleTimeSeriesPlot::BP_AddDatapointNow(const struct FName& SeriesId, flo
 // Function KantanChartsUMG.SimpleTimeSeriesPlot.BP_AddDatapoint
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   SeriesId                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FName SeriesId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D Point (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool bSuccess (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void USimpleTimeSeriesPlot::BP_AddDatapoint(const struct FName& SeriesId, const struct FVector2D& Point, bool* bSuccess)
 {
@@ -1146,8 +1146,8 @@ void USimpleTimeSeriesPlot::BP_AddDatapoint(const struct FName& SeriesId, const 
 // Function KantanChartsUMG.TimeSeriesPlot.SetDatasource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 InDatasource                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* InDatasource (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UTimeSeriesPlot::SetDatasource(class UObject* InDatasource)
 {

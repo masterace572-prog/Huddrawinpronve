@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -11,10 +11,10 @@ namespace SDK
 // Enum GeneralNode.EGNActionState
 enum class EGNActionState : uint8_t
 {
-	EGNActionState__Uninitialized  = 0,
-	EGNActionState__DelayRun       = 1,
-	EGNActionState__Running        = 2,
-	EGNActionState__Finished       = 3,
+	EGNActionState__Uninitialized = 0,
+	EGNActionState__DelayRun = 1,
+	EGNActionState__Running = 2,
+	EGNActionState__Finished = 3,
 	EGNActionState__EGNActionState_MAX = 4
 };
 
@@ -22,14 +22,14 @@ enum class EGNActionState : uint8_t
 // Enum GeneralNode.EGNRunRole
 enum class EGNRunRole : uint8_t
 {
-	EGNRunRole__All                = 0,
-	EGNRunRole__Authority          = 1,
-	EGNRunRole__Autonomous         = 2,
-	EGNRunRole__Simulated          = 3,
+	EGNRunRole__All = 0,
+	EGNRunRole__Authority = 1,
+	EGNRunRole__Autonomous = 2,
+	EGNRunRole__Simulated = 3,
 	EGNRunRole__AutonomousSimulated = 4,
 	EGNRunRole__AutonomousAuthority = 5,
 	EGNRunRole__AuthoritySimulated = 6,
-	EGNRunRole__EGNRunRole_MAX     = 7
+	EGNRunRole__EGNRunRole_MAX = 7
 };
 
 
@@ -38,75 +38,75 @@ enum class EGNRunRole : uint8_t
 //Script Structs
 //---------------------By BangJO---------------------------
 
-// ScriptStruct GeneralNode.GNUniqueInstancedNodeKey
-// 0x0010
-struct FGNUniqueInstancedNodeKey
+// ScriptStruct GeneralNode.GNMultiSharedDelegateWrap
+// 0x0018
+struct FGNMultiSharedDelegateWrap
 {
-	class UObject*                                     Object;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       Key;                                                      // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct GeneralNode.GNContext
-// 0x0010
-struct FGNContext
-{
-	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     SourceObject;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct GeneralNode.GNTargetContext
-// 0x0020
-struct FGNTargetContext
-{
-	TArray<class UObject*>                             Targets;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FVector>                             TargetLocations;                                          // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct GeneralNode.GNActionInstance
-// 0x0070
-struct FGNActionInstance
-{
-	class UGNAction*                                   Action;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FGNContext                                  Context;                                                  // 0x0008(0x0010) (Edit)
-	struct FGNTargetContext                            TargetContext;                                            // 0x0018(0x0020) (Edit)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0038(0x0038) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0000(0x0008) MISSED OFFSET
+	class UObject* Outer; // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0010(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct GeneralNode.GNSharedDelegateWrap
 // 0x0018
 struct FGNSharedDelegateWrap
 {
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UObject*                                     Outer;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0000(0x0008) MISSED OFFSET
+	class UObject* Outer; // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData01[0x8]; // 0x0010(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct GeneralNode.GNMultiSharedDelegateWrap
-// 0x0018
-struct FGNMultiSharedDelegateWrap
+// ScriptStruct GeneralNode.GNUniqueInstancedNodeKey
+// 0x0010
+struct FGNUniqueInstancedNodeKey
 {
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UObject*                                     Outer;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+	class UObject* Object; // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName Key; // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct GeneralNode.GNComponentPicker
 // 0x0010
 struct FGNComponentPicker
 {
-	class UClass*                                      ComponentClass;                                           // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ComponentTag;                                             // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass* ComponentClass; // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName ComponentTag; // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct GeneralNode.GNContext
+// 0x0010
+struct FGNContext
+{
+	class AActor* Owner; // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UObject* SourceObject; // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct GeneralNode.GNActionRunData
 // 0x0048
 struct FGNActionRunData
 {
-	class UGNAction*                                   Action;                                                   // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UGNCondition*>                        Conditions;                                               // 0x0008(0x0010) (Edit, ZeroConstructor)
-	TArray<class UGNTargetPicker*>                     TargetPickers;                                            // 0x0018(0x0010) (Edit, ZeroConstructor)
-	TArray<class UGNTargetFilter*>                     TargetFilters;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
-	struct FGNContext                                  Context;                                                  // 0x0038(0x0010) (Edit)
+	class UGNAction* Action; // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UGNCondition*> Conditions; // 0x0008(0x0010) (Edit, ZeroConstructor)
+	TArray<class UGNTargetPicker*> TargetPickers; // 0x0018(0x0010) (Edit, ZeroConstructor)
+	TArray<class UGNTargetFilter*> TargetFilters; // 0x0028(0x0010) (Edit, ZeroConstructor)
+	struct FGNContext Context; // 0x0038(0x0010) (Edit)
+};
+
+// ScriptStruct GeneralNode.GNTargetContext
+// 0x0020
+struct FGNTargetContext
+{
+	TArray<class UObject*> Targets; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FVector> TargetLocations; // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct GeneralNode.GNActionInstance
+// 0x0068
+struct FGNActionInstance
+{
+	class UGNAction* Action; // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FGNContext Context; // 0x0008(0x0010) (Edit)
+	struct FGNTargetContext TargetContext; // 0x0018(0x0020) (Edit)
+	unsigned char UnknownData00[0x30]; // 0x0038(0x0030) MISSED OFFSET
 };
 
 }

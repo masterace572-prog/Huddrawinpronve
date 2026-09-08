@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -17,7 +17,7 @@ enum class ESpectatorScreenMode : uint8_t
 	ESpectatorScreenMode__Distorted = 3,
 	ESpectatorScreenMode__SingleEye = 4,
 	ESpectatorScreenMode__SingleEyeCroppedToFill = 5,
-	ESpectatorScreenMode__Texture  = 6,
+	ESpectatorScreenMode__Texture = 6,
 	ESpectatorScreenMode__TexturePlusEye = 7,
 	ESpectatorScreenMode__ESpectatorScreenMode_MAX = 8
 };
@@ -26,9 +26,9 @@ enum class ESpectatorScreenMode : uint8_t
 // Enum HeadMountedDisplay.EHMDWornState
 enum class EHMDWornState : uint8_t
 {
-	EHMDWornState__Unknown         = 0,
-	EHMDWornState__Worn            = 1,
-	EHMDWornState__NotWorn         = 2,
+	EHMDWornState__Unknown = 0,
+	EHMDWornState__Worn = 1,
+	EHMDWornState__NotWorn = 2,
 	EHMDWornState__EHMDWornState_MAX = 3
 };
 
@@ -36,8 +36,8 @@ enum class EHMDWornState : uint8_t
 // Enum HeadMountedDisplay.EHMDTrackingOrigin
 enum class EHMDTrackingOrigin : uint8_t
 {
-	EHMDTrackingOrigin__Floor      = 0,
-	EHMDTrackingOrigin__Eye        = 1,
+	EHMDTrackingOrigin__Floor = 0,
+	EHMDTrackingOrigin__Eye = 1,
 	EHMDTrackingOrigin__EHMDTrackingOrigin_MAX = 2
 };
 
@@ -55,9 +55,9 @@ enum class EOrientPositionSelector : uint8_t
 // Enum HeadMountedDisplay.ETrackingStatus
 enum class ETrackingStatus : uint8_t
 {
-	ETrackingStatus__NotTracked    = 0,
-	ETrackingStatus__InertialOnly  = 1,
-	ETrackingStatus__Tracked       = 2,
+	ETrackingStatus__NotTracked = 0,
+	ETrackingStatus__InertialOnly = 1,
+	ETrackingStatus__Tracked = 2,
 	ETrackingStatus__ETrackingStatus_MAX = 3
 };
 

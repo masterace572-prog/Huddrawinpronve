@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,7 +11,7 @@ namespace SDK
 // Function CinematicCamera.CineCameraActor.GetCineCameraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UCineCameraComponent*    ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UCineCameraComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 {
@@ -36,7 +36,7 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InPresetName                   (Parm, ZeroConstructor)
+// struct FString InPresetName (Parm, ZeroConstructor)
 
 void UCineCameraComponent::SetLensPresetByName(const struct FString& InPresetName)
 {
@@ -60,7 +60,7 @@ void UCineCameraComponent::SetLensPresetByName(const struct FString& InPresetNam
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InPresetName                   (Parm, ZeroConstructor)
+// struct FString InPresetName (Parm, ZeroConstructor)
 
 void UCineCameraComponent::SetFilmbackPresetByName(const struct FString& InPresetName)
 {
@@ -84,7 +84,7 @@ void UCineCameraComponent::SetFilmbackPresetByName(const struct FString& InPrese
 // Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCineCameraComponent::GetVerticalFieldOfView()
 {
@@ -109,7 +109,7 @@ float UCineCameraComponent::GetVerticalFieldOfView()
 // Function CinematicCamera.CineCameraComponent.GetLensPresetName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCineCameraComponent::GetLensPresetName()
 {
@@ -134,7 +134,7 @@ struct FString UCineCameraComponent::GetLensPresetName()
 // Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UCineCameraComponent::GetHorizontalFieldOfView()
 {
@@ -159,7 +159,7 @@ float UCineCameraComponent::GetHorizontalFieldOfView()
 // Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UCineCameraComponent::GetFilmbackPresetName()
 {

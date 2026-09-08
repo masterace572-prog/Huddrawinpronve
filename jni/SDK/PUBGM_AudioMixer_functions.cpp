@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,10 +11,10 @@ namespace SDK
 // Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EntryIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bBypassed                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSourcePresetChain* PresetChain (Parm, ZeroConstructor, IsPlainOldData)
+// int EntryIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bBypassed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed)
 {
@@ -41,9 +41,9 @@ void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(class UObject*
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EntryIndex                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSourcePresetChain* PresetChain (Parm, ZeroConstructor, IsPlainOldData)
+// int EntryIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex)
 {
@@ -69,8 +69,8 @@ void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(class UObjec
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSubmixPreset* SubmixEffectPreset             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSubmixPreset* SubmixEffectPreset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 {
@@ -95,9 +95,9 @@ void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(class UObject* WorldC
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSourcePresetChain* PresetChain (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain)
 {
@@ -124,7 +124,7 @@ int UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(class UOb
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(class UObject* WorldContextObject)
 {
@@ -148,9 +148,9 @@ void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(class UObject* WorldC
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSourceEffectChainEntry entry                          (Parm, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSourcePresetChain* PresetChain (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSourceEffectChainEntry entry (Parm, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& entry)
 {
@@ -176,8 +176,8 @@ void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(class UObject* Wo
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class USoundEffectSubmixPreset* SubmixEffectPreset             (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class USoundEffectSubmixPreset* SubmixEffectPreset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 {
@@ -202,7 +202,7 @@ void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(class UObject* WorldCont
 // Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSubmixEffectDynamicsProcessorSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSubmixEffectDynamicsProcessorSettings InSettings (ConstParm, Parm, OutParm, ReferenceParm)
 
 void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings)
 {
@@ -226,7 +226,7 @@ void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffec
 // Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSubmixEffectSubmixEQSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSubmixEffectSubmixEQSettings InSettings (ConstParm, Parm, OutParm, ReferenceParm)
 
 void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQSettings& InSettings)
 {
@@ -250,8 +250,8 @@ void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQ
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UReverbEffect*           InReverbEffect                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          WetLevel                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UReverbEffect* InReverbEffect (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float WetLevel (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel)
 {
@@ -276,7 +276,7 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect*
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettings
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSubmixEffectReverbSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSubmixEffectReverbSettings InSettings (ConstParm, Parm, OutParm, ReferenceParm)
 
 void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSettings& InSettings)
 {
@@ -342,8 +342,8 @@ void USynthComponent::Start()
 // Function AudioMixer.SynthComponent.SetSubmixSend
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USoundSubmix*            Submix                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          SendLevel                      (Parm, ZeroConstructor, IsPlainOldData)
+// class USoundSubmix* Submix (Parm, ZeroConstructor, IsPlainOldData)
+// float SendLevel (Parm, ZeroConstructor, IsPlainOldData)
 
 void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
 {
@@ -368,7 +368,7 @@ void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
 // Function AudioMixer.SynthComponent.IsPlaying
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool USynthComponent::IsPlaying()
 {

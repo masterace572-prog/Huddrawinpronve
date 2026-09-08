@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -32,16 +32,16 @@ void UAutoTestInterface::StarJumpPlane()
 // Function AutoRobot.AutoTestSubsystem.Swipe
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InPath                         (Parm, ZeroConstructor)
-// float                          Duringtime                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StartX                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StartY                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndX                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndY                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TouchIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ControllerId                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeX                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeY                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString InPath (Parm, ZeroConstructor)
+// float Duringtime (Parm, ZeroConstructor, IsPlainOldData)
+// int StartX (Parm, ZeroConstructor, IsPlainOldData)
+// int StartY (Parm, ZeroConstructor, IsPlainOldData)
+// int EndX (Parm, ZeroConstructor, IsPlainOldData)
+// int EndY (Parm, ZeroConstructor, IsPlainOldData)
+// int TouchIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int ControllerId (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeX (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeY (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::Swipe(const struct FString& InPath, float Duringtime, int StartX, int StartY, int EndX, int EndY, int TouchIndex, int ControllerId, int ScreensizeX, int ScreensizeY)
 {
@@ -116,9 +116,9 @@ void UAutoTestSubsystem::StopPlayInput()
 // Function AutoRobot.AutoTestSubsystem.StartRemoteControl
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 Host                           (Parm, ZeroConstructor)
-// int                            Port                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString Host (Parm, ZeroConstructor)
+// int Port (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::StartRemoteControl(const struct FString& Name, const struct FString& Host, int Port)
 {
@@ -144,7 +144,7 @@ void UAutoTestSubsystem::StartRemoteControl(const struct FString& Name, const st
 // Function AutoRobot.AutoTestSubsystem.StartRecordInput
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Command                        (Parm, ZeroConstructor)
+// struct FString Command (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::StartRecordInput(const struct FString& Command)
 {
@@ -168,7 +168,7 @@ void UAutoTestSubsystem::StartRecordInput(const struct FString& Command)
 // Function AutoRobot.AutoTestSubsystem.StartPlayInput
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Filename                       (Parm, ZeroConstructor)
+// struct FString Filename (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::StartPlayInput(const struct FString& Filename)
 {
@@ -234,7 +234,7 @@ void UAutoTestSubsystem::RegisterInputProcessor()
 // Function AutoRobot.AutoTestSubsystem.PVEAutoTestGetEnemyLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::PVEAutoTestGetEnemyLocation()
 {
@@ -259,7 +259,7 @@ struct FVector UAutoTestSubsystem::PVEAutoTestGetEnemyLocation()
 // Function AutoRobot.AutoTestSubsystem.PubgmSimulateActionClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SimulateType                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SimulateType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::PubgmSimulateActionClientEx(int SimulateType)
 {
@@ -283,8 +283,8 @@ void UAutoTestSubsystem::PubgmSimulateActionClientEx(int SimulateType)
 // Function AutoRobot.AutoTestSubsystem.ParsePoint
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 SrcStr                         (Parm, ZeroConstructor)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString SrcStr (Parm, ZeroConstructor)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::ParsePoint(const struct FString& SrcStr)
 {
@@ -415,7 +415,7 @@ void UAutoTestSubsystem::OnGameEnd()
 // Function AutoRobot.AutoTestSubsystem.IsUIAutoTest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsUIAutoTest()
 {
@@ -440,7 +440,7 @@ bool UAutoTestSubsystem::IsUIAutoTest()
 // Function AutoRobot.AutoTestSubsystem.IsSecAutoRunTest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsSecAutoRunTest()
 {
@@ -465,7 +465,7 @@ bool UAutoTestSubsystem::IsSecAutoRunTest()
 // Function AutoRobot.AutoTestSubsystem.IsGAutomatorTest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsGAutomatorTest()
 {
@@ -490,7 +490,7 @@ bool UAutoTestSubsystem::IsGAutomatorTest()
 // Function AutoRobot.AutoTestSubsystem.IsAutoRunTestGamePVEProfile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsAutoRunTestGamePVEProfile()
 {
@@ -515,7 +515,7 @@ bool UAutoTestSubsystem::IsAutoRunTestGamePVEProfile()
 // Function AutoRobot.AutoTestSubsystem.IsAutoRunTestGamePVE
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsAutoRunTestGamePVE()
 {
@@ -540,7 +540,7 @@ bool UAutoTestSubsystem::IsAutoRunTestGamePVE()
 // Function AutoRobot.AutoTestSubsystem.IsAutoRunTestGameBindComponent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsAutoRunTestGameBindComponent()
 {
@@ -565,7 +565,7 @@ bool UAutoTestSubsystem::IsAutoRunTestGameBindComponent()
 // Function AutoRobot.AutoTestSubsystem.IsAutoRunTestGame
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::IsAutoRunTestGame()
 {
@@ -590,10 +590,10 @@ bool UAutoTestSubsystem::IsAutoRunTestGame()
 // Function AutoRobot.AutoTestSubsystem.GetWidgetPathByPos
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            StartX                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StartY                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeX                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeY                    (Parm, ZeroConstructor, IsPlainOldData)
+// int StartX (Parm, ZeroConstructor, IsPlainOldData)
+// int StartY (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeX (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeY (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::GetWidgetPathByPos(int StartX, int StartY, int ScreensizeX, int ScreensizeY)
 {
@@ -620,7 +620,7 @@ void UAutoTestSubsystem::GetWidgetPathByPos(int StartX, int StartY, int Screensi
 // Function AutoRobot.AutoTestSubsystem.GetRuntimeProfileData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::GetRuntimeProfileData()
 {
@@ -645,7 +645,7 @@ struct FString UAutoTestSubsystem::GetRuntimeProfileData()
 // Function AutoRobot.AutoTestSubsystem.GetAutoTestInterface
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UAutoTestInterface*      ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAutoTestInterface* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAutoTestInterface* UAutoTestSubsystem::GetAutoTestInterface()
 {
@@ -670,7 +670,7 @@ class UAutoTestInterface* UAutoTestSubsystem::GetAutoTestInterface()
 // Function AutoRobot.AutoTestSubsystem.GetAutoRunTestServerIdx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAutoTestSubsystem::GetAutoRunTestServerIdx()
 {
@@ -695,7 +695,7 @@ int UAutoTestSubsystem::GetAutoRunTestServerIdx()
 // Function AutoRobot.AutoTestSubsystem.GetAutoRunPassWD
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::GetAutoRunPassWD()
 {
@@ -720,7 +720,7 @@ struct FString UAutoTestSubsystem::GetAutoRunPassWD()
 // Function AutoRobot.AutoTestSubsystem.GetAutoRunLuaTest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::GetAutoRunLuaTest()
 {
@@ -745,7 +745,7 @@ struct FString UAutoTestSubsystem::GetAutoRunLuaTest()
 // Function AutoRobot.AutoTestSubsystem.GetAutoRunAccount
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::GetAutoRunAccount()
 {
@@ -791,17 +791,17 @@ void UAutoTestSubsystem::CloseDebugg()
 // Function AutoRobot.AutoTestSubsystem.ClickButton
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 InPath                         (Parm, ZeroConstructor)
-// float                          Duringtime                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StartX                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StartY                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndX                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            EndY                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TouchIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ControllerId                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeX                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ScreensizeY                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 UsePos                         (Parm, ZeroConstructor)
+// struct FString InPath (Parm, ZeroConstructor)
+// float Duringtime (Parm, ZeroConstructor, IsPlainOldData)
+// int StartX (Parm, ZeroConstructor, IsPlainOldData)
+// int StartY (Parm, ZeroConstructor, IsPlainOldData)
+// int EndX (Parm, ZeroConstructor, IsPlainOldData)
+// int EndY (Parm, ZeroConstructor, IsPlainOldData)
+// int TouchIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int ControllerId (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeX (Parm, ZeroConstructor, IsPlainOldData)
+// int ScreensizeY (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString UsePos (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::ClickButton(const struct FString& InPath, float Duringtime, int StartX, int StartY, int EndX, int EndY, int TouchIndex, int ControllerId, int ScreensizeX, int ScreensizeY, const struct FString& UsePos)
 {
@@ -835,10 +835,10 @@ void UAutoTestSubsystem::ClickButton(const struct FString& InPath, float Duringt
 // Function AutoRobot.AutoTestSubsystem.CheckStaticMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeformationDistance            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           CheckComplexCollisionQuery     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MapName                        (Parm, ZeroConstructor)
+// float Radius (Parm, ZeroConstructor, IsPlainOldData)
+// float DeformationDistance (Parm, ZeroConstructor, IsPlainOldData)
+// bool CheckComplexCollisionQuery (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MapName (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::CheckStaticMesh(float Radius, float DeformationDistance, bool CheckComplexCollisionQuery, const struct FString& MapName)
 {
@@ -865,7 +865,7 @@ void UAutoTestSubsystem::CheckStaticMesh(float Radius, float DeformationDistance
 // Function AutoRobot.AutoTestSubsystem.AutoTestWaitForUIWithName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 UIName                         (Parm, ZeroConstructor)
+// struct FString UIName (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestWaitForUIWithName(const struct FString& UIName)
 {
@@ -889,7 +889,7 @@ void UAutoTestSubsystem::AutoTestWaitForUIWithName(const struct FString& UIName)
 // Function AutoRobot.AutoTestSubsystem.AutoTestWaitForSecond
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            sec                            (Parm, ZeroConstructor, IsPlainOldData)
+// int sec (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestWaitForSecond(int sec)
 {
@@ -913,7 +913,7 @@ void UAutoTestSubsystem::AutoTestWaitForSecond(int sec)
 // Function AutoRobot.AutoTestSubsystem.AutoTestWaitForJumpPlane
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::AutoTestWaitForJumpPlane()
 {
@@ -1001,7 +1001,7 @@ void UAutoTestSubsystem::AutoTestUsePropSkillClientEx()
 // Function AutoRobot.AutoTestSubsystem.AutoTestUseItemClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestUseItemClientEx(int ItemId)
 {
@@ -1025,7 +1025,7 @@ void UAutoTestSubsystem::AutoTestUseItemClientEx(int ItemId)
 // Function AutoRobot.AutoTestSubsystem.AutoTestUseItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestUseItem(int ItemId)
 {
@@ -1049,7 +1049,7 @@ void UAutoTestSubsystem::AutoTestUseItem(int ItemId)
 // Function AutoRobot.AutoTestSubsystem.AutoTestUpgradePropSkillClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestUpgradePropSkillClientEx(int ItemId)
 {
@@ -1073,7 +1073,7 @@ void UAutoTestSubsystem::AutoTestUpgradePropSkillClientEx(int ItemId)
 // Function AutoRobot.AutoTestSubsystem.AutoTestToggleVehicleSync
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           Val                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool Val (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestToggleVehicleSync(bool Val)
 {
@@ -1097,7 +1097,7 @@ void UAutoTestSubsystem::AutoTestToggleVehicleSync(bool Val)
 // Function AutoRobot.AutoTestSubsystem.AutoTestThrowBoomOnlyClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestThrowBoomOnlyClientEx(int SkillID)
 {
@@ -1121,7 +1121,7 @@ void UAutoTestSubsystem::AutoTestThrowBoomOnlyClientEx(int SkillID)
 // Function AutoRobot.AutoTestSubsystem.AutoTestThrowBoom
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SkillID                        (Parm, ZeroConstructor, IsPlainOldData)
+// int SkillID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestThrowBoom(int SkillID)
 {
@@ -1145,7 +1145,7 @@ void UAutoTestSubsystem::AutoTestThrowBoom(int SkillID)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSwitchWeapon
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            WeaponType                     (Parm, ZeroConstructor, IsPlainOldData)
+// int WeaponType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSwitchWeapon(int WeaponType)
 {
@@ -1169,7 +1169,7 @@ void UAutoTestSubsystem::AutoTestSwitchWeapon(int WeaponType)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSwitchMode
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FunName                        (Parm, ZeroConstructor)
+// struct FString FunName (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestSwitchMode(const struct FString& FunName)
 {
@@ -1214,7 +1214,7 @@ void UAutoTestSubsystem::AutoTestStopRecordStats()
 // Function AutoRobot.AutoTestSubsystem.AutoTestStatsCommand
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Command                        (Parm, ZeroConstructor)
+// struct FString Command (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestStatsCommand(const struct FString& Command)
 {
@@ -1238,7 +1238,7 @@ void UAutoTestSubsystem::AutoTestStatsCommand(const struct FString& Command)
 // Function AutoRobot.AutoTestSubsystem.AutoTestStartRecordStats
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 FileStr                        (Parm, ZeroConstructor)
+// struct FString FileStr (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestStartRecordStats(const struct FString& FileStr)
 {
@@ -1262,10 +1262,10 @@ void UAutoTestSubsystem::AutoTestStartRecordStats(const struct FString& FileStr)
 // Function AutoRobot.AutoTestSubsystem.AutoTestStartFireOnlyClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            sec                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
+// int sec (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestStartFireOnlyClientEx(int InX, int InY, int InZ, int sec)
 {
@@ -1292,10 +1292,10 @@ void UAutoTestSubsystem::AutoTestStartFireOnlyClientEx(int InX, int InY, int InZ
 // Function AutoRobot.AutoTestSubsystem.AutoTestStartFire
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            sec                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
+// int sec (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestStartFire(int InX, int InY, int InZ, int sec)
 {
@@ -1322,7 +1322,7 @@ void UAutoTestSubsystem::AutoTestStartFire(int InX, int InY, int InZ, int sec)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSpecating
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            LeftTeamCnt                    (Parm, ZeroConstructor, IsPlainOldData)
+// int LeftTeamCnt (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSpecating(int LeftTeamCnt)
 {
@@ -1346,7 +1346,7 @@ void UAutoTestSubsystem::AutoTestSpecating(int LeftTeamCnt)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSpawnVehicle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ResPath                        (Parm, ZeroConstructor)
+// struct FString ResPath (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestSpawnVehicle(const struct FString& ResPath)
 {
@@ -1370,10 +1370,10 @@ void UAutoTestSubsystem::AutoTestSpawnVehicle(const struct FString& ResPath)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSpawnAI
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ID                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiX                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiY                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PosiZ                          (Parm, ZeroConstructor, IsPlainOldData)
+// int ID (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiX (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiY (Parm, ZeroConstructor, IsPlainOldData)
+// float PosiZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSpawnAI(int ID, float PosiX, float PosiY, float PosiZ)
 {
@@ -1400,9 +1400,9 @@ void UAutoTestSubsystem::AutoTestSpawnAI(int ID, float PosiX, float PosiY, float
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetVehicleRotation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetVehicleRotation(int InX, int InY, int InZ)
 {
@@ -1428,7 +1428,7 @@ void UAutoTestSubsystem::AutoTestSetVehicleRotation(int InX, int InY, int InZ)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetRecordFrequency
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Frequency                      (Parm, ZeroConstructor, IsPlainOldData)
+// int Frequency (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetRecordFrequency(int Frequency)
 {
@@ -1452,7 +1452,7 @@ void UAutoTestSubsystem::AutoTestSetRecordFrequency(int Frequency)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetGamePaused
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           IsPause                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool IsPause (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetGamePaused(bool IsPause)
 {
@@ -1476,7 +1476,7 @@ void UAutoTestSubsystem::AutoTestSetGamePaused(bool IsPause)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetActorYaw
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetActorYaw(float InRate)
 {
@@ -1500,8 +1500,8 @@ void UAutoTestSubsystem::AutoTestSetActorYaw(float InRate)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetActorRotation
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InSpeed                        (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
+// float InSpeed (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetActorRotation(float InRate, float InSpeed)
 {
@@ -1526,7 +1526,7 @@ void UAutoTestSubsystem::AutoTestSetActorRotation(float InRate, float InSpeed)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetActorPitch
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetActorPitch(float InRate)
 {
@@ -1550,9 +1550,9 @@ void UAutoTestSubsystem::AutoTestSetActorPitch(float InRate)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetActorFacePointWithZ
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetActorFacePointWithZ(int InX, int InY, int InZ)
 {
@@ -1578,9 +1578,9 @@ void UAutoTestSubsystem::AutoTestSetActorFacePointWithZ(int InX, int InY, int In
 // Function AutoRobot.AutoTestSubsystem.AutoTestSetActorFacePoint
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSetActorFacePoint(int InX, int InY, int InZ)
 {
@@ -1606,7 +1606,7 @@ void UAutoTestSubsystem::AutoTestSetActorFacePoint(int InX, int InY, int InZ)
 // Function AutoRobot.AutoTestSubsystem.AutoTestSendBuffertoSvr
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class UClientNetInterface> ClientNetInterface             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UClientNetInterface> ClientNetInterface (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestSendBuffertoSvr(TScriptInterface<class UClientNetInterface>* ClientNetInterface)
 {
@@ -1632,11 +1632,11 @@ void UAutoTestSubsystem::AutoTestSendBuffertoSvr(TScriptInterface<class UClientN
 // Function AutoRobot.AutoTestSubsystem.AutoTestReplaceMatByActorName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 actorName                      (Parm, ZeroConstructor)
-// struct FString                 NewMatName                     (Parm, ZeroConstructor)
-// int                            RComp                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            GComp                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            BComp                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString actorName (Parm, ZeroConstructor)
+// struct FString NewMatName (Parm, ZeroConstructor)
+// int RComp (Parm, ZeroConstructor, IsPlainOldData)
+// int GComp (Parm, ZeroConstructor, IsPlainOldData)
+// int BComp (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestReplaceMatByActorName(const struct FString& actorName, const struct FString& NewMatName, int RComp, int GComp, int BComp)
 {
@@ -1685,7 +1685,7 @@ void UAutoTestSubsystem::AutoTestReloadOnlyClientEx()
 // Function AutoRobot.AutoTestSubsystem.AutoTestPickupItemOnlyClientEx
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UAutoTestSubsystem::AutoTestPickupItemOnlyClientEx()
 {
@@ -1710,8 +1710,8 @@ struct FVector2D UAutoTestSubsystem::AutoTestPickupItemOnlyClientEx()
 // Function AutoRobot.AutoTestSubsystem.AutoTestPickupItem
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector2D ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector2D UAutoTestSubsystem::AutoTestPickupItem(int ItemId)
 {
@@ -1758,7 +1758,7 @@ void UAutoTestSubsystem::AutoTestOpenTraceRPC()
 // Function AutoRobot.AutoTestSubsystem.AutoTestOpenScope
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bOpenScope                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOpenScope (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestOpenScope(bool bOpenScope)
 {
@@ -1782,7 +1782,7 @@ void UAutoTestSubsystem::AutoTestOpenScope(bool bOpenScope)
 // Function AutoRobot.AutoTestSubsystem.AutoTestOpenDoorOnlyClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            bOpen                          (Parm, ZeroConstructor, IsPlainOldData)
+// int bOpen (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestOpenDoorOnlyClientEx(int bOpen)
 {
@@ -1806,7 +1806,7 @@ void UAutoTestSubsystem::AutoTestOpenDoorOnlyClientEx(int bOpen)
 // Function AutoRobot.AutoTestSubsystem.AutoTestMustDie
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            LeftTeamCnt                    (Parm, ZeroConstructor, IsPlainOldData)
+// int LeftTeamCnt (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestMustDie(int LeftTeamCnt)
 {
@@ -1830,9 +1830,9 @@ void UAutoTestSubsystem::AutoTestMustDie(int LeftTeamCnt)
 // Function AutoRobot.AutoTestSubsystem.AutoTestMoveVehicleForward
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Speed                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Rate                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          sec                            (Parm, ZeroConstructor, IsPlainOldData)
+// float Speed (Parm, ZeroConstructor, IsPlainOldData)
+// float Rate (Parm, ZeroConstructor, IsPlainOldData)
+// float sec (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestMoveVehicleForward(float Speed, float Rate, float sec)
 {
@@ -1858,9 +1858,9 @@ void UAutoTestSubsystem::AutoTestMoveVehicleForward(float Speed, float Rate, flo
 // Function AutoRobot.AutoTestSubsystem.AutoTestMoveToPoint
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestMoveToPoint(int InX, int InY, int InZ)
 {
@@ -1886,7 +1886,7 @@ void UAutoTestSubsystem::AutoTestMoveToPoint(int InX, int InY, int InZ)
 // Function AutoRobot.AutoTestSubsystem.AutoTestJumpPlane
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            sec                            (Parm, ZeroConstructor, IsPlainOldData)
+// int sec (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestJumpPlane(int sec)
 {
@@ -1931,7 +1931,7 @@ void UAutoTestSubsystem::AutoTestJump()
 // Function AutoRobot.AutoTestSubsystem.AutoTestIsOnVehicle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::AutoTestIsOnVehicle()
 {
@@ -1956,7 +1956,7 @@ bool UAutoTestSubsystem::AutoTestIsOnVehicle()
 // Function AutoRobot.AutoTestSubsystem.AutoTestIsDriver
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::AutoTestIsDriver()
 {
@@ -1981,7 +1981,7 @@ bool UAutoTestSubsystem::AutoTestIsDriver()
 // Function AutoRobot.AutoTestSubsystem.AutoTestIsCurrentCommandFinished
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAutoTestSubsystem::AutoTestIsCurrentCommandFinished()
 {
@@ -2006,7 +2006,7 @@ bool UAutoTestSubsystem::AutoTestIsCurrentCommandFinished()
 // Function AutoRobot.AutoTestSubsystem.AutoTestInputMovement
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InRate                         (Parm, ZeroConstructor, IsPlainOldData)
+// float InRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestInputMovement(float InRate)
 {
@@ -2030,10 +2030,10 @@ void UAutoTestSubsystem::AutoTestInputMovement(float InRate)
 // Function AutoRobot.AutoTestSubsystem.AutoTestInputKey
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Key                            (Parm, ZeroConstructor)
-// TEnumAsByte<enum EInputEvent>  EventType                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AmountDepressed                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bGamepad                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString Key (Parm, ZeroConstructor)
+// TEnumAsByte<enum EInputEvent> EventType (Parm, ZeroConstructor, IsPlainOldData)
+// float AmountDepressed (Parm, ZeroConstructor, IsPlainOldData)
+// bool bGamepad (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestInputKey(const struct FString& Key, TEnumAsByte<enum EInputEvent> EventType, float AmountDepressed, bool bGamepad)
 {
@@ -2060,12 +2060,12 @@ void UAutoTestSubsystem::AutoTestInputKey(const struct FString& Key, TEnumAsByte
 // Function AutoRobot.AutoTestSubsystem.AutoTestGMVehicleMoveAndTowardClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InZ                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InX1                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InY1                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InZ1                           (Parm, ZeroConstructor, IsPlainOldData)
+// float InX (Parm, ZeroConstructor, IsPlainOldData)
+// float InY (Parm, ZeroConstructor, IsPlainOldData)
+// float InZ (Parm, ZeroConstructor, IsPlainOldData)
+// float InX1 (Parm, ZeroConstructor, IsPlainOldData)
+// float InY1 (Parm, ZeroConstructor, IsPlainOldData)
+// float InZ1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestGMVehicleMoveAndTowardClientEx(float InX, float InY, float InZ, float InX1, float InY1, float InZ1)
 {
@@ -2094,9 +2094,9 @@ void UAutoTestSubsystem::AutoTestGMVehicleMoveAndTowardClientEx(float InX, float
 // Function AutoRobot.AutoTestSubsystem.AutoTestGMGotoClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestGMGotoClientEx(int InX, int InY, int InZ)
 {
@@ -2122,9 +2122,9 @@ void UAutoTestSubsystem::AutoTestGMGotoClientEx(int InX, int InY, int InZ)
 // Function AutoRobot.AutoTestSubsystem.AutoTestGMGoto
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// int InX (Parm, ZeroConstructor, IsPlainOldData)
+// int InY (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestGMGoto(int InX, int InY, int InZ)
 {
@@ -2150,7 +2150,7 @@ void UAutoTestSubsystem::AutoTestGMGoto(int InX, int InY, int InZ)
 // Function AutoRobot.AutoTestSubsystem.AutoTestGMCommand
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Command                        (Parm, ZeroConstructor)
+// struct FString Command (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestGMCommand(const struct FString& Command)
 {
@@ -2174,7 +2174,7 @@ void UAutoTestSubsystem::AutoTestGMCommand(const struct FString& Command)
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetVehicleLocationClientEx
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetVehicleLocationClientEx()
 {
@@ -2199,7 +2199,7 @@ struct FVector UAutoTestSubsystem::AutoTestGetVehicleLocationClientEx()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetVehicleLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetVehicleLocation()
 {
@@ -2287,7 +2287,7 @@ void UAutoTestSubsystem::AutoTestGetPrimitivesDetail()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetOnVehicle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SeatType                       (Parm, ZeroConstructor, IsPlainOldData)
+// int SeatType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestGetOnVehicle(int SeatType)
 {
@@ -2332,7 +2332,7 @@ void UAutoTestSubsystem::AutoTestGetOffVehicle()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetNearVehiclePos
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetNearVehiclePos()
 {
@@ -2378,7 +2378,7 @@ void UAutoTestSubsystem::AutoTestGetMemoryDetail()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetMapName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::AutoTestGetMapName()
 {
@@ -2403,7 +2403,7 @@ struct FString UAutoTestSubsystem::AutoTestGetMapName()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetLuaReturnValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 retval                         (Parm, ZeroConstructor)
+// struct FString retval (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestGetLuaReturnValue(const struct FString& retval)
 {
@@ -2427,7 +2427,7 @@ void UAutoTestSubsystem::AutoTestGetLuaReturnValue(const struct FString& retval)
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetGameModeState
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::AutoTestGetGameModeState()
 {
@@ -2452,7 +2452,7 @@ struct FString UAutoTestSubsystem::AutoTestGetGameModeState()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetFrameInfo
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetFrameInfo()
 {
@@ -2498,13 +2498,13 @@ void UAutoTestSubsystem::AutoTestGetDrawCallDetail()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetDis2D
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InX1                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY1                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ1                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InX2                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InY2                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            InZ2                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InX1 (Parm, ZeroConstructor, IsPlainOldData)
+// int InY1 (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ1 (Parm, ZeroConstructor, IsPlainOldData)
+// int InX2 (Parm, ZeroConstructor, IsPlainOldData)
+// int InY2 (Parm, ZeroConstructor, IsPlainOldData)
+// int InZ2 (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UAutoTestSubsystem::AutoTestGetDis2D(int InX1, int InY1, int InZ1, int InX2, int InY2, int InZ2)
 {
@@ -2535,7 +2535,7 @@ int UAutoTestSubsystem::AutoTestGetDis2D(int InX1, int InY1, int InZ1, int InX2,
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetCircleLocationClientEx
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetCircleLocationClientEx()
 {
@@ -2560,7 +2560,7 @@ struct FVector UAutoTestSubsystem::AutoTestGetCircleLocationClientEx()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetAvailableDeadBoxItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<int> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<int> UAutoTestSubsystem::AutoTestGetAvailableDeadBoxItem()
 {
@@ -2585,7 +2585,7 @@ TArray<int> UAutoTestSubsystem::AutoTestGetAvailableDeadBoxItem()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetAllActorNames
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FString> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FString> UAutoTestSubsystem::AutoTestGetAllActorNames()
 {
@@ -2610,7 +2610,7 @@ TArray<struct FString> UAutoTestSubsystem::AutoTestGetAllActorNames()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetActorName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UAutoTestSubsystem::AutoTestGetActorName()
 {
@@ -2635,9 +2635,9 @@ struct FString UAutoTestSubsystem::AutoTestGetActorName()
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetActorLocationListClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ActorType                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          RangeRadius                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ActorType (Parm, ZeroConstructor, IsPlainOldData)
+// float RangeRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UAutoTestSubsystem::AutoTestGetActorLocationListClientEx(int ActorType, float RangeRadius)
 {
@@ -2664,8 +2664,8 @@ TArray<struct FVector> UAutoTestSubsystem::AutoTestGetActorLocationListClientEx(
 // Function AutoRobot.AutoTestSubsystem.AutoTestGetActorLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 PlayerName                     (Parm, ZeroConstructor)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FString PlayerName (Parm, ZeroConstructor)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UAutoTestSubsystem::AutoTestGetActorLocation(const struct FString& PlayerName)
 {
@@ -2691,8 +2691,8 @@ struct FVector UAutoTestSubsystem::AutoTestGetActorLocation(const struct FString
 // Function AutoRobot.AutoTestSubsystem.AutoTestForceVehiclePosPullClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNext                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bNext (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAutoTestSubsystem::AutoTestForceVehiclePosPullClientEx(bool bNext)
 {
@@ -2760,9 +2760,9 @@ void UAutoTestSubsystem::AutoTestEnableUITest()
 // Function AutoRobot.AutoTestSubsystem.AutoTestEnableTickOrVisibilityByActorName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 actorName                      (Parm, ZeroConstructor)
-// bool                           bEnableTick                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bShow                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString actorName (Parm, ZeroConstructor)
+// bool bEnableTick (Parm, ZeroConstructor, IsPlainOldData)
+// bool bShow (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestEnableTickOrVisibilityByActorName(const struct FString& actorName, bool bEnableTick, bool bShow)
 {
@@ -2788,11 +2788,11 @@ void UAutoTestSubsystem::AutoTestEnableTickOrVisibilityByActorName(const struct 
 // Function AutoRobot.AutoTestSubsystem.AutoTestEnableActorPrimitiveHighlight
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FString                 actorName                      (Parm, ZeroConstructor)
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bInCanBeOccluded               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOverrideColor                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
+// struct FString actorName (Parm, ZeroConstructor)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
+// bool bInCanBeOccluded (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOverrideColor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestEnableActorPrimitiveHighlight(const struct FString& actorName, bool bEnable, bool bInCanBeOccluded, bool bOverrideColor, const struct FLinearColor& Color)
 {
@@ -2820,8 +2820,8 @@ void UAutoTestSubsystem::AutoTestEnableActorPrimitiveHighlight(const struct FStr
 // Function AutoRobot.AutoTestSubsystem.AutoTestDropItemClientEx
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            nCount                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int nCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestDropItemClientEx(int ItemId, int nCount)
 {
@@ -2846,12 +2846,12 @@ void UAutoTestSubsystem::AutoTestDropItemClientEx(int ItemId, int nCount)
 // Function AutoRobot.AutoTestSubsystem.AutoTestDrawBox
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          LocationX                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationY                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          LocationZ                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ExtentX                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ExtentY                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ExtentZ                        (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationX (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationY (Parm, ZeroConstructor, IsPlainOldData)
+// float LocationZ (Parm, ZeroConstructor, IsPlainOldData)
+// float ExtentX (Parm, ZeroConstructor, IsPlainOldData)
+// float ExtentY (Parm, ZeroConstructor, IsPlainOldData)
+// float ExtentZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestDrawBox(float LocationX, float LocationY, float LocationZ, float ExtentX, float ExtentY, float ExtentZ)
 {
@@ -2880,9 +2880,9 @@ void UAutoTestSubsystem::AutoTestDrawBox(float LocationX, float LocationY, float
 // Function AutoRobot.AutoTestSubsystem.AutoTestContinuousMoveTo
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          InX                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InY                            (Parm, ZeroConstructor, IsPlainOldData)
-// float                          InZ                            (Parm, ZeroConstructor, IsPlainOldData)
+// float InX (Parm, ZeroConstructor, IsPlainOldData)
+// float InY (Parm, ZeroConstructor, IsPlainOldData)
+// float InZ (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestContinuousMoveTo(float InX, float InY, float InZ)
 {
@@ -2908,7 +2908,7 @@ void UAutoTestSubsystem::AutoTestContinuousMoveTo(float InX, float InY, float In
 // Function AutoRobot.AutoTestSubsystem.AutoTestConsoleCommand
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Command                        (Parm, ZeroConstructor)
+// struct FString Command (Parm, ZeroConstructor)
 
 void UAutoTestSubsystem::AutoTestConsoleCommand(const struct FString& Command)
 {
@@ -2953,7 +2953,7 @@ void UAutoTestSubsystem::AutoTestCloseTraceRPC()
 // Function AutoRobot.AutoTestSubsystem.AutoTestAutoMoveForward
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           StartAutoMoveForward           (Parm, ZeroConstructor, IsPlainOldData)
+// bool StartAutoMoveForward (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestAutoMoveForward(bool StartAutoMoveForward)
 {
@@ -2977,8 +2977,8 @@ void UAutoTestSubsystem::AutoTestAutoMoveForward(bool StartAutoMoveForward)
 // Function AutoRobot.AutoTestSubsystem.AutoTestAddItem
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            ItemId                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            nCount                         (Parm, ZeroConstructor, IsPlainOldData)
+// int ItemId (Parm, ZeroConstructor, IsPlainOldData)
+// int nCount (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoTestAddItem(int ItemId, int nCount)
 {
@@ -3003,7 +3003,7 @@ void UAutoTestSubsystem::AutoTestAddItem(int ItemId, int nCount)
 // Function AutoRobot.AutoTestSubsystem.AutoMoveToTargetPosClientEx
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 targetPos                      (Parm, IsPlainOldData)
+// struct FVector targetPos (Parm, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoMoveToTargetPosClientEx(const struct FVector& targetPos)
 {
@@ -3027,7 +3027,7 @@ void UAutoTestSubsystem::AutoMoveToTargetPosClientEx(const struct FVector& targe
 // Function AutoRobot.AutoTestSubsystem.AutoMovePawnToTargetPosClientEx
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 targetPos                      (Parm, IsPlainOldData)
+// struct FVector targetPos (Parm, IsPlainOldData)
 
 void UAutoTestSubsystem::AutoMovePawnToTargetPosClientEx(const struct FVector& targetPos)
 {
@@ -3051,9 +3051,9 @@ void UAutoTestSubsystem::AutoMovePawnToTargetPosClientEx(const struct FVector& t
 // Function AutoRobot.PubgmAutoRun.VehicleTowardTo
 // (Final, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::VehicleTowardTo(float X, float Y, float Z)
 {
@@ -3079,9 +3079,9 @@ void UPubgmAutoRun::VehicleTowardTo(float X, float Y, float Z)
 // Function AutoRobot.PubgmAutoRun.VehicleMoveTo
 // (Final, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::VehicleMoveTo(float X, float Y, float Z)
 {
@@ -3107,12 +3107,12 @@ void UPubgmAutoRun::VehicleMoveTo(float X, float Y, float Z)
 // Function AutoRobot.PubgmAutoRun.VehicleMoveAndTowardTo
 // (Final, Native, Public)
 // Parameters:
-// float                          X                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z                              (Parm, ZeroConstructor, IsPlainOldData)
-// float                          X1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Y1                             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Z1                             (Parm, ZeroConstructor, IsPlainOldData)
+// float X (Parm, ZeroConstructor, IsPlainOldData)
+// float Y (Parm, ZeroConstructor, IsPlainOldData)
+// float Z (Parm, ZeroConstructor, IsPlainOldData)
+// float X1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Y1 (Parm, ZeroConstructor, IsPlainOldData)
+// float Z1 (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::VehicleMoveAndTowardTo(float X, float Y, float Z, float X1, float Y1, float Z1)
 {
@@ -3141,7 +3141,7 @@ void UPubgmAutoRun::VehicleMoveAndTowardTo(float X, float Y, float Z, float X1, 
 // DelegateFunction AutoRobot.PubgmAutoRun.OnPubgmAutoRunSimulateAction__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// int                            SimActionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SimActionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::OnPubgmAutoRunSimulateAction__DelegateSignature(int SimActionType)
 {
@@ -3164,7 +3164,7 @@ void UPubgmAutoRun::OnPubgmAutoRunSimulateAction__DelegateSignature(int SimActio
 // Function AutoRobot.PubgmAutoRun.NeedCmdAutoRun
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPubgmAutoRun::NeedCmdAutoRun()
 {
@@ -3189,7 +3189,7 @@ bool UPubgmAutoRun::NeedCmdAutoRun()
 // Function AutoRobot.PubgmAutoRun.NativeSimulateAction
 // (Final, Native, Public)
 // Parameters:
-// int                            SimActionType                  (Parm, ZeroConstructor, IsPlainOldData)
+// int SimActionType (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::NativeSimulateAction(int SimActionType)
 {
@@ -3234,9 +3234,9 @@ void UPubgmAutoRun::InitRoutePoint()
 // Function AutoRobot.PubgmAutoRun.GMGotoPosition
 // (Final, Native, Public)
 // Parameters:
-// int                            X                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Z                              (Parm, ZeroConstructor, IsPlainOldData)
+// int X (Parm, ZeroConstructor, IsPlainOldData)
+// int Y (Parm, ZeroConstructor, IsPlainOldData)
+// int Z (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPubgmAutoRun::GMGotoPosition(int X, int Y, int Z)
 {
@@ -3262,10 +3262,10 @@ void UPubgmAutoRun::GMGotoPosition(int X, int Y, int Z)
 // Function AutoRobot.PubgmAutoRun.GetRangeActorsPostions
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// int                            ActorType                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 OriginPos                      (Parm, IsPlainOldData)
-// float                          RangeRadius                    (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// int ActorType (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector OriginPos (Parm, IsPlainOldData)
+// float RangeRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UPubgmAutoRun::GetRangeActorsPostions(int ActorType, const struct FVector& OriginPos, float RangeRadius)
 {
@@ -3293,7 +3293,7 @@ TArray<struct FVector> UPubgmAutoRun::GetRangeActorsPostions(int ActorType, cons
 // Function AutoRobot.PubgmAutoRun.GetPoisonCircleLocation
 // (Final, Native, Public, HasDefaults)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UPubgmAutoRun::GetPoisonCircleLocation()
 {
@@ -3318,8 +3318,8 @@ struct FVector UPubgmAutoRun::GetPoisonCircleLocation()
 // Function AutoRobot.PubgmAutoRun.GetPlayerSpeed
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            SpeedIdx                       (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SpeedIdx (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPubgmAutoRun::GetPlayerSpeed(int SpeedIdx)
 {
@@ -3345,10 +3345,10 @@ float UPubgmAutoRun::GetPlayerSpeed(int SpeedIdx)
 // Function AutoRobot.PubgmAutoRun.GetNearestXTPointToVehicle
 // (Final, Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// struct FTransform              FirstPoint                     (Parm, OutParm, IsPlainOldData)
-// struct FTransform              SecendPoint                    (Parm, OutParm, IsPlainOldData)
-// bool                           bNext                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTransform FirstPoint (Parm, OutParm, IsPlainOldData)
+// struct FTransform SecendPoint (Parm, OutParm, IsPlainOldData)
+// bool bNext (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPubgmAutoRun::GetNearestXTPointToVehicle(bool bNext, struct FTransform* FirstPoint, struct FTransform* SecendPoint)
 {
@@ -3379,8 +3379,8 @@ bool UPubgmAutoRun::GetNearestXTPointToVehicle(bool bNext, struct FTransform* Fi
 // Function AutoRobot.PubgmAutoRun.ForceVehiclePosPull
 // (Final, Native, Public)
 // Parameters:
-// bool                           bNext                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool bNext (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPubgmAutoRun::ForceVehiclePosPull(bool bNext)
 {
@@ -3406,7 +3406,7 @@ float UPubgmAutoRun::ForceVehiclePosPull(bool bNext)
 // Function AutoRobot.RemoteControlHelper.GetRuntimeStats
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString URemoteControlHelper::GetRuntimeStats()
 {
@@ -3431,7 +3431,7 @@ struct FString URemoteControlHelper::GetRuntimeStats()
 // Function AutoRobot.RemoteControlHelper.GetDeviceName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString URemoteControlHelper::GetDeviceName()
 {
@@ -3456,7 +3456,7 @@ struct FString URemoteControlHelper::GetDeviceName()
 // Function AutoRobot.RemoteControlHelper.AutoPickup
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class ASTExtraBaseCharacter*   Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraBaseCharacter* Player (Parm, ZeroConstructor, IsPlainOldData)
 
 void URemoteControlHelper::AutoPickup(class ASTExtraBaseCharacter* Player)
 {
@@ -3480,8 +3480,8 @@ void URemoteControlHelper::AutoPickup(class ASTExtraBaseCharacter* Player)
 // Function AutoRobot.RemoteControlManager.Tick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float DeltaTime (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URemoteControlManager::Tick(float DeltaTime)
 {
@@ -3528,7 +3528,7 @@ void URemoteControlManager::Stop()
 // Function AutoRobot.RemoteControlManager.BeginWithFile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URemoteControlManager::BeginWithFile()
 {
@@ -3553,10 +3553,10 @@ bool URemoteControlManager::BeginWithFile()
 // Function AutoRobot.RemoteControlManager.Begin
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Name                           (Parm, ZeroConstructor)
-// struct FString                 Host                           (Parm, ZeroConstructor)
-// int                            Port                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FString Name (Parm, ZeroConstructor)
+// struct FString Host (Parm, ZeroConstructor)
+// int Port (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URemoteControlManager::Begin(const struct FString& Name, const struct FString& Host, int Port)
 {
@@ -3584,8 +3584,8 @@ bool URemoteControlManager::Begin(const struct FString& Name, const struct FStri
 // Function AutoRobot.ShootWeaponAutoTestHandle.OnWeaponShootBullet
 // (Final, Native, Public)
 // Parameters:
-// class ASTExtraShootWeapon*     ShootWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraShootWeaponBulletBase* Bullet                         (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraShootWeapon* ShootWeapon (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraShootWeaponBulletBase* Bullet (Parm, ZeroConstructor, IsPlainOldData)
 
 void UShootWeaponAutoTestHandle::OnWeaponShootBullet(class ASTExtraShootWeapon* ShootWeapon, class ASTExtraShootWeaponBulletBase* Bullet)
 {
@@ -3610,9 +3610,9 @@ void UShootWeaponAutoTestHandle::OnWeaponShootBullet(class ASTExtraShootWeapon* 
 // Function AutoRobot.ShootWeaponAutoTestHandle.OnBulletImpact
 // (Final, Native, Public, HasOutParms)
 // Parameters:
-// class ASTExtraShootWeapon*     ShootWeapon                    (Parm, ZeroConstructor, IsPlainOldData)
-// class ASTExtraShootWeaponBulletBase* Bullet                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              HitRet                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class ASTExtraShootWeapon* ShootWeapon (Parm, ZeroConstructor, IsPlainOldData)
+// class ASTExtraShootWeaponBulletBase* Bullet (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult HitRet (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UShootWeaponAutoTestHandle::OnBulletImpact(class ASTExtraShootWeapon* ShootWeapon, class ASTExtraShootWeaponBulletBase* Bullet, const struct FHitResult& HitRet)
 {
@@ -3638,8 +3638,8 @@ void UShootWeaponAutoTestHandle::OnBulletImpact(class ASTExtraShootWeapon* Shoot
 // Function AutoRobot.ShootWeaponAutoTestHandle.OnBulletDamage
 // (Final, Native, Public)
 // Parameters:
-// int                            ShootID                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Damage                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int ShootID (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Damage (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UShootWeaponAutoTestHandle::OnBulletDamage(int ShootID, float Damage)
 {
@@ -3664,7 +3664,7 @@ void UShootWeaponAutoTestHandle::OnBulletDamage(int ShootID, float Damage)
 // Function AutoRobot.ShootWeaponAutoTestHandle.GenerateBulletsImpactJsonStringAndClearData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UShootWeaponAutoTestHandle::GenerateBulletsImpactJsonStringAndClearData()
 {

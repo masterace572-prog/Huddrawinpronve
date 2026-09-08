@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,11 +11,11 @@ namespace SDK
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   AchievementID                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFoundID                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// float                          Progress                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName AchievementID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFoundID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// float Progress (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, float* Progress)
 {
@@ -46,14 +46,14 @@ void UAchievementBlueprintLibrary::GetCachedAchievementProgress(class UObject* W
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   AchievementID                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFoundID                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FText                   Title                          (Parm, OutParm)
-// struct FText                   LockedDescription              (Parm, OutParm)
-// struct FText                   UnlockedDescription            (Parm, OutParm)
-// bool                           bHidden                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName AchievementID (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFoundID (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FText Title (Parm, OutParm)
+// struct FText LockedDescription (Parm, OutParm)
+// struct FText UnlockedDescription (Parm, OutParm)
+// bool bHidden (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, struct FText* Title, struct FText* LockedDescription, struct FText* UnlockedDescription, bool* bHidden)
 {
@@ -90,9 +90,9 @@ void UAchievementBlueprintLibrary::GetCachedAchievementDescription(class UObject
 // Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UAchievementQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UAchievementQueryCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
@@ -119,9 +119,9 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchie
 // Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UAchievementQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UAchievementQueryCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
@@ -148,12 +148,12 @@ class UAchievementQueryCallbackProxy* UAchievementQueryCallbackProxy::CacheAchie
 // Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   AchievementName                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Progress                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            UserTag                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UAchievementWriteCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName AchievementName (Parm, ZeroConstructor, IsPlainOldData)
+// float Progress (Parm, ZeroConstructor, IsPlainOldData)
+// int UserTag (Parm, ZeroConstructor, IsPlainOldData)
+// class UAchievementWriteCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementName, float Progress, int UserTag)
 {
@@ -183,9 +183,9 @@ class UAchievementWriteCallbackProxy* UAchievementWriteCallbackProxy::WriteAchie
 // Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UConnectionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UConnectionCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
@@ -212,11 +212,11 @@ class UConnectionCallbackProxy* UConnectionCallbackProxy::ConnectToService(class
 // Function OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PublicConnections              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseLAN                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UCreateSessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// int PublicConnections (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseLAN (Parm, ZeroConstructor, IsPlainOldData)
+// class UCreateSessionCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int PublicConnections, bool bUseLAN)
 {
@@ -245,9 +245,9 @@ class UCreateSessionCallbackProxy* UCreateSessionCallbackProxy::CreateSession(cl
 // Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UDestroySessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UDestroySessionCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
@@ -274,13 +274,13 @@ class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::DestroySession
 // Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// TScriptInterface<class UTurnBasedMatchInterface> MatchActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// TEnumAsByte<enum EMPMatchOutcome> LocalPlayerOutcome             (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EMPMatchOutcome> OtherPlayersOutcome            (Parm, ZeroConstructor, IsPlainOldData)
-// class UEndMatchCallbackProxy*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UTurnBasedMatchInterface> MatchActor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// TEnumAsByte<enum EMPMatchOutcome> LocalPlayerOutcome (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EMPMatchOutcome> OtherPlayersOutcome (Parm, ZeroConstructor, IsPlainOldData)
+// class UEndMatchCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const struct FString& MatchID, TEnumAsByte<enum EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<enum EMPMatchOutcome> OtherPlayersOutcome)
 {
@@ -311,11 +311,11 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* Wo
 // Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// TScriptInterface<class UTurnBasedMatchInterface> TurnBasedMatchInterface        (Parm, ZeroConstructor, IsPlainOldData)
-// class UEndTurnCallbackProxy*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// TScriptInterface<class UTurnBasedMatchInterface> TurnBasedMatchInterface (Parm, ZeroConstructor, IsPlainOldData)
+// class UEndTurnCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface)
 {
@@ -344,8 +344,8 @@ class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* World
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FBlueprintSessionResult Result (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprintSessionResult& Result)
 {
@@ -371,8 +371,8 @@ struct FString UFindSessionsCallbackProxy::GetServerName(const struct FBlueprint
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlueprintSessionResult Result (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult& Result)
 {
@@ -398,8 +398,8 @@ int UFindSessionsCallbackProxy::GetPingInMs(const struct FBlueprintSessionResult
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlueprintSessionResult Result (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResult& Result)
 {
@@ -425,8 +425,8 @@ int UFindSessionsCallbackProxy::GetMaxPlayers(const struct FBlueprintSessionResu
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlueprintSessionResult Result                         (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FBlueprintSessionResult Result (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSessionResult& Result)
 {
@@ -452,11 +452,11 @@ int UFindSessionsCallbackProxy::GetCurrentPlayers(const struct FBlueprintSession
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxResults                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseLAN                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UFindSessionsCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxResults (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseLAN (Parm, ZeroConstructor, IsPlainOldData)
+// class UFindSessionsCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int MaxResults, bool bUseLAN)
 {
@@ -485,14 +485,14 @@ class UFindSessionsCallbackProxy* UFindSessionsCallbackProxy::FindSessions(class
 // Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// TScriptInterface<class UTurnBasedMatchInterface> MatchActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MinPlayers                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MaxPlayers                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            PlayerGroup                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ShowExistingMatches            (Parm, ZeroConstructor, IsPlainOldData)
-// class UFindTurnBasedMatchCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// TScriptInterface<class UTurnBasedMatchInterface> MatchActor (Parm, ZeroConstructor, IsPlainOldData)
+// int MinPlayers (Parm, ZeroConstructor, IsPlainOldData)
+// int MaxPlayers (Parm, ZeroConstructor, IsPlainOldData)
+// int PlayerGroup (Parm, ZeroConstructor, IsPlainOldData)
+// bool ShowExistingMatches (Parm, ZeroConstructor, IsPlainOldData)
+// class UFindTurnBasedMatchCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, int MinPlayers, int MaxPlayers, int PlayerGroup, bool ShowExistingMatches)
 {
@@ -524,9 +524,9 @@ class UFindTurnBasedMatchCallbackProxy* UFindTurnBasedMatchCallbackProxy::FindTu
 // Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FInAppPurchaseProductRequest ProductRequest                 (ConstParm, Parm, OutParm, ReferenceParm)
-// class UInAppPurchaseCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FInAppPurchaseProductRequest ProductRequest (ConstParm, Parm, OutParm, ReferenceParm)
+// class UInAppPurchaseCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest)
 {
@@ -553,9 +553,9 @@ class UInAppPurchaseCallbackProxy* UInAppPurchaseCallbackProxy::CreateProxyObjec
 // Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FString>         ProductIdentifiers             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UInAppPurchaseQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FString> ProductIdentifiers (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UInAppPurchaseQueryCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<struct FString> ProductIdentifiers)
 {
@@ -582,9 +582,9 @@ class UInAppPurchaseQueryCallbackProxy* UInAppPurchaseQueryCallbackProxy::Create
 // Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UInAppPurchaseRestoreCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UInAppPurchaseRestoreCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController)
 {
@@ -611,10 +611,10 @@ class UInAppPurchaseRestoreCallbackProxy* UInAppPurchaseRestoreCallbackProxy::Cr
 // Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlueprintSessionResult SearchResult                   (ConstParm, Parm, OutParm, ReferenceParm)
-// class UJoinSessionCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlueprintSessionResult SearchResult (ConstParm, Parm, OutParm, ReferenceParm)
+// class UJoinSessionCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult)
 {
@@ -642,10 +642,10 @@ class UJoinSessionCallbackProxy* UJoinSessionCallbackProxy::JoinSession(class UO
 // Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StatName                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            StatValue                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName StatName (Parm, ZeroConstructor, IsPlainOldData)
+// int StatValue (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerController* PlayerController, const struct FName& StatName, int StatValue)
 {
@@ -673,9 +673,9 @@ bool ULeaderboardBlueprintLibrary::WriteLeaderboardInteger(class APlayerControll
 // Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   SessionName                    (Parm, ZeroConstructor, IsPlainOldData)
-// class ULeaderboardFlushCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName SessionName (Parm, ZeroConstructor, IsPlainOldData)
+// class ULeaderboardFlushCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProxyObjectForFlush(class APlayerController* PlayerController, const struct FName& SessionName)
 {
@@ -702,9 +702,9 @@ class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProx
 // Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   StatName                       (Parm, ZeroConstructor, IsPlainOldData)
-// class ULeaderboardQueryCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName StatName (Parm, ZeroConstructor, IsPlainOldData)
+// class ULeaderboardQueryCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const struct FName& StatName)
 {
@@ -731,9 +731,9 @@ class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProx
 // Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class ULogoutCallbackProxy*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class ULogoutCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class ULogoutCallbackProxy* ULogoutCallbackProxy::Logout(class UObject* WorldContextObject, class APlayerController* PlayerController)
 {
@@ -781,8 +781,8 @@ void AOnlineBeaconClient::ClientOnConnected()
 // Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FString                 SessionId                      (Parm, ZeroConstructor)
-// struct FPartyReservation       ReservationUpdate              (ConstParm, Parm, ReferenceParm)
+// struct FString SessionId (Parm, ZeroConstructor)
+// struct FPartyReservation ReservationUpdate (ConstParm, Parm, ReferenceParm)
 
 void APartyBeaconClient::ServerUpdateReservationRequest(const struct FString& SessionId, const struct FPartyReservation& ReservationUpdate)
 {
@@ -807,8 +807,8 @@ void APartyBeaconClient::ServerUpdateReservationRequest(const struct FString& Se
 // Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FString                 SessionId                      (Parm, ZeroConstructor)
-// struct FPartyReservation       Reservation                    (ConstParm, Parm, ReferenceParm)
+// struct FString SessionId (Parm, ZeroConstructor)
+// struct FPartyReservation Reservation (ConstParm, Parm, ReferenceParm)
 
 void APartyBeaconClient::ServerReservationRequest(const struct FString& SessionId, const struct FPartyReservation& Reservation)
 {
@@ -833,7 +833,7 @@ void APartyBeaconClient::ServerReservationRequest(const struct FString& SessionI
 // Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FUniqueNetIdRepl        PartyLeader                    (ConstParm, Parm, ReferenceParm)
+// struct FUniqueNetIdRepl PartyLeader (ConstParm, Parm, ReferenceParm)
 
 void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetIdRepl& PartyLeader)
 {
@@ -857,7 +857,7 @@ void APartyBeaconClient::ServerCancelReservationRequest(const struct FUniqueNetI
 // Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// int                            NumRemainingReservations       (Parm, ZeroConstructor, IsPlainOldData)
+// int NumRemainingReservations (Parm, ZeroConstructor, IsPlainOldData)
 
 void APartyBeaconClient::ClientSendReservationUpdates(int NumRemainingReservations)
 {
@@ -902,7 +902,7 @@ void APartyBeaconClient::ClientSendReservationFull()
 // Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// TEnumAsByte<enum EPartyReservationResult> ReservationResponse            (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPartyReservationResult> ReservationResponse (Parm, ZeroConstructor, IsPlainOldData)
 
 void APartyBeaconClient::ClientReservationResponse(TEnumAsByte<enum EPartyReservationResult> ReservationResponse)
 {
@@ -926,7 +926,7 @@ void APartyBeaconClient::ClientReservationResponse(TEnumAsByte<enum EPartyReserv
 // Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// TEnumAsByte<enum EPartyReservationResult> ReservationResponse            (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPartyReservationResult> ReservationResponse (Parm, ZeroConstructor, IsPlainOldData)
 
 void APartyBeaconClient::ClientCancelReservationResponse(TEnumAsByte<enum EPartyReservationResult> ReservationResponse)
 {
@@ -950,12 +950,12 @@ void APartyBeaconClient::ClientCancelReservationResponse(TEnumAsByte<enum EParty
 // Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// TEnumAsByte<enum EMPMatchOutcome> Outcome                        (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TurnTimeoutInSeconds           (Parm, ZeroConstructor, IsPlainOldData)
-// class UQuitMatchCallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// TEnumAsByte<enum EMPMatchOutcome> Outcome (Parm, ZeroConstructor, IsPlainOldData)
+// int TurnTimeoutInSeconds (Parm, ZeroConstructor, IsPlainOldData)
+// class UQuitMatchCallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, TEnumAsByte<enum EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds)
 {
@@ -985,9 +985,9 @@ class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::QuitMatch(class UObject*
 // Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       InPlayerController             (Parm, ZeroConstructor, IsPlainOldData)
-// class UShowLoginUICallbackProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* InPlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UShowLoginUICallbackProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UShowLoginUICallbackProxy* UShowLoginUICallbackProxy::ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController)
 {
@@ -1056,9 +1056,9 @@ void ATestBeaconClient::ClientPing()
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Object (Parm, ZeroConstructor, IsPlainOldData)
 
 void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object)
 {
@@ -1084,11 +1084,11 @@ void UTurnBasedBlueprintLibrary::RegisterTurnBasedMatchInterfaceObject(class UOb
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// int                            playerIndex                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 PlayerDisplayName              (Parm, OutParm, ZeroConstructor)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// int playerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString PlayerDisplayName (Parm, OutParm, ZeroConstructor)
 
 void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int playerIndex, struct FString* PlayerDisplayName)
 {
@@ -1118,10 +1118,10 @@ void UTurnBasedBlueprintLibrary::GetPlayerDisplayName(class UObject* WorldContex
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// int                            playerIndex                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// int playerIndex (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int* playerIndex)
 {
@@ -1150,10 +1150,10 @@ void UTurnBasedBlueprintLibrary::GetMyPlayerIndex(class UObject* WorldContextObj
 // Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// struct FString                 MatchID                        (Parm, ZeroConstructor)
-// bool                           bIsMyTurn                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerController* PlayerController (Parm, ZeroConstructor, IsPlainOldData)
+// struct FString MatchID (Parm, ZeroConstructor)
+// bool bIsMyTurn (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UTurnBasedBlueprintLibrary::GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, bool* bIsMyTurn)
 {

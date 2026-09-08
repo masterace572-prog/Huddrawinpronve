@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,9 +11,9 @@ namespace SDK
 // Function AIModule.AIController.UseBlackboard
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBlackboardData*         BlackboardAsset                (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlackboardComponent*    BlackboardComponent            (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBlackboardData* BlackboardAsset (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlackboardComponent* BlackboardComponent (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AAIController::UseBlackboard(class UBlackboardData* BlackboardAsset, class UBlackboardComponent** BlackboardComponent)
 {
@@ -42,7 +42,7 @@ bool AAIController::UseBlackboard(class UBlackboardData* BlackboardAsset, class 
 // Function AIModule.AIController.UnclaimTaskResource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  ResourceClass                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ResourceClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::UnclaimTaskResource(class UClass* ResourceClass)
 {
@@ -66,7 +66,7 @@ void AAIController::UnclaimTaskResource(class UClass* ResourceClass)
 // Function AIModule.AIController.SetMoveBlockDetection
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::SetMoveBlockDetection(bool bEnable)
 {
@@ -90,8 +90,8 @@ void AAIController::SetMoveBlockDetection(bool bEnable)
 // Function AIModule.AIController.RunBehaviorTree
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UBehaviorTree*           BTAsset                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBehaviorTree* BTAsset (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AAIController::RunBehaviorTree(class UBehaviorTree* BTAsset)
 {
@@ -117,8 +117,8 @@ bool AAIController::RunBehaviorTree(class UBehaviorTree* BTAsset)
 // Function AIModule.AIController.OnUsingBlackBoard
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UBlackboardComponent*    BlackboardComp                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// class UBlackboardData*         BlackboardAsset                (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlackboardComponent* BlackboardComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class UBlackboardData* BlackboardAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::OnUsingBlackBoard(class UBlackboardComponent* BlackboardComp, class UBlackboardData* BlackboardAsset)
 {
@@ -142,7 +142,7 @@ void AAIController::OnUsingBlackBoard(class UBlackboardComponent* BlackboardComp
 // Function AIModule.AIController.OnUnpossess
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   UnpossessedPawn                (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* UnpossessedPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::OnUnpossess(class APawn* UnpossessedPawn)
 {
@@ -165,7 +165,7 @@ void AAIController::OnUnpossess(class APawn* UnpossessedPawn)
 // Function AIModule.AIController.OnPossess
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   PossessedPawn                  (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* PossessedPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::OnPossess(class APawn* PossessedPawn)
 {
@@ -188,8 +188,8 @@ void AAIController::OnPossess(class APawn* PossessedPawn)
 // Function AIModule.AIController.OnGameplayTaskResourcesClaimed
 // (Native, Public)
 // Parameters:
-// struct FGameplayResourceSet    NewlyClaimed                   (Parm)
-// struct FGameplayResourceSet    FreshlyReleased                (Parm)
+// struct FGameplayResourceSet NewlyClaimed (Parm)
+// struct FGameplayResourceSet FreshlyReleased (Parm)
 
 void AAIController::OnGameplayTaskResourcesClaimed(const struct FGameplayResourceSet& NewlyClaimed, const struct FGameplayResourceSet& FreshlyReleased)
 {
@@ -214,15 +214,15 @@ void AAIController::OnGameplayTaskResourcesClaimed(const struct FGameplayResourc
 // Function AIModule.AIController.MoveToLocation
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 Dest                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUsePathfinding                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bProjectDestinationToNavigation (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCanStrafe                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowPartialPath              (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EPathFollowingRequestResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Dest (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float AcceptanceRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopOnOverlap (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUsePathfinding (Parm, ZeroConstructor, IsPlainOldData)
+// bool bProjectDestinationToNavigation (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCanStrafe (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* FilterClass (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllowPartialPath (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPathFollowingRequestResult> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPathFollowingRequestResult> AAIController::MoveToLocation(const struct FVector& Dest, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bProjectDestinationToNavigation, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
 {
@@ -255,14 +255,14 @@ TEnumAsByte<enum EPathFollowingRequestResult> AAIController::MoveToLocation(cons
 // Function AIModule.AIController.MoveToActor
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Goal                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUsePathfinding                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCanStrafe                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowPartialPath              (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EPathFollowingRequestResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Goal (Parm, ZeroConstructor, IsPlainOldData)
+// float AcceptanceRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopOnOverlap (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUsePathfinding (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCanStrafe (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* FilterClass (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAllowPartialPath (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPathFollowingRequestResult> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPathFollowingRequestResult> AAIController::MoveToActor(class AActor* Goal, float AcceptanceRadius, bool bStopOnOverlap, bool bUsePathfinding, bool bCanStrafe, class UClass* FilterClass, bool bAllowPartialPath)
 {
@@ -294,7 +294,7 @@ TEnumAsByte<enum EPathFollowingRequestResult> AAIController::MoveToActor(class A
 // Function AIModule.AIController.K2_SetFocus
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  NewFocus                       (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* NewFocus (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::K2_SetFocus(class AActor* NewFocus)
 {
@@ -318,7 +318,7 @@ void AAIController::K2_SetFocus(class AActor* NewFocus)
 // Function AIModule.AIController.K2_SetFocalPoint
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 FP                             (Parm, IsPlainOldData)
+// struct FVector FP (Parm, IsPlainOldData)
 
 void AAIController::K2_SetFocalPoint(const struct FVector& FP)
 {
@@ -363,7 +363,7 @@ void AAIController::K2_ClearFocus()
 // Function AIModule.AIController.HasPartialPath
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool AAIController::HasPartialPath()
 {
@@ -388,7 +388,7 @@ bool AAIController::HasPartialPath()
 // Function AIModule.AIController.GetPathFollowingComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UPathFollowingComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UPathFollowingComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UPathFollowingComponent* AAIController::GetPathFollowingComponent()
 {
@@ -413,7 +413,7 @@ class UPathFollowingComponent* AAIController::GetPathFollowingComponent()
 // Function AIModule.AIController.GetMoveStatus
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EPathFollowingStatus> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EPathFollowingStatus> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPathFollowingStatus> AAIController::GetMoveStatus()
 {
@@ -438,7 +438,7 @@ TEnumAsByte<enum EPathFollowingStatus> AAIController::GetMoveStatus()
 // Function AIModule.AIController.GetImmediateMoveDestination
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector AAIController::GetImmediateMoveDestination()
 {
@@ -463,7 +463,7 @@ struct FVector AAIController::GetImmediateMoveDestination()
 // Function AIModule.AIController.GetFocusActor
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* AAIController::GetFocusActor()
 {
@@ -488,8 +488,8 @@ class AActor* AAIController::GetFocusActor()
 // Function AIModule.AIController.GetFocalPointOnActor
 // (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class AActor* Actor (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector AAIController::GetFocalPointOnActor(class AActor* Actor)
 {
@@ -515,7 +515,7 @@ struct FVector AAIController::GetFocalPointOnActor(class AActor* Actor)
 // Function AIModule.AIController.GetFocalPoint
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector AAIController::GetFocalPoint()
 {
@@ -540,7 +540,7 @@ struct FVector AAIController::GetFocalPoint()
 // Function AIModule.AIController.GetAIPerceptionComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UAIPerceptionComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UAIPerceptionComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UAIPerceptionComponent* AAIController::GetAIPerceptionComponent()
 {
@@ -565,7 +565,7 @@ class UAIPerceptionComponent* AAIController::GetAIPerceptionComponent()
 // Function AIModule.AIController.ClaimTaskResource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  ResourceClass                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ResourceClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void AAIController::ClaimTaskResource(class UClass* ResourceClass)
 {
@@ -589,8 +589,8 @@ void AAIController::ClaimTaskResource(class UClass* ResourceClass)
 // Function AIModule.BlackboardComponent.SetValueAsVector
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 VectorValue                    (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector VectorValue (Parm, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsVector(const struct FName& KeyName, const struct FVector& VectorValue)
 {
@@ -615,8 +615,8 @@ void UBlackboardComponent::SetValueAsVector(const struct FName& KeyName, const s
 // Function AIModule.BlackboardComponent.SetValueAsString
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 StringValue                    (Parm, ZeroConstructor)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString StringValue (Parm, ZeroConstructor)
 
 void UBlackboardComponent::SetValueAsString(const struct FName& KeyName, const struct FString& StringValue)
 {
@@ -641,8 +641,8 @@ void UBlackboardComponent::SetValueAsString(const struct FName& KeyName, const s
 // Function AIModule.BlackboardComponent.SetValueAsRotator
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                RotatorValue                   (Parm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator RotatorValue (Parm, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsRotator(const struct FName& KeyName, const struct FRotator& RotatorValue)
 {
@@ -667,8 +667,8 @@ void UBlackboardComponent::SetValueAsRotator(const struct FName& KeyName, const 
 // Function AIModule.BlackboardComponent.SetValueAsObject
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ObjectValue                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ObjectValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsObject(const struct FName& KeyName, class UObject* ObjectValue)
 {
@@ -693,8 +693,8 @@ void UBlackboardComponent::SetValueAsObject(const struct FName& KeyName, class U
 // Function AIModule.BlackboardComponent.SetValueAsName
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   NameValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName NameValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsName(const struct FName& KeyName, const struct FName& NameValue)
 {
@@ -719,8 +719,8 @@ void UBlackboardComponent::SetValueAsName(const struct FName& KeyName, const str
 // Function AIModule.BlackboardComponent.SetValueAsInt
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            IntValue                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int IntValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsInt(const struct FName& KeyName, int IntValue)
 {
@@ -745,8 +745,8 @@ void UBlackboardComponent::SetValueAsInt(const struct FName& KeyName, int IntVal
 // Function AIModule.BlackboardComponent.SetValueAsFloat
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          FloatValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float FloatValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsFloat(const struct FName& KeyName, float FloatValue)
 {
@@ -771,8 +771,8 @@ void UBlackboardComponent::SetValueAsFloat(const struct FName& KeyName, float Fl
 // Function AIModule.BlackboardComponent.SetValueAsEnum
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  EnumValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char EnumValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsEnum(const struct FName& KeyName, unsigned char EnumValue)
 {
@@ -797,8 +797,8 @@ void UBlackboardComponent::SetValueAsEnum(const struct FName& KeyName, unsigned 
 // Function AIModule.BlackboardComponent.SetValueAsClass
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ClassValue                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ClassValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsClass(const struct FName& KeyName, class UClass* ClassValue)
 {
@@ -823,8 +823,8 @@ void UBlackboardComponent::SetValueAsClass(const struct FName& KeyName, class UC
 // Function AIModule.BlackboardComponent.SetValueAsBool
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           BoolValue                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool BoolValue (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBlackboardComponent::SetValueAsBool(const struct FName& KeyName, bool BoolValue)
 {
@@ -849,8 +849,8 @@ void UBlackboardComponent::SetValueAsBool(const struct FName& KeyName, bool Bool
 // Function AIModule.BlackboardComponent.IsVectorValueSet
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlackboardComponent::IsVectorValueSet(const struct FName& KeyName)
 {
@@ -876,8 +876,8 @@ bool UBlackboardComponent::IsVectorValueSet(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsVector
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBlackboardComponent::GetValueAsVector(const struct FName& KeyName)
 {
@@ -903,8 +903,8 @@ struct FVector UBlackboardComponent::GetValueAsVector(const struct FName& KeyNam
 // Function AIModule.BlackboardComponent.GetValueAsString
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBlackboardComponent::GetValueAsString(const struct FName& KeyName)
 {
@@ -930,8 +930,8 @@ struct FString UBlackboardComponent::GetValueAsString(const struct FName& KeyNam
 // Function AIModule.BlackboardComponent.GetValueAsRotator
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UBlackboardComponent::GetValueAsRotator(const struct FName& KeyName)
 {
@@ -957,8 +957,8 @@ struct FRotator UBlackboardComponent::GetValueAsRotator(const struct FName& KeyN
 // Function AIModule.BlackboardComponent.GetValueAsObject
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UBlackboardComponent::GetValueAsObject(const struct FName& KeyName)
 {
@@ -984,8 +984,8 @@ class UObject* UBlackboardComponent::GetValueAsObject(const struct FName& KeyNam
 // Function AIModule.BlackboardComponent.GetValueAsName
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UBlackboardComponent::GetValueAsName(const struct FName& KeyName)
 {
@@ -1011,8 +1011,8 @@ struct FName UBlackboardComponent::GetValueAsName(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsInt
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBlackboardComponent::GetValueAsInt(const struct FName& KeyName)
 {
@@ -1038,8 +1038,8 @@ int UBlackboardComponent::GetValueAsInt(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsFloat
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBlackboardComponent::GetValueAsFloat(const struct FName& KeyName)
 {
@@ -1065,8 +1065,8 @@ float UBlackboardComponent::GetValueAsFloat(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsEnum
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char UBlackboardComponent::GetValueAsEnum(const struct FName& KeyName)
 {
@@ -1092,8 +1092,8 @@ unsigned char UBlackboardComponent::GetValueAsEnum(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsClass
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBlackboardComponent::GetValueAsClass(const struct FName& KeyName)
 {
@@ -1119,8 +1119,8 @@ class UClass* UBlackboardComponent::GetValueAsClass(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetValueAsBool
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlackboardComponent::GetValueAsBool(const struct FName& KeyName)
 {
@@ -1146,9 +1146,9 @@ bool UBlackboardComponent::GetValueAsBool(const struct FName& KeyName)
 // Function AIModule.BlackboardComponent.GetRotationFromEntry
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                ResultRotation                 (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator ResultRotation (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlackboardComponent::GetRotationFromEntry(const struct FName& KeyName, struct FRotator* ResultRotation)
 {
@@ -1177,9 +1177,9 @@ bool UBlackboardComponent::GetRotationFromEntry(const struct FName& KeyName, str
 // Function AIModule.BlackboardComponent.GetLocationFromEntry
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ResultLocation                 (Parm, OutParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FVector ResultLocation (Parm, OutParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBlackboardComponent::GetLocationFromEntry(const struct FName& KeyName, struct FVector* ResultLocation)
 {
@@ -1208,7 +1208,7 @@ bool UBlackboardComponent::GetLocationFromEntry(const struct FName& KeyName, str
 // Function AIModule.BlackboardComponent.ClearValue
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   KeyName                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName KeyName (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
 void UBlackboardComponent::ClearValue(const struct FName& KeyName)
 {
@@ -1232,7 +1232,7 @@ void UBlackboardComponent::ClearValue(const struct FName& KeyName)
 // Function AIModule.PathFollowingComponent.OnNavDataRegistered
 // (Final, Native, Protected)
 // Parameters:
-// class ANavigationData*         NavData                        (Parm, ZeroConstructor, IsPlainOldData)
+// class ANavigationData* NavData (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPathFollowingComponent::OnNavDataRegistered(class ANavigationData* NavData)
 {
@@ -1256,10 +1256,10 @@ void UPathFollowingComponent::OnNavDataRegistered(class ANavigationData* NavData
 // Function AIModule.PathFollowingComponent.OnActorBump
 // (Native, Public, HasOutParms, HasDefaults)
 // Parameters:
-// class AActor*                  SelfActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NormalImpulse                  (Parm, IsPlainOldData)
-// struct FHitResult              Hit                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor* SelfActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OtherActor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector NormalImpulse (Parm, IsPlainOldData)
+// struct FHitResult Hit (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
 void UPathFollowingComponent::OnActorBump(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
@@ -1286,7 +1286,7 @@ void UPathFollowingComponent::OnActorBump(class AActor* SelfActor, class AActor*
 // Function AIModule.PathFollowingComponent.GetPathDestination
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UPathFollowingComponent::GetPathDestination()
 {
@@ -1311,7 +1311,7 @@ struct FVector UPathFollowingComponent::GetPathDestination()
 // Function AIModule.PathFollowingComponent.GetPathActionType
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TEnumAsByte<enum EPathFollowingAction> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EPathFollowingAction> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPathFollowingAction> UPathFollowingComponent::GetPathActionType()
 {
@@ -1336,7 +1336,7 @@ TEnumAsByte<enum EPathFollowingAction> UPathFollowingComponent::GetPathActionTyp
 // Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bSuspend                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuspend (Parm, ZeroConstructor, IsPlainOldData)
 
 void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
 {
@@ -1360,7 +1360,7 @@ void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
 // Function AIModule.BrainComponent.StopLogic
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FString                 Reason                         (Parm, ZeroConstructor)
+// struct FString Reason (Parm, ZeroConstructor)
 
 void UBrainComponent::StopLogic(const struct FString& Reason)
 {
@@ -1405,7 +1405,7 @@ void UBrainComponent::RestartLogic()
 // Function AIModule.BrainComponent.IsRunning
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBrainComponent::IsRunning()
 {
@@ -1430,7 +1430,7 @@ bool UBrainComponent::IsRunning()
 // Function AIModule.BrainComponent.IsPaused
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBrainComponent::IsPaused()
 {
@@ -1455,8 +1455,8 @@ bool UBrainComponent::IsPaused()
 // Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FGameplayTag            InjectTag                      (Parm)
-// class UBehaviorTree*           BehaviorAsset                  (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTag InjectTag (Parm)
+// class UBehaviorTree* BehaviorAsset (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBehaviorTreeComponent::SetDynamicSubtree(const struct FGameplayTag& InjectTag, class UBehaviorTree* BehaviorAsset)
 {
@@ -1481,8 +1481,8 @@ void UBehaviorTreeComponent::SetDynamicSubtree(const struct FGameplayTag& Inject
 // Function AIModule.BehaviorTreeComponent.GetTagCooldownEndTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTag            CooldownTag                    (Parm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FGameplayTag CooldownTag (Parm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& CooldownTag)
 {
@@ -1508,9 +1508,9 @@ float UBehaviorTreeComponent::GetTagCooldownEndTime(const struct FGameplayTag& C
 // Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FGameplayTag            CooldownTag                    (Parm)
-// float                          CooldownDuration               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAddToExistingDuration         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FGameplayTag CooldownTag (Parm)
+// float CooldownDuration (Parm, ZeroConstructor, IsPlainOldData)
+// bool bAddToExistingDuration (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& CooldownTag, float CooldownDuration, bool bAddToExistingDuration)
 {
@@ -1536,8 +1536,8 @@ void UBehaviorTreeComponent::AddCooldownTagDuration(const struct FGameplayTag& C
 // Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
 // (Final, Native, Public)
 // Parameters:
-// struct FAIRequestID            RequestID                      (Parm)
-// TEnumAsByte<enum EPathFollowingResult> MovementResult                 (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIRequestID RequestID (Parm)
+// TEnumAsByte<enum EPathFollowingResult> MovementResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& RequestID, TEnumAsByte<enum EPathFollowingResult> MovementResult)
 {
@@ -1562,9 +1562,9 @@ void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& Requ
 // Function AIModule.AIBlueprintHelperLibrary.UnlockAIResourcesWithAnimation
 // (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUnlockMovement                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           UnlockAILogic                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimInstance* AnimInstance (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUnlockMovement (Parm, ZeroConstructor, IsPlainOldData)
+// bool UnlockAILogic (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bUnlockMovement, bool UnlockAILogic)
 {
@@ -1590,13 +1590,13 @@ void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstan
 // Function AIModule.AIBlueprintHelperLibrary.SpawnAIFromClass
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  PawnClass                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UBehaviorTree*           BehaviorTree                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, IsPlainOldData)
-// bool                           bNoCollisionFail               (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* PawnClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UBehaviorTree* BehaviorTree (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// struct FRotator Rotation (Parm, IsPlainOldData)
+// bool bNoCollisionFail (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class APawn* UAIBlueprintHelperLibrary::SpawnAIFromClass(class UObject* WorldContextObject, class UClass* PawnClass, class UBehaviorTree* BehaviorTree, const struct FVector& Location, const struct FRotator& Rotation, bool bNoCollisionFail)
 {
@@ -1627,10 +1627,10 @@ class APawn* UAIBlueprintHelperLibrary::SpawnAIFromClass(class UObject* WorldCon
 // Function AIModule.AIBlueprintHelperLibrary.SendAIMessage
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APawn*                   Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Message                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 MessageSource                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bSuccess                       (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Target (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Message (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* MessageSource (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBlueprintHelperLibrary::SendAIMessage(class APawn* Target, const struct FName& Message, class UObject* MessageSource, bool bSuccess)
 {
@@ -1657,9 +1657,9 @@ void UAIBlueprintHelperLibrary::SendAIMessage(class APawn* Target, const struct 
 // Function AIModule.AIBlueprintHelperLibrary.LockAIResourcesWithAnimation
 // (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLockMovement                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           LockAILogic                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimInstance* AnimInstance (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLockMovement (Parm, ZeroConstructor, IsPlainOldData)
+// bool LockAILogic (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIBlueprintHelperLibrary::LockAIResourcesWithAnimation(class UAnimInstance* AnimInstance, bool bLockMovement, bool LockAILogic)
 {
@@ -1685,8 +1685,8 @@ void UAIBlueprintHelperLibrary::LockAIResourcesWithAnimation(class UAnimInstance
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAIRotation
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FRotator                Rotation                       (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FRotator Rotation (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBlueprintHelperLibrary::IsValidAIRotation(const struct FRotator& Rotation)
 {
@@ -1712,8 +1712,8 @@ bool UAIBlueprintHelperLibrary::IsValidAIRotation(const struct FRotator& Rotatio
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAILocation
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 Location                       (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector Location (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBlueprintHelperLibrary::IsValidAILocation(const struct FVector& Location)
 {
@@ -1739,8 +1739,8 @@ bool UAIBlueprintHelperLibrary::IsValidAILocation(const struct FVector& Location
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAIDirection
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FVector                 DirectionVector                (Parm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FVector DirectionVector (Parm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIBlueprintHelperLibrary::IsValidAIDirection(const struct FVector& DirectionVector)
 {
@@ -1766,8 +1766,8 @@ bool UAIBlueprintHelperLibrary::IsValidAIDirection(const struct FVector& Directi
 // Function AIModule.AIBlueprintHelperLibrary.GetCurrentPath
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AController*             Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UNavigationPath*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AController* Controller (Parm, ZeroConstructor, IsPlainOldData)
+// class UNavigationPath* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UNavigationPath* UAIBlueprintHelperLibrary::GetCurrentPath(class AController* Controller)
 {
@@ -1793,8 +1793,8 @@ class UNavigationPath* UAIBlueprintHelperLibrary::GetCurrentPath(class AControll
 // Function AIModule.AIBlueprintHelperLibrary.GetBlackboard
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlackboardComponent*    ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class AActor* Target (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlackboardComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UBlackboardComponent* UAIBlueprintHelperLibrary::GetBlackboard(class AActor* Target)
 {
@@ -1820,8 +1820,8 @@ class UBlackboardComponent* UAIBlueprintHelperLibrary::GetBlackboard(class AActo
 // Function AIModule.AIBlueprintHelperLibrary.GetAIController
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class AActor*                  ControlledActor                (Parm, ZeroConstructor, IsPlainOldData)
-// class AAIController*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* ControlledActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AAIController* UAIBlueprintHelperLibrary::GetAIController(class AActor* ControlledActor)
 {
@@ -1847,13 +1847,13 @@ class AAIController* UAIBlueprintHelperLibrary::GetAIController(class AActor* Co
 // Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Destination                    (Parm, IsPlainOldData)
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bStopOnOverlap                 (Parm, ZeroConstructor, IsPlainOldData)
-// class UAIAsyncTaskBlueprintProxy* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Pawn (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Destination (Parm, IsPlainOldData)
+// class AActor* TargetActor (Parm, ZeroConstructor, IsPlainOldData)
+// float AcceptanceRadius (Parm, ZeroConstructor, IsPlainOldData)
+// bool bStopOnOverlap (Parm, ZeroConstructor, IsPlainOldData)
+// class UAIAsyncTaskBlueprintProxy* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyObject(class UObject* WorldContextObject, class APawn* Pawn, const struct FVector& Destination, class AActor* TargetActor, float AcceptanceRadius, bool bStopOnOverlap)
 {
@@ -1884,8 +1884,8 @@ class UAIAsyncTaskBlueprintProxy* UAIBlueprintHelperLibrary::CreateMoveToProxyOb
 // Function AIModule.AIPerceptionComponent.SetSenseEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  SenseClass                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bEnable                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* SenseClass (Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnable (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionComponent::SetSenseEnabled(class UClass* SenseClass, bool bEnable)
 {
@@ -1931,8 +1931,8 @@ void UAIPerceptionComponent::RequestStimuliListenerUpdate()
 // Function AIModule.AIPerceptionComponent.OnOwnerEndPlay
 // (Final, Native, Public)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -1957,7 +1957,7 @@ void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, TEnumAsByte<enu
 // Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* OutActors)
 {
@@ -1983,8 +1983,8 @@ void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* Ou
 // Function AIModule.AIPerceptionComponent.GetPerceivedActors
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  SenseToUse                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// class UClass* SenseToUse (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UAIPerceptionComponent::GetPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 {
@@ -2011,8 +2011,8 @@ void UAIPerceptionComponent::GetPerceivedActors(class UClass* SenseToUse, TArray
 // Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  SenseToUse                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// class UClass* SenseToUse (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UAIPerceptionComponent::GetKnownPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 {
@@ -2039,8 +2039,8 @@ void UAIPerceptionComponent::GetKnownPerceivedActors(class UClass* SenseToUse, T
 // Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  SenseToUse                     (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor)
+// class UClass* SenseToUse (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> OutActors (Parm, OutParm, ZeroConstructor)
 
 void UAIPerceptionComponent::GetCurrentlyPerceivedActors(class UClass* SenseToUse, TArray<class AActor*>* OutActors)
 {
@@ -2067,9 +2067,9 @@ void UAIPerceptionComponent::GetCurrentlyPerceivedActors(class UClass* SenseToUs
 // Function AIModule.AIPerceptionComponent.GetActorsPerception
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FActorPerceptionBlueprintInfo Info                           (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FActorPerceptionBlueprintInfo Info (Parm, OutParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FActorPerceptionBlueprintInfo* Info)
 {
@@ -2098,7 +2098,7 @@ bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FAc
 // Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  SenseClass                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* SenseClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionStimuliSourceComponent::UnregisterFromSense(class UClass* SenseClass)
 {
@@ -2164,7 +2164,7 @@ void UAIPerceptionStimuliSourceComponent::RegisterWithPerceptionSystem()
 // Function AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  SenseClass                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* SenseClass (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionStimuliSourceComponent::RegisterForSense(class UClass* SenseClass)
 {
@@ -2188,8 +2188,8 @@ void UAIPerceptionStimuliSourceComponent::RegisterForSense(class UClass* SenseCl
 // Function AIModule.AIPerceptionSystem.ReportPerceptionEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UAISenseEvent*           PerceptionEvent                (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UAISenseEvent* PerceptionEvent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionSystem::ReportPerceptionEvent(class UObject* WorldContextObject, class UAISenseEvent* PerceptionEvent)
 {
@@ -2214,7 +2214,7 @@ void UAIPerceptionSystem::ReportPerceptionEvent(class UObject* WorldContextObjec
 // Function AIModule.AIPerceptionSystem.ReportEvent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UAISenseEvent*           PerceptionEvent                (Parm, ZeroConstructor, IsPlainOldData)
+// class UAISenseEvent* PerceptionEvent (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
 {
@@ -2238,10 +2238,10 @@ void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
 // Function AIModule.AIPerceptionSystem.RegisterPerceptionStimuliSource
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  Sense                          (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Target                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* Sense (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Target (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UAIPerceptionSystem::RegisterPerceptionStimuliSource(class UObject* WorldContextObject, class UClass* Sense, class AActor* Target)
 {
@@ -2269,8 +2269,8 @@ bool UAIPerceptionSystem::RegisterPerceptionStimuliSource(class UObject* WorldCo
 // Function AIModule.AIPerceptionSystem.OnPerceptionStimuliSourceEndPlay
 // (Final, Native, Protected)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEndPlayReason> EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Actor (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEndPlayReason> EndPlayReason (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(class AActor* Actor, TEnumAsByte<enum EEndPlayReason> EndPlayReason)
 {
@@ -2295,9 +2295,9 @@ void UAIPerceptionSystem::OnPerceptionStimuliSourceEndPlay(class AActor* Actor, 
 // Function AIModule.AIPerceptionSystem.GetSenseClassForStimulus
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAIStimulus             Stimulus                       (ConstParm, Parm, OutParm, ReferenceParm)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIStimulus Stimulus (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UAIPerceptionSystem::GetSenseClassForStimulus(class UObject* WorldContextObject, const struct FAIStimulus& Stimulus)
 {
@@ -2324,8 +2324,8 @@ class UClass* UAIPerceptionSystem::GetSenseClassForStimulus(class UObject* World
 // Function AIModule.AISense_Blueprint.OnUpdate
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// TArray<class UAISenseEvent*>   EventsToProcess                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<class UAISenseEvent*> EventsToProcess (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UAISense_Blueprint::OnUpdate(TArray<class UAISenseEvent*> EventsToProcess)
 {
@@ -2350,8 +2350,8 @@ float UAISense_Blueprint::OnUpdate(TArray<class UAISenseEvent*> EventsToProcess)
 // Function AIModule.AISense_Blueprint.OnListenerUpdated
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  ActorListener                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAIPerceptionComponent*  PerceptionComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* ActorListener (Parm, ZeroConstructor, IsPlainOldData)
+// class UAIPerceptionComponent* PerceptionComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UAISense_Blueprint::OnListenerUpdated(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 {
@@ -2375,8 +2375,8 @@ void UAISense_Blueprint::OnListenerUpdated(class AActor* ActorListener, class UA
 // Function AIModule.AISense_Blueprint.OnListenerUnregistered
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  ActorListener                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAIPerceptionComponent*  PerceptionComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* ActorListener (Parm, ZeroConstructor, IsPlainOldData)
+// class UAIPerceptionComponent* PerceptionComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UAISense_Blueprint::OnListenerUnregistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 {
@@ -2400,8 +2400,8 @@ void UAISense_Blueprint::OnListenerUnregistered(class AActor* ActorListener, cla
 // Function AIModule.AISense_Blueprint.OnListenerRegistered
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  ActorListener                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAIPerceptionComponent*  PerceptionComponent            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// class AActor* ActorListener (Parm, ZeroConstructor, IsPlainOldData)
+// class UAIPerceptionComponent* PerceptionComponent (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 void UAISense_Blueprint::OnListenerRegistered(class AActor* ActorListener, class UAIPerceptionComponent* PerceptionComponent)
 {
@@ -2425,7 +2425,7 @@ void UAISense_Blueprint::OnListenerRegistered(class AActor* ActorListener, class
 // Function AIModule.AISense_Blueprint.K2_OnNewPawn
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   NewPawn                        (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* NewPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISense_Blueprint::K2_OnNewPawn(class APawn* NewPawn)
 {
@@ -2448,7 +2448,7 @@ void UAISense_Blueprint::K2_OnNewPawn(class APawn* NewPawn)
 // Function AIModule.AISense_Blueprint.GetAllListenerComponents
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class UAIPerceptionComponent*> ListenerComponents             (Parm, OutParm, ZeroConstructor)
+// TArray<class UAIPerceptionComponent*> ListenerComponents (Parm, OutParm, ZeroConstructor)
 
 void UAISense_Blueprint::GetAllListenerComponents(TArray<class UAIPerceptionComponent*>* ListenerComponents)
 {
@@ -2474,7 +2474,7 @@ void UAISense_Blueprint::GetAllListenerComponents(TArray<class UAIPerceptionComp
 // Function AIModule.AISense_Blueprint.GetAllListenerActors
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<class AActor*>          ListenerActors                 (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*> ListenerActors (Parm, OutParm, ZeroConstructor)
 
 void UAISense_Blueprint::GetAllListenerActors(TArray<class AActor*>* ListenerActors)
 {
@@ -2500,12 +2500,12 @@ void UAISense_Blueprint::GetAllListenerActors(TArray<class AActor*>* ListenerAct
 // Function AIModule.AISense_Damage.ReportDamageEvent
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  DamagedActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DamageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 EventLocation                  (Parm, IsPlainOldData)
-// struct FVector                 HitLocation                    (Parm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* DamagedActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Instigator (Parm, ZeroConstructor, IsPlainOldData)
+// float DamageAmount (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector EventLocation (Parm, IsPlainOldData)
+// struct FVector HitLocation (Parm, IsPlainOldData)
 
 void UAISense_Damage::ReportDamageEvent(class UObject* WorldContextObject, class AActor* DamagedActor, class AActor* Instigator, float DamageAmount, const struct FVector& EventLocation, const struct FVector& HitLocation)
 {
@@ -2534,12 +2534,12 @@ void UAISense_Damage::ReportDamageEvent(class UObject* WorldContextObject, class
 // Function AIModule.AISense_Hearing.ReportNoiseEvent
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 NoiseLocation                  (Parm, IsPlainOldData)
-// float                          Loudness                       (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          MaxRange                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Tag                            (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector NoiseLocation (Parm, IsPlainOldData)
+// float Loudness (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* Instigator (Parm, ZeroConstructor, IsPlainOldData)
+// float MaxRange (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName Tag (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, const struct FName& Tag)
 {
@@ -2568,9 +2568,9 @@ void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const
 // Function AIModule.AISense_Prediction.RequestPawnPredictionEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APawn*                   Requestor                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  PredictedActor                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PredictionTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Requestor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* PredictedActor (Parm, ZeroConstructor, IsPlainOldData)
+// float PredictionTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISense_Prediction::RequestPawnPredictionEvent(class APawn* Requestor, class AActor* PredictedActor, float PredictionTime)
 {
@@ -2596,9 +2596,9 @@ void UAISense_Prediction::RequestPawnPredictionEvent(class APawn* Requestor, cla
 // Function AIModule.AISense_Prediction.RequestControllerPredictionEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AAIController*           Requestor                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  PredictedActor                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PredictionTime                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* Requestor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* PredictedActor (Parm, ZeroConstructor, IsPlainOldData)
+// float PredictionTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UAISense_Prediction::RequestControllerPredictionEvent(class AAIController* Requestor, class AActor* PredictedActor, float PredictionTime)
 {
@@ -2666,16 +2666,16 @@ void UAISystem::AIIgnorePlayers()
 // Function AIModule.AITask_MoveTo.AIMoveTo
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class AAIController*           Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 GoalLocation                   (Parm, IsPlainOldData)
-// class AActor*                  GoalActor                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          AcceptanceRadius               (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EAIOptionFlag> StopOnOverlap                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EAIOptionFlag> AcceptPartialPath              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUsePathfinding                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bLockAILogic                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bUseContinuosGoalTracking      (Parm, ZeroConstructor, IsPlainOldData)
-// class UAITask_MoveTo*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AAIController* Controller (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector GoalLocation (Parm, IsPlainOldData)
+// class AActor* GoalActor (Parm, ZeroConstructor, IsPlainOldData)
+// float AcceptanceRadius (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EAIOptionFlag> StopOnOverlap (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EAIOptionFlag> AcceptPartialPath (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUsePathfinding (Parm, ZeroConstructor, IsPlainOldData)
+// bool bLockAILogic (Parm, ZeroConstructor, IsPlainOldData)
+// bool bUseContinuosGoalTracking (Parm, ZeroConstructor, IsPlainOldData)
+// class UAITask_MoveTo* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, const struct FVector& GoalLocation, class AActor* GoalActor, float AcceptanceRadius, TEnumAsByte<enum EAIOptionFlag> StopOnOverlap, TEnumAsByte<enum EAIOptionFlag> AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuosGoalTracking)
 {
@@ -2709,9 +2709,9 @@ class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, 
 // Function AIModule.AITask_RunEQS.RunEQS
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AAIController*           Controller                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UEnvQuery*               QueryTemplate                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UAITask_RunEQS*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AAIController* Controller (Parm, ZeroConstructor, IsPlainOldData)
+// class UEnvQuery* QueryTemplate (Parm, ZeroConstructor, IsPlainOldData)
+// class UAITask_RunEQS* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, class UEnvQuery* QueryTemplate)
 {
@@ -2738,9 +2738,9 @@ class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, cl
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -2765,8 +2765,8 @@ void UBTDecorator_BlueprintBase::ReceiveTickAI(class AAIController* OwnerControl
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -2790,8 +2790,8 @@ void UBTDecorator_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float Del
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -2815,7 +2815,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverDeactivatedAI(class AAIControlle
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerActor)
 {
@@ -2838,8 +2838,8 @@ void UBTDecorator_BlueprintBase::ReceiveObserverDeactivated(class AActor* OwnerA
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -2863,7 +2863,7 @@ void UBTDecorator_BlueprintBase::ReceiveObserverActivatedAI(class AAIController*
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerActor)
 {
@@ -2886,8 +2886,8 @@ void UBTDecorator_BlueprintBase::ReceiveObserverActivated(class AActor* OwnerAct
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -2911,7 +2911,7 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionStartAI(class AAIController* Ow
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
 {
@@ -2934,9 +2934,9 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionStart(class AActor* OwnerActor)
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBTNodeResult> NodeResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBTNodeResult> NodeResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* OwnerController, class APawn* ControlledPawn, TEnumAsByte<enum EBTNodeResult> NodeResult)
 {
@@ -2961,8 +2961,8 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionFinishAI(class AAIController* O
 // Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EBTNodeResult> NodeResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EBTNodeResult> NodeResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor, TEnumAsByte<enum EBTNodeResult> NodeResult)
 {
@@ -2986,9 +2986,9 @@ void UBTDecorator_BlueprintBase::ReceiveExecutionFinish(class AActor* OwnerActor
 // Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -3014,8 +3014,8 @@ bool UBTDecorator_BlueprintBase::PerformConditionCheckAI(class AAIController* Ow
 // Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
 {
@@ -3040,7 +3040,7 @@ bool UBTDecorator_BlueprintBase::PerformConditionCheck(class AActor* OwnerActor)
 // Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive()
 {
@@ -3065,7 +3065,7 @@ bool UBTDecorator_BlueprintBase::IsDecoratorObserverActive()
 // Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive()
 {
@@ -3090,7 +3090,7 @@ bool UBTDecorator_BlueprintBase::IsDecoratorExecutionActive()
 // Function AIModule.BTFunctionLibrary.StopUsingExternalEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::StopUsingExternalEvent(class UBTNode* NodeOwner)
 {
@@ -3114,8 +3114,8 @@ void UBTFunctionLibrary::StopUsingExternalEvent(class UBTNode* NodeOwner)
 // Function AIModule.BTFunctionLibrary.StartUsingExternalEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  OwningActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwningActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::StartUsingExternalEvent(class UBTNode* NodeOwner, class AActor* OwningActor)
 {
@@ -3140,9 +3140,9 @@ void UBTFunctionLibrary::StartUsingExternalEvent(class UBTNode* NodeOwner, class
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsVector
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 Value                          (Parm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector Value (Parm, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FVector& Value)
 {
@@ -3168,9 +3168,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsVector(class UBTNode* NodeOwner, co
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 Value                          (Parm, ZeroConstructor)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString Value (Parm, ZeroConstructor)
 
 void UBTFunctionLibrary::SetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FString& Value)
 {
@@ -3196,9 +3196,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsString(class UBTNode* NodeOwner, co
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FRotator                Value                          (Parm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FRotator Value (Parm, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FRotator& Value)
 {
@@ -3224,9 +3224,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsRotator(class UBTNode* NodeOwner, c
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// class UObject*                 Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject* Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UObject* Value)
 {
@@ -3252,9 +3252,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsObject(class UBTNode* NodeOwner, co
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, const struct FName& Value)
 {
@@ -3280,9 +3280,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsName(class UBTNode* NodeOwner, cons
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsInt
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// int Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, int Value)
 {
@@ -3308,9 +3308,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsInt(class UBTNode* NodeOwner, const
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, float Value)
 {
@@ -3336,9 +3336,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsFloat(class UBTNode* NodeOwner, con
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// unsigned char                  Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// unsigned char Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, unsigned char Value)
 {
@@ -3364,9 +3364,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsEnum(class UBTNode* NodeOwner, cons
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsClass
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// class UClass*                  Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass* Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, class UClass* Value)
 {
@@ -3392,9 +3392,9 @@ void UBTFunctionLibrary::SetBlackboardValueAsClass(class UBTNode* NodeOwner, con
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsBool
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// bool Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTFunctionLibrary::SetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key, bool Value)
 {
@@ -3420,8 +3420,8 @@ void UBTFunctionLibrary::SetBlackboardValueAsBool(class UBTNode* NodeOwner, cons
 // Function AIModule.BTFunctionLibrary.GetOwnersBlackboard
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UBlackboardComponent*    ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// class UBlackboardComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UBlackboardComponent* UBTFunctionLibrary::GetOwnersBlackboard(class UBTNode* NodeOwner)
 {
@@ -3447,8 +3447,8 @@ class UBlackboardComponent* UBTFunctionLibrary::GetOwnersBlackboard(class UBTNod
 // Function AIModule.BTFunctionLibrary.GetOwnerComponent
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UBehaviorTreeComponent*  ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// class UBehaviorTreeComponent* ReturnValue (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
 class UBehaviorTreeComponent* UBTFunctionLibrary::GetOwnerComponent(class UBTNode* NodeOwner)
 {
@@ -3474,9 +3474,9 @@ class UBehaviorTreeComponent* UBTFunctionLibrary::GetOwnerComponent(class UBTNod
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsVector
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UBTFunctionLibrary::GetBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3503,9 +3503,9 @@ struct FVector UBTFunctionLibrary::GetBlackboardValueAsVector(class UBTNode* Nod
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FString ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 struct FString UBTFunctionLibrary::GetBlackboardValueAsString(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3532,9 +3532,9 @@ struct FString UBTFunctionLibrary::GetBlackboardValueAsString(class UBTNode* Nod
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FRotator ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FRotator UBTFunctionLibrary::GetBlackboardValueAsRotator(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3561,9 +3561,9 @@ struct FRotator UBTFunctionLibrary::GetBlackboardValueAsRotator(class UBTNode* N
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UBTFunctionLibrary::GetBlackboardValueAsObject(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3590,9 +3590,9 @@ class UObject* UBTFunctionLibrary::GetBlackboardValueAsObject(class UBTNode* Nod
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsName
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UBTFunctionLibrary::GetBlackboardValueAsName(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3619,9 +3619,9 @@ struct FName UBTFunctionLibrary::GetBlackboardValueAsName(class UBTNode* NodeOwn
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsInt
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UBTFunctionLibrary::GetBlackboardValueAsInt(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3648,9 +3648,9 @@ int UBTFunctionLibrary::GetBlackboardValueAsInt(class UBTNode* NodeOwner, const 
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UBTFunctionLibrary::GetBlackboardValueAsFloat(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3677,9 +3677,9 @@ float UBTFunctionLibrary::GetBlackboardValueAsFloat(class UBTNode* NodeOwner, co
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// unsigned char ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 unsigned char UBTFunctionLibrary::GetBlackboardValueAsEnum(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3706,9 +3706,9 @@ unsigned char UBTFunctionLibrary::GetBlackboardValueAsEnum(class UBTNode* NodeOw
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsClass
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// class UClass* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UClass* UBTFunctionLibrary::GetBlackboardValueAsClass(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3735,9 +3735,9 @@ class UClass* UBTFunctionLibrary::GetBlackboardValueAsClass(class UBTNode* NodeO
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsBool
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTFunctionLibrary::GetBlackboardValueAsBool(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3764,9 +3764,9 @@ bool UBTFunctionLibrary::GetBlackboardValueAsBool(class UBTNode* NodeOwner, cons
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsActor
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
+// class AActor* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class AActor* UBTFunctionLibrary::GetBlackboardValueAsActor(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3793,8 +3793,8 @@ class AActor* UBTFunctionLibrary::GetBlackboardValueAsActor(class UBTNode* NodeO
 // Function AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBTFunctionLibrary::ClearBlackboardValueAsVector(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3819,8 +3819,8 @@ void UBTFunctionLibrary::ClearBlackboardValueAsVector(class UBTNode* NodeOwner, 
 // Function AIModule.BTFunctionLibrary.ClearBlackboardValue
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UBTNode*                 NodeOwner                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBlackboardKeySelector  Key                            (ConstParm, Parm, OutParm, ReferenceParm)
+// class UBTNode* NodeOwner (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBlackboardKeySelector Key (ConstParm, Parm, OutParm, ReferenceParm)
 
 void UBTFunctionLibrary::ClearBlackboardValue(class UBTNode* NodeOwner, const struct FBlackboardKeySelector& Key)
 {
@@ -3845,9 +3845,9 @@ void UBTFunctionLibrary::ClearBlackboardValue(class UBTNode* NodeOwner, const st
 // Function AIModule.BTService_BlueprintBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -3872,8 +3872,8 @@ void UBTService_BlueprintBase::ReceiveTickAI(class AAIController* OwnerControlle
 // Function AIModule.BTService_BlueprintBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -3897,8 +3897,8 @@ void UBTService_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float Delta
 // Function AIModule.BTService_BlueprintBase.ReceiveSearchStartAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveSearchStartAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -3922,7 +3922,7 @@ void UBTService_BlueprintBase::ReceiveSearchStartAI(class AAIController* OwnerCo
 // Function AIModule.BTService_BlueprintBase.ReceiveSearchStart
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveSearchStart(class AActor* OwnerActor)
 {
@@ -3945,8 +3945,8 @@ void UBTService_BlueprintBase::ReceiveSearchStart(class AActor* OwnerActor)
 // Function AIModule.BTService_BlueprintBase.ReceiveDeactivationAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -3970,7 +3970,7 @@ void UBTService_BlueprintBase::ReceiveDeactivationAI(class AAIController* OwnerC
 // Function AIModule.BTService_BlueprintBase.ReceiveDeactivation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveDeactivation(class AActor* OwnerActor)
 {
@@ -3993,8 +3993,8 @@ void UBTService_BlueprintBase::ReceiveDeactivation(class AActor* OwnerActor)
 // Function AIModule.BTService_BlueprintBase.ReceiveActivationAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -4018,7 +4018,7 @@ void UBTService_BlueprintBase::ReceiveActivationAI(class AAIController* OwnerCon
 // Function AIModule.BTService_BlueprintBase.ReceiveActivation
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTService_BlueprintBase::ReceiveActivation(class AActor* OwnerActor)
 {
@@ -4041,7 +4041,7 @@ void UBTService_BlueprintBase::ReceiveActivation(class AActor* OwnerActor)
 // Function AIModule.BTService_BlueprintBase.IsServiceActive
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTService_BlueprintBase::IsServiceActive()
 {
@@ -4066,8 +4066,8 @@ bool UBTService_BlueprintBase::IsServiceActive()
 // Function AIModule.BTTask_BlueprintBase.SetFinishOnMessageWithId
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FName                   MessageName                    (Parm, ZeroConstructor, IsPlainOldData)
-// int                            RequestID                      (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName MessageName (Parm, ZeroConstructor, IsPlainOldData)
+// int RequestID (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::SetFinishOnMessageWithId(const struct FName& MessageName, int RequestID)
 {
@@ -4092,7 +4092,7 @@ void UBTTask_BlueprintBase::SetFinishOnMessageWithId(const struct FName& Message
 // Function AIModule.BTTask_BlueprintBase.SetFinishOnMessage
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// struct FName                   MessageName                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName MessageName (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::SetFinishOnMessage(const struct FName& MessageName)
 {
@@ -4116,9 +4116,9 @@ void UBTTask_BlueprintBase::SetFinishOnMessage(const struct FName& MessageName)
 // Function AIModule.BTTask_BlueprintBase.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -4143,8 +4143,8 @@ void UBTTask_BlueprintBase::ReceiveTickAI(class AAIController* OwnerController, 
 // Function AIModule.BTTask_BlueprintBase.ReceiveTick
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSeconds)
 {
@@ -4168,8 +4168,8 @@ void UBTTask_BlueprintBase::ReceiveTick(class AActor* OwnerActor, float DeltaSec
 // Function AIModule.BTTask_BlueprintBase.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -4193,7 +4193,7 @@ void UBTTask_BlueprintBase::ReceiveExecuteAI(class AAIController* OwnerControlle
 // Function AIModule.BTTask_BlueprintBase.ReceiveExecute
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveExecute(class AActor* OwnerActor)
 {
@@ -4216,8 +4216,8 @@ void UBTTask_BlueprintBase::ReceiveExecute(class AActor* OwnerActor)
 // Function AIModule.BTTask_BlueprintBase.ReceiveAbortAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AAIController*           OwnerController                (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AAIController* OwnerController (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
@@ -4241,7 +4241,7 @@ void UBTTask_BlueprintBase::ReceiveAbortAI(class AAIController* OwnerController,
 // Function AIModule.BTTask_BlueprintBase.ReceiveAbort
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// class AActor*                  OwnerActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* OwnerActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::ReceiveAbort(class AActor* OwnerActor)
 {
@@ -4264,7 +4264,7 @@ void UBTTask_BlueprintBase::ReceiveAbort(class AActor* OwnerActor)
 // Function AIModule.BTTask_BlueprintBase.IsTaskExecuting
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTTask_BlueprintBase::IsTaskExecuting()
 {
@@ -4289,7 +4289,7 @@ bool UBTTask_BlueprintBase::IsTaskExecuting()
 // Function AIModule.BTTask_BlueprintBase.IsTaskAborting
 // (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UBTTask_BlueprintBase::IsTaskAborting()
 {
@@ -4314,7 +4314,7 @@ bool UBTTask_BlueprintBase::IsTaskAborting()
 // Function AIModule.BTTask_BlueprintBase.FinishExecute
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                           bSuccess                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool bSuccess (Parm, ZeroConstructor, IsPlainOldData)
 
 void UBTTask_BlueprintBase::FinishExecute(bool bSuccess)
 {
@@ -4359,9 +4359,9 @@ void UBTTask_BlueprintBase::FinishAbort()
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
 // (Event, Public, HasOutParms, HasDefaults, BlueprintEvent, Const)
 // Parameters:
-// class UObject*                 QuerierObject                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  QuerierActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ResultingLocation              (Parm, OutParm, IsPlainOldData)
+// class UObject* QuerierObject (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* QuerierActor (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ResultingLocation (Parm, OutParm, IsPlainOldData)
 
 void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation)
 {
@@ -4388,9 +4388,9 @@ void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* Querie
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
 // (Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UObject*                 QuerierObject                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  QuerierActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  ResultingActor                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UObject* QuerierObject (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* QuerierActor (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* ResultingActor (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor)
 {
@@ -4417,9 +4417,9 @@ void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierOb
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
 // (Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UObject*                 QuerierObject                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  QuerierActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         ResultingLocationSet           (Parm, OutParm, ZeroConstructor)
+// class UObject* QuerierObject (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* QuerierActor (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> ResultingLocationSet (Parm, OutParm, ZeroConstructor)
 
 void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet)
 {
@@ -4446,9 +4446,9 @@ void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierO
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
 // (Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// class UObject*                 QuerierObject                  (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  QuerierActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          ResultingActorsSet             (Parm, OutParm, ZeroConstructor)
+// class UObject* QuerierObject (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* QuerierActor (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class AActor*> ResultingActorsSet (Parm, OutParm, ZeroConstructor)
 
 void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet)
 {
@@ -4475,7 +4475,7 @@ void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObje
 // Function AIModule.EnvQueryGenerator_BlueprintBase.GetQuerier
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UObject* UEnvQueryGenerator_BlueprintBase::GetQuerier()
 {
@@ -4500,7 +4500,7 @@ class UObject* UEnvQueryGenerator_BlueprintBase::GetQuerier()
 // Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
 // (Event, Public, HasOutParms, BlueprintEvent, Const)
 // Parameters:
-// TArray<struct FVector>         ContextLocations               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> ContextLocations (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(TArray<struct FVector> ContextLocations)
 {
@@ -4523,7 +4523,7 @@ void UEnvQueryGenerator_BlueprintBase::DoItemGeneration(TArray<struct FVector> C
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
 // (Final, Native, Public, HasDefaults, BlueprintCallable, Const)
 // Parameters:
-// struct FVector                 GeneratedVector                (Parm, IsPlainOldData)
+// struct FVector GeneratedVector (Parm, IsPlainOldData)
 
 void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(const struct FVector& GeneratedVector)
 {
@@ -4547,7 +4547,7 @@ void UEnvQueryGenerator_BlueprintBase::AddGeneratedVector(const struct FVector& 
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
-// class AActor*                  GeneratedActor                 (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor* GeneratedActor (Parm, ZeroConstructor, IsPlainOldData)
 
 void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(class AActor* GeneratedActor)
 {
@@ -4571,8 +4571,8 @@ void UEnvQueryGenerator_BlueprintBase::AddGeneratedActor(class AActor* Generated
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.SetNamedParam
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   ParamName                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName ParamName (Parm, ZeroConstructor, IsPlainOldData)
+// float Value (Parm, ZeroConstructor, IsPlainOldData)
 
 void UEnvQueryInstanceBlueprintWrapper::SetNamedParam(const struct FName& ParamName, float Value)
 {
@@ -4597,7 +4597,7 @@ void UEnvQueryInstanceBlueprintWrapper::SetNamedParam(const struct FName& ParamN
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<struct FVector>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<struct FVector> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<struct FVector> UEnvQueryInstanceBlueprintWrapper::GetResultsAsLocations()
 {
@@ -4622,7 +4622,7 @@ TArray<struct FVector> UEnvQueryInstanceBlueprintWrapper::GetResultsAsLocations(
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<class AActor*> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm)
 
 TArray<class AActor*> UEnvQueryInstanceBlueprintWrapper::GetResultsAsActors()
 {
@@ -4647,8 +4647,8 @@ TArray<class AActor*> UEnvQueryInstanceBlueprintWrapper::GetResultsAsActors()
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.GetItemScore
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            ItemIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ItemIndex (Parm, ZeroConstructor, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UEnvQueryInstanceBlueprintWrapper::GetItemScore(int ItemIndex)
 {
@@ -4674,8 +4674,8 @@ float UEnvQueryInstanceBlueprintWrapper::GetItemScore(int ItemIndex)
 // DelegateFunction AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// class UEnvQueryInstanceBlueprintWrapper* QueryInstance                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEnvQueryStatus> QueryStatus                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UEnvQueryInstanceBlueprintWrapper* QueryInstance (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEnvQueryStatus> QueryStatus (Parm, ZeroConstructor, IsPlainOldData)
 
 void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature(class UEnvQueryInstanceBlueprintWrapper* QueryInstance, TEnumAsByte<enum EEnvQueryStatus> QueryStatus)
 {
@@ -4699,12 +4699,12 @@ void UEnvQueryInstanceBlueprintWrapper::EQSQueryDoneSignature__DelegateSignature
 // Function AIModule.EnvQueryManager.RunEQSQuery
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UEnvQuery*               QueryTemplate                  (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Querier                        (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EEnvQueryRunMode> RunMode                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  WrapperClass                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UEnvQueryInstanceBlueprintWrapper* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UEnvQuery* QueryTemplate (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Querier (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EEnvQueryRunMode> RunMode (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* WrapperClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UEnvQueryInstanceBlueprintWrapper* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UObject* WorldContextObject, class UEnvQuery* QueryTemplate, class UObject* Querier, TEnumAsByte<enum EEnvQueryRunMode> RunMode, class UClass* WrapperClass)
 {
@@ -4734,9 +4734,9 @@ class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UOb
 // Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CellSize                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// float CellSize (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldContextObject, float CellSize)
 {
@@ -4763,9 +4763,9 @@ bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldCon
 // Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// int                            GridId                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildGrids                  (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// int GridId (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildGrids (Parm, ZeroConstructor, IsPlainOldData)
 
 void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContextObject, int GridId, bool bRebuildGrids)
 {
@@ -4791,11 +4791,11 @@ void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContext
 // Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Start                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 End                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// TArray<struct FVector>         PathPoints                     (Parm, OutParm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Start (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector End (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// TArray<struct FVector> PathPoints (Parm, OutParm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<struct FVector>* PathPoints)
 {
@@ -4826,12 +4826,12 @@ bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldConte
 // Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Locations                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// int                            Radius2D                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildGrids                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Locations (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int Radius2D (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Height (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildGrids (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldContextObject, TArray<struct FVector> Locations, int Radius2D, float Height, bool bRebuildGrids)
 {
@@ -4861,12 +4861,12 @@ int UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldCo
 // Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// int                            Radius2D                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildGrids                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// int Radius2D (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Height (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildGrids (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldContextObject, const struct FVector& Location, int Radius2D, float Height, bool bRebuildGrids)
 {
@@ -4896,14 +4896,14 @@ int UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldCon
 // Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          CapsuleRadius                  (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CapsuleHalfHeight              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Radius2D                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildGrids                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float CapsuleRadius (Parm, ZeroConstructor, IsPlainOldData)
+// float CapsuleHalfHeight (Parm, ZeroConstructor, IsPlainOldData)
+// int Radius2D (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Height (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildGrids (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldContextObject, const struct FVector& Location, float CapsuleRadius, float CapsuleHalfHeight, int Radius2D, float Height, bool bRebuildGrids)
 {
@@ -4935,14 +4935,14 @@ int UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldC
 // Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 Extent                         (Parm, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, IsPlainOldData)
-// int                            Radius2D                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Height                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildGrids                  (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector Extent (Parm, IsPlainOldData)
+// struct FRotator Rotation (Parm, IsPlainOldData)
+// int Radius2D (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float Height (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildGrids (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent, const struct FRotator& Rotation, int Radius2D, float Height, bool bRebuildGrids)
 {
@@ -4974,7 +4974,7 @@ int UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldConte
 // Function AIModule.PawnAction.GetActionPriority
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TEnumAsByte<enum EAIRequestPriority> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TEnumAsByte<enum EAIRequestPriority> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EAIRequestPriority> UPawnAction::GetActionPriority()
 {
@@ -4999,7 +4999,7 @@ TEnumAsByte<enum EAIRequestPriority> UPawnAction::GetActionPriority()
 // Function AIModule.PawnAction.Finish
 // (Native, Protected, BlueprintCallable)
 // Parameters:
-// TEnumAsByte<enum EPawnActionResult> WithResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPawnActionResult> WithResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction::Finish(TEnumAsByte<enum EPawnActionResult> WithResult)
 {
@@ -5023,9 +5023,9 @@ void UPawnAction::Finish(TEnumAsByte<enum EPawnActionResult> WithResult)
 // Function AIModule.PawnAction.CreateActionInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ActionClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UPawnAction*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UObject* WorldContextObject (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass* ActionClass (Parm, ZeroConstructor, IsPlainOldData)
+// class UPawnAction* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPawnAction* UPawnAction::CreateActionInstance(class UObject* WorldContextObject, class UClass* ActionClass)
 {
@@ -5052,8 +5052,8 @@ class UPawnAction* UPawnAction::CreateActionInstance(class UObject* WorldContext
 // Function AIModule.PawnAction_BlueprintBase.ActionTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          DeltaSeconds                   (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// float DeltaSeconds (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float DeltaSeconds)
 {
@@ -5077,7 +5077,7 @@ void UPawnAction_BlueprintBase::ActionTick(class APawn* ControlledPawn, float De
 // Function AIModule.PawnAction_BlueprintBase.ActionStart
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
 {
@@ -5100,7 +5100,7 @@ void UPawnAction_BlueprintBase::ActionStart(class APawn* ControlledPawn)
 // Function AIModule.PawnAction_BlueprintBase.ActionResume
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
 {
@@ -5123,7 +5123,7 @@ void UPawnAction_BlueprintBase::ActionResume(class APawn* ControlledPawn)
 // Function AIModule.PawnAction_BlueprintBase.ActionPause
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
 {
@@ -5146,8 +5146,8 @@ void UPawnAction_BlueprintBase::ActionPause(class APawn* ControlledPawn)
 // Function AIModule.PawnAction_BlueprintBase.ActionFinished
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   ControlledPawn                 (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EPawnActionResult> WithResult                     (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* ControlledPawn (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPawnActionResult> WithResult (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, TEnumAsByte<enum EPawnActionResult> WithResult)
 {
@@ -5171,10 +5171,10 @@ void UPawnAction_BlueprintBase::ActionFinished(class APawn* ControlledPawn, TEnu
 // Function AIModule.PawnActionsComponent.K2_PushAction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPawnAction*             NewAction                      (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPawnAction* NewAction (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EAIRequestPriority> Priority (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject* Instigator (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, TEnumAsByte<enum EAIRequestPriority> Priority, class UObject* Instigator)
 {
@@ -5202,10 +5202,10 @@ bool UPawnActionsComponent::K2_PushAction(class UPawnAction* NewAction, TEnumAsB
 // Function AIModule.PawnActionsComponent.K2_PerformAction
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UPawnAction*             Action                         (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EAIRequestPriority> Priority                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class APawn* Pawn (Parm, ZeroConstructor, IsPlainOldData)
+// class UPawnAction* Action (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EAIRequestPriority> Priority (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPawnActionsComponent::K2_PerformAction(class APawn* Pawn, class UPawnAction* Action, TEnumAsByte<enum EAIRequestPriority> Priority)
 {
@@ -5233,8 +5233,8 @@ bool UPawnActionsComponent::K2_PerformAction(class APawn* Pawn, class UPawnActio
 // Function AIModule.PawnActionsComponent.K2_ForceAbortAction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPawnAction* ActionToAbort (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPawnActionAbortState> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPawnActionAbortState> UPawnActionsComponent::K2_ForceAbortAction(class UPawnAction* ActionToAbort)
 {
@@ -5260,8 +5260,8 @@ TEnumAsByte<enum EPawnActionAbortState> UPawnActionsComponent::K2_ForceAbortActi
 // Function AIModule.PawnActionsComponent.K2_AbortAction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPawnAction*             ActionToAbort                  (Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<enum EPawnActionAbortState> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPawnAction* ActionToAbort (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<enum EPawnActionAbortState> ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 TEnumAsByte<enum EPawnActionAbortState> UPawnActionsComponent::K2_AbortAction(class UPawnAction* ActionToAbort)
 {
@@ -5287,7 +5287,7 @@ TEnumAsByte<enum EPawnActionAbortState> UPawnActionsComponent::K2_AbortAction(cl
 // Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
 // (BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bEnabled                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool bEnabled (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnSensingComponent::SetSensingUpdatesEnabled(bool bEnabled)
 {
@@ -5311,7 +5311,7 @@ void UPawnSensingComponent::SetSensingUpdatesEnabled(bool bEnabled)
 // Function AIModule.PawnSensingComponent.SetSensingInterval
 // (BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewSensingInterval             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewSensingInterval (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnSensingComponent::SetSensingInterval(float NewSensingInterval)
 {
@@ -5335,7 +5335,7 @@ void UPawnSensingComponent::SetSensingInterval(float NewSensingInterval)
 // Function AIModule.PawnSensingComponent.SetPeripheralVisionAngle
 // (BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPeripheralVisionAngle       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float NewPeripheralVisionAngle (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnSensingComponent::SetPeripheralVisionAngle(float NewPeripheralVisionAngle)
 {
@@ -5359,7 +5359,7 @@ void UPawnSensingComponent::SetPeripheralVisionAngle(float NewPeripheralVisionAn
 // DelegateFunction AIModule.PawnSensingComponent.SeePawnDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 // Parameters:
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Pawn (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(class APawn* Pawn)
 {
@@ -5382,9 +5382,9 @@ void UPawnSensingComponent::SeePawnDelegate__DelegateSignature(class APawn* Pawn
 // DelegateFunction AIModule.PawnSensingComponent.HearNoiseDelegate__DelegateSignature
 // (MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults)
 // Parameters:
-// class APawn*                   Instigator                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn* Instigator (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector Location (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float Volume (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(class APawn* Instigator, const struct FVector& Location, float Volume)
 {
@@ -5409,7 +5409,7 @@ void UPawnSensingComponent::HearNoiseDelegate__DelegateSignature(class APawn* In
 // Function AIModule.PawnSensingComponent.GetPeripheralVisionCosine
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPawnSensingComponent::GetPeripheralVisionCosine()
 {
@@ -5434,7 +5434,7 @@ float UPawnSensingComponent::GetPeripheralVisionCosine()
 // Function AIModule.PawnSensingComponent.GetPeripheralVisionAngle
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPawnSensingComponent::GetPeripheralVisionAngle()
 {

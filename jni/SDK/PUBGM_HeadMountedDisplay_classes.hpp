@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -14,8 +14,7 @@ class UHeadMountedDisplayFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class HeadMountedDisplay.HeadMountedDisplayFunctionLibrary");
@@ -51,18 +50,17 @@ public:
 
 
 // Class HeadMountedDisplay.MotionControllerComponent
-// 0x0060 (0x0980 - 0x0920)
+// 0x0060 (0x09A0 - 0x0940)
 class UMotionControllerComponent : public UPrimitiveComponent
 {
 public:
-	int                                                playerIndex;                                              // 0x0920(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	EControllerHand                                    Hand;                                                     // 0x0924(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x0925(0x0001) (Edit, BlueprintVisible)
-	ETrackingStatus                                    CurrentTrackingStatus;                                    // 0x0926(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x59];                                      // 0x0927(0x0059) MISSED OFFSET
+	int playerIndex; // 0x0940(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EControllerHand Hand; // 0x0944(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char bDisableLowLatencyUpdate : 1; // 0x0945(0x0001) (Edit, BlueprintVisible)
+	ETrackingStatus CurrentTrackingStatus; // 0x0946(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0x59]; // 0x0947(0x0059) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class HeadMountedDisplay.MotionControllerComponent");
@@ -80,8 +78,7 @@ class UMotionTrackedDeviceFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary");
@@ -109,18 +106,17 @@ public:
 class UVRNotificationsComponent : public UActorComponent
 {
 public:
-	struct FScriptMulticastDelegate                    HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate;    // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDTrackingInitializedDelegate;                           // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDRecenteredDelegate;                                    // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDLostDelegate;                                          // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDReconnectedDelegate;                                   // 0x01B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDConnectCanceledDelegate;                               // 0x01C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDPutOnHeadDelegate;                                     // 0x01D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    HMDRemovedFromHeadDelegate;                               // 0x01E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    VRControllerRecenteredDelegate;                           // 0x01F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate; // 0x0178(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDTrackingInitializedDelegate; // 0x0188(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDRecenteredDelegate; // 0x0198(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDLostDelegate; // 0x01A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDReconnectedDelegate; // 0x01B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDConnectCanceledDelegate; // 0x01C8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDPutOnHeadDelegate; // 0x01D8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate HMDRemovedFromHeadDelegate; // 0x01E8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate VRControllerRecenteredDelegate; // 0x01F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class HeadMountedDisplay.VRNotificationsComponent");

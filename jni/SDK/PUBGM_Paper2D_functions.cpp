@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,8 +11,8 @@ namespace SDK
 // Function Paper2D.PaperFlipbook.IsValidKeyFrameIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperFlipbook::IsValidKeyFrameIndex(int Index)
 {
@@ -38,7 +38,7 @@ bool UPaperFlipbook::IsValidKeyFrameIndex(int Index)
 // Function Paper2D.PaperFlipbook.GetTotalDuration
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPaperFlipbook::GetTotalDuration()
 {
@@ -63,9 +63,9 @@ float UPaperFlipbook::GetTotalDuration()
 // Function Paper2D.PaperFlipbook.GetSpriteAtTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bClampToEnds                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UPaperSprite*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClampToEnds (Parm, ZeroConstructor, IsPlainOldData)
+// class UPaperSprite* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(float Time, bool bClampToEnds)
 {
@@ -92,8 +92,8 @@ class UPaperSprite* UPaperFlipbook::GetSpriteAtTime(float Time, bool bClampToEnd
 // Function Paper2D.PaperFlipbook.GetSpriteAtFrame
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            FrameIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPaperSprite*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int FrameIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UPaperSprite* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(int FrameIndex)
 {
@@ -119,7 +119,7 @@ class UPaperSprite* UPaperFlipbook::GetSpriteAtFrame(int FrameIndex)
 // Function Paper2D.PaperFlipbook.GetNumKeyFrames
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperFlipbook::GetNumKeyFrames()
 {
@@ -144,7 +144,7 @@ int UPaperFlipbook::GetNumKeyFrames()
 // Function Paper2D.PaperFlipbook.GetNumFrames
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperFlipbook::GetNumFrames()
 {
@@ -169,9 +169,9 @@ int UPaperFlipbook::GetNumFrames()
 // Function Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bClampToEnds                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float Time (Parm, ZeroConstructor, IsPlainOldData)
+// bool bClampToEnds (Parm, ZeroConstructor, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperFlipbook::GetKeyFrameIndexAtTime(float Time, bool bClampToEnds)
 {
@@ -219,7 +219,7 @@ void UPaperFlipbookComponent::Stop()
 // Function Paper2D.PaperFlipbookComponent.SetSpriteColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewColor                       (Parm, IsPlainOldData)
+// struct FLinearColor NewColor (Parm, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetSpriteColor(const struct FLinearColor& NewColor)
 {
@@ -243,7 +243,7 @@ void UPaperFlipbookComponent::SetSpriteColor(const struct FLinearColor& NewColor
 // Function Paper2D.PaperFlipbookComponent.SetPlayRate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewRate                        (Parm, ZeroConstructor, IsPlainOldData)
+// float NewRate (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetPlayRate(float NewRate)
 {
@@ -267,8 +267,8 @@ void UPaperFlipbookComponent::SetPlayRate(float NewRate)
 // Function Paper2D.PaperFlipbookComponent.SetPlaybackPositionInFrames
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewFramePosition               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFireEvents                    (Parm, ZeroConstructor, IsPlainOldData)
+// int NewFramePosition (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFireEvents (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetPlaybackPositionInFrames(int NewFramePosition, bool bFireEvents)
 {
@@ -293,8 +293,8 @@ void UPaperFlipbookComponent::SetPlaybackPositionInFrames(int NewFramePosition, 
 // Function Paper2D.PaperFlipbookComponent.SetPlaybackPosition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewPosition                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFireEvents                    (Parm, ZeroConstructor, IsPlainOldData)
+// float NewPosition (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFireEvents (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetPlaybackPosition(float NewPosition, bool bFireEvents)
 {
@@ -319,7 +319,7 @@ void UPaperFlipbookComponent::SetPlaybackPosition(float NewPosition, bool bFireE
 // Function Paper2D.PaperFlipbookComponent.SetNewTime
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          NewTime                        (Parm, ZeroConstructor, IsPlainOldData)
+// float NewTime (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetNewTime(float NewTime)
 {
@@ -343,7 +343,7 @@ void UPaperFlipbookComponent::SetNewTime(float NewTime)
 // Function Paper2D.PaperFlipbookComponent.SetLooping
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                           bNewLooping                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewLooping (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::SetLooping(bool bNewLooping)
 {
@@ -367,8 +367,8 @@ void UPaperFlipbookComponent::SetLooping(bool bNewLooping)
 // Function Paper2D.PaperFlipbookComponent.SetFlipbook
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UPaperFlipbook*          NewFlipbook                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperFlipbook* NewFlipbook (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperFlipbookComponent::SetFlipbook(class UPaperFlipbook* NewFlipbook)
 {
@@ -478,7 +478,7 @@ void UPaperFlipbookComponent::Play()
 // Function Paper2D.PaperFlipbookComponent.OnRep_SourceFlipbook
 // (Final, Native, Protected)
 // Parameters:
-// class UPaperFlipbook*          OldFlipbook                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UPaperFlipbook* OldFlipbook (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperFlipbookComponent::OnRep_SourceFlipbook(class UPaperFlipbook* OldFlipbook)
 {
@@ -502,7 +502,7 @@ void UPaperFlipbookComponent::OnRep_SourceFlipbook(class UPaperFlipbook* OldFlip
 // Function Paper2D.PaperFlipbookComponent.IsReversing
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperFlipbookComponent::IsReversing()
 {
@@ -527,7 +527,7 @@ bool UPaperFlipbookComponent::IsReversing()
 // Function Paper2D.PaperFlipbookComponent.IsPlaying
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperFlipbookComponent::IsPlaying()
 {
@@ -552,7 +552,7 @@ bool UPaperFlipbookComponent::IsPlaying()
 // Function Paper2D.PaperFlipbookComponent.IsLooping
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperFlipbookComponent::IsLooping()
 {
@@ -577,7 +577,7 @@ bool UPaperFlipbookComponent::IsLooping()
 // Function Paper2D.PaperFlipbookComponent.GetPlayRate
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPaperFlipbookComponent::GetPlayRate()
 {
@@ -602,7 +602,7 @@ float UPaperFlipbookComponent::GetPlayRate()
 // Function Paper2D.PaperFlipbookComponent.GetPlaybackPositionInFrames
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperFlipbookComponent::GetPlaybackPositionInFrames()
 {
@@ -627,7 +627,7 @@ int UPaperFlipbookComponent::GetPlaybackPositionInFrames()
 // Function Paper2D.PaperFlipbookComponent.GetPlaybackPosition
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPaperFlipbookComponent::GetPlaybackPosition()
 {
@@ -652,7 +652,7 @@ float UPaperFlipbookComponent::GetPlaybackPosition()
 // Function Paper2D.PaperFlipbookComponent.GetFlipbookLengthInFrames
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperFlipbookComponent::GetFlipbookLengthInFrames()
 {
@@ -677,7 +677,7 @@ int UPaperFlipbookComponent::GetFlipbookLengthInFrames()
 // Function Paper2D.PaperFlipbookComponent.GetFlipbookLength
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPaperFlipbookComponent::GetFlipbookLength()
 {
@@ -702,7 +702,7 @@ float UPaperFlipbookComponent::GetFlipbookLength()
 // Function Paper2D.PaperFlipbookComponent.GetFlipbookFramerate
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// float ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 float UPaperFlipbookComponent::GetFlipbookFramerate()
 {
@@ -727,7 +727,7 @@ float UPaperFlipbookComponent::GetFlipbookFramerate()
 // Function Paper2D.PaperFlipbookComponent.GetFlipbook
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UPaperFlipbook*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperFlipbook* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPaperFlipbook* UPaperFlipbookComponent::GetFlipbook()
 {
@@ -752,12 +752,12 @@ class UPaperFlipbook* UPaperFlipbookComponent::GetFlipbook()
 // Function Paper2D.PaperGroupedSpriteComponent.UpdateInstanceTransform
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              NewInstanceTransform           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bTeleport                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform NewInstanceTransform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool bMarkRenderStateDirty (Parm, ZeroConstructor, IsPlainOldData)
+// bool bTeleport (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(int InstanceIndex, const struct FTransform& NewInstanceTransform, bool bWorldSpace, bool bMarkRenderStateDirty, bool bTeleport)
 {
@@ -787,10 +787,10 @@ bool UPaperGroupedSpriteComponent::UpdateInstanceTransform(int InstanceIndex, co
 // Function Paper2D.PaperGroupedSpriteComponent.UpdateInstanceColor
 // (Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            NewInstanceColor               (Parm, IsPlainOldData)
-// bool                           bMarkRenderStateDirty          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor NewInstanceColor (Parm, IsPlainOldData)
+// bool bMarkRenderStateDirty (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperGroupedSpriteComponent::UpdateInstanceColor(int InstanceIndex, const struct FLinearColor& NewInstanceColor, bool bMarkRenderStateDirty)
 {
@@ -818,7 +818,7 @@ bool UPaperGroupedSpriteComponent::UpdateInstanceColor(int InstanceIndex, const 
 // Function Paper2D.PaperGroupedSpriteComponent.SortInstancesAlongAxis
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 WorldSpaceSortAxis             (Parm, IsPlainOldData)
+// struct FVector WorldSpaceSortAxis (Parm, IsPlainOldData)
 
 void UPaperGroupedSpriteComponent::SortInstancesAlongAxis(const struct FVector& WorldSpaceSortAxis)
 {
@@ -842,8 +842,8 @@ void UPaperGroupedSpriteComponent::SortInstancesAlongAxis(const struct FVector& 
 // Function Paper2D.PaperGroupedSpriteComponent.RemoveInstance
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperGroupedSpriteComponent::RemoveInstance(int InstanceIndex)
 {
@@ -869,10 +869,10 @@ bool UPaperGroupedSpriteComponent::RemoveInstance(int InstanceIndex)
 // Function Paper2D.PaperGroupedSpriteComponent.GetInstanceTransform
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            InstanceIndex                  (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              OutInstanceTransform           (Parm, OutParm, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int InstanceIndex (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform OutInstanceTransform (Parm, OutParm, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperGroupedSpriteComponent::GetInstanceTransform(int InstanceIndex, bool bWorldSpace, struct FTransform* OutInstanceTransform)
 {
@@ -902,7 +902,7 @@ bool UPaperGroupedSpriteComponent::GetInstanceTransform(int InstanceIndex, bool 
 // Function Paper2D.PaperGroupedSpriteComponent.GetInstanceCount
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperGroupedSpriteComponent::GetInstanceCount()
 {
@@ -948,11 +948,11 @@ void UPaperGroupedSpriteComponent::ClearInstances()
 // Function Paper2D.PaperGroupedSpriteComponent.AddInstance
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FTransform              Transform                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// class UPaperSprite*            Sprite                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            Color                          (Parm, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FTransform Transform (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class UPaperSprite* Sprite (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor Color (Parm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int UPaperGroupedSpriteComponent::AddInstance(const struct FTransform& Transform, class UPaperSprite* Sprite, bool bWorldSpace, const struct FLinearColor& Color)
 {
@@ -981,10 +981,10 @@ int UPaperGroupedSpriteComponent::AddInstance(const struct FTransform& Transform
 // Function Paper2D.PaperSpriteBlueprintLibrary.MakeBrushFromSprite
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UPaperSprite*            Sprite                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
+// class UPaperSprite* Sprite (Parm, ZeroConstructor, IsPlainOldData)
+// int Width (Parm, ZeroConstructor, IsPlainOldData)
+// int Height (Parm, ZeroConstructor, IsPlainOldData)
+// struct FSlateBrush ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FSlateBrush UPaperSpriteBlueprintLibrary::MakeBrushFromSprite(class UPaperSprite* Sprite, int Width, int Height)
 {
@@ -1012,7 +1012,7 @@ struct FSlateBrush UPaperSpriteBlueprintLibrary::MakeBrushFromSprite(class UPape
 // Function Paper2D.PaperSpriteComponent.SetSpriteColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewColor                       (Parm, IsPlainOldData)
+// struct FLinearColor NewColor (Parm, IsPlainOldData)
 
 void UPaperSpriteComponent::SetSpriteColor(const struct FLinearColor& NewColor)
 {
@@ -1036,8 +1036,8 @@ void UPaperSpriteComponent::SetSpriteColor(const struct FLinearColor& NewColor)
 // Function Paper2D.PaperSpriteComponent.SetSprite
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UPaperSprite*            NewSprite                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperSprite* NewSprite (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperSpriteComponent::SetSprite(class UPaperSprite* NewSprite)
 {
@@ -1063,7 +1063,7 @@ bool UPaperSpriteComponent::SetSprite(class UPaperSprite* NewSprite)
 // Function Paper2D.PaperSpriteComponent.GetSprite
 // (Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UPaperSprite*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperSprite* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPaperSprite* UPaperSpriteComponent::GetSprite()
 {
@@ -1088,7 +1088,7 @@ class UPaperSprite* UPaperSpriteComponent::GetSprite()
 // Function Paper2D.PaperTerrainComponent.SetTerrainColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewColor                       (Parm, IsPlainOldData)
+// struct FLinearColor NewColor (Parm, IsPlainOldData)
 
 void UPaperTerrainComponent::SetTerrainColor(const struct FLinearColor& NewColor)
 {
@@ -1112,7 +1112,7 @@ void UPaperTerrainComponent::SetTerrainColor(const struct FLinearColor& NewColor
 // Function Paper2D.PaperTileMapComponent.SetTileMapColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewColor                       (Parm, IsPlainOldData)
+// struct FLinearColor NewColor (Parm, IsPlainOldData)
 
 void UPaperTileMapComponent::SetTileMapColor(const struct FLinearColor& NewColor)
 {
@@ -1136,8 +1136,8 @@ void UPaperTileMapComponent::SetTileMapColor(const struct FLinearColor& NewColor
 // Function Paper2D.PaperTileMapComponent.SetTileMap
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UPaperTileMap*           NewTileMap                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperTileMap* NewTileMap (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperTileMapComponent::SetTileMap(class UPaperTileMap* NewTileMap)
 {
@@ -1163,10 +1163,10 @@ bool UPaperTileMapComponent::SetTileMap(class UPaperTileMap* NewTileMap)
 // Function Paper2D.PaperTileMapComponent.SetTile
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            X                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Layer                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPaperTileInfo          NewValue                       (Parm)
+// int X (Parm, ZeroConstructor, IsPlainOldData)
+// int Y (Parm, ZeroConstructor, IsPlainOldData)
+// int Layer (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaperTileInfo NewValue (Parm)
 
 void UPaperTileMapComponent::SetTile(int X, int Y, int Layer, const struct FPaperTileInfo& NewValue)
 {
@@ -1193,8 +1193,8 @@ void UPaperTileMapComponent::SetTile(int X, int Y, int Layer, const struct FPape
 // Function Paper2D.PaperTileMapComponent.SetLayerColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewColor                       (Parm, IsPlainOldData)
-// int                            Layer                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor NewColor (Parm, IsPlainOldData)
+// int Layer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::SetLayerColor(const struct FLinearColor& NewColor, int Layer)
 {
@@ -1219,13 +1219,13 @@ void UPaperTileMapComponent::SetLayerColor(const struct FLinearColor& NewColor, 
 // Function Paper2D.PaperTileMapComponent.SetLayerCollision
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            Layer                          (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bHasCollision                  (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOverrideThickness             (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CustomThickness                (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bOverrideOffset                (Parm, ZeroConstructor, IsPlainOldData)
-// float                          CustomOffset                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildCollision              (Parm, ZeroConstructor, IsPlainOldData)
+// int Layer (Parm, ZeroConstructor, IsPlainOldData)
+// bool bHasCollision (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOverrideThickness (Parm, ZeroConstructor, IsPlainOldData)
+// float CustomThickness (Parm, ZeroConstructor, IsPlainOldData)
+// bool bOverrideOffset (Parm, ZeroConstructor, IsPlainOldData)
+// float CustomOffset (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::SetLayerCollision(int Layer, bool bHasCollision, bool bOverrideThickness, float CustomThickness, bool bOverrideOffset, float CustomOffset, bool bRebuildCollision)
 {
@@ -1255,8 +1255,8 @@ void UPaperTileMapComponent::SetLayerCollision(int Layer, bool bHasCollision, bo
 // Function Paper2D.PaperTileMapComponent.SetDefaultCollisionThickness
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                          Thickness                      (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bRebuildCollision              (Parm, ZeroConstructor, IsPlainOldData)
+// float Thickness (Parm, ZeroConstructor, IsPlainOldData)
+// bool bRebuildCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::SetDefaultCollisionThickness(float Thickness, bool bRebuildCollision)
 {
@@ -1281,8 +1281,8 @@ void UPaperTileMapComponent::SetDefaultCollisionThickness(float Thickness, bool 
 // Function Paper2D.PaperTileMapComponent.ResizeMap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            NewWidthInTiles                (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NewHeightInTiles               (Parm, ZeroConstructor, IsPlainOldData)
+// int NewWidthInTiles (Parm, ZeroConstructor, IsPlainOldData)
+// int NewHeightInTiles (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::ResizeMap(int NewWidthInTiles, int NewHeightInTiles)
 {
@@ -1328,7 +1328,7 @@ void UPaperTileMapComponent::RebuildCollision()
 // Function Paper2D.PaperTileMapComponent.OwnsTileMap
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool UPaperTileMapComponent::OwnsTileMap()
 {
@@ -1374,11 +1374,11 @@ void UPaperTileMapComponent::MakeTileMapEditable()
 // Function Paper2D.PaperTileMapComponent.GetTilePolygon
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            TileX                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TileY                          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Points                         (Parm, OutParm, ZeroConstructor)
-// int                            LayerIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
+// int TileX (Parm, ZeroConstructor, IsPlainOldData)
+// int TileY (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Points (Parm, OutParm, ZeroConstructor)
+// int LayerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::GetTilePolygon(int TileX, int TileY, int LayerIndex, bool bWorldSpace, TArray<struct FVector>* Points)
 {
@@ -1408,7 +1408,7 @@ void UPaperTileMapComponent::GetTilePolygon(int TileX, int TileY, int LayerIndex
 // Function Paper2D.PaperTileMapComponent.GetTileMapColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UPaperTileMapComponent::GetTileMapColor()
 {
@@ -1433,11 +1433,11 @@ struct FLinearColor UPaperTileMapComponent::GetTileMapColor()
 // Function Paper2D.PaperTileMapComponent.GetTileCornerPosition
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            TileX                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TileY                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int TileX (Parm, ZeroConstructor, IsPlainOldData)
+// int TileY (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UPaperTileMapComponent::GetTileCornerPosition(int TileX, int TileY, int LayerIndex, bool bWorldSpace)
 {
@@ -1466,11 +1466,11 @@ struct FVector UPaperTileMapComponent::GetTileCornerPosition(int TileX, int Tile
 // Function Paper2D.PaperTileMapComponent.GetTileCenterPosition
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            TileX                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TileY                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LayerIndex                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWorldSpace                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int TileX (Parm, ZeroConstructor, IsPlainOldData)
+// int TileY (Parm, ZeroConstructor, IsPlainOldData)
+// int LayerIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWorldSpace (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FVector UPaperTileMapComponent::GetTileCenterPosition(int TileX, int TileY, int LayerIndex, bool bWorldSpace)
 {
@@ -1499,10 +1499,10 @@ struct FVector UPaperTileMapComponent::GetTileCenterPosition(int TileX, int Tile
 // Function Paper2D.PaperTileMapComponent.GetTile
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            X                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Y                              (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Layer                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPaperTileInfo          ReturnValue                    (Parm, OutParm, ReturnParm)
+// int X (Parm, ZeroConstructor, IsPlainOldData)
+// int Y (Parm, ZeroConstructor, IsPlainOldData)
+// int Layer (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaperTileInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FPaperTileInfo UPaperTileMapComponent::GetTile(int X, int Y, int Layer)
 {
@@ -1530,9 +1530,9 @@ struct FPaperTileInfo UPaperTileMapComponent::GetTile(int X, int Y, int Layer)
 // Function Paper2D.PaperTileMapComponent.GetMapSize
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            MapWidth                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            MapHeight                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// int                            NumLayers                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int MapWidth (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int MapHeight (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// int NumLayers (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::GetMapSize(int* MapWidth, int* MapHeight, int* NumLayers)
 {
@@ -1562,8 +1562,8 @@ void UPaperTileMapComponent::GetMapSize(int* MapWidth, int* MapHeight, int* NumL
 // Function Paper2D.PaperTileMapComponent.GetLayerColor
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            Layer                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// int Layer (Parm, ZeroConstructor, IsPlainOldData)
+// struct FLinearColor ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FLinearColor UPaperTileMapComponent::GetLayerColor(int Layer)
 {
@@ -1589,12 +1589,12 @@ struct FLinearColor UPaperTileMapComponent::GetLayerColor(int Layer)
 // Function Paper2D.PaperTileMapComponent.CreateNewTileMap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            MapWidth                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            MapHeight                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TileWidth                      (Parm, ZeroConstructor, IsPlainOldData)
-// int                            TileHeight                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          PixelsPerUnrealUnit            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCreateLayer                   (Parm, ZeroConstructor, IsPlainOldData)
+// int MapWidth (Parm, ZeroConstructor, IsPlainOldData)
+// int MapHeight (Parm, ZeroConstructor, IsPlainOldData)
+// int TileWidth (Parm, ZeroConstructor, IsPlainOldData)
+// int TileHeight (Parm, ZeroConstructor, IsPlainOldData)
+// float PixelsPerUnrealUnit (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCreateLayer (Parm, ZeroConstructor, IsPlainOldData)
 
 void UPaperTileMapComponent::CreateNewTileMap(int MapWidth, int MapHeight, int TileWidth, int TileHeight, float PixelsPerUnrealUnit, bool bCreateLayer)
 {
@@ -1623,7 +1623,7 @@ void UPaperTileMapComponent::CreateNewTileMap(int MapWidth, int MapHeight, int T
 // Function Paper2D.PaperTileMapComponent.AddNewLayer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UPaperTileLayer*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// class UPaperTileLayer* ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 class UPaperTileLayer* UPaperTileMapComponent::AddNewLayer()
 {
@@ -1648,12 +1648,12 @@ class UPaperTileLayer* UPaperTileMapComponent::AddNewLayer()
 // Function Paper2D.TileMapBlueprintLibrary.MakeTile
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// int                            TileIndex                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UPaperTileSet*           TileSet                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipH                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipV                         (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipD                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FPaperTileInfo          ReturnValue                    (Parm, OutParm, ReturnParm)
+// int TileIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class UPaperTileSet* TileSet (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlipH (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlipV (Parm, ZeroConstructor, IsPlainOldData)
+// bool bFlipD (Parm, ZeroConstructor, IsPlainOldData)
+// struct FPaperTileInfo ReturnValue (Parm, OutParm, ReturnParm)
 
 struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int TileIndex, class UPaperTileSet* TileSet, bool bFlipH, bool bFlipV, bool bFlipD)
 {
@@ -1683,8 +1683,8 @@ struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int TileIndex, class UP
 // Function Paper2D.TileMapBlueprintLibrary.GetTileUserData
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPaperTileInfo          Tile                           (Parm)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FPaperTileInfo Tile (Parm)
+// struct FName ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 struct FName UTileMapBlueprintLibrary::GetTileUserData(const struct FPaperTileInfo& Tile)
 {
@@ -1710,8 +1710,8 @@ struct FName UTileMapBlueprintLibrary::GetTileUserData(const struct FPaperTileIn
 // Function Paper2D.TileMapBlueprintLibrary.GetTileTransform
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPaperTileInfo          Tile                           (Parm)
-// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+// struct FPaperTileInfo Tile (Parm)
+// struct FTransform ReturnValue (Parm, OutParm, ReturnParm, IsPlainOldData)
 
 struct FTransform UTileMapBlueprintLibrary::GetTileTransform(const struct FPaperTileInfo& Tile)
 {
@@ -1737,12 +1737,12 @@ struct FTransform UTileMapBlueprintLibrary::GetTileTransform(const struct FPaper
 // Function Paper2D.TileMapBlueprintLibrary.BreakTile
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPaperTileInfo          Tile                           (Parm)
-// int                            TileIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class UPaperTileSet*           TileSet                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipH                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipV                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// bool                           bFlipD                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FPaperTileInfo Tile (Parm)
+// int TileIndex (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// class UPaperTileSet* TileSet (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bFlipH (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bFlipV (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool bFlipD (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
 void UTileMapBlueprintLibrary::BreakTile(const struct FPaperTileInfo& Tile, int* TileIndex, class UPaperTileSet** TileSet, bool* bFlipH, bool* bFlipV, bool* bFlipD)
 {

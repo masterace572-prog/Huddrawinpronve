@@ -1,6 +1,6 @@
 #pragma once
 
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 namespace SDK
 {
@@ -13,20 +13,19 @@ namespace SDK
 class UMovieSceneCapture : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	struct FCaptureProtocolID                          CaptureType;                                              // 0x0038(0x0008) (Edit, Config)
-	class UMovieSceneCaptureProtocolSettings*          ProtocolSettings;                                         // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FMovieSceneCaptureSettings                  Settings;                                                 // 0x0048(0x0050) (Edit, Config)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0098(0x0010) MISSED OFFSET
-	bool                                               bUseSeparateProcess;                                      // 0x00A8(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	bool                                               bCloseEditorWhenCaptureStarts;                            // 0x00A9(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6];                                       // 0x00AA(0x0006) MISSED OFFSET
-	struct FString                                     AdditionalCommandLineArguments;                           // 0x00B0(0x0010) (Edit, ZeroConstructor, Config)
-	struct FString                                     InheritedCommandLineArguments;                            // 0x00C0(0x0010) (Edit, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData03[0x120];                                     // 0x00D0(0x0120) MISSED OFFSET
+	unsigned char UnknownData00[0x10]; // 0x0028(0x0010) MISSED OFFSET
+	struct FCaptureProtocolID CaptureType; // 0x0038(0x0008) (Edit, Config)
+	class UMovieSceneCaptureProtocolSettings* ProtocolSettings; // 0x0040(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FMovieSceneCaptureSettings Settings; // 0x0048(0x0050) (Edit, Config)
+	unsigned char UnknownData01[0x10]; // 0x0098(0x0010) MISSED OFFSET
+	bool bUseSeparateProcess; // 0x00A8(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	bool bCloseEditorWhenCaptureStarts; // 0x00A9(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData02[0x6]; // 0x00AA(0x0006) MISSED OFFSET
+	struct FString AdditionalCommandLineArguments; // 0x00B0(0x0010) (Edit, ZeroConstructor, Config)
+	struct FString InheritedCommandLineArguments; // 0x00C0(0x0010) (Edit, ZeroConstructor, Transient)
+	unsigned char UnknownData03[0x120]; // 0x00D0(0x0120) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.MovieSceneCapture");
@@ -42,8 +41,7 @@ class UAutomatedLevelSequenceCapture : public UMovieSceneCapture
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.AutomatedLevelSequenceCapture");
@@ -59,8 +57,7 @@ class UMovieSceneCaptureProtocolSettings : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureProtocolSettings");
@@ -75,10 +72,9 @@ public:
 class UFrameGrabberProtocolSettings : public UMovieSceneCaptureProtocolSettings
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char UnknownData00[0x8]; // 0x0028(0x0008) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.FrameGrabberProtocolSettings");
@@ -94,8 +90,7 @@ class UAVCaptureSettings : public UFrameGrabberProtocolSettings
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.AVCaptureSettings");
@@ -110,16 +105,15 @@ public:
 class UCompositionGraphCaptureSettings : public UMovieSceneCaptureProtocolSettings
 {
 public:
-	struct FCompositionGraphCapturePasses              IncludeRenderPasses;                                      // 0x0028(0x0010) (Edit, Config)
-	bool                                               bCaptureFramesInHDR;                                      // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	int                                                HDRCompressionQuality;                                    // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<enum EHDRCaptureGamut>                 CaptureGamut;                                             // 0x0040(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	struct FSoftObjectPath                             PostProcessingMaterial;                                   // 0x0048(0x0018) (Edit, Config)
+	struct FCompositionGraphCapturePasses IncludeRenderPasses; // 0x0028(0x0010) (Edit, Config)
+	bool bCaptureFramesInHDR; // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0039(0x0003) MISSED OFFSET
+	int HDRCompressionQuality; // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<enum EHDRCaptureGamut> CaptureGamut; // 0x0040(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData01[0x7]; // 0x0041(0x0007) MISSED OFFSET
+	struct FSoftObjectPath PostProcessingMaterial; // 0x0048(0x0018) (Edit, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureSettings");
@@ -135,8 +129,7 @@ class UBmpImageCaptureSettings : public UMovieSceneCaptureProtocolSettings
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.BmpImageCaptureSettings");
@@ -151,11 +144,10 @@ public:
 class UImageCaptureSettings : public UFrameGrabberProtocolSettings
 {
 public:
-	int                                                CompressionQuality;                                       // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	int CompressionQuality; // 0x0030(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x4]; // 0x0034(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.ImageCaptureSettings");
@@ -171,8 +163,7 @@ class UMovieSceneCaptureInterface : public UInterface
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
@@ -187,13 +178,12 @@ public:
 class ULevelCapture : public UMovieSceneCapture
 {
 public:
-	bool                                               bAutoStartCapture;                                        // 0x01F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x01F1(0x000B) MISSED OFFSET
-	struct FGuid                                       PrerequisiteActorId;                                      // 0x01FC(0x0010) (IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x020C(0x0004) MISSED OFFSET
+	bool bAutoStartCapture; // 0x01F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char UnknownData00[0xB]; // 0x01F1(0x000B) MISSED OFFSET
+	struct FGuid PrerequisiteActorId; // 0x01FC(0x0010) (IsPlainOldData)
+	unsigned char UnknownData01[0x4]; // 0x020C(0x0004) MISSED OFFSET
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.LevelCapture");
@@ -209,8 +199,7 @@ class UMovieSceneCaptureEnvironment : public UObject
 {
 public:
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
@@ -228,13 +217,12 @@ public:
 class UVideoCaptureSettings : public UFrameGrabberProtocolSettings
 {
 public:
-	bool                                               bUseCompression;                                          // 0x0030(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
-	float                                              CompressionQuality;                                       // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FString                                     VideoCodec;                                               // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	bool bUseCompression; // 0x0030(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char UnknownData00[0x3]; // 0x0031(0x0003) MISSED OFFSET
+	float CompressionQuality; // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	struct FString VideoCodec; // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
-	static UClass* StaticClass()
-	{
+	static UClass* StaticClass() {
         static UClass *pStaticClass = nullptr;
         if (!pStaticClass)
             pStaticClass = UObject::FindClass("Class MovieSceneCapture.VideoCaptureSettings");

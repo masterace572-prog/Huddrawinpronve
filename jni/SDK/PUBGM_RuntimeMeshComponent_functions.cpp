@@ -1,4 +1,4 @@
-// PUBG_India -64bit (4.2.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
+// PUBGm GL/KR/VN/TW - 64bit (4.5.0) SDK by BangJO [Z] DM @isar_hackJO To Buy Tool SDK
 
 #include "PUBGM_BangJO.hpp"
 
@@ -11,16 +11,16 @@ namespace SDK
 // Function RuntimeMeshComponent.RuntimeMeshComponent.UpdateMeshSection_Blueprint
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV1                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    Colors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bCalculateNormalTangent        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bGenerateTessellationTriangles (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FRuntimeMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV1 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FLinearColor> Colors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bCalculateNormalTangent (Parm, ZeroConstructor, IsPlainOldData)
+// bool bGenerateTessellationTriangles (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::UpdateMeshSection_Blueprint(int SectionIndex, TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector> Normals, TArray<struct FRuntimeMeshTangent> Tangents, TArray<struct FVector2D> UV0, TArray<struct FVector2D> UV1, TArray<struct FLinearColor> Colors, bool bCalculateNormalTangent, bool bGenerateTessellationTriangles)
 {
@@ -53,9 +53,9 @@ void URuntimeMeshComponent::UpdateMeshSection_Blueprint(int SectionIndex, TArray
 // Function RuntimeMeshComponent.RuntimeMeshComponent.SetSectionTessellationTriangles
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    TessellationTriangles          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bShouldMoveArray               (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> TessellationTriangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bShouldMoveArray (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::SetSectionTessellationTriangles(int SectionIndex, TArray<int> TessellationTriangles, bool bShouldMoveArray)
 {
@@ -81,8 +81,8 @@ void URuntimeMeshComponent::SetSectionTessellationTriangles(int SectionIndex, TA
 // Function RuntimeMeshComponent.RuntimeMeshComponent.SetMeshSectionVisible
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewVisibility                 (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewVisibility (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::SetMeshSectionVisible(int SectionIndex, bool bNewVisibility)
 {
@@ -107,8 +107,8 @@ void URuntimeMeshComponent::SetMeshSectionVisible(int SectionIndex, bool bNewVis
 // Function RuntimeMeshComponent.RuntimeMeshComponent.SetMeshSectionCollisionEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewCollisionEnabled           (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewCollisionEnabled (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::SetMeshSectionCollisionEnabled(int SectionIndex, bool bNewCollisionEnabled)
 {
@@ -133,8 +133,8 @@ void URuntimeMeshComponent::SetMeshSectionCollisionEnabled(int SectionIndex, boo
 // Function RuntimeMeshComponent.RuntimeMeshComponent.SetMeshSectionCastsShadow
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bNewCastsShadow                (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool bNewCastsShadow (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::SetMeshSectionCastsShadow(int SectionIndex, bool bNewCastsShadow)
 {
@@ -159,9 +159,9 @@ void URuntimeMeshComponent::SetMeshSectionCastsShadow(int SectionIndex, bool bNe
 // Function RuntimeMeshComponent.RuntimeMeshComponent.SetMeshCollisionSection
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            CollisionSectionIndex          (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int CollisionSectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
 void URuntimeMeshComponent::SetMeshCollisionSection(int CollisionSectionIndex, TArray<struct FVector> Vertices, TArray<int> Triangles)
 {
@@ -207,8 +207,8 @@ void URuntimeMeshComponent::RuntimeMeshCollisionUpdatedDelegate__DelegateSignatu
 // Function RuntimeMeshComponent.RuntimeMeshComponent.IsMeshSectionVisible
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URuntimeMeshComponent::IsMeshSectionVisible(int SectionIndex)
 {
@@ -234,8 +234,8 @@ bool URuntimeMeshComponent::IsMeshSectionVisible(int SectionIndex)
 // Function RuntimeMeshComponent.RuntimeMeshComponent.IsMeshSectionCollisionEnabled
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URuntimeMeshComponent::IsMeshSectionCollisionEnabled(int SectionIndex)
 {
@@ -261,8 +261,8 @@ bool URuntimeMeshComponent::IsMeshSectionCollisionEnabled(int SectionIndex)
 // Function RuntimeMeshComponent.RuntimeMeshComponent.IsMeshSectionCastingShadows
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URuntimeMeshComponent::IsMeshSectionCastingShadows(int SectionIndex)
 {
@@ -288,7 +288,7 @@ bool URuntimeMeshComponent::IsMeshSectionCastingShadows(int SectionIndex)
 // Function RuntimeMeshComponent.RuntimeMeshComponent.GetNumSections
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int URuntimeMeshComponent::GetNumSections()
 {
@@ -313,7 +313,7 @@ int URuntimeMeshComponent::GetNumSections()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.GetLastSectionIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int URuntimeMeshComponent::GetLastSectionIndex()
 {
@@ -338,7 +338,7 @@ int URuntimeMeshComponent::GetLastSectionIndex()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.FirstAvailableMeshSectionIndex
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 int URuntimeMeshComponent::FirstAvailableMeshSectionIndex()
 {
@@ -384,8 +384,8 @@ void URuntimeMeshComponent::EndBatchUpdates()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.DoesSectionExist
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URuntimeMeshComponent::DoesSectionExist(int SectionIndex)
 {
@@ -411,18 +411,18 @@ bool URuntimeMeshComponent::DoesSectionExist(int SectionIndex)
 // Function RuntimeMeshComponent.RuntimeMeshComponent.CreateMeshSection_Blueprint
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV0                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UV1                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    Colors                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           bCreateCollision               (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bCalculateNormalTangent        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bGenerateTessellationTriangles (Parm, ZeroConstructor, IsPlainOldData)
-// EUpdateFrequency               UpdateFrequency                (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FRuntimeMeshTangent> Tangents (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV0 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UV1 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FLinearColor> Colors (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool bCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
+// bool bCalculateNormalTangent (Parm, ZeroConstructor, IsPlainOldData)
+// bool bGenerateTessellationTriangles (Parm, ZeroConstructor, IsPlainOldData)
+// EUpdateFrequency UpdateFrequency (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::CreateMeshSection_Blueprint(int SectionIndex, TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector> Normals, TArray<struct FRuntimeMeshTangent> Tangents, TArray<struct FVector2D> UV0, TArray<struct FVector2D> UV1, TArray<struct FLinearColor> Colors, bool bCreateCollision, bool bCalculateNormalTangent, bool bGenerateTessellationTriangles, EUpdateFrequency UpdateFrequency)
 {
@@ -478,7 +478,7 @@ void URuntimeMeshComponent::CookCollisionNow()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.ClearMeshSection
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::ClearMeshSection(int SectionIndex)
 {
@@ -502,7 +502,7 @@ void URuntimeMeshComponent::ClearMeshSection(int SectionIndex)
 // Function RuntimeMeshComponent.RuntimeMeshComponent.ClearMeshCollisionSection
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            CollisionSectionIndex          (Parm, ZeroConstructor, IsPlainOldData)
+// int CollisionSectionIndex (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshComponent::ClearMeshCollisionSection(int CollisionSectionIndex)
 {
@@ -589,10 +589,10 @@ void URuntimeMeshComponent::ClearAllMeshCollisionSections()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.ChangeRuntimeMeshSectionUVs
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// TMap<int, struct FVector2D>    UVs                            (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int Index (Parm, ZeroConstructor, IsPlainOldData)
+// TMap<int, struct FVector2D> UVs (Parm, ZeroConstructor)
+// bool ReturnValue (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
 bool URuntimeMeshComponent::ChangeRuntimeMeshSectionUVs(int SectionIndex, int Index, TMap<int, struct FVector2D> UVs)
 {
@@ -641,7 +641,7 @@ void URuntimeMeshComponent::BeginBatchUpdates()
 // Function RuntimeMeshComponent.RuntimeMeshComponent.AddCollisionConvexMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         ConvexVerts                    (Parm, ZeroConstructor)
+// TArray<struct FVector> ConvexVerts (Parm, ZeroConstructor)
 
 void URuntimeMeshComponent::AddCollisionConvexMesh(TArray<struct FVector> ConvexVerts)
 {
@@ -665,14 +665,14 @@ void URuntimeMeshComponent::AddCollisionConvexMesh(TArray<struct FVector> Convex
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.GetSectionFromStaticMesh
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UStaticMesh*             InMesh                         (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LODIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// int                            SectionIndex                   (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector2D>       UVs                            (Parm, OutParm, ZeroConstructor)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// class UStaticMesh* InMesh (Parm, ZeroConstructor, IsPlainOldData)
+// int LODIndex (Parm, ZeroConstructor, IsPlainOldData)
+// int SectionIndex (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FVector> Vertices (Parm, OutParm, ZeroConstructor)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector2D> UVs (Parm, OutParm, ZeroConstructor)
+// TArray<struct FRuntimeMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void URuntimeMeshLibrary::GetSectionFromStaticMesh(class UStaticMesh* InMesh, int LODIndex, int SectionIndex, TArray<struct FVector>* Vertices, TArray<int>* Triangles, TArray<struct FVector>* Normals, TArray<struct FVector2D>* UVs, TArray<struct FRuntimeMeshTangent>* Tangents)
 {
@@ -709,12 +709,12 @@ void URuntimeMeshLibrary::GetSectionFromStaticMesh(class UStaticMesh* InMesh, in
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.GenerateTessellationIndexBuffer
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UVs                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    OutTessTriangles               (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UVs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FRuntimeMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
+// TArray<int> OutTessTriangles (Parm, OutParm, ZeroConstructor)
 
 void URuntimeMeshLibrary::GenerateTessellationIndexBuffer(TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector2D> UVs, TArray<struct FVector>* Normals, TArray<struct FRuntimeMeshTangent>* Tangents, TArray<int>* OutTessTriangles)
 {
@@ -747,10 +747,10 @@ void URuntimeMeshLibrary::GenerateTessellationIndexBuffer(TArray<struct FVector>
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.CreateGridMeshTriangles
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// int                            NumX                           (Parm, ZeroConstructor, IsPlainOldData)
-// int                            NumY                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bWinding                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
+// int NumX (Parm, ZeroConstructor, IsPlainOldData)
+// int NumY (Parm, ZeroConstructor, IsPlainOldData)
+// bool bWinding (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
 
 void URuntimeMeshLibrary::CreateGridMeshTriangles(int NumX, int NumY, bool bWinding, TArray<int>* Triangles)
 {
@@ -779,12 +779,12 @@ void URuntimeMeshLibrary::CreateGridMeshTriangles(int NumX, int NumY, bool bWind
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.CreateBoxMesh
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 BoxRadius                      (Parm, IsPlainOldData)
-// TArray<struct FVector>         Vertices                       (Parm, OutParm, ZeroConstructor)
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector2D>       UVs                            (Parm, OutParm, ZeroConstructor)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// struct FVector BoxRadius (Parm, IsPlainOldData)
+// TArray<struct FVector> Vertices (Parm, OutParm, ZeroConstructor)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector2D> UVs (Parm, OutParm, ZeroConstructor)
+// TArray<struct FRuntimeMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void URuntimeMeshLibrary::CreateBoxMesh(const struct FVector& BoxRadius, TArray<struct FVector>* Vertices, TArray<int>* Triangles, TArray<struct FVector>* Normals, TArray<struct FVector2D>* UVs, TArray<struct FRuntimeMeshTangent>* Tangents)
 {
@@ -819,10 +819,10 @@ void URuntimeMeshLibrary::CreateBoxMesh(const struct FVector& BoxRadius, TArray<
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.CopyRuntimeMeshFromStaticMeshComponent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMeshComponent*    StaticMeshComp                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            LODIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// class URuntimeMeshComponent*   RuntimeMeshComp                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bShouldCreateCollision         (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMeshComponent* StaticMeshComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int LODIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class URuntimeMeshComponent* RuntimeMeshComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bShouldCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshLibrary::CopyRuntimeMeshFromStaticMeshComponent(class UStaticMeshComponent* StaticMeshComp, int LODIndex, class URuntimeMeshComponent* RuntimeMeshComp, bool bShouldCreateCollision)
 {
@@ -849,10 +849,10 @@ void URuntimeMeshLibrary::CopyRuntimeMeshFromStaticMeshComponent(class UStaticMe
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.CopyRuntimeMeshFromStaticMesh
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UStaticMesh*             StaticMesh                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            LODIndex                       (Parm, ZeroConstructor, IsPlainOldData)
-// class URuntimeMeshComponent*   RuntimeMeshComp                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// bool                           bShouldCreateCollision         (Parm, ZeroConstructor, IsPlainOldData)
+// class UStaticMesh* StaticMesh (Parm, ZeroConstructor, IsPlainOldData)
+// int LODIndex (Parm, ZeroConstructor, IsPlainOldData)
+// class URuntimeMeshComponent* RuntimeMeshComp (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool bShouldCreateCollision (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshLibrary::CopyRuntimeMeshFromStaticMesh(class UStaticMesh* StaticMesh, int LODIndex, class URuntimeMeshComponent* RuntimeMeshComp, bool bShouldCreateCollision)
 {
@@ -879,11 +879,11 @@ void URuntimeMeshLibrary::CopyRuntimeMeshFromStaticMesh(class UStaticMesh* Stati
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.ConvertQuadToTriangles
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<int>                    Triangles                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// int                            Vert0                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert1                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert2                          (Parm, ZeroConstructor, IsPlainOldData)
-// int                            Vert3                          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<int> Triangles (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int Vert0 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert1 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert2 (Parm, ZeroConstructor, IsPlainOldData)
+// int Vert3 (Parm, ZeroConstructor, IsPlainOldData)
 
 void URuntimeMeshLibrary::ConvertQuadToTriangles(int Vert0, int Vert1, int Vert2, int Vert3, TArray<int>* Triangles)
 {
@@ -913,11 +913,11 @@ void URuntimeMeshLibrary::ConvertQuadToTriangles(int Vert0, int Vert1, int Vert2
 // Function RuntimeMeshComponent.RuntimeMeshLibrary.CalculateTangentsForMesh
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FVector>         Vertices                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<int>                    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector2D>       UVs                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>         Normals                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FRuntimeMeshTangent> Tangents                       (Parm, OutParm, ZeroConstructor)
+// TArray<struct FVector> Vertices (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<int> Triangles (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector2D> UVs (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector> Normals (Parm, OutParm, ZeroConstructor)
+// TArray<struct FRuntimeMeshTangent> Tangents (Parm, OutParm, ZeroConstructor)
 
 void URuntimeMeshLibrary::CalculateTangentsForMesh(TArray<struct FVector> Vertices, TArray<int> Triangles, TArray<struct FVector2D> UVs, TArray<struct FVector>* Normals, TArray<struct FRuntimeMeshTangent>* Tangents)
 {
