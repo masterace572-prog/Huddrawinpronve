@@ -115,130 +115,128 @@ void DrawHUD(AHUD *HUD)
 
     int totalEnemies = 0;
     int totalBots = 0;
-    const auto &actors = GetFrameActors();
+    for (const auto &entry : GetFramePlayers())
+    {
+        auto *player = entry.player;
+        if (!player)
+            continue;
 
-    for (auto *actor : actors)
+        if (player->bEnsure)
+            ++totalBots;
+        else
+            ++totalEnemies;
+
+        if (!entry.projected)
+            continue;
+
+        const FVector2D &headScreen = entry.headScreen;
+        const FVector2D &rootScreen = entry.rootScreen;
+        const float height = fabsf(rootScreen.Y - headScreen.Y);
+        if (height < 4.0f)
+            continue;
+
+        const bool isVisible = entry.visible;
+        const FLinearColor accent = isVisible ? OverlayUI::kVisible : OverlayUI::kHidden;
+        const float distance = entry.distance;
+        const float extraTop = height * 0.10f;
+        const float boxHeight = height + extraTop;
+        const float width = boxHeight * 0.50f;
+        const float x = headScreen.X - (width * 0.5f);
+        const float y = headScreen.Y - extraTop;
+
+        // Keep distant entities readable with their compact box/tag while
+        // avoiding 22 bone projections for sprites that are only a few pixels
+        // high on screen.
+        const bool drawDetailedSkeleton = Cheat::Esp::Skeleton &&
+            height >= 18.0f && distance <= 350.0f;
+        if (drawDetailedSkeleton)
+        {
+            constexpr std::array<const char *, 22> kBoneNames = {
+                "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
+                "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r",
+                "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l",
+                "thigh_r", "calf_r", "foot_r", "thigh_l", "calf_l", "foot_l"
+            };
+            constexpr std::array<std::pair<size_t, size_t>, 21> kSkeletonLinks = {{
+                {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5},
+                {1, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10},
+                {1, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15},
+                {5, 16}, {16, 17}, {17, 18}, {5, 19}, {19, 20}, {20, 21}
+            }};
+
+            std::array<FVector2D, kBoneNames.size()> boneScreen{};
+            std::array<bool, kBoneNames.size()> projected{};
+            for (size_t boneIndex = 0; boneIndex < kBoneNames.size(); ++boneIndex)
+            {
+                projected[boneIndex] = W2S(
+                    player->GetBonePos(kBoneNames[boneIndex], {}),
+                    &boneScreen[boneIndex]);
+            }
+
+            for (const auto &[from, to] : kSkeletonLinks)
+            {
+                if (projected[from] && projected[to])
+                {
+                    HUD->DrawLine(boneScreen[from].X, boneScreen[from].Y,
+                                  boneScreen[to].X, boneScreen[to].Y,
+                                  accent, 1.25f);
+                }
+            }
+
+            FVector headTop = player->GetBonePos("Head", {});
+            headTop.Z += 15.0f;
+            FVector2D topScreen;
+            if (W2S(headTop, &topScreen))
+            {
+                const float radius = FVector2D::Distance(headScreen, topScreen);
+                DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
+                                 accent, 28, 1.25f);
+            }
+        }
+
+        if (Cheat::Esp::Box)
+            Box4LineHUD(HUD, x, y, width, boxHeight, 1.25f, 0.16f, accent);
+
+        if (Cheat::Esp::Health)
+        {
+            const float maxHealth = player->HealthMax;
+            if (maxHealth > 0.0f)
+            {
+                const float currentHealth = std::max(0.0f,
+                    std::min(player->Health, maxHealth));
+                float healthPercentage = currentHealth / maxHealth;
+                if (currentHealth <= 0.0f)
+                    healthPercentage = std::max(0.0f,
+                        std::min(player->NearDeathBreath / maxHealth, 1.0f));
+
+                constexpr float barWidth = 3.0f;
+                const float barX = x - barWidth - (width * 0.10f);
+                DrawFilledRectangle(HUD, {barX - 1.0f, y - 1.0f}, barWidth + 2.0f,
+                                    boxHeight + 2.0f, OverlayUI::kPanelBorder);
+                DrawFilledRectangle(HUD, {barX, y}, barWidth, boxHeight,
+                                    FLinearColor(0.0f, 0.0f, 0.0f, 0.58f));
+                const float filledHeight = boxHeight * healthPercentage;
+                DrawFilledRectangle(HUD, {barX, y + boxHeight - filledHeight},
+                                    barWidth, filledHeight,
+                                    OverlayUI::HealthColor(healthPercentage));
+            }
+        }
+
+        if (Cheat::Esp::Line)
+        {
+            HUD->DrawLine(glWidth * 0.5f, glHeight - 34.0f, headScreen.X, y - 4.0f,
+                          FLinearColor(accent.R, accent.G, accent.B, 0.62f), 1.0f);
+        }
+
+        OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible);
+    }
+
+    // Player actors are consumed above from the precomputed snapshot. The
+    // remaining actor types only require one projection at their own ranges.
+    for (auto *actor : GetFrameActors())
     {
         if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
-        {
-            auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
-            if (player->PlayerKey == Cheat::localController->PlayerKey ||
-                player->TeamID == Cheat::localController->TeamID || player->bDead ||
-                player->bHidden)
-                continue;
-
-            const bool isVisible = Cheat::localController->LineOfSightTo(
-                player, {0, 0, 0}, true);
-            const FLinearColor accent = isVisible ? OverlayUI::kVisible : OverlayUI::kHidden;
-            const float distance = Cheat::localPlayer->GetDistanceTo(player) / 100.0f;
-
-            if (player->bEnsure)
-                ++totalBots;
-            else
-                ++totalEnemies;
-
-            FVector2D headScreen, rootScreen;
-            if (!W2S(player->GetBonePos("Head", {}), &headScreen) ||
-                !W2S(player->GetBonePos("Root", {}), &rootScreen))
-                continue;
-
-            const float height = fabsf(rootScreen.Y - headScreen.Y);
-            if (height < 4.0f)
-                continue;
-
-            const float extraTop = height * 0.10f;
-            const float boxHeight = height + extraTop;
-            const float width = boxHeight * 0.50f;
-            const float x = headScreen.X - (width * 0.5f);
-            const float y = headScreen.Y - extraTop;
-
-            // Keep distant entities readable with their compact box/tag while
-            // avoiding 22 bone projections for sprites that are only a few
-            // pixels high on screen.
-            const bool drawDetailedSkeleton = Cheat::Esp::Skeleton &&
-                height >= 18.0f && distance <= 350.0f;
-            if (drawDetailedSkeleton)
-            {
-                constexpr std::array<const char *, 22> kBoneNames = {
-                    "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
-                    "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r",
-                    "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l",
-                    "thigh_r", "calf_r", "foot_r", "thigh_l", "calf_l", "foot_l"
-                };
-                constexpr std::array<std::pair<size_t, size_t>, 21> kSkeletonLinks = {{
-                    {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5},
-                    {1, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10},
-                    {1, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15},
-                    {5, 16}, {16, 17}, {17, 18}, {5, 19}, {19, 20}, {20, 21}
-                }};
-
-                std::array<FVector2D, kBoneNames.size()> boneScreen{};
-                std::array<bool, kBoneNames.size()> projected{};
-                for (size_t boneIndex = 0; boneIndex < kBoneNames.size(); ++boneIndex)
-                {
-                    projected[boneIndex] = W2S(
-                        player->GetBonePos(kBoneNames[boneIndex], {}),
-                        &boneScreen[boneIndex]);
-                }
-
-                for (const auto &[from, to] : kSkeletonLinks)
-                {
-                    if (projected[from] && projected[to])
-                    {
-                        HUD->DrawLine(boneScreen[from].X, boneScreen[from].Y,
-                                      boneScreen[to].X, boneScreen[to].Y,
-                                      accent, 1.25f);
-                    }
-                }
-
-                FVector headTop = player->GetBonePos("Head", {});
-                headTop.Z += 15.0f;
-                FVector2D topScreen;
-                if (W2S(headTop, &topScreen))
-                {
-                    const float radius = FVector2D::Distance(headScreen, topScreen);
-                    DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                     accent, 28, 1.25f);
-                }
-            }
-
-            if (Cheat::Esp::Box)
-                Box4LineHUD(HUD, x, y, width, boxHeight, 1.25f, 0.16f, accent);
-
-            if (Cheat::Esp::Health)
-            {
-                const float maxHealth = player->HealthMax;
-                if (maxHealth > 0.0f)
-                {
-                    const float currentHealth = std::max(0.0f,
-                        std::min(player->Health, maxHealth));
-                    float healthPercentage = currentHealth / maxHealth;
-                    if (currentHealth <= 0.0f)
-                        healthPercentage = std::max(0.0f,
-                            std::min(player->NearDeathBreath / maxHealth, 1.0f));
-
-                    constexpr float barWidth = 3.0f;
-                    const float barX = x - barWidth - (width * 0.10f);
-                    DrawFilledRectangle(HUD, {barX - 1.0f, y - 1.0f}, barWidth + 2.0f,
-                                        boxHeight + 2.0f, OverlayUI::kPanelBorder);
-                    DrawFilledRectangle(HUD, {barX, y}, barWidth, boxHeight,
-                                        FLinearColor(0.0f, 0.0f, 0.0f, 0.58f));
-                    const float filledHeight = boxHeight * healthPercentage;
-                    DrawFilledRectangle(HUD, {barX, y + boxHeight - filledHeight},
-                                        barWidth, filledHeight,
-                                        OverlayUI::HealthColor(healthPercentage));
-                }
-            }
-
-            if (Cheat::Esp::Line)
-            {
-                HUD->DrawLine(glWidth * 0.5f, glHeight - 34.0f, headScreen.X, y - 4.0f,
-                              FLinearColor(accent.R, accent.G, accent.B, 0.62f), 1.0f);
-            }
-
-            OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible);
             continue;
-        }
 
         if (Cheat::Esp::Vehicle::Name && actor->IsA(ASTExtraVehicleBase::StaticClass()))
         {
@@ -346,32 +344,31 @@ void DrawMemory()
         auto *target = GetTargetForAimBot();
         if (target)
         {
-            bool triggerOk = false;
+            bool triggerActive = false;
             switch (Cheat::Aimbot::Trigger)
             {
-                // Preserve the existing default behavior while also honoring
-                // every declared trigger option.
                 case EAimTrigger::None:
                 case EAimTrigger::Shooting:
-                    triggerOk = Cheat::localPlayer->bIsWeaponFiring;
+                    triggerActive = Cheat::localPlayer->bIsWeaponFiring;
                     break;
                 case EAimTrigger::Scoping:
-                    triggerOk = Cheat::localPlayer->bIsGunADS;
+                    triggerActive = Cheat::localPlayer->bIsGunADS;
                     break;
                 case EAimTrigger::Both:
                 case EAimTrigger::Any:
-                    triggerOk = Cheat::localPlayer->bIsWeaponFiring ||
-                                Cheat::localPlayer->bIsGunADS;
+                    triggerActive = Cheat::localPlayer->bIsWeaponFiring ||
+                        Cheat::localPlayer->bIsGunADS;
                     break;
             }
 
-            if (triggerOk)
+            // Automatic mode tracks a valid locked enemy without requiring a
+            // firing/ADS state. Disable AutoAim to retain trigger-only use.
+            const bool shouldTrack = Cheat::Aimbot::AutoAim || triggerActive;
+            const bool reactionElapsed = GetAimTargetLockAge() >=
+                std::max(0.0f, Cheat::Aimbot::ReactionDelay);
+            if (shouldTrack && reactionElapsed)
             {
-                const char *bone = Cheat::Aimbot::Target == EAimTarget::Head
-                    ? "Head"
-                    : GetPreferredAimBone(target, Cheat::localController);
-                FVector targetAimPos = target->GetBonePos(bone, {});
-
+                FVector targetAimPos = target->GetBonePos(GetAimTargetBone(target), {});
                 const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
                     std::isfinite(targetAimPos.Y) && std::isfinite(targetAimPos.Z);
                 auto *weaponManager = Cheat::localPlayer->WeaponManagerComponent;
@@ -388,7 +385,7 @@ void DrawMemory()
                             ? shootWeapon->ShootWeaponEntityComponent
                             : nullptr;
 
-                        if (entity)
+                        if (Cheat::Aimbot::AimPrediction && entity)
                         {
                             const float bulletSpeed = *reinterpret_cast<float *>(
                                 reinterpret_cast<uintptr_t>(entity) + 0x560);
@@ -408,27 +405,54 @@ void DrawMemory()
                                 targetAimPos.Z += velocity.Z * travelTime +
                                     0.5f * 573.0f * travelTime * travelTime;
                             }
+                        }
 
-                            if (Cheat::localPlayer->bIsWeaponFiring)
+                        if (Cheat::localPlayer->bIsWeaponFiring)
+                        {
+                            const float distance = Cheat::localPlayer->GetDistanceTo(target) / 100.0f;
+                            targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
+                        }
+
+                        auto *cameraManager = Cheat::localController->PlayerCameraManager;
+                        if (cameraManager)
+                        {
+                            const FRotator aimRotation = ToRotator(
+                                cameraManager->CameraCache.POV.Location, targetAimPos);
+                            const FRotator currentRotation = Cheat::localController->ControlRotation;
+                            const float pitchError = NormalizeAxis(aimRotation.Pitch -
+                                currentRotation.Pitch -
+                                Cheat::localPlayer->AimControlRotationAdditive.Pitch);
+                            const float yawError = NormalizeAxis(aimRotation.Yaw -
+                                currentRotation.Yaw -
+                                Cheat::localPlayer->AimControlRotationAdditive.Yaw);
+
+                            const float dt = GetFrameDeltaSeconds();
+                            const float response = Cheat::Aimbot::Humanize
+                                ? 1.0f - expf(-std::max(1.0f,
+                                    Cheat::Aimbot::TrackingSpeed) * dt)
+                                : 1.0f;
+                            float pitchInput = ClampMagnitude(pitchError * response,
+                                Cheat::Aimbot::MaxPitchSpeed * dt);
+                            float yawInput = ClampMagnitude(yawError * response,
+                                Cheat::Aimbot::MaxYawSpeed * dt);
+
+                            if (Cheat::Aimbot::Humanize)
                             {
-                                const float distance = Cheat::localPlayer->GetDistanceTo(target) / 100.0f;
-                                targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
+                                const float remainingError = fabsf(pitchError) + fabsf(yawError);
+                                const float settleFactor = std::max(0.0f,
+                                    1.0f - (remainingError / 12.0f));
+                                const float phase = GetFrameElapsedSeconds() * 7.0f +
+                                    static_cast<float>(reinterpret_cast<uintptr_t>(target) & 0xFF);
+                                const float jitter = sinf(phase) *
+                                    Cheat::Aimbot::MicroJitter * settleFactor;
+                                pitchInput = ClampMagnitude(pitchInput + jitter,
+                                    Cheat::Aimbot::MaxPitchSpeed * dt);
+                                yawInput = ClampMagnitude(yawInput + (jitter * 0.65f),
+                                    Cheat::Aimbot::MaxYawSpeed * dt);
                             }
 
-                            auto *cameraManager = Cheat::localController->PlayerCameraManager;
-                            if (cameraManager)
-                            {
-                                const auto aimRotation = ToRotator(
-                                    cameraManager->CameraCache.POV.Location, targetAimPos);
-                                FRotator inputRotation = Cheat::localController->ControlRotation;
-                                inputRotation.Pitch = aimRotation.Pitch - inputRotation.Pitch -
-                                    Cheat::localPlayer->AimControlRotationAdditive.Pitch;
-                                inputRotation.Yaw = aimRotation.Yaw - inputRotation.Yaw -
-                                    Cheat::localPlayer->AimControlRotationAdditive.Yaw;
-                                NekoHook(inputRotation);
-                                Cheat::localPlayer->AddControllerPitchInput(inputRotation.Pitch);
-                                Cheat::localPlayer->AddControllerYawInput(inputRotation.Yaw);
-                            }
+                            Cheat::localPlayer->AddControllerPitchInput(pitchInput);
+                            Cheat::localPlayer->AddControllerYawInput(yawInput);
                         }
                     }
                 }
@@ -472,10 +496,22 @@ void AutoEspOn()
     Cheat::Esp::Vehicle::Name = true;
 
     Cheat::Aimbot::Enable = true;
+    Cheat::Aimbot::AutoAim = true;
+    Cheat::Aimbot::StickyTarget = true;
+    Cheat::Aimbot::Humanize = true;
+    Cheat::Aimbot::AimPrediction = true;
     Cheat::Aimbot::Trigger = EAimTrigger::Shooting;
     Cheat::Aimbot::RecoilSet = 1.045f;
     Cheat::Aimbot::VisCheck = true;
     Cheat::Aimbot::IgnoreKnock = true;
+    Cheat::Aimbot::Range = 250.0f;
+    Cheat::Aimbot::Radius = 300.0f;
+    Cheat::Aimbot::ReactionDelay = 0.075f;
+    Cheat::Aimbot::TrackingSpeed = 12.0f;
+    Cheat::Aimbot::MaxPitchSpeed = 180.0f;
+    Cheat::Aimbot::MaxYawSpeed = 240.0f;
+    Cheat::Aimbot::MicroJitter = 0.08f;
+    Cheat::Aimbot::BoneRefreshInterval = 0.08f;
     Cheat::Aimbot::Target = Chest;
 
     // Convert the static JSON once during startup. The draw path performs one

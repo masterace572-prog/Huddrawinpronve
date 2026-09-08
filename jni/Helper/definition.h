@@ -51,13 +51,22 @@ bool VisCheck;
 bool IgnoreKnock;
 bool IgnoreBot;
 bool AimPrediction;
+bool AutoAim = true;
+bool StickyTarget = true;
+bool Humanize = true;
 EAimTrigger Trigger;
 EAimTarget Target;
 float RecoilControl;
 float RecoilSet = 1.050f;
-float Range = 150.0f;
+float Range = 250.0f;
 float Radius = 300.0f;
 float FireSpeed;
+float ReactionDelay = 0.075f;
+float TrackingSpeed = 12.0f;
+float MaxPitchSpeed = 180.0f;
+float MaxYawSpeed = 240.0f;
+float MicroJitter = 0.08f;
+float BoneRefreshInterval = 0.08f;
 
 }
 
@@ -409,8 +418,57 @@ bool isObjectInvalid(UObject *obj)
     return false;
 }
 
-static UEngine *GEngine = 0;
+struct FramePlayerData
+{
+    ASTExtraPlayerCharacter *player = nullptr;
+    FVector2D headScreen{};
+    FVector2D rootScreen{};
+    float distance = 0.0f;
+    float screenDistance = std::numeric_limits<float>::infinity();
+    bool projected = false;
+    bool visible = false;
+};
+
+struct VisibilitySample
+{
+    bool visible = false;
+    float sampledAt = -1000.0f;
+};
+
+static UEngine *GEngine = nullptr;
 static std::vector<AActor *> frameActors;
+static std::vector<FramePlayerData> framePlayers;
+static std::unordered_map<uintptr_t, VisibilitySample> visibilityCache;
+static float frameDeltaSeconds = 1.0f / 60.0f;
+static float frameElapsedSeconds = 0.0f;
+
+void UpdateFrameTiming()
+{
+    static auto previousFrame = std::chrono::steady_clock::time_point{};
+    const auto now = std::chrono::steady_clock::now();
+    if (previousFrame == std::chrono::steady_clock::time_point{})
+    {
+        previousFrame = now;
+        return;
+    }
+
+    const float measuredDelta = std::chrono::duration<float>(now - previousFrame).count();
+    previousFrame = now;
+    // A breakpoint, loading stall, or background resume should not make the
+    // next aim adjustment jump across the screen.
+    frameDeltaSeconds = std::max(1.0f / 240.0f, std::min(measuredDelta, 0.050f));
+    frameElapsedSeconds += frameDeltaSeconds;
+}
+
+float GetFrameDeltaSeconds()
+{
+    return frameDeltaSeconds;
+}
+
+float GetFrameElapsedSeconds()
+{
+    return frameElapsedSeconds;
+}
 
 UWorld *GetWorld()
 {
@@ -491,6 +549,87 @@ void RefreshFrameActors(UWorld *World)
 const std::vector<AActor *> &GetFrameActors()
 {
     return frameActors;
+}
+
+const std::vector<FramePlayerData> &GetFramePlayers()
+{
+    return framePlayers;
+}
+
+const FramePlayerData *FindFramePlayer(ASTExtraPlayerCharacter *player)
+{
+    for (const auto &candidate : framePlayers)
+    {
+        if (candidate.player == player)
+            return &candidate;
+    }
+    return nullptr;
+}
+
+void RefreshFramePlayers()
+{
+    framePlayers.clear();
+    auto *localPlayer = Cheat::localPlayer;
+    auto *localController = Cheat::localController;
+    if (!localPlayer || !localController)
+        return;
+
+    framePlayers.reserve(frameActors.size());
+    constexpr float kVisibilityInterval = 1.0f / 30.0f;
+    for (auto *actor : frameActors)
+    {
+        if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+            continue;
+
+        auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
+        if (player->PlayerKey == localPlayer->PlayerKey ||
+            player->TeamID == localPlayer->TeamID || player->bDead || player->bHidden)
+            continue;
+
+        FramePlayerData candidate;
+        candidate.player = player;
+        candidate.distance = localPlayer->GetDistanceTo(player) / 100.0f;
+        candidate.projected = W2S(player->GetBonePos("Head", {}), &candidate.headScreen) &&
+            W2S(player->GetBonePos("Root", {}), &candidate.rootScreen);
+
+        if (candidate.projected)
+        {
+            const float height = fabsf(candidate.rootScreen.Y - candidate.headScreen.Y);
+            const float width = height * 0.20f;
+            const FVector2D center(candidate.headScreen.X + (width * 0.5f),
+                                   candidate.headScreen.Y + (height * 0.5f));
+            candidate.screenDistance = FVector2D::Distance(
+                FVector2D(glWidth * 0.5f, glHeight * 0.5f), center);
+        }
+
+        // Visibility is expensive and has no meaningful visual benefit when
+        // sampled 60/120 times a second. Cache it at 30 Hz while the current
+        // frame still receives fresh projection and distance data.
+        auto &visibility = visibilityCache[reinterpret_cast<uintptr_t>(player)];
+        if (frameElapsedSeconds - visibility.sampledAt >= kVisibilityInterval)
+        {
+            visibility.visible = localController->LineOfSightTo(player, {0, 0, 0}, true);
+            visibility.sampledAt = frameElapsedSeconds;
+        }
+        candidate.visible = visibility.visible;
+        framePlayers.push_back(candidate);
+    }
+
+    // Prevent the cache from retaining actor addresses after a long match or
+    // map transition. Pruning is infrequent and outside the hot draw path.
+    static float lastCachePrune = 0.0f;
+    if (frameElapsedSeconds - lastCachePrune >= 10.0f)
+    {
+        const float expiration = frameElapsedSeconds - 15.0f;
+        for (auto it = visibilityCache.begin(); it != visibilityCache.end();)
+        {
+            if (it->second.sampledAt < expiration)
+                it = visibilityCache.erase(it);
+            else
+                ++it;
+        }
+        lastCachePrune = frameElapsedSeconds;
+    }
 }
 
 template<class T>
@@ -673,7 +812,61 @@ constexpr std::array<const char *, 12> kPreferredAimBones = {
     "Head", "spine_03", "pelvis", "calf_l", "calf_r", "lowerarm_l",
     "lowerarm_r", "upperarm_l", "upperarm_r", "thigh_l", "thigh_r", "foot_l"
 };
+
+struct AimTargetLock
+{
+    ASTExtraPlayerCharacter *player = nullptr;
+    const char *bone = "Head";
+    float acquiredAt = 0.0f;
+    float nextBoneRefreshAt = 0.0f;
+};
+
+AimTargetLock aimTargetLock;
+
+float NormalizeAxis(float angle)
+{
+    while (angle > 180.0f)
+        angle -= 360.0f;
+    while (angle < -180.0f)
+        angle += 360.0f;
+    return angle;
 }
+
+float ClampMagnitude(float value, float maxMagnitude)
+{
+    if (maxMagnitude <= 0.0f)
+        return value;
+    return std::max(-maxMagnitude, std::min(value, maxMagnitude));
+}
+
+bool IsAimCandidate(const FramePlayerData &candidate, bool retainingLock)
+{
+    const auto *player = candidate.player;
+    if (!player || !candidate.projected || player->bDead || player->bHidden)
+        return false;
+    if (Cheat::Aimbot::IgnoreKnock && player->Health <= 0.0f)
+        return false;
+    if (Cheat::Aimbot::IgnoreBot && (player->bIsAI || player->bEnsure))
+        return false;
+    if (Cheat::Aimbot::VisCheck && !candidate.visible)
+        return false;
+    if (Cheat::Aimbot::Range > 0.0f && candidate.distance > Cheat::Aimbot::Range)
+        return false;
+
+    if (Cheat::Aimbot::Radius > 0.0f)
+    {
+        const float radius = Cheat::Aimbot::Radius * (retainingLock ? 1.20f : 1.0f);
+        if (candidate.screenDistance > radius)
+            return false;
+    }
+    return true;
+}
+
+void ClearAimTargetLock()
+{
+    aimTargetLock = {};
+}
+} // namespace
 
 const char *GetPreferredAimBone(ASTExtraPlayerCharacter *player,
                                 ASTExtraPlayerController *controller)
@@ -681,8 +874,8 @@ const char *GetPreferredAimBone(ASTExtraPlayerCharacter *player,
     if (!player || !controller || !controller->PlayerCameraManager)
         return "Head";
 
-    // Only test detailed bone visibility for the chosen target. Previously,
-    // every candidate could trigger a long chain of line-of-sight queries.
+    // Bone visibility is only checked after target selection and is refreshed
+    // at a short interval. That prevents many redundant engine trace calls.
     for (const char *bone : kPreferredAimBones)
     {
         if (controller->LineOfSightTo(controller->PlayerCameraManager,
@@ -692,60 +885,87 @@ const char *GetPreferredAimBone(ASTExtraPlayerCharacter *player,
     return "Head";
 }
 
+const char *GetAimTargetBone(ASTExtraPlayerCharacter *target)
+{
+    if (Cheat::Aimbot::Target == EAimTarget::Head)
+        return "Head";
+
+    const float now = GetFrameElapsedSeconds();
+    if (aimTargetLock.player != target)
+    {
+        aimTargetLock.player = target;
+        aimTargetLock.acquiredAt = now;
+        aimTargetLock.nextBoneRefreshAt = now;
+        aimTargetLock.bone = "Head";
+    }
+
+    if (now >= aimTargetLock.nextBoneRefreshAt)
+    {
+        aimTargetLock.bone = GetPreferredAimBone(target, Cheat::localController);
+        aimTargetLock.nextBoneRefreshAt = now + std::max(
+            Cheat::Aimbot::BoneRefreshInterval, 1.0f / 60.0f);
+    }
+    return aimTargetLock.bone;
+}
+
+float GetAimTargetLockAge()
+{
+    return aimTargetLock.player
+        ? std::max(0.0f, GetFrameElapsedSeconds() - aimTargetLock.acquiredAt)
+        : 0.0f;
+}
+
 ASTExtraPlayerCharacter *GetTargetForAimBot()
 {
-    ASTExtraPlayerCharacter *result = nullptr;
-    float nearestScreenDistance = std::numeric_limits<float>::infinity();
-    const auto &actors = GetFrameActors();
-    auto *localPlayer = Cheat::localPlayer;
-    auto *localController = Cheat::localController;
-
-    if (!localPlayer || !localController)
-        return nullptr;
-
-    for (auto *actor : actors)
+    const auto &players = GetFramePlayers();
+    if (!Cheat::localPlayer || !Cheat::localController)
     {
-        if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
-            continue;
+        ClearAimTargetLock();
+        return nullptr;
+    }
 
-        auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
-        if (player->PlayerKey == localPlayer->PlayerKey ||
-            player->TeamID == localPlayer->TeamID || player->bDead ||
-            player->bHidden)
-            continue;
-
-        if (Cheat::Aimbot::IgnoreKnock && player->Health <= 0.0f)
-            continue;
-        if (Cheat::Aimbot::IgnoreBot && player->bIsAI)
-            continue;
-        if (Cheat::Aimbot::VisCheck &&
-            !localController->LineOfSightTo(player, {0, 0, 0}, true))
-            continue;
-
-        FVector2D rootScreen, headScreen;
-        if (!W2S(player->GetBonePos("Root", {}), &rootScreen) ||
-            !W2S(player->GetBonePos("Head", {}), &headScreen))
-            continue;
-
-        const float height = fabsf(headScreen.Y - rootScreen.Y);
-        const float width = height * 0.20f;
-        const FVector2D center(
-            headScreen.X + (width * 0.5f),
-            headScreen.Y + (height * 0.5f));
-
-        if (center.X < 0.0f || center.X > glWidth ||
-            center.Y < 0.0f || center.Y > glHeight)
-            continue;
-
-        const float screenDistance = FVector2D::Distance(
-            FVector2D(glWidth * 0.5f, glHeight * 0.5f), center);
-        if (screenDistance < nearestScreenDistance)
+    // A small retention margin keeps the target stable as players cross the
+    // centerline, preventing the camera from flickering between candidates.
+    if (Cheat::Aimbot::StickyTarget)
+    {
+        if (const auto *locked = FindFramePlayer(aimTargetLock.player);
+            locked && IsAimCandidate(*locked, true))
         {
-            nearestScreenDistance = screenDistance;
-            result = player;
+            return locked->player;
         }
     }
-    return result;
+
+    const FramePlayerData *best = nullptr;
+    float bestScore = std::numeric_limits<float>::infinity();
+    for (const auto &candidate : players)
+    {
+        if (!IsAimCandidate(candidate, false))
+            continue;
+
+        // Prioritize crosshair proximity. A slight distance term breaks ties
+        // naturally without causing a target switch for small screen movement.
+        const float score = candidate.screenDistance + (candidate.distance * 0.10f);
+        if (score < bestScore)
+        {
+            bestScore = score;
+            best = &candidate;
+        }
+    }
+
+    if (!best)
+    {
+        ClearAimTargetLock();
+        return nullptr;
+    }
+
+    if (aimTargetLock.player != best->player)
+    {
+        aimTargetLock.player = best->player;
+        aimTargetLock.bone = "Head";
+        aimTargetLock.acquiredAt = GetFrameElapsedSeconds();
+        aimTargetLock.nextBoneRefreshAt = GetFrameElapsedSeconds();
+    }
+    return best->player;
 }
 
 auto GetTargetByPussy() 
@@ -928,12 +1148,15 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
 {
     glWidth = ScreenWidth;
     glHeight = ScreenHeight;
+    UpdateFrameTiming();
 
     if (!HUD || !HUD->Canvas)
     {
         frameActors.clear();
+        framePlayers.clear();
         Cheat::localPlayer = nullptr;
         Cheat::localController = nullptr;
+        ClearAimTargetLock();
         return;
     }
 
@@ -965,6 +1188,7 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
 
     Cheat::localPlayer = localPlayer;
     Cheat::localController = localController;
+    RefreshFramePlayers();
     EnsureFonts();
 }
 
