@@ -51,7 +51,6 @@ bool VisCheck;
 bool IgnoreKnock;
 bool IgnoreBot;
 bool AimPrediction;
-bool AutoAim = true;
 bool StickyTarget = true;
 bool Humanize = true;
 EAimTrigger Trigger;

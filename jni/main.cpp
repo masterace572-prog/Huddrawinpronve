@@ -361,11 +361,10 @@ void DrawMemory()
                     break;
             }
 
-            // Automatic mode tracks a valid locked enemy without requiring a
-            // firing/ADS state. Disable AutoAim to retain trigger-only use.
-            const bool shouldTrack = Cheat::Aimbot::AutoAim || triggerActive;
+            // Automatic tracking is active only while the user is firing or
+            // aiming down sights. It releases the target immediately otherwise.
             const float warmup = GetHumanizedAimWarmup();
-            if (shouldTrack && warmup > 0.0f)
+            if (triggerActive && warmup > 0.0f)
             {
                 FVector targetAimPos = target->GetBonePos(GetAimTargetBone(target), {});
                 const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
@@ -502,11 +501,10 @@ void AutoEspOn()
     Cheat::Esp::Vehicle::Name = true;
 
     Cheat::Aimbot::Enable = true;
-    Cheat::Aimbot::AutoAim = true;
     Cheat::Aimbot::StickyTarget = true;
     Cheat::Aimbot::Humanize = true;
     Cheat::Aimbot::AimPrediction = true;
-    Cheat::Aimbot::Trigger = EAimTrigger::Shooting;
+    Cheat::Aimbot::Trigger = EAimTrigger::Both;
     Cheat::Aimbot::RecoilSet = 1.045f;
     Cheat::Aimbot::VisCheck = true;
     Cheat::Aimbot::IgnoreKnock = true;
