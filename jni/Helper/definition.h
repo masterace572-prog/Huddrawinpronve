@@ -80,9 +80,7 @@ namespace Cheat
     namespace Memory 
     {
         bool Wide = false;
-        bool Hit = false;
         bool Small = false;
-        bool Skin = false;
         bool Magic = false;
         
         float Size = 10000.0f;
@@ -141,8 +139,6 @@ FVector GetBoneLocationByName(ASTExtraPlayerCharacter *Actor, const char *BoneNa
 }
 
 AHUD *NewHUD = 0;
-
-bool GunSkin = true;
 
 using json = nlohmann::json;
 bool ExtremeExp = true;
@@ -693,77 +689,6 @@ auto GetTargetForAimBot()
     return result;
 }
 
-/*
-auto GetTargetByPussy() {
-    ASTExtraPlayerCharacter *result = 0;
-    float max = std::numeric_limits<float>::infinity();
-    auto Actors = GetActors();
-
-    auto localPlayer = Cheat::localPlayer;
-    auto localController = Cheat::localController;
-    FVector ViewPosY{0, 0, 0};
-    if (localPlayer) {
-        ViewPosY = localPlayer->GetBonePos("Head", {});
-        ViewPosY.Z += -15.0f;
-    }
-
-    if (localPlayer) {
-        for (int i = 0; i < Actors.size(); i++) {
-            auto Actor = Actors[i];
-            if (isObjectInvalid(Actor))
-                continue;
-
-            if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass())) {
-
-                auto Player = (ASTExtraPlayerCharacter *) Actor;
-                float lund = localPlayer->GetDistanceTo(Player) / 100.0f;
-
-                if (lund > 500.0f)
-                    continue;
-					
-                if (Player->PlayerKey == localPlayer->PlayerKey)
-                    continue;
-
-                if (Player->TeamID == localPlayer->TeamID)
-                    continue;
-
-                if (Player->bDead)
-                    continue;
-
-                if (Player->bHidden)
-                    continue;
-
-                if (Cheat::BulletTrack::IgnoreKnock) {
-                    if (Player->Health == 0.0f)
-                        continue;
-                }
-
-                if (Cheat::BulletTrack::VisCheck) {
-
-                    if (!localController->LineOfSightTo(Player, {0, 0, 0}, true))
-                        continue;
-                }
-
-                if (Cheat::BulletTrack::iGnoreBot) {
-                    if (Player->bEnsure)
-                        continue;
-                }
-                float dist = localPlayer->GetDistanceTo(Player);
-                if (dist < max) {
-                    max = dist;
-                    result = Player;
-                }
-            }
-        }
-    }
-
-    return result;
-}*/
-
-
-
-
-
 auto GetTargetByPussy() 
 {
     ASTExtraPlayerCharacter *result = 0;
@@ -844,78 +769,6 @@ auto GetTargetByPussy()
 }
     return result;
 }
-
-void (*orig_shoot_event)(USTExtraShootWeaponComponent *thiz, FVector start, FRotator rot, void *unk1, int unk2, float a6, float a7, float a8) = 0;
-void shoot_event(USTExtraShootWeaponComponent *thiz, FVector start, FRotator rot, ASTExtraShootWeapon *weapon, int unk1, float a6, float a7, float a8)
-{
-    if (Cheat::BulletTrack::Enable)
-    {
-        ASTExtraPlayerCharacter *Target = GetTargetByPussy();
-        if (Target)
-        {
-            FVector targetAimPos = Target->GetHeadLocation(true);
-            
-            FRotator sex = ToRotator(start, targetAimPos);
-
-            return orig_shoot_event(thiz, targetAimPos, sex, weapon, unk1, a6, a7, a8);
-        }
-    }
-    return orig_shoot_event(thiz, start, rot, weapon, unk1, a6, a7, a8);
-}
-
-/*
-void (*GalaxyShoot)(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID);
-void xBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID)
-{
-    if (Cheat::BulletTrack::Enable)
-    {
-        auto Target = GetTargetByPussy();
-        if (Target != 0)
-        {
-		FVector targetAimPos = Target->GetBonePos("Head", {}); // Default to neck
-
-		
-            if (auto WeaponManagerComponent = Cheat::localPlayer->WeaponManagerComponent)
-            {
-                if (auto CurrentWeaponReplicated = (ASTExtraShootWeapon*)WeaponManagerComponent->CurrentWeaponReplicated)
-                {
-                    float distance = Cheat::localPlayer->GetDistanceTo(Target);
-                    float BulletFireSpeed = CurrentWeaponReplicated->GetBulletFireSpeedFromEntity();
-                    float timeToTravel = distance / BulletFireSpeed;
-                    auto CurrentVehicle = Target->CurrentVehicle;
-
-                    if (CurrentVehicle)
-                    {
-                        FVector LinearVelocity = CurrentVehicle->ReplicatedMovement.LinearVelocity;
-                        FVector Velocity = UKismetMathLibrary::Multiply_VectorFloat(LinearVelocity, timeToTravel);
-                        targetAimPos = targetAimPos + Velocity;
-                    }
-                    else
-                    {
-                        FVector LinearVelocity = Target->GetVelocity();
-                        FVector Velocity = UKismetMathLibrary::Multiply_VectorFloat(LinearVelocity, timeToTravel);
-                        targetAimPos = targetAimPos + Velocity;
-                    }
-
-                    static int index = 0;
-                    index = GetIndex(index, 11);
-                    float Smoothing = Random[index];
-                    FRotator gunrotaton = StartRot;
-                    FRotator aimrotation = ToRotator(StartLoc, targetAimPos);
-                    aimrotation.Pitch -= gunrotaton.Pitch;
-                    aimrotation.Yaw -= gunrotaton.Yaw;
-                    aimrotation.Roll = 0.0f;
-                    ClampAngles(aimrotation);
-                    gunrotaton.Pitch += aimrotation.Pitch / Smoothing;
-                    gunrotaton.Yaw += aimrotation.Yaw / Smoothing;
-                    gunrotaton.Roll = 0.0f;
-                    return GalaxyShoot(Weapon, StartLoc, gunrotaton, ShootID);
-                }
-            }
-        }
-    }
-    return GalaxyShoot(Weapon, StartLoc, StartRot, ShootID);
-}*/
 
 const char *GetVehicleName(ASTExtraVehicleBase *Vehicle) 
 {

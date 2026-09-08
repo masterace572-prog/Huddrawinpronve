@@ -1,11 +1,6 @@
 #include "Helper/include.h"
 #include "Helper/definition.h"
 #include "Helper/Items.h"
-#include "Helper/bypass.h"
-#include "Helper/Hit.h"
-#include "Helper/KillMsg.h"
-#include "Helper/Noob.h"
-#include "Helper/Skin.h"
 
 #include <fcntl.h>
 #include <iostream>
@@ -483,11 +478,6 @@ static ULocalPlayer *UlocalPlayer = nullptr;
         }
     }
 	
-        if (Cheat::Memory::Hit)
-        {
-            TriggerHitEffect();
-        }
-
         if (Cheat::Memory::Wide)
         {
             uintptr_t localPlayer = (uintptr_t)Cheat::localPlayer;
@@ -550,15 +540,11 @@ void AutoEspOn()
     Cheat::Esp::Vehicle::Name = true;
 	
   //   Cheat::Aimbot::Enable = true;
- //   Cheat::Memory::Hit = true;
  //   Cheat::Memory::Wide = true;
-    Cheat::Memory::Skin = true;
 	
 	Cheat::Memory::Small = true;
 	//Cheat::Memory::Magic = true;
 	//Cheat::Aimbot::Enable = true;
-	Cheat::BulletTrack::Enable = true;
-	Cheat::BulletTrack::Range = 600.0f;
 	
     for (auto &i : items_data) 
     {
@@ -588,7 +574,6 @@ void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
         RenderESPPRIVATE(pHUD, SizeX, SizeY);
         DrawHUD(pHUD);
         DrawMemory();
-        SkinHack();
     }
     oReceiveDrawHUD(pHUD, SizeX, SizeY);
 }
@@ -621,10 +606,6 @@ void *RunGame(void *)
     UObject::GUObjectArray = (FUObjectArray *)(Cheat::libUE4Base + Cheat::GUObject_Offset);
     
     initOffset();
-    	A64HookFunction((void *)(Cheat::libUE4Base + 0x66B1FFC), (void *)shoot_event, (void **)&orig_shoot_event);
-	A64HookFunction((void *)(Cheat::libUE4Base + 0x5E6A910), (void *)hook__kill_message, (void **)&orig_kill_message);
-	
-	//DobbyHook((void *)(Cheat::libUE4Base + 0x62F9640), (void *)shoot_event, (void **)&orig_shoot_event);
 	
     items_data = json::parse(JSON_ITEMS);
     AutoEspOn();
