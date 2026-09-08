@@ -7,564 +7,427 @@
 #include <fstream>
 #include <unistd.h>
 #include <string>
+#include <utility>
 
 json items_data;
-std::map<int, bool> Items;
 
-void DrawHUD(AHUD* HUD)
+namespace
 {
-    if (Cheat::localPlayer && Cheat::localController)
+struct ItemVisual
+{
+    std::string name;
+    FLinearColor color;
+};
+
+std::unordered_map<int, ItemVisual> itemVisuals;
+
+namespace OverlayUI
+{
+const FLinearColor kPanelBackground(0.035f, 0.055f, 0.085f, 0.86f);
+const FLinearColor kPanelBorder(0.24f, 0.32f, 0.42f, 0.85f);
+const FLinearColor kTextPrimary(0.94f, 0.97f, 1.0f, 1.0f);
+const FLinearColor kTextMuted(0.62f, 0.71f, 0.82f, 1.0f);
+const FLinearColor kVisible(0.20f, 0.91f, 0.73f, 1.0f);
+const FLinearColor kHidden(1.0f, 0.34f, 0.45f, 1.0f);
+const FLinearColor kWarning(1.0f, 0.68f, 0.24f, 1.0f);
+
+void DrawPanel(AHUD *hud, float x, float y, float width, float height,
+               FLinearColor accent)
+{
+    DrawFilledRectangle(hud, {x + 2.0f, y + 2.0f}, width, height,
+                        FLinearColor(0.0f, 0.0f, 0.0f, 0.22f));
+    DrawFilledRectangle(hud, {x, y}, width, height, kPanelBackground);
+    hud->DrawLine(x, y, x + width, y, kPanelBorder, 1.0f);
+    hud->DrawLine(x, y, x, y + height, kPanelBorder, 1.0f);
+    hud->DrawLine(x + width, y, x + width, y + height, kPanelBorder, 1.0f);
+    hud->DrawLine(x, y + height, x + width, y + height, kPanelBorder, 1.0f);
+    DrawFilledRectangle(hud, {x, y}, 4.0f, height, accent);
+}
+
+void DrawHeader(AHUD *hud, int enemies, int bots)
+{
+    if (!Cheat::Esp::Counter || !tslFont)
+        return;
+
+    constexpr float width = 170.0f;
+    constexpr float height = 42.0f;
+    const float x = (glWidth - width) * 0.5f;
+    constexpr float y = 26.0f;
+    DrawPanel(hud, x, y, width, height, enemies > 0 ? kHidden : kVisible);
+
+    const int previousSize = tslFont->LegacyFontSize;
+    tslFont->LegacyFontSize = 9;
+    DrawOutlinedText(hud, FString("HUDDRAW // LIVE"), {x + 13.0f, y + 7.0f},
+                     kTextMuted, COLOR_BLACK, false);
+
+    const std::string enemyText = "ENEMIES " + std::to_string(enemies);
+    const std::string botText = "BOTS " + std::to_string(bots);
+    tslFont->LegacyFontSize = 12;
+    DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 13.0f, y + 21.0f},
+                     kTextPrimary, COLOR_BLACK, false);
+    DrawOutlinedText(hud, FString(botText.c_str()), {x + 105.0f, y + 21.0f},
+                     kTextMuted, COLOR_BLACK, false);
+    tslFont->LegacyFontSize = previousSize;
+}
+
+FLinearColor HealthColor(float percentage)
+{
+    if (percentage > 0.70f)
+        return kVisible;
+    if (percentage > 0.30f)
+        return kWarning;
+    return kHidden;
+}
+
+void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
+                    float y, float distance, bool visible)
+{
+    if (!tslFont || (!Cheat::Esp::Name && !Cheat::Esp::Distance))
+        return;
+
+    const int previousSize = tslFont->LegacyFontSize;
+    tslFont->LegacyFontSize = 10;
+    const FLinearColor accent = visible ? kVisible : kHidden;
+    float textY = y - 19.0f;
+
+    if (Cheat::Esp::Name)
     {
-        int totalEnemies = 0;
-        int totalBots = 0;
-        auto AllActors = GetActors();
+        const FString label = player->bEnsure ? FString("BOT") : player->PlayerName;
+        DrawOutlinedText(hud, label, {x, textY}, kTextPrimary, COLOR_BLACK, true);
+        textY += 12.0f;
+    }
 
-        for (auto& i : AllActors)
+    if (Cheat::Esp::Distance)
+    {
+        const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
+        DrawOutlinedText(hud, FString(distanceText.c_str()), {x, textY}, accent,
+                         COLOR_BLACK, true);
+    }
+    tslFont->LegacyFontSize = previousSize;
+}
+} // namespace OverlayUI
+} // namespace
+
+void DrawHUD(AHUD *HUD)
+{
+    if (!HUD || !tslFont || !Cheat::localPlayer || !Cheat::localController)
+        return;
+
+    int totalEnemies = 0;
+    int totalBots = 0;
+    const auto &actors = GetFrameActors();
+
+    for (auto *actor : actors)
+    {
+        if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
         {
-            auto Actor = i;
-
-            if (isObjectInvalid(Actor))
+            auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
+            if (player->PlayerKey == Cheat::localController->PlayerKey ||
+                player->TeamID == Cheat::localController->TeamID || player->bDead ||
+                player->bHidden)
                 continue;
 
-            if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+            const bool isVisible = Cheat::localController->LineOfSightTo(
+                player, {0, 0, 0}, true);
+            const FLinearColor accent = isVisible ? OverlayUI::kVisible : OverlayUI::kHidden;
+            const float distance = Cheat::localPlayer->GetDistanceTo(player) / 100.0f;
+
+            if (player->bEnsure)
+                ++totalBots;
+            else
+                ++totalEnemies;
+
+            FVector2D headScreen, rootScreen;
+            if (!W2S(player->GetBonePos("Head", {}), &headScreen) ||
+                !W2S(player->GetBonePos("Root", {}), &rootScreen))
+                continue;
+
+            const float height = fabsf(rootScreen.Y - headScreen.Y);
+            if (height < 4.0f)
+                continue;
+
+            const float extraTop = height * 0.10f;
+            const float boxHeight = height + extraTop;
+            const float width = boxHeight * 0.50f;
+            const float x = headScreen.X - (width * 0.5f);
+            const float y = headScreen.Y - extraTop;
+
+            // Keep distant entities readable with their compact box/tag while
+            // avoiding 22 bone projections for sprites that are only a few
+            // pixels high on screen.
+            const bool drawDetailedSkeleton = Cheat::Esp::Skeleton &&
+                height >= 18.0f && distance <= 350.0f;
+            if (drawDetailedSkeleton)
             {
-                auto Player = (ASTExtraPlayerCharacter*)Actor;
-                bool IsVisible = Cheat::localController->LineOfSightTo(Player, { 0, 0, 0 }, true);
+                constexpr std::array<const char *, 22> kBoneNames = {
+                    "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
+                    "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r",
+                    "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l",
+                    "thigh_r", "calf_r", "foot_r", "thigh_l", "calf_l", "foot_l"
+                };
+                constexpr std::array<std::pair<size_t, size_t>, 21> kSkeletonLinks = {{
+                    {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5},
+                    {1, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10},
+                    {1, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15},
+                    {5, 16}, {16, 17}, {17, 18}, {5, 19}, {19, 20}, {20, 21}
+                }};
 
-                FLinearColor White;
-                FLinearColor boxColor;
-
-                if (IsVisible)
+                std::array<FVector2D, kBoneNames.size()> boneScreen{};
+                std::array<bool, kBoneNames.size()> projected{};
+                for (size_t boneIndex = 0; boneIndex < kBoneNames.size(); ++boneIndex)
                 {
-                    White = FLinearColor(0.0f, 1.0f, 0.0f, 1.0f);
-                    boxColor = FLinearColor(1.0f, 1.0f, 1.0f, 0.7f);
+                    projected[boneIndex] = W2S(
+                        player->GetBonePos(kBoneNames[boneIndex], {}),
+                        &boneScreen[boneIndex]);
                 }
-                else
+
+                for (const auto &[from, to] : kSkeletonLinks)
                 {
-                    White = FLinearColor(1.0f, 0.0f, 0.0f, 1.0f);
-                    boxColor = FLinearColor(1.0f, 0.0f, 0.0f, 0.7f);
+                    if (projected[from] && projected[to])
+                    {
+                        HUD->DrawLine(boneScreen[from].X, boneScreen[from].Y,
+                                      boneScreen[to].X, boneScreen[to].Y,
+                                      accent, 1.25f);
+                    }
                 }
 
-                float Distance = Cheat::localPlayer->GetDistanceTo(Player) / 100.0f;
-
-                if (Player->PlayerKey == Cheat::localController->PlayerKey ||
-                    Player->TeamID == Cheat::localController->TeamID ||
-                    Player->bDead ||
-                    Player->bHidden)
-                    continue;
-
-                if (Player->bEnsure)
-                    totalBots++;
-                else
-                    totalEnemies++;
-
-                auto HeadPos = Player->GetBonePos("Head", {});
-                FVector2D headPosSC;
-                auto RootPos = Player->GetBonePos("Root", {});
-                FVector2D RootPosSC;
-
-                if (W2S(HeadPos, &headPosSC) && W2S(RootPos, &RootPosSC))
+                FVector headTop = player->GetBonePos("Head", {});
+                headTop.Z += 15.0f;
+                FVector2D topScreen;
+                if (W2S(headTop, &topScreen))
                 {
-                    if (Cheat::Esp::Skeleton)
-					{
-    					static std::vector<std::vector<std::string>> skeleton =
-    					{
-        					{ "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis" },
-        					{ "neck_01", "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r" },
-        					{ "neck_01", "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l" },
-        					{ "pelvis", "thigh_r", "calf_r", "foot_r" },
-        					{ "pelvis", "thigh_l", "calf_l", "foot_l" }
-    					};
-
-    					for (auto& boneStructure : skeleton)
-    					{
-        					std::string lastBone;
-        for (std::string& currentBone : boneStructure)
-        {
-            if (!lastBone.empty())
-            {
-                FVector2D boneFrom, boneTo;
-                if (W2S(Player->GetBonePos(lastBone.c_str(), {}), &boneFrom) &&
-                    W2S(Player->GetBonePos(currentBone.c_str(), {}), &boneTo))
-                {
-                    HUD->DrawLine(boneFrom.X, boneFrom.Y, boneTo.X, boneTo.Y, White, 1.5f);
+                    const float radius = FVector2D::Distance(headScreen, topScreen);
+                    DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
+                                     accent, 28, 1.25f);
                 }
             }
-            lastBone = currentBone;
+
+            if (Cheat::Esp::Box)
+                Box4LineHUD(HUD, x, y, width, boxHeight, 1.25f, 0.16f, accent);
+
+            if (Cheat::Esp::Health)
+            {
+                const float maxHealth = player->HealthMax;
+                if (maxHealth > 0.0f)
+                {
+                    const float currentHealth = std::max(0.0f,
+                        std::min(player->Health, maxHealth));
+                    float healthPercentage = currentHealth / maxHealth;
+                    if (currentHealth <= 0.0f)
+                        healthPercentage = std::max(0.0f,
+                            std::min(player->NearDeathBreath / maxHealth, 1.0f));
+
+                    constexpr float barWidth = 3.0f;
+                    const float barX = x - barWidth - (width * 0.10f);
+                    DrawFilledRectangle(HUD, {barX - 1.0f, y - 1.0f}, barWidth + 2.0f,
+                                        boxHeight + 2.0f, OverlayUI::kPanelBorder);
+                    DrawFilledRectangle(HUD, {barX, y}, barWidth, boxHeight,
+                                        FLinearColor(0.0f, 0.0f, 0.0f, 0.58f));
+                    const float filledHeight = boxHeight * healthPercentage;
+                    DrawFilledRectangle(HUD, {barX, y + boxHeight - filledHeight},
+                                        barWidth, filledHeight,
+                                        OverlayUI::HealthColor(healthPercentage));
+                }
+            }
+
+            if (Cheat::Esp::Line)
+            {
+                HUD->DrawLine(glWidth * 0.5f, glHeight - 34.0f, headScreen.X, y - 4.0f,
+                              FLinearColor(accent.R, accent.G, accent.B, 0.62f), 1.0f);
+            }
+
+            OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible);
+            continue;
+        }
+
+        if (Cheat::Esp::Vehicle::Name && actor->IsA(ASTExtraVehicleBase::StaticClass()))
+        {
+            auto *vehicle = static_cast<ASTExtraVehicleBase *>(actor);
+            if (!vehicle->Mesh)
+                continue;
+
+            FVector2D screen;
+            if (!W2S(vehicle->K2_GetActorLocation(), &screen))
+                continue;
+
+            const float distance = vehicle->GetDistanceTo(Cheat::localPlayer) / 100.0f;
+            const int previousSize = tslFont->LegacyFontSize;
+            tslFont->LegacyFontSize = 10;
+            DrawOutlinedText(HUD, FString(GetVehicleName(vehicle)), screen,
+                             OverlayUI::kWarning, COLOR_BLACK, true);
+            const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
+            DrawOutlinedText(HUD, FString(distanceText.c_str()), {screen.X, screen.Y + 12.0f},
+                             OverlayUI::kTextMuted, COLOR_BLACK, true);
+            tslFont->LegacyFontSize = previousSize;
+            continue;
+        }
+
+        if (Cheat::Esp::Throwable && actor->IsA(ASTExtraGrenadeBase::StaticClass()))
+        {
+            auto *grenade = static_cast<ASTExtraGrenadeBase *>(actor);
+            if (!grenade->RootComponent)
+                continue;
+
+            const float distance = grenade->GetDistanceTo(Cheat::localPlayer) / 100.0f;
+            FVector2D screen;
+            if (distance > 50.0f || !W2S(grenade->K2_GetActorLocation(), &screen))
+                continue;
+
+            const int previousSize = tslFont->LegacyFontSize;
+            tslFont->LegacyFontSize = 10;
+            DrawOutlinedText(HUD, FString("GRENADE"), screen, OverlayUI::kHidden,
+                             COLOR_BLACK, true);
+            const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
+            DrawOutlinedText(HUD, FString(distanceText.c_str()), {screen.X, screen.Y + 12.0f},
+                             OverlayUI::kTextMuted, COLOR_BLACK, true);
+            tslFont->LegacyFontSize = previousSize;
+            continue;
+        }
+
+        if (Cheat::Esp::LootBox && actor->IsA(APickUpListWrapperActor::StaticClass()))
+        {
+            auto *pickupList = static_cast<APickUpListWrapperActor *>(actor);
+            if (!pickupList->RootComponent)
+                continue;
+
+            const float distance = pickupList->GetDistanceTo(Cheat::localPlayer) / 100.0f;
+            FVector2D screen;
+            if (distance > 50.0f || !W2S(pickupList->K2_GetActorLocation(), &screen))
+                continue;
+
+            const int previousSize = tslFont->LegacyFontSize;
+            tslFont->LegacyFontSize = 10;
+            DrawOutlinedText(HUD, FString("LOOT CRATE"), screen, OverlayUI::kVisible,
+                             COLOR_BLACK, true);
+            const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
+            DrawOutlinedText(HUD, FString(distanceText.c_str()), {screen.X, screen.Y + 12.0f},
+                             OverlayUI::kTextMuted, COLOR_BLACK, true);
+            tslFont->LegacyFontSize = previousSize;
+            continue;
+        }
+
+        if (Cheat::Esp::ItemEsp && actor->IsA(APickUpWrapperActor::StaticClass()))
+        {
+            auto *pickup = static_cast<APickUpWrapperActor *>(actor);
+            if (!pickup->RootComponent)
+                continue;
+
+            const auto item = itemVisuals.find(pickup->DefineID.TypeSpecificID);
+            if (item == itemVisuals.end())
+                continue;
+
+            const float distance = pickup->GetDistanceTo(Cheat::localPlayer) / 100.0f;
+            FVector2D screen;
+            if (distance > 30.0f || !W2S(pickup->K2_GetActorLocation(), &screen))
+                continue;
+
+            const int previousSize = tslFont->LegacyFontSize;
+            tslFont->LegacyFontSize = 10;
+            DrawOutlinedText(HUD, FString(item->second.name.c_str()), screen,
+                             item->second.color, COLOR_BLACK, true);
+            const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
+            DrawOutlinedText(HUD, FString(distanceText.c_str()), {screen.X, screen.Y + 12.0f},
+                             OverlayUI::kTextMuted, COLOR_BLACK, true);
+            tslFont->LegacyFontSize = previousSize;
         }
     }
 
-    // Draw circle on head as before
-    FVector head3D = Player->GetBonePos("Head", {});
-    FVector2D headPos2D;
-    if (W2S(head3D, &headPos2D))
-    {
-        FVector top3D = head3D;
-        top3D.Z += 15.0f;
-        FVector2D top2D;
-        if (W2S(top3D, &top2D))
-        {
-            float radius = FVector2D::Distance(headPos2D, top2D);
-            DrawCircleHelper(HUD, headPos2D.X, headPos2D.Y, radius, White, 36, 1.5f);
-        }
-    }
+    OverlayUI::DrawHeader(HUD, totalEnemies, totalBots);
 }
 
-                    float height = fabs(RootPosSC.Y - headPosSC.Y);
-                    float extraTop = height * 0.10f;
-                    float totalHeight = height + extraTop;
-                    float width = totalHeight / 2.0f;
-                    float x = headPosSC.X - width / 2.0f;
-                    float y = headPosSC.Y - extraTop;
-
-                    if (Cheat::Esp::Box)
-                    {
-                        Box4LineHUD(HUD, x, y, width, totalHeight, 1.2f, 0.25f / 2.0f, boxColor);
-                    }
-
-                    if (Cheat::Esp::Health)
-                    {
-                        float CurHP = std::max(0.f, std::min(Player->Health, Player->HealthMax));
-                        float MaxHP = Player->HealthMax;
-                        float KnockHealth = Player->NearDeathBreath;
-                        float HealthPercentage = CurHP / MaxHP;
-
-                        FLinearColor HPColor;
-                        if (CurHP > 70.0f)
-                            HPColor = FLinearColor(0.0f, 0.7f, 0.8f, 1.0f);
-                        else if (CurHP > 30.0f)
-                            HPColor = FLinearColor(1.0f, 1.0f, 0.0f, 1.0f);
-                        else if (CurHP > 0.0f)
-                            HPColor = FLinearColor(1.0f, 0.0f, 0.0f, 1.0f);
-                        else
-                        {
-                            HPColor = FLinearColor(0.5f, 0.0f, 0.0f, 1.0f);
-                            HealthPercentage = KnockHealth / MaxHP;
-                        }
-
-                        float BarHeight = totalHeight;
-                        float BarWidth = 3.0f;
-                        float spacing = width * 0.1f;
-
-                        float BarX = x - BarWidth - spacing;
-                        float BarY = y;
-
-                        DrawFilledRectangle(HUD, FVector2D(BarX, BarY), BarWidth, BarHeight, FLinearColor(0.f, 0.f, 0.f, 0.5f));
-
-                        float FilledHeight = BarHeight * HealthPercentage;
-                        float FilledY = BarY + (BarHeight - FilledHeight);
-                        DrawFilledRectangle(HUD, FVector2D(BarX, FilledY), BarWidth, FilledHeight, HPColor);
-                    }
-
-                    if (Cheat::Esp::Line)
-                    {
-                        float lineStartX = (float)glWidth / 2;
-                        float lineStartY = 0.0f;
-                        float lineEndX = headPosSC.X;
-                        float lineEndY = y - 5.0f;
-                        HUD->DrawLine(lineStartX, lineStartY, lineEndX, lineEndY, White, 1.5f);
-                    }
-
-                    if (Cheat::Esp::Name || Cheat::Esp::Distance)
-                    {
-                        tslFont->LegacyFontSize = 10;
-
-                        float textX = x + (width / 2.0f);
-                        float textY = y + totalHeight + 4.0f;
-
-                        if (Cheat::Esp::Name)
-                        {
-                            if (!Player->bEnsure)
-                                DrawOutlinedText(HUD, Player->PlayerName, FVector2D(textX, textY), COLOR_WHITE, COLOR_BLACK, true);
-                            else
-                                DrawOutlinedText(HUD, FString("Bot"), FVector2D(textX, textY), COLOR_WHITE, COLOR_BLACK, true);
-
-                            textY += 14.0f;
-                        }
-
-                        if (Cheat::Esp::Distance)
-                        {
-                            std::string distanceStr = std::to_string((int)Distance) + " M";
-                            DrawOutlinedText(HUD, FString(distanceStr.c_str()), FVector2D(textX, textY), COLOR_YELLOW, COLOR_BLACK, true);
-                        }
-
-                        tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-                    }
-                }
-            }
-
-            if (Cheat::Esp::Vehicle::Name && i->IsA(ASTExtraVehicleBase::StaticClass()))
-            {
-                auto Vehicle = (ASTExtraVehicleBase*)i;
-                if (!Vehicle->Mesh)
-                    continue;
-
-                float Distance = Vehicle->GetDistanceTo(Cheat::localPlayer) / 100.f;
-
-                FVector2D vehiclePos;
-                if (W2S(Vehicle->K2_GetActorLocation(), &vehiclePos))
-                {
-                    float mWidthScale = std::min(0.10f * Distance, 50.f);
-                    float mWidth = 70.f - mWidthScale;
-
-                    std::string nameStr = GetVehicleName(Vehicle);
-                    std::string distStr = std::to_string((int)Distance) + "M";
-
-                    FLinearColor WhiteColor(1.0f, 1.0f, 0.0f, 1.0f);
-                    tslFont->LegacyFontSize = 10;
-
-                    DrawOutlinedText(HUD, FString(nameStr.c_str()), { vehiclePos.X - (mWidth / 2), vehiclePos.Y }, WhiteColor, COLOR_BLACK, true);
-                    DrawOutlinedText(HUD, FString(distStr.c_str()), { vehiclePos.X - (mWidth / 2), vehiclePos.Y + 14 }, WhiteColor, COLOR_BLACK, true);
-
-                    tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-                }
-            }
-			
-			if (Cheat::Esp::Throwable)
-            {
-                if (Actor->IsA(ASTExtraGrenadeBase::StaticClass()))
-                {
-                    auto Grenade = (ASTExtraGrenadeBase*)Actor;
-                    if (!Grenade->RootComponent)
-                        continue;
-
-                    float Distance = Grenade->GetDistanceTo(Cheat::localPlayer) / 100.f;
-                    if (Distance > 50.f)
-                        continue;
-
-                    FVector2D grenadePos;
-                    if (W2S(Grenade->K2_GetActorLocation(), &grenadePos))
-                    {
-                        tslFont->LegacyFontSize = 10;
-
-                        DrawOutlinedText(HUD, FString("Nade"), FVector2D(grenadePos.X, grenadePos.Y),
-                                         FLinearColor(1.0f, 0.0f, 0.0f, 1.0f), COLOR_BLACK, true);
-
-                        std::string distStr = " " + std::to_string((int)Distance) + "M";
-                        DrawOutlinedText(HUD, FString(distStr.c_str()), FVector2D(grenadePos.X, grenadePos.Y + 14),
-                                         FLinearColor(1.0f, 0.0f, 0.0f, 1.0f), COLOR_BLACK, true);
-
-                        tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-                    }
-                }
-            }
-
-            if (Cheat::Esp::LootBox)
-            {
-                if (Actor->IsA(APickUpListWrapperActor::StaticClass()))
-                {
-                    auto Pick = (APickUpListWrapperActor*)Actor;
-                    if (!Pick->RootComponent)
-                        continue;
-
-                    float Distance = Pick->GetDistanceTo(Cheat::localPlayer) / 100.f;
-                    if (Distance > 50.f)
-                        continue;
-
-                    FVector2D boxPos;
-                    if (W2S(Pick->K2_GetActorLocation(), &boxPos))
-                    {
-                        tslFont->LegacyFontSize = 10;
-
-                        DrawOutlinedText(HUD, FString("Death Box"), FVector2D(boxPos.X, boxPos.Y),
-                                         FLinearColor(0.0f, 1.0f, 0.0f, 1.0f), COLOR_BLACK, true);
-
-                        std::string distStr = " " + std::to_string((int)Distance) + "M";
-                        DrawOutlinedText(HUD, FString(distStr.c_str()), FVector2D(boxPos.X, boxPos.Y + 14),
-                                         FLinearColor(0.0f, 1.0f, 0.0f, 1.0f), COLOR_BLACK, true);
-
-                        tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-                    }
-                }
-            }
-
-            if (Actor->IsA(APickUpWrapperActor::StaticClass()))
-            {
-                auto PickUp = (APickUpWrapperActor*)Actor;
-
-                if (Items[PickUp->DefineID.TypeSpecificID])
-                {
-                    auto RootComponent = PickUp->RootComponent;
-                    if (!RootComponent)
-                        continue;
-
-                    float Distance = PickUp->GetDistanceTo(Cheat::localPlayer) / 100.f;
-                    if (Distance > 30.0f)
-                        continue;
-
-                    FVector2D itemPos;
-                    if (W2S(PickUp->K2_GetActorLocation(), &itemPos))
-                    {
-                        std::string itemName;
-                        uint32_t textColor = 0xFFFFFFFF;
-
-                        for (auto& category : items_data)
-                        {
-                            for (auto& item : category["Items"])
-                            {
-                                if (item["itemId"] == PickUp->DefineID.TypeSpecificID)
-                                {
-                                    itemName = item["itemName"].get<std::string>();
-                                    textColor = strtoul(item["itemTextColor"].get<std::string>().c_str(), 0, 16);
-                                    break;
-                                }
-                            }
-                        }
-
-                        tslFont->LegacyFontSize = 10;
-
-                        DrawOutlinedText(HUD, FString(itemName.c_str()), FVector2D(itemPos.X, itemPos.Y),
-                                         UIntToLinearColor(textColor), COLOR_BLACK, true);
-
-                        std::string distText = " " + std::to_string((int)Distance) + " M";
-                        uint32_t distanceColor = 0xFFAAAAAA;
-                        DrawOutlinedText(HUD, FString(distText.c_str()), FVector2D(itemPos.X, itemPos.Y + 12.0f),
-                                         UIntToLinearColor(distanceColor), COLOR_BLACK, true);
-
-                        tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-                    }
-                }
-            }
-        }
-
-        if (Cheat::Esp::Counter)
-        {
-            int totalEntities = totalEnemies + totalBots;
-            if (totalEntities > 0)
-            {
-                std::string s = "  " + std::to_string(totalEntities);
-                tslFont->LegacyFontSize = 20;
-                DrawOutlinedText(HUD, FString(s), FVector2D((float)glWidth / 2.0f - 1, 110),
-                                 COLOR_RED, COLOR_BLACK, true);
-                tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
-            }
-        }
-    }
-}
 
 void DrawMemory()
 {
-    if (Cheat::localPlayer && Cheat::localController)
-    {
-        
-if (Cheat::Aimbot::Enable) {
-    // 获取瞄准目标
-    ASTExtraPlayerCharacter *Target = GetTargetForAimBot();
-    // 目标有效时的处理
-    if (Target) {
-    bool triggerOk = false;
-   if (Cheat::Aimbot::Trigger == EAimTrigger::None) {
-triggerOk = Cheat::localPlayer->bIsWeaponFiring;
-}
-if (Cheat::Aimbot::Trigger == EAimTrigger::Scoping) {
-triggerOk = Cheat::localPlayer->bIsGunADS;
-}
-if (Cheat::Aimbot::Trigger == EAimTrigger::Both) {
-triggerOk = Cheat::localPlayer->bIsWeaponFiring || Cheat::localPlayer->bIsGunADS;
-}
-if (triggerOk) {
-FVector targetAimPos;
- if (Cheat::Aimbot::Target == EAimTarget::Head) {
- targetAimPos = Target->GetBonePos("Head", {0, 0, 0});
-  }
-
- if (Cheat::Aimbot::Target == EAimTarget::Chest) {
- targetAimPos = Target->GetBonePos("upperarm_r", {0, 0, 0});
-}
-switch (Cheat::Aimbot::Target == EAimTarget::Head) {
-                            case 1:
-                                targetAimPos = Target->GetBonePos("Head", {});
-                                break;
-                            case 2:
-                                targetAimPos = Target->GetBonePos("pelvis", {});
-                                break;
-                            case 3:
-                                targetAimPos = Target->GetBonePos("calf_l", {});
-                                break;
-                            case 4:
-                                targetAimPos = Target->GetBonePos("calf_r", {});
-                                break;
-                            case 5:
-                                targetAimPos = Target->GetBonePos("lowerarm_l", {});
-                                break;
-                            case 6:
-                                targetAimPos = Target->GetBonePos("lowerarm_r", {});
-                                break;
-                            case 7:
-                                targetAimPos = Target->GetBonePos("upperarm_l", {});
-                                break;
-                            case 8:
-                                targetAimPos = Target->GetBonePos("upperarm_r", {});
-                                break;
-                            case 9:
-                                targetAimPos = Target->GetBonePos("thigh_l", {});
-                                break;
-                            case 10:
-                                targetAimPos = Target->GetBonePos("thigh_r", {});
-                                break;
-                            case 11:
-                                targetAimPos = Target->GetBonePos("foot_l", {});
-                                break;
-                            case 12:
-                                targetAimPos = Target->GetBonePos("foot_r", {});
-                                break;
-                            default:
-                                targetAimPos = Target->GetBonePos("Head", {});
-                                break;
-                        }
-                        if(Cheat::Aimbot::Target == EAimTarget::Chest){
-                        if(算法 == 0) {
-                        targetAimPos = Target->GetBonePos("Head", {});//头
-                        }else if(算法 == 1) {
-                        targetAimPos = Target->GetBonePos("spine_03", {});//脖子
-                        }else if(算法 == 2){
-                        targetAimPos = Target->GetBonePos("pelvis", {});//屁股
-                        }else if(算法 == 3){
-                        targetAimPos = Target->GetBonePos("calf_l", {});//左小腿
-                        }else if(算法 == 4){
-                        targetAimPos = Target->GetBonePos("calf_r", {});//右小腿
-                        }else if(算法 == 5){
-                        targetAimPos = Target->GetBonePos("lowerarm_l", {});//左小臂
-                        }else if(算法 == 6){
-                        targetAimPos = Target->GetBonePos("lowerarm_r", {});//右小臂
-                        }else if(算法 == 7){
-                        targetAimPos = Target->GetBonePos("upperarm_l", {});//左上臂
-                        }else if(算法 == 8){
-                        targetAimPos = Target->GetBonePos("upperarm_r", {});//右上臂
-                        }else if(算法 == 9) {
-                        targetAimPos = Target->GetBonePos("thigh_l", {});//左大腿
-                        }else if(算法 == 10) {
-                        targetAimPos = Target->GetBonePos("thigh_r", {});//右大腿
-                        }else if(算法 == 11) {
-                        targetAimPos = Target->GetBonePos("foot_l", {});//左脚
-                        }else if(算法 == 12){
-                        targetAimPos = Target->GetBonePos("foot_r", {});//右脚
-                        }
-                        }        
-            
-            
-            if (targetAimPos.X > 0 && targetAimPos.Y > 0 && targetAimPos.Z > 0) {
-    auto WeaponManagerComponent = Cheat::localPlayer->WeaponManagerComponent;
-    if (WeaponManagerComponent) {
-        auto propSlot = WeaponManagerComponent->GetCurrentUsingPropSlot();
-        if ((int) propSlot.GetValue() >= 1 && (int) propSlot.GetValue() <= 3) {
-            auto CurrentWeaponReplicated = (ASTExtraShootWeapon *) WeaponManagerComponent->CurrentWeaponReplicated;
-            if (CurrentWeaponReplicated) {
-                auto ShootWeaponComponent = CurrentWeaponReplicated->ShootWeaponComponent;
-                auto ShootWeaponEffectComp = CurrentWeaponReplicated->ShootWeaponEffectComp;
-                if (ShootWeaponComponent) {
-                    UShootWeaponEntity *ShootWeaponEntityComponent = ShootWeaponComponent->ShootWeaponEntityComponent;
-                    if (ShootWeaponEntityComponent) {
-                        // Get bullet fire speed using offset 0x408
-                        float BulletFireSpeed = *(float*)((uintptr_t)ShootWeaponEntityComponent + 0x560);
-                        
-                        ASTExtraVehicleBase *CurrentVehicle = Target->CurrentVehicle;
-                        if (CurrentVehicle) {
-                            FVector LinearVelocity = CurrentVehicle->ReplicatedMovement.LinearVelocity;
-                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
-                            auto timeToTravel = dist / BulletFireSpeed;  // Using BulletFireSpeed instead of BulletRange
-                            targetAimPos = UKismetMathLibrary::Add_VectorVector(targetAimPos, UKismetMathLibrary::Multiply_VectorFloat(LinearVelocity, timeToTravel));
-                            targetAimPos.Z += LinearVelocity.Z * timeToTravel + 0.5 * 573.f * timeToTravel * timeToTravel;
-                        } else {
-                            FVector Velocity = Target->GetVelocity();
-                            float dist = Cheat::localPlayer->GetDistanceTo(Target);
-                            auto timeToTravel = dist / BulletFireSpeed;  // Using BulletFireSpeed instead of BulletRange
-                            targetAimPos = UKismetMathLibrary::Add_VectorVector(targetAimPos, UKismetMathLibrary::Multiply_VectorFloat(Velocity, timeToTravel));
-                            targetAimPos.Z += Velocity.Z * timeToTravel + 0.5 * 573.f * timeToTravel * timeToTravel;
-                        }
-                        
-                        if (Cheat::localPlayer->bIsWeaponFiring)
-                        {
-                            float dist = Cheat::localPlayer->GetDistanceTo(Target) / 100.f;
-                            targetAimPos.Z -= dist * Cheat::Aimbot::RecoilSet;
-                        }
-                        
-                        //开镜自瞄偏移修复(关键变量/AimControlRotationAdditive)
-                        auto ControlRotator = Cheat::localController->ControlRotation;
-                        auto aimRotation = ToRotator(Cheat::localController->PlayerCameraManager->CameraCache.POV.Location, targetAimPos);
-                        ControlRotator.Pitch = aimRotation.Pitch - Cheat::localController->ControlRotation.Pitch - Cheat::localPlayer->AimControlRotationAdditive.Pitch / 1;
-                        ControlRotator.Yaw = aimRotation.Yaw - Cheat::localController->ControlRotation.Yaw - Cheat::localPlayer->AimControlRotationAdditive.Yaw / 1;
-                        
-                        int 命中概率 = rand() % 101; //生成0到100的随机数
-                        if (命中概率 <= 100) //设定概率
-                        {
-                            Cheat::localPlayer->AddControllerPitchInput(ControlRotator.Pitch);
-                            Cheat::localPlayer->AddControllerYawInput(ControlRotator.Yaw);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-        }
-    }
-}
-
-       if (Cheat::Memory::XHitEffect)
-        {
-            if (Cheat::localController != nullptr)
-{
- if (Cheat::localPlayer->bIsWeaponFiring || Cheat::localPlayer->bIsGunADS) 
- {
-    auto MyHUD = (ASurviveHUD *)Cheat::localController->MyHUD;
-    if (MyHUD == nullptr)
+    if (!Cheat::localPlayer || !Cheat::localController)
         return;
-FLinearColor interpolatedColor = RandomColor();
 
-
-    auto hitPerformPtr = &MyHUD->HitPerform;
-
-    uintptr_t hitPerformAddress = *(uintptr_t *)(uintptr_t)hitPerformPtr;
-
-    *(float *)((uintptr_t)hitPerformAddress + 0x10) = 99999.0f;
-    *(float *)((uintptr_t)hitPerformAddress + 0x50) = 99999.0f;
-    *(float *)((uintptr_t)hitPerformAddress + 0x90) = 99999.0f;
-    *(float *)((uintptr_t)hitPerformAddress + 0xD0) = 99999.0f;
-
-    MyHUD->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Head, interpolatedColor);
-    MyHUD->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Body, interpolatedColor);
-    Cheat::Memory::XHitEffect = true;
-}
-}
-        }
-        
-        if (Cheat::localController != 0)
+    if (Cheat::Aimbot::Enable)
+    {
+        auto *target = GetTargetForAimBot();
+        if (target)
         {
-        
-           // Cheat::Memory::XHitEffect = true;
-            
-        }
-        else
-        {
-           // Cheat::Memory::XHitEffect = false;
-
-        }
-
-        if (Cheat::Memory::Small)
-        {
-            auto WeaponManagerComponent = Cheat::localPlayer->WeaponManagerComponent;
-
-            if (WeaponManagerComponent)
+            bool triggerOk = false;
+            switch (Cheat::Aimbot::Trigger)
             {
-                auto propSlot = WeaponManagerComponent->GetCurrentUsingPropSlot();
+                // Preserve the existing default behavior while also honoring
+                // every declared trigger option.
+                case EAimTrigger::None:
+                case EAimTrigger::Shooting:
+                    triggerOk = Cheat::localPlayer->bIsWeaponFiring;
+                    break;
+                case EAimTrigger::Scoping:
+                    triggerOk = Cheat::localPlayer->bIsGunADS;
+                    break;
+                case EAimTrigger::Both:
+                case EAimTrigger::Any:
+                    triggerOk = Cheat::localPlayer->bIsWeaponFiring ||
+                                Cheat::localPlayer->bIsGunADS;
+                    break;
+            }
 
-                if ((int)propSlot.GetValue() >= 1 && (int)propSlot.GetValue() <= 3)
+            if (triggerOk)
+            {
+                const char *bone = Cheat::Aimbot::Target == EAimTarget::Head
+                    ? "Head"
+                    : GetPreferredAimBone(target, Cheat::localController);
+                FVector targetAimPos = target->GetBonePos(bone, {});
+
+                const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
+                    std::isfinite(targetAimPos.Y) && std::isfinite(targetAimPos.Z);
+                auto *weaponManager = Cheat::localPlayer->WeaponManagerComponent;
+                if (validTargetPosition && weaponManager)
                 {
-                    auto CurrentWeaponReplicated = (ASTExtraShootWeapon*)WeaponManagerComponent->CurrentWeaponReplicated;
-
-                    if (CurrentWeaponReplicated)
+                    const auto propSlot = weaponManager->GetCurrentUsingPropSlot();
+                    if (static_cast<int>(propSlot.GetValue()) >= 1 &&
+                        static_cast<int>(propSlot.GetValue()) <= 3)
                     {
-                        auto ShootWeaponComponent = CurrentWeaponReplicated->ShootWeaponComponent;
+                        auto *weapon = static_cast<ASTExtraShootWeapon *>(
+                            weaponManager->CurrentWeaponReplicated);
+                        auto *shootWeapon = weapon ? weapon->ShootWeaponComponent : nullptr;
+                        auto *entity = shootWeapon
+                            ? shootWeapon->ShootWeaponEntityComponent
+                            : nullptr;
 
-                        if (ShootWeaponComponent)
+                        if (entity)
                         {
-                            UShootWeaponEntity* ShootWeaponEntityComponent = ShootWeaponComponent->ShootWeaponEntityComponent;
-
-                            if (ShootWeaponEntityComponent && Cheat::Memory::Small)
+                            const float bulletSpeed = *reinterpret_cast<float *>(
+                                reinterpret_cast<uintptr_t>(entity) + 0x560);
+                            if (std::isfinite(bulletSpeed) && bulletSpeed > 1.0f)
                             {
-                                FLinearColor interpolatedColor = RandomColor();
-                              //  ShootWeaponEntityComponent->GameDeviationFactor = 0.0f;
+                                const auto *vehicle = target->CurrentVehicle;
+                                const FVector velocity = vehicle
+                                    ? vehicle->ReplicatedMovement.LinearVelocity
+                                    : target->GetVelocity();
+                                const float distance = Cheat::localPlayer->GetDistanceTo(target);
+                                const float travelTime = distance / bulletSpeed;
+
+                                targetAimPos = UKismetMathLibrary::Add_VectorVector(
+                                    targetAimPos,
+                                    UKismetMathLibrary::Multiply_VectorFloat(
+                                        velocity, travelTime));
+                                targetAimPos.Z += velocity.Z * travelTime +
+                                    0.5f * 573.0f * travelTime * travelTime;
+                            }
+
+                            if (Cheat::localPlayer->bIsWeaponFiring)
+                            {
+                                const float distance = Cheat::localPlayer->GetDistanceTo(target) / 100.0f;
+                                targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
+                            }
+
+                            auto *cameraManager = Cheat::localController->PlayerCameraManager;
+                            if (cameraManager)
+                            {
+                                const auto aimRotation = ToRotator(
+                                    cameraManager->CameraCache.POV.Location, targetAimPos);
+                                FRotator inputRotation = Cheat::localController->ControlRotation;
+                                inputRotation.Pitch = aimRotation.Pitch - inputRotation.Pitch -
+                                    Cheat::localPlayer->AimControlRotationAdditive.Pitch;
+                                inputRotation.Yaw = aimRotation.Yaw - inputRotation.Yaw -
+                                    Cheat::localPlayer->AimControlRotationAdditive.Yaw;
+                                NekoHook(inputRotation);
+                                Cheat::localPlayer->AddControllerPitchInput(inputRotation.Pitch);
+                                Cheat::localPlayer->AddControllerYawInput(inputRotation.Yaw);
                             }
                         }
                     }
@@ -572,9 +435,29 @@ FLinearColor interpolatedColor = RandomColor();
             }
         }
     }
+
+    if (Cheat::Memory::XHitEffect &&
+        (Cheat::localPlayer->bIsWeaponFiring || Cheat::localPlayer->bIsGunADS))
+    {
+        auto *hud = static_cast<ASurviveHUD *>(Cheat::localController->MyHUD);
+        if (!hud)
+            return;
+
+        const auto hitPerformAddress = *reinterpret_cast<uintptr_t *>(&hud->HitPerform);
+        if (!hitPerformAddress)
+            return;
+
+        const FLinearColor color = RandomColor();
+        *reinterpret_cast<float *>(hitPerformAddress + 0x10) = 99999.0f;
+        *reinterpret_cast<float *>(hitPerformAddress + 0x50) = 99999.0f;
+        *reinterpret_cast<float *>(hitPerformAddress + 0x90) = 99999.0f;
+        *reinterpret_cast<float *>(hitPerformAddress + 0xD0) = 99999.0f;
+        hud->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Head, color);
+        hud->SetHitPerformColor(EHitPerformColorType::EHitPerformColor_Body, color);
+    }
 }
 
-void AutoEspOn() 
+void AutoEspOn()
 {
     Cheat::Esp::Line = true;
     Cheat::Esp::Name = true;
@@ -582,36 +465,35 @@ void AutoEspOn()
     Cheat::Esp::Health = true;
     Cheat::Esp::Skeleton = true;
     Cheat::Esp::Box = true;
-	Cheat::Esp::LootBox = true;
-	Cheat::Esp::Throwable = true;
-  //  Cheat::Esp::Target = true;
-	Cheat::Esp::Counter = true;
+    Cheat::Esp::LootBox = true;
+    Cheat::Esp::Throwable = true;
+    Cheat::Esp::ItemEsp = true;
+    Cheat::Esp::Counter = true;
     Cheat::Esp::Vehicle::Name = true;
-    
-  //  Cheat::BulletTrack::Enable = true;
-    
+
     Cheat::Aimbot::Enable = true;
+    Cheat::Aimbot::Trigger = EAimTrigger::Shooting;
     Cheat::Aimbot::RecoilSet = 1.045f;
     Cheat::Aimbot::VisCheck = true;
     Cheat::Aimbot::IgnoreKnock = true;
     Cheat::Aimbot::Target = Chest;
-	
-	Cheat::Memory::Small = true;
-	
-    for (auto &i : items_data) 
-    {
-        int itemCount = 0;
-        for (auto &item : i[("Items")]) 
-        {
-            item[("itemName")].get<std::string>().c_str();
-            Items[item[("itemId")].get<int>()] = true;
-            itemCount++;
 
-            if (itemCount % 4 != 0 && &item != &i[("Items")].back()){}
+    // Convert the static JSON once during startup. The draw path performs one
+    // hash lookup instead of repeatedly scanning every JSON category/item.
+    itemVisuals.clear();
+    itemVisuals.reserve(items_data.size() * 4);
+    for (const auto &category : items_data)
+    {
+        for (const auto &item : category["Items"])
+        {
+            const int id = item["itemId"].get<int>();
+            const uint32_t color = static_cast<uint32_t>(std::strtoul(
+                item["itemTextColor"].get<std::string>().c_str(), nullptr, 0));
+            itemVisuals.emplace(id, ItemVisual{
+                item["itemName"].get<std::string>(), UIntToLinearColor(color)});
         }
     }
 }
-
 
 
 

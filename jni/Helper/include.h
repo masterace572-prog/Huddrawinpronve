@@ -1,5 +1,8 @@
 #include <list>
 #include <vector>
+#include <array>
+#include <chrono>
+#include <unordered_map>
 #include <cstring>
 #include <pthread.h>
 #include <thread>

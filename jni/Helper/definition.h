@@ -159,45 +159,22 @@ using namespace SDK;
 
 
 
-FLinearColor RandomColor() {
-    static float x = 0, y = 0;
+FLinearColor RandomColor()
+{
+    // FLinearColor channels are normalized; keep the accent vivid without
+    // generating out-of-range values that can produce inconsistent rendering.
+    static float hue = 0.0f;
+    constexpr float kTwoPi = 6.28318530718f;
+    constexpr float kPhaseOffset = 2.09439510239f;
 
-    constexpr float colorSwitchInterval = 255.0f;
-    constexpr float maxColorValue = 255.0f;
-
-    float r = 0, g = 0, b = 0;
-
-    if (y < colorSwitchInterval) {
-        r = rand() % static_cast<int>(maxColorValue + 1);
-        b = x;
-    } else if (y < 2 * colorSwitchInterval) {
-        r = rand() % static_cast<int>(maxColorValue + 1) - x;
-        b = rand() % static_cast<int>(maxColorValue + 1);
-    } else if (y < 3 * colorSwitchInterval) {
-        g = x;
-        b = rand() % static_cast<int>(maxColorValue + 1);
-    } else if (y < 4 * colorSwitchInterval) {
-        g = rand() % static_cast<int>(maxColorValue + 1);
-        b = rand() % static_cast<int>(maxColorValue + 1) - x;
-    } else if (y < 5 * colorSwitchInterval) {
-        r = x;
-        g = rand() % static_cast<int>(maxColorValue + 1);
-    } else {
-        r = rand() % static_cast<int>(maxColorValue + 1);
-        g = rand() % static_cast<int>(maxColorValue + 1) - x;
-    }
-
-    x += 10.0f; // Increase this value to switch colors faster
-    if (x >= maxColorValue)
-        x = 0.0f;
-
-    y += 10.0f; // Increase this value to switch colors faster
-    if (y > 6 * colorSwitchInterval)
-        y = 0.0f;
-
-    return {r, g, b, maxColorValue};
+    hue = fmodf(hue + 0.025f, kTwoPi);
+    return FLinearColor(
+        0.5f + 0.5f * sinf(hue),
+        0.5f + 0.5f * sinf(hue + kPhaseOffset),
+        0.5f + 0.5f * sinf(hue + (2.0f * kPhaseOffset)),
+        1.0f
+    );
 }
-
 
 
 void NekoHook(FRotator &angles) 
@@ -278,15 +255,22 @@ float GetTimeInSeconds()
 
 static UFont *tslFont = 0, *robotoTinyFont = 0;
 
-void *LoadFont(void *)
+bool EnsureFonts()
 {
-	while (!tslFont || !robotoTinyFont)
-	{
-		tslFont = UObject::FindObject<UFont>("Font Roboto.Roboto");
-		robotoTinyFont = UObject::FindObject<UFont>("Font RobotoDistanceField.RobotoDistanceField");
-		sleep(1);
-	}
-	return 0;
+    if (tslFont && robotoTinyFont)
+        return true;
+
+    // Object lookups are throttled and remain on the HUD/game thread instead
+    // of continually polling from an unmanaged worker thread.
+    static auto nextFontLookup = std::chrono::steady_clock::time_point::min();
+    const auto now = std::chrono::steady_clock::now();
+    if (now < nextFontLookup)
+        return false;
+
+    tslFont = UObject::FindObject<UFont>("Font Roboto.Roboto");
+    robotoTinyFont = UObject::FindObject<UFont>("Font RobotoDistanceField.RobotoDistanceField");
+    nextFontLookup = now + std::chrono::seconds(1);
+    return tslFont && robotoTinyFont;
 }
 
 float ScaleRand;
@@ -294,10 +278,13 @@ float TimeLift;
 
 FVector TargetPos = { };
 
-void DrawOutlinedText(AHUD *HUD, FString Text, FVector2D Pos, FLinearColor Color, FLinearColor OutlineColor, bool isCenter = false) 
+void DrawOutlinedText(AHUD *HUD, FString Text, FVector2D Pos, FLinearColor Color, FLinearColor OutlineColor, bool isCenter = false)
 {
-    UCanvas *Canvas = HUD->Canvas;
-    Canvas->K2_DrawText(tslFont, Text, Pos, Color, 1.f, {}, {}, isCenter, isCenter, true, OutlineColor);
+    if (!HUD || !HUD->Canvas || !tslFont)
+        return;
+
+    HUD->Canvas->K2_DrawText(tslFont, Text, Pos, Color, 1.f, {}, {},
+                             isCenter, isCenter, true, OutlineColor);
 }
 
 struct D3DMatrix {
@@ -423,80 +410,101 @@ bool isObjectInvalid(UObject *obj)
 }
 
 static UEngine *GEngine = 0;
+static std::vector<AActor *> frameActors;
+
 UWorld *GetWorld()
 {
-    while (!GEngine)
+    // This function is reached from the HUD hook. Never sleep/retry in that
+    // game-thread path: retry object discovery at a modest cadence instead.
+    static auto nextEngineLookup = std::chrono::steady_clock::time_point::min();
+    const auto now = std::chrono::steady_clock::now();
+
+    if (!GEngine && now >= nextEngineLookup)
     {
         GEngine = UObject::FindObject<UEngine>("UAEGameEngine Transient.UAEGameEngine_1");
-        sleep(1);
+        nextEngineLookup = now + std::chrono::seconds(1);
     }
-    if (GEngine)
-    {
-        auto ViewPort = GEngine->GameViewport;
 
-        if (ViewPort)
-        {
-            return ViewPort->World;
-        }
-    }
-    return 0;
+    if (!GEngine || !GEngine->GameViewport)
+        return nullptr;
+
+    return GEngine->GameViewport->World;
 }
 
-TNameEntryArray *GetGNames() 
+TNameEntryArray *GetGNames()
 {
     return ((TNameEntryArray *(*)()) (Cheat::libUE4Base + Cheat::GName_Offest))();
 }
 
-std::vector<AActor *> GetActors() 
+std::vector<AActor *> GetActors(UWorld *World = nullptr)
 {
-    auto World = GetWorld();
     if (!World)
-        return std::vector<AActor *>();
+        World = GetWorld();
+    if (!World || !World->PersistentLevel)
+        return {};
 
-    auto PersistentLevel = World->PersistentLevel;
-    if (!PersistentLevel) return std::vector<AActor *>();
-
-    struct GovnoArray 
+    struct ActorArray
     {
         uintptr_t base;
         int32_t count;
         int32_t max;
     };
-    static thread_local GovnoArray Actors{};
 
-    Actors = *(((GovnoArray *(*)(uintptr_t)) (Cheat::libUE4Base + Cheat::ActorArray_Offest))( reinterpret_cast<uintptr_t>(PersistentLevel)));
+    const auto actors = ((ActorArray *(*)(uintptr_t))
+        (Cheat::libUE4Base + Cheat::ActorArray_Offest))(
+        reinterpret_cast<uintptr_t>(World->PersistentLevel));
 
-    if (Actors.count <= 0) 
-    {
+    // Treat game-owned array metadata as untrusted. A corrupt/stale count must
+    // not turn a render callback into an unbounded read/allocation.
+    constexpr int32_t kMaxActorsPerFrame = 4096;
+    if (!actors || !actors->base || actors->count <= 0 ||
+        actors->count > actors->max || actors->count > kMaxActorsPerFrame)
         return {};
-    }
 
-    std::vector<AActor *> actors;
-    for (int i = 0; i < Actors.count; i++) 
+    std::vector<AActor *> actorsForFrame;
+    actorsForFrame.reserve(static_cast<size_t>(actors->count));
+    for (int32_t i = 0; i < actors->count; ++i)
     {
-        auto Actor = *(uintptr_t *) (Actors.base + (i * sizeof(uintptr_t)));
-        if (Actor) 
-        {
-            actors.push_back(reinterpret_cast<AActor *const>(Actor));
-        }
+        auto actor = *reinterpret_cast<uintptr_t *>(
+            actors->base + (static_cast<uintptr_t>(i) * sizeof(uintptr_t)));
+        if (actor)
+            actorsForFrame.push_back(reinterpret_cast<AActor *>(actor));
     }
-    return actors;
+    return actorsForFrame;
+}
+
+void RefreshFrameActors(UWorld *World)
+{
+    frameActors.clear();
+    auto actors = GetActors(World);
+    frameActors.reserve(actors.size());
+
+    // Validate once per HUD frame. Draw and target-selection code can then use
+    // the same snapshot rather than rescanning the game actor array.
+    for (auto *actor : actors)
+    {
+        if (!isObjectInvalid(actor))
+            frameActors.push_back(actor);
+    }
+}
+
+const std::vector<AActor *> &GetFrameActors()
+{
+    return frameActors;
 }
 
 template<class T>
-void GetAllActors(std::vector<T *> &Actors) 
+void GetAllActors(std::vector<T *> &Actors)
 {
-    UGameplayStatics *gGameplayStatics = (UGameplayStatics *) gGameplayStatics->StaticClass();
     auto GWorld = GetWorld();
-    if (GWorld) 
-    {
-        TArray<AActor *> Actors2;
-        gGameplayStatics->GetAllActorsOfClass((UObject *) GWorld, T::StaticClass(), &Actors2);
-        for (int i = 0; i < Actors2.Num(); i++) 
-        {
-            Actors.push_back((T *) Actors2[i]);
-        }
-    }
+    if (!GWorld)
+        return;
+
+    TArray<AActor *> Actors2;
+    UGameplayStatics::GetAllActorsOfClass(
+        reinterpret_cast<UObject *>(GWorld), T::StaticClass(), &Actors2);
+    for (int i = 0; i < Actors2.Num(); ++i)
+        Actors.push_back(static_cast<T *>(Actors2[i]));
 }
 
 FVector operator*(const FVector &vector, float scalar)
@@ -659,277 +667,84 @@ bool isInsideFOVs(int x, int y) {
     return (x - circle_x) * (x - circle_x) + (y - circle_y) * (y - circle_y) <= rad * rad;
 }
 
-static int 算法 = 0;
-static bool is头, is脖子, is盆骨, is左上臂, is左小臂, is左手, is左大腿, is左小腿, is左脚, is右上臂, is右小臂, is右手, is右大腿, is右小腿, is右脚, is脊柱1, is脊柱2, is脊柱3, is锁骨左, is锁骨右, is左手持物, is右手持物, is左肩,is右肩;
+namespace
+{
+constexpr std::array<const char *, 12> kPreferredAimBones = {
+    "Head", "spine_03", "pelvis", "calf_l", "calf_r", "lowerarm_l",
+    "lowerarm_r", "upperarm_l", "upperarm_r", "thigh_l", "thigh_r", "foot_l"
+};
+}
 
+const char *GetPreferredAimBone(ASTExtraPlayerCharacter *player,
+                                ASTExtraPlayerController *controller)
+{
+    if (!player || !controller || !controller->PlayerCameraManager)
+        return "Head";
 
-auto GetTargetForAimBot() {
+    // Only test detailed bone visibility for the chosen target. Previously,
+    // every candidate could trigger a long chain of line-of-sight queries.
+    for (const char *bone : kPreferredAimBones)
+    {
+        if (controller->LineOfSightTo(controller->PlayerCameraManager,
+                                      player->GetBonePos(bone, {}), false))
+            return bone;
+    }
+    return "Head";
+}
+
+ASTExtraPlayerCharacter *GetTargetForAimBot()
+{
     ASTExtraPlayerCharacter *result = nullptr;
-    float max = std::numeric_limits<float>::infinity();
-    auto Actors = GetActors();
-    auto localPlayer = Cheat::localPlayer;
-    auto localController = Cheat::localController;
+    float nearestScreenDistance = std::numeric_limits<float>::infinity();
+    const auto &actors = GetFrameActors();
+    auto *localPlayer = Cheat::localPlayer;
+    auto *localController = Cheat::localController;
 
-    if (localPlayer) {
-        for (int i = 0; i < Actors.size(); i++) {
-            auto Actor = Actors[i];
-            if (isObjectInvalid(Actor))
-                continue;
+    if (!localPlayer || !localController)
+        return nullptr;
 
-            if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass())) {
-                auto Player = (ASTExtraPlayerCharacter *)Actor;
-                auto Target = (ASTExtraPlayerCharacter *)Actor;
+    for (auto *actor : actors)
+    {
+        if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+            continue;
 
-               
+        auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
+        if (player->PlayerKey == localPlayer->PlayerKey ||
+            player->TeamID == localPlayer->TeamID || player->bDead ||
+            player->bHidden)
+            continue;
 
-                if (Player->PlayerKey == localPlayer->PlayerKey)
-                    continue;
-                if (Player->TeamID == localPlayer->TeamID)
-                    continue;
-                if (Player->bDead)
-                    continue;
+        if (Cheat::Aimbot::IgnoreKnock && player->Health <= 0.0f)
+            continue;
+        if (Cheat::Aimbot::IgnoreBot && player->bIsAI)
+            continue;
+        if (Cheat::Aimbot::VisCheck &&
+            !localController->LineOfSightTo(player, {0, 0, 0}, true))
+            continue;
 
-                if (Cheat::Aimbot::IgnoreKnock) {
-                    if (Player->Health == 0.0f)
-                        continue;
-                }
+        FVector2D rootScreen, headScreen;
+        if (!W2S(player->GetBonePos("Root", {}), &rootScreen) ||
+            !W2S(player->GetBonePos("Head", {}), &headScreen))
+            continue;
 
-                if (Cheat::Aimbot::VisCheck) {
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("Head", {0, 0, 0}), false))//头
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("neck_01", {0, 0, 0}), false))//脖子
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("upperarm_r", {0, 0, 0}), false))//上面的肩膀右
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("upperarm_l", {0, 0, 0}), false))//上面的肩膀左
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("lowerarm_r", {0, 0, 0}), false))//上面的手臂右
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("lowerarm_l", {0, 0, 0}), false))//上面的手臂左
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_03", {0, 0, 0}), false))//脊柱3
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_02", {0, 0, 0}), false))//脊柱2
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("spine_01", {0, 0, 0}), false))//脊柱2
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("pelvis", {0, 0, 0}), false))//骨盆
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("thigh_l", {0, 0, 0}), false))//大腿左
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("thigh_r", {0, 0, 0}), false))//大腿右
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("calf_l", {0, 0, 0}), false))//小腿左
-if(!localController->LineOfSightTo(localController->PlayerCameraManager,Player->GetBonePos("calf_r", {0, 0, 0}), false))//小腿右
-continue;
-}
+        const float height = fabsf(headScreen.Y - rootScreen.Y);
+        const float width = height * 0.20f;
+        const FVector2D center(
+            headScreen.X + (width * 0.5f),
+            headScreen.Y + (height * 0.5f));
 
-static bool 已选择 = false;
-算法 = 0;
-已选择 = false;
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("Head", {0, 0, 0}),  false)) {//头
-is头 = false;
-}else{
-is头 = true;
-}
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("pelvis", {0, 0, 0}),  false))
-{//骨盆
-is盆骨 = false;
-}else{
-is盆骨 = true;
-}
+        if (center.X < 0.0f || center.X > glWidth ||
+            center.Y < 0.0f || center.Y > glHeight)
+            continue;
 
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("neck_01", {0, 0, 0}),  false))
-{//脖子
-is脖子 = false;
-}else{
-is脖子 = true;
-}
-
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("hand_l", {0, 0, 0}),  false))
-{//左手
-is左手 = false;
-}else{
-is左手 = true;
-}
-
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("hand_r", {0, 0, 0}),  false))
-{//右手
-is右手 = false;
-}else{
-is右手 = true;
-}
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("foot_l", {0, 0, 0}),  false))
-{//左脚
-is左脚 = false;
-}else{
-is左脚 = true;
-}
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("foot_r", {0, 0, 0}),  false))
-{//右脚
-is右脚 = false;
-}else{
-is右脚 = true;
-}
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("calf_l", {0, 0, 0}),  false))
-{//左小腿
-is左小腿 = false;
-}else{
-is左小腿 = true;
-}
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("calf_r", {0, 0, 0}),  false))
-{//右小腿
-is右小腿 = false;
-}else{
-is右小腿 = true;
-}
-
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("lowerarm_l", {0, 0, 0}),  false))
-{//左小臂
-is左小臂 = false;
-}else{
-is左小臂 = true;
-}
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("lowerarm_r", {0, 0, 0}),  false))
-{//右小臂
-is右小臂 = false;
-}else{
-is右小臂 = true;
-}
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("thigh_l", {0, 0, 0}),  false))
-{//左上臂
-is左大腿 = false;
-}else{
-is左大腿 = true;
-}
-if(!localController->LineOfSightTo(localController->PlayerCameraManager, Player->GetBonePos("thigh_r", {0, 0, 0}),  false))
-{//左上臂
-is右大腿 = false;
-}else{
-is右大腿 = true;
-}
-if (!已选择)
-if(is头) {
-算法 = 1;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is盆骨)
-{
-算法 = 2;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is左小腿)
-{
-算法 = 3;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is右小腿)
-{
-算法 = 4;   
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is左小臂)
-{
-算法 = 5;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is右小臂)
-{
-算法 = 6;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is左上臂)
-{
-算法 = 7;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is右上臂)
-{
-算法 = 8;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is左大腿)
-{
-算法 = 9;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is右大腿)
-{
-算法 = 10;
-已选择 = true;
-}else{//Config
-已选择 = false;
-}
-if (!已选择)
-if(is左脚)
-{
-算法 = 11;
-已选择 = true;
-}else{
-已选择 = false;
-}
-if (!已选择)
-if(is右脚)
-{
-算法 = 12;
-已选择 = true;
-}else{
-已选择 = false;
-}
-                if (Cheat::Aimbot::IgnoreBot) {
-                    if (Player->bIsAI)
-                        continue;
-                }
-
-                auto Root = Player->GetBonePos("Root", {});
-                auto Head = Player->GetBonePos("Head", {});
-                FVector2D RootSc, HeadSc;
-                if (W2S(Root, &RootSc) && W2S(Head, &HeadSc)) {
-                    float height = abs(HeadSc.Y - RootSc.Y);
-                    float width = height * 0.20f;
-
-                    FVector middlePoint = {HeadSc.X + (width / 2), HeadSc.Y + (height / 2), 0};
-                    if ((middlePoint.X >= 0 && middlePoint.X <= glWidth) &&
-                            (middlePoint.Y >= 0 && middlePoint.Y <= glHeight)) {
-                        FVector2D v2Middle = FVector2D((float)(glWidth / 2), (float)(glHeight / 2));
-                        FVector2D v2Loc = FVector2D(middlePoint.X, middlePoint.Y);
-
-                     //   if (isInsideFOVs((int)middlePoint.X, (int)middlePoint.Y)) {
-                            float dist = FVector2D::Distance(v2Middle, v2Loc);
-
-                            if (dist < max) {
-                                max = dist;
-                                result = Player;
-                            }
-                       // }
-                    }
-                }
-            }
+        const float screenDistance = FVector2D::Distance(
+            FVector2D(glWidth * 0.5f, glHeight * 0.5f), center);
+        if (screenDistance < nearestScreenDistance)
+        {
+            nearestScreenDistance = screenDistance;
+            result = player;
         }
     }
-
     return result;
 }
 
@@ -937,7 +752,7 @@ auto GetTargetByPussy()
 {
     ASTExtraPlayerCharacter *result = 0;
     float max = std::numeric_limits<float>::infinity();
-    auto Actors = GetActors();
+    const auto &Actors = GetFrameActors();
 
     auto localPlayer = Cheat::localPlayer;
     auto localController = Cheat::localController;
@@ -946,9 +761,6 @@ auto GetTargetByPussy()
     if (localPlayer) {
         for (int i = 0; i < Actors.size(); i++) {
             auto Actor = Actors[i];
-            if (isObjectInvalid(Actor))
-                continue;
-
             if (Actor->IsA(ASTExtraPlayerCharacter::StaticClass())) {
 
                 auto Player = (ASTExtraPlayerCharacter *) Actor;
@@ -1112,55 +924,48 @@ namespace Settings
     static int Tab = 1;
 }
 
-void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight) 
+void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
 {
-    ASTExtraPlayerCharacter* localPlayer = nullptr;
-    ASTExtraPlayerController* localPlayerController = nullptr;
     glWidth = ScreenWidth;
     glHeight = ScreenHeight;
-	
-    // Canvas handling
-    UCanvas* Canvas = HUD->Canvas;
-    if (Canvas)
+
+    if (!HUD || !HUD->Canvas)
     {
-        static bool loadFont = false;
-        if (!loadFont) 
-        {
-            pthread_t t;
-            pthread_create(&t, NULL, LoadFont, NULL);
-            loadFont = true;
-        }
+        frameActors.clear();
+        Cheat::localPlayer = nullptr;
+        Cheat::localController = nullptr;
+        return;
+    }
 
-        if (!tslFont || !robotoTinyFont) return;
-		
-        tslFont->LegacyFontSize = 25;
-        DrawOutlinedText(HUD, FString("A N O N Y"), {glWidth / 2.0f, 65}, COLOR_RED, COLOR_BLACK, true);
-        tslFont->LegacyFontSize = TSL_FONT_DEFAULT_SIZE;
+    auto *world = GetWorld();
+    auto *localController = (world && world->NetDriver &&
+                             world->NetDriver->ServerConnection)
+        ? reinterpret_cast<ASTExtraPlayerController *>(
+            world->NetDriver->ServerConnection->PlayerController)
+        : nullptr;
 
-        // Get Local Player & Controller
-        auto GWorld = GetWorld();
-        if (GWorld && GWorld->NetDriver && GWorld->NetDriver->ServerConnection)
-        {
-            localPlayerController = reinterpret_cast<ASTExtraPlayerController*>(GWorld->NetDriver->ServerConnection->PlayerController);
-        }
+    RefreshFrameActors(world);
 
-        if (localPlayerController) 
+    ASTExtraPlayerCharacter *localPlayer = nullptr;
+    if (localController)
+    {
+        for (auto *actor : GetFrameActors())
         {
-            std::vector<ASTExtraPlayerCharacter*> PlayerCharacter;
-            GetAllActors(PlayerCharacter);
-            for (auto Actor : PlayerCharacter) 
+            if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+                continue;
+
+            auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
+            if (player->PlayerKey == localController->PlayerKey)
             {
-                if (Actor->PlayerKey == localPlayerController->PlayerKey) 
-                {
-                    localPlayer = Actor;
-                    break;
-                }
+                localPlayer = player;
+                break;
             }
         }
-
-        Cheat::localPlayer = localPlayer;
-        Cheat::localController = localPlayerController;
     }
+
+    Cheat::localPlayer = localPlayer;
+    Cheat::localController = localController;
+    EnsureFonts();
 }
 
 void Box4LineHUD(
