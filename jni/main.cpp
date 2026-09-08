@@ -49,7 +49,7 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     if (!Cheat::Esp::Counter || !tslFont)
         return;
 
-    constexpr float width = 170.0f;
+    constexpr float width = 216.0f;
     constexpr float height = 42.0f;
     const float x = (glWidth - width) * 0.5f;
     constexpr float y = 26.0f;
@@ -62,11 +62,16 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
 
     const std::string enemyText = "ENEMIES " + std::to_string(enemies);
     const std::string botText = "BOTS " + std::to_string(bots);
+    const float delta = GetFrameDeltaSeconds();
+    const int fps = delta > 0.0f ? static_cast<int>(std::round(1.0f / delta)) : 0;
+    const std::string fpsText = std::to_string(fps) + " FPS";
     tslFont->LegacyFontSize = 12;
     DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 13.0f, y + 21.0f},
                      kTextPrimary, COLOR_BLACK, false);
     DrawOutlinedText(hud, FString(botText.c_str()), {x + 105.0f, y + 21.0f},
                      kTextMuted, COLOR_BLACK, false);
+    DrawOutlinedText(hud, FString(fpsText.c_str()), {x + 154.0f, y + 21.0f},
+                     kVisible, COLOR_BLACK, false);
     tslFont->LegacyFontSize = previousSize;
 }
 
@@ -77,6 +82,47 @@ FLinearColor HealthColor(float percentage)
     if (percentage > 0.30f)
         return kWarning;
     return kHidden;
+}
+
+void DrawAimbotFov(AHUD *hud)
+{
+    if (!Cheat::Esp::FovCircle || !Cheat::Aimbot::Enable ||
+        Cheat::Aimbot::Radius <= 0.0f)
+        return;
+
+    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 64 : 48;
+    DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, Cheat::Aimbot::Radius,
+                     FLinearColor(kVisible.R, kVisible.G, kVisible.B, 0.52f),
+                     segments, 1.15f);
+}
+
+void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
+                              float height)
+{
+    if (!Cheat::Esp::Target)
+        return;
+
+    const float corner = std::max(6.0f, width * 0.22f);
+    const float left = x - 3.0f;
+    const float right = x + width + 3.0f;
+    const float top = y - 3.0f;
+    const float bottom = y + height + 3.0f;
+    const FLinearColor marker(1.0f, 0.64f, 0.18f, 0.96f);
+
+    hud->DrawLine(left, top, left + corner, top, marker, 1.8f);
+    hud->DrawLine(left, top, left, top + corner, marker, 1.8f);
+    hud->DrawLine(right - corner, top, right, top, marker, 1.8f);
+    hud->DrawLine(right, top, right, top + corner, marker, 1.8f);
+    hud->DrawLine(left, bottom - corner, left, bottom, marker, 1.8f);
+    hud->DrawLine(left, bottom, left + corner, bottom, marker, 1.8f);
+    hud->DrawLine(right - corner, bottom, right, bottom, marker, 1.8f);
+    hud->DrawLine(right, bottom - corner, right, bottom, marker, 1.8f);
+
+    const int previousSize = tslFont->LegacyFontSize;
+    tslFont->LegacyFontSize = 9;
+    DrawOutlinedText(hud, FString("LOCK"), {x + width * 0.5f, top - 12.0f},
+                     marker, COLOR_BLACK, true);
+    tslFont->LegacyFontSize = previousSize;
 }
 
 void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
@@ -112,6 +158,16 @@ void DrawHUD(AHUD *HUD)
 {
     if (!HUD || !tslFont || !Cheat::localPlayer || !Cheat::localController)
         return;
+
+    const bool aimTriggerActive = Cheat::localPlayer->bIsWeaponFiring ||
+        Cheat::localPlayer->bIsGunADS;
+    if (!aimTriggerActive)
+        ClearAimTargetLock();
+    ASTExtraPlayerCharacter *selectedTarget = aimTriggerActive && Cheat::Aimbot::Enable
+        ? GetTargetForAimBot()
+        : nullptr;
+
+    OverlayUI::DrawAimbotFov(HUD);
 
     int totalEnemies = 0;
     int totalBots = 0;
@@ -196,6 +252,8 @@ void DrawHUD(AHUD *HUD)
 
         if (Cheat::Esp::Box)
             Box4LineHUD(HUD, x, y, width, boxHeight, 1.25f, 0.16f, accent);
+        if (entry.player == selectedTarget)
+            OverlayUI::DrawSelectedTargetMarker(HUD, x, y, width, boxHeight);
 
         if (Cheat::Esp::Health)
         {
@@ -238,7 +296,8 @@ void DrawHUD(AHUD *HUD)
         if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
             continue;
 
-        if (Cheat::Esp::Vehicle::Name && actor->IsA(ASTExtraVehicleBase::StaticClass()))
+        if ((Cheat::Esp::Vehicle::Name || Cheat::Esp::Vehicle::Health ||
+             Cheat::Esp::Vehicle::Fuel) && actor->IsA(ASTExtraVehicleBase::StaticClass()))
         {
             auto *vehicle = static_cast<ASTExtraVehicleBase *>(actor);
             if (!vehicle->Mesh)
@@ -251,10 +310,27 @@ void DrawHUD(AHUD *HUD)
             const float distance = vehicle->GetDistanceTo(Cheat::localPlayer) / 100.0f;
             const int previousSize = tslFont->LegacyFontSize;
             tslFont->LegacyFontSize = 10;
-            DrawOutlinedText(HUD, FString(GetVehicleName(vehicle)), screen,
-                             OverlayUI::kWarning, COLOR_BLACK, true);
-            const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
-            DrawOutlinedText(HUD, FString(distanceText.c_str()), {screen.X, screen.Y + 12.0f},
+            if (Cheat::Esp::Vehicle::Name)
+                DrawOutlinedText(HUD, FString(GetVehicleName(vehicle)), screen,
+                                 OverlayUI::kWarning, COLOR_BLACK, true);
+
+            std::string status = std::to_string(static_cast<int>(distance)) + " m";
+            const bool closeEnough = Cheat::Esp::Vehicle::StatusRange <= 0.0f ||
+                distance <= Cheat::Esp::Vehicle::StatusRange;
+            const auto *vehicleCommon = closeEnough ? vehicle->VehicleCommon : nullptr;
+            if (vehicleCommon && Cheat::Esp::Vehicle::Health && vehicleCommon->HPMax > 0.0f)
+            {
+                const float percentage = std::max(0.0f, std::min(
+                    vehicleCommon->HP * 100.0f / vehicleCommon->HPMax, 100.0f));
+                status += "  HP " + std::to_string(static_cast<int>(std::round(percentage))) + "%";
+            }
+            if (vehicleCommon && Cheat::Esp::Vehicle::Fuel && vehicleCommon->FuelMax > 0.0f)
+            {
+                const float percentage = std::max(0.0f, std::min(
+                    vehicleCommon->Fuel * 100.0f / vehicleCommon->FuelMax, 100.0f));
+                status += "  FUEL " + std::to_string(static_cast<int>(std::round(percentage))) + "%";
+            }
+            DrawOutlinedText(HUD, FString(status.c_str()), {screen.X, screen.Y + 12.0f},
                              OverlayUI::kTextMuted, COLOR_BLACK, true);
             tslFont->LegacyFontSize = previousSize;
             continue;
@@ -341,30 +417,18 @@ void DrawMemory()
 
     if (Cheat::Aimbot::Enable)
     {
-        auto *target = GetTargetForAimBot();
+        // Automatic tracking follows only deliberate combat input: ADS or
+        // firing. Do not even acquire a target lock while the player is idle.
+        const bool triggerActive = Cheat::localPlayer->bIsWeaponFiring ||
+            Cheat::localPlayer->bIsGunADS;
+        if (!triggerActive)
+            ClearAimTargetLock();
+
+        auto *target = triggerActive ? GetTargetForAimBot() : nullptr;
         if (target)
         {
-            bool triggerActive = false;
-            switch (Cheat::Aimbot::Trigger)
-            {
-                case EAimTrigger::None:
-                case EAimTrigger::Shooting:
-                    triggerActive = Cheat::localPlayer->bIsWeaponFiring;
-                    break;
-                case EAimTrigger::Scoping:
-                    triggerActive = Cheat::localPlayer->bIsGunADS;
-                    break;
-                case EAimTrigger::Both:
-                case EAimTrigger::Any:
-                    triggerActive = Cheat::localPlayer->bIsWeaponFiring ||
-                        Cheat::localPlayer->bIsGunADS;
-                    break;
-            }
-
-            // Automatic tracking is active only while the user is firing or
-            // aiming down sights. It releases the target immediately otherwise.
             const float warmup = GetHumanizedAimWarmup();
-            if (triggerActive && warmup > 0.0f)
+            if (warmup > 0.0f)
             {
                 FVector targetAimPos = target->GetBonePos(GetAimTargetBone(target), {});
                 const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
@@ -498,7 +562,12 @@ void AutoEspOn()
     Cheat::Esp::Throwable = true;
     Cheat::Esp::ItemEsp = true;
     Cheat::Esp::Counter = true;
+    Cheat::Esp::Target = true;
+    Cheat::Esp::FovCircle = true;
     Cheat::Esp::Vehicle::Name = true;
+    Cheat::Esp::Vehicle::Health = true;
+    Cheat::Esp::Vehicle::Fuel = true;
+    Cheat::Esp::Vehicle::StatusRange = 75.0f;
 
     Cheat::Aimbot::Enable = true;
     Cheat::Aimbot::StickyTarget = true;
@@ -560,7 +629,7 @@ void xShootBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, in
         ASTExtraPlayerCharacter* Target = GetTargetForAimBot();
         if (Target)
         {
-            FVector targetAimPos = Target->GetBonePos("Head", {});
+            FVector targetAimPos = Target->GetBonePos(GetAimTargetBone(Target), {});
             targetAimPos.Z -= -19.0f;   // same as targetAimPos.Z += 19.0f
             FRotator adjustedRot = ToRotator(StartLoc, targetAimPos);
             return ShootBulletInner(Weapon, StartLoc, adjustedRot, ShootID);

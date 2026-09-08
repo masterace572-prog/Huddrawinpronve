@@ -35,6 +35,7 @@ namespace Cheat
         bool Throwable = false;
         bool Counter = false;
         bool Target = false;
+        bool FovCircle = false;
         bool ItemEsp = false;
 
         namespace Vehicle 
@@ -42,6 +43,7 @@ namespace Cheat
             bool Name = true;
             bool Health = false;
             bool Fuel = false;
+            float StatusRange = 75.0f;
         }
     }
 
@@ -426,13 +428,14 @@ struct FramePlayerData
     FVector2D rootScreen{};
     float distance = 0.0f;
     float screenDistance = std::numeric_limits<float>::infinity();
+    const char *exposedBone = nullptr;
     bool projected = false;
     bool visible = false;
 };
 
 struct VisibilitySample
 {
-    bool visible = false;
+    const char *exposedBone = nullptr;
     float sampledAt = -1000.0f;
 };
 
@@ -470,6 +473,43 @@ float GetFrameElapsedSeconds()
 {
     return frameElapsedSeconds;
 }
+
+namespace
+{
+// Head-first preserves a head-only exposure. Body-first is used for chest
+// preference, but still falls back to the head or limbs when that is all that
+// is exposed from cover.
+constexpr std::array<const char *, 20> kHeadPriorityBones = {
+    "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
+    "clavicle_r", "clavicle_l", "upperarm_r", "upperarm_l", "lowerarm_r",
+    "lowerarm_l", "hand_r", "hand_l", "thigh_r", "thigh_l", "calf_r",
+    "calf_l", "foot_r", "foot_l"
+};
+constexpr std::array<const char *, 20> kBodyPriorityBones = {
+    "spine_03", "spine_02", "spine_01", "pelvis", "neck_01", "clavicle_r",
+    "clavicle_l", "upperarm_r", "upperarm_l", "lowerarm_r", "lowerarm_l",
+    "hand_r", "hand_l", "thigh_r", "thigh_l", "calf_r", "calf_l", "foot_r",
+    "foot_l", "Head"
+};
+
+const char *FindExposedAimBone(ASTExtraPlayerCharacter *player,
+                               ASTExtraPlayerController *controller)
+{
+    if (!player || !controller || !controller->PlayerCameraManager)
+        return nullptr;
+
+    const auto &priority = Cheat::Aimbot::Target == EAimTarget::Head
+        ? kHeadPriorityBones
+        : kBodyPriorityBones;
+    for (const char *bone : priority)
+    {
+        if (controller->LineOfSightTo(controller->PlayerCameraManager,
+                                      player->GetBonePos(bone, {}), false))
+            return bone;
+    }
+    return nullptr;
+}
+} // namespace
 
 UWorld *GetWorld()
 {
@@ -576,7 +616,8 @@ void RefreshFramePlayers()
         return;
 
     framePlayers.reserve(frameActors.size());
-    constexpr float kVisibilityInterval = 1.0f / 30.0f;
+    const float visibilityInterval = std::max(
+        Cheat::Aimbot::BoneRefreshInterval, 1.0f / 30.0f);
     for (auto *actor : frameActors)
     {
         if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
@@ -603,16 +644,18 @@ void RefreshFramePlayers()
                 FVector2D(glWidth * 0.5f, glHeight * 0.5f), center);
         }
 
-        // Visibility is expensive and has no meaningful visual benefit when
-        // sampled 60/120 times a second. Cache it at 30 Hz while the current
-        // frame still receives fresh projection and distance data.
+        // Sample bone visibility below the HUD refresh rate. A candidate is
+        // valid only when at least one trace reaches an exposed bone: a fully
+        // covered player is not selected, head-only cover selects the head,
+        // and any exposed limb/body point remains a valid fallback.
         auto &visibility = visibilityCache[reinterpret_cast<uintptr_t>(player)];
-        if (frameElapsedSeconds - visibility.sampledAt >= kVisibilityInterval)
+        if (frameElapsedSeconds - visibility.sampledAt >= visibilityInterval)
         {
-            visibility.visible = localController->LineOfSightTo(player, {0, 0, 0}, true);
+            visibility.exposedBone = FindExposedAimBone(player, localController);
             visibility.sampledAt = frameElapsedSeconds;
         }
-        candidate.visible = visibility.visible;
+        candidate.exposedBone = visibility.exposedBone;
+        candidate.visible = candidate.exposedBone != nullptr;
         framePlayers.push_back(candidate);
     }
 
@@ -809,11 +852,6 @@ bool isInsideFOVs(int x, int y) {
 
 namespace
 {
-constexpr std::array<const char *, 12> kPreferredAimBones = {
-    "Head", "spine_03", "pelvis", "calf_l", "calf_r", "lowerarm_l",
-    "lowerarm_r", "upperarm_l", "upperarm_r", "thigh_l", "thigh_r", "foot_l"
-};
-
 struct AimTargetLock
 {
     ASTExtraPlayerCharacter *player = nullptr;
@@ -850,7 +888,10 @@ bool IsAimCandidate(const FramePlayerData &candidate, bool retainingLock)
         return false;
     if (Cheat::Aimbot::IgnoreBot && (player->bIsAI || player->bEnsure))
         return false;
-    if (Cheat::Aimbot::VisCheck && !candidate.visible)
+    // An aim lock always requires one cached exposed bone. This is kept
+    // independent of the legacy visibility toggle so full cover can never
+    // produce an automatic lock.
+    if (!candidate.visible)
         return false;
     if (Cheat::Aimbot::Range > 0.0f && candidate.distance > Cheat::Aimbot::Range)
         return false;
@@ -890,26 +931,25 @@ void ClearAimTargetLock()
 } // namespace
 
 const char *GetPreferredAimBone(ASTExtraPlayerCharacter *player,
-                                ASTExtraPlayerController *controller)
+                                ASTExtraPlayerController *)
 {
-    if (!player || !controller || !controller->PlayerCameraManager)
-        return "Head";
-
-    // Bone visibility is only checked after target selection and is refreshed
-    // at a short interval. That prevents many redundant engine trace calls.
-    for (const char *bone : kPreferredAimBones)
-    {
-        if (controller->LineOfSightTo(controller->PlayerCameraManager,
-                                      player->GetBonePos(bone, {}), false))
-            return bone;
-    }
-    return "Head";
+    if (const auto *framePlayer = FindFramePlayer(player))
+        return framePlayer->exposedBone;
+    return nullptr;
 }
 
 const char *GetAimTargetBone(ASTExtraPlayerCharacter *target)
 {
+    // Head mode favors the head but falls back to the currently exposed bone;
+    // this keeps tracking valid when cover hides the head but leaves a limb or
+    // body point visible.
     if (Cheat::Aimbot::Target == EAimTarget::Head)
+    {
+        if (const auto *framePlayer = FindFramePlayer(target);
+            framePlayer && framePlayer->exposedBone)
+            return framePlayer->exposedBone;
         return "Head";
+    }
 
     const float now = GetFrameElapsedSeconds();
     if (aimTargetLock.player != target)
@@ -917,7 +957,8 @@ const char *GetAimTargetBone(ASTExtraPlayerCharacter *target)
 
     if (now >= aimTargetLock.nextBoneRefreshAt)
     {
-        aimTargetLock.bone = GetPreferredAimBone(target, Cheat::localController);
+        if (const char *bone = GetPreferredAimBone(target, Cheat::localController))
+            aimTargetLock.bone = bone;
         aimTargetLock.nextBoneRefreshAt = now + std::max(
             Cheat::Aimbot::BoneRefreshInterval, 1.0f / 60.0f);
     }
