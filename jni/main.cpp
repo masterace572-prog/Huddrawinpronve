@@ -850,19 +850,20 @@ void LogShadowHookRecords(const char *operation)
 void hkProcessEvent(UObject *pObj, UFunction *pFunc, void *pArgs)
 {
     static UFunction *receiveDrawHUD = nullptr;
-    bool isReceiveDrawHUD = pFunc == receiveDrawHUD;
 
-    // Avoid building a full UObject name for every ProcessEvent call. Resolve
-    // and cache the function once, then use the UFunction pointer on the hot
-    // path. The simple-name guard makes startup lookup inexpensive as well.
-    if (!isReceiveDrawHUD && pFunc &&
+    // ProcessEvent also carries every Canvas draw call and a large portion of
+    // the game's gameplay/UI traffic. Once this function has been discovered,
+    // the hot path must be a pointer comparison only. The previous condition
+    // performed GetName() for *every non-HUD ProcessEvent*, including every ESP
+    // line/text primitive, which was enough to cause major frame drops.
+    if (!receiveDrawHUD && pFunc &&
         strcmp(pFunc->NamePrivate.GetName(), "ReceiveDrawHUD") == 0 &&
         pFunc->GetFullName() == "Function Engine.HUD.ReceiveDrawHUD")
     {
         receiveDrawHUD = pFunc;
-        isReceiveDrawHUD = true;
         LOGI("ProcessEvent: ReceiveDrawHUD resolved at %p", static_cast<void *>(pFunc));
     }
+    const bool isReceiveDrawHUD = pFunc == receiveDrawHUD;
 
     AHUD *hud = nullptr;
     int sizeX = 0;
