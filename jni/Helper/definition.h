@@ -474,11 +474,14 @@ struct VisibilitySample
 {
     const char *exposedBone = nullptr;
     float sampledAt = -1000.0f;
+    size_t nextBoneIndex = 0;
+    bool scanInProgress = false;
 };
 
 static std::vector<AActor *> frameActors;
 static std::vector<FramePlayerData> framePlayers;
 static std::unordered_map<uintptr_t, VisibilitySample> visibilityCache;
+static uint32_t visibilityTracesLastFrame = 0;
 static float frameDeltaSeconds = 1.0f / 60.0f;
 static float frameElapsedSeconds = 0.0f;
 
@@ -558,7 +561,7 @@ void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
     APawn *controllerPawn = controller ? controller->Pawn : nullptr;
     LOGI("ESP heartbeat: hud=%p canvas=%p world=%p gameInstance=%p localSlots=%d "
          "controller=%p source=%s ackPawn=%p(%s) pawn=%p(%s) local=%p source=%s "
-         "actors=%zu players=%zu projected=%zu exposed=%zu screen=%dx%d",
+         "actors=%zu players=%zu projected=%zu exposed=%zu visibilityRays=%u screen=%dx%d",
          static_cast<void *>(hud), hud ? static_cast<void *>(hud->Canvas) : nullptr,
          static_cast<void *>(world), static_cast<void *>(gameInstance), localPlayerSlots,
          static_cast<void *>(controller), controllerSource ? controllerSource : "none",
@@ -566,7 +569,7 @@ void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
          static_cast<void *>(controllerPawn), DescribeLocalPawn(controllerPawn),
          static_cast<void *>(localPlayer), localPlayerSource ? localPlayerSource : "none",
          frameActors.size(), framePlayers.size(), projectedPlayers, exposedPlayers,
-         glWidth, glHeight);
+         visibilityTracesLastFrame, glWidth, glHeight);
     nextHeartbeatAt = frameElapsedSeconds + 5.0f;
 }
 
@@ -588,20 +591,79 @@ constexpr std::array<const char *, 20> kBodyPriorityBones = {
     "foot_l", "Head"
 };
 
-const char *FindExposedAimBone(ASTExtraPlayerCharacter *player,
-                               ASTExtraPlayerController *controller)
+const char *RefreshExposedAimBone(ASTExtraPlayerCharacter *player,
+                                  ASTExtraPlayerController *controller,
+                                  VisibilitySample &sample,
+                                  float refreshInterval,
+                                  int &traceBudget)
 {
     if (!player || !controller || !controller->PlayerCameraManager)
         return nullptr;
 
+    const float now = frameElapsedSeconds;
+    if (!sample.scanInProgress && now - sample.sampledAt < refreshInterval)
+        return sample.exposedBone;
+
     const auto &priority = Cheat::Aimbot::Target == EAimTarget::Head
         ? kHeadPriorityBones
         : kBodyPriorityBones;
-    for (const char *bone : priority)
+
+    // First retest the bone currently being used by ESP/aim. Losing that ray
+    // immediately makes the candidate ineligible, so a target cannot remain
+    // locked after moving fully into cover. Searching for an alternate exposed
+    // bone is intentionally incremental below.
+    if (!sample.scanInProgress && sample.exposedBone)
     {
+        if (traceBudget <= 0)
+            return sample.exposedBone;
+
+        --traceBudget;
+        if (controller->LineOfSightTo(controller->PlayerCameraManager,
+                                      player->GetBonePos(sample.exposedBone, {}), false))
+        {
+            sample.sampledAt = now;
+            return sample.exposedBone;
+        }
+        sample.exposedBone = nullptr;
+        sample.nextBoneIndex = 0;
+        sample.scanInProgress = true;
+    }
+
+    if (!sample.scanInProgress)
+    {
+        sample.nextBoneIndex = 0;
+        sample.scanInProgress = true;
+    }
+
+    // A fully covered enemy costs 20 rays with the old implementation, all in
+    // one HUD callback. Probe a small slice per callback and cap the total work
+    // for the complete overlay. New/covered candidates stay ineligible until a
+    // ray confirms an exposed bone, preserving the no-lock-through-cover rule.
+    constexpr int kMaximumProbesPerPlayer = 2;
+    int probes = 0;
+    while (traceBudget > 0 && probes < kMaximumProbesPerPlayer &&
+           sample.nextBoneIndex < priority.size())
+    {
+        const char *bone = priority[sample.nextBoneIndex++];
+        --traceBudget;
+        ++probes;
         if (controller->LineOfSightTo(controller->PlayerCameraManager,
                                       player->GetBonePos(bone, {}), false))
+        {
+            sample.exposedBone = bone;
+            sample.sampledAt = now;
+            sample.nextBoneIndex = 0;
+            sample.scanInProgress = false;
             return bone;
+        }
+    }
+
+    if (sample.nextBoneIndex >= priority.size())
+    {
+        sample.exposedBone = nullptr;
+        sample.sampledAt = now;
+        sample.nextBoneIndex = 0;
+        sample.scanInProgress = false;
     }
     return nullptr;
 }
@@ -780,8 +842,13 @@ void RefreshFramePlayers()
         return;
 
     framePlayers.reserve(frameActors.size());
+    // Line-of-sight tracing is the heaviest part of the overlay. Bound it to
+    // twelve rays per HUD callback, while keeping already-exposed targets
+    // responsive through their first-priority retest.
+    constexpr int kVisibilityTraceBudgetPerFrame = 12;
+    int visibilityTraceBudget = kVisibilityTraceBudgetPerFrame;
     const float visibilityInterval = std::max(
-        Cheat::Aimbot::BoneRefreshInterval, 1.0f / 30.0f);
+        Cheat::Aimbot::BoneRefreshInterval, 1.0f / 10.0f);
     for (auto *actor : frameActors)
     {
         if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
@@ -808,20 +875,24 @@ void RefreshFramePlayers()
                 FVector2D(glWidth * 0.5f, glHeight * 0.5f), center);
         }
 
-        // Sample bone visibility below the HUD refresh rate. A candidate is
-        // valid only when at least one trace reaches an exposed bone: a fully
-        // covered player is not selected, head-only cover selects the head,
-        // and any exposed limb/body point remains a valid fallback.
+        // A candidate is valid only when a cached ray reaches an exposed bone:
+        // fully covered players cannot be selected, head-only cover uses the
+        // head, and limbs remain valid fallback points. Off-screen actors do
+        // not spend the per-frame ray budget because they cannot be rendered
+        // or targeted until they project into the viewport.
         auto &visibility = visibilityCache[reinterpret_cast<uintptr_t>(player)];
-        if (frameElapsedSeconds - visibility.sampledAt >= visibilityInterval)
-        {
-            visibility.exposedBone = FindExposedAimBone(player, localController);
-            visibility.sampledAt = frameElapsedSeconds;
-        }
-        candidate.exposedBone = visibility.exposedBone;
+        if (candidate.projected)
+            candidate.exposedBone = RefreshExposedAimBone(
+                player, localController, visibility, visibilityInterval,
+                visibilityTraceBudget);
+        else
+            candidate.exposedBone = visibility.exposedBone;
         candidate.visible = candidate.exposedBone != nullptr;
         framePlayers.push_back(candidate);
     }
+
+    visibilityTracesLastFrame = static_cast<uint32_t>(
+        kVisibilityTraceBudgetPerFrame - visibilityTraceBudget);
 
     // Prevent the cache from retaining actor addresses after a long match or
     // map transition. Pruning is infrequent and outside the hot draw path.

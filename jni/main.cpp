@@ -22,6 +22,30 @@ struct ItemVisual
 
 std::unordered_map<int, ItemVisual> itemVisuals;
 
+constexpr std::array<const char *, 22> kSkeletonBoneNames = {
+    "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
+    "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r",
+    "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l",
+    "thigh_r", "calf_r", "foot_r", "thigh_l", "calf_l", "foot_l"
+};
+constexpr std::array<std::pair<size_t, size_t>, 21> kSkeletonLinks = {{
+    {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5},
+    {1, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10},
+    {1, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15},
+    {5, 16}, {16, 17}, {17, 18}, {5, 19}, {19, 20}, {20, 21}
+}};
+
+struct SkeletonSample
+{
+    std::array<FVector2D, kSkeletonBoneNames.size()> points{};
+    std::array<bool, kSkeletonBoneNames.size()> projected{};
+    FVector2D anchor{};
+    float height = 0.0f;
+    float sampledAt = -1000.0f;
+};
+
+std::unordered_map<uintptr_t, SkeletonSample> skeletonCache;
+
 bool IsFiniteVector(const FVector &value)
 {
     return std::isfinite(value.X) && std::isfinite(value.Y) && std::isfinite(value.Z);
@@ -45,6 +69,24 @@ FVector GetTargetVelocity(ASTExtraPlayerCharacter *target)
     const float vehicleSpeedSquared = (vehicleVelocity.X * vehicleVelocity.X) +
         (vehicleVelocity.Y * vehicleVelocity.Y) + (vehicleVelocity.Z * vehicleVelocity.Z);
     return vehicleSpeedSquared > 25.0f ? vehicleVelocity : playerVelocity;
+}
+
+void LogAimbotRuntime(bool firing, bool ads, ASTExtraPlayerCharacter *target,
+                       const char *stage, const char *bone = nullptr)
+{
+    // Combat input can be sampled every HUD callback, but diagnostics must not
+    // become another source of stutter while the fire button is held.
+    static float nextLogAt = 0.0f;
+    static const char *previousStage = nullptr;
+    const float now = GetFrameElapsedSeconds();
+    if (stage == previousStage && now < nextLogAt)
+        return;
+
+    LOGI("Aimbot: fire=%d ads=%d candidates=%zu target=%p bone=%s stage=%s",
+         firing ? 1 : 0, ads ? 1 : 0, GetFramePlayers().size(),
+         static_cast<void *>(target), bone ? bone : "none", stage);
+    previousStage = stage;
+    nextLogAt = now + 1.0f;
 }
 
 FVector PredictAimPosition(ASTExtraPlayerCharacter *target, const FVector &aimPoint,
@@ -184,7 +226,9 @@ void DrawAimbotFov(AHUD *hud)
     // The visual radius deliberately matches target selection. The default is
     // tightened to 240 px below so it stays useful on mobile screens instead
     // of covering most of the display.
-    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 96 : 80;
+    // A 40-48 segment Canvas ring remains visually smooth on a mobile HUD,
+    // but avoids consuming 80-96 game-thread draw calls every callback.
+    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 48 : 40;
     const float radius = Cheat::Aimbot::Radius;
     const FLinearColor ring(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.90f);
     DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, ring,
@@ -316,54 +360,57 @@ void DrawHUD(AHUD *HUD)
         const float x = headScreen.X - (width * 0.5f);
         const float y = headScreen.Y - extraTop;
 
-        // Keep distant entities readable with their compact box/tag while
-        // avoiding 22 bone projections for sprites that are only a few pixels
-        // high on screen.
+        // Skeleton pose extraction routes through UE and was previously done
+        // for every player on every HUD callback. Cache poses at 10 Hz and
+        // translate/scale them from the current head/root projection between
+        // samples, retaining smooth screen movement while removing most of the
+        // expensive bone and projection calls.
         const bool drawDetailedSkeleton = Cheat::Esp::Skeleton &&
-            height >= 18.0f && distance <= 350.0f;
+            height >= 20.0f && distance <= 250.0f;
         if (drawDetailedSkeleton)
         {
-            constexpr std::array<const char *, 22> kBoneNames = {
-                "Head", "neck_01", "spine_03", "spine_02", "spine_01", "pelvis",
-                "clavicle_r", "upperarm_r", "lowerarm_r", "hand_r", "item_r",
-                "clavicle_l", "upperarm_l", "lowerarm_l", "hand_l", "item_l",
-                "thigh_r", "calf_r", "foot_r", "thigh_l", "calf_l", "foot_l"
-            };
-            constexpr std::array<std::pair<size_t, size_t>, 21> kSkeletonLinks = {{
-                {0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5},
-                {1, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10},
-                {1, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15},
-                {5, 16}, {16, 17}, {17, 18}, {5, 19}, {19, 20}, {20, 21}
-            }};
-
-            std::array<FVector2D, kBoneNames.size()> boneScreen{};
-            std::array<bool, kBoneNames.size()> projected{};
-            for (size_t boneIndex = 0; boneIndex < kBoneNames.size(); ++boneIndex)
+            auto &skeleton = skeletonCache[reinterpret_cast<uintptr_t>(player)];
+            constexpr float kSkeletonSampleInterval = 0.10f;
+            if (GetFrameElapsedSeconds() - skeleton.sampledAt >= kSkeletonSampleInterval)
             {
-                projected[boneIndex] = W2S(
-                    player->GetBonePos(kBoneNames[boneIndex], {}),
-                    &boneScreen[boneIndex]);
+                for (size_t boneIndex = 0; boneIndex < kSkeletonBoneNames.size(); ++boneIndex)
+                {
+                    skeleton.projected[boneIndex] = W2S(
+                        player->GetBonePos(kSkeletonBoneNames[boneIndex], {}),
+                        &skeleton.points[boneIndex]);
+                }
+                skeleton.anchor = headScreen;
+                skeleton.height = height;
+                skeleton.sampledAt = GetFrameElapsedSeconds();
             }
+
+            const float poseScale = skeleton.height > 1.0f
+                ? std::max(0.50f, std::min(height / skeleton.height, 2.0f))
+                : 1.0f;
+            const auto transformPosePoint = [&skeleton, &headScreen, poseScale](
+                const FVector2D &point) -> FVector2D
+            {
+                return FVector2D(
+                    headScreen.X + ((point.X - skeleton.anchor.X) * poseScale),
+                    headScreen.Y + ((point.Y - skeleton.anchor.Y) * poseScale));
+            };
 
             for (const auto &[from, to] : kSkeletonLinks)
             {
-                if (projected[from] && projected[to])
+                if (skeleton.projected[from] && skeleton.projected[to])
                 {
-                    OverlayUI::DrawCleanLine(HUD, boneScreen[from].X, boneScreen[from].Y,
-                                              boneScreen[to].X, boneScreen[to].Y,
-                                              accent, 0.60f);
+                    const FVector2D fromPoint = transformPosePoint(skeleton.points[from]);
+                    const FVector2D toPoint = transformPosePoint(skeleton.points[to]);
+                    OverlayUI::DrawCleanLine(HUD, fromPoint.X, fromPoint.Y,
+                                              toPoint.X, toPoint.Y, accent, 0.60f);
                 }
             }
 
-            FVector headTop = player->GetBonePos("Head", {});
-            headTop.Z += 15.0f;
-            FVector2D topScreen;
-            if (W2S(headTop, &topScreen))
-            {
-                const float radius = FVector2D::Distance(headScreen, topScreen);
-                DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 accent, 48, 0.60f);
-            }
+            // A compact 16-segment head ring is sufficient at player scale and
+            // removes 32 Canvas draw calls per displayed skeleton.
+            const float headRadius = std::max(2.0f, std::min(height * 0.075f, 14.0f));
+            DrawCircleHelper(HUD, headScreen.X, headScreen.Y, headRadius,
+                             accent, 16, 0.60f);
         }
 
         if (Cheat::Esp::Box)
@@ -520,6 +567,23 @@ void DrawHUD(AHUD *HUD)
         }
     }
 
+    // Match actor pointers are recycled during travel. Keep the pose cache
+    // bounded rather than retaining historical player addresses indefinitely.
+    static float lastSkeletonCachePrune = 0.0f;
+    const float now = GetFrameElapsedSeconds();
+    if (now - lastSkeletonCachePrune >= 10.0f)
+    {
+        const float expiration = now - 15.0f;
+        for (auto it = skeletonCache.begin(); it != skeletonCache.end();)
+        {
+            if (it->second.sampledAt < expiration)
+                it = skeletonCache.erase(it);
+            else
+                ++it;
+        }
+        lastSkeletonCachePrune = now;
+    }
+
     OverlayUI::DrawHeader(HUD, totalEnemies, totalBots);
 }
 
@@ -532,98 +596,119 @@ void DrawMemory()
     if (Cheat::Aimbot::Enable)
     {
         // Automatic tracking follows only deliberate combat input: ADS or
-        // firing. Do not even acquire a target lock while the player is idle.
-        const bool triggerActive = Cheat::localPlayer->bIsWeaponFiring ||
-            Cheat::localPlayer->bIsGunADS;
+        // firing. Do not acquire or steer toward a target while the player is
+        // idle, even when a previous target remains on screen.
+        const bool firing = Cheat::localPlayer->bIsWeaponFiring;
+        const bool ads = Cheat::localPlayer->bIsGunADS;
+        const bool triggerActive = firing || ads;
         if (!triggerActive)
-            ClearAimTargetLock();
-
-        auto *target = triggerActive ? GetTargetForAimBot() : nullptr;
-        if (target)
         {
-            const float warmup = GetHumanizedAimWarmup();
-            if (warmup > 0.0f)
+            ClearAimTargetLock();
+        }
+        else
+        {
+            auto *target = GetTargetForAimBot();
+            if (!target)
             {
-                FVector targetAimPos = target->GetBonePos(GetAimTargetBone(target), {});
-                const bool validTargetPosition = std::isfinite(targetAimPos.X) &&
-                    std::isfinite(targetAimPos.Y) && std::isfinite(targetAimPos.Z);
-                auto *weaponManager = Cheat::localPlayer->WeaponManagerComponent;
-                if (validTargetPosition && weaponManager)
+                LogAimbotRuntime(firing, ads, nullptr, "no-eligible-target");
+            }
+            else
+            {
+                const char *aimBone = GetAimTargetBone(target);
+                auto *cameraManager = Cheat::localController->PlayerCameraManager;
+                FVector targetAimPos = target->GetBonePos(aimBone, {});
+                const bool validTargetPosition = IsFiniteVector(targetAimPos);
+                if (!cameraManager)
                 {
-                    const auto propSlot = weaponManager->GetCurrentUsingPropSlot();
-                    if (static_cast<int>(propSlot.GetValue()) >= 1 &&
-                        static_cast<int>(propSlot.GetValue()) <= 3)
+                    LogAimbotRuntime(firing, ads, target, "camera-unavailable", aimBone);
+                }
+                else if (!validTargetPosition)
+                {
+                    LogAimbotRuntime(firing, ads, target, "invalid-target-position", aimBone);
+                }
+                else
+                {
+                    // Base tracking must never depend on weapon-manager state.
+                    // That state can be temporarily unavailable on the same
+                    // firing callback, which was suppressing aim entirely.
+                    // Weapon data is used only as an optional prediction input.
+                    bool predictionApplied = false;
+                    if (Cheat::Aimbot::AimPrediction)
                     {
-                        auto *weapon = static_cast<ASTExtraShootWeapon *>(
-                            weaponManager->CurrentWeaponReplicated);
+                        auto *weaponManager = Cheat::localPlayer->WeaponManagerComponent;
+                        auto *weapon = weaponManager ? static_cast<ASTExtraShootWeapon *>(
+                            weaponManager->CurrentWeaponReplicated) : nullptr;
                         auto *shootWeapon = weapon ? weapon->ShootWeaponComponent : nullptr;
                         auto *entity = shootWeapon
-                            ? shootWeapon->ShootWeaponEntityComponent
-                            : nullptr;
-
-                        auto *cameraManager = Cheat::localController->PlayerCameraManager;
-                        if (Cheat::Aimbot::AimPrediction && entity && cameraManager)
+                            ? shootWeapon->ShootWeaponEntityComponent : nullptr;
+                        if (entity)
                         {
                             const float bulletSpeed = *reinterpret_cast<float *>(
                                 reinterpret_cast<uintptr_t>(entity) + 0x560);
-                            targetAimPos = PredictAimPosition(target, targetAimPos,
+                            const FVector predicted = PredictAimPosition(target, targetAimPos,
                                 cameraManager->CameraCache.POV.Location, bulletSpeed);
-                        }
-
-                        if (Cheat::localPlayer->bIsWeaponFiring)
-                        {
-                            const float distance = Cheat::localPlayer->GetDistanceTo(target) / 100.0f;
-                            targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
-                        }
-
-                        if (cameraManager)
-                        {
-                            const FRotator aimRotation = ToRotator(
-                                cameraManager->CameraCache.POV.Location, targetAimPos);
-                            const FRotator currentRotation = Cheat::localController->ControlRotation;
-                            const float pitchError = NormalizeAxis(aimRotation.Pitch -
-                                currentRotation.Pitch -
-                                Cheat::localPlayer->AimControlRotationAdditive.Pitch);
-                            const float yawError = NormalizeAxis(aimRotation.Yaw -
-                                currentRotation.Yaw -
-                                Cheat::localPlayer->AimControlRotationAdditive.Yaw);
-
-                            const float dt = GetFrameDeltaSeconds();
-                            float response = Cheat::Aimbot::Humanize
-                                ? 1.0f - expf(-std::max(1.0f,
-                                    Cheat::Aimbot::TrackingSpeed) * dt)
-                                : 1.0f;
-                            response *= warmup;
-                            float pitchInput = ClampMagnitude(pitchError * response,
-                                Cheat::Aimbot::MaxPitchSpeed * dt);
-                            float yawInput = ClampMagnitude(yawError * response,
-                                Cheat::Aimbot::MaxYawSpeed * dt);
-                            const float remainingError = fabsf(pitchError) + fabsf(yawError);
-
-                            if (Cheat::Aimbot::Humanize)
-                            {
-                                const float settleFactor = std::max(0.0f,
-                                    1.0f - (remainingError / 12.0f));
-                                const float phase = GetFrameElapsedSeconds() * 7.0f +
-                                    static_cast<float>(reinterpret_cast<uintptr_t>(target) & 0xFF);
-                                const float jitter = sinf(phase) *
-                                    Cheat::Aimbot::MicroJitter * settleFactor;
-                                pitchInput = ClampMagnitude(pitchInput + jitter,
-                                    Cheat::Aimbot::MaxPitchSpeed * dt);
-                                yawInput = ClampMagnitude(yawInput + (jitter * 0.65f),
-                                    Cheat::Aimbot::MaxYawSpeed * dt);
-                            }
-
-                            // Leave a tiny deadzone around the target rather
-                            // than issuing a mathematically perfect correction
-                            // every render callback.
-                            if (remainingError > Cheat::Aimbot::AimDeadzone)
-                            {
-                                Cheat::localPlayer->AddControllerPitchInput(pitchInput);
-                                Cheat::localPlayer->AddControllerYawInput(yawInput);
-                            }
+                            predictionApplied = IsFiniteVector(predicted) &&
+                                (predicted.X != targetAimPos.X ||
+                                 predicted.Y != targetAimPos.Y ||
+                                 predicted.Z != targetAimPos.Z);
+                            targetAimPos = predicted;
                         }
                     }
+
+                    if (firing)
+                    {
+                        const float distance = Cheat::localPlayer->GetDistanceTo(target) / 100.0f;
+                        targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
+                    }
+
+                    const FRotator aimRotation = ToRotator(
+                        cameraManager->CameraCache.POV.Location, targetAimPos);
+                    const FRotator currentRotation = Cheat::localController->ControlRotation;
+                    const float pitchError = NormalizeAxis(aimRotation.Pitch -
+                        currentRotation.Pitch -
+                        Cheat::localPlayer->AimControlRotationAdditive.Pitch);
+                    const float yawError = NormalizeAxis(aimRotation.Yaw -
+                        currentRotation.Yaw -
+                        Cheat::localPlayer->AimControlRotationAdditive.Yaw);
+                    const float remainingError = fabsf(pitchError) + fabsf(yawError);
+
+                    if (remainingError > Cheat::Aimbot::AimDeadzone)
+                    {
+                        float pitchInput = pitchError;
+                        float yawInput = yawError;
+                        if (Cheat::Aimbot::Humanize)
+                        {
+                            const float dt = GetFrameDeltaSeconds();
+                            const float response = (1.0f - expf(-std::max(1.0f,
+                                Cheat::Aimbot::TrackingSpeed) * dt)) *
+                                GetHumanizedAimWarmup();
+                            pitchInput = ClampMagnitude(pitchError * response,
+                                Cheat::Aimbot::MaxPitchSpeed * dt);
+                            yawInput = ClampMagnitude(yawError * response,
+                                Cheat::Aimbot::MaxYawSpeed * dt);
+
+                            const float settleFactor = std::max(0.0f,
+                                1.0f - (remainingError / 12.0f));
+                            const float phase = GetFrameElapsedSeconds() * 7.0f +
+                                static_cast<float>(reinterpret_cast<uintptr_t>(target) & 0xFF);
+                            const float jitter = sinf(phase) *
+                                Cheat::Aimbot::MicroJitter * settleFactor;
+                            pitchInput = ClampMagnitude(pitchInput + jitter,
+                                Cheat::Aimbot::MaxPitchSpeed * dt);
+                            yawInput = ClampMagnitude(yawInput + (jitter * 0.65f),
+                                Cheat::Aimbot::MaxYawSpeed * dt);
+                        }
+
+                        // Direct mode intentionally applies the complete angular
+                        // error in this callback. There is no humanization or
+                        // weapon-slot gate, so firing is responsive immediately.
+                        Cheat::localPlayer->AddControllerPitchInput(pitchInput);
+                        Cheat::localPlayer->AddControllerYawInput(yawInput);
+                    }
+
+                    LogAimbotRuntime(firing, ads, target,
+                        predictionApplied ? "tracking-predicted" : "tracking-direct",
+                        aimBone);
                 }
             }
         }
@@ -658,9 +743,12 @@ void AutoEspOn()
     Cheat::Esp::Health = true;
     Cheat::Esp::Skeleton = true;
     Cheat::Esp::Box = false;
-    Cheat::Esp::LootBox = true;
-    Cheat::Esp::Throwable = true;
-    Cheat::Esp::ItemEsp = true;
+    // Player ESP remains active by default. Dense item/loot labels are opt-in
+    // because their per-actor projections and text rendering can dominate the
+    // HUD thread in a populated loot area.
+    Cheat::Esp::LootBox = false;
+    Cheat::Esp::Throwable = false;
+    Cheat::Esp::ItemEsp = false;
     Cheat::Esp::Counter = true;
     Cheat::Esp::Target = true;
     Cheat::Esp::FovCircle = true;
@@ -689,7 +777,7 @@ void AutoEspOn()
     Cheat::Aimbot::PredictionLatency = 0.035f;
     Cheat::Aimbot::PredictionGravity = 980.0f;
     Cheat::Aimbot::MaxPredictionTime = 0.55f;
-    Cheat::Aimbot::BoneRefreshInterval = 0.08f;
+    Cheat::Aimbot::BoneRefreshInterval = 0.12f;
     Cheat::Aimbot::Target = Chest;
 
     // Convert the static JSON once during startup. The draw path performs one
