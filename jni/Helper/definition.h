@@ -535,6 +535,7 @@ const char *DescribeLocalPawn(APawn *pawn)
 
 void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
                           ASTExtraPlayerController *controller,
+                          const char *controllerSource,
                           ASTExtraPlayerCharacter *localPlayer,
                           const char *localPlayerSource)
 {
@@ -550,13 +551,17 @@ void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
         exposedPlayers += player.visible ? 1u : 0u;
     }
 
+    UGameInstance *gameInstance = world ? world->OwningGameInstance : nullptr;
+    const bool gameInstanceValid = gameInstance && !isObjectInvalid(gameInstance);
+    const int localPlayerSlots = gameInstanceValid ? gameInstance->LocalPlayers.Num() : 0;
     APawn *acknowledgedPawn = controller ? controller->AcknowledgedPawn : nullptr;
     APawn *controllerPawn = controller ? controller->Pawn : nullptr;
-    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p "
-         "ackPawn=%p(%s) pawn=%p(%s) local=%p source=%s "
+    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p gameInstance=%p localSlots=%d "
+         "controller=%p source=%s ackPawn=%p(%s) pawn=%p(%s) local=%p source=%s "
          "actors=%zu players=%zu projected=%zu exposed=%zu screen=%dx%d",
          static_cast<void *>(hud), hud ? static_cast<void *>(hud->Canvas) : nullptr,
-         static_cast<void *>(world), static_cast<void *>(controller),
+         static_cast<void *>(world), static_cast<void *>(gameInstance), localPlayerSlots,
+         static_cast<void *>(controller), controllerSource ? controllerSource : "none",
          static_cast<void *>(acknowledgedPawn), DescribeLocalPawn(acknowledgedPawn),
          static_cast<void *>(controllerPawn), DescribeLocalPawn(controllerPawn),
          static_cast<void *>(localPlayer), localPlayerSource ? localPlayerSource : "none",
@@ -1402,8 +1407,6 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     }
 
     auto *world = GetWorld();
-    if (!world)
-        LogEspRenderState("UWorld is unavailable");
 
     // ReceiveDrawHUD belongs to the local player's HUD, so PlayerOwner is the
     // most reliable controller route. In the current BGMI flow ServerConnection
@@ -1425,9 +1428,37 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
             world->NetDriver->ServerConnection->PlayerController);
         controllerSource = "NetDriver ServerConnection";
     }
-    if (!localController)
-        LogEspRenderState("local controller is unavailable");
-    else
+    else if (world && world->OwningGameInstance &&
+             !isObjectInvalid(world->OwningGameInstance))
+    {
+        // The viewport's local-player list remains available in transitions
+        // where HUD::PlayerOwner and NetDriver have not yet been attached.
+        // Validate the compact engine-owned TArray before reading its data.
+        const auto &localPlayers = world->OwningGameInstance->LocalPlayers;
+        constexpr int kMaxLocalPlayers = 4;
+        if (localPlayers.Data && localPlayers.Count > 0 &&
+            localPlayers.Count <= localPlayers.Max &&
+            localPlayers.Count <= kMaxLocalPlayers)
+        {
+            for (int index = 0; index < localPlayers.Count; ++index)
+            {
+                auto *localPlayer = localPlayers[index];
+                if (!localPlayer || isObjectInvalid(localPlayer) ||
+                    !localPlayer->PlayerController ||
+                    isObjectInvalid(localPlayer->PlayerController))
+                    continue;
+
+                auto *candidate = localPlayer->PlayerController;
+                if (!candidate->IsA(ASTExtraPlayerController::StaticClass()))
+                    continue;
+
+                localController = static_cast<ASTExtraPlayerController *>(candidate);
+                controllerSource = "GameInstance LocalPlayers";
+                break;
+            }
+        }
+    }
+    if (localController)
     {
         static ASTExtraPlayerController *lastLoggedController = nullptr;
         if (lastLoggedController != localController)
@@ -1488,14 +1519,23 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     RefreshFramePlayers();
 
     const bool fontsReady = EnsureFonts();
-    if (!localPlayer)
-        LogEspRenderState("local player was not found in actor snapshot");
+    // Report one state per frame. Logging both the controller and local-pawn
+    // failures made state-change diagnostics alternate at display refresh rate.
+    const char *renderState = nullptr;
+    if (!world)
+        renderState = "UWorld is unavailable";
+    else if (!localController)
+        renderState = "local controller is unavailable";
+    else if (!localPlayer)
+        renderState = "local player was not found in actor snapshot";
     else if (!fontsReady)
-        LogEspRenderState("ESP font assets are unavailable");
+        renderState = "ESP font assets are unavailable";
     else
-        LogEspRenderState("ready");
+        renderState = "ready";
+    LogEspRenderState(renderState);
 
-    LogEspFrameHeartbeat(HUD, world, localController, localPlayer, localPlayerSource);
+    LogEspFrameHeartbeat(HUD, world, localController, controllerSource,
+                         localPlayer, localPlayerSource);
 }
 
 void Box4LineHUD(
