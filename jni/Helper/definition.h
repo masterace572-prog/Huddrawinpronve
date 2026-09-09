@@ -523,9 +523,20 @@ void LogEspRenderState(const char *state)
     }
 }
 
+const char *DescribeLocalPawn(APawn *pawn)
+{
+    if (!pawn)
+        return "null";
+    if (isObjectInvalid(pawn))
+        return "invalid";
+    return pawn->IsA(ASTExtraPlayerCharacter::StaticClass())
+        ? "player-character" : "not-player-character";
+}
+
 void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
                           ASTExtraPlayerController *controller,
-                          ASTExtraPlayerCharacter *localPlayer)
+                          ASTExtraPlayerCharacter *localPlayer,
+                          const char *localPlayerSource)
 {
     static float nextHeartbeatAt = 0.0f;
     if (frameElapsedSeconds < nextHeartbeatAt)
@@ -539,14 +550,18 @@ void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
         exposedPlayers += player.visible ? 1u : 0u;
     }
 
-    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p ackPawn=%p pawn=%p local=%p "
+    APawn *acknowledgedPawn = controller ? controller->AcknowledgedPawn : nullptr;
+    APawn *controllerPawn = controller ? controller->Pawn : nullptr;
+    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p "
+         "ackPawn=%p(%s) pawn=%p(%s) local=%p source=%s "
          "actors=%zu players=%zu projected=%zu exposed=%zu screen=%dx%d",
          static_cast<void *>(hud), hud ? static_cast<void *>(hud->Canvas) : nullptr,
          static_cast<void *>(world), static_cast<void *>(controller),
-         controller ? static_cast<void *>(controller->AcknowledgedPawn) : nullptr,
-         controller ? static_cast<void *>(controller->Pawn) : nullptr,
-         static_cast<void *>(localPlayer), frameActors.size(), framePlayers.size(),
-         projectedPlayers, exposedPlayers, glWidth, glHeight);
+         static_cast<void *>(acknowledgedPawn), DescribeLocalPawn(acknowledgedPawn),
+         static_cast<void *>(controllerPawn), DescribeLocalPawn(controllerPawn),
+         static_cast<void *>(localPlayer), localPlayerSource ? localPlayerSource : "none",
+         frameActors.size(), framePlayers.size(), projectedPlayers, exposedPlayers,
+         glWidth, glHeight);
     nextHeartbeatAt = frameElapsedSeconds + 5.0f;
 }
 
@@ -1426,6 +1441,7 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     RefreshFrameActors(world);
 
     ASTExtraPlayerCharacter *localPlayer = nullptr;
+    const char *localPlayerSource = "none";
     if (localController)
     {
         // The acknowledged pawn is normally ready first, while Pawn is the
@@ -1438,8 +1454,14 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
             return static_cast<ASTExtraPlayerCharacter *>(pawn);
         };
         localPlayer = asLocalPlayerCharacter(localController->AcknowledgedPawn);
+        if (localPlayer)
+            localPlayerSource = "acknowledged-pawn";
         if (!localPlayer)
+        {
             localPlayer = asLocalPlayerCharacter(localController->Pawn);
+            if (localPlayer)
+                localPlayerSource = "controller-pawn";
+        }
 
         // Retain the actor-snapshot fallback for flows where neither controller
         // pawn has replicated but PlayerKey is already available.
@@ -1454,6 +1476,7 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
                 if (player->PlayerKey == localController->PlayerKey)
                 {
                     localPlayer = player;
+                    localPlayerSource = "actor-snapshot";
                     break;
                 }
             }
@@ -1472,7 +1495,7 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     else
         LogEspRenderState("ready");
 
-    LogEspFrameHeartbeat(HUD, world, localController, localPlayer);
+    LogEspFrameHeartbeat(HUD, world, localController, localPlayer, localPlayerSource);
 }
 
 void Box4LineHUD(
