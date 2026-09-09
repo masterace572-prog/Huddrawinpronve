@@ -102,30 +102,23 @@ const FLinearColor kWarning(1.0f, 0.69f, 0.23f, 1.0f);
 const FLinearColor kAccent(0.27f, 0.62f, 1.0f, 1.0f);
 const FLinearColor kFovBlue(0.16f, 0.53f, 1.0f, 1.0f);
 
-// UE's HUD lines are crisp but do not expose an antialias option. A low-alpha
-// wider pass beneath the sharp centre pass gives the ESP lines a soft, smooth
-// edge while retaining good contrast against bright scenery.
-void DrawSmoothLine(AHUD *hud, float x1, float y1, float x2, float y2,
-                    const FLinearColor &color, float thickness = 0.70f)
+// Keep the overlay flat and precise: each ESP stroke is a single solid line
+// with no blur, halo, or glow pass.
+void DrawCleanLine(AHUD *hud, float x1, float y1, float x2, float y2,
+                   const FLinearColor &color, float thickness = 0.70f)
 {
-    if (!hud)
-        return;
-    hud->DrawLine(x1, y1, x2, y2,
-                  FLinearColor(color.R, color.G, color.B, color.A * 0.14f),
-                  thickness + 0.80f);
-    hud->DrawLine(x1, y1, x2, y2, color, thickness);
+    if (hud)
+        hud->DrawLine(x1, y1, x2, y2, color, thickness);
 }
 
 void DrawPanel(AHUD *hud, float x, float y, float width, float height,
                FLinearColor accent)
 {
-    DrawFilledRectangle(hud, {x + 2.0f, y + 3.0f}, width, height,
-                        FLinearColor(0.0f, 0.0f, 0.0f, 0.30f));
     DrawFilledRectangle(hud, {x, y}, width, height, kPanelBackground);
-    DrawSmoothLine(hud, x, y, x + width, y, kPanelBorder, 0.70f);
-    DrawSmoothLine(hud, x, y, x, y + height, kPanelBorder, 0.70f);
-    DrawSmoothLine(hud, x + width, y, x + width, y + height, kPanelBorder, 0.70f);
-    DrawSmoothLine(hud, x, y + height, x + width, y + height, kPanelBorder, 0.70f);
+    DrawCleanLine(hud, x, y, x + width, y, kPanelBorder, 0.70f);
+    DrawCleanLine(hud, x, y, x, y + height, kPanelBorder, 0.70f);
+    DrawCleanLine(hud, x + width, y, x + width, y + height, kPanelBorder, 0.70f);
+    DrawCleanLine(hud, x, y + height, x + width, y + height, kPanelBorder, 0.70f);
     DrawFilledRectangle(hud, {x, y}, width, 2.0f, accent);
     DrawFilledRectangle(hud, {x, y}, 3.0f, height, accent);
 }
@@ -194,10 +187,7 @@ void DrawAimbotFov(AHUD *hud)
     // of covering most of the display.
     const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 84 : 68;
     const float radius = Cheat::Aimbot::Radius;
-    const FLinearColor glow(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.13f);
-    const FLinearColor ring(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.88f);
-    DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, glow,
-                     segments, 1.55f);
+    const FLinearColor ring(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.90f);
     DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, ring,
                      segments, 0.70f);
 }
@@ -215,14 +205,14 @@ void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
     const float bottom = y + height + 3.0f;
     const FLinearColor marker(1.0f, 0.65f, 0.20f, 0.98f);
 
-    DrawSmoothLine(hud, left, top, left + corner, top, marker, 0.85f);
-    DrawSmoothLine(hud, left, top, left, top + corner, marker, 0.85f);
-    DrawSmoothLine(hud, right - corner, top, right, top, marker, 0.85f);
-    DrawSmoothLine(hud, right, top, right, top + corner, marker, 0.85f);
-    DrawSmoothLine(hud, left, bottom - corner, left, bottom, marker, 0.85f);
-    DrawSmoothLine(hud, left, bottom, left + corner, bottom, marker, 0.85f);
-    DrawSmoothLine(hud, right - corner, bottom, right, bottom, marker, 0.85f);
-    DrawSmoothLine(hud, right, bottom - corner, right, bottom, marker, 0.85f);
+    DrawCleanLine(hud, left, top, left + corner, top, marker, 0.85f);
+    DrawCleanLine(hud, left, top, left, top + corner, marker, 0.85f);
+    DrawCleanLine(hud, right - corner, top, right, top, marker, 0.85f);
+    DrawCleanLine(hud, right, top, right, top + corner, marker, 0.85f);
+    DrawCleanLine(hud, left, bottom - corner, left, bottom, marker, 0.85f);
+    DrawCleanLine(hud, left, bottom, left + corner, bottom, marker, 0.85f);
+    DrawCleanLine(hud, right - corner, bottom, right, bottom, marker, 0.85f);
+    DrawCleanLine(hud, right, bottom - corner, right, bottom, marker, 0.85f);
 
     const int previousSize = tslFont->LegacyFontSize;
     tslFont->LegacyFontSize = 9;
@@ -360,7 +350,7 @@ void DrawHUD(AHUD *HUD)
             {
                 if (projected[from] && projected[to])
                 {
-                    OverlayUI::DrawSmoothLine(HUD, boneScreen[from].X, boneScreen[from].Y,
+                    OverlayUI::DrawCleanLine(HUD, boneScreen[from].X, boneScreen[from].Y,
                                               boneScreen[to].X, boneScreen[to].Y,
                                               accent, 0.60f);
                 }
@@ -372,8 +362,6 @@ void DrawHUD(AHUD *HUD)
             if (W2S(headTop, &topScreen))
             {
                 const float radius = FVector2D::Distance(headScreen, topScreen);
-                DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 FLinearColor(accent.R, accent.G, accent.B, 0.14f), 40, 1.45f);
                 DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
                                  accent, 40, 0.60f);
             }
@@ -409,7 +397,7 @@ void DrawHUD(AHUD *HUD)
 
         if (Cheat::Esp::Line)
         {
-            OverlayUI::DrawSmoothLine(HUD, glWidth * 0.5f, 72.0f, headScreen.X, y - 4.0f,
+            OverlayUI::DrawCleanLine(HUD, glWidth * 0.5f, 72.0f, headScreen.X, y - 4.0f,
                                       FLinearColor(accent.R, accent.G, accent.B, 0.72f), 0.65f);
         }
 
