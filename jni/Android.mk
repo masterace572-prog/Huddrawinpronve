@@ -30,11 +30,13 @@ SHADOWHOOK_COMMON_SRC := \
     shadowhook/src/main/cpp/third_party/xdl/xdl_util.c
 
 ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
+    SHADOWHOOK_ARCH := arm64
     SHADOWHOOK_ARCH_SRC := shadowhook/src/main/cpp/arch/arm64/sh_a64.c \
                            shadowhook/src/main/cpp/arch/arm64/sh_inst.c \
                            shadowhook/src/main/cpp/arch/arm64/sh_glue.S
     SHADOWHOOK_ARCH_LDFLAGS := -Wl,-z,max-page-size=16384
 else ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
+    SHADOWHOOK_ARCH := arm
     SHADOWHOOK_ARCH_SRC := shadowhook/src/main/cpp/arch/arm/sh_a32.c \
                            shadowhook/src/main/cpp/arch/arm/sh_inst.c \
                            shadowhook/src/main/cpp/arch/arm/sh_t16.c \
@@ -51,6 +53,7 @@ LOCAL_MODULE := shadowhook
 LOCAL_SRC_FILES := $(SHADOWHOOK_COMMON_SRC) $(SHADOWHOOK_ARCH_SRC)
 LOCAL_C_INCLUDES := $(SHADOWHOOK_SOURCE) \
                     $(SHADOWHOOK_SOURCE)/include \
+                    $(SHADOWHOOK_SOURCE)/arch/$(SHADOWHOOK_ARCH) \
                     $(SHADOWHOOK_SOURCE)/common \
                     $(SHADOWHOOK_SOURCE)/third_party/xdl \
                     $(SHADOWHOOK_SOURCE)/third_party/bsd \
