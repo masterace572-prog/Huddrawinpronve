@@ -56,7 +56,10 @@ LOCAL_C_INCLUDES := $(SHADOWHOOK_SOURCE) \
                     $(SHADOWHOOK_SOURCE)/third_party/bsd \
                     $(SHADOWHOOK_SOURCE)/third_party/lss
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
-LOCAL_CFLAGS := -std=c11 -Os -fvisibility=hidden -ffunction-sections -fdata-sections
+# This project installs hooks by already-resolved absolute address. Permit that
+# supported path if a device hides linker-monitor symbols (error 12).
+LOCAL_CFLAGS := -std=c11 -Os -fvisibility=hidden -ffunction-sections -fdata-sections \
+                -DSH_CONFIG_ALLOW_LINKER_INIT_FAILURE
 LOCAL_LDFLAGS := $(SHADOWHOOK_ARCH_LDFLAGS) -Wl,--exclude-libs,ALL -Wl,--gc-sections \
                  -Wl,--version-script=$(SHADOWHOOK_SOURCE)/shadowhook.map.txt
 LOCAL_LDLIBS := -llog

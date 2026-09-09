@@ -87,7 +87,20 @@ int shadowhook_init(shadowhook_mode_t default_mode, bool debuggable) {
       sh_island_init();
       sh_enter_init();
       sh_switch_init();
-      if (__predict_false(0 != sh_linker_init())) GOTO_END(SHADOWHOOK_ERRNO_INIT_LINKER);
+      if (__predict_false(0 != sh_linker_init())) {
+#ifdef SH_CONFIG_ALLOW_LINKER_INIT_FAILURE
+        // Direct-address hooks do not require ShadowHook's optional linker
+        // load/unload monitor. Some Android 15+ linker builds hide the
+        // soinfo constructor symbols used exclusively by that monitor, which
+        // would otherwise prevent every hook API from being initialized.
+        // Continue only for consumers that deliberately opt in at build time;
+        // symbol-name hooks for libraries loaded after initialization are not
+        // available in this compatibility mode.
+        SH_LOG_WARN("shadowhook: linker monitor unavailable; continuing with direct-address hooks only");
+#else
+        GOTO_END(SHADOWHOOK_ERRNO_INIT_LINKER);
+#endif
+      }
       if (__predict_false(0 != sh_task_init())) GOTO_END(SHADOWHOOK_ERRNO_INIT_TASK);
 
 #undef GOTO_END
