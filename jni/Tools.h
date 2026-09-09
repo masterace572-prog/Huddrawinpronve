@@ -1,8 +1,11 @@
 #pragma once
 
+#include <cstddef>
+#include <cstdint>
 #include <map>
+#include <string>
+#include <string_view>
 #include <jni.h>
-#include "Dobby/dobby.h"
 
 uintptr_t getBaseAddress(std::string_view name);
 uintptr_t getEndAddress(std::string_view name);

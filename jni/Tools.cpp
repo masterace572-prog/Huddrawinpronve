@@ -12,7 +12,7 @@
 #include <openssl/md5.h>
 #include "obfuscate.h"
 #include "Tools.h"
-#include "Substrate/CydiaSubstrate.h"
+#include "shadowhook/shadowhook.h"
 pid_t target_pid = -1;
 
 #define INRANGE(x, a, b)        (x >= a && x <= b)
@@ -137,12 +137,9 @@ bool pvm(void *address, void *buffer, size_t size, bool iswrite) {
 }
 
 void Tools::Hook(void *target, void *replace, void **backup) {
-    unsigned long page_size = sysconf(_SC_PAGESIZE);
-    unsigned long size = page_size * sizeof(uintptr_t);
-    void *p = (void *) ((uintptr_t) target - ((uintptr_t) target % page_size) - page_size);
-    if (mprotect(p, (size_t) size, PROT_EXEC | PROT_READ | PROT_WRITE) == 0) {
-		DobbyHook(target, replace, backup);
-    }
+    if (!target || !replace || !backup)
+        return;
+    shadowhook_hook_func_addr(target, replace, backup);
 }
 
 bool Tools::Read(void *addr, void *buffer, size_t length) {

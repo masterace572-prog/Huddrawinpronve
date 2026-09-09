@@ -1,23 +1,12 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libdobby
-LOCAL_SRC_FILES := Dobby/libraries/$(TARGET_ARCH_ABI)/libdobby.a
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/Dobby/include
-include $(PREBUILT_STATIC_LIBRARY)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := shadowhook
 LOCAL_SRC_FILES := shadowhook/libshadowhook.a
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/shadowhook/
 include $(PREBUILT_STATIC_LIBRARY)
 
 PREBUILT_DIR := prebuilt/fuck
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := tools
-LOCAL_SRC_FILES := $(PREBUILT_DIR)/Tools.a
-include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := KittyMemory
@@ -100,6 +89,7 @@ LOCAL_LDFLAGS += -Wl,--gc-sections,--strip-all, -llog
 LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES :=  main.cpp \
+        ToolsRuntime.cpp \
         SDK/PUBGM_Basic.cpp \
         SDK/PUBGM_Basic_functions.cpp \
         SDK/PUBGM_CoreUObject_functions.cpp \
@@ -111,6 +101,6 @@ LOCAL_CPP_FEATURES := exceptions
 
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv2 -lGLESv3 -lGLESv1_CM -lz
 
-LOCAL_STATIC_LIBRARIES := libdobby And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf tools base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils shadowhook
+LOCAL_STATIC_LIBRARIES := And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils shadowhook
 
 include $(BUILD_SHARED_LIBRARY)
