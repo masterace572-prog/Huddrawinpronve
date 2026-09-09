@@ -539,10 +539,12 @@ void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
         exposedPlayers += player.visible ? 1u : 0u;
     }
 
-    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p local=%p "
+    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p ackPawn=%p pawn=%p local=%p "
          "actors=%zu players=%zu projected=%zu exposed=%zu screen=%dx%d",
          static_cast<void *>(hud), hud ? static_cast<void *>(hud->Canvas) : nullptr,
          static_cast<void *>(world), static_cast<void *>(controller),
+         controller ? static_cast<void *>(controller->AcknowledgedPawn) : nullptr,
+         controller ? static_cast<void *>(controller->Pawn) : nullptr,
          static_cast<void *>(localPlayer), frameActors.size(), framePlayers.size(),
          projectedPlayers, exposedPlayers, glWidth, glHeight);
     nextHeartbeatAt = frameElapsedSeconds + 5.0f;
@@ -1426,17 +1428,21 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     ASTExtraPlayerCharacter *localPlayer = nullptr;
     if (localController)
     {
-        // The controller's acknowledged pawn is available before the actor
-        // snapshot has fully populated during transitions and is the fast path.
-        auto *acknowledgedPawn = localController->AcknowledgedPawn;
-        if (acknowledgedPawn && !isObjectInvalid(acknowledgedPawn) &&
-            acknowledgedPawn->IsA(ASTExtraPlayerCharacter::StaticClass()))
+        // The acknowledged pawn is normally ready first, while Pawn is the
+        // stable fallback on BGMI flows where acknowledgement is delayed.
+        const auto asLocalPlayerCharacter = [](APawn *pawn) -> ASTExtraPlayerCharacter *
         {
-            localPlayer = static_cast<ASTExtraPlayerCharacter *>(acknowledgedPawn);
-        }
+            if (!pawn || isObjectInvalid(pawn) ||
+                !pawn->IsA(ASTExtraPlayerCharacter::StaticClass()))
+                return nullptr;
+            return static_cast<ASTExtraPlayerCharacter *>(pawn);
+        };
+        localPlayer = asLocalPlayerCharacter(localController->AcknowledgedPawn);
+        if (!localPlayer)
+            localPlayer = asLocalPlayerCharacter(localController->Pawn);
 
-        // Retain the actor-snapshot fallback for flows where a pawn has not yet
-        // been acknowledged but PlayerKey has already replicated.
+        // Retain the actor-snapshot fallback for flows where neither controller
+        // pawn has replicated but PlayerKey is already available.
         if (!localPlayer)
         {
             for (auto *actor : GetFrameActors())
