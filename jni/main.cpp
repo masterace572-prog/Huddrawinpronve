@@ -611,13 +611,34 @@ void AutoEspOn()
 void (*oReceiveDrawHUD)(AHUD *pHUD, int SizeX, int SizeY);
 void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
 {
-    if (pHUD)
+    static bool loggedFirstCallback = false;
+    if (!loggedFirstCallback)
     {
-        RenderESPPRIVATE(pHUD, SizeX, SizeY);
-        DrawHUD(pHUD);
-        DrawMemory();
+        LOGI("HUD hook entered: hud=%p screen=%dx%d original=%p",
+             static_cast<void *>(pHUD), SizeX, SizeY,
+             reinterpret_cast<void *>(oReceiveDrawHUD));
+        loggedFirstCallback = true;
+    }
+
+    // UE prepares/updates the HUD Canvas inside its native handler. Draw our
+    // overlay after that handler, otherwise RenderESPPRIVATE sees a null or
+    // stale Canvas and every ESP draw is skipped.
+    if (!oReceiveDrawHUD)
+    {
+        LOGE("HUD hook has no original trampoline; ESP rendering is disabled");
+        return;
     }
     oReceiveDrawHUD(pHUD, SizeX, SizeY);
+
+    if (!pHUD)
+    {
+        LOGW("HUD callback received a null HUD pointer");
+        return;
+    }
+
+    RenderESPPRIVATE(pHUD, SizeX, SizeY);
+    DrawHUD(pHUD);
+    DrawMemory();
 }
 
 
@@ -646,35 +667,78 @@ void xShootBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, in
 
 
 
-void *RunGame(void *) 
+void *RunGame(void *)
 {
+    LOGI("ESP bootstrap started; waiting for libUE4.so");
     Cheat::libUE4Base = Tools::GetBaseAddress("libUE4.so");
 
-    while (!Cheat::libUE4Base) 
+    while (!Cheat::libUE4Base)
     {
         Cheat::libUE4Base = Tools::GetBaseAddress("libUE4.so");
         sleep(1);
     }
+    LOGI("libUE4.so loaded at %p", reinterpret_cast<void *>(Cheat::libUE4Base));
 
     FName::GNames = GetGNames();
-
-    while (!FName::GNames) 
+    while (!FName::GNames)
     {
         FName::GNames = GetGNames();
         sleep(1);
     }
+    LOGI("GNames resolved at %p", static_cast<void *>(FName::GNames));
 
-    UObject::GUObjectArray = (FUObjectArray *)(Cheat::libUE4Base + Cheat::GUObject_Offset);
-    
-    shadowhook_init(shadowhook_mode_t::SHADOWHOOK_MODE_UNIQUE, 0);
-    
-    shadowhook_hook_func_addr((void *)(Cheat::libUE4Base + 0x6BB0CFC), (void *)xShootBulletInner, (void **)&ShootBulletInner);
-    
-   shadowhook_hook_func_addr((void *)(Cheat::libUE4Base + 0xAA8E774), (void *)hkReceiveDrawHUD, (void **)&oReceiveDrawHUD);
-   
+    UObject::GUObjectArray = reinterpret_cast<FUObjectArray *>(
+        Cheat::libUE4Base + Cheat::GUObject_Offset);
+    LOGI("GUObjectArray configured at %p", static_cast<void *>(UObject::GUObjectArray));
+
+    const int initResult = shadowhook_init(shadowhook_mode_t::SHADOWHOOK_MODE_UNIQUE, 0);
+    if (initResult != 0)
+        LOGE("shadowhook init failed: code=%d", initResult);
+    else
+        LOGI("shadowhook initialized");
+
+    const uintptr_t bulletAddress = Cheat::libUE4Base + 0x6BB0CFC;
+    const uintptr_t hudAddress = Cheat::libUE4Base + 0xAA8E774;
+    void *bulletStub = shadowhook_hook_func_addr(reinterpret_cast<void *>(bulletAddress),
+                                                   reinterpret_cast<void *>(xShootBulletInner),
+                                                   reinterpret_cast<void **>(&ShootBulletInner));
+    if (!bulletStub)
+    {
+        const int error = shadowhook_get_errno();
+        const char *message = shadowhook_to_errmsg(error);
+        LOGE("bullet hook failed: target=%p error=%d (%s)",
+             reinterpret_cast<void *>(bulletAddress), error,
+             message ? message : "unknown error");
+    }
+    else
+    {
+        LOGI("bullet hook installed: target=%p trampoline=%p",
+             reinterpret_cast<void *>(bulletAddress),
+             reinterpret_cast<void *>(ShootBulletInner));
+    }
+
+    void *hudStub = shadowhook_hook_func_addr(reinterpret_cast<void *>(hudAddress),
+                                                reinterpret_cast<void *>(hkReceiveDrawHUD),
+                                                reinterpret_cast<void **>(&oReceiveDrawHUD));
+    if (!hudStub || !oReceiveDrawHUD)
+    {
+        const int error = shadowhook_get_errno();
+        const char *message = shadowhook_to_errmsg(error);
+        LOGE("HUD hook failed: target=%p stub=%p original=%p error=%d (%s)",
+             reinterpret_cast<void *>(hudAddress), hudStub,
+             reinterpret_cast<void *>(oReceiveDrawHUD), error,
+             message ? message : "unknown error");
+    }
+    else
+    {
+        LOGI("HUD hook installed: target=%p trampoline=%p",
+             reinterpret_cast<void *>(hudAddress),
+             reinterpret_cast<void *>(oReceiveDrawHUD));
+    }
+
     items_data = json::parse(JSON_ITEMS);
     AutoEspOn();
-
+    LOGI("ESP defaults enabled");
     return nullptr;
 }
 

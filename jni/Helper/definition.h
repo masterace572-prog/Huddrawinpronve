@@ -269,7 +269,10 @@ static UFont *tslFont = 0, *robotoTinyFont = 0;
 
 bool EnsureFonts()
 {
-    if (tslFont && robotoTinyFont)
+    // ESP only draws with tslFont. Treat the secondary distance-field font as
+    // optional; requiring it made the entire overlay disappear on builds that
+    // do not expose that asset even though the primary Roboto font was valid.
+    if (tslFont)
         return true;
 
     // Object lookups are throttled and remain on the HUD/game thread instead
@@ -280,9 +283,10 @@ bool EnsureFonts()
         return false;
 
     tslFont = UObject::FindObject<UFont>("Font Roboto.Roboto");
-    robotoTinyFont = UObject::FindObject<UFont>("Font RobotoDistanceField.RobotoDistanceField");
+    if (!robotoTinyFont)
+        robotoTinyFont = UObject::FindObject<UFont>("Font RobotoDistanceField.RobotoDistanceField");
     nextFontLookup = now + std::chrono::seconds(1);
-    return tslFont && robotoTinyFont;
+    return tslFont != nullptr;
 }
 
 float ScaleRand;
@@ -474,6 +478,44 @@ float GetFrameElapsedSeconds()
     return frameElapsedSeconds;
 }
 
+// Render callbacks run at display refresh rate. Emit diagnostics only when the
+// pipeline state changes (and a compact heartbeat every few seconds), so
+// logcat remains useful without becoming a source of frame hitches.
+void LogEspRenderState(const char *state)
+{
+    static const char *previousState = nullptr;
+    if (!previousState || strcmp(previousState, state) != 0)
+    {
+        LOGW("ESP state: %s", state);
+        previousState = state;
+    }
+}
+
+void LogEspFrameHeartbeat(AHUD *hud, UWorld *world,
+                          ASTExtraPlayerController *controller,
+                          ASTExtraPlayerCharacter *localPlayer)
+{
+    static float nextHeartbeatAt = 0.0f;
+    if (frameElapsedSeconds < nextHeartbeatAt)
+        return;
+
+    size_t projectedPlayers = 0;
+    size_t exposedPlayers = 0;
+    for (const auto &player : framePlayers)
+    {
+        projectedPlayers += player.projected ? 1u : 0u;
+        exposedPlayers += player.visible ? 1u : 0u;
+    }
+
+    LOGI("ESP heartbeat: hud=%p canvas=%p world=%p controller=%p local=%p "
+         "actors=%zu players=%zu projected=%zu exposed=%zu screen=%dx%d",
+         static_cast<void *>(hud), hud ? static_cast<void *>(hud->Canvas) : nullptr,
+         static_cast<void *>(world), static_cast<void *>(controller),
+         static_cast<void *>(localPlayer), frameActors.size(), framePlayers.size(),
+         projectedPlayers, exposedPlayers, glWidth, glHeight);
+    nextHeartbeatAt = frameElapsedSeconds + 5.0f;
+}
+
 namespace
 {
 // Head-first preserves a head-only exposure. Body-first is used for chest
@@ -539,8 +581,13 @@ std::vector<AActor *> GetActors(UWorld *World = nullptr)
 {
     if (!World)
         World = GetWorld();
-    if (!World || !World->PersistentLevel)
+    if (!World)
         return {};
+    if (!World->PersistentLevel)
+    {
+        LogEspRenderState("persistent level is unavailable");
+        return {};
+    }
 
     struct ActorArray
     {
@@ -558,7 +605,19 @@ std::vector<AActor *> GetActors(UWorld *World = nullptr)
     constexpr int32_t kMaxActorsPerFrame = 4096;
     if (!actors || !actors->base || actors->count <= 0 ||
         actors->count > actors->max || actors->count > kMaxActorsPerFrame)
+    {
+        LogEspRenderState("actor-array metadata is invalid or empty");
+        static float nextInvalidActorLogAt = 0.0f;
+        if (frameElapsedSeconds >= nextInvalidActorLogAt)
+        {
+            LOGW("ESP actor array rejected: metadata=%p base=%p count=%d max=%d",
+                 static_cast<void *>(actors),
+                 actors ? reinterpret_cast<void *>(actors->base) : nullptr,
+                 actors ? actors->count : 0, actors ? actors->max : 0);
+            nextInvalidActorLogAt = frameElapsedSeconds + 5.0f;
+        }
         return {};
+    }
 
     std::vector<AActor *> actorsForFrame;
     actorsForFrame.reserve(static_cast<size_t>(actors->count));
@@ -584,6 +643,17 @@ void RefreshFrameActors(UWorld *World)
     {
         if (!isObjectInvalid(actor))
             frameActors.push_back(actor);
+    }
+
+    if (!actors.empty() && frameActors.empty())
+    {
+        LogEspRenderState("all actor pointers were rejected by validation");
+        static float nextRejectedActorLogAt = 0.0f;
+        if (frameElapsedSeconds >= nextRejectedActorLogAt)
+        {
+            LOGW("ESP actor validation rejected all %zu actor pointers", actors.size());
+            nextRejectedActorLogAt = frameElapsedSeconds + 5.0f;
+        }
     }
 }
 
@@ -1218,8 +1288,22 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     glHeight = ScreenHeight;
     UpdateFrameTiming();
 
-    if (!HUD || !HUD->Canvas)
+    if (!HUD)
     {
+        LogEspRenderState("HUD pointer is null");
+        frameActors.clear();
+        framePlayers.clear();
+        Cheat::localPlayer = nullptr;
+        Cheat::localController = nullptr;
+        ClearAimTargetLock();
+        return;
+    }
+    if (!HUD->Canvas)
+    {
+        // If this persists, the draw hook is being called before the original
+        // HUD callback prepares Canvas. hkReceiveDrawHUD calls the original
+        // callback first to avoid this state.
+        LogEspRenderState("HUD Canvas is unavailable");
         frameActors.clear();
         framePlayers.clear();
         Cheat::localPlayer = nullptr;
@@ -1229,11 +1313,16 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     }
 
     auto *world = GetWorld();
+    if (!world)
+        LogEspRenderState("UWorld is unavailable");
+
     auto *localController = (world && world->NetDriver &&
                              world->NetDriver->ServerConnection)
         ? reinterpret_cast<ASTExtraPlayerController *>(
             world->NetDriver->ServerConnection->PlayerController)
         : nullptr;
+    if (!localController)
+        LogEspRenderState("local controller is unavailable");
 
     RefreshFrameActors(world);
 
@@ -1257,7 +1346,16 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     Cheat::localPlayer = localPlayer;
     Cheat::localController = localController;
     RefreshFramePlayers();
-    EnsureFonts();
+
+    const bool fontsReady = EnsureFonts();
+    if (!localPlayer)
+        LogEspRenderState("local player was not found in actor snapshot");
+    else if (!fontsReady)
+        LogEspRenderState("ESP font assets are unavailable");
+    else
+        LogEspRenderState("ready");
+
+    LogEspFrameHeartbeat(HUD, world, localController, localPlayer);
 }
 
 void Box4LineHUD(
