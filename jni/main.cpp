@@ -100,18 +100,19 @@ const FLinearColor kVisible(0.18f, 0.92f, 0.72f, 1.0f);
 const FLinearColor kHidden(1.0f, 0.32f, 0.47f, 1.0f);
 const FLinearColor kWarning(1.0f, 0.69f, 0.23f, 1.0f);
 const FLinearColor kAccent(0.27f, 0.62f, 1.0f, 1.0f);
+const FLinearColor kFovBlue(0.16f, 0.53f, 1.0f, 1.0f);
 
 // UE's HUD lines are crisp but do not expose an antialias option. A low-alpha
 // wider pass beneath the sharp centre pass gives the ESP lines a soft, smooth
 // edge while retaining good contrast against bright scenery.
 void DrawSmoothLine(AHUD *hud, float x1, float y1, float x2, float y2,
-                    const FLinearColor &color, float thickness = 1.0f)
+                    const FLinearColor &color, float thickness = 0.70f)
 {
     if (!hud)
         return;
     hud->DrawLine(x1, y1, x2, y2,
-                  FLinearColor(color.R, color.G, color.B, color.A * 0.18f),
-                  thickness + 1.45f);
+                  FLinearColor(color.R, color.G, color.B, color.A * 0.14f),
+                  thickness + 0.80f);
     hud->DrawLine(x1, y1, x2, y2, color, thickness);
 }
 
@@ -121,10 +122,10 @@ void DrawPanel(AHUD *hud, float x, float y, float width, float height,
     DrawFilledRectangle(hud, {x + 2.0f, y + 3.0f}, width, height,
                         FLinearColor(0.0f, 0.0f, 0.0f, 0.30f));
     DrawFilledRectangle(hud, {x, y}, width, height, kPanelBackground);
-    DrawSmoothLine(hud, x, y, x + width, y, kPanelBorder, 0.95f);
-    DrawSmoothLine(hud, x, y, x, y + height, kPanelBorder, 0.95f);
-    DrawSmoothLine(hud, x + width, y, x + width, y + height, kPanelBorder, 0.95f);
-    DrawSmoothLine(hud, x, y + height, x + width, y + height, kPanelBorder, 0.95f);
+    DrawSmoothLine(hud, x, y, x + width, y, kPanelBorder, 0.70f);
+    DrawSmoothLine(hud, x, y, x, y + height, kPanelBorder, 0.70f);
+    DrawSmoothLine(hud, x + width, y, x + width, y + height, kPanelBorder, 0.70f);
+    DrawSmoothLine(hud, x, y + height, x + width, y + height, kPanelBorder, 0.70f);
     DrawFilledRectangle(hud, {x, y}, width, 2.0f, accent);
     DrawFilledRectangle(hud, {x, y}, 3.0f, height, accent);
 }
@@ -193,12 +194,12 @@ void DrawAimbotFov(AHUD *hud)
     // of covering most of the display.
     const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 84 : 68;
     const float radius = Cheat::Aimbot::Radius;
-    const FLinearColor glow(kAccent.R, kAccent.G, kAccent.B, 0.16f);
-    const FLinearColor ring(kAccent.R, kAccent.G, kAccent.B, 0.82f);
+    const FLinearColor glow(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.13f);
+    const FLinearColor ring(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.88f);
     DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, glow,
-                     segments, 2.75f);
+                     segments, 1.55f);
     DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, ring,
-                     segments, 0.95f);
+                     segments, 0.70f);
 }
 
 void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
@@ -214,14 +215,14 @@ void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
     const float bottom = y + height + 3.0f;
     const FLinearColor marker(1.0f, 0.65f, 0.20f, 0.98f);
 
-    DrawSmoothLine(hud, left, top, left + corner, top, marker, 1.25f);
-    DrawSmoothLine(hud, left, top, left, top + corner, marker, 1.25f);
-    DrawSmoothLine(hud, right - corner, top, right, top, marker, 1.25f);
-    DrawSmoothLine(hud, right, top, right, top + corner, marker, 1.25f);
-    DrawSmoothLine(hud, left, bottom - corner, left, bottom, marker, 1.25f);
-    DrawSmoothLine(hud, left, bottom, left + corner, bottom, marker, 1.25f);
-    DrawSmoothLine(hud, right - corner, bottom, right, bottom, marker, 1.25f);
-    DrawSmoothLine(hud, right, bottom - corner, right, bottom, marker, 1.25f);
+    DrawSmoothLine(hud, left, top, left + corner, top, marker, 0.85f);
+    DrawSmoothLine(hud, left, top, left, top + corner, marker, 0.85f);
+    DrawSmoothLine(hud, right - corner, top, right, top, marker, 0.85f);
+    DrawSmoothLine(hud, right, top, right, top + corner, marker, 0.85f);
+    DrawSmoothLine(hud, left, bottom - corner, left, bottom, marker, 0.85f);
+    DrawSmoothLine(hud, left, bottom, left + corner, bottom, marker, 0.85f);
+    DrawSmoothLine(hud, right - corner, bottom, right, bottom, marker, 0.85f);
+    DrawSmoothLine(hud, right, bottom - corner, right, bottom, marker, 0.85f);
 
     const int previousSize = tslFont->LegacyFontSize;
     tslFont->LegacyFontSize = 9;
@@ -361,7 +362,7 @@ void DrawHUD(AHUD *HUD)
                 {
                     OverlayUI::DrawSmoothLine(HUD, boneScreen[from].X, boneScreen[from].Y,
                                               boneScreen[to].X, boneScreen[to].Y,
-                                              accent, 0.90f);
+                                              accent, 0.60f);
                 }
             }
 
@@ -372,9 +373,9 @@ void DrawHUD(AHUD *HUD)
             {
                 const float radius = FVector2D::Distance(headScreen, topScreen);
                 DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 FLinearColor(accent.R, accent.G, accent.B, 0.18f), 40, 2.3f);
+                                 FLinearColor(accent.R, accent.G, accent.B, 0.14f), 40, 1.45f);
                 DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 accent, 40, 0.9f);
+                                 accent, 40, 0.60f);
             }
         }
 
@@ -409,7 +410,7 @@ void DrawHUD(AHUD *HUD)
         if (Cheat::Esp::Line)
         {
             OverlayUI::DrawSmoothLine(HUD, glWidth * 0.5f, 72.0f, headScreen.X, y - 4.0f,
-                                      FLinearColor(accent.R, accent.G, accent.B, 0.74f), 0.95f);
+                                      FLinearColor(accent.R, accent.G, accent.B, 0.72f), 0.65f);
         }
 
         OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible, isKnocked);
