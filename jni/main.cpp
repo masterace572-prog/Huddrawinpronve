@@ -21,6 +21,75 @@ struct ItemVisual
 
 std::unordered_map<int, ItemVisual> itemVisuals;
 
+bool IsFiniteVector(const FVector &value)
+{
+    return std::isfinite(value.X) && std::isfinite(value.Y) && std::isfinite(value.Z);
+}
+
+float VectorDistance(const FVector &from, const FVector &to)
+{
+    const float x = to.X - from.X;
+    const float y = to.Y - from.Y;
+    const float z = to.Z - from.Z;
+    return sqrtf((x * x) + (y * y) + (z * z));
+}
+
+FVector GetTargetVelocity(ASTExtraPlayerCharacter *target)
+{
+    const FVector playerVelocity = target->GetVelocity();
+    if (!target->CurrentVehicle)
+        return playerVelocity;
+
+    const FVector vehicleVelocity = target->CurrentVehicle->ReplicatedMovement.LinearVelocity;
+    const float vehicleSpeedSquared = (vehicleVelocity.X * vehicleVelocity.X) +
+        (vehicleVelocity.Y * vehicleVelocity.Y) + (vehicleVelocity.Z * vehicleVelocity.Z);
+    return vehicleSpeedSquared > 25.0f ? vehicleVelocity : playerVelocity;
+}
+
+FVector PredictAimPosition(ASTExtraPlayerCharacter *target, const FVector &aimPoint,
+                           const FVector &shotOrigin, float bulletSpeed)
+{
+    if (!target || !IsFiniteVector(aimPoint) || !IsFiniteVector(shotOrigin) ||
+        !std::isfinite(bulletSpeed) || bulletSpeed < 1000.0f)
+        return aimPoint;
+
+    const FVector velocity = GetTargetVelocity(target);
+    if (!IsFiniteVector(velocity))
+        return aimPoint;
+
+    const float maxFlightTime = std::max(0.10f, Cheat::Aimbot::MaxPredictionTime);
+    const float latency = std::max(0.0f, Cheat::Aimbot::PredictionLatency);
+    float flightTime = std::min(VectorDistance(shotOrigin, aimPoint) / bulletSpeed,
+                                maxFlightTime);
+
+    // Recompute time of flight against the leading point. Two bounded passes
+    // handle side-running targets substantially better than a single distance /
+    // speed approximation while remaining stable with intermittent snapshots.
+    for (int iteration = 0; iteration < 2; ++iteration)
+    {
+        const float leadTime = flightTime + latency;
+        const FVector leadingPoint{
+            aimPoint.X + (velocity.X * leadTime),
+            aimPoint.Y + (velocity.Y * leadTime),
+            aimPoint.Z + (velocity.Z * leadTime)
+        };
+        flightTime = std::min(VectorDistance(shotOrigin, leadingPoint) / bulletSpeed,
+                              maxFlightTime);
+    }
+
+    const float leadTime = flightTime + latency;
+    FVector predicted{
+        aimPoint.X + (velocity.X * leadTime),
+        aimPoint.Y + (velocity.Y * leadTime),
+        aimPoint.Z + (velocity.Z * leadTime)
+    };
+    // Compensate only for projectile flight time; latency shifts the target but
+    // does not increase the amount of gravitational projectile drop.
+    predicted.Z += 0.5f * std::max(0.0f, Cheat::Aimbot::PredictionGravity) *
+        flightTime * flightTime;
+    return IsFiniteVector(predicted) ? predicted : aimPoint;
+}
+
 namespace OverlayUI
 {
 const FLinearColor kPanelBackground(0.018f, 0.031f, 0.064f, 0.91f);
@@ -65,7 +134,7 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     if (!Cheat::Esp::Counter || !tslFont)
         return;
 
-    constexpr float width = 232.0f;
+    constexpr float width = 270.0f;
     constexpr float height = 44.0f;
     const float x = (glWidth - width) * 0.5f;
     constexpr float y = 18.0f;
@@ -76,28 +145,41 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     DrawOutlinedText(hud, FString("HUDDRAW  /  LIVE MATCH"), {x + 13.0f, y + 7.0f},
                      kTextMuted, COLOR_BLACK, false);
 
-    const std::string enemyText = "ENEMIES  " + std::to_string(enemies);
-    const std::string botText = "BOTS  " + std::to_string(bots);
+    const std::string enemyText = "ENEMIES " + std::to_string(enemies);
+    const std::string botText = "BOTS " + std::to_string(bots);
     const float delta = GetFrameDeltaSeconds();
     const int fps = delta > 0.0f ? static_cast<int>(std::round(1.0f / delta)) : 0;
     const std::string fpsText = std::to_string(fps) + " FPS";
-    tslFont->LegacyFontSize = 11;
-    DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 13.0f, y + 23.0f},
-                     kTextPrimary, COLOR_BLACK, false);
-    DrawOutlinedText(hud, FString(botText.c_str()), {x + 111.0f, y + 23.0f},
-                     kWarning, COLOR_BLACK, false);
-    DrawOutlinedText(hud, FString(fpsText.c_str()), {x + 165.0f, y + 23.0f},
-                     kVisible, COLOR_BLACK, false);
+    constexpr float rowTop = y + 22.0f;
+    DrawFilledRectangle(hud, {x + 90.0f, rowTop}, 1.0f, 14.0f,
+                        FLinearColor(kPanelBorder.R, kPanelBorder.G, kPanelBorder.B, 0.58f));
+    DrawFilledRectangle(hud, {x + 180.0f, rowTop}, 1.0f, 14.0f,
+                        FLinearColor(kPanelBorder.R, kPanelBorder.G, kPanelBorder.B, 0.58f));
+
+    tslFont->LegacyFontSize = 10;
+    DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 45.0f, y + 23.0f},
+                     kTextPrimary, COLOR_BLACK, true);
+    DrawOutlinedText(hud, FString(botText.c_str()), {x + 135.0f, y + 23.0f},
+                     kWarning, COLOR_BLACK, true);
+    DrawOutlinedText(hud, FString(fpsText.c_str()), {x + 225.0f, y + 23.0f},
+                     kVisible, COLOR_BLACK, true);
     tslFont->LegacyFontSize = previousSize;
 }
 
 FLinearColor HealthColor(float percentage)
 {
-    if (percentage > 0.70f)
-        return kVisible;
-    if (percentage > 0.30f)
-        return kWarning;
-    return kHidden;
+    percentage = std::max(0.0f, std::min(percentage, 1.0f));
+    const FLinearColor low(1.0f, 0.24f, 0.34f, 1.0f);
+    const FLinearColor middle(1.0f, 0.76f, 0.17f, 1.0f);
+    const FLinearColor full(0.14f, 0.94f, 0.54f, 1.0f);
+    const FLinearColor &from = percentage < 0.50f ? low : middle;
+    const FLinearColor &to = percentage < 0.50f ? middle : full;
+    const float blend = percentage < 0.50f ? percentage * 2.0f :
+        (percentage - 0.50f) * 2.0f;
+    return FLinearColor(
+        from.R + ((to.R - from.R) * blend),
+        from.G + ((to.G - from.G) * blend),
+        from.B + ((to.B - from.B) * blend), 1.0f);
 }
 
 void DrawAimbotFov(AHUD *hud)
@@ -149,28 +231,29 @@ void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
 }
 
 void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
-                    float y, float distance, bool visible)
+                    float y, float distance, bool visible, bool knocked)
 {
     if (!hud || !hud->Canvas || !tslFont ||
-        (!Cheat::Esp::Name && !Cheat::Esp::Distance))
+        (!Cheat::Esp::Name && !Cheat::Esp::Distance && !knocked))
         return;
 
     const int previousSize = tslFont->LegacyFontSize;
-    const FLinearColor accent = visible ? kVisible : kHidden;
+    const FLinearColor visibilityColor = visible ? kVisible : kHidden;
+    const FLinearColor accent = knocked ? kHidden : visibilityColor;
     float tagBottom = y - 5.0f;
 
-    if (Cheat::Esp::Distance)
+    if (Cheat::Esp::Distance || knocked)
     {
-        const std::string distanceText = std::to_string(
+        const std::string statusText = knocked ? "KNOCKED" : std::to_string(
             static_cast<int>(std::round(distance))) + " m";
-        const FString distanceLabel(distanceText.c_str());
+        const FString statusLabel(statusText.c_str());
         tslFont->LegacyFontSize = 9;
-        constexpr float tagWidth = 54.0f;
+        const float tagWidth = knocked ? 76.0f : 54.0f;
         tagBottom -= 13.0f;
         DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, tagWidth, 13.0f,
                             FLinearColor(0.015f, 0.028f, 0.055f, 0.84f));
         DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, 2.0f, 13.0f, accent);
-        DrawOutlinedText(hud, distanceLabel, {x, tagBottom + 1.0f}, accent,
+        DrawOutlinedText(hud, statusLabel, {x, tagBottom + 1.0f}, accent,
                          COLOR_BLACK, true);
         tagBottom -= 3.0f;
     }
@@ -231,7 +314,10 @@ void DrawHUD(AHUD *HUD)
         if (height < 4.0f)
             continue;
 
+        // entry.visible is the cached exposed-bone result used by the aimbot,
+        // keeping tracer/skeleton colours and target eligibility in sync.
         const bool isVisible = entry.visible;
+        const bool isKnocked = !player->bDead && player->Health <= 0.0f;
         const FLinearColor accent = isVisible ? OverlayUI::kVisible : OverlayUI::kHidden;
         const float distance = entry.distance;
         const float extraTop = height * 0.10f;
@@ -297,28 +383,26 @@ void DrawHUD(AHUD *HUD)
         if (entry.player == selectedTarget)
             OverlayUI::DrawSelectedTargetMarker(HUD, x, y, width, boxHeight);
 
-        if (Cheat::Esp::Health)
+        // A knocked player is represented by the KNOCKED status tag only;
+        // do not render their bleed-out value as if it were normal HP.
+        if (Cheat::Esp::Health && !isKnocked)
         {
             const float maxHealth = player->HealthMax;
             if (maxHealth > 0.0f)
             {
-                const float currentHealth = std::max(0.0f,
-                    std::min(player->Health, maxHealth));
-                float healthPercentage = currentHealth / maxHealth;
-                if (currentHealth <= 0.0f)
-                    healthPercentage = std::max(0.0f,
-                        std::min(player->NearDeathBreath / maxHealth, 1.0f));
-
-                constexpr float barWidth = 3.0f;
-                const float barX = x - barWidth - (width * 0.10f);
-                DrawFilledRectangle(HUD, {barX - 1.0f, y - 1.0f}, barWidth + 2.0f,
-                                    boxHeight + 2.0f, OverlayUI::kPanelBorder);
-                DrawFilledRectangle(HUD, {barX, y}, barWidth, boxHeight,
-                                    FLinearColor(0.0f, 0.0f, 0.0f, 0.58f));
-                const float filledHeight = boxHeight * healthPercentage;
-                DrawFilledRectangle(HUD, {barX, y + boxHeight - filledHeight},
-                                    barWidth, filledHeight,
-                                    OverlayUI::HealthColor(healthPercentage));
+                const float healthPercentage = std::max(0.0f, std::min(
+                    player->Health / maxHealth, 1.0f));
+                const float healthWidth = std::max(30.0f, std::min(width * 1.22f, 72.0f));
+                constexpr float healthHeight = 3.0f;
+                const float healthX = headScreen.X - (healthWidth * 0.5f);
+                const float healthY = rootScreen.Y + 6.0f;
+                DrawFilledRectangle(HUD, {healthX - 1.0f, healthY - 1.0f},
+                                    healthWidth + 2.0f, healthHeight + 2.0f,
+                                    FLinearColor(0.0f, 0.0f, 0.0f, 0.72f));
+                DrawFilledRectangle(HUD, {healthX, healthY}, healthWidth, healthHeight,
+                                    FLinearColor(0.05f, 0.08f, 0.13f, 0.95f));
+                DrawFilledRectangle(HUD, {healthX, healthY}, healthWidth * healthPercentage,
+                                    healthHeight, OverlayUI::HealthColor(healthPercentage));
             }
         }
 
@@ -328,7 +412,7 @@ void DrawHUD(AHUD *HUD)
                                       FLinearColor(accent.R, accent.G, accent.B, 0.74f), 0.95f);
         }
 
-        OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible);
+        OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible, isKnocked);
     }
 
     // Player actors are consumed above from the precomputed snapshot. The
@@ -489,26 +573,13 @@ void DrawMemory()
                             ? shootWeapon->ShootWeaponEntityComponent
                             : nullptr;
 
-                        if (Cheat::Aimbot::AimPrediction && entity)
+                        auto *cameraManager = Cheat::localController->PlayerCameraManager;
+                        if (Cheat::Aimbot::AimPrediction && entity && cameraManager)
                         {
                             const float bulletSpeed = *reinterpret_cast<float *>(
                                 reinterpret_cast<uintptr_t>(entity) + 0x560);
-                            if (std::isfinite(bulletSpeed) && bulletSpeed > 1.0f)
-                            {
-                                const auto *vehicle = target->CurrentVehicle;
-                                const FVector velocity = vehicle
-                                    ? vehicle->ReplicatedMovement.LinearVelocity
-                                    : target->GetVelocity();
-                                const float distance = Cheat::localPlayer->GetDistanceTo(target);
-                                const float travelTime = distance / bulletSpeed;
-
-                                targetAimPos = UKismetMathLibrary::Add_VectorVector(
-                                    targetAimPos,
-                                    UKismetMathLibrary::Multiply_VectorFloat(
-                                        velocity, travelTime));
-                                targetAimPos.Z += velocity.Z * travelTime +
-                                    0.5f * 573.0f * travelTime * travelTime;
-                            }
+                            targetAimPos = PredictAimPosition(target, targetAimPos,
+                                cameraManager->CameraCache.POV.Location, bulletSpeed);
                         }
 
                         if (Cheat::localPlayer->bIsWeaponFiring)
@@ -517,7 +588,6 @@ void DrawMemory()
                             targetAimPos.Z -= distance * Cheat::Aimbot::RecoilSet;
                         }
 
-                        auto *cameraManager = Cheat::localController->PlayerCameraManager;
                         if (cameraManager)
                         {
                             const FRotator aimRotation = ToRotator(
@@ -613,7 +683,7 @@ void AutoEspOn()
 
     Cheat::Aimbot::Enable = true;
     Cheat::Aimbot::StickyTarget = true;
-    Cheat::Aimbot::Humanize = true;
+    Cheat::Aimbot::Humanize = false;
     Cheat::Aimbot::AimPrediction = true;
     Cheat::Aimbot::Trigger = EAimTrigger::Both;
     Cheat::Aimbot::RecoilSet = 1.045f;
@@ -621,13 +691,16 @@ void AutoEspOn()
     Cheat::Aimbot::IgnoreKnock = true;
     Cheat::Aimbot::Range = 250.0f;
     Cheat::Aimbot::Radius = 240.0f;
-    Cheat::Aimbot::ReactionDelay = 0.140f;
-    Cheat::Aimbot::AcquisitionTime = 0.180f;
-    Cheat::Aimbot::TrackingSpeed = 7.5f;
-    Cheat::Aimbot::MaxPitchSpeed = 110.0f;
-    Cheat::Aimbot::MaxYawSpeed = 145.0f;
-    Cheat::Aimbot::AimDeadzone = 0.08f;
-    Cheat::Aimbot::MicroJitter = 0.10f;
+    Cheat::Aimbot::ReactionDelay = 0.0f;
+    Cheat::Aimbot::AcquisitionTime = 0.0f;
+    Cheat::Aimbot::TrackingSpeed = 18.0f;
+    Cheat::Aimbot::MaxPitchSpeed = 540.0f;
+    Cheat::Aimbot::MaxYawSpeed = 720.0f;
+    Cheat::Aimbot::AimDeadzone = 0.02f;
+    Cheat::Aimbot::MicroJitter = 0.0f;
+    Cheat::Aimbot::PredictionLatency = 0.035f;
+    Cheat::Aimbot::PredictionGravity = 980.0f;
+    Cheat::Aimbot::MaxPredictionTime = 0.55f;
     Cheat::Aimbot::BoneRefreshInterval = 0.08f;
     Cheat::Aimbot::Target = Chest;
 
