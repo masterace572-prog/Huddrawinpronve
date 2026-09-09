@@ -479,6 +479,8 @@ struct VisibilitySample
 };
 
 static std::vector<AActor *> frameActors;
+static std::vector<ASTExtraPlayerCharacter *> framePlayerActors;
+static std::vector<ASTExtraVehicleBase *> frameVehicleActors;
 static std::vector<FramePlayerData> framePlayers;
 static std::unordered_map<uintptr_t, VisibilitySample> visibilityCache;
 static uint32_t visibilityTracesLastFrame = 0;
@@ -789,16 +791,39 @@ std::vector<AActor *> GetActors(UWorld *World = nullptr)
 
 void RefreshFrameActors(UWorld *World)
 {
+    // The persistent actor array can contain thousands of loot/effect actors.
+    // Rebuilding and validating it at the display refresh rate is needless;
+    // character poses still refresh every HUD callback from this compact list.
+    static UWorld *lastWorld = nullptr;
+    static float nextSnapshotAt = -1000.0f;
+    constexpr float kActorSnapshotInterval = 0.10f;
+    const bool worldChanged = World != lastWorld;
+    if (!worldChanged && frameElapsedSeconds < nextSnapshotAt)
+        return;
+
+    lastWorld = World;
+    nextSnapshotAt = frameElapsedSeconds + kActorSnapshotInterval;
     frameActors.clear();
+    framePlayerActors.clear();
+    frameVehicleActors.clear();
     auto actors = GetActors(World);
     frameActors.reserve(actors.size());
+    framePlayerActors.reserve(64);
+    frameVehicleActors.reserve(32);
 
-    // Validate once per HUD frame. Draw and target-selection code can then use
-    // the same snapshot rather than rescanning the game actor array.
+    // Validate and classify once per actor snapshot. The draw/aim path can
+    // then iterate the small typed lists instead of class-testing every world
+    // actor again on each HUD callback.
     for (auto *actor : actors)
     {
-        if (!isObjectInvalid(actor))
-            frameActors.push_back(actor);
+        if (isObjectInvalid(actor))
+            continue;
+
+        frameActors.push_back(actor);
+        if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+            framePlayerActors.push_back(static_cast<ASTExtraPlayerCharacter *>(actor));
+        else if (actor->IsA(ASTExtraVehicleBase::StaticClass()))
+            frameVehicleActors.push_back(static_cast<ASTExtraVehicleBase *>(actor));
     }
 
     if (!actors.empty() && frameActors.empty())
@@ -816,6 +841,16 @@ void RefreshFrameActors(UWorld *World)
 const std::vector<AActor *> &GetFrameActors()
 {
     return frameActors;
+}
+
+const std::vector<ASTExtraPlayerCharacter *> &GetFramePlayerActors()
+{
+    return framePlayerActors;
+}
+
+const std::vector<ASTExtraVehicleBase *> &GetFrameVehicles()
+{
+    return frameVehicleActors;
 }
 
 const std::vector<FramePlayerData> &GetFramePlayers()
@@ -841,21 +876,21 @@ void RefreshFramePlayers()
     if (!localPlayer || !localController)
         return;
 
-    framePlayers.reserve(frameActors.size());
-    // Line-of-sight tracing is the heaviest part of the overlay. Scale the
-    // per-callback budget down at high refresh rates so the total ray work
-    // remains close to 600-720 rays/second on both 60 and 120 Hz displays.
+    framePlayers.reserve(framePlayerActors.size());
+    // Line-of-sight tracing is the heaviest part of the overlay. Keep this
+    // deliberately small: two probes at 120 Hz or four at 60 Hz caps the
+    // complete visibility system near 240 rays/second instead of thousands.
+    // A known exposed bone is always rechecked first; new/covered candidates
+    // are then completed progressively without stalling a render callback.
     const int visibilityTraceBudgetPerFrame = GetFrameDeltaSeconds() <= (1.0f / 90.0f)
-        ? 6 : 10;
+        ? 2 : 4;
     int visibilityTraceBudget = visibilityTraceBudgetPerFrame;
     const float visibilityInterval = std::max(
         Cheat::Aimbot::BoneRefreshInterval, 1.0f / 10.0f);
-    for (auto *actor : frameActors)
+    for (auto *player : framePlayerActors)
     {
-        if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+        if (!player || isObjectInvalid(player))
             continue;
-
-        auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
         if (player->PlayerKey == localPlayer->PlayerKey ||
             player->TeamID == localPlayer->TeamID || player->bDead || player->bHidden)
             continue;
@@ -1570,12 +1605,10 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
         // pawn has replicated but PlayerKey is already available.
         if (!localPlayer)
         {
-            for (auto *actor : GetFrameActors())
+            for (auto *player : GetFramePlayerActors())
             {
-                if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+                if (!player || isObjectInvalid(player))
                     continue;
-
-                auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
                 if (player->PlayerKey == localController->PlayerKey)
                 {
                     localPlayer = player;

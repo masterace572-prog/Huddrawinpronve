@@ -366,7 +366,7 @@ void DrawHUD(AHUD *HUD)
         // samples, retaining smooth screen movement while removing most of the
         // expensive bone and projection calls.
         const bool drawDetailedSkeleton = Cheat::Esp::Skeleton &&
-            height >= 20.0f && distance <= 250.0f;
+            height >= 24.0f && distance <= 150.0f;
         if (drawDetailedSkeleton)
         {
             auto &skeleton = skeletonCache[reinterpret_cast<uintptr_t>(player)];
@@ -406,11 +406,9 @@ void DrawHUD(AHUD *HUD)
                 }
             }
 
-            // A compact 16-segment head ring is sufficient at player scale and
-            // removes 32 Canvas draw calls per displayed skeleton.
-            const float headRadius = std::max(2.0f, std::min(height * 0.075f, 14.0f));
-            DrawCircleHelper(HUD, headScreen.X, headScreen.Y, headRadius,
-                             accent, 16, 0.60f);
+            // Do not add a separate head ring here. Canvas line rendering is
+            // ProcessEvent-backed, and a ring per player was an avoidable
+            // source of frame drops on lower-end devices.
         }
 
         if (Cheat::Esp::Box)
@@ -450,19 +448,15 @@ void DrawHUD(AHUD *HUD)
         OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible, isKnocked);
     }
 
-    // Player actors are consumed above from the precomputed snapshot. The
-    // remaining actor types only require one projection at their own ranges.
-    for (auto *actor : GetFrameActors())
+    // Vehicles have their own typed snapshot, so normal player rendering does
+    // not scan and class-test every world actor merely to find a vehicle.
+    if (Cheat::Esp::Vehicle::Name || Cheat::Esp::Vehicle::Health ||
+        Cheat::Esp::Vehicle::Fuel)
     {
-        if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
-            continue;
-
-        if ((Cheat::Esp::Vehicle::Name || Cheat::Esp::Vehicle::Health ||
-             Cheat::Esp::Vehicle::Fuel) && actor->IsA(ASTExtraVehicleBase::StaticClass()))
+        for (auto *vehicle : GetFrameVehicles())
         {
-            auto *vehicle = static_cast<ASTExtraVehicleBase *>(actor);
-            if (!vehicle->Mesh)
-                continue;
+        if (!vehicle || isObjectInvalid(vehicle) || !vehicle->Mesh)
+            continue;
 
             FVector2D screen;
             if (!W2S(vehicle->K2_GetActorLocation(), &screen))
@@ -496,6 +490,21 @@ void DrawHUD(AHUD *HUD)
             tslFont->LegacyFontSize = previousSize;
             continue;
         }
+    }
+
+    // Loot/effect labels are optional. Do not touch the full world-actor list
+    // unless at least one of these expensive visual categories is enabled.
+    const bool drawWorldActorLabels = Cheat::Esp::Throwable || Cheat::Esp::LootBox ||
+        Cheat::Esp::ItemEsp;
+    if (drawWorldActorLabels)
+    {
+        for (auto *actor : GetFrameActors())
+        {
+            if (actor->IsA(ASTExtraPlayerCharacter::StaticClass()) ||
+                actor->IsA(ASTExtraVehicleBase::StaticClass()))
+                continue;
+
+
 
         if (Cheat::Esp::Throwable && actor->IsA(ASTExtraGrenadeBase::StaticClass()))
         {
@@ -565,6 +574,8 @@ void DrawHUD(AHUD *HUD)
                              OverlayUI::kTextMuted, COLOR_BLACK, true);
             tslFont->LegacyFontSize = previousSize;
         }
+    }
+
     }
 
     // Match actor pointers are recycled during travel. Keep the pose cache
@@ -741,7 +752,9 @@ void AutoEspOn()
     Cheat::Esp::Name = true;
     Cheat::Esp::Distance = true;
     Cheat::Esp::Health = true;
-    Cheat::Esp::Skeleton = true;
+    // Skeletons are available but opt-in: their multi-line Canvas rendering
+    // is intentionally not part of the lightweight default profile.
+    Cheat::Esp::Skeleton = false;
     Cheat::Esp::Box = false;
     // Player ESP remains active by default. Dense item/loot labels are opt-in
     // because their per-actor projections and text rendering can dominate the
@@ -777,7 +790,7 @@ void AutoEspOn()
     Cheat::Aimbot::PredictionLatency = 0.035f;
     Cheat::Aimbot::PredictionGravity = 980.0f;
     Cheat::Aimbot::MaxPredictionTime = 0.55f;
-    Cheat::Aimbot::BoneRefreshInterval = 0.12f;
+    Cheat::Aimbot::BoneRefreshInterval = 0.20f;
     Cheat::Aimbot::Target = Chest;
 
     // Convert the static JSON once during startup. The draw path performs one
