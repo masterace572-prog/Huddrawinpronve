@@ -8,6 +8,7 @@
 #include <unistd.h>
 #include <string>
 #include <utility>
+#include <atomic>
 
 json items_data;
 
@@ -724,6 +725,26 @@ void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
 #endif
 
 void (*oProcessEvent)(UObject *pObj, UFunction *pFunc, void *pArgs) = nullptr;
+static std::atomic<uint32_t> receiveDrawHUDDispatches{0};
+
+void LogShadowHookRecords(const char *operation)
+{
+    // v2.0.1 adds operation traces. Capture only installation-time records so
+    // diagnostics can identify a bad target/stub without adding frame cost.
+    char *records = shadowhook_get_records(SHADOWHOOK_RECORD_ITEM_ALL);
+    if (!records || !*records)
+    {
+        LOGW("ShadowHook %s: no operation record is available", operation);
+        free(records);
+        return;
+    }
+
+    constexpr size_t kMaximumLogCharacters = 3072;
+    const size_t length = strnlen(records, kMaximumLogCharacters);
+    LOGI("ShadowHook %s records (%zu%s): %.*s", operation, length,
+         records[length] == '\0' ? "" : "+", static_cast<int>(length), records);
+    free(records);
+}
 
 void hkProcessEvent(UObject *pObj, UFunction *pFunc, void *pArgs)
 {
@@ -773,6 +794,14 @@ void hkProcessEvent(UObject *pObj, UFunction *pFunc, void *pArgs)
     // Draw only after UE has processed ReceiveDrawHUD and prepared Canvas.
     if (hud)
     {
+        const uint32_t dispatchIndex = receiveDrawHUDDispatches.fetch_add(1,
+            std::memory_order_relaxed);
+        if (dispatchIndex == 0)
+        {
+            LOGI("ProcessEvent HUD dispatch is active: HUD=%p Canvas=%p size=%dx%d",
+                 static_cast<void *>(hud), static_cast<void *>(hud->Canvas), sizeX, sizeY);
+        }
+
         RenderESPPRIVATE(hud, sizeX, sizeY);
         DrawHUD(hud);
         DrawMemory();
@@ -807,14 +836,29 @@ void initOffset()
         return;
     }
 
+    const char *runtimeVersion = shadowhook_get_version();
+    LOGI("ShadowHook runtime=%s header=%s mode=UNIQUE target=%p",
+         runtimeVersion ? runtimeVersion : "unknown", SHADOWHOOK_VERSION,
+         reinterpret_cast<void *>(Cheat::ProcessEvent));
+
     const int initResult = shadowhook_init(SHADOWHOOK_MODE_UNIQUE, false);
     if (initResult != SHADOWHOOK_ERRNO_OK)
     {
+        const int initError = shadowhook_get_init_errno();
         const char *message = shadowhook_to_errmsg(initResult);
-        LOGE("ShadowHook init failed: code=%d (%s)", initResult,
-             message ? message : "unknown error");
+        const char *initMessage = shadowhook_to_errmsg(initError);
+        LOGE("ShadowHook init failed: result=%d (%s), init_errno=%d (%s)",
+             initResult, message ? message : "unknown error", initError,
+             initMessage ? initMessage : "unknown error");
         return;
     }
+
+    // Operation recording is a v2.0.1 feature used only during bootstrap.
+    // It has no per-frame overhead and makes failed target/stub installation
+    // directly visible through the existing logcat logger.
+    shadowhook_set_recordable(true);
+    LOGI("ShadowHook initialized: mode=%d recordable=%d", shadowhook_get_mode(),
+         shadowhook_get_recordable() ? 1 : 0);
 
     void *processEventStub = shadowhook_hook_func_addr(
         reinterpret_cast<void *>(Cheat::ProcessEvent),
@@ -833,6 +877,7 @@ void initOffset()
     LOGI("ShadowHook ProcessEvent installed: target=%p trampoline=%p",
          reinterpret_cast<void *>(Cheat::ProcessEvent),
          reinterpret_cast<void *>(oProcessEvent));
+    LogShadowHookRecords("ProcessEvent installation");
 }
 
 
@@ -885,6 +930,7 @@ void *RunGame(void *)
         LOGI("ShadowHook bullet hook installed: target=%p trampoline=%p",
              reinterpret_cast<void *>(bulletAddress),
              reinterpret_cast<void *>(ShootBulletInner));
+        LogShadowHookRecords("bullet-hook installation");
     }
 
     items_data = json::parse(JSON_ITEMS);

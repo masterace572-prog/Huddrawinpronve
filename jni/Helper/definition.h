@@ -268,6 +268,7 @@ float GetTimeInSeconds()
     return std::chrono::duration<float>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
 }
 
+static UEngine *GEngine = nullptr;
 static UFont *tslFont = 0, *robotoTinyFont = 0;
 
 bool EnsureFonts()
@@ -288,6 +289,16 @@ bool EnsureFonts()
     tslFont = UObject::FindObject<UFont>("Font Roboto.Roboto");
     if (!robotoTinyFont)
         robotoTinyFont = UObject::FindObject<UFont>("Font RobotoDistanceField.RobotoDistanceField");
+
+    // Game builds can rename or strip the Roboto object path. The engine-owned
+    // fonts are initialized with the HUD and are a reliable fallback, so a
+    // missing optional asset cannot make every ESP primitive disappear.
+    if (!tslFont && GEngine)
+        tslFont = GEngine->SmallFont ? GEngine->SmallFont :
+                  (GEngine->MediumFont ? GEngine->MediumFont : GEngine->TinyFont);
+    if (!robotoTinyFont && GEngine)
+        robotoTinyFont = GEngine->TinyFont ? GEngine->TinyFont : tslFont;
+
     nextFontLookup = now + std::chrono::seconds(1);
     return tslFont != nullptr;
 }
@@ -465,7 +476,6 @@ struct VisibilitySample
     float sampledAt = -1000.0f;
 };
 
-static UEngine *GEngine = nullptr;
 static std::vector<AActor *> frameActors;
 static std::vector<FramePlayerData> framePlayers;
 static std::unordered_map<uintptr_t, VisibilitySample> visibilityCache;
@@ -575,6 +585,42 @@ const char *FindExposedAimBone(ASTExtraPlayerCharacter *player,
 }
 } // namespace
 
+UEngine *FindActiveGameEngine()
+{
+    // Keep the known object name as the fast path. The transient suffix varies
+    // across launches (_0, _1, etc.), so do not let that one historical name
+    // decide whether the complete overlay can render.
+    if (auto *engine = UObject::FindObject<UEngine>("UAEGameEngine Transient.UAEGameEngine_1"))
+        return engine;
+
+    static UClass *engineClass = nullptr;
+    if (!engineClass)
+        engineClass = UObject::FindClass("Class Engine.Engine");
+    if (!engineClass)
+        return nullptr;
+
+    auto &objects = UObject::GetGlobalObjects();
+    const int objectCount = objects.Num();
+    constexpr int kMaximumObjectCount = 2 * 1000 * 1000;
+    if (objectCount <= 0 || objectCount > kMaximumObjectCount)
+        return nullptr;
+
+    for (int index = 0; index < objectCount; ++index)
+    {
+        auto *object = objects.GetByIndex(index);
+        if (!object || isObjectInvalid(object) || !object->IsA(engineClass))
+            continue;
+
+        auto *engine = static_cast<UEngine *>(object);
+        if (engine->GameViewport)
+        {
+            LOGI("ESP: using active engine instance %s", engine->GetFullName().c_str());
+            return engine;
+        }
+    }
+    return nullptr;
+}
+
 UWorld *GetWorld()
 {
     // This function is reached from the HUD hook. Never sleep/retry in that
@@ -582,9 +628,13 @@ UWorld *GetWorld()
     static auto nextEngineLookup = std::chrono::steady_clock::time_point::min();
     const auto now = std::chrono::steady_clock::now();
 
+    // A level transition can replace the viewport. Reacquire its engine rather
+    // than permanently retaining an instance which was valid only at startup.
+    if (GEngine && (!GEngine->GameViewport || isObjectInvalid(GEngine)))
+        GEngine = nullptr;
     if (!GEngine && now >= nextEngineLookup)
     {
-        GEngine = UObject::FindObject<UEngine>("UAEGameEngine Transient.UAEGameEngine_1");
+        GEngine = FindActiveGameEngine();
         nextEngineLookup = now + std::chrono::seconds(1);
     }
 
@@ -1322,9 +1372,9 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     }
     if (!HUD->Canvas)
     {
-        // If this persists, the draw hook is being called before the original
-        // HUD callback prepares Canvas. hkReceiveDrawHUD calls the original
-        // callback first to avoid this state.
+        // If this persists, the ProcessEvent handler is running before the
+        // original HUD callback prepares Canvas. It deliberately dispatches
+        // the original callback before attempting overlay rendering.
         LogEspRenderState("HUD Canvas is unavailable");
         frameActors.clear();
         framePlayers.clear();
