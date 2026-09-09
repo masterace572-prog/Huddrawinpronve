@@ -691,47 +691,42 @@ void *RunGame(void *)
         Cheat::libUE4Base + Cheat::GUObject_Offset);
     LOGI("GUObjectArray configured at %p", static_cast<void *>(UObject::GUObjectArray));
 
-    const int initResult = shadowhook_init(shadowhook_mode_t::SHADOWHOOK_MODE_UNIQUE, 0);
-    if (initResult != 0)
-        LOGE("shadowhook init failed: code=%d", initResult);
-    else
-        LOGI("shadowhook initialized");
+    // ShadowHook cannot initialize its linker integration in this process
+    // (error 12 in logcat), so no HUD callback can ever reach the ESP. Hook
+    // direct code addresses with the already-linked Dobby backend instead;
+    // Dobby does not depend on linker interception and works for this setup.
+    LOGI("using Dobby %s for direct HUD hooks", DobbyBuildVersion());
 
     const uintptr_t bulletAddress = Cheat::libUE4Base + 0x6BB0CFC;
     const uintptr_t hudAddress = Cheat::libUE4Base + 0xAA8E774;
-    void *bulletStub = shadowhook_hook_func_addr(reinterpret_cast<void *>(bulletAddress),
-                                                   reinterpret_cast<void *>(xShootBulletInner),
-                                                   reinterpret_cast<void **>(&ShootBulletInner));
-    if (!bulletStub)
+    const int bulletResult = DobbyHook(reinterpret_cast<void *>(bulletAddress),
+                                       reinterpret_cast<void *>(xShootBulletInner),
+                                       reinterpret_cast<void **>(&ShootBulletInner));
+    if (bulletResult != RT_SUCCESS || !ShootBulletInner)
     {
-        const int error = shadowhook_get_errno();
-        const char *message = shadowhook_to_errmsg(error);
-        LOGE("bullet hook failed: target=%p error=%d (%s)",
-             reinterpret_cast<void *>(bulletAddress), error,
-             message ? message : "unknown error");
+        LOGE("Dobby bullet hook failed: target=%p result=%d original=%p",
+             reinterpret_cast<void *>(bulletAddress), bulletResult,
+             reinterpret_cast<void *>(ShootBulletInner));
     }
     else
     {
-        LOGI("bullet hook installed: target=%p trampoline=%p",
+        LOGI("Dobby bullet hook installed: target=%p trampoline=%p",
              reinterpret_cast<void *>(bulletAddress),
              reinterpret_cast<void *>(ShootBulletInner));
     }
 
-    void *hudStub = shadowhook_hook_func_addr(reinterpret_cast<void *>(hudAddress),
-                                                reinterpret_cast<void *>(hkReceiveDrawHUD),
-                                                reinterpret_cast<void **>(&oReceiveDrawHUD));
-    if (!hudStub || !oReceiveDrawHUD)
+    const int hudResult = DobbyHook(reinterpret_cast<void *>(hudAddress),
+                                    reinterpret_cast<void *>(hkReceiveDrawHUD),
+                                    reinterpret_cast<void **>(&oReceiveDrawHUD));
+    if (hudResult != RT_SUCCESS || !oReceiveDrawHUD)
     {
-        const int error = shadowhook_get_errno();
-        const char *message = shadowhook_to_errmsg(error);
-        LOGE("HUD hook failed: target=%p stub=%p original=%p error=%d (%s)",
-             reinterpret_cast<void *>(hudAddress), hudStub,
-             reinterpret_cast<void *>(oReceiveDrawHUD), error,
-             message ? message : "unknown error");
+        LOGE("Dobby HUD hook failed: target=%p result=%d original=%p",
+             reinterpret_cast<void *>(hudAddress), hudResult,
+             reinterpret_cast<void *>(oReceiveDrawHUD));
     }
     else
     {
-        LOGI("HUD hook installed: target=%p trampoline=%p",
+        LOGI("Dobby HUD hook installed: target=%p trampoline=%p",
              reinterpret_cast<void *>(hudAddress),
              reinterpret_cast<void *>(oReceiveDrawHUD));
     }

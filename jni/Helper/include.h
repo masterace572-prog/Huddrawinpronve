@@ -30,7 +30,6 @@
 #include <codecvt>
 #include "SDK.hpp"
 #include "KittyMemory/MemoryPatch.h"
-#include <shadowhook/shadowhook.h>
 #include "Substrate/SubstrateHook.h"
 #include "Includes/Logger.h"
 #include "Includes/Utils.h"
