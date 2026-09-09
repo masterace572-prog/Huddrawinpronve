@@ -23,25 +23,41 @@ std::unordered_map<int, ItemVisual> itemVisuals;
 
 namespace OverlayUI
 {
-const FLinearColor kPanelBackground(0.035f, 0.055f, 0.085f, 0.86f);
-const FLinearColor kPanelBorder(0.24f, 0.32f, 0.42f, 0.85f);
-const FLinearColor kTextPrimary(0.94f, 0.97f, 1.0f, 1.0f);
-const FLinearColor kTextMuted(0.62f, 0.71f, 0.82f, 1.0f);
-const FLinearColor kVisible(0.20f, 0.91f, 0.73f, 1.0f);
-const FLinearColor kHidden(1.0f, 0.34f, 0.45f, 1.0f);
-const FLinearColor kWarning(1.0f, 0.68f, 0.24f, 1.0f);
+const FLinearColor kPanelBackground(0.018f, 0.031f, 0.064f, 0.91f);
+const FLinearColor kPanelBorder(0.22f, 0.43f, 0.68f, 0.74f);
+const FLinearColor kTextPrimary(0.95f, 0.98f, 1.0f, 1.0f);
+const FLinearColor kTextMuted(0.58f, 0.69f, 0.82f, 1.0f);
+const FLinearColor kVisible(0.18f, 0.92f, 0.72f, 1.0f);
+const FLinearColor kHidden(1.0f, 0.32f, 0.47f, 1.0f);
+const FLinearColor kWarning(1.0f, 0.69f, 0.23f, 1.0f);
+const FLinearColor kAccent(0.27f, 0.62f, 1.0f, 1.0f);
+
+// UE's HUD lines are crisp but do not expose an antialias option. A low-alpha
+// wider pass beneath the sharp centre pass gives the ESP lines a soft, smooth
+// edge while retaining good contrast against bright scenery.
+void DrawSmoothLine(AHUD *hud, float x1, float y1, float x2, float y2,
+                    const FLinearColor &color, float thickness = 1.0f)
+{
+    if (!hud)
+        return;
+    hud->DrawLine(x1, y1, x2, y2,
+                  FLinearColor(color.R, color.G, color.B, color.A * 0.18f),
+                  thickness + 1.45f);
+    hud->DrawLine(x1, y1, x2, y2, color, thickness);
+}
 
 void DrawPanel(AHUD *hud, float x, float y, float width, float height,
                FLinearColor accent)
 {
-    DrawFilledRectangle(hud, {x + 2.0f, y + 2.0f}, width, height,
-                        FLinearColor(0.0f, 0.0f, 0.0f, 0.22f));
+    DrawFilledRectangle(hud, {x + 2.0f, y + 3.0f}, width, height,
+                        FLinearColor(0.0f, 0.0f, 0.0f, 0.30f));
     DrawFilledRectangle(hud, {x, y}, width, height, kPanelBackground);
-    hud->DrawLine(x, y, x + width, y, kPanelBorder, 1.0f);
-    hud->DrawLine(x, y, x, y + height, kPanelBorder, 1.0f);
-    hud->DrawLine(x + width, y, x + width, y + height, kPanelBorder, 1.0f);
-    hud->DrawLine(x, y + height, x + width, y + height, kPanelBorder, 1.0f);
-    DrawFilledRectangle(hud, {x, y}, 4.0f, height, accent);
+    DrawSmoothLine(hud, x, y, x + width, y, kPanelBorder, 0.95f);
+    DrawSmoothLine(hud, x, y, x, y + height, kPanelBorder, 0.95f);
+    DrawSmoothLine(hud, x + width, y, x + width, y + height, kPanelBorder, 0.95f);
+    DrawSmoothLine(hud, x, y + height, x + width, y + height, kPanelBorder, 0.95f);
+    DrawFilledRectangle(hud, {x, y}, width, 2.0f, accent);
+    DrawFilledRectangle(hud, {x, y}, 3.0f, height, accent);
 }
 
 void DrawHeader(AHUD *hud, int enemies, int bots)
@@ -49,28 +65,28 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     if (!Cheat::Esp::Counter || !tslFont)
         return;
 
-    constexpr float width = 216.0f;
-    constexpr float height = 42.0f;
+    constexpr float width = 232.0f;
+    constexpr float height = 44.0f;
     const float x = (glWidth - width) * 0.5f;
-    constexpr float y = 26.0f;
+    constexpr float y = 18.0f;
     DrawPanel(hud, x, y, width, height, enemies > 0 ? kHidden : kVisible);
 
     const int previousSize = tslFont->LegacyFontSize;
     tslFont->LegacyFontSize = 9;
-    DrawOutlinedText(hud, FString("HUDDRAW // LIVE"), {x + 13.0f, y + 7.0f},
+    DrawOutlinedText(hud, FString("HUDDRAW  /  LIVE MATCH"), {x + 13.0f, y + 7.0f},
                      kTextMuted, COLOR_BLACK, false);
 
-    const std::string enemyText = "ENEMIES " + std::to_string(enemies);
-    const std::string botText = "BOTS " + std::to_string(bots);
+    const std::string enemyText = "ENEMIES  " + std::to_string(enemies);
+    const std::string botText = "BOTS  " + std::to_string(bots);
     const float delta = GetFrameDeltaSeconds();
     const int fps = delta > 0.0f ? static_cast<int>(std::round(1.0f / delta)) : 0;
     const std::string fpsText = std::to_string(fps) + " FPS";
-    tslFont->LegacyFontSize = 12;
-    DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 13.0f, y + 21.0f},
+    tslFont->LegacyFontSize = 11;
+    DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 13.0f, y + 23.0f},
                      kTextPrimary, COLOR_BLACK, false);
-    DrawOutlinedText(hud, FString(botText.c_str()), {x + 105.0f, y + 21.0f},
-                     kTextMuted, COLOR_BLACK, false);
-    DrawOutlinedText(hud, FString(fpsText.c_str()), {x + 154.0f, y + 21.0f},
+    DrawOutlinedText(hud, FString(botText.c_str()), {x + 111.0f, y + 23.0f},
+                     kWarning, COLOR_BLACK, false);
+    DrawOutlinedText(hud, FString(fpsText.c_str()), {x + 165.0f, y + 23.0f},
                      kVisible, COLOR_BLACK, false);
     tslFont->LegacyFontSize = previousSize;
 }
@@ -90,10 +106,17 @@ void DrawAimbotFov(AHUD *hud)
         Cheat::Aimbot::Radius <= 0.0f)
         return;
 
-    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 64 : 48;
-    DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, Cheat::Aimbot::Radius,
-                     FLinearColor(kVisible.R, kVisible.G, kVisible.B, 0.52f),
-                     segments, 1.15f);
+    // The visual radius deliberately matches target selection. The default is
+    // tightened to 240 px below so it stays useful on mobile screens instead
+    // of covering most of the display.
+    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 84 : 68;
+    const float radius = Cheat::Aimbot::Radius;
+    const FLinearColor glow(kAccent.R, kAccent.G, kAccent.B, 0.16f);
+    const FLinearColor ring(kAccent.R, kAccent.G, kAccent.B, 0.82f);
+    DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, glow,
+                     segments, 2.75f);
+    DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, ring,
+                     segments, 0.95f);
 }
 
 void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
@@ -107,16 +130,16 @@ void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
     const float right = x + width + 3.0f;
     const float top = y - 3.0f;
     const float bottom = y + height + 3.0f;
-    const FLinearColor marker(1.0f, 0.64f, 0.18f, 0.96f);
+    const FLinearColor marker(1.0f, 0.65f, 0.20f, 0.98f);
 
-    hud->DrawLine(left, top, left + corner, top, marker, 1.8f);
-    hud->DrawLine(left, top, left, top + corner, marker, 1.8f);
-    hud->DrawLine(right - corner, top, right, top, marker, 1.8f);
-    hud->DrawLine(right, top, right, top + corner, marker, 1.8f);
-    hud->DrawLine(left, bottom - corner, left, bottom, marker, 1.8f);
-    hud->DrawLine(left, bottom, left + corner, bottom, marker, 1.8f);
-    hud->DrawLine(right - corner, bottom, right, bottom, marker, 1.8f);
-    hud->DrawLine(right, bottom - corner, right, bottom, marker, 1.8f);
+    DrawSmoothLine(hud, left, top, left + corner, top, marker, 1.25f);
+    DrawSmoothLine(hud, left, top, left, top + corner, marker, 1.25f);
+    DrawSmoothLine(hud, right - corner, top, right, top, marker, 1.25f);
+    DrawSmoothLine(hud, right, top, right, top + corner, marker, 1.25f);
+    DrawSmoothLine(hud, left, bottom - corner, left, bottom, marker, 1.25f);
+    DrawSmoothLine(hud, left, bottom, left + corner, bottom, marker, 1.25f);
+    DrawSmoothLine(hud, right - corner, bottom, right, bottom, marker, 1.25f);
+    DrawSmoothLine(hud, right, bottom - corner, right, bottom, marker, 1.25f);
 
     const int previousSize = tslFont->LegacyFontSize;
     tslFont->LegacyFontSize = 9;
@@ -128,25 +151,42 @@ void DrawSelectedTargetMarker(AHUD *hud, float x, float y, float width,
 void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
                     float y, float distance, bool visible)
 {
-    if (!tslFont || (!Cheat::Esp::Name && !Cheat::Esp::Distance))
+    if (!hud || !hud->Canvas || !tslFont ||
+        (!Cheat::Esp::Name && !Cheat::Esp::Distance))
         return;
 
     const int previousSize = tslFont->LegacyFontSize;
-    tslFont->LegacyFontSize = 10;
     const FLinearColor accent = visible ? kVisible : kHidden;
-    float textY = y - 19.0f;
+    float tagBottom = y - 5.0f;
+
+    if (Cheat::Esp::Distance)
+    {
+        const std::string distanceText = std::to_string(
+            static_cast<int>(std::round(distance))) + " m";
+        const FString distanceLabel(distanceText.c_str());
+        tslFont->LegacyFontSize = 9;
+        constexpr float tagWidth = 54.0f;
+        tagBottom -= 13.0f;
+        DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, tagWidth, 13.0f,
+                            FLinearColor(0.015f, 0.028f, 0.055f, 0.84f));
+        DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, 2.0f, 13.0f, accent);
+        DrawOutlinedText(hud, distanceLabel, {x, tagBottom + 1.0f}, accent,
+                         COLOR_BLACK, true);
+        tagBottom -= 3.0f;
+    }
 
     if (Cheat::Esp::Name)
     {
         const FString label = player->bEnsure ? FString("BOT") : player->PlayerName;
-        DrawOutlinedText(hud, label, {x, textY}, kTextPrimary, COLOR_BLACK, true);
-        textY += 12.0f;
-    }
-
-    if (Cheat::Esp::Distance)
-    {
-        const std::string distanceText = std::to_string(static_cast<int>(distance)) + " m";
-        DrawOutlinedText(hud, FString(distanceText.c_str()), {x, textY}, accent,
+        tslFont->LegacyFontSize = 11;
+        // Fixed tag widths avoid an additional Blueprint/ProcessEvent call for
+        // every player every frame while keeping normal player names readable.
+        const float tagWidth = player->bEnsure ? 58.0f : 126.0f;
+        tagBottom -= 16.0f;
+        DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, tagWidth, 16.0f,
+                            FLinearColor(0.018f, 0.035f, 0.070f, 0.92f));
+        DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, tagWidth, 1.5f, accent);
+        DrawOutlinedText(hud, label, {x, tagBottom + 2.0f}, kTextPrimary,
                          COLOR_BLACK, true);
     }
     tslFont->LegacyFontSize = previousSize;
@@ -233,9 +273,9 @@ void DrawHUD(AHUD *HUD)
             {
                 if (projected[from] && projected[to])
                 {
-                    HUD->DrawLine(boneScreen[from].X, boneScreen[from].Y,
-                                  boneScreen[to].X, boneScreen[to].Y,
-                                  accent, 1.25f);
+                    OverlayUI::DrawSmoothLine(HUD, boneScreen[from].X, boneScreen[from].Y,
+                                              boneScreen[to].X, boneScreen[to].Y,
+                                              accent, 0.90f);
                 }
             }
 
@@ -246,7 +286,9 @@ void DrawHUD(AHUD *HUD)
             {
                 const float radius = FVector2D::Distance(headScreen, topScreen);
                 DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 accent, 28, 1.25f);
+                                 FLinearColor(accent.R, accent.G, accent.B, 0.18f), 40, 2.3f);
+                DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
+                                 accent, 40, 0.9f);
             }
         }
 
@@ -282,8 +324,8 @@ void DrawHUD(AHUD *HUD)
 
         if (Cheat::Esp::Line)
         {
-            HUD->DrawLine(glWidth * 0.5f, glHeight - 34.0f, headScreen.X, y - 4.0f,
-                          FLinearColor(accent.R, accent.G, accent.B, 0.62f), 1.0f);
+            OverlayUI::DrawSmoothLine(HUD, glWidth * 0.5f, 72.0f, headScreen.X, y - 4.0f,
+                                      FLinearColor(accent.R, accent.G, accent.B, 0.74f), 0.95f);
         }
 
         OverlayUI::DrawPlayerText(HUD, player, headScreen.X, y, distance, isVisible);
@@ -557,7 +599,7 @@ void AutoEspOn()
     Cheat::Esp::Distance = true;
     Cheat::Esp::Health = true;
     Cheat::Esp::Skeleton = true;
-    Cheat::Esp::Box = true;
+    Cheat::Esp::Box = false;
     Cheat::Esp::LootBox = true;
     Cheat::Esp::Throwable = true;
     Cheat::Esp::ItemEsp = true;
@@ -578,7 +620,7 @@ void AutoEspOn()
     Cheat::Aimbot::VisCheck = true;
     Cheat::Aimbot::IgnoreKnock = true;
     Cheat::Aimbot::Range = 250.0f;
-    Cheat::Aimbot::Radius = 300.0f;
+    Cheat::Aimbot::Radius = 240.0f;
     Cheat::Aimbot::ReactionDelay = 0.140f;
     Cheat::Aimbot::AcquisitionTime = 0.180f;
     Cheat::Aimbot::TrackingSpeed = 7.5f;

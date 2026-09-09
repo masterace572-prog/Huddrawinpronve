@@ -60,7 +60,7 @@ EAimTarget Target;
 float RecoilControl;
 float RecoilSet = 1.050f;
 float Range = 250.0f;
-float Radius = 300.0f;
+float Radius = 240.0f;
 float FireSpeed;
 float ReactionDelay = 0.140f;
 float AcquisitionTime = 0.180f;
