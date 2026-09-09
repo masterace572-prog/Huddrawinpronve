@@ -24,6 +24,7 @@
 #include "xdl_util.h"
 
 #include <android/api-level.h>
+#include <sys/system_properties.h>
 #include <ctype.h>
 #include <inttypes.h>
 #include <pthread.h>
@@ -65,6 +66,13 @@ static int xdl_util_get_api_level_from_build_prop(void) {
   char buf[128];
   int api_level = -1;
 
+  // The property API is present across ShadowHook's Android support range and
+  // remains available when an older NDK does not declare the newer helper.
+  if (__system_property_get("ro.build.version.sdk", buf) > 0) {
+    api_level = atoi(buf);
+    if (api_level > 0) return api_level;
+  }
+
   FILE *fp = fopen("/system/build.prop", "r");
   if (NULL == fp) goto end;
 
@@ -89,7 +97,11 @@ int xdl_util_get_api_level(void) {
     pthread_mutex_lock(&lock);
     val = __atomic_load_n(&api_level, __ATOMIC_RELAXED);
     if (val < 0) {
+#if defined(__ANDROID_API__) && __ANDROID_API__ >= 24
       val = android_get_device_api_level();
+#else
+      val = xdl_util_get_api_level_from_build_prop();
+#endif
       if (val < 0) val = xdl_util_get_api_level_from_build_prop();
       if (val < __ANDROID_API_J__) val = __ANDROID_API_J__;
       __atomic_store_n(&api_level, val, __ATOMIC_RELEASE);

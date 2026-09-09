@@ -28,3 +28,7 @@ project's older AIDE NDK headers: it omits the optional `PR_SET_VMA_ANON_NAME`
 page label when that constant is unavailable, and obtains the runtime Android
 API level through the long-supported system property API when
 `android_get_device_api_level()` is unavailable. Neither alters hook logic.
+
+The same optional VMA-label guard is applied to ShadowHook's hub-stack
+allocation. Its bundled xDL utility uses the same system-property API-level
+fallback so it also builds with those headers.
