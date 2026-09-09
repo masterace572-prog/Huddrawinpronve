@@ -87,6 +87,13 @@ int shadowhook_init(shadowhook_mode_t default_mode, bool debuggable) {
       sh_island_init();
       sh_enter_init();
       sh_switch_init();
+#ifdef SH_CONFIG_DIRECT_ADDRESS_ONLY
+      // The injected library is intentionally self-contained. Its two hooks
+      // use explicit addresses in an already-loaded libUE4.so, so linker
+      // load/unload monitoring and the companion libshadowhook_nothing.so are
+      // neither needed nor safe to require from /data/local/tmp.
+      SH_LOG_WARN("shadowhook: direct-address-only mode; linker monitoring is disabled");
+#else
       if (__predict_false(0 != sh_linker_init())) {
 #ifdef SH_CONFIG_ALLOW_LINKER_INIT_FAILURE
         // Direct-address hooks do not require ShadowHook's optional linker
@@ -102,6 +109,7 @@ int shadowhook_init(shadowhook_mode_t default_mode, bool debuggable) {
 #endif
       }
       if (__predict_false(0 != sh_task_init())) GOTO_END(SHADOWHOOK_ERRNO_INIT_TASK);
+#endif
 
 #undef GOTO_END
 

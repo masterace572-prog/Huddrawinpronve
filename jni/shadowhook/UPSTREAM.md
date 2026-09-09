@@ -8,23 +8,23 @@ repository.
 - Upstream commit: `854c775c2c3676e57a0f383597ebf420b5204161`
 - Imported source: `shadowhook/src/main/cpp`
 
-`jni/Android.mk` compiles the v2.0.1 hook API directly into `libAnoy.so` and
-builds its required runtime companion `libshadowhook_nothing.so`. The companion
-is required by ShadowHook's linker initialization path and must be packaged
-with the app. Direct static linking is intentional: the older AIDE ndk-build
-used by this project builds shared-module dependencies but fails to place them
-on the final C++ linker command.
+`jni/Android.mk` compiles the v2.0.1 hook API directly into `libAnoy.so`.
+The injection payload is self-contained: it does not build, link, package, or
+load `libshadowhook.so` or `libshadowhook_nothing.so`. Direct static linking is
+intentional because the older AIDE ndk-build used by this project does not
+place shared-module dependencies on the final C++ linker command.
 
 ## Project compatibility patch
 
-`shadowhook.c` contains one narrowly scoped build-time compatibility guard:
-`SH_CONFIG_ALLOW_LINKER_INIT_FAILURE`. It applies only when an Android linker
-hides the private `soinfo` symbols used by ShadowHook's **optional** dynamic
-library monitoring feature, which otherwise causes initialization error `12`.
-This project hooks only already-loaded, explicit function addresses in
-`libUE4.so`; with the guard enabled, those direct-address hooks can initialize
-without automatic hooks for libraries loaded later. The default upstream
-behaviour is retained unless that build flag is supplied by `Android.mk`.
+`shadowhook.c` contains a narrowly scoped build-time compatibility mode:
+`SH_CONFIG_DIRECT_ADDRESS_ONLY`. The project hooks only explicit, already-loaded
+function addresses in `libUE4.so`, so it skips ShadowHook's optional linker
+load/unload monitor and task monitor. This prevents initialization error `12`
+on devices that hide private linker symbols and avoids the companion
+`libshadowhook_nothing.so` dependency. Symbol-name hooks and automatic hooks
+for libraries loaded after initialization are intentionally unavailable in this
+self-contained injection build. The default upstream behaviour is retained
+unless this build flag is supplied by `Android.mk`.
 
 The v2.0.1 source also has two build-only compatibility adaptations for the
 project's older AIDE NDK headers: it omits the optional `PR_SET_VMA_ANON_NAME`

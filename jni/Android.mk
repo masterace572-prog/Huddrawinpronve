@@ -1,8 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
 # Official ByteDance ShadowHook v2.0.1 source integration.
-# Build it as a shared library, exactly as upstream documents, so its required
-# libshadowhook_nothing.so companion is available to linker initialization.
+# The direct-address-only configuration below builds it into libAnoy.so so the
+# injected payload has no dependent ShadowHook shared libraries.
 SHADOWHOOK_SOURCE := $(LOCAL_PATH)/shadowhook/src/main/cpp
 SHADOWHOOK_COMMON_SRC := \
     shadowhook/src/main/cpp/common/bytesig.c \
@@ -59,25 +59,16 @@ LOCAL_C_INCLUDES := $(SHADOWHOOK_SOURCE) \
                     $(SHADOWHOOK_SOURCE)/third_party/bsd \
                     $(SHADOWHOOK_SOURCE)/third_party/lss
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
-# This project installs hooks by already-resolved absolute address. Permit that
-# supported path if a device hides linker-monitor symbols (error 12).
+# This self-contained injector uses only explicit addresses in an already
+# loaded libUE4.so. Do not start linker monitoring or require a companion .so.
 LOCAL_CFLAGS := -std=c11 -Os -fvisibility=hidden -ffunction-sections -fdata-sections \
-                -DSH_CONFIG_ALLOW_LINKER_INIT_FAILURE
+                -DSH_CONFIG_DIRECT_ADDRESS_ONLY
 LOCAL_LDFLAGS := $(SHADOWHOOK_ARCH_LDFLAGS) -Wl,--exclude-libs,ALL -Wl,--gc-sections \
                  -Wl,--version-script=$(SHADOWHOOK_SOURCE)/shadowhook.map.txt
 LOCAL_LDLIBS := -llog
-# Link the hook API directly into libAnoy. This is deliberately static because
-# the older AIDE ndk-build linker does not propagate LOCAL_SHARED_LIBRARIES to
-# the final C++ link command, even though it builds the dependent .so files.
+# Link the hook API directly into libAnoy. Static linking keeps this injector
+# self-contained and avoids extra native-library load requirements.
 include $(BUILD_STATIC_LIBRARY)
-
-# ShadowHook dynamically loads this companion during linker initialization.
-include $(CLEAR_VARS)
-LOCAL_MODULE := shadowhook_nothing
-LOCAL_SRC_FILES := shadowhook/src/main/cpp/nothing/sh_nothing.c
-LOCAL_CFLAGS := -std=c11 -Oz -fvisibility=hidden -ffunction-sections -fdata-sections
-LOCAL_LDFLAGS := $(SHADOWHOOK_ARCH_LDFLAGS) -Wl,--gc-sections
-include $(BUILD_SHARED_LIBRARY)
 
 PREBUILT_DIR := prebuilt/fuck
 
@@ -175,7 +166,5 @@ LOCAL_CPP_FEATURES := exceptions
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv2 -lGLESv3 -lGLESv1_CM -lz
 
 LOCAL_STATIC_LIBRARIES := shadowhook And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
-# Force the runtime companion into libs/<ABI>/; ShadowHook loads it by name.
-LOCAL_SHARED_LIBRARIES := shadowhook_nothing
 
 include $(BUILD_SHARED_LIBRARY)
