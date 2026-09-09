@@ -8,9 +8,12 @@ repository.
 - Upstream commit: `854c775c2c3676e57a0f383597ebf420b5204161`
 - Imported source: `shadowhook/src/main/cpp`
 
-`jni/Android.mk` builds `libshadowhook.so` and its required runtime companion
-`libshadowhook_nothing.so` from these sources. The companion is required by
-ShadowHook's linker initialization path and must be packaged with the app.
+`jni/Android.mk` compiles the v2.0.1 hook API directly into `libAnoy.so` and
+builds its required runtime companion `libshadowhook_nothing.so`. The companion
+is required by ShadowHook's linker initialization path and must be packaged
+with the app. Direct static linking is intentional: the older AIDE ndk-build
+used by this project builds shared-module dependencies but fails to place them
+on the final C++ linker command.
 
 ## Project compatibility patch
 

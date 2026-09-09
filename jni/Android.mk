@@ -66,7 +66,10 @@ LOCAL_CFLAGS := -std=c11 -Os -fvisibility=hidden -ffunction-sections -fdata-sect
 LOCAL_LDFLAGS := $(SHADOWHOOK_ARCH_LDFLAGS) -Wl,--exclude-libs,ALL -Wl,--gc-sections \
                  -Wl,--version-script=$(SHADOWHOOK_SOURCE)/shadowhook.map.txt
 LOCAL_LDLIBS := -llog
-include $(BUILD_SHARED_LIBRARY)
+# Link the hook API directly into libAnoy. This is deliberately static because
+# the older AIDE ndk-build linker does not propagate LOCAL_SHARED_LIBRARIES to
+# the final C++ link command, even though it builds the dependent .so files.
+include $(BUILD_STATIC_LIBRARY)
 
 # ShadowHook dynamically loads this companion during linker initialization.
 include $(CLEAR_VARS)
@@ -171,7 +174,8 @@ LOCAL_CPP_FEATURES := exceptions
 
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv2 -lGLESv3 -lGLESv1_CM -lz
 
-LOCAL_STATIC_LIBRARIES := And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
-LOCAL_SHARED_LIBRARIES := shadowhook shadowhook_nothing
+LOCAL_STATIC_LIBRARIES := shadowhook And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
+# Force the runtime companion into libs/<ABI>/; ShadowHook loads it by name.
+LOCAL_SHARED_LIBRARIES := shadowhook_nothing
 
 include $(BUILD_SHARED_LIBRARY)
