@@ -710,39 +710,74 @@ void AutoEspOn()
 
 
 
+// The direct AHUD hook is kept only as a reference. Rendering is now
+// dispatched through ProcessEvent below, matching Engine.HUD.ReceiveDrawHUD.
+#if 0
 void (*oReceiveDrawHUD)(AHUD *pHUD, int SizeX, int SizeY);
 void hkReceiveDrawHUD(AHUD *pHUD, int SizeX, int SizeY)
 {
-    static bool loggedFirstCallback = false;
-    if (!loggedFirstCallback)
-    {
-        LOGI("HUD hook entered: hud=%p screen=%dx%d original=%p",
-             static_cast<void *>(pHUD), SizeX, SizeY,
-             reinterpret_cast<void *>(oReceiveDrawHUD));
-        loggedFirstCallback = true;
-    }
-
-    // UE prepares/updates the HUD Canvas inside its native handler. Draw our
-    // overlay after that handler, otherwise RenderESPPRIVATE sees a null or
-    // stale Canvas and every ESP draw is skipped.
-    if (!oReceiveDrawHUD)
-    {
-        LOGE("HUD hook has no original trampoline; ESP rendering is disabled");
-        return;
-    }
     oReceiveDrawHUD(pHUD, SizeX, SizeY);
-
-    if (!pHUD)
-    {
-        LOGW("HUD callback received a null HUD pointer");
-        return;
-    }
-
     RenderESPPRIVATE(pHUD, SizeX, SizeY);
     DrawHUD(pHUD);
     DrawMemory();
 }
+#endif
 
+void (*oProcessEvent)(UObject *pObj, UFunction *pFunc, void *pArgs) = nullptr;
+
+void hkProcessEvent(UObject *pObj, UFunction *pFunc, void *pArgs)
+{
+    static UFunction *receiveDrawHUD = nullptr;
+    bool isReceiveDrawHUD = pFunc == receiveDrawHUD;
+
+    // Avoid building a full UObject name for every ProcessEvent call. Resolve
+    // and cache the function once, then use the UFunction pointer on the hot
+    // path. The simple-name guard makes startup lookup inexpensive as well.
+    if (!isReceiveDrawHUD && pFunc &&
+        strcmp(pFunc->NamePrivate.GetName(), "ReceiveDrawHUD") == 0 &&
+        pFunc->GetFullName() == "Function Engine.HUD.ReceiveDrawHUD")
+    {
+        receiveDrawHUD = pFunc;
+        isReceiveDrawHUD = true;
+        LOGI("ProcessEvent: ReceiveDrawHUD resolved at %p", static_cast<void *>(pFunc));
+    }
+
+    AHUD *hud = nullptr;
+    int sizeX = 0;
+    int sizeY = 0;
+    if (isReceiveDrawHUD && pObj && pArgs)
+    {
+        const auto *params = static_cast<AHUD_ReceiveDrawHUD_Params *>(pArgs);
+        if (params->SizeX > 0 && params->SizeY > 0 &&
+            params->SizeX <= 10000 && params->SizeY <= 10000)
+        {
+            hud = static_cast<AHUD *>(pObj);
+            sizeX = params->SizeX;
+            sizeY = params->SizeY;
+        }
+        else
+        {
+            LOGW("ProcessEvent: invalid ReceiveDrawHUD size %dx%d",
+                 params->SizeX, params->SizeY);
+        }
+    }
+
+    if (oProcessEvent)
+        oProcessEvent(pObj, pFunc, pArgs);
+    else
+    {
+        LOGE("ProcessEvent hook has no original trampoline");
+        return;
+    }
+
+    // Draw only after UE has processed ReceiveDrawHUD and prepared Canvas.
+    if (hud)
+    {
+        RenderESPPRIVATE(hud, sizeX, sizeY);
+        DrawHUD(hud);
+        DrawMemory();
+    }
+}
 
 void (*ShootBulletInner)(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID);
 void xShootBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, int ShootID)
@@ -762,11 +797,43 @@ void xShootBulletInner(uintptr_t Weapon, FVector StartLoc, FRotator StartRot, in
 }
 
 
+void initOffset()
+{
+    constexpr uintptr_t kProcessEventOffset = 0x9FA1C34;
+    Cheat::ProcessEvent = Cheat::libUE4Base + kProcessEventOffset;
+    if (!Cheat::ProcessEvent)
+    {
+        LOGE("ProcessEvent address is null");
+        return;
+    }
 
+    const int initResult = shadowhook_init(SHADOWHOOK_MODE_UNIQUE, false);
+    if (initResult != SHADOWHOOK_ERRNO_OK)
+    {
+        const char *message = shadowhook_to_errmsg(initResult);
+        LOGE("ShadowHook init failed: code=%d (%s)", initResult,
+             message ? message : "unknown error");
+        return;
+    }
 
+    void *processEventStub = shadowhook_hook_func_addr(
+        reinterpret_cast<void *>(Cheat::ProcessEvent),
+        reinterpret_cast<void *>(hkProcessEvent),
+        reinterpret_cast<void **>(&oProcessEvent));
+    if (!processEventStub || !oProcessEvent)
+    {
+        const int error = shadowhook_get_errno();
+        const char *message = shadowhook_to_errmsg(error);
+        LOGE("ShadowHook ProcessEvent hook failed: target=%p stub=%p error=%d (%s)",
+             reinterpret_cast<void *>(Cheat::ProcessEvent), processEventStub, error,
+             message ? message : "unknown error");
+        return;
+    }
 
-
-
+    LOGI("ShadowHook ProcessEvent installed: target=%p trampoline=%p",
+         reinterpret_cast<void *>(Cheat::ProcessEvent),
+         reinterpret_cast<void *>(oProcessEvent));
+}
 
 
 void *RunGame(void *)
@@ -793,44 +860,31 @@ void *RunGame(void *)
         Cheat::libUE4Base + Cheat::GUObject_Offset);
     LOGI("GUObjectArray configured at %p", static_cast<void *>(UObject::GUObjectArray));
 
-    // ShadowHook cannot initialize its linker integration in this process
-    // (error 12 in logcat), so no HUD callback can ever reach the ESP. Hook
-    // direct code addresses with the already-linked Dobby backend instead;
-    // Dobby does not depend on linker interception and works for this setup.
-    LOGI("using Dobby %s for direct HUD hooks", DobbyBuildVersion());
+    initOffset();
+    if (!oProcessEvent)
+    {
+        LOGE("ESP hooks are disabled because ProcessEvent was not installed");
+        return nullptr;
+    }
 
     const uintptr_t bulletAddress = Cheat::libUE4Base + 0x6BB0CFC;
-    const uintptr_t hudAddress = Cheat::libUE4Base + 0xAA8E774;
-    const int bulletResult = DobbyHook(reinterpret_cast<void *>(bulletAddress),
-                                       reinterpret_cast<void *>(xShootBulletInner),
-                                       reinterpret_cast<void **>(&ShootBulletInner));
-    if (bulletResult != RT_SUCCESS || !ShootBulletInner)
+    void *bulletStub = shadowhook_hook_func_addr(
+        reinterpret_cast<void *>(bulletAddress),
+        reinterpret_cast<void *>(xShootBulletInner),
+        reinterpret_cast<void **>(&ShootBulletInner));
+    if (!bulletStub || !ShootBulletInner)
     {
-        LOGE("Dobby bullet hook failed: target=%p result=%d original=%p",
-             reinterpret_cast<void *>(bulletAddress), bulletResult,
-             reinterpret_cast<void *>(ShootBulletInner));
+        const int error = shadowhook_get_errno();
+        const char *message = shadowhook_to_errmsg(error);
+        LOGE("ShadowHook bullet hook failed: target=%p stub=%p error=%d (%s)",
+             reinterpret_cast<void *>(bulletAddress), bulletStub, error,
+             message ? message : "unknown error");
     }
     else
     {
-        LOGI("Dobby bullet hook installed: target=%p trampoline=%p",
+        LOGI("ShadowHook bullet hook installed: target=%p trampoline=%p",
              reinterpret_cast<void *>(bulletAddress),
              reinterpret_cast<void *>(ShootBulletInner));
-    }
-
-    const int hudResult = DobbyHook(reinterpret_cast<void *>(hudAddress),
-                                    reinterpret_cast<void *>(hkReceiveDrawHUD),
-                                    reinterpret_cast<void **>(&oReceiveDrawHUD));
-    if (hudResult != RT_SUCCESS || !oReceiveDrawHUD)
-    {
-        LOGE("Dobby HUD hook failed: target=%p result=%d original=%p",
-             reinterpret_cast<void *>(hudAddress), hudResult,
-             reinterpret_cast<void *>(oReceiveDrawHUD));
-    }
-    else
-    {
-        LOGI("Dobby HUD hook installed: target=%p trampoline=%p",
-             reinterpret_cast<void *>(hudAddress),
-             reinterpret_cast<void *>(oReceiveDrawHUD));
     }
 
     items_data = json::parse(JSON_ITEMS);

@@ -6,6 +6,12 @@ LOCAL_SRC_FILES := Dobby/libraries/$(TARGET_ARCH_ABI)/libdobby.a
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/Dobby/include
 include $(PREBUILT_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := shadowhook
+LOCAL_SRC_FILES := shadowhook/libshadowhook.a
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/shadowhook/
+include $(PREBUILT_STATIC_LIBRARY)
+
 PREBUILT_DIR := prebuilt/fuck
 
 include $(CLEAR_VARS)
@@ -105,6 +111,6 @@ LOCAL_CPP_FEATURES := exceptions
 
 LOCAL_LDLIBS := -llog -landroid -lEGL -lGLESv2 -lGLESv3 -lGLESv1_CM -lz
 
-LOCAL_STATIC_LIBRARIES := libdobby And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf tools base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils
+LOCAL_STATIC_LIBRARIES := libdobby And64InlineHook ElfImg fake_dlfcn android_native_app_glue plthook_elf tools base64 SubstrateDebug SubstrateHook hde64 SubstratePosixMemory KittyMemory MemoryPatch MemoryBackup KittyUtils shadowhook
 
 include $(BUILD_SHARED_LIBRARY)
