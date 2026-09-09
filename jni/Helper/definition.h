@@ -1388,29 +1388,68 @@ void RenderESPPRIVATE(AHUD* HUD, int ScreenWidth, int ScreenHeight)
     if (!world)
         LogEspRenderState("UWorld is unavailable");
 
-    auto *localController = (world && world->NetDriver &&
-                             world->NetDriver->ServerConnection)
-        ? reinterpret_cast<ASTExtraPlayerController *>(
-            world->NetDriver->ServerConnection->PlayerController)
-        : nullptr;
+    // ReceiveDrawHUD belongs to the local player's HUD, so PlayerOwner is the
+    // most reliable controller route. In the current BGMI flow ServerConnection
+    // can legitimately be null while the HUD is already drawing, which was
+    // leaving the renderer without a controller despite a valid Canvas.
+    ASTExtraPlayerController *localController = nullptr;
+    const char *controllerSource = nullptr;
+    if (HUD->PlayerOwner && !isObjectInvalid(HUD->PlayerOwner))
+    {
+        localController = static_cast<ASTExtraPlayerController *>(HUD->PlayerOwner);
+        controllerSource = "HUD PlayerOwner";
+    }
+    else if (world && world->NetDriver && world->NetDriver->ServerConnection &&
+             !isObjectInvalid(world->NetDriver->ServerConnection) &&
+             world->NetDriver->ServerConnection->PlayerController &&
+             !isObjectInvalid(world->NetDriver->ServerConnection->PlayerController))
+    {
+        localController = static_cast<ASTExtraPlayerController *>(
+            world->NetDriver->ServerConnection->PlayerController);
+        controllerSource = "NetDriver ServerConnection";
+    }
     if (!localController)
         LogEspRenderState("local controller is unavailable");
+    else
+    {
+        static ASTExtraPlayerController *lastLoggedController = nullptr;
+        if (lastLoggedController != localController)
+        {
+            LOGI("ESP local controller resolved through %s: %p", controllerSource,
+                 static_cast<void *>(localController));
+            lastLoggedController = localController;
+        }
+    }
 
     RefreshFrameActors(world);
 
     ASTExtraPlayerCharacter *localPlayer = nullptr;
     if (localController)
     {
-        for (auto *actor : GetFrameActors())
+        // The controller's acknowledged pawn is available before the actor
+        // snapshot has fully populated during transitions and is the fast path.
+        auto *acknowledgedPawn = localController->AcknowledgedPawn;
+        if (acknowledgedPawn && !isObjectInvalid(acknowledgedPawn) &&
+            acknowledgedPawn->IsA(ASTExtraPlayerCharacter::StaticClass()))
         {
-            if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
-                continue;
+            localPlayer = static_cast<ASTExtraPlayerCharacter *>(acknowledgedPawn);
+        }
 
-            auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
-            if (player->PlayerKey == localController->PlayerKey)
+        // Retain the actor-snapshot fallback for flows where a pawn has not yet
+        // been acknowledged but PlayerKey has already replicated.
+        if (!localPlayer)
+        {
+            for (auto *actor : GetFrameActors())
             {
-                localPlayer = player;
-                break;
+                if (!actor->IsA(ASTExtraPlayerCharacter::StaticClass()))
+                    continue;
+
+                auto *player = static_cast<ASTExtraPlayerCharacter *>(actor);
+                if (player->PlayerKey == localController->PlayerKey)
+                {
+                    localPlayer = player;
+                    break;
+                }
             }
         }
     }
