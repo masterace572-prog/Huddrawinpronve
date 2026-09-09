@@ -28,6 +28,16 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+// Android Q/R were introduced after older AIDE NDK header snapshots. These
+// are API-level constants only (29 and 30), so defining missing names keeps
+// current runtime behavior without requiring a newer build toolchain.
+#ifndef __ANDROID_API_Q__
+#define __ANDROID_API_Q__ 29
+#endif
+#ifndef __ANDROID_API_R__
+#define __ANDROID_API_R__ 30
+#endif
+
 #ifndef __LP64__
 #define XDL_UTIL_LINKER_BASENAME        "linker"
 #define XDL_UTIL_LINKER_PATHNAME        "/system/bin/linker"

@@ -31,4 +31,6 @@ API level through the long-supported system property API when
 
 The same optional VMA-label guard is applied to ShadowHook's hub-stack
 allocation. Its bundled xDL utility uses the same system-property API-level
-fallback so it also builds with those headers.
+fallback so it also builds with those headers. The xDL header additionally
+provides the numeric Android Q/R API-level constants (29/30) when an older
+AIDE NDK predates those symbolic definitions.
