@@ -842,11 +842,12 @@ void RefreshFramePlayers()
         return;
 
     framePlayers.reserve(frameActors.size());
-    // Line-of-sight tracing is the heaviest part of the overlay. Bound it to
-    // twelve rays per HUD callback, while keeping already-exposed targets
-    // responsive through their first-priority retest.
-    constexpr int kVisibilityTraceBudgetPerFrame = 12;
-    int visibilityTraceBudget = kVisibilityTraceBudgetPerFrame;
+    // Line-of-sight tracing is the heaviest part of the overlay. Scale the
+    // per-callback budget down at high refresh rates so the total ray work
+    // remains close to 600-720 rays/second on both 60 and 120 Hz displays.
+    const int visibilityTraceBudgetPerFrame = GetFrameDeltaSeconds() <= (1.0f / 90.0f)
+        ? 6 : 10;
+    int visibilityTraceBudget = visibilityTraceBudgetPerFrame;
     const float visibilityInterval = std::max(
         Cheat::Aimbot::BoneRefreshInterval, 1.0f / 10.0f);
     for (auto *actor : frameActors)
@@ -892,7 +893,7 @@ void RefreshFramePlayers()
     }
 
     visibilityTracesLastFrame = static_cast<uint32_t>(
-        kVisibilityTraceBudgetPerFrame - visibilityTraceBudget);
+        visibilityTraceBudgetPerFrame - visibilityTraceBudget);
 
     // Prevent the cache from retaining actor addresses after a long match or
     // map transition. Pruning is infrequent and outside the hot draw path.
