@@ -102,13 +102,11 @@ const FLinearColor kWarning(1.0f, 0.69f, 0.23f, 1.0f);
 const FLinearColor kAccent(0.27f, 0.62f, 1.0f, 1.0f);
 const FLinearColor kFovBlue(0.16f, 0.53f, 1.0f, 1.0f);
 
-// Keep the overlay flat and precise: each ESP stroke is a single solid line
-// with no blur, halo, or glow pass.
+// One Canvas-rendered stroke per line: sharp, anti-aliased, and no glow.
 void DrawCleanLine(AHUD *hud, float x1, float y1, float x2, float y2,
                    const FLinearColor &color, float thickness = 0.70f)
 {
-    if (hud)
-        hud->DrawLine(x1, y1, x2, y2, color, thickness);
+    DrawCanvasLine(hud, x1, y1, x2, y2, color, thickness);
 }
 
 void DrawPanel(AHUD *hud, float x, float y, float width, float height,
@@ -135,7 +133,7 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     DrawPanel(hud, x, y, width, height, enemies > 0 ? kHidden : kVisible);
 
     const int previousSize = tslFont->LegacyFontSize;
-    tslFont->LegacyFontSize = 9;
+    tslFont->LegacyFontSize = 10;
     DrawOutlinedText(hud, FString("HUDDRAW  /  LIVE MATCH"), {x + 13.0f, y + 7.0f},
                      kTextMuted, COLOR_BLACK, false);
 
@@ -150,7 +148,7 @@ void DrawHeader(AHUD *hud, int enemies, int bots)
     DrawFilledRectangle(hud, {x + 180.0f, rowTop}, 1.0f, 14.0f,
                         FLinearColor(kPanelBorder.R, kPanelBorder.G, kPanelBorder.B, 0.58f));
 
-    tslFont->LegacyFontSize = 10;
+    tslFont->LegacyFontSize = 11;
     DrawOutlinedText(hud, FString(enemyText.c_str()), {x + 45.0f, y + 23.0f},
                      kTextPrimary, COLOR_BLACK, true);
     DrawOutlinedText(hud, FString(botText.c_str()), {x + 135.0f, y + 23.0f},
@@ -185,7 +183,7 @@ void DrawAimbotFov(AHUD *hud)
     // The visual radius deliberately matches target selection. The default is
     // tightened to 240 px below so it stays useful on mobile screens instead
     // of covering most of the display.
-    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 84 : 68;
+    const int segments = GetFrameDeltaSeconds() <= (1.0f / 90.0f) ? 96 : 80;
     const float radius = Cheat::Aimbot::Radius;
     const FLinearColor ring(kFovBlue.R, kFovBlue.G, kFovBlue.B, 0.90f);
     DrawCircleHelper(hud, glWidth * 0.5f, glHeight * 0.5f, radius, ring,
@@ -238,7 +236,7 @@ void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
         const std::string statusText = knocked ? "KNOCKED" : std::to_string(
             static_cast<int>(std::round(distance))) + " m";
         const FString statusLabel(statusText.c_str());
-        tslFont->LegacyFontSize = 9;
+        tslFont->LegacyFontSize = 10;
         const float tagWidth = knocked ? 76.0f : 54.0f;
         tagBottom -= 13.0f;
         DrawFilledRectangle(hud, {x - tagWidth * 0.5f, tagBottom}, tagWidth, 13.0f,
@@ -252,7 +250,7 @@ void DrawPlayerText(AHUD *hud, ASTExtraPlayerCharacter *player, float x,
     if (Cheat::Esp::Name)
     {
         const FString label = player->bEnsure ? FString("BOT") : player->PlayerName;
-        tslFont->LegacyFontSize = 11;
+        tslFont->LegacyFontSize = 12;
         // Fixed tag widths avoid an additional Blueprint/ProcessEvent call for
         // every player every frame while keeping normal player names readable.
         const float tagWidth = player->bEnsure ? 58.0f : 126.0f;
@@ -363,7 +361,7 @@ void DrawHUD(AHUD *HUD)
             {
                 const float radius = FVector2D::Distance(headScreen, topScreen);
                 DrawCircleHelper(HUD, headScreen.X, headScreen.Y, radius,
-                                 accent, 40, 0.60f);
+                                 accent, 48, 0.60f);
             }
         }
 

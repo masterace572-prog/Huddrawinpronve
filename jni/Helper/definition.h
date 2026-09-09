@@ -302,8 +302,27 @@ void DrawOutlinedText(AHUD *HUD, FString Text, FVector2D Pos, FLinearColor Color
     if (!HUD || !HUD->Canvas || !tslFont)
         return;
 
-    HUD->Canvas->K2_DrawText(tslFont, Text, Pos, Color, 1.f, {}, {},
-                             isCenter, isCenter, true, OutlineColor);
+    // Canvas text is rasterized by UE with font antialiasing. A solid dark
+    // outline and a sub-pixel shadow keep it readable over any scene without
+    // adding a coloured halo/glow.
+    const FLinearColor outline(OutlineColor.R, OutlineColor.G, OutlineColor.B,
+                               std::max(0.78f, OutlineColor.A));
+    HUD->Canvas->K2_DrawText(tslFont, Text, Pos, Color, 0.0f,
+                             FLinearColor(0.0f, 0.0f, 0.0f, 0.65f),
+                             FVector2D(0.65f, 0.65f), isCenter, isCenter,
+                             true, outline);
+}
+
+// Route all overlay strokes through the Canvas line path and keep a minimum
+// sub-pixel-friendly width. It produces cleaner diagonals than the AHUD debug
+// line wrapper, with one solid pass only (no glow layer).
+void DrawCanvasLine(AHUD *HUD, float startX, float startY, float endX, float endY,
+                    const FLinearColor &color, float thickness = 0.85f)
+{
+    if (!HUD || !HUD->Canvas)
+        return;
+    HUD->Canvas->K2_DrawLine(FVector2D(startX, startY), FVector2D(endX, endY),
+                             std::max(0.85f, thickness), color);
 }
 
 struct D3DMatrix {
@@ -902,10 +921,10 @@ FRotator ToRotator(FVector local, FVector target) {
 
 void DrawRectangle(AHUD *HUD, FVector2D Pos, float Width, float Height, float Thickness, FLinearColor Color) 
 {
-    HUD->DrawLine(Pos.X, Pos.Y, Pos.X + Width, Pos.Y, Color, Thickness);
-    HUD->DrawLine(Pos.X, Pos.Y, Pos.X, Pos.Y + Height, Color, Thickness);
-    HUD->DrawLine(Pos.X + Width, Pos.Y, Pos.X + Width, Pos.Y + Height, Color, Thickness);
-    HUD->DrawLine(Pos.X, Pos.Y + Height, Pos.X + Width, Pos.Y + Height, Color, Thickness);
+    DrawCanvasLine(HUD, Pos.X, Pos.Y, Pos.X + Width, Pos.Y, Color, Thickness);
+    DrawCanvasLine(HUD, Pos.X, Pos.Y, Pos.X, Pos.Y + Height, Color, Thickness);
+    DrawCanvasLine(HUD, Pos.X + Width, Pos.Y, Pos.X + Width, Pos.Y + Height, Color, Thickness);
+    DrawCanvasLine(HUD, Pos.X, Pos.Y + Height, Pos.X + Width, Pos.Y + Height, Color, Thickness);
 }
 
 void DrawFilledRectangle(AHUD *HUD, FVector2D Pos, float Width, float Height, FLinearColor Color) 
@@ -1376,31 +1395,30 @@ void Box4LineHUD(
     float cornerH = H * CornerRatio;
 
     // Top Left
-    HUD->DrawLine(X, Y, X + cornerW, Y, Color, Thickness);
-    HUD->DrawLine(X, Y, X, Y + cornerH, Color, Thickness);
+    DrawCanvasLine(HUD, X, Y, X + cornerW, Y, Color, Thickness);
+    DrawCanvasLine(HUD, X, Y, X, Y + cornerH, Color, Thickness);
 
     // Top Right
-    HUD->DrawLine(X + W - cornerW, Y, X + W, Y, Color, Thickness);
-    HUD->DrawLine(X + W, Y, X + W, Y + cornerH, Color, Thickness);
+    DrawCanvasLine(HUD, X + W - cornerW, Y, X + W, Y, Color, Thickness);
+    DrawCanvasLine(HUD, X + W, Y, X + W, Y + cornerH, Color, Thickness);
 
     // Bottom Left
-    HUD->DrawLine(X, Y + H - cornerH, X, Y + H, Color, Thickness);
-    HUD->DrawLine(X, Y + H, X + cornerW, Y + H, Color, Thickness);
+    DrawCanvasLine(HUD, X, Y + H - cornerH, X, Y + H, Color, Thickness);
+    DrawCanvasLine(HUD, X, Y + H, X + cornerW, Y + H, Color, Thickness);
 
     // Bottom Right
-    HUD->DrawLine(X + W - cornerW, Y + H, X + W, Y + H, Color, Thickness);
-    HUD->DrawLine(X + W, Y + H - cornerH, X + W, Y + H, Color, Thickness);
+    DrawCanvasLine(HUD, X + W - cornerW, Y + H, X + W, Y + H, Color, Thickness);
+    DrawCanvasLine(HUD, X + W, Y + H - cornerH, X + W, Y + H, Color, Thickness);
 }
 
 #include <cmath> // cosf, sinf
 
-// Generic helper — works for SDK::AHud or AHUD depending on your HUD type and color type.
-// Put this in a header or above your drawing code.
+// Uses short Canvas line segments so rings are smooth, flat, and free of glow.
 template<typename HUD_T, typename COLOR_T>
 inline void DrawCircleHelper(HUD_T* HUD, float X, float Y, float Radius, COLOR_T Color,
                              int NumSegments = 36, float Thickness = 1.0f)
 {
-    if (!HUD) return;
+    if (!HUD || !HUD->Canvas) return;
     const float PI = 3.14159265358979323846f;
     float angleStep = 2.0f * PI / NumSegments;
 
@@ -1412,8 +1430,7 @@ inline void DrawCircleHelper(HUD_T* HUD, float X, float Y, float Radius, COLOR_T
         float newX = X + cosf(angle) * Radius;
         float newY = Y + sinf(angle) * Radius;
 
-        // Use the HUD's DrawLine method (same one you already use for skeleton lines)
-        HUD->DrawLine(prevX, prevY, newX, newY, Color, Thickness);
+        DrawCanvasLine(HUD, prevX, prevY, newX, newY, Color, Thickness);
 
         prevX = newX;
         prevY = newY;
