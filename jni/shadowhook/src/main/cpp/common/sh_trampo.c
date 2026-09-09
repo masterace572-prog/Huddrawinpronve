@@ -128,8 +128,17 @@ uintptr_t sh_trampo_alloc_between(sh_trampo_mgr_t *mgr, uintptr_t range_low, uin
 
 end:
   pthread_mutex_unlock(&mgr->pages_lock);
+  // PR_SET_VMA_ANON_NAME is diagnostic-only. Older NDK kernel headers do not
+  // declare it even though the runtime kernel may support it, so do not make
+  // allocation of a functional trampoline depend on that optional label.
+#if defined(PR_SET_VMA) && defined(PR_SET_VMA_ANON_NAME)
   if ((uintptr_t)MAP_FAILED != new_ptr_prctl)
     prctl(PR_SET_VMA, PR_SET_VMA_ANON_NAME, new_ptr_prctl, trampo_page_size, mgr->anon_page_name);
+#else
+  (void)new_ptr_prctl;
+  (void)trampo_page_size;
+  (void)mgr;
+#endif
   return trampo;
 
 err:

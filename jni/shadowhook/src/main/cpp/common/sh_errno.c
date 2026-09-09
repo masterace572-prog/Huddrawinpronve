@@ -49,7 +49,9 @@ void sh_errno_set(int error_number) {
   if (__predict_false(sh_errno_global == SHADOWHOOK_ERRNO_INIT_ERRNO)) return;
 
 #pragma clang diagnostic push
+#if __has_warning("-Wint-to-void-pointer-cast")
 #pragma clang diagnostic ignored "-Wint-to-void-pointer-cast"
+#endif
   pthread_setspecific(sh_errno_tls_key, (void *)error_number);
 #pragma clang diagnostic pop
 }
@@ -58,7 +60,9 @@ int sh_errno_get(void) {
   if (__predict_false(sh_errno_global == SHADOWHOOK_ERRNO_INIT_ERRNO)) return sh_errno_global;
 
 #pragma clang diagnostic push
+#if __has_warning("-Wvoid-pointer-to-int-cast")
 #pragma clang diagnostic ignored "-Wvoid-pointer-to-int-cast"
+#endif
   return (int)(pthread_getspecific(sh_errno_tls_key));
 #pragma clang diagnostic pop
 }

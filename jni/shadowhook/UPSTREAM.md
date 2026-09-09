@@ -22,3 +22,9 @@ This project hooks only already-loaded, explicit function addresses in
 `libUE4.so`; with the guard enabled, those direct-address hooks can initialize
 without automatic hooks for libraries loaded later. The default upstream
 behaviour is retained unless that build flag is supplied by `Android.mk`.
+
+The v2.0.1 source also has two build-only compatibility adaptations for the
+project's older AIDE NDK headers: it omits the optional `PR_SET_VMA_ANON_NAME`
+page label when that constant is unavailable, and obtains the runtime Android
+API level through the long-supported system property API when
+`android_get_device_api_level()` is unavailable. Neither alters hook logic.

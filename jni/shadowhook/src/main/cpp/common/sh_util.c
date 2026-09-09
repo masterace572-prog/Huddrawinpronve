@@ -33,6 +33,7 @@
 #include <string.h>
 #include <sys/auxv.h>
 #include <sys/mman.h>
+#include <sys/system_properties.h>
 #include <sys/sysinfo.h>
 #include <time.h>
 #include <unistd.h>
@@ -90,6 +91,14 @@ static int sh_util_get_api_level_from_build_prop(void) {
   char buf[128];
   int api_level = -1;
 
+  // Available on all Android API levels supported by ShadowHook. Prefer the
+  // property service because old NDKs do not declare android_get_device_api_level
+  // and modern devices may not expose /system/build.prop as a normal file.
+  if (__system_property_get("ro.build.version.sdk", buf) > 0) {
+    api_level = atoi(buf);
+    if (api_level > 0) return api_level;
+  }
+
   FILE *fp = fopen("/system/build.prop", "r");
   if (__predict_false(NULL == fp)) goto end;
 
@@ -114,7 +123,11 @@ int sh_util_get_api_level(void) {
     pthread_mutex_lock(&lock);
     val = __atomic_load_n(&api_level, __ATOMIC_RELAXED);
     if (val < 0) {
+#if defined(__ANDROID_API__) && __ANDROID_API__ >= 24
       val = android_get_device_api_level();
+#else
+      val = sh_util_get_api_level_from_build_prop();
+#endif
       if (val < 0) val = sh_util_get_api_level_from_build_prop();
       if (val < __ANDROID_API_J__) val = __ANDROID_API_J__;
       __atomic_store_n(&api_level, val, __ATOMIC_RELEASE);
